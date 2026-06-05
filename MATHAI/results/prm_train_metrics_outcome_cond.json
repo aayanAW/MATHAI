@@ -1,0 +1,8 @@
+{
+  "variant": "outcome_cond",
+  "n_train": 445,
+  "n_eval": 50,
+  "train_loss": 3.077736227600663,
+  "train_runtime_seconds": 187.3091,
+  "eval_loss": 1.3207038640975952
+}

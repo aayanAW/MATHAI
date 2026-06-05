@@ -1,0 +1,223 @@
+{
+  "sample_size": 100,
+  "type_distribution": {
+    "equiv": 27,
+    "answer": 47,
+    "factoring": 1,
+    "numerical": 22,
+    "enumerate": 3
+  },
+  "label_distribution": {
+    "FAIL": 57,
+    "PASS": 43
+  },
+  "independence_distribution": {
+    "partially": 48,
+    "fully": 52
+  },
+  "pass_wrong_answer": 4,
+  "fail_correct_answer": 40,
+  "answer_step_accuracy": 0.8085106382978723,
+  "sample": [
+    {
+      "problem_id": "math500_138",
+      "answer_correct": true,
+      "answer_predicted": "4",
+      "step_index": 4,
+      "claim_type": "equiv",
+      "label": "FAIL",
+      "independence": "partially",
+      "validation_notes": "lhs=5 + 9 + 1 + 3 + d + 8, rhs=26 + d"
+    },
+    {
+      "problem_id": "math500_27",
+      "answer_correct": true,
+      "answer_predicted": "97969",
+      "step_index": 1,
+      "claim_type": "answer",
+      "label": "PASS",
+      "independence": "fully",
+      "validation_notes": "claimed=97969, gold=97969"
+    },
+    {
+      "problem_id": "math500_299",
+      "answer_correct": true,
+      "answer_predicted": "4.95",
+      "step_index": 2,
+      "claim_type": "answer",
+      "label": "PASS",
+      "independence": "fully",
+      "validation_notes": "claimed=4.95, gold=4.95"
+    },
+    {
+      "problem_id": "math500_266",
+      "answer_correct": true,
+      "answer_predicted": "8",
+      "step_index": 3,
+      "claim_type": "equiv",
+      "label": "FAIL",
+      "independence": "partially",
+      "validation_notes": "lhs=aDelta**2 + bDelta + c, rhs=0"
+    },
+    {
+      "problem_id": "math500_245",
+      "answer_correct": true,
+      "answer_predicted": "-40",
+      "step_index": 3,
+      "claim_type": "equiv",
+      "label": "FAIL",
+      "independence": "partially",
+      "validation_notes": "lhs=2*x + 5*y, rhs=-8"
+    },
+    {
+      "problem_id": "math500_168",
+      "answer_correct": true,
+      "answer_predicted": "6",
+      "step_index": 0,
+      "claim_type": "factoring",
+      "label": "PASS",
+      "independence": "partially",
+      "validation_notes": "orig=36, fact=6**2"
+    },
+    {
+      "problem_id": "math500_128",
+      "answer_correct": true,
+      "answer_predicted": "6435",
+      "step_index": 2,
+      "claim_type": "numerical",
+      "label": "FAIL",
+      "independence": "partially",
+      "validation_notes": "n = 14"
+    },
+    {
+      "problem_id": "math500_110",
+      "answer_correct": true,
+      "answer_predicted": "\\pi",
+      "step_index": 7,
+      "claim_type": "answer",
+      "label": "FAIL",
+      "independence": "fully",
+      "validation_notes": "claimed=\\pi, gold=\\pi"
+    },
+    {
+      "problem_id": "math500_414",
+      "answer_correct": false,
+      "answer_predicted": "49",
+      "step_index": 0,
+      "claim_type": "equiv",
+      "label": "FAIL",
+      "independence": "fully",
+      "validation_notes": "lhs=P(x), rhs=x**7 - 7"
+    },
+    {
+      "problem_id": "math500_30",
+      "answer_correct": false,
+      "answer_predicted": "1, -2",
+      "step_index": 19,
+      "claim_type": "answer",
+      "label": "FAIL",
+      "independence": "fully",
+      "validation_notes": "claimed=1, -2, gold=-2,1"
+    },
+    {
+      "problem_id": "math500_30",
+      "answer_correct": false,
+      "answer_predicted": "1, -2",
+      "step_index": 10,
+      "claim_type": "numerical",
+      "label": "FAIL",
+      "independence": "partially",
+      "validation_notes": "x = -1"
+    },
+    {
+      "problem_id": "math500_117",
+      "answer_correct": false,
+      "answer_predicted": "1000000",
+      "step_index": 7,
+      "claim_type": "answer",
+      "label": "FAIL",
+      "independence": "fully",
+      "validation_notes": "claimed=1000000, gold=1,\\!000,\\!000"
+    },
+    {
+      "problem_id": "math500_238",
+      "answer_correct": true,
+      "answer_predicted": "-9",
+      "step_index": 13,
+      "claim_type": "answer",
+      "label": "PASS",
+      "independence": "fully",
+      "validation_notes": "claimed=-9, gold=-9"
+    },
+    {
+      "problem_id": "math500_253",
+      "answer_correct": true,
+      "answer_predicted": "210",
+      "step_index": 1,
+      "claim_type": "equiv",
+      "label": "FAIL",
+      "independence": "partially",
+      "validation_notes": "lhs=(w-1) + (h-1), rhs=w + h - 2"
+    },
+    {
+      "problem_id": "math500_484",
+      "answer_correct": true,
+      "answer_predicted": "6",
+      "step_index": 8,
+      "claim_type": "numerical",
+      "label": "FAIL",
+      "independence": "partially",
+      "validation_notes": "x = 4"
+    },
+    {
+      "problem_id": "math500_29",
+      "answer_correct": true,
+      "answer_predicted": "1",
+      "step_index": 5,
+      "claim_type": "answer",
+      "label": "PASS",
+      "independence": "fully",
+      "validation_notes": "claimed=1, gold=1"
+    },
+    {
+      "problem_id": "math500_220",
+      "answer_correct": true,
+      "answer_predicted": "1092",
+      "step_index": 0,
+      "claim_type": "numerical",
+      "label": "PASS",
+      "independence": "partially",
+      "validation_notes": "10**3 = 1000"
+    },
+    {
+      "problem_id": "math500_412",
+      "answer_correct": true,
+      "answer_predicted": "17",
+      "step_index": 0,
+      "claim_type": "equiv",
+      "label": "FAIL",
+      "independence": "fully",
+      "validation_notes": "lhs=(-1 - h)**2 + (2 - k)**2, rhs=r**2"
+    },
+    {
+      "problem_id": "math500_241",
+      "answer_correct": true,
+      "answer_predicted": "7",
+      "step_index": 0,
+      "claim_type": "equiv",
+      "label": "FAIL",
+      "independence": "partially",
+      "validation_notes": "lhs=f(a), rhs=b"
+    },
+    {
+      "problem_id": "math500_438",
+      "answer_correct": false,
+      "answer_predicted": "16386.16",
+      "step_index": 3,
+      "claim_type": "numerical",
+      "label": "FAIL",
+      "independence": "partially",
+      "validation_notes": "P = 10000"
+    }
+  ]
+}

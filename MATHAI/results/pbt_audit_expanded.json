@@ -1,0 +1,31 @@
+{
+  "sample_size": 300,
+  "type_distribution": {
+    "answer": 135,
+    "equiv": 101,
+    "numerical": 44,
+    "enumerate": 14,
+    "factoring": 6
+  },
+  "label_distribution": {
+    "PASS": 118,
+    "FAIL": 182
+  },
+  "answer_audit": {
+    "n": 135,
+    "pass_correct": 76,
+    "pass_wrong": 0,
+    "fail_correct": 34,
+    "fail_wrong": 25,
+    "label_accuracy": 0.7481481481481481,
+    "false_pass_rate": 0.0,
+    "false_fail_rate": 0.576271186440678
+  },
+  "non_answer_audit": {
+    "n": 165,
+    "pass_correct_answer": 36,
+    "pass_wrong_answer": 6,
+    "fail_correct_answer": 96,
+    "fail_wrong_answer": 27
+  }
+}
