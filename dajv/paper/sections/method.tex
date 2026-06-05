@@ -1,0 +1,43 @@
+\section{Method}
+\label{sec:method}
+
+\textbf{Setup.} A problem $x$ has gold answer $a$, a solver
+produces candidate $\hat a$, and each verifier $E_i$ emits an
+executable script that returns $V_i \in \{0, 1\}$ on $\hat a$. Let
+$C := \mathbf{1}[\hat a = a]$. On the wrong-candidate distribution:
+$\pi_i := \Pr[V_i = 1 \mid C = 0]$,
+$\rho_{ij} := \mathrm{Corr}(V_i, V_j \mid C = 0)$.
+
+\textbf{DAJV.} (i) \emph{Calibration:} on
+$\mathcal{D}_{\text{cal}}$ of size $n_{\text{cal}}$, estimate
+$\pi^{\pm}_i$ on the correct/wrong subsets,
+$\rho^{\pm}_{ij}$, and prior $\pi_0$.
+(ii) \emph{Deployment:} given vote vector $v$,
+\begin{equation}
+  \Pr[C = 1 \mid v] = \frac{\pi_0 \mathcal{L}^+(v)}{\pi_0 \mathcal{L}^+(v) + (1-\pi_0)\mathcal{L}^-(v)},
+  \label{eq:posterior}
+\end{equation}
+where the second-order log-likelihood is
+$\log \mathcal{L}^\pm(v) = \sum_i [v_i \log \pi^\pm_i +
+(1{-}v_i)\log(1{-}\pi^\pm_i)] + \sum_{i<j} \rho^\pm_{ij}
+(v_i - \pi^\pm_i)(v_j - \pi^\pm_j)$.
+Recommend \textsc{Commit} if posterior $\geq \tau_{\text{c}} = 0.95$,
+\textsc{Abstain} if $< 0.50$, else \textsc{Escalate}.
+
+\textbf{BSIA.} Replaces the per-extractor binary vote $V_i$ with the
+per-LLM $2 \!\times\! 2$ cell
+$P_i(\sigma_i, \xi_i \mid C)$ on (structural, executable). Adds
+within-modality cross-LLM Pearson corrections
+$\rho^\sigma_{ij}, \rho^\xi_{ij}$ and pins cross-LLM cross-modality
+interactions to zero (the empirical block-sparsity prior of
+\S\ref{sec:cross_modality}). BSIA-iso applies a post-hoc
+Pool-Adjacent-Violators isotonic recalibration on the
+calibration-set posterior.
+
+\textbf{Adversarial filter.} Before aggregation, each verifier is
+probed against a gold-free perturbation set
+$\mathcal{P}(\hat a) = \{\hat a \pm 1, \hat a + 7, 2\hat a\}$ for
+integer $\hat a$. A verifier that accepts any probe contributes
+\texttt{abstain} to the vote vector. Pattern
+follows~\citep{dtv2024,bagheriNezhad2025symcode}; exact set locked
+in pre-registration.

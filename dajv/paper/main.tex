@@ -1,0 +1,98 @@
+% DAJV main paper. Anonymous double-blind workshop submission.
+% 4-page body + references + appendix.
+
+\documentclass{article}
+
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks=true, allcolors=black}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage[capitalize,noabbrev]{cleveref}
+\usepackage{multirow}
+\usepackage{enumitem}
+
+% Official ICML 2026 style.
+\usepackage{icml2026}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\icmltitlerunning{Cross-Modality Independence in Executable LLM-Jury Verification}
+
+\begin{document}
+
+\twocolumn[
+\icmltitle{Two Modalities Are Better Than One: Cross-Modality Independence in
+Executable Spec-Grounded LLM-Jury Verification for Math Reasoning}
+
+\begin{icmlauthorlist}
+\icmlauthor{Anonymous Authors}{anon}
+\end{icmlauthorlist}
+\icmlaffiliation{anon}{Anonymous submission.}
+\icmlcorrespondingauthor{Anonymous Authors}{anon.email@domain.org}
+\icmlkeywords{Selective Prediction, LLM Verification, Executable
+Verification, Cross-Modality Independence, Jury Aggregation,
+Calibration, Math Reasoning}
+
+\vskip 0.3in
+]
+
+\printAffiliationsAndNotice{}
+
+\begin{abstract}
+LLM verifiers fail in correlated ways, breaking the independence
+assumption behind classical jury-aggregation
+theorems~\citep{kim2025correlated,kuai2026independence}. Concurrent
+2026 dependency-aware
+aggregators~\citep{kuai2026independence,zhao2026care,balasubramanian2026ising}
+model the LLM as a single signal. In math reasoning the LLM
+also emits a deterministic Python verifier that an oracle executes:
+the \emph{script-execution} modality is essentially independent of
+the \emph{script-writing} modality. Across a 12-extractor four-lab
+ensemble on $n=330$ problems, median pairwise cross-LLM
+cross-modality Cohen's $\kappa = 0.009$ across $132$ pairs versus
+within-modality $\kappa = 0.78$. We present DAJV, a calibrated
+dependency-aware aggregation rule for executable verifiers, and
+BSIA, a block-sparse Ising variant that exploits the cross-modality
+sparsity prior. On math175 DAJV attains $0.97$ precision at $62\%$
+coverage (vs naive unanimous $0.96 / 49\%$); BSIA-isotonic reduces
+ECE by $34\%$ at matched precision and remains stable at $k=12$
+where default DAJV's calibration overfits.
+\end{abstract}
+
+\input{sections/introduction}
+\input{sections/related_work}
+\input{sections/method}
+\input{sections/theory}
+\input{sections/empirical}
+\input{sections/discussion}
+
+\section*{Reproducibility statement}
+
+The DAJV reference implementation (\texttt{verifyensemble}), the
+extractor cache derived from prior work, the dependency-mapping
+pipeline, the Monte Carlo validation of Theorem~\ref{thm:bound}, and
+the pre-registration document committed before any new data collection
+are all provided in the anonymized supplementary code release. All
+calibration / test splits use a fixed random seed (42).
+
+\bibliographystyle{icml2025}
+\bibliography{references}
+
+\newpage
+\appendix
+\onecolumn
+
+\input{sections/proofs}
+\input{sections/extended_results}
+
+\end{document}

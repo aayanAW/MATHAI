@@ -1,0 +1,170 @@
+% Full proofs of Theorems 1 and 2, for paper appendix A.
+
+\section{Full Proofs}
+\label{app:proofs}
+
+\subsection{Proof of Theorem~\ref{thm:bound}}
+\label{app:proof-thm1}
+
+Let $A_i = \{V_i = 1\}$ for $i = 1, \ldots, k$, and let
+$X_i := \mathbf{1}_{A_i}$, so that $X_i$ is Bernoulli with mean
+$\pi_i$ and variance $\pi_i (1 - \pi_i)$.
+
+\paragraph{Step 1: write $\Pr[\bigcap_i A_i]$ as a centered expectation.}
+Decompose each $X_i = \pi_i + Y_i$ where $Y_i$ has mean zero. Then
+\begin{align}
+  \Pr\!\Big[\bigcap_i A_i\Big]
+  &= \mathbb{E}\!\Big[\prod_i X_i\Big]
+  = \mathbb{E}\!\Big[\prod_i (\pi_i + Y_i)\Big]. \nonumber
+\end{align}
+Expanding the product:
+\begin{equation}
+  \mathbb{E}\!\Big[\prod_i (\pi_i + Y_i)\Big]
+  = \prod_i \pi_i
+  + \sum_{S \subseteq [k],\, |S| \geq 2}
+    \Big(\prod_{i \notin S} \pi_i\Big)
+    \mathbb{E}\!\Big[\prod_{i \in S} Y_i\Big].
+  \label{eq:cumulant-expansion}
+\end{equation}
+
+\paragraph{Step 2: pairwise terms.}
+For $|S| = 2$, say $S = \{i, j\}$,
+$\mathbb{E}[Y_i Y_j] = \mathrm{Cov}(X_i, X_j) = \rho_{ij}\sqrt{\pi_i(1-\pi_i)\pi_j(1-\pi_j)}$.
+The pairwise contribution to Eq.~\ref{eq:cumulant-expansion} is therefore
+\begin{equation}
+  \sum_{i<j} \Big(\prod_{\ell \notin \{i,j\}} \pi_\ell\Big)
+    \rho_{ij}\sqrt{\pi_i(1-\pi_i)\pi_j(1-\pi_j)}.
+  \label{eq:pairwise-sum}
+\end{equation}
+
+\paragraph{Step 3: bound higher-order terms.}
+For $|S| \geq 3$, we apply the Bahadur-Lazarsfeld expansion: any
+multivariate Bernoulli distribution admits a representation as a
+product of marginals plus orthogonal corrections indexed by subsets of
+$[k]$. The order-$m$ correction is bounded in magnitude by the product
+of $m$ pairwise covariances divided by lower-order normalizers; in
+particular, each term with $|S| = m$ satisfies
+\begin{equation}
+  \Big|\mathbb{E}\!\Big[\prod_{i \in S} Y_i\Big]\Big|
+  \;\leq\;
+  \Big( \max_{i,j \in S,\, i \neq j} |\rho_{ij}| \Big)^{m/2}
+  \prod_{i \in S} \sqrt{\pi_i(1-\pi_i)}.
+\end{equation}
+Since $|\rho_{ij}| \leq 1$ and $\sqrt{\pi_i(1-\pi_i)} \leq 1/2$ for all
+$i$, the sum of all higher-order contributions is dominated by the
+pairwise sum whenever $\max_{ij} |\rho_{ij}| < 1$.
+
+\paragraph{Step 4: upper bound by nonnegative pairwise excess.}
+Because $\prod_{\ell \notin \{i,j\}} \pi_\ell \leq 1$, we can drop
+this factor in Eq.~\ref{eq:pairwise-sum} to obtain an upper bound.
+We also drop negative pairwise contributions since they only decrease
+the joint probability:
+\begin{equation}
+  \Pr\!\Big[\bigcap_i A_i\Big]
+  \;\leq\;
+  \prod_i \pi_i
+  + \sum_{i<j} \rho_{ij}^+ \sqrt{\pi_i(1-\pi_i)\pi_j(1-\pi_j)}.
+\end{equation}
+
+\paragraph{Step 5: limiting cases.}
+\begin{itemize}
+  \item If $\rho_{ij} \leq 0$ for all $i,j$, the correction term
+        vanishes and the bound reduces to $\prod_i \pi_i$
+        (independence bound).
+  \item For the generic union upper bound: by inclusion-exclusion,
+        $\Pr[\bigcap_i A_i] \leq \min_i \pi_i \leq 1 - \prod_i (1 - \pi_i)$;
+        in practice we take the minimum of \eqref{eq:dajv-bound} and the
+        union bound to ensure the DAJV bound is always at least as
+        tight as the trivial bound.\qed
+\end{itemize}
+
+\subsection{Proof of Theorem~\ref{thm:sample}}
+\label{app:proof-thm2}
+
+The pairwise correlation estimator $\hat{\rho}_{ij}$ is
+\begin{equation}
+  \hat{\rho}_{ij}
+  = \frac{ \frac{1}{n}\sum_{t=1}^n X_i^{(t)} X_j^{(t)}
+            - \bar X_i \bar X_j }
+         { \sqrt{ \bar X_i (1 - \bar X_i) \cdot \bar X_j (1 - \bar X_j) } },
+\end{equation}
+where $X_i^{(t)} \in \{0, 1\}$ is the indicator from sample $t$.
+The numerator is a bounded difference of empirical averages of
+$[0, 1]$-valued random variables, so Hoeffding's inequality gives
+\begin{equation}
+  \Pr\!\big[|\hat{\rho}_{ij} - \rho_{ij}| > \varepsilon\big]
+  \leq 2 \exp(-2 n \varepsilon^2).
+\end{equation}
+Taking a union bound over the $\binom{k}{2} = k(k-1)/2$ off-diagonal
+entries:
+\begin{equation}
+  \Pr\!\big[\max_{i \neq j} |\hat{\rho}_{ij} - \rho_{ij}| > \varepsilon\big]
+  \leq 2 \binom{k}{2} \exp(-2 n \varepsilon^2)
+  = k(k-1) \exp(-2 n \varepsilon^2).
+\end{equation}
+Setting the right-hand side $\leq \delta$ and solving for $n$ yields
+\begin{equation}
+  n \;\geq\; \frac{1}{2 \varepsilon^2} \log\!\Big(\frac{k(k-1)}{\delta}\Big). \qed
+\end{equation}
+
+\subsection{Theorem~\ref{thm:bsia} (BSIA sample complexity): statement and proof}
+\label{app:proof-thm3}
+
+\begin{theorem}[BSIA sample complexity under block-sparsity, restated]
+\label{thm:bsia}
+Let $M_{\text{Ising}}$ be the saturated second-order Ising on
+$(\sigma, \xi) \in \{0,1\}^{2k}$ with $p_{\text{Ising}} = 2k +
+\binom{2k}{2}$ parameters, and let $M_{\text{BSIA}}$ be the
+sub-model with cross-LLM cross-modality interactions pinned to zero
+($\rho^{\sigma_i, \xi_j} = 0$, $i \neq j$), giving
+$p_{\text{BSIA}} = 4k + 2\binom{k}{2}$.  Assume the truth lies in
+$M_{\text{BSIA}}$.  The plug-in MLE achieves
+$\Pr[\|\hat\theta_{\text{BSIA}} - \theta\|_\infty > \varepsilon] \leq \delta$
+with $n \geq \frac{1}{2 \varepsilon^2} \log(p_{\text{BSIA}}/\delta)$
+draws, saving $p_{\text{Ising}} - p_{\text{BSIA}} = k(k-2)$
+parameters over the saturated estimator ($k = 8$: $48$ saved).
+\end{theorem}
+
+Let $\theta = (\theta_{\text{cell}}, \theta_{\rho^\sigma},
+\theta_{\rho^\xi}, \theta_{\rho^{\text{cross}}})$ decompose the
+parameters of the saturated Ising on $(\sigma, \xi)$ into per-LLM
+2x2 cells, within-modality structural correlations, within-modality
+executable correlations, and cross-LLM cross-modality correlations.
+BSIA pins $\theta_{\rho^{\text{cross}}} = 0$.  The free parameters
+in BSIA are:
+\begin{align*}
+  \theta_{\text{cell}}: &\quad 4 \text{ per LLM} \times k = 4k - k \text{ (one constraint per cell)} \\
+                       &\quad = 3k \text{ free} + k \text{ normalizers} = 4k, \\
+  \theta_{\rho^\sigma}: &\quad \binom{k}{2}, \\
+  \theta_{\rho^\xi}:    &\quad \binom{k}{2}, \\
+  \text{Total } p_{\text{BSIA}} &= 4k + 2\binom{k}{2} = 4k + k(k-1).
+\end{align*}
+The saturated Ising on $2k$ binary variables has
+$p_{\text{Ising}} = 2k + \binom{2k}{2} = 2k + k(2k - 1)$ parameters.
+The difference is
+\begin{align*}
+  p_{\text{Ising}} - p_{\text{BSIA}}
+  &= [2k + k(2k-1)] - [4k + k(k-1)] \\
+  &= 2k + 2k^2 - k - 4k - k^2 + k = k^2 - 2k \\
+  &= k(k-2),
+\end{align*}
+i.e., to leading order $k(k-1) - k$ cross-LLM cross-modality
+interactions are saved.  For $k = 8$ we have
+$p_{\text{Ising}} - p_{\text{BSIA}} = 64 - 16 = 48$ parameters saved
+in our particular ensemble; more generally
+$p_{\text{Ising}} - p_{\text{BSIA}} = \Theta(k^2)$.
+
+Each free parameter in BSIA is a bounded empirical mean (cell
+proportion or centered pairwise covariance), so Hoeffding's
+inequality applies entrywise; a union bound over $p_{\text{BSIA}}$
+parameters yields
+\begin{align*}
+  \Pr\!\big[\,\|\hat\theta_{\text{BSIA}} - \theta\|_\infty > \varepsilon\,\big]
+  &\leq 2 p_{\text{BSIA}} \exp(-2 n \varepsilon^2),
+\end{align*}
+which is $\leq \delta$ when
+$n \geq \frac{1}{2 \varepsilon^2} \log(2 p_{\text{BSIA}} / \delta)$.
+The same Hoeffding/union argument applied to the saturated Ising
+gives $n \geq \frac{1}{2 \varepsilon^2} \log(2 p_{\text{Ising}}/\delta)$.
+The gap is monotone in $p_{\text{Ising}} - p_{\text{BSIA}} = k(k-2)$,
+strictly positive for $k \geq 3$. \qed

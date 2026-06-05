@@ -1,0 +1,54 @@
+\section{Related Work}
+\label{sec:related}
+
+\textbf{Selective prediction.}
+Single-model confidence signals include
+self-consistency~\citep{wang2023selfconsistency}, semantic
+entropy~\citep{kuhn2023semantic,farquhar2024nature},
+$p(\textsc{True})$~\citep{kadavath2022}, and process reward
+models~\citep{lightman2024prm,qwenprm2025,skyworkprm2024}.
+AbstentionBench~\citep{kirichenko2025abstentionbench} provides a
+20-dataset benchmark.
+
+\textbf{LLM-jury verification.}
+Recent multi-LLM verifiers include
+Math-Rev~\citep{liang2024mathrev}, ICE~\citep{omar2024ice},
+SE-Jury~\citep{zhou2025sejury}, VERGE~\citep{singh2026verge}, and
+LLM-PeerReview~\citep{chen2025peerreview}. Concurrent
+dependency-aware aggregators
+CARE~\citep{zhao2026care}, Kuai et al.~\citep{kuai2026independence},
+and the Ising framework of~\citet{balasubramanian2026ising}
+collapse each LLM to a single signal.
+
+\textbf{Spec-grounded verification for math.}
+DTV~\citep{dtv2024} introduces problem-grounded verification via
+autoformalization to Isabelle. MATH-VF~\citep{kuoZhou2025mathvf}
+combines a formalizer with an SMT critic.
+SymCode~\citep{bagheriNezhad2025symcode} uses SymPy.
+HERMES~\citep{ospanov2025hermes} interleaves informal reasoning
+with Lean. DAJV adds a calibrated dependency-aware aggregation
+layer on top of any executable spec-grounded verifier.
+
+\textbf{Correlated errors.}
+\citet{kim2025correlated} establish architecture-spanning
+correlation; \citet{kuai2026independence} audit entanglement among
+18 frontier LLMs; \citet{denisovblanch2026consensus} show
+inference-time scaling fails to track truth.
+\citet{lefort2024condorcet} reach the same conclusion via the
+Condorcet jury theorem.
+
+\textbf{Positioning.}
+The Kuai joint-error bound and the
+\citet{balasubramanian2026ising} Ising model subsume our
+Theorem~\ref{thm:bound} as a special case. We make no claim of
+priority on the abstract problem. The contribution we defend:
+(i) the cross-modality independence measurement
+(\S\ref{sec:cross_modality}); (ii) BSIA exploiting the empirically
+observed sparsity prior; (iii) end-to-end empirical evaluation
+with cross-distribution validation and a pre-registered protocol.
+
+\textbf{Contamination.}
+\citet{wu2025contam} show Qwen2.5-Math-7B reproduces $54.6\%$ of
+MATH-500. MathArena~\citep{matharena2025} curates post-cutoff
+problems for contamination-clean evaluation, which we use for the
+held-out portion of our evaluation.

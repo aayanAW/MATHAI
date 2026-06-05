@@ -1,0 +1,143 @@
+\section{Empirical Results}
+\label{sec:empirical}
+
+\textbf{Setup.} A $k=12$ four-lab ensemble: 5 OpenAI (gpt-oss-120B,
+gpt-5-mini, gpt-4o, gpt-4.1, gpt-5), 4 Anthropic (Claude Sonnet 4.6,
+Opus 4.7, Opus 4.6, Haiku 4.5), 2 Alibaba (Qwen3-Coder-480B,
+Qwen3-235B), 1 Meta (Llama-3.3-70B), evaluated on $n=330$ problems
+spanning a MATH-175 subset, AIME 2025, and a CleanMath combo
+(HMMT-Feb 2025, BRUMO 2025, SMT 2025, APEX 2025). Full ablations
+(seed-stability, LOO extractor, solver rotation, calibration-size,
+per-bench breakdowns) are in the appendix.
+
+\subsection{Cross-modality independence}
+\label{sec:cross_modality}
+
+Each LLM $i$ contributes a structural vote $\sigma_i$ (script
+classifies as ``working'') and an executable vote $\xi_i$ (script
+accepts the candidate). Standard ``accept'' is
+$\sigma_i \wedge \xi_i$. Table~\ref{tab:cross_modality} reports
+median pairwise $\kappa$ on the wrong-candidate subset.
+
+\begin{table}[h]
+\centering
+\caption{\textbf{Cross-modality independence (12-extractor
+ensemble).} Wrong-candidate subset of math175 ($n_{\text{wrong}} = 47$)
+and full Group B ($n_{\text{wrong}} = 192$). Within-modality
+$\kappa$ is substantial; cross-LLM cross-modality $\kappa$ is two
+orders of magnitude smaller on B-full.}
+\label{tab:cross_modality}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrr}
+\toprule
+Bucket                         & math175 & B-full & $n$ pairs \\
+\midrule
+Within-modality, structural    & $0.545$ & $0.538$ &  66 \\
+Within-modality, executable    & $0.777$ & $0.761$ &  66 \\
+Within-LLM, cross-modality     & $0.112$ & $0.029$ &  12 \\
+Cross-LLM, cross-modality      & $0.049$ & $\mathbf{0.009}$ & 132 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The Python interpreter is an oracle, so cross-modality dependence
+captures only how often two LLMs encode the same constraint into
+Python and run it to the same verdict. Concurrent dependency-aware
+aggregators~\citep{kuai2026independence,zhao2026care,balasubramanian2026ising}
+collapse each LLM to a single signal and cannot exploit this
+$k$-dimensional axis of independence.
+
+\subsection{DAJV operating point}
+
+Table~\ref{tab:aggregation} reports DAJV vs naive baselines on
+math175 test split ($n_{\text{test}} = 53$, $n_{\text{cal}} = 122$).
+
+\begin{table}[h]
+\centering
+\caption{\textbf{math175 test split, $k=8$ ensemble.} DAJV matches
+naive unanimous precision while gaining $+13$pp coverage and
+halving ECE.}
+\label{tab:aggregation}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrr}
+\toprule
+Method & Cov. & Prec. & ECE & Brier \\
+\midrule
+Naive unan.   & $.491$ & $.962$ & $.208$ & $.186$ \\
+Naive maj.    & $.585$ & $.968$ & ---    & ---    \\
+CARE-style    & $.358$ & $.421$ & $.575$ & $.693$ \\
+\textbf{DAJV} & $\mathbf{.623}$ & $\mathbf{.970}$ & $\mathbf{.111}$ & $\mathbf{.143}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+DAJV reaches $32/33 = 0.97$ precision at $62\%$ coverage and reduces
+ECE by $47\%$ vs naive unanimous. CARE collapses because the
+calibration set has too few correct examples on contamination-clean
+splits ($0$ on AIME, $5$ on CleanMath) for reliable logistic
+fitting. Risk-coverage curves and contamination-clean numbers in
+Appendix~\ref{app:extended}.
+
+\subsection{BSIA partial pass of H7'}
+
+Five cross-modality aggregators were pre-registered. The four
+naive variants (factorised Bayes, agreement gate, per-LLM joint NB,
+struct-gated exec-DAJV) all degrade default DAJV on at least one of
+(cov, prec, ECE). BSIA is the only one that improves
+(Table~\ref{tab:h7_brief}). BSIA-iso reduces ECE by $34\%$ at
+matched precision; BSIA-fixed gains $+4.4$pp coverage at $0.962$
+precision; BSIA-nested-CV gains $+3.8$pp coverage at $0.972$
+precision -- below the $\geq 5$pp pre-registered threshold.
+
+\begin{table}[h]
+\centering
+\caption{\textbf{BSIA suite, math175 $k=8$ (10 seeds).}}
+\label{tab:h7_brief}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrr}
+\toprule
+Method & Cov. & Prec. & ECE \\
+\midrule
+default DAJV     & $.581$ & $.984$ & $.111$ \\
+BSIA fixed       & $\mathbf{.625}$ & $.962$ & $.102$ \\
+BSIA nested-CV   & $.619$ & $.972$ & $.086$ \\
+\textbf{BSIA iso}& $.557$ & $.984$ & $\mathbf{.073}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Robustness at $k=12$.} Default DAJV's copula MLE
+overfits the $k(k-1)/2 = 66$ pairwise interactions when
+$n_{\text{cal}} = 231$ B-full draws are below the
+Theorem~\ref{thm:sample} threshold; precision collapses to $0.42$.
+BSIA-iso holds at precision $0.993$, ECE $0.078$
+(Appendix~\ref{app:k10_robustness}). Recommended deployment
+variant for large $k$.
+
+\subsection{H6: within-lab vs cross-lab dependency}
+
+On B-full $k=12$ the within-lab median $\kappa = 0.664$ (17 pairs)
+exceeds the cross-lab median $\kappa = 0.496$ (49 pairs). The
+single-sided permutation test reaches $p = 0.091$ at $k=12$ (vs
+$p = 0.32$ at $k=8$); adding Meta lab unlocked cross-lab diversity.
+A second Meta extractor would close the remaining gap to
+$\alpha = 0.05$.
+
+\subsection{Cross-distribution validation}
+
+On a 150-problem stratified ProcessBench-Math subset (3 OpenAI
+extractors, gold-free mode), DAJV achieves $5\times$ commit
+coverage ($5/22$ vs $1/22$) vs naive unanimous at matched
+precision $1.000$ and matched specificity $1.000$, with ECE
+$0.114$ vs $0.267$ ($57\%$ reduction).
+
+\subsection{Pre-registered cross-benchmark transfer fails (Branch B)}
+\label{sec:ablation_A4}
+
+H4 ($|\Delta \kappa| \leq 0.10$ across $70\%$ of pairs) fails:
+$0/6$ pairs satisfy it because near-zero accept rates on
+contamination-clean splits make $\kappa$ degenerate. Branch B is
+activated: DAJV must be re-fit per benchmark family.

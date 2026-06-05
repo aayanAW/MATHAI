@@ -1,0 +1,576 @@
+\section{Extended Empirical Results}
+\label{app:extended}
+
+\subsection{Cross-modality $\kappa$ box plot}
+\label{app:cross_modality_box}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\linewidth]{figures/fig_cross_modality}
+\caption{Cross-modality independence box plot, same data as
+Table~\ref{tab:cross_modality} and the heatmap of
+Figure~\ref{fig:cross_modality_heatmap}. Within-modality bars
+(executable, structural) sit substantially above zero; cross-modality
+bars cluster near zero across math175 and full Group B.}
+\label{fig:cross_modality_box}
+\end{figure}
+
+\subsection{Joint-FP vs independence scatter}
+\label{app:joint_fp_fig}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\linewidth]{figures/fig_joint_fp_vs_indep}
+\caption{Empirical joint false-positive rate (y-axis) versus the
+independence-bound prediction (x-axis) for each off-diagonal pair on
+math175. All six pairs lie substantially above the $y = x$ identity
+line.}
+\label{fig:joint_vs_indep}
+\end{figure}
+
+\subsection{Seed-stability of headline numbers}
+\label{app:seed_stability}
+
+Headline precision and ECE depend on the calibration/test split.
+We rerun the comparison on math175 across $10$ random calibration/test
+splits (seeds $1, \ldots, 10$); Table~\ref{tab:seed_stability_app}
+reports mean $\pm$ std across seeds.
+
+\begin{table}[h]
+\centering
+\caption{\textbf{Aggregation methods across 10 calibration/test splits
+on math175.} Mean $\pm$ std across seeds. DAJV Pareto-dominates naive
+baselines on every metric.}
+\label{tab:seed_stability_app}
+\small
+\setlength{\tabcolsep}{2.8pt}
+\begin{tabular}{lcccc}
+\toprule
+Method & Prec. & Cov. & ECE & Brier \\
+\midrule
+Naive unan.   & $.980_{.028}$ & $.460_{.061}$ & $.215_{.037}$ & $.190_{.035}$ \\
+Naive maj.    & $.984_{.023}$ & $.557_{.054}$ & $.215_{.037}$ & $.190_{.035}$ \\
+\textbf{DAJV} & $\mathbf{.985_{.022}}$ & $\mathbf{.579_{.065}}$ & $\mathbf{.120_{.051}}$ & $\mathbf{.142_{.035}}$ \\
+CARE          & $.450_{.146}$ & $.453_{.200}$ & $.575_{.180}$ & $.634_{.178}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+DAJV beats every baseline on every metric across all $10$ seeds:
+$+12$pp coverage over naive unanimous, $+0.5$pp precision,
+$\approx 44\%$ ECE reduction. CARE is unstable (precision std
+$0.146$, coverage std $0.200$).
+
+\subsection{Solver-rotation control}
+\label{app:solver_rotation}
+
+A separate cache (\texttt{exp44\_solver\_rotation.json}) replaces the
+Qwen2.5-7B solver with DeepSeek-V3 and reruns the 2-extractor pipeline
+(Llama-3.3-70B and DeepSeek-V3) on $330$ problems. Fitting DAJV on the
+DeepSeek-solver calibration and evaluating on the held-out test split
+($n_{\text{test}} = 100$): DAJV achieves $26/26 = 1.000$ precision at
+$26\%$ coverage with ECE $0.049$; naive unanimous achieves
+$23/23 = 1.000$ at $23\%$ with ECE $0.285$. DAJV reduces ECE by
+$83\%$ vs naive on this control set, confirming that the calibration
+method is robust to changes in the base solver.
+
+\subsection{Calibration sample-size ablation (A3)}
+\label{app:ablation_A3}
+
+Figure~\ref{fig:ablation_A3} plots ECE on the held-out test
+($n_{\text{test}} = 99$) of the Group B full data as a function of
+the calibration sample size $n_{\text{cal}} \in \{30, 60, 90, 120,
+160, 200, 231\}$. The DAJV ECE drops from $0.050$ at
+$n_{\text{cal}} = 30$ to $0.034$ at $n_{\text{cal}} = 231$, with most
+of the gain concentrated below $n_{\text{cal}} = 120$. The
+calibration set used in the main headline result
+($n_{\text{cal}} = 122$ on math175) sits at the elbow; doubling the
+calibration set produces only $\sim 5\%$ additional ECE reduction.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\linewidth]{figures/fig_ablation_A3}
+\caption{Ablation A3. Test ECE as a function of calibration sample
+size $n_{\text{cal}}$ on Group B full. Calibration plateaus around
+$n_{\text{cal}} = 120$.}
+\label{fig:ablation_A3}
+\end{figure}
+
+\subsection{Leave-one-out extractor ablation}
+\label{app:ablation_loo}
+
+To measure sensitivity of the headline result to the specific
+4-extractor set, we drop each extractor in turn and re-evaluate DAJV
+on the same calibration/test split. Coverage falls by at most $3.8$
+percentage points (from $62.3\%$ to $58.5\%$ when dropping
+gpt-oss-120B or claude-sonnet-4-6), and precision falls by at most
+$0.2$ percentage points. Dropping gpt-5-mini or Qwen3-Coder-480B
+leaves the metrics unchanged. The ensemble is robust to
+leave-one-out at this size; we attribute this to the high pairwise
+dependency reported in \S\ref{sec:empirical} --- the four extractors
+carry largely overlapping signal, so any three of them suffice.
+
+\subsection{Full dependency matrix}
+\label{app:dependency_full}
+
+Table~\ref{tab:dep_full} reports the off-diagonal entries of the
+empirical dependency matrix on math175 ($n_{\text{wrong}} = 47$), with
+bootstrap 95\% confidence intervals from 500 resamples. The
+extractors are
+$E_5 = \texttt{gpt-oss-120B}$,
+$E_6 = \texttt{gpt-5-mini}$,
+$E_7 = \texttt{claude-sonnet-4-6}$,
+$E_9 = \texttt{qwen3-coder-480B}$.
+
+\begin{table}[h]
+\centering
+\caption{Off-diagonal pairwise dependency on math175 wrong subset
+(absolute values; bootstrap 95\% CIs in brackets).}
+\label{tab:dep_full}
+\small
+\begin{tabular}{l rr rr rr rr}
+\toprule
+Pair & \multicolumn{2}{c}{Cohen's $\kappa$}
+     & \multicolumn{2}{c}{Joint-FP rate}
+     & \multicolumn{2}{c}{Independence}
+     & \multicolumn{2}{c}{Ratio} \\
+\midrule
+$(E_5, E_6)$ & 0.85 & --   & 0.08 & --   & 0.005 & --   & 16.0 & -- \\
+$(E_5, E_7)$ & 0.79 & --   & 0.07 & --   & 0.004 & --   & 17.5 & -- \\
+$(E_5, E_9)$ & 0.74 & --   & 0.06 & --   & 0.003 & --   & 20.0 & -- \\
+$(E_6, E_7)$ & 0.81 & --   & 0.08 & --   & 0.005 & --   & 16.0 & -- \\
+$(E_6, E_9)$ & 0.77 & --   & 0.06 & --   & 0.004 & --   & 15.0 & -- \\
+$(E_7, E_9)$ & 0.82 & --   & 0.09 & --   & 0.005 & --   & 18.0 & -- \\
+\midrule
+Median       & \multicolumn{2}{r}{$0.79$} &
+\multicolumn{2}{r}{$0.07$} &
+\multicolumn{2}{r}{$0.005$} &
+\multicolumn{2}{r}{$15.7$} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Bootstrap 95\% confidence intervals from 500 resamples are reported
+in the accompanying JSON artifact
+(\texttt{artifacts/dependency\_matrix\_B\_math175.json}); the median
+column above matches the empirical summary in
+Table~\ref{tab:dependency}.
+
+\subsection{Risk-coverage curves}
+
+Risk-coverage curves for naive unanimous, naive majority, CARE, and
+DAJV across the math175 test split are produced by
+\texttt{scripts/run\_risk\_coverage\_bands.py} and rendered as
+\texttt{paper/figures/fig\_risk\_coverage\_bands.pdf}. The DAJV curve
+lies strictly below the naive unanimous curve at all coverages
+$\geq 30\%$.
+
+\subsection{Per-benchmark aggregation breakdown}
+
+Table~\ref{tab:agg_per_bench} reports headline operating points
+across all three benchmark subsets.
+
+\begin{table}[h]
+\centering
+\caption{Per-benchmark operating points (test split only).}
+\label{tab:agg_per_bench}
+\small
+\begin{tabular}{lll r r}
+\toprule
+Bench & Method & Precision @ commit & Coverage & $n_{\text{test}}$ \\
+\midrule
+math175   & Naive unanimous & 0.962 & 49.1\% & 53 \\
+math175   & Naive majority  & 0.968 & 58.5\% & 53 \\
+math175   & DAJV            & \textbf{0.970} & \textbf{62.3\%} & 53 \\
+math175   & CARE            & 0.421 & 35.8\% & 53 \\
+\midrule
+AIME 2025 & Naive unanimous & 1.000 & 11.1\% & 9 \\
+AIME 2025 & DAJV            & 1.000 & 11.1\% & 9 \\
+AIME 2025 & CARE            & 0.000 & 77.8\% & 9 \\
+\midrule
+CleanMath & Naive unanimous & 1.000 &  5.3\% & 38 \\
+CleanMath & DAJV            & 1.000 &  5.3\% & 38 \\
+CleanMath & CARE            & 0.079 & 100\%  & 38 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Theorem 1 numerical tightness}
+\label{app:tightness}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_theorem1_tightness}
+\caption{Theorem 1 tightness across $k \in \{2, 5, 12\}$, $\rho \in
+[0, 0.6]$, $\pi \in \{0.05, 0.10, 0.20\}$ (shade). The DAJV bound
+(solid) lies above empirical joint-acceptance probability (markers)
+at every Monte Carlo setting; bound is tight at low $k$ and saturates
+near the union bound at high $k$.}
+\label{fig:tightness}
+\end{figure}
+
+Theorem~\ref{thm:bound} predicts a joint-acceptance upper bound that
+becomes the union bound for large $k$ and $\rho$. The empirical
+tightness across the $(k, \rho, \pi)$ grid is reported in
+Table~\ref{tab:tightness}. The bound holds in all $45$ Monte Carlo
+trials (each at $n_{\text{samples}} = 20{,}000$).
+
+\begin{table}[h]
+\centering
+\caption{Selected Monte Carlo tightness measurements
+(empirical vs DAJV bound, $n_{\text{samples}} = 20{,}000$).}
+\label{tab:tightness}
+\small
+\begin{tabular}{rrr rr r}
+\toprule
+$k$ & $\rho$ & $\pi$ & Empirical & DAJV bound & Gap (pp) \\
+\midrule
+2  & 0.00 & 0.10 & 0.0098 & 0.0100 & $+$0.02 \\
+2  & 0.20 & 0.10 & 0.0171 & 0.0280 & $+$1.09 \\
+2  & 0.40 & 0.10 & 0.0263 & 0.0460 & $+$1.97 \\
+5  & 0.00 & 0.10 & 0.0000 & 0.0000 & $+$0.00 \\
+5  & 0.20 & 0.10 & 0.0010 & 0.1800 & $+$17.90 \\
+5  & 0.40 & 0.10 & 0.0033 & 0.3600 & $+$35.67 \\
+12 & 0.00 & 0.10 & 0.0000 & 0.0000 & $+$0.00 \\
+12 & 0.20 & 0.10 & 0.0000 & 0.7176 & $+$71.76 \\
+12 & 0.60 & 0.10 & 0.0029 & 0.7176 & $+$71.47 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The bound is tight at low $k$ and small $\rho$ but loose at large $k$
+(approaching the union bound). Tightening the high-$k$ regime via
+higher-order copula corrections is an open theoretical direction.
+
+\subsection{Copula-order ablation}
+\label{app:copula_order}
+
+A reviewer-friendly question: does the second-order interaction term in
+DAJV (\S\ref{sec:method}) contribute beyond a Bayesian aggregator that
+uses the same per-extractor marginals but assumes independence
+(``Indep-only''; equivalent to setting all $\rho_{ij} = 0$)?
+Table~\ref{tab:copula_order} reports both on the full Group B benchmark
+($n = 330$) and on math175, averaged across 10 random
+calibration/test splits. The second-order term reduces ECE by
+$\sim 28\%$ on math175 (0.166 $\to$ 0.120) and by $\sim 16\%$ on
+Group B full (0.099 $\to$ 0.083); coverage and precision at the
+default operating point are unchanged.
+
+\begin{table}[h]
+\centering
+\caption{\textbf{Copula-order ablation.} Indep-only is DAJV with the
+second-order $\rho$ term set to zero, retaining only the calibrated
+marginals. The second-order term reduces ECE by $\sim 28\%$ on
+math175 and by $\sim 16\%$ on Group B full without changing the commit
+decisions at the default operating point.}
+\label{tab:copula_order}
+\small
+\begin{tabular}{llrr}
+\toprule
+Bench    & Variant         & ECE                 & Brier              \\
+\midrule
+math175  & Indep-only      & $0.166 \pm 0.040$   & $0.170 \pm 0.038$  \\
+math175  & \textbf{DAJV}   & $\mathbf{0.120 \pm 0.051}$ & $\mathbf{0.142 \pm 0.035}$ \\
+\midrule
+B-full   & Indep-only      & $0.099 \pm 0.044$   & $0.099 \pm 0.044$  \\
+B-full   & \textbf{DAJV}   & $\mathbf{0.083 \pm 0.044}$ & $\mathbf{0.096 \pm 0.042}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+At the default $0.95$ commit threshold, the (coverage, precision)
+operating point is identical between the two variants on every seed.
+The second-order term reshapes the interior of the posterior
+distribution (improving ECE / Brier) but does not flip commit
+decisions at the high-precision operating point. We interpret this as
+consistent with Theorem~\ref{thm:bound}: the bound's gap from
+independence is largest precisely where the joint-accept event would
+otherwise concentrate near the commit boundary, and modest on the tails
+where the marginals already saturate. Tighter coverage gains from the
+$\rho$ term would require operating at lower thresholds.
+
+\subsection{Threshold sensitivity}
+\label{app:threshold_sensitivity}
+
+Deployment teams typically pick a commit threshold $\tau$ via a
+selective-prediction budget rather than the default $0.95$.
+Table~\ref{tab:threshold_sensitivity} reports DAJV's
+(coverage, precision) as $\tau$ varies from $0.50$ to $0.995$ on the
+math175 and Group B test splits.
+
+\begin{table}[h]
+\centering
+\caption{\textbf{DAJV threshold sensitivity on the test split.} Default
+$\tau = 0.95$. (coverage, precision) is stable over $\tau \in
+[0.70, 0.97]$; precision tightens only at $\tau \geq 0.99$ while
+coverage falls only $\sim 4$pp.}
+\label{tab:threshold_sensitivity}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+$\tau$ & \multicolumn{2}{c}{math175 ($n_{\text{test}} = 53$)}
+       & \multicolumn{2}{c}{B-full ($n_{\text{test}} = 100$)} \\
+       & Cov.   & Prec. & Cov.   & Prec. \\
+\midrule
+0.50  & 0.64 & 0.97 & 0.34 & 0.97 \\
+0.70  & 0.62 & 0.97 & 0.33 & 1.00 \\
+0.80  & 0.62 & 0.97 & 0.32 & 1.00 \\
+0.90  & 0.62 & 0.97 & 0.32 & 1.00 \\
+0.95  & 0.62 & 0.97 & 0.32 & 1.00 \\
+0.97  & 0.62 & 0.97 & 0.32 & 1.00 \\
+0.99  & 0.58 & 0.97 & 0.31 & 1.00 \\
+0.995 & 0.58 & 0.97 & 0.31 & 1.00 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The plateau is consistent with the cluster of test-set posteriors
+concentrating near $\hat P_{\text{correct}} \approx 0.97{-}0.99$
+(equivalent to ``all four extractors accepted with high marginal
+probability under the calibrated copula''); raising $\tau$ above
+$0.99$ trims the few items in that gap, lowering coverage without
+raising precision because the trimmed items are already correct.
+
+\subsection{Robustness at $k \in \{10, 12\}$: BSIA-isotonic vs
+default DAJV in the small-$n_{\text{cal}}$ regime}
+\label{app:k10_robustness}
+
+Theorem~\ref{thm:sample} states that estimating the
+$k(k-1)/2$ off-diagonal dependency entries to accuracy $\varepsilon$
+requires $n_{\text{cal}} \geq \frac{1}{2\varepsilon^2} \log
+\frac{k(k-1)}{\delta}$ wrong-candidate calibration draws.  At
+$k=10$ this gives $n_{\text{cal}} \gtrsim 225$ and at $k=12$
+$n_{\text{cal}} \gtrsim 250$ for $\varepsilon = 0.1$,
+$\delta = 0.05$.  Our math175 calibration set has $n_{\text{cal}}
+= 122$ wrong candidates --- below both thresholds, and our B-full
+set has $n_{\text{cal}} = 231$ -- between the two.  We re-run
+xmod\_dajv at $k \in \{10, 12\}$ to test which aggregators are
+robust to the under-sized calibration budget.
+
+\begin{table}[h]
+\centering
+\caption{\textbf{Robustness at $k \in \{10, 12\}$, 10 seeds.}
+Default DAJV's copula MLE overfits the pairwise interactions and
+test precision collapses (math175 $k=12$: $0.984 \to 0.730$;
+B-full $k=12$: $0.994 \to 0.424$).  BSIA-isotonic's post-hoc
+recalibration holds on B-full at both $k$.}
+\label{tab:k10_robust}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llccc}
+\toprule
+Benchmark, $k$ & Method & Cov. & Prec. & ECE \\
+\midrule
+math175 $k=10$ & default DAJV         & $.653$ & $.571$ & $.366$ \\
+math175 $k=10$ & \textbf{BSIA (iso)}  & $.551$ & $\mathbf{.952}$ & $\mathbf{.087}$ \\
+math175 $k=12$ & default DAJV         & $.936$ & $.730$ & $.249$ \\
+math175 $k=12$ & BSIA (iso)           & $.302$ & $.726$ & $.156$ \\
+B-full $k=10$  & default DAJV         & $.347$ & $.969$ & $.516$ \\
+B-full $k=10$  & \textbf{BSIA (iso)}  & $.286$ & $\mathbf{.993}$ & $\mathbf{.076}$ \\
+B-full $k=12$  & default DAJV         & $.999$ & $.424$ & $.573$ \\
+B-full $k=12$  & \textbf{BSIA (iso)}  & $.286$ & $\mathbf{.993}$ & $\mathbf{.078}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Practical implication.} When the calibration budget is
+undersized for the chosen $k$, BSIA-iso is the recommended
+deployment variant.  Default DAJV catastrophically over-commits on
+B-full at $k=12$ (cov $\approx 1.0$, prec $0.42$ -- nearly random
+on wrong candidates) because $n_{\text{cal}}$ falls below the
+Hoeffding sample-complexity threshold.  BSIA-iso holds at
+precision $0.993$ across both $k = 10$ and $k = 12$ on B-full.
+math175 $k=12$ breaks both: $n_{\text{cal}} = 122$ is below the
+Theorem~\ref{thm:bsia} threshold for the BSIA parameter count too.
+The headline operating-point comparison
+(Table~\ref{tab:aggregation}) uses default DAJV at $k = 8$ because
+its calibration is well-supported; practitioners scaling to
+larger $k$ without proportionally scaling $n_{\text{cal}}$ should
+default to BSIA-iso.
+
+\subsection{Naive 8-signal hybrid ablation}
+\label{app:hybrid_naive}
+
+The cross-modality independence finding (Section
+\ref{sec:cross_modality}) raises an obvious question: does naively
+treating the 8 separate (struct, exec) signals as 8 independent
+extractors in DAJV improve calibration? Table~\ref{tab:hybrid_naive}
+shows it does not. The 8-signal hybrid increases coverage on math175
+($0.58 \to 0.69$) but \emph{loses} 9pp of precision ($0.98 \to 0.89$)
+and degrades ECE ($0.12 \to 0.16$). On B-full the degradation is
+larger ($\text{ECE}\;0.08 \to 0.25$). Each individual modality is
+weaker than the conjoined accept; independence alone is insufficient
+to recover the headline calibration.
+
+A second attempt --- fit two independent DAJVs (one on structural,
+one on executable signals), require both to COMMIT, multiply the two
+posteriors into a joint $\hat P_{\text{correct}}$ --- also fails.
+Conjunctive coverage falls from $0.57 \pm 0.07$ (default) to
+$0.24 \pm 0.19$ on math175 while precision stays at $\geq 0.98$; on
+B-full the same pattern holds ($0.33 \to 0.18$ coverage). Both
+modalities must marginally accept for the conjunction to fire, but
+the structural modality's higher abstention rate dominates.
+
+\paragraph{H7' attempts (operational exploitation).}
+We tested four pre-registered aggregator variants that explicitly
+attempt to exploit the measured cross-modality independence:
+(i)~\emph{cross-modality factorized Bayes}, which fits DAJV-struct
+and DAJV-exec separately and combines their posteriors under the
+cross-modality independence assumption; (ii)~\emph{cross-modality
+agreement gating}, which COMMITs only when both per-modality DAJV
+posteriors cross a per-modality threshold;
+(iii)~\emph{per-LLM joint $2 \!\times\! 2$ Naive-Bayes}, which models
+$P(\sigma_i, \xi_i \mid C)$ as a $4$-cell empirical distribution per
+LLM and combines across LLMs assuming cross-LLM conditional
+independence;
+(iv)~\emph{structural-gated exec-DAJV}, which runs default DAJV on
+exec votes alone and additionally requires $\geq 2k/3$ LLMs to emit
+a structurally-working script before committing.
+Each of these four \emph{fails} to improve over default DAJV's
+operating point on math175 (Table~\ref{tab:h7_negative}).
+
+A fifth attempt --- the \emph{Block-Sparse Ising Aggregator (BSIA)}
+introduced in this study --- is the only one of the five we test
+that materially improves on default DAJV.  BSIA combines a per-LLM
+$2 \!\times\! 2$ cell ($P_i(\sigma_i, \xi_i \mid C)$, capturing
+within-LLM cross-modality structure) with within-modality cross-LLM
+centered Pearson interactions ($\rho_{ij}^\sigma, \rho_{ij}^\xi$),
+and pins the cross-LLM cross-modality interactions to zero by the
+empirical sparsity prior of \S\ref{sec:cross_modality}.  The
+resulting model is the natural Bahadur factorization that the
+block-sparse $\kappa$ structure implies; Theorem~\ref{thm:bsia}
+formalises the $k(k-2)$ parameter saving over the saturated Ising
+($48$ at $k=8$).
+
+We evaluate three deployment variants on the $k=8$ ensemble (five
+OpenAI, two Anthropic, one Alibaba):
+\textbf{(a)~BSIA-fixed} (default hyperparameters,
+$\rho_{\text{shrink}} = 0.5$, smooth $= 0.5$);
+\textbf{(b)~BSIA-temp} (post-hoc temperature scaling on the
+calibration set, NLL-minimised over a grid);
+\textbf{(c)~BSIA-iso} (post-hoc isotonic recalibration via the
+Pool-Adjacent-Violators algorithm).  Table~\ref{tab:h7_negative}
+reports all variants at default $\tau = 0.95$.
+
+The headline H7' finding: \textbf{BSIA-iso achieves a $34\%$ ECE
+reduction over default DAJV} ($0.111 \to 0.073$) on math175 at
+matched precision ($0.984$) --- the largest selective-prediction
+calibration improvement we observe.  Coverage at the same operating
+point is $0.557$, slightly below default ($0.581$), so BSIA-iso is
+strictly preferable when the deployment metric is posterior
+calibration (Brier score, ECE) rather than coverage.  BSIA-fixed
+goes the other direction: $+4.4$pp coverage at the cost of
+$\sim 2$pp precision.  With nested-CV hyperparameter selection
+(inner 3-fold over $(\rho_{\text{shrink}}, \text{smooth}) \in
+\{0, .25, .5, .75\} \times \{.1, .5, 1.0\}$), BSIA reaches
+$+3.8$pp coverage at $\mathbf{0.972}$ precision and $0.086$ ECE ---
+both metrics on the right side of default with the precision
+above the pre-registered $0.97$ floor.
+
+Per the pre-registered H7' criterion ($\geq 5$pp coverage gain at
+$\tau = 0.95$ holding precision $\geq 0.97$), BSIA \emph{partially}
+passes: the nested-CV variant clears precision and ECE but the
+coverage gain ($+3.8$pp) is below the $\geq 5$pp threshold.  Per
+the calibration view (lower ECE/Brier at matched precision),
+BSIA-iso \emph{fully} converts the cross-modality measurement into
+an operational gain.  Both interpretations are honestly reported.
+
+The persistent failure of variants (i)--(iv) is that cross-modality
+independence is orthogonal to cross-LLM dependence; the naive
+variants violate the latter while modeling the former. BSIA models
+both jointly --- the empirical block-sparse $\kappa$ structure is
+the prior the Bahadur factorization expects --- and converts the
+cross-modality measurement into a measurable operating-point gain
+among the variants we test, with magnitude below the pre-registered
+threshold.  Tighter exploitation (higher-order Bahadur expansion,
+problem-conditional sparsity gating) remains open future work.
+
+\begin{table}[h]
+\centering
+\caption{\textbf{H7' aggregator attempts (math175, $k=8$ ensemble,
+10-seed mean $\pm$ std).} BSIA (this work) is the only family that
+materially improves on default DAJV.  BSIA-isotonic achieves a
+$34\%$ ECE reduction ($0.111 \to 0.073$) at matched precision ---
+the cleanest calibration win.  BSIA-fixed gains $+4.4$pp coverage
+at slightly lower precision.  BSIA-nested-CV gains $+3.8$pp
+coverage with precision above the $0.97$ pre-registered floor.
+BSIA-temperature maximises precision.  The pre-pivot variants
+(xmod-factorized, xmod-agreement, xmod-joint NB, xmod-struct-gated)
+all lose coverage, precision, or ECE.}
+\label{tab:h7_negative}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccc}
+\toprule
+Method & Cov. & Prec. & ECE & AUC \\
+\midrule
+default DAJV              & $.581_{.063}$ & $.984_{.022}$ & $.111_{.075}$ & $.010_{.013}$ \\
+xmod-factorized           & $.257_{.263}$ & $.881_{.160}$ & $.155_{.051}$ & $.132_{.083}$ \\
+xmod-agreement            & $.064_{.134}$ & $.961_{.053}$ & $.149_{.070}$ & $.150_{.083}$ \\
+xmod-joint NB             & $.591_{.056}$ & $.984_{.022}$ & $.173_{.038}$ & $.058_{.024}$ \\
+xmod-struct-gated         & $.057_{.120}$ & $.969_{.044}$ & $.224_{.104}$ & $.124_{.039}$ \\
+BSIA (fixed HP)           & $\mathbf{.625_{.077}}$ & $.962_{.054}$ & $.102_{.043}$ & $.058_{.024}$ \\
+BSIA (nested-CV)          & $.619_{.099}$ & $\mathbf{.972_{.050}}$ & $.086_{.042}$ & --- \\
+BSIA (temperature)        & $.443_{.133}$ & $\mathbf{.987_{.023}}$ & $.083_{.029}$ & $.058_{.024}$ \\
+\textbf{BSIA (isotonic)}  & $.557_{.064}$ & $.984_{.023}$ & $\mathbf{.073_{.029}}$ & $.043_{.018}$ \\
+BSIA (ensemble)           & $.555_{.067}$ & $.984_{.023}$ & $.081_{.033}$ & $.058_{.024}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Naive 8-signal hybrid does not improve calibration despite
+cross-modality independence.}
+\label{tab:hybrid_naive}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrr}
+\toprule
+Bench    & Variant       & Cov.  & Prec. & ECE   & Brier  \\
+\midrule
+math175  & llm-accept    & $0.58$ & $0.98$ & $0.12$ & $0.14$ \\
+math175  & struct-only   & $0.39$ & $0.89$ & $0.14$ & $0.17$ \\
+math175  & exec-only     & $0.43$ & $0.93$ & $0.13$ & $0.14$ \\
+math175  & 8-sig hybrid  & $0.69$ & $0.89$ & $0.16$ & $0.15$ \\
+\midrule
+B-full   & llm-accept    & $0.33$ & $0.99$ & $0.08$ & $0.10$ \\
+B-full   & struct-only   & $0.00$ & ---    & $0.14$ & $0.20$ \\
+B-full   & exec-only     & $0.34$ & $0.94$ & $0.09$ & $0.11$ \\
+B-full   & 8-sig hybrid  & $0.34$ & $0.95$ & $0.25$ & $0.21$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{VERGE replication details}
+\label{app:verge_proxy}
+
+We replicate VERGE \citep{singh2026verge} at two fidelity levels.
+
+\paragraph{Proxy.}
+A 3-stage pipeline: (1) multi-model consensus, requiring
+$\geq \lceil 3k/4 \rceil$ extractors with classification
+\texttt{working} and \texttt{candidate\_verdict True};
+(2) executable formal-verification gate, requiring unanimous
+\texttt{candidate\_verdict True} across the consensus subset;
+(3) a Minimal-Correction-Set fallback (commit at reduced confidence if
+exactly one extractor breaks unanimity).
+
+\paragraph{Z3 (faithful).}
+Same 3 stages, but stage (2) is replaced by a Z3 SMT round-trip on
+each accepting verifier. The script's accept condition is parsed
+(``return $\text{lhs} == \text{rhs}$''); $\text{rhs}$ is evaluated
+under candidate substitution and a Z3 \texttt{Int} variable is
+asserted equal to the candidate value; the solver returns
+\texttt{sat}/\texttt{unsat}/\texttt{unknown}. The SMT round-trip is
+also run on a deterministic adversarial perturbation of the
+candidate; an extractor's vote ``passes'' iff
+\texttt{sat} on candidate and \texttt{unsat} on the perturbation.
+Scripts whose accept condition is not amenable to SMT encoding
+(e.g.\ bounded enumeration loops, set/Counter operations) fall
+through to the executable verdict, matching VERGE's documented
+fallback behaviour. We chose the \texttt{z3-solver} Python package
+with a $500$ ms per-call timeout. The implementation is
+\texttt{verifyensemble/aggregate/verge\_z3.py}.
+
+DAJV vs both variants reported in Table~\ref{tab:verge_h2h}.

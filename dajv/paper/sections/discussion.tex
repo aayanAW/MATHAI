@@ -1,0 +1,40 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\textbf{Limitations.}
+Cross-modality $\kappa$ on math175 is sensitive to small marginal
+$\pi$ shifts and disappears in the very-low-$\pi$ regime
+(\S\ref{sec:ablation_A4}). DAJV is a discrete aggregation rule
+that ignores verifier-confidence signals; a continuous-score
+extension is planned. Contamination-clean splits (AIME, $n=30$;
+CleanMath, $n=125$) are thin.
+
+\textbf{Positioning.}
+The Kuai joint-error bound and the
+\citet{balasubramanian2026ising} Ising model subsume our
+Theorem~\ref{thm:bound} as a special case; we make no claim of
+priority on the abstract problem. The cross-modality independence
+measurement is orthogonal to all three concurrent
+2026 works~\citep{kuai2026independence,zhao2026care,balasubramanian2026ising}.
+BSIA is the only one of five tested cross-modality aggregators
+that produces a Pareto improvement on default DAJV (BSIA-iso:
+$34\%$ ECE reduction at matched precision on math175; BSIA-fixed:
+$+4.4$pp coverage at $0.962$ precision). Coverage gain below the
+pre-registered $\geq 5$pp threshold. BSIA-iso also remains stable
+where default DAJV breaks: on B-full at $k=12$ default precision
+collapses to $0.42$ while BSIA-iso holds at $0.993$
+(Appendix~\ref{app:k10_robustness}). Tightening coverage-side
+exploitation (higher-order Bahadur expansion,
+problem-conditional sparsity) remains open.
+
+\textbf{Future work (pre-registered).}
+Per \texttt{PRE\_REGISTRATION\_v2.md}: extractor-scaling beyond
+$k=12$ (a second Meta extractor should close the H6 gap to
+$\alpha = 0.05$); continuous-score extension; BSIA tightening to
+the full $5$pp coverage criterion.
+
+\textbf{Broader impact.}
+DAJV supports \emph{abstention}, not commitment. Deploying in
+high-stakes settings without a human-in-the-loop fallback would
+invert the safety pattern; we recommend against this. BSD-3
+license.

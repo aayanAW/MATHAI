@@ -1,0 +1,41 @@
+\section{Introduction}
+\label{sec:introduction}
+
+Selective prediction for LLMs on math reasoning frequently aggregates
+accept/reject verdicts from multiple cross-family
+verifiers~\citep{kuhn2023semantic,lightman2024prm,dtv2024,kim2025correlated}.
+The independence assumption that underpins classical jury aggregation
+is empirically false: \citet{kim2025correlated} report $60\%$
+pairwise agreement on errors across 350+ LLMs;
+\citet{kuai2026independence} document entanglement among 18 frontier
+LLMs; \citet{denisovblanch2026consensus} report that LLM consensus
+does not track truth even at $25\times$ sampling.
+
+\textbf{Our pivot.} In math reasoning, each LLM emits a deterministic
+Python verifier executed by an oracle. The Python execution is a
+second modality of evidence, essentially independent of the LLM's
+classification of its own emitted verifier (cross-modality
+$\kappa \approx 0.009$ over $132$ cross-LLM pairs in a $k=12$
+four-lab ensemble; within-modality $\kappa \approx 0.78$). Pure
+LLM-jury aggregators~\citep{kuai2026independence,zhao2026care,balasubramanian2026ising}
+collapse each LLM to a single signal and cannot exploit this axis.
+
+\textbf{Contributions.}
+(i) Cross-modality independence measurement on a $12$-extractor
+four-lab ensemble (\S\ref{sec:cross_modality}, $132$ cross-LLM
+pairs, $\kappa = 0.009$ on B-full).
+(ii) Calibrated dependency-aware aggregation rule DAJV
+(\S\ref{sec:method}) with a tight joint-FP
+bound~(Theorem~\ref{thm:bound}, a specialization
+of~\citet{balasubramanian2026ising} to binary votes) and a
+sample-complexity bound~(Theorem~\ref{thm:sample}).
+(iii) Block-Sparse Ising Aggregator (BSIA): per-LLM
+$2 \!\times\! 2$ cells, within-modality cross-LLM Pearson
+corrections, cross-LLM cross-modality interactions pinned to zero.
+The only one of five tested cross-modality aggregators that
+improves on default DAJV: BSIA-iso reduces ECE by $34\%$ at matched
+precision; BSIA-fixed gains $+4.4$pp coverage at $0.962$
+precision; partial pass of the pre-registered $\geq 5$pp coverage
+criterion. Sample-complexity saving $k(k-2)$ parameters over
+saturated Ising (Theorem~\ref{thm:bsia}).
+(iv) Open-source library \texttt{verifyensemble} (BSD-3).

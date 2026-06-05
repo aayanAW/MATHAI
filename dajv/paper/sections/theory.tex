@@ -1,0 +1,39 @@
+\section{Theory}
+\label{sec:theory}
+
+DAJV rests on three claims, proofs in Appendix~\ref{app:proofs}.
+
+\begin{theorem}[Dependency-aware joint-FP bound]
+\label{thm:bound}
+For Bernoulli indicators $V_1, \ldots, V_k$ with marginals $\pi_i$
+and pairwise correlations $\rho_{ij}$,
+\begin{equation*}
+  \Pr\!\Big[\bigcap_{i} \{V_i = 1\}\Big]
+  \leq \prod_i \pi_i + \sum_{i<j} \rho_{ij}^+ \sqrt{\pi_i(1-\pi_i)\pi_j(1-\pi_j)}.
+\end{equation*}
+A specialization of~\citet{balasubramanian2026ising} to binary
+votes.
+\end{theorem}
+
+\begin{theorem}[Calibration sample complexity]
+\label{thm:sample}
+With $n_{\text{cal}} \geq \frac{1}{2\varepsilon^2}
+\log\!\frac{k(k-1)}{\delta}$ i.i.d.\ wrong-candidate draws,
+$\Pr[\max_{i \neq j} |\hat\rho_{ij} - \rho_{ij}| > \varepsilon]
+\leq \delta$.
+\end{theorem}
+
+\paragraph{Concrete numbers.} $k = 12$, $\varepsilon = 0.05$,
+$\delta = 0.05$: $n \geq 1{,}500$. Our $n_{\text{wrong}} = 192$
+on B-full corresponds to $\varepsilon \approx 0.15$ at
+$\delta = 0.05$ -- the boundary of overfitting documented in
+Appendix~\ref{app:k10_robustness}.
+
+\paragraph{BSIA sample-complexity saving
+(Theorem~\ref{thm:bsia}, Appendix~\ref{app:proof-thm3}).}
+Pinning the $k(k-2)$ cross-LLM cross-modality interactions to
+zero (the block-sparsity prior of \S\ref{sec:cross_modality})
+strictly reduces parameters of the saturated Ising on
+$(\sigma, \xi)$ by $k(k-2)$ ($48$ at $k=8$). The BSIA MLE
+achieves the same Hoeffding band as the saturated estimator at
+the lower parameter count.
