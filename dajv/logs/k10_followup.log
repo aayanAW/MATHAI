@@ -1,0 +1,286 @@
+
+=== math175 k=10 ===
+  default_dajv   cov=0.653±0.251 prec=0.571±0.173 ECE=0.366±0.141 AUC=0.300±0.217
+  xmod_dajv      cov=0.451±0.165 prec=0.496±0.158 ECE=0.633±0.202 AUC=0.361±0.139
+  xmod_agreement cov=0.285±0.034 prec=0.519±0.117 ECE=0.620±0.111 AUC=0.380±0.128
+  xmod_joint     cov=0.591±0.056 prec=0.984±0.022 ECE=0.175±0.037 AUC=0.058±0.024
+  xmod_struct_gated cov=0.066±0.094 prec=0.103±0.291 ECE=0.681±0.109 AUC=0.404±0.142
+  bsia           cov=0.849±0.048 prec=0.848±0.042 ECE=0.136±0.034 AUC=0.072±0.042
+  bsia_temp      cov=0.323±0.254 prec=0.979±0.025 ECE=0.114±0.035 AUC=0.072±0.042
+  bsia_iso       cov=0.551±0.076 prec=0.952±0.098 ECE=0.087±0.054 AUC=0.057±0.045
+  bsia_ensemble  cov=0.551±0.076 prec=0.952±0.098 ECE=0.105±0.031 AUC=0.072±0.042
+
+=== B_full k=10 ===
+  default_dajv   cov=0.493±0.269 prec=0.867±0.231 ECE=0.507±0.035 AUC=0.040±0.073
+  xmod_dajv      cov=0.492±0.056 prec=0.246±0.079 ECE=0.610±0.094 AUC=0.641±0.107
+  xmod_agreement cov=0.070±0.148 prec=0.451±0.475 ECE=0.510±0.094 AUC=0.635±0.101
+  xmod_joint     cov=0.348±0.036 prec=0.987±0.022 ECE=0.100±0.026 AUC=0.207±0.026
+  xmod_struct_gated cov=0.004±0.008 prec=1.000±0.000 ECE=0.626±0.082 AUC=0.520±0.117
+  bsia           cov=0.701±0.147 prec=0.628±0.136 ECE=0.307±0.052 AUC=0.208±0.028
+  bsia_temp      cov=0.338±0.043 prec=0.984±0.030 ECE=0.246±0.047 AUC=0.208±0.028
+  bsia_iso       cov=0.314±0.051 prec=0.985±0.028 ECE=0.084±0.047 AUC=0.118±0.020
+  bsia_ensemble  cov=0.337±0.052 prec=0.985±0.028 ECE=0.205±0.043 AUC=0.208±0.028
+
+Wrote /Users/aayanalwani/MATHAI/dajv/artifacts/xmod_dajv_k10.json
+n=175 k=10
+seed=1: best (rho=0.75, sm=0.10) cov=0.566 prec=1.000 ECE=0.077
+seed=2: best (rho=0.75, sm=0.10) cov=0.528 prec=1.000 ECE=0.050
+seed=3: best (rho=0.75, sm=0.10) cov=0.604 prec=1.000 ECE=0.051
+seed=4: best (rho=0.75, sm=0.10) cov=0.623 prec=0.970 ECE=0.107
+seed=5: best (rho=0.75, sm=0.10) cov=0.623 prec=0.970 ECE=0.087
+seed=6: best (rho=0.75, sm=0.10) cov=0.472 prec=1.000 ECE=0.068
+seed=7: best (rho=0.50, sm=0.50) cov=0.906 prec=0.917 ECE=0.093
+seed=8: best (rho=0.75, sm=0.10) cov=0.623 prec=0.970 ECE=0.146
+seed=9: best (rho=0.75, sm=0.10) cov=0.585 prec=0.935 ECE=0.194
+seed=10: best (rho=0.75, sm=0.10) cov=0.679 prec=0.972 ECE=0.037
+
+=== nested-CV BSIA on math175 ===
+coverage  : 0.621 +/- 0.115
+precision : 0.973 +/- 0.029
+ECE       : 0.091 +/- 0.048
+chosen HPs: {'rho=0.75_sm=0.10': 9, 'rho=0.50_sm=0.50': 1}
+
+Wrote /Users/aayanalwani/MATHAI/dajv/artifacts/bsia_sensitivity.json
+Available: ['E05_gpt_oss_120B', 'E06_gpt_5_mini', 'E07_claude_sonnet_4_6', 'E09_qwen3_coder_480B', 'E08S_gpt_4o', 'E04S_gpt_4_1', 'E10S_gpt_5', 'E01A_claude_opus_4_7', 'E02A_claude_opus_4_6', 'E03A_claude_haiku_4_5']
+
+=== math175 k=10 n_wrong=47 ===
+  within  n=16 median=0.657 95% CI [0.565, 0.789]
+  cross   n=29 median=0.647 95% CI [0.538, 0.657]
+  obs diff median(W) - median(C) = 0.0103
+  permutation single-sided p-value: 0.4241
+
+=== B_full k=10 n_wrong=166 ===
+  within  n=16 median=0.664 95% CI [0.530, 0.797]
+  cross   n=29 median=0.661 95% CI [0.495, 0.664]
+  obs diff median(W) - median(C) = 0.0027
+  permutation single-sided p-value: 0.4241
+
+Wrote /Users/aayanalwani/MATHAI/dajv/artifacts/h6_significance.json
+Wrote /Users/aayanalwani/MATHAI/dajv/paper/figures/fig_cross_modality_heatmap.pdf
+
+=== math175 (n_wrong=47) ===
+{
+  "within_modality_struct": {
+    "n": 45,
+    "median": 0.5315614617940198,
+    "mean": 0.5501243277678595,
+    "min": 0.1556886227544909,
+    "max": 1.0
+  },
+  "within_modality_exec": {
+    "n": 45,
+    "median": 0.7772511848341235,
+    "mean": 0.7217153499662351,
+    "min": 0.2824427480916026,
+    "max": 1.0
+  },
+  "within_llm_cross_modality": {
+    "n": 10,
+    "median": 0.12166676937844423,
+    "mean": 0.1201028616221688,
+    "min": -0.04243008678881412,
+    "max": 0.36771300448430516
+  },
+  "cross_llm_cross_modality": {
+    "n": 90,
+    "median": 0.06170598911070731,
+    "mean": 0.05761827581845065,
+    "min": -0.14410905550146047,
+    "max": 0.36771300448430516
+  }
+}
+
+=== B_full (n_wrong=166) ===
+{
+  "within_modality_struct": {
+    "n": 45,
+    "median": 0.5561497326203207,
+    "mean": 0.5068221168932835,
+    "min": 0.06396229590977955,
+    "max": 0.948173587261942
+  },
+  "within_modality_exec": {
+    "n": 45,
+    "median": 0.7657021877205368,
+    "mean": 0.7352320408269659,
+    "min": 0.2932828760643329,
+    "max": 1.0
+  },
+  "within_llm_cross_modality": {
+    "n": 10,
+    "median": 0.03223992770026762,
+    "mean": 0.05947822222838276,
+    "min": -0.01864526787821561,
+    "max": 0.32244897959183794
+  },
+  "cross_llm_cross_modality": {
+    "n": 90,
+    "median": 0.015172145496985088,
+    "mean": 0.027288961079968102,
+    "min": -0.08399009232154912,
+    "max": 0.23148148148148057
+  }
+}
+
+Wrote /Users/aayanalwani/MATHAI/dajv/artifacts/hybrid_modality.json
+=== cache record counts ===
+  E05_gpt_oss_120B: 330 records [OK]
+  E06_gpt_5_mini: 330 records [OK]
+  E07_claude_sonnet_4_6: 330 records [OK]
+  E09_qwen3_coder_480B: 330 records [OK]
+  E08S_gpt_4o: 330 records [OK] (NEW)
+  E04S_gpt_4_1: 330 records [OK] (NEW)
+  E10S_gpt_5: 330 records [OK] (NEW)
+  E01A_claude_opus_4_7: 330 records [OK] (NEW)
+  E02A_claude_opus_4_6: 303 records [OK] (NEW)
+  E03A_claude_haiku_4_5: 330 records [OK] (NEW)
+
+Candidates available: 10 of 10
+
+=== math175 k=10 n_test=53 ===
+  H6: within-lab κ median=0.657  cross-lab κ median=0.647  (n_within=16, n_cross=29)
+  naive_unanimous           cov=0.283 prec=0.933
+  naive_majority            cov=0.604 prec=0.969
+  dajv                      cov=1.000 prec=0.755
+  verge_proxy_full          cov=0.547 prec=0.966
+  verge_proxy_with_mcs      cov=0.547 prec=0.966
+
+=== aime k=10 n_test=9 ===
+  H6: within-lab κ median=0.000  cross-lab κ median=0.000  (n_within=16, n_cross=29)
+  naive_unanimous           cov=0.000 prec=  ---
+  naive_majority            cov=0.111 prec=1.000
+  dajv                      cov=0.222 prec=1.000
+  verge_proxy_full          cov=0.111 prec=1.000
+  verge_proxy_with_mcs      cov=0.111 prec=1.000
+
+=== cleanmath k=10 n_test=30 ===
+  H6: within-lab κ median=0.000  cross-lab κ median=0.000  (n_within=16, n_cross=29)
+  naive_unanimous           cov=0.000 prec=  ---
+  naive_majority            cov=0.033 prec=1.000
+  dajv                      cov=0.033 prec=1.000
+  verge_proxy_full          cov=0.033 prec=1.000
+  verge_proxy_with_mcs      cov=0.033 prec=1.000
+
+=== full k=10 n_test=91 ===
+  H6: within-lab κ median=0.664  cross-lab κ median=0.661  (n_within=16, n_cross=29)
+  naive_unanimous           cov=0.132 prec=0.917
+  naive_majority            cov=0.319 prec=0.966
+  dajv                      cov=1.000 prec=0.429
+  verge_proxy_full          cov=0.308 prec=0.964
+  verge_proxy_with_mcs      cov=0.308 prec=0.964
+
+Wrote /Users/aayanalwani/MATHAI/dajv/artifacts/aggregation_k10.json
+Wrote /Users/aayanalwani/MATHAI/dajv/artifacts/headline_metrics.json
+{
+  "h2_math175": "...",
+  "aggregation_4extractor": "...",
+  "aggregation_6extractor": "...",
+  "h6_significance": "...",
+  "cross_modality": "...",
+  "copula_ablation": "...",
+  "verge_proxy": "...",
+  "prm_h2h": "..."
+}
+Generating DAJV paper figures...
+  wrote /Users/aayanalwani/MATHAI/dajv/paper/figures/fig_dependency_heatmap.pdf
+  wrote /Users/aayanalwani/MATHAI/dajv/paper/figures/fig_joint_fp_vs_indep.pdf
+  wrote /Users/aayanalwani/MATHAI/dajv/paper/figures/fig_risk_coverage.pdf
+  wrote /Users/aayanalwani/MATHAI/dajv/paper/figures/fig_reliability.pdf
+  wrote /Users/aayanalwani/MATHAI/dajv/paper/figures/fig_theorem1_tightness.pdf
+  wrote /Users/aayanalwani/MATHAI/dajv/paper/figures/fig_sample_complexity.pdf
+All figures written.
+Wrote /Users/aayanalwani/MATHAI/dajv/paper/figures/fig_h6_within_vs_cross.pdf
+Wrote /Users/aayanalwani/MATHAI/dajv/paper/figures/fig_cross_modality.pdf
+[17:11:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=108, E03A_claude_haiku_4_5=188
+[17:12:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=118, E03A_claude_haiku_4_5=188
+[17:13:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=123, E03A_claude_haiku_4_5=198
+[17:14:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=133, E03A_claude_haiku_4_5=198
+[17:15:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=143, E03A_claude_haiku_4_5=213
+[17:16:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=143, E03A_claude_haiku_4_5=243
+[17:17:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=148, E03A_claude_haiku_4_5=263
+[17:18:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=153, E03A_claude_haiku_4_5=278
+[17:19:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=158, E03A_claude_haiku_4_5=283
+[17:20:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=168, E03A_claude_haiku_4_5=298
+[17:21:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=173, E03A_claude_haiku_4_5=313
+[17:22:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=178, E03A_claude_haiku_4_5=330
+[17:23:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=183, E03A_claude_haiku_4_5=330
+[17:24:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=183, E03A_claude_haiku_4_5=330
+[17:25:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=188, E03A_claude_haiku_4_5=330
+[17:26:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=193, E03A_claude_haiku_4_5=330
+[17:27:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=193, E03A_claude_haiku_4_5=330
+[17:28:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=198, E03A_claude_haiku_4_5=330
+[17:29:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=208, E03A_claude_haiku_4_5=330
+[17:30:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=208, E03A_claude_haiku_4_5=330
+[17:31:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=213, E03A_claude_haiku_4_5=330
+[17:32:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=223, E03A_claude_haiku_4_5=330
+[17:33:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=228, E03A_claude_haiku_4_5=330
+[17:34:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=233, E03A_claude_haiku_4_5=330
+[17:35:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=233, E03A_claude_haiku_4_5=330
+[17:36:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=238, E03A_claude_haiku_4_5=330
+[17:37:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=243, E03A_claude_haiku_4_5=330
+[17:38:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=253, E03A_claude_haiku_4_5=330
+[17:39:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=253, E03A_claude_haiku_4_5=330
+[17:40:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=258, E03A_claude_haiku_4_5=330
+[17:41:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=263, E03A_claude_haiku_4_5=330
+[17:42:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=263, E03A_claude_haiku_4_5=330
+[17:43:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=278, E03A_claude_haiku_4_5=330
+[17:44:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=278, E03A_claude_haiku_4_5=330
+[17:45:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=-1, E03A_claude_haiku_4_5=330
+[17:46:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[17:47:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[17:48:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[17:49:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[17:50:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[17:51:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[17:52:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[17:53:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[17:54:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[17:55:08] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[17:56:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[17:57:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[17:58:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[17:59:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[18:00:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[18:01:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[18:02:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[18:03:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[18:04:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[18:05:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[18:06:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[18:07:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[18:08:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[18:09:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[18:10:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[18:11:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[18:12:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[18:13:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[18:14:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[18:15:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[18:16:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=283, E03A_claude_haiku_4_5=330
+[18:17:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=293, E03A_claude_haiku_4_5=330
+[18:18:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=298, E03A_claude_haiku_4_5=330
+[18:19:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=298, E03A_claude_haiku_4_5=330
+[18:20:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=298, E03A_claude_haiku_4_5=330
+[18:21:09] status: E01A_claude_opus_4_7=330, E02A_claude_opus_4_6=303, E03A_claude_haiku_4_5=330
+
+$ python3 scripts/run_xmod_dajv.py --out xmod_dajv_k10.json
+
+$ python3 scripts/run_bsia_sensitivity.py
+
+$ python3 scripts/run_h6_significance.py
+
+$ python3 scripts/run_cross_modality_heatmap.py
+
+$ python3 scripts/run_hybrid_modality.py
+
+$ python3 scripts/run_8extractor_aggregation.py --out aggregation_k10.json
+
+$ python3 scripts/run_headline_metrics.py
+
+$ python3 scripts/run_figures.py
+
+$ python3 scripts/run_h6_figure.py
+
+$ python3 scripts/run_hybrid_modality_figure.py
+
+Wrote artifacts/k10_followup_summary.json

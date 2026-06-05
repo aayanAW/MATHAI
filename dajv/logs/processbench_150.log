@@ -1,0 +1,105 @@
+Generating gsm8k split:   0%|          | 0/400 [00:00<?, ? examples/s]Generating gsm8k split: 100%|██████████| 400/400 [00:00<00:00, 24080.63 examples/s]
+Generating math split:   0%|          | 0/1000 [00:00<?, ? examples/s]Generating math split: 100%|██████████| 1000/1000 [00:00<00:00, 76005.80 examples/s]
+Generating olympiadbench split:   0%|          | 0/1000 [00:00<?, ? examples/s]Generating olympiadbench split: 100%|██████████| 1000/1000 [00:00<00:00, 37714.49 examples/s]
+Generating omnimath split:   0%|          | 0/1000 [00:00<?, ? examples/s]Generating omnimath split: 100%|██████████| 1000/1000 [00:00<00:00, 35742.44 examples/s]
+loaded 150 processbench problems
+
+[E06_gpt_5_mini] gpt-5-mini  start (resume=30)
+  [E06_gpt_5_mini] 35/150
+  [E06_gpt_5_mini] 40/150
+  [E06_gpt_5_mini] 45/150
+  [E06_gpt_5_mini] 50/150
+  [E06_gpt_5_mini] 55/150
+  [E06_gpt_5_mini] 60/150
+  [E06_gpt_5_mini] 65/150
+  [E06_gpt_5_mini] 70/150
+  [E06_gpt_5_mini] 75/150
+  [E06_gpt_5_mini] 80/150
+  [E06_gpt_5_mini] 85/150
+  [E06_gpt_5_mini] 90/150
+  [E06_gpt_5_mini] 95/150
+  [E06_gpt_5_mini] 100/150
+  [E06_gpt_5_mini] 105/150
+  [E06_gpt_5_mini] 110/150
+  [E06_gpt_5_mini] 115/150
+  [E06_gpt_5_mini] 120/150
+  [E06_gpt_5_mini] 125/150
+  [E06_gpt_5_mini] 130/150
+  [E06_gpt_5_mini] 135/150
+  [E06_gpt_5_mini] 140/150
+  [E06_gpt_5_mini] 145/150
+  [E06_gpt_5_mini] 150/150
+  [E06_gpt_5_mini] done -> /Users/aayanalwani/MATHAI/dajv/../MATHAI/results/exp60_processbench_E06_gpt_5_mini.json
+
+[E08S_gpt_4o] gpt-4o-2024-11-20  start (resume=30)
+  [E08S_gpt_4o] 35/150
+  [E08S_gpt_4o] 40/150
+  [E08S_gpt_4o] 45/150
+  [E08S_gpt_4o] 50/150
+  [E08S_gpt_4o] 55/150
+  [E08S_gpt_4o] 60/150
+  [E08S_gpt_4o] 65/150
+  [E08S_gpt_4o] 70/150
+  [E08S_gpt_4o] 75/150
+  [E08S_gpt_4o] 80/150
+  [E08S_gpt_4o] 85/150
+  [E08S_gpt_4o] 90/150
+  [E08S_gpt_4o] 95/150
+  [E08S_gpt_4o] 100/150
+  [E08S_gpt_4o] 105/150
+  [E08S_gpt_4o] 110/150
+  [E08S_gpt_4o] 115/150
+  [E08S_gpt_4o] 120/150
+  [E08S_gpt_4o] 125/150
+  [E08S_gpt_4o] 130/150
+  [E08S_gpt_4o] 135/150
+  [E08S_gpt_4o] 140/150
+  [E08S_gpt_4o] 145/150
+  [E08S_gpt_4o] 150/150
+  [E08S_gpt_4o] done -> /Users/aayanalwani/MATHAI/dajv/../MATHAI/results/exp60_processbench_E08S_gpt_4o.json
+
+[E04S_gpt_4_1] gpt-4.1-2025-04-14  start (resume=30)
+  [E04S_gpt_4_1] 35/150
+  [E04S_gpt_4_1] 40/150
+  [E04S_gpt_4_1] 45/150
+  [E04S_gpt_4_1] 50/150
+  [E04S_gpt_4_1] 55/150
+  [E04S_gpt_4_1] 60/150
+  [E04S_gpt_4_1] 65/150
+  [E04S_gpt_4_1] 70/150
+  [E04S_gpt_4_1] 75/150
+  [E04S_gpt_4_1] 80/150
+  [E04S_gpt_4_1] 85/150
+  [E04S_gpt_4_1] 90/150
+  [E04S_gpt_4_1] 95/150
+  [E04S_gpt_4_1] 100/150
+  [E04S_gpt_4_1] 105/150
+  [E04S_gpt_4_1] 110/150
+  [E04S_gpt_4_1] 115/150
+  [E04S_gpt_4_1] 120/150
+  [E04S_gpt_4_1] 125/150
+  [E04S_gpt_4_1] 130/150
+  [E04S_gpt_4_1] 135/150
+  [E04S_gpt_4_1] 140/150
+  [E04S_gpt_4_1] 145/150
+  [E04S_gpt_4_1] 150/150
+  [E04S_gpt_4_1] done -> /Users/aayanalwani/MATHAI/dajv/../MATHAI/results/exp60_processbench_E04S_gpt_4_1.json
+
+[E10S_gpt_5] gpt-5-2025-08-07  start (resume=0)
+  [E10S_gpt_5] 5/150
+  [E10S_gpt_5] 10/150
+  [E10S_gpt_5] 15/150
+  [E10S_gpt_5] 20/150
+  [E10S_gpt_5] 25/150
+  [E10S_gpt_5] 30/150
+  [E10S_gpt_5] 35/150
+  [E10S_gpt_5] 40/150
+  [E10S_gpt_5] 45/150
+  [E10S_gpt_5] 50/150
+  [E10S_gpt_5] 55/150
+  [E10S_gpt_5] 60/150
+  [E10S_gpt_5] 65/150
+  [E10S_gpt_5] 70/150
+  [E10S_gpt_5] 75/150
+  [E10S_gpt_5] 80/150
+  [E10S_gpt_5] ERROR: [Errno 28] No space left on device: '/Users/aayanalwani/MATHAI/dajv/../MATHAI/results/exp60_processbench_E10S_gpt_5.json'

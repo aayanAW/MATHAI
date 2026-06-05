@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/aayanalwani/MATHAI/dajv/scripts/run_processbench_validation.py", line 175, in <module>
+    main()
+    ~~~~^^
+  File "/Users/aayanalwani/MATHAI/dajv/scripts/run_processbench_validation.py", line 163, in main
+    problems = load_processbench_math(n_max=args.n)
+  File "/Users/aayanalwani/MATHAI/dajv/scripts/run_processbench_validation.py", line 73, in load_processbench_math
+    row.get("steps", [{}])[-1].get("text", ""))[:120]),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'

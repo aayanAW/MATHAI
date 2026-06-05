@@ -1,0 +1,2 @@
+/Users/aayanalwani/miniforge3/lib/python3.13/multiprocessing/resource_tracker.py:400: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-m1j8s_ol'}
+  warnings.warn(

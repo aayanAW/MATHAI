@@ -1,0 +1,13 @@
+anchor records: 330  problem texts: 655
+
+[E02A_claude_opus_4_6] model=claude-opus-4-6  resumable from 283/330 cached records
+  [E02A_claude_opus_4_6] 288/330  avg=12.2s/prob  est_left=8.5min
+  [E02A_claude_opus_4_6] 293/330  avg=6.8s/prob  est_left=4.2min
+  [E02A_claude_opus_4_6] 298/330  avg=7.6s/prob  est_left=4.0min
+  [E02A_claude_opus_4_6] 303/330  avg=14.1s/prob  est_left=6.4min
+  [E02A_claude_opus_4_6] 308/330  avg=15.8s/prob  est_left=5.8min
+  [E02A_claude_opus_4_6] 313/330  avg=14.8s/prob  est_left=4.2min
+  [E02A_claude_opus_4_6] 318/330  avg=14.6s/prob  est_left=2.9min
+  [E02A_claude_opus_4_6] 323/330  avg=13.0s/prob  est_left=1.5min
+  [E02A_claude_opus_4_6] 328/330  avg=12.7s/prob  est_left=0.4min
+  [E02A_claude_opus_4_6] done. Wrote /Users/aayanalwani/MATHAI/dajv/../MATHAI/results/exp59_opus46_extractor.json (330 records).

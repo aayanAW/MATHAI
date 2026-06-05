@@ -1,0 +1,26 @@
+
+=== math175 (n_test=53) ===
+  naive_unanimous           cov=0.491 prec=0.962 n=26/53
+  dajv                      cov=0.623 prec=0.970 n=33/53
+  verge_proxy_full          cov=0.585 prec=0.968 n=31/53
+  verge_proxy_with_mcs      cov=0.585 prec=0.968 n=31/53
+
+=== aime (n_test=9) ===
+  naive_unanimous           cov=0.111 prec=1.000 n=1/9
+  dajv                      cov=0.111 prec=1.000 n=1/9
+  verge_proxy_full          cov=0.111 prec=1.000 n=1/9
+  verge_proxy_with_mcs      cov=0.111 prec=1.000 n=1/9
+
+=== cleanmath (n_test=38) ===
+  naive_unanimous           cov=0.053 prec=1.000 n=2/38
+  dajv                      cov=0.053 prec=1.000 n=2/38
+  verge_proxy_full          cov=0.053 prec=1.000 n=2/38
+  verge_proxy_with_mcs      cov=0.053 prec=1.000 n=2/38
+
+=== B_full (n_test=100) ===
+  naive_unanimous           cov=0.260 prec=1.000 n=26/100
+  dajv                      cov=0.320 prec=1.000 n=32/100
+  verge_proxy_full          cov=0.310 prec=1.000 n=31/100
+  verge_proxy_with_mcs      cov=0.310 prec=1.000 n=31/100
+
+Wrote /Users/aayanalwani/MATHAI/dajv/artifacts/verge_proxy_compare.json

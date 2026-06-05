@@ -1,0 +1,4 @@
+anchor records: 330  problem texts: 655
+
+[E12_gemini_2_5_pro] model=gemini-2.5-pro  resumable from 0/330 cached records
+  [E12_gemini_2_5_pro] done. Wrote /Users/aayanalwani/MATHAI/dajv/../MATHAI/results/exp54_gemini25pro_extractor.json (2 records).

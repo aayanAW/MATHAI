@@ -1,0 +1,14 @@
+
+=== math175 ===
+  llm_accept         k= 4  cov=0.579 prec=0.984 ECE=0.120 Brier=0.142
+  structural_only    k= 4  cov=0.394 prec=0.894 ECE=0.139 Brier=0.173
+  executable_only    k= 4  cov=0.430 prec=0.930 ECE=0.133 Brier=0.143
+  hybrid_8           k= 8  cov=0.691 prec=0.895 ECE=0.159 Brier=0.150
+
+=== B_full ===
+  llm_accept         k= 4  cov=0.328 prec=0.994 ECE=0.083 Brier=0.096
+  structural_only    k= 4  cov=0.000 prec= ---  ECE=0.143 Brier=0.195
+  executable_only    k= 4  cov=0.337 prec=0.935 ECE=0.093 Brier=0.105
+  hybrid_8           k= 8  cov=0.343 prec=0.952 ECE=0.253 Brier=0.209
+
+Wrote /Users/aayanalwani/MATHAI/dajv/artifacts/hybrid_aggregation.json
