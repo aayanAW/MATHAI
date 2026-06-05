@@ -1,0 +1,155 @@
+{
+  "fpvr_with_cis": {
+    "overall": {
+      "n": 169,
+      "wrong": 0,
+      "fpvr": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0216
+    },
+    "fully_independent": {
+      "n": 169,
+      "wrong": 0,
+      "fpvr": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0216
+    }
+  },
+  "risk_coverage_curve": [
+    {
+      "coverage": 0.1,
+      "n_accepted": 50,
+      "wrong": 0,
+      "fpvr": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0711
+    },
+    {
+      "coverage": 0.2,
+      "n_accepted": 100,
+      "wrong": 0,
+      "fpvr": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0362
+    },
+    {
+      "coverage": 0.3,
+      "n_accepted": 150,
+      "wrong": 0,
+      "fpvr": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0243
+    },
+    {
+      "coverage": 0.4,
+      "n_accepted": 200,
+      "wrong": 0,
+      "fpvr": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0183
+    },
+    {
+      "coverage": 0.5,
+      "n_accepted": 250,
+      "wrong": 0,
+      "fpvr": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0146
+    },
+    {
+      "coverage": 0.6,
+      "n_accepted": 300,
+      "wrong": 6,
+      "fpvr": 0.02,
+      "ci_low": 0.0074,
+      "ci_high": 0.043
+    },
+    {
+      "coverage": 0.7,
+      "n_accepted": 350,
+      "wrong": 18,
+      "fpvr": 0.0514,
+      "ci_low": 0.0308,
+      "ci_high": 0.0801
+    },
+    {
+      "coverage": 0.8,
+      "n_accepted": 400,
+      "wrong": 43,
+      "fpvr": 0.1075,
+      "ci_low": 0.0789,
+      "ci_high": 0.1421
+    },
+    {
+      "coverage": 0.9,
+      "n_accepted": 450,
+      "wrong": 67,
+      "fpvr": 0.1489,
+      "ci_low": 0.1173,
+      "ci_high": 0.1852
+    },
+    {
+      "coverage": 1.0,
+      "n_accepted": 500,
+      "wrong": 98,
+      "fpvr": 0.196,
+      "ci_low": 0.1621,
+      "ci_high": 0.2336
+    }
+  ],
+  "matched_coverage_comparison": [
+    {
+      "coverage": 0.2,
+      "sgrv_fpvr": 0.0,
+      "sgrv_ci": [
+        0.0,
+        0.0362
+      ],
+      "exever_fpvr": 0.138,
+      "improvement_pp": 13.8,
+      "n_accepted": 100
+    },
+    {
+      "coverage": 0.4,
+      "sgrv_fpvr": 0.0,
+      "sgrv_ci": [
+        0.0,
+        0.0183
+      ],
+      "exever_fpvr": 0.138,
+      "improvement_pp": 13.8,
+      "n_accepted": 200
+    },
+    {
+      "coverage": 0.6,
+      "sgrv_fpvr": 0.02,
+      "sgrv_ci": [
+        0.0074,
+        0.043
+      ],
+      "exever_fpvr": 0.138,
+      "improvement_pp": 11.8,
+      "n_accepted": 300
+    },
+    {
+      "coverage": 0.8,
+      "sgrv_fpvr": 0.1075,
+      "sgrv_ci": [
+        0.0789,
+        0.1421
+      ],
+      "exever_fpvr": 0.138,
+      "improvement_pp": 3.05,
+      "n_accepted": 400
+    }
+  ],
+  "processbench_summary": {
+    "tp": 295,
+    "fp": 188,
+    "fn": 79,
+    "tn": 37,
+    "precision": 0.6108,
+    "recall": 0.7888,
+    "f1": 0.6884
+  }
+}

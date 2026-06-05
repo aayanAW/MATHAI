@@ -1,0 +1,58 @@
+{
+  "MATH-500 n=175": {
+    "label": "MATH-500 n=175",
+    "n_shared": 175,
+    "llama_solo": {
+      "top_tier_size": 96,
+      "top_tier_correct": 90,
+      "precision": 0.9375
+    },
+    "deepseek_solo": {
+      "top_tier_size": 88,
+      "top_tier_correct": 82,
+      "precision": 0.9318181818181818
+    },
+    "consensus_strict": {
+      "top_tier_size": 73,
+      "top_tier_correct": 73,
+      "precision": 1.0,
+      "coverage": 0.41714285714285715
+    },
+    "consensus_loose": {
+      "top_tier_size": 79,
+      "top_tier_correct": 75,
+      "precision": 0.9493670886075949,
+      "coverage": 0.4514285714285714
+    },
+    "disagreements": 8,
+    "both_logic_broken": 29
+  },
+  "AIME 2025 n=30": {
+    "label": "AIME 2025 n=30",
+    "n_shared": 30,
+    "llama_solo": {
+      "top_tier_size": 2,
+      "top_tier_correct": 1,
+      "precision": 0.5
+    },
+    "deepseek_solo": {
+      "top_tier_size": 1,
+      "top_tier_correct": 1,
+      "precision": 1.0
+    },
+    "consensus_strict": {
+      "top_tier_size": 1,
+      "top_tier_correct": 1,
+      "precision": 1.0,
+      "coverage": 0.03333333333333333
+    },
+    "consensus_loose": {
+      "top_tier_size": 1,
+      "top_tier_correct": 1,
+      "precision": 1.0,
+      "coverage": 0.03333333333333333
+    },
+    "disagreements": 0,
+    "both_logic_broken": 1
+  }
+}

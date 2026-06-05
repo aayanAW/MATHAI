@@ -1,0 +1,203 @@
+{
+  "cleanmath_per_competition": {
+    "APEX-2025": {
+      "n": 12,
+      "solver_accuracy": 0.0,
+      "n_working_verifiers": 0,
+      "working_fraction": 0.0,
+      "n_top_tier": 0,
+      "top_tier_coverage": 0.0,
+      "top_tier_precision": null,
+      "adv_fp_rate": 0
+    },
+    "BRUMO-2025": {
+      "n": 30,
+      "solver_accuracy": 0.2,
+      "n_working_verifiers": 8,
+      "working_fraction": 0.26666666666666666,
+      "n_top_tier": 2,
+      "top_tier_coverage": 0.06666666666666667,
+      "top_tier_precision": 1.0,
+      "adv_fp_rate": 0.0625
+    },
+    "HMMT-Feb-2025": {
+      "n": 30,
+      "solver_accuracy": 0.0,
+      "n_working_verifiers": 5,
+      "working_fraction": 0.16666666666666666,
+      "n_top_tier": 0,
+      "top_tier_coverage": 0.0,
+      "top_tier_precision": null,
+      "adv_fp_rate": 0.15
+    },
+    "SMT-2025": {
+      "n": 53,
+      "solver_accuracy": 0.07547169811320754,
+      "n_working_verifiers": 7,
+      "working_fraction": 0.1320754716981132,
+      "n_top_tier": 2,
+      "top_tier_coverage": 0.03773584905660377,
+      "top_tier_precision": 1.0,
+      "adv_fp_rate": 0.10714285714285714
+    }
+  },
+  "trivial_audit": {
+    "llama_math175": {
+      "file": "exp31_xsgrv_math175_llama70b.json",
+      "total_working_verifiers": 90,
+      "classes": {
+        "compound": 55,
+        "enumeration": 34,
+        "trivial": 1
+      },
+      "fractions": {
+        "compound": 0.6111111111111112,
+        "enumeration": 0.37777777777777777,
+        "trivial": 0.011111111111111112
+      },
+      "example_ids": {
+        "trivial": [
+          "math500_369"
+        ],
+        "simple_sympy": [],
+        "constraint_check": [],
+        "enumeration": [
+          "math500_12",
+          "math500_161",
+          "math500_297"
+        ],
+        "compound": [
+          "math500_32",
+          "math500_10",
+          "math500_33"
+        ]
+      }
+    },
+    "deepseek_math175": {
+      "file": "exp32_math175_deepseek.json",
+      "total_working_verifiers": 89,
+      "classes": {
+        "compound": 55,
+        "enumeration": 34
+      },
+      "fractions": {
+        "compound": 0.6179775280898876,
+        "enumeration": 0.38202247191011235
+      },
+      "example_ids": {
+        "trivial": [],
+        "simple_sympy": [],
+        "constraint_check": [],
+        "enumeration": [
+          "math500_45",
+          "math500_30",
+          "math500_47"
+        ],
+        "compound": [
+          "math500_91",
+          "math500_9",
+          "math500_1"
+        ]
+      }
+    },
+    "llama_cleanmath": {
+      "file": "exp34_cleanmath_llama70b.json",
+      "total_working_verifiers": 20,
+      "classes": {
+        "enumeration": 19,
+        "compound": 1
+      },
+      "fractions": {
+        "enumeration": 0.95,
+        "compound": 0.05
+      },
+      "example_ids": {
+        "trivial": [],
+        "simple_sympy": [],
+        "constraint_check": [],
+        "enumeration": [
+          "hmmt_feb_2025_1",
+          "hmmt_feb_2025_11",
+          "hmmt_feb_2025_12"
+        ],
+        "compound": [
+          "hmmt_feb_2025_2"
+        ]
+      }
+    }
+  },
+  "mcnemar": {
+    "n_common": 175,
+    "intersection_top_tier": 77,
+    "xsgrv_only_top_tier": 19,
+    "se_only_top_tier": 35,
+    "both_correct_in_intersection": 72,
+    "mcnemar_table": [
+      [
+        72,
+        18
+      ],
+      [
+        29,
+        56
+      ]
+    ],
+    "mcnemar_pvalue": 0.14386508844054896,
+    "mcnemar_statistic": 18.0
+  },
+  "filter_no_probes": {
+    "mechanism": "no_filter_no_consensus",
+    "benchmark": "MATH-500 n=175 (Llama extractor)",
+    "top_tier_size": 96,
+    "coverage": 0.5485714285714286,
+    "top_tier_precision": 0.9375,
+    "ci95": [
+      0.8689149641980575,
+      0.9767204122692518
+    ]
+  },
+  "math_fps": [
+    {
+      "id": "math500_436",
+      "gold": "\\$18.90",
+      "candidate": "18.90",
+      "script_excerpt": "def verify(answer):\n    # Define the cost of 1 inch and 2 inch cubes\n    cost_1inch = 1.30\n    cost_2inch = 6.80\n    \n    # Calculate the surface area and volume of 1 inch and 2 inch cubes\n    surface_area_1inch = 6 * (1 ** 2)\n    volume_1inch = 1 ** 3\n    surface_area_2inch = 6 * (2 ** 2)\n    volum",
+      "adv_fp_count": 0
+    },
+    {
+      "id": "math500_30",
+      "gold": "-2,1",
+      "candidate": "1, -2",
+      "script_excerpt": "def verify(answer):\n    try:\n        roots = [int(x) for x in str(answer).strip().split(',')]\n    except Exception:\n        return False\n\n    poly = [1, 5, 9, -1, -14]\n    for root in roots:\n        result = sum([coeff * (root ** (len(poly) - 1 - i)) for i, coeff in enumerate(poly)])\n        if resu",
+      "adv_fp_count": 1
+    },
+    {
+      "id": "math500_147",
+      "gold": "81\\text{ teachers}",
+      "candidate": "81",
+      "script_excerpt": "def verify(answer):\n    female_students = 396\n    total_students = female_students * 9 // 4\n    teachers = total_students // 11\n    try:\n        return int(str(answer).strip()) == teachers\n    except Exception:\n        return False",
+      "adv_fp_count": 0
+    },
+    {
+      "id": "math500_233",
+      "gold": "25 \\text{ ft}",
+      "candidate": "25",
+      "script_excerpt": "def verify(answer):\n    min_area = 500\n    min_perimeter = float('inf')\n    correct_width = None\n    for length in range(1, 1000):\n        width = length + 5\n        area = length * width\n        if area >= min_area:\n            perimeter = 2 * (length + width)\n            if perimeter < min_perimet",
+      "adv_fp_count": 0
+    },
+    {
+      "id": "math500_258",
+      "gold": "3600",
+      "candidate": "-3600",
+      "script_excerpt": "def verify(answer):\n    original_area = 3491 * 3491\n    new_length = 3491 - 60\n    new_width = 3491 + 60\n    new_area = new_length * new_width\n    area_change = new_area - original_area\n    try:\n        return int(str(answer).strip()) == area_change\n    except Exception:\n        return False",
+      "adv_fp_count": 0
+    },
+    {
+      "id": "math500_347",
+      "gold": "30,\\!240",
+      "candidate": "30240",
+      "script_excerpt": "def verify(answer):\n    count = 0\n    for p in itertools.permutations(range(10), 5):\n        count += 1\n    try:\n        return int(str(answer).strip()) == count\n    except Exception:\n        return False",
+      "adv_fp_count": 0
+    }
+  ]
+}

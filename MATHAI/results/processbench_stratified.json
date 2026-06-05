@@ -1,0 +1,179 @@
+{
+  "stratified": {
+    "Llama-3.1-8B-Instruct": {
+      "n_total": 139,
+      "n_testable": 84,
+      "test_rate": 0.6043,
+      "tp": 42,
+      "fp": 20,
+      "fn": 14,
+      "tn": 8,
+      "precision": 0.6774,
+      "precision_ci": [
+        0.5466,
+        0.7906
+      ],
+      "recall": 0.75,
+      "f1": 0.7119
+    },
+    "Meta-Llama-3-70B-Instruct": {
+      "n_total": 141,
+      "n_testable": 73,
+      "test_rate": 0.5177,
+      "tp": 39,
+      "fp": 20,
+      "fn": 8,
+      "tn": 6,
+      "precision": 0.661,
+      "precision_ci": [
+        0.5261,
+        0.7792
+      ],
+      "recall": 0.8298,
+      "f1": 0.7358
+    },
+    "Meta-Llama-3-8B-Instruct": {
+      "n_total": 70,
+      "n_testable": 30,
+      "test_rate": 0.4286,
+      "tp": 20,
+      "fp": 4,
+      "fn": 6,
+      "tn": 0,
+      "precision": 0.8333,
+      "precision_ci": [
+        0.6262,
+        0.9526
+      ],
+      "recall": 0.7692,
+      "f1": 0.8
+    },
+    "Qwen2-1.5B-Instruct": {
+      "n_total": 47,
+      "n_testable": 36,
+      "test_rate": 0.766,
+      "tp": 21,
+      "fp": 9,
+      "fn": 6,
+      "tn": 0,
+      "precision": 0.7,
+      "precision_ci": [
+        0.506,
+        0.8527
+      ],
+      "recall": 0.7778,
+      "f1": 0.7368
+    },
+    "Qwen2-72B-Instruct": {
+      "n_total": 107,
+      "n_testable": 71,
+      "test_rate": 0.6636,
+      "tp": 33,
+      "fp": 29,
+      "fn": 4,
+      "tn": 5,
+      "precision": 0.5323,
+      "precision_ci": [
+        0.4012,
+        0.6602
+      ],
+      "recall": 0.8919,
+      "f1": 0.6667
+    },
+    "Qwen2-7B-Instruct": {
+      "n_total": 131,
+      "n_testable": 92,
+      "test_rate": 0.7023,
+      "tp": 50,
+      "fp": 21,
+      "fn": 17,
+      "tn": 4,
+      "precision": 0.7042,
+      "precision_ci": [
+        0.5841,
+        0.8067
+      ],
+      "recall": 0.7463,
+      "f1": 0.7246
+    },
+    "Qwen2.5-1.5B-Instruct": {
+      "n_total": 74,
+      "n_testable": 42,
+      "test_rate": 0.5676,
+      "tp": 16,
+      "fp": 17,
+      "fn": 4,
+      "tn": 5,
+      "precision": 0.4848,
+      "precision_ci": [
+        0.308,
+        0.6646
+      ],
+      "recall": 0.8,
+      "f1": 0.6038
+    },
+    "Qwen2.5-7B-Instruct": {
+      "n_total": 97,
+      "n_testable": 62,
+      "test_rate": 0.6392,
+      "tp": 30,
+      "fp": 21,
+      "fn": 9,
+      "tn": 2,
+      "precision": 0.5882,
+      "precision_ci": [
+        0.4417,
+        0.7242
+      ],
+      "recall": 0.7692,
+      "f1": 0.6667
+    },
+    "Qwen2.5-Math-72B-Instruct": {
+      "n_total": 98,
+      "n_testable": 56,
+      "test_rate": 0.5714,
+      "tp": 22,
+      "fp": 26,
+      "fn": 3,
+      "tn": 5,
+      "precision": 0.4583,
+      "precision_ci": [
+        0.3137,
+        0.6083
+      ],
+      "recall": 0.88,
+      "f1": 0.6027
+    },
+    "Qwen2.5-Math-7B-Instruct": {
+      "n_total": 96,
+      "n_testable": 53,
+      "test_rate": 0.5521,
+      "tp": 22,
+      "fp": 21,
+      "fn": 8,
+      "tn": 2,
+      "precision": 0.5116,
+      "precision_ci": [
+        0.3546,
+        0.6669
+      ],
+      "recall": 0.7333,
+      "f1": 0.6027
+    }
+  },
+  "distribution_shift": {
+    "qwen_family": {
+      "precision": 0.574,
+      "recall": 0.7918,
+      "f1": 0.6655,
+      "n": 412
+    },
+    "other_family": {
+      "precision": 0.6966,
+      "recall": 0.7829,
+      "f1": 0.7372,
+      "n": 187
+    },
+    "precision_gap": -0.1226
+  }
+}

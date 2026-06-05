@@ -1,0 +1,369 @@
+{
+  "primary": {
+    "Self-Consistency": {
+      "auroc": 0.7791167828060283,
+      "auroc_ci_low": 0.6963017033185775,
+      "auroc_ci_high": 0.8576639327305827,
+      "rc_auc_expected": 0.1203425315882306,
+      "rc_auc_std": 0.020539003247426794,
+      "top_tier": {
+        "tier_score": 1.0,
+        "tier_n": 118,
+        "tier_acc": 0.8898305084745762,
+        "cum_n": 118,
+        "cum_coverage": 0.6742857142857143,
+        "cum_acc": 0.8898305084745762,
+        "cum_ci_low": 0.8189763838075608,
+        "cum_ci_high": 0.9400193953762345
+      }
+    },
+    "Verbalized Confidence": {
+      "auroc": 0.5614225322276459,
+      "auroc_ci_low": 0.508858071547838,
+      "auroc_ci_high": 0.6235930525745855,
+      "rc_auc_expected": 0.21047085400865387,
+      "rc_auc_std": 0.03141596012761375,
+      "top_tier": {
+        "tier_score": 1.0,
+        "tier_n": 166,
+        "tier_acc": 0.7891566265060241,
+        "cum_n": 166,
+        "cum_coverage": 0.9485714285714286,
+        "cum_acc": 0.7891566265060241,
+        "cum_ci_low": 0.7191656281215308,
+        "cum_ci_high": 0.8485290372974321
+      }
+    },
+    "SGRV (ours)": {
+      "auroc": 0.7217404116509439,
+      "auroc_ci_low": 0.67828165374677,
+      "auroc_ci_high": 0.7644927536231885,
+      "rc_auc_expected": 0.103098740366291,
+      "rc_auc_std": 0.009399538807106414,
+      "top_tier": {
+        "tier_score": 1.0,
+        "tier_n": 59,
+        "tier_acc": 1.0,
+        "cum_n": 59,
+        "cum_coverage": 0.33714285714285713,
+        "cum_acc": 1.0,
+        "cum_ci_low": 0.9393910990496601,
+        "cum_ci_high": 1.0
+      }
+    },
+    "_tiers": {
+      "Self-Consistency": [
+        {
+          "tier_score": 1.0,
+          "tier_n": 118,
+          "tier_acc": 0.8898305084745762,
+          "cum_n": 118,
+          "cum_coverage": 0.6742857142857143,
+          "cum_acc": 0.8898305084745762,
+          "cum_ci_low": 0.8189763838075608,
+          "cum_ci_high": 0.9400193953762345
+        },
+        {
+          "tier_score": 0.75,
+          "tier_n": 21,
+          "tier_acc": 0.8571428571428571,
+          "cum_n": 139,
+          "cum_coverage": 0.7942857142857143,
+          "cum_acc": 0.8848920863309353,
+          "cum_ci_low": 0.8198094323274104,
+          "cum_ci_high": 0.9327552166115184
+        },
+        {
+          "tier_score": 0.5,
+          "tier_n": 23,
+          "tier_acc": 0.43478260869565216,
+          "cum_n": 162,
+          "cum_coverage": 0.9257142857142857,
+          "cum_acc": 0.8209876543209876,
+          "cum_ci_low": 0.7531338969269861,
+          "cum_ci_high": 0.8767133119303274
+        },
+        {
+          "tier_score": 0.25,
+          "tier_n": 13,
+          "tier_acc": 0.07692307692307693,
+          "cum_n": 175,
+          "cum_coverage": 1.0,
+          "cum_acc": 0.7657142857142857,
+          "cum_ci_low": 0.6958788449951274,
+          "cum_ci_high": 0.826322065833136
+        }
+      ],
+      "Verbalized Confidence": [
+        {
+          "tier_score": 1.0,
+          "tier_n": 166,
+          "tier_acc": 0.7891566265060241,
+          "cum_n": 166,
+          "cum_coverage": 0.9485714285714286,
+          "cum_acc": 0.7891566265060241,
+          "cum_ci_low": 0.7191656281215308,
+          "cum_ci_high": 0.8485290372974321
+        },
+        {
+          "tier_score": 0.95,
+          "tier_n": 6,
+          "tier_acc": 0.3333333333333333,
+          "cum_n": 172,
+          "cum_coverage": 0.9828571428571429,
+          "cum_acc": 0.7732558139534884,
+          "cum_ci_low": 0.7033277150739445,
+          "cum_ci_high": 0.8335198016714986
+        },
+        {
+          "tier_score": 0.85,
+          "tier_n": 1,
+          "tier_acc": 0.0,
+          "cum_n": 173,
+          "cum_coverage": 0.9885714285714285,
+          "cum_acc": 0.7687861271676301,
+          "cum_ci_low": 0.6987384372273008,
+          "cum_ci_high": 0.8293872460862058
+        },
+        {
+          "tier_score": 0.8,
+          "tier_n": 2,
+          "tier_acc": 0.5,
+          "cum_n": 175,
+          "cum_coverage": 1.0,
+          "cum_acc": 0.7657142857142857,
+          "cum_ci_low": 0.6958788449951274,
+          "cum_ci_high": 0.826322065833136
+        }
+      ],
+      "SGRV (ours)": [
+        {
+          "tier_score": 1.0,
+          "tier_n": 59,
+          "tier_acc": 1.0,
+          "cum_n": 59,
+          "cum_coverage": 0.33714285714285713,
+          "cum_acc": 1.0,
+          "cum_ci_low": 0.9393910990496601,
+          "cum_ci_high": 1.0
+        },
+        {
+          "tier_score": 0.3,
+          "tier_n": 116,
+          "tier_acc": 0.646551724137931,
+          "cum_n": 175,
+          "cum_coverage": 1.0,
+          "cum_acc": 0.7657142857142857,
+          "cum_ci_low": 0.6958788449951274,
+          "cum_ci_high": 0.826322065833136
+        }
+      ]
+    }
+  },
+  "cross_model": {
+    "Qwen/Qwen2.5-7B-Instruct-Turbo": {
+      "n": 50,
+      "accuracy": 0.78,
+      "methods": {
+        "SC": {
+          "auroc": 0.7529137529137528,
+          "rc_auc_expected": 0.11577278757461157,
+          "rc_auc_std": 0.029750668706270276,
+          "top_tier": {
+            "tier_score": 1.0,
+            "tier_n": 31,
+            "tier_acc": 0.9032258064516129,
+            "cum_n": 31,
+            "cum_coverage": 0.62,
+            "cum_acc": 0.9032258064516129,
+            "cum_ci_low": 0.7424609353722647,
+            "cum_ci_high": 0.9795801373122068
+          }
+        },
+        "Verb": {
+          "auroc": 0.5909090909090908,
+          "rc_auc_expected": 0.1910231548540148,
+          "rc_auc_std": 0.052523243921060815,
+          "top_tier": {
+            "tier_score": 1.0,
+            "tier_n": 48,
+            "tier_acc": 0.8125,
+            "cum_n": 48,
+            "cum_coverage": 0.96,
+            "cum_acc": 0.8125,
+            "cum_ci_low": 0.6737069760427918,
+            "cum_ci_high": 0.9105016181506271
+          }
+        },
+        "SGRV": {
+          "auroc": 0.6538461538461539,
+          "rc_auc_expected": 0.12268540035150184,
+          "rc_auc_std": 0.023621079253563805,
+          "top_tier": {
+            "tier_score": 1.0,
+            "tier_n": 12,
+            "tier_acc": 1.0,
+            "cum_n": 12,
+            "cum_coverage": 0.24,
+            "cum_acc": 1.0,
+            "cum_ci_low": 0.7353515306029488,
+            "cum_ci_high": 1.0
+          }
+        }
+      }
+    },
+    "meta-llama/Llama-3.3-70B-Instruct-Turbo": {
+      "n": 50,
+      "accuracy": 0.74,
+      "methods": {
+        "SC": {
+          "auroc": 0.818087318087318,
+          "rc_auc_expected": 0.12511588717839767,
+          "rc_auc_std": 0.034820804387927055,
+          "top_tier": {
+            "tier_score": 1.0,
+            "tier_n": 36,
+            "tier_acc": 0.8888888888888888,
+            "cum_n": 36,
+            "cum_coverage": 0.72,
+            "cum_acc": 0.8888888888888888,
+            "cum_ci_low": 0.7393890794889078,
+            "cum_ci_high": 0.9688838600549851
+          }
+        },
+        "Verb": {
+          "auroc": 0.6153846153846154,
+          "rc_auc_expected": 0.21660294625087637,
+          "rc_auc_std": 0.049147222855404404,
+          "top_tier": {
+            "tier_score": 1.0,
+            "tier_n": 47,
+            "tier_acc": 0.7872340425531915,
+            "cum_n": 47,
+            "cum_coverage": 0.94,
+            "cum_acc": 0.7872340425531915,
+            "cum_ci_low": 0.6433630122370074,
+            "cum_ci_high": 0.8929675228452512
+          }
+        },
+        "SGRV": {
+          "auroc": 0.6621621621621622,
+          "rc_auc_expected": 0.14390661443396024,
+          "rc_auc_std": 0.025315994978747515,
+          "top_tier": {
+            "tier_score": 1.0,
+            "tier_n": 12,
+            "tier_acc": 1.0,
+            "cum_n": 12,
+            "cum_coverage": 0.24,
+            "cum_acc": 1.0,
+            "cum_ci_low": 0.7353515306029488,
+            "cum_ci_high": 1.0
+          }
+        }
+      }
+    },
+    "meta-llama/Meta-Llama-3-8B-Instruct-Lite": {
+      "n": 50,
+      "accuracy": 0.28,
+      "methods": {
+        "SC": {
+          "auroc": 0.8809523809523809,
+          "rc_auc_expected": 0.43495749383016924,
+          "rc_auc_std": 0.01046438084283605,
+          "top_tier": {
+            "tier_score": 1.0,
+            "tier_n": 6,
+            "tier_acc": 1.0,
+            "cum_n": 6,
+            "cum_coverage": 0.12,
+            "cum_acc": 1.0,
+            "cum_ci_low": 0.5407418735600995,
+            "cum_ci_high": 1.0
+          }
+        },
+        "Verb": {
+          "auroc": 0.4722222222222222,
+          "rc_auc_expected": 0.7441804860528185,
+          "rc_auc_std": 0.044387660702069974,
+          "top_tier": {
+            "tier_score": 1.0,
+            "tier_n": 2,
+            "tier_acc": 0.0,
+            "cum_n": 2,
+            "cum_coverage": 0.04,
+            "cum_acc": 0.0,
+            "cum_ci_low": 0.0,
+            "cum_ci_high": 0.841886116991607
+          }
+        },
+        "SGRV": {
+          "auroc": 0.7857142857142857,
+          "rc_auc_expected": 0.4704356920536854,
+          "rc_auc_std": 0.021038485598872263,
+          "top_tier": {
+            "tier_score": 1.0,
+            "tier_n": 8,
+            "tier_acc": 1.0,
+            "cum_n": 8,
+            "cum_coverage": 0.16,
+            "cum_acc": 1.0,
+            "cum_ci_low": 0.6305833524471808,
+            "cum_ci_high": 1.0
+          }
+        }
+      }
+    },
+    "deepseek-ai/DeepSeek-V3": {
+      "n": 41,
+      "accuracy": 0.8536585365853658,
+      "methods": {
+        "SC": {
+          "auroc": 0.980952380952381,
+          "rc_auc_expected": 0.0140540410786818,
+          "rc_auc_std": 0.0012624550278810365,
+          "top_tier": {
+            "tier_score": 1.0,
+            "tier_n": 32,
+            "tier_acc": 1.0,
+            "cum_n": 32,
+            "cum_coverage": 0.7804878048780488,
+            "cum_acc": 1.0,
+            "cum_ci_low": 0.8911188393205571,
+            "cum_ci_high": 1.0
+          }
+        },
+        "Verb": {
+          "auroc": 0.5833333333333333,
+          "rc_auc_expected": 0.12370788102570153,
+          "rc_auc_std": 0.04976785297189473,
+          "top_tier": {
+            "tier_score": 1.0,
+            "tier_n": 40,
+            "tier_acc": 0.875,
+            "cum_n": 40,
+            "cum_coverage": 0.975609756097561,
+            "cum_acc": 0.875,
+            "cum_ci_low": 0.731967082638177,
+            "cum_ci_high": 0.9581403738613833
+          }
+        },
+        "SGRV": {
+          "auroc": 0.7142857142857143,
+          "rc_auc_expected": 0.060616489612467774,
+          "rc_auc_std": 0.01512200841458834,
+          "top_tier": {
+            "tier_score": 1.0,
+            "tier_n": 15,
+            "tier_acc": 1.0,
+            "cum_n": 15,
+            "cum_coverage": 0.36585365853658536,
+            "cum_acc": 1.0,
+            "cum_ci_low": 0.7819806390891612,
+            "cum_ci_high": 1.0
+          }
+        }
+      }
+    }
+  }
+}
