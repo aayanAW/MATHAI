@@ -1,0 +1,40 @@
+{
+  "solver": "deepseek-ai/DeepSeek-V3",
+  "extractor_ids": [
+    "llama_3_3_70B",
+    "deepseek_v3"
+  ],
+  "n_problems": 330,
+  "n_cal": 230,
+  "n_test": 100,
+  "calibration": {
+    "pi_pos": [
+      0.5401459854014599,
+      0.44525547445255476
+    ],
+    "pi_neg": [
+      0.010752688172043012,
+      0.043010752688172046
+    ],
+    "prior_correct": 0.5956521739130435
+  },
+  "metrics": {
+    "n_test": 100,
+    "dajv": {
+      "n_committed": 26,
+      "n_correct": 26,
+      "precision_at_commit": 1.0,
+      "coverage": 0.26,
+      "ece": 0.049087021736466764,
+      "brier": 0.1625746849796748
+    },
+    "naive_unanimous": {
+      "n_committed": 23,
+      "n_correct": 23,
+      "precision_at_commit": 1.0,
+      "coverage": 0.23,
+      "ece": 0.28500000000000003,
+      "brier": 0.2675
+    }
+  }
+}

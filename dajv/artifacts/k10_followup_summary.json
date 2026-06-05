@@ -1,0 +1,49 @@
+{
+  "caches": {
+    "E01A_claude_opus_4_7": 330,
+    "E02A_claude_opus_4_6": 303,
+    "E03A_claude_haiku_4_5": 330
+  },
+  "steps": [
+    {
+      "cmd": "python3 scripts/run_xmod_dajv.py --out xmod_dajv_k10.json",
+      "rc": 0
+    },
+    {
+      "cmd": "python3 scripts/run_bsia_sensitivity.py",
+      "rc": 0
+    },
+    {
+      "cmd": "python3 scripts/run_h6_significance.py",
+      "rc": 0
+    },
+    {
+      "cmd": "python3 scripts/run_cross_modality_heatmap.py",
+      "rc": 0
+    },
+    {
+      "cmd": "python3 scripts/run_hybrid_modality.py",
+      "rc": 0
+    },
+    {
+      "cmd": "python3 scripts/run_8extractor_aggregation.py --out aggregation_k10.json",
+      "rc": 0
+    },
+    {
+      "cmd": "python3 scripts/run_headline_metrics.py",
+      "rc": 0
+    },
+    {
+      "cmd": "python3 scripts/run_figures.py",
+      "rc": 0
+    },
+    {
+      "cmd": "python3 scripts/run_h6_figure.py",
+      "rc": 0
+    },
+    {
+      "cmd": "python3 scripts/run_hybrid_modality_figure.py",
+      "rc": 0
+    }
+  ]
+}

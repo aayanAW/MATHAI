@@ -1,0 +1,71 @@
+{
+  "ablation": "A3_calibration_size",
+  "n_pool": 231,
+  "n_test": 99,
+  "rows": [
+    {
+      "n_cal": 30,
+      "ece": 0.04991739913209749,
+      "brier": 0.050200589372179666,
+      "precision_at_commit": 0.9705882352941176,
+      "coverage": 0.3434343434343434,
+      "n_committed": 34,
+      "n_correct_committed": 33
+    },
+    {
+      "n_cal": 60,
+      "ece": 0.04185017010791254,
+      "brier": 0.04377708371625434,
+      "precision_at_commit": 1.0,
+      "coverage": 0.32323232323232326,
+      "n_committed": 32,
+      "n_correct_committed": 32
+    },
+    {
+      "n_cal": 90,
+      "ece": 0.039442386913071524,
+      "brier": 0.04219119499560757,
+      "precision_at_commit": 1.0,
+      "coverage": 0.32323232323232326,
+      "n_committed": 32,
+      "n_correct_committed": 32
+    },
+    {
+      "n_cal": 120,
+      "ece": 0.037169926637558685,
+      "brier": 0.041424524262521314,
+      "precision_at_commit": 1.0,
+      "coverage": 0.32323232323232326,
+      "n_committed": 32,
+      "n_correct_committed": 32
+    },
+    {
+      "n_cal": 160,
+      "ece": 0.03514493848568947,
+      "brier": 0.04157831943057841,
+      "precision_at_commit": 1.0,
+      "coverage": 0.32323232323232326,
+      "n_committed": 32,
+      "n_correct_committed": 32
+    },
+    {
+      "n_cal": 200,
+      "ece": 0.03362162270979955,
+      "brier": 0.04131065084131742,
+      "precision_at_commit": 1.0,
+      "coverage": 0.32323232323232326,
+      "n_committed": 32,
+      "n_correct_committed": 32
+    },
+    {
+      "n_cal": 231,
+      "ece": 0.034004439119783875,
+      "brier": 0.04158486349762335,
+      "precision_at_commit": 1.0,
+      "coverage": 0.32323232323232326,
+      "n_committed": 32,
+      "n_correct_committed": 32
+    }
+  ],
+  "naive_ece": 0.06313131313131312
+}

@@ -1,0 +1,61 @@
+{
+  "n_problems": 150,
+  "n_cal": 90,
+  "n_test": 60,
+  "k_extractors": 3,
+  "extractor_ids": [
+    "E06_gpt_5_mini",
+    "E08S_gpt_4o",
+    "E04S_gpt_4_1"
+  ],
+  "label_correct_rate_test": 0.36666666666666664,
+  "operating_points": {
+    "naive_unanimous": {
+      "TP": 1,
+      "FP": 0,
+      "TN": 38,
+      "FN": 21,
+      "precision": 1.0,
+      "coverage": 0.016666666666666666,
+      "specificity": 1.0
+    },
+    "naive_majority": {
+      "TP": 5,
+      "FP": 0,
+      "TN": 38,
+      "FN": 17,
+      "precision": 1.0,
+      "coverage": 0.08333333333333333,
+      "specificity": 1.0
+    },
+    "dajv": {
+      "TP": 5,
+      "FP": 0,
+      "TN": 38,
+      "FN": 17,
+      "precision": 1.0,
+      "coverage": 0.08333333333333333,
+      "specificity": 1.0
+    }
+  },
+  "calibration": {
+    "naive_unanimous": {
+      "ece": 0.26666666666666666,
+      "brier": 0.22592592592592595,
+      "rc_auc": 0.0,
+      "n": 60
+    },
+    "naive_majority": {
+      "ece": 0.26666666666666666,
+      "brier": 0.22592592592592595,
+      "rc_auc": 0.0,
+      "n": 60
+    },
+    "dajv": {
+      "ece": 0.11412799329728879,
+      "brier": 0.14578229945046214,
+      "rc_auc": 0.0,
+      "n": 60
+    }
+  }
+}

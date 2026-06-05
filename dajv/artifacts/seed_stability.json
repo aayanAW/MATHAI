@@ -1,0 +1,492 @@
+{
+  "per_seed": [
+    {
+      "seed": 1,
+      "results": {
+        "naive_unanimous": {
+          "n_committed": 23,
+          "n_correct_committed": 23,
+          "precision_at_commit": 1.0,
+          "coverage": 0.4339622641509434,
+          "ece": 0.2075471698113208,
+          "brier": 0.18160377358490565
+        },
+        "naive_majority": {
+          "n_committed": 29,
+          "n_correct_committed": 29,
+          "precision_at_commit": 1.0,
+          "coverage": 0.5471698113207547,
+          "ece": 0.2075471698113208,
+          "brier": 0.18160377358490565
+        },
+        "dajv": {
+          "n_committed": 29,
+          "n_correct_committed": 29,
+          "precision_at_commit": 1.0,
+          "coverage": 0.5471698113207547,
+          "ece": 0.11247004736447513,
+          "brier": 0.13074789871553505
+        },
+        "care": {
+          "n_committed": 23,
+          "n_correct_committed": 9,
+          "precision_at_commit": 0.391304347826087,
+          "coverage": 0.4339622641509434,
+          "ece": 0.6132075471698114,
+          "brier": 0.6745283018867925
+        }
+      }
+    },
+    {
+      "seed": 2,
+      "results": {
+        "naive_unanimous": {
+          "n_committed": 20,
+          "n_correct_committed": 20,
+          "precision_at_commit": 1.0,
+          "coverage": 0.37735849056603776,
+          "ece": 0.16037735849056606,
+          "brier": 0.125
+        },
+        "naive_majority": {
+          "n_committed": 25,
+          "n_correct_committed": 25,
+          "precision_at_commit": 1.0,
+          "coverage": 0.4716981132075472,
+          "ece": 0.16037735849056606,
+          "brier": 0.125
+        },
+        "dajv": {
+          "n_committed": 25,
+          "n_correct_committed": 25,
+          "precision_at_commit": 1.0,
+          "coverage": 0.4716981132075472,
+          "ece": 0.02048907289393428,
+          "brier": 0.07625781560768707
+        },
+        "care": {
+          "n_committed": 24,
+          "n_correct_committed": 5,
+          "precision_at_commit": 0.20833333333333334,
+          "coverage": 0.4528301886792453,
+          "ece": 0.6226415094339622,
+          "brier": 0.660377358490566
+        }
+      }
+    },
+    {
+      "seed": 3,
+      "results": {
+        "naive_unanimous": {
+          "n_committed": 25,
+          "n_correct_committed": 25,
+          "precision_at_commit": 1.0,
+          "coverage": 0.4716981132075472,
+          "ece": 0.19339622641509435,
+          "brier": 0.16627358490566038
+        },
+        "naive_majority": {
+          "n_committed": 30,
+          "n_correct_committed": 30,
+          "precision_at_commit": 1.0,
+          "coverage": 0.5660377358490566,
+          "ece": 0.19339622641509435,
+          "brier": 0.16627358490566038
+        },
+        "dajv": {
+          "n_committed": 30,
+          "n_correct_committed": 30,
+          "precision_at_commit": 1.0,
+          "coverage": 0.5660377358490566,
+          "ece": 0.09464404718328785,
+          "brier": 0.1144008868488606
+        },
+        "care": {
+          "n_committed": 21,
+          "n_correct_committed": 8,
+          "precision_at_commit": 0.38095238095238093,
+          "coverage": 0.39622641509433965,
+          "ece": 0.6509433962264152,
+          "brier": 0.7028301886792453
+        }
+      }
+    },
+    {
+      "seed": 4,
+      "results": {
+        "naive_unanimous": {
+          "n_committed": 21,
+          "n_correct_committed": 20,
+          "precision_at_commit": 0.9523809523809523,
+          "coverage": 0.39622641509433965,
+          "ece": 0.24528301886792453,
+          "brier": 0.21226415094339623
+        },
+        "naive_majority": {
+          "n_committed": 31,
+          "n_correct_committed": 30,
+          "precision_at_commit": 0.967741935483871,
+          "coverage": 0.5849056603773585,
+          "ece": 0.24528301886792453,
+          "brier": 0.21226415094339623
+        },
+        "dajv": {
+          "n_committed": 33,
+          "n_correct_committed": 32,
+          "precision_at_commit": 0.9696969696969697,
+          "coverage": 0.6226415094339622,
+          "ece": 0.12369265246574503,
+          "brier": 0.16796173647310392
+        },
+        "care": {
+          "n_committed": 18,
+          "n_correct_committed": 9,
+          "precision_at_commit": 0.5,
+          "coverage": 0.33962264150943394,
+          "ece": 0.6037735849056605,
+          "brier": 0.6886792452830188
+        }
+      }
+    },
+    {
+      "seed": 5,
+      "results": {
+        "naive_unanimous": {
+          "n_committed": 28,
+          "n_correct_committed": 27,
+          "precision_at_commit": 0.9642857142857143,
+          "coverage": 0.5283018867924528,
+          "ece": 0.2169811320754717,
+          "brier": 0.19339622641509435
+        },
+        "naive_majority": {
+          "n_committed": 31,
+          "n_correct_committed": 30,
+          "precision_at_commit": 0.967741935483871,
+          "coverage": 0.5849056603773585,
+          "ece": 0.2169811320754717,
+          "brier": 0.19339622641509435
+        },
+        "dajv": {
+          "n_committed": 33,
+          "n_correct_committed": 32,
+          "precision_at_commit": 0.9696969696969697,
+          "coverage": 0.6226415094339622,
+          "ece": 0.12863170705697677,
+          "brier": 0.1378024612096988
+        },
+        "care": {
+          "n_committed": 19,
+          "n_correct_committed": 8,
+          "precision_at_commit": 0.42105263157894735,
+          "coverage": 0.3584905660377358,
+          "ece": 0.669811320754717,
+          "brier": 0.7122641509433962
+        }
+      }
+    },
+    {
+      "seed": 6,
+      "results": {
+        "naive_unanimous": {
+          "n_committed": 21,
+          "n_correct_committed": 21,
+          "precision_at_commit": 1.0,
+          "coverage": 0.39622641509433965,
+          "ece": 0.16509433962264153,
+          "brier": 0.1615566037735849
+        },
+        "naive_majority": {
+          "n_committed": 24,
+          "n_correct_committed": 24,
+          "precision_at_commit": 1.0,
+          "coverage": 0.4528301886792453,
+          "ece": 0.16509433962264153,
+          "brier": 0.1615566037735849
+        },
+        "dajv": {
+          "n_committed": 25,
+          "n_correct_committed": 25,
+          "precision_at_commit": 1.0,
+          "coverage": 0.4716981132075472,
+          "ece": 0.07839629135544414,
+          "brier": 0.12763298944659623
+        },
+        "care": {
+          "n_committed": 26,
+          "n_correct_committed": 8,
+          "precision_at_commit": 0.3076923076923077,
+          "coverage": 0.49056603773584906,
+          "ece": 0.5471698113207547,
+          "brier": 0.5943396226415094
+        }
+      }
+    },
+    {
+      "seed": 7,
+      "results": {
+        "naive_unanimous": {
+          "n_committed": 29,
+          "n_correct_committed": 29,
+          "precision_at_commit": 1.0,
+          "coverage": 0.5471698113207547,
+          "ece": 0.24056603773584906,
+          "brier": 0.22287735849056603
+        },
+        "naive_majority": {
+          "n_committed": 33,
+          "n_correct_committed": 33,
+          "precision_at_commit": 1.0,
+          "coverage": 0.6226415094339622,
+          "ece": 0.24056603773584906,
+          "brier": 0.22287735849056603
+        },
+        "dajv": {
+          "n_committed": 33,
+          "n_correct_committed": 33,
+          "precision_at_commit": 1.0,
+          "coverage": 0.6226415094339622,
+          "ece": 0.1830441854267443,
+          "brier": 0.1753232279578242
+        },
+        "care": {
+          "n_committed": 19,
+          "n_correct_committed": 11,
+          "precision_at_commit": 0.5789473684210527,
+          "coverage": 0.3584905660377358,
+          "ece": 0.669811320754717,
+          "brier": 0.7311320754716981
+        }
+      }
+    },
+    {
+      "seed": 8,
+      "results": {
+        "naive_unanimous": {
+          "n_committed": 23,
+          "n_correct_committed": 22,
+          "precision_at_commit": 0.9565217391304348,
+          "coverage": 0.4339622641509434,
+          "ece": 0.2688679245283019,
+          "brier": 0.22995283018867924
+        },
+        "naive_majority": {
+          "n_committed": 30,
+          "n_correct_committed": 29,
+          "precision_at_commit": 0.9666666666666667,
+          "coverage": 0.5660377358490566,
+          "ece": 0.2688679245283019,
+          "brier": 0.22995283018867924
+        },
+        "dajv": {
+          "n_committed": 33,
+          "n_correct_committed": 32,
+          "precision_at_commit": 0.9696969696969697,
+          "coverage": 0.6226415094339622,
+          "ece": 0.16856827237891342,
+          "brier": 0.171359612100992
+        },
+        "care": {
+          "n_committed": 20,
+          "n_correct_committed": 10,
+          "precision_at_commit": 0.5,
+          "coverage": 0.37735849056603776,
+          "ece": 0.6037735849056605,
+          "brier": 0.6981132075471698
+        }
+      }
+    },
+    {
+      "seed": 9,
+      "results": {
+        "naive_unanimous": {
+          "n_committed": 27,
+          "n_correct_committed": 25,
+          "precision_at_commit": 0.9259259259259259,
+          "coverage": 0.5094339622641509,
+          "ece": 0.25,
+          "brier": 0.2346698113207547
+        },
+        "naive_majority": {
+          "n_committed": 30,
+          "n_correct_committed": 28,
+          "precision_at_commit": 0.9333333333333333,
+          "coverage": 0.5660377358490566,
+          "ece": 0.25,
+          "brier": 0.2346698113207547
+        },
+        "dajv": {
+          "n_committed": 31,
+          "n_correct_committed": 29,
+          "precision_at_commit": 0.9354838709677419,
+          "coverage": 0.5849056603773585,
+          "ece": 0.18617438758718036,
+          "brier": 0.19373370446113003
+        },
+        "care": {
+          "n_committed": 53,
+          "n_correct_committed": 39,
+          "precision_at_commit": 0.7358490566037735,
+          "coverage": 1.0,
+          "ece": 0.07553356950563217,
+          "brier": 0.14150953172544542
+        }
+      }
+    },
+    {
+      "seed": 10,
+      "results": {
+        "naive_unanimous": {
+          "n_committed": 27,
+          "n_correct_committed": 27,
+          "precision_at_commit": 1.0,
+          "coverage": 0.5094339622641509,
+          "ece": 0.19811320754716982,
+          "brier": 0.1721698113207547
+        },
+        "naive_majority": {
+          "n_committed": 32,
+          "n_correct_committed": 32,
+          "precision_at_commit": 1.0,
+          "coverage": 0.6037735849056604,
+          "ece": 0.19811320754716982,
+          "brier": 0.1721698113207547
+        },
+        "dajv": {
+          "n_committed": 35,
+          "n_correct_committed": 35,
+          "precision_at_commit": 1.0,
+          "coverage": 0.660377358490566,
+          "ece": 0.10062979988623637,
+          "brier": 0.12102829508372659
+        },
+        "care": {
+          "n_committed": 17,
+          "n_correct_committed": 8,
+          "precision_at_commit": 0.47058823529411764,
+          "coverage": 0.32075471698113206,
+          "ece": 0.6886792452830189,
+          "brier": 0.7405660377358491
+        }
+      }
+    }
+  ],
+  "summary": {
+    "naive_unanimous": {
+      "precision_at_commit": {
+        "mean": 0.9799114331723028,
+        "std": 0.027658445257364276,
+        "ci_lo": 0.9601271479527606,
+        "ci_hi": 0.999695718391845
+      },
+      "coverage": {
+        "mean": 0.46037735849056605,
+        "std": 0.06110670591945216,
+        "ci_lo": 0.4166672913668458,
+        "ci_hi": 0.5040874256142862
+      },
+      "ece": {
+        "mean": 0.21462264150943397,
+        "std": 0.03648679681091915,
+        "ci_lo": 0.18852337280008713,
+        "ci_hi": 0.2407219102187808
+      },
+      "brier": {
+        "mean": 0.18997641509433963,
+        "std": 0.03522174896585346,
+        "ci_lo": 0.16478204422542664,
+        "ci_hi": 0.21517078596325262
+      }
+    },
+    "naive_majority": {
+      "precision_at_commit": {
+        "mean": 0.9835483870967742,
+        "std": 0.023405045365460033,
+        "ci_lo": 0.966806589473016,
+        "ci_hi": 1.0002901847205323
+      },
+      "coverage": {
+        "mean": 0.5566037735849056,
+        "std": 0.05428514623154737,
+        "ci_lo": 0.5177732172670831,
+        "ci_hi": 0.5954343299027282
+      },
+      "ece": {
+        "mean": 0.21462264150943397,
+        "std": 0.03648679681091915,
+        "ci_lo": 0.18852337280008713,
+        "ci_hi": 0.2407219102187808
+      },
+      "brier": {
+        "mean": 0.18997641509433963,
+        "std": 0.03522174896585346,
+        "ci_lo": 0.16478204422542664,
+        "ci_hi": 0.21517078596325262
+      }
+    },
+    "dajv": {
+      "precision_at_commit": {
+        "mean": 0.9844574780058651,
+        "std": 0.022364286864364858,
+        "ci_lo": 0.968460142438406,
+        "ci_hi": 1.0004548135733244
+      },
+      "coverage": {
+        "mean": 0.5792452830188679,
+        "std": 0.06539066027959763,
+        "ci_lo": 0.5324708724680328,
+        "ci_hi": 0.626019693569703
+      },
+      "ece": {
+        "mean": 0.11967404635989376,
+        "std": 0.051107400997639066,
+        "ci_lo": 0.08311655410903808,
+        "ci_hi": 0.15623153861074945
+      },
+      "brier": {
+        "mean": 0.14162486279051545,
+        "std": 0.035269759431041624,
+        "ci_lo": 0.11639614968985491,
+        "ci_hi": 0.166853575891176
+      }
+    },
+    "care": {
+      "precision_at_commit": {
+        "mean": 0.4494719661702,
+        "std": 0.14585500970550733,
+        "ci_lo": 0.3451408265901638,
+        "ci_hi": 0.5538031057502363
+      },
+      "coverage": {
+        "mean": 0.4528301886792453,
+        "std": 0.19948115128495228,
+        "ci_lo": 0.31013988355830413,
+        "ci_hi": 0.5955204938001865
+      },
+      "ece": {
+        "mean": 0.574534489026035,
+        "std": 0.18021381725654903,
+        "ci_lo": 0.4456262467900865,
+        "ci_hi": 0.7034427312619835
+      },
+      "brier": {
+        "mean": 0.634433972040469,
+        "std": 0.17801697415269513,
+        "ci_lo": 0.5070971475087624,
+        "ci_hi": 0.7617707965721756
+      }
+    }
+  },
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ]
+}

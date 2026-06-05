@@ -1,0 +1,786 @@
+{
+  "per_seed": [
+    {
+      "outer_seed": 1,
+      "best_rho_shrinkage": 0.75,
+      "best_smooth": 0.1,
+      "inner_score": 0.5875,
+      "inner_grid": [
+        {
+          "rho": 0.75,
+          "smooth": 0.1,
+          "score": 0.5875
+        },
+        {
+          "rho": 0.75,
+          "smooth": 0.5,
+          "score": 0.5875
+        },
+        {
+          "rho": 0.75,
+          "smooth": 1.0,
+          "score": 0.5875
+        },
+        {
+          "rho": 0.0,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.0,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.0,
+          "smooth": 1.0,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 1.0,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 1.0,
+          "score": 0.0
+        }
+      ],
+      "final": {
+        "coverage": 0.5660377358490566,
+        "precision": 1.0,
+        "n_commit": 30,
+        "n_correct": 30,
+        "ece": 0.07693134932075309,
+        "brier": 0.11083708654111926
+      }
+    },
+    {
+      "outer_seed": 2,
+      "best_rho_shrinkage": 0.75,
+      "best_smooth": 0.1,
+      "inner_score": 0.625,
+      "inner_grid": [
+        {
+          "rho": 0.75,
+          "smooth": 0.1,
+          "score": 0.625
+        },
+        {
+          "rho": 0.75,
+          "smooth": 0.5,
+          "score": 0.625
+        },
+        {
+          "rho": 0.75,
+          "smooth": 1.0,
+          "score": 0.625
+        },
+        {
+          "rho": 0.0,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.0,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.0,
+          "smooth": 1.0,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 1.0,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 1.0,
+          "score": 0.0
+        }
+      ],
+      "final": {
+        "coverage": 0.5283018867924528,
+        "precision": 1.0,
+        "n_commit": 28,
+        "n_correct": 28,
+        "ece": 0.04955542452241751,
+        "brier": 0.06731414540510812
+      }
+    },
+    {
+      "outer_seed": 3,
+      "best_rho_shrinkage": 0.75,
+      "best_smooth": 0.1,
+      "inner_score": 0.55,
+      "inner_grid": [
+        {
+          "rho": 0.75,
+          "smooth": 0.1,
+          "score": 0.55
+        },
+        {
+          "rho": 0.75,
+          "smooth": 0.5,
+          "score": 0.55
+        },
+        {
+          "rho": 0.75,
+          "smooth": 1.0,
+          "score": 0.55
+        },
+        {
+          "rho": 0.0,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.0,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.0,
+          "smooth": 1.0,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 1.0,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 1.0,
+          "score": 0.0
+        }
+      ],
+      "final": {
+        "coverage": 0.6037735849056604,
+        "precision": 1.0,
+        "n_commit": 32,
+        "n_correct": 32,
+        "ece": 0.051440050604584335,
+        "brier": 0.0941480991983615
+      }
+    },
+    {
+      "outer_seed": 4,
+      "best_rho_shrinkage": 0.75,
+      "best_smooth": 0.1,
+      "inner_score": 0.6125,
+      "inner_grid": [
+        {
+          "rho": 0.75,
+          "smooth": 0.1,
+          "score": 0.6125
+        },
+        {
+          "rho": 0.75,
+          "smooth": 0.5,
+          "score": 0.6125
+        },
+        {
+          "rho": 0.75,
+          "smooth": 1.0,
+          "score": 0.6
+        },
+        {
+          "rho": 0.0,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.0,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.0,
+          "smooth": 1.0,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 1.0,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 1.0,
+          "score": 0.0
+        }
+      ],
+      "final": {
+        "coverage": 0.6226415094339622,
+        "precision": 0.9696969696969697,
+        "n_commit": 33,
+        "n_correct": 32,
+        "ece": 0.10707051733430581,
+        "brier": 0.12863983922414426
+      }
+    },
+    {
+      "outer_seed": 5,
+      "best_rho_shrinkage": 0.75,
+      "best_smooth": 0.1,
+      "inner_score": 0.6375,
+      "inner_grid": [
+        {
+          "rho": 0.75,
+          "smooth": 0.1,
+          "score": 0.6375
+        },
+        {
+          "rho": 0.75,
+          "smooth": 0.5,
+          "score": 0.6375
+        },
+        {
+          "rho": 0.75,
+          "smooth": 1.0,
+          "score": 0.6375
+        },
+        {
+          "rho": 0.0,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.0,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.0,
+          "smooth": 1.0,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 1.0,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 1.0,
+          "score": 0.0
+        }
+      ],
+      "final": {
+        "coverage": 0.6226415094339622,
+        "precision": 0.9696969696969697,
+        "n_commit": 33,
+        "n_correct": 32,
+        "ece": 0.08682960851370672,
+        "brier": 0.0993585484901934
+      }
+    },
+    {
+      "outer_seed": 6,
+      "best_rho_shrinkage": 0.75,
+      "best_smooth": 0.1,
+      "inner_score": 0.6583333333333333,
+      "inner_grid": [
+        {
+          "rho": 0.75,
+          "smooth": 0.1,
+          "score": 0.6583333333333333
+        },
+        {
+          "rho": 0.75,
+          "smooth": 0.5,
+          "score": 0.6583333333333333
+        },
+        {
+          "rho": 0.75,
+          "smooth": 1.0,
+          "score": 0.6583333333333333
+        },
+        {
+          "rho": 0.0,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.0,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.0,
+          "smooth": 1.0,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 1.0,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 1.0,
+          "score": 0.0
+        }
+      ],
+      "final": {
+        "coverage": 0.4716981132075472,
+        "precision": 1.0,
+        "n_commit": 25,
+        "n_correct": 25,
+        "ece": 0.06828720216825121,
+        "brier": 0.08823875606589329
+      }
+    },
+    {
+      "outer_seed": 7,
+      "best_rho_shrinkage": 0.5,
+      "best_smooth": 0.5,
+      "inner_score": 0.6,
+      "inner_grid": [
+        {
+          "rho": 0.5,
+          "smooth": 0.5,
+          "score": 0.6
+        },
+        {
+          "rho": 0.5,
+          "smooth": 1.0,
+          "score": 0.6
+        },
+        {
+          "rho": 0.75,
+          "smooth": 0.1,
+          "score": 0.5875
+        },
+        {
+          "rho": 0.75,
+          "smooth": 0.5,
+          "score": 0.5875
+        },
+        {
+          "rho": 0.75,
+          "smooth": 1.0,
+          "score": 0.5875
+        },
+        {
+          "rho": 0.0,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.0,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.0,
+          "smooth": 1.0,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 1.0,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 0.1,
+          "score": 0.0
+        }
+      ],
+      "final": {
+        "coverage": 0.9056603773584906,
+        "precision": 0.9166666666666666,
+        "n_commit": 48,
+        "n_correct": 44,
+        "ece": 0.09344904213473251,
+        "brier": 0.09662701519900614
+      }
+    },
+    {
+      "outer_seed": 8,
+      "best_rho_shrinkage": 0.75,
+      "best_smooth": 0.1,
+      "inner_score": 0.6000000000000001,
+      "inner_grid": [
+        {
+          "rho": 0.75,
+          "smooth": 0.1,
+          "score": 0.6000000000000001
+        },
+        {
+          "rho": 0.75,
+          "smooth": 0.5,
+          "score": 0.5875
+        },
+        {
+          "rho": 0.75,
+          "smooth": 1.0,
+          "score": 0.5833333333333334
+        },
+        {
+          "rho": 0.0,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.0,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.0,
+          "smooth": 1.0,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 1.0,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 1.0,
+          "score": 0.0
+        }
+      ],
+      "final": {
+        "coverage": 0.6226415094339622,
+        "precision": 0.9696969696969697,
+        "n_commit": 33,
+        "n_correct": 32,
+        "ece": 0.14599046746735492,
+        "brier": 0.1442697991129278
+      }
+    },
+    {
+      "outer_seed": 9,
+      "best_rho_shrinkage": 0.75,
+      "best_smooth": 0.1,
+      "inner_score": 0.6,
+      "inner_grid": [
+        {
+          "rho": 0.75,
+          "smooth": 0.1,
+          "score": 0.6
+        },
+        {
+          "rho": 0.75,
+          "smooth": 0.5,
+          "score": 0.6
+        },
+        {
+          "rho": 0.75,
+          "smooth": 1.0,
+          "score": 0.5833333333333334
+        },
+        {
+          "rho": 0.0,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.0,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.0,
+          "smooth": 1.0,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 1.0,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 1.0,
+          "score": 0.0
+        }
+      ],
+      "final": {
+        "coverage": 0.5849056603773585,
+        "precision": 0.9354838709677419,
+        "n_commit": 31,
+        "n_correct": 29,
+        "ece": 0.1942034482457276,
+        "brier": 0.18017296455065454
+      }
+    },
+    {
+      "outer_seed": 10,
+      "best_rho_shrinkage": 0.75,
+      "best_smooth": 0.1,
+      "inner_score": 0.625,
+      "inner_grid": [
+        {
+          "rho": 0.75,
+          "smooth": 0.1,
+          "score": 0.625
+        },
+        {
+          "rho": 0.75,
+          "smooth": 0.5,
+          "score": 0.625
+        },
+        {
+          "rho": 0.75,
+          "smooth": 1.0,
+          "score": 0.625
+        },
+        {
+          "rho": 0.0,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.0,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.0,
+          "smooth": 1.0,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.25,
+          "smooth": 1.0,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 0.1,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 0.5,
+          "score": 0.0
+        },
+        {
+          "rho": 0.5,
+          "smooth": 1.0,
+          "score": 0.0
+        }
+      ],
+      "final": {
+        "coverage": 0.6792452830188679,
+        "precision": 0.9722222222222222,
+        "n_commit": 36,
+        "n_correct": 35,
+        "ece": 0.037452195676886915,
+        "brier": 0.09070054770977756
+      }
+    }
+  ],
+  "summary": {
+    "n_seeds": 10,
+    "coverage": {
+      "mean": 0.620754716981132,
+      "std": 0.11543921933993326,
+      "n": 10
+    },
+    "precision": {
+      "mean": 0.973346366894754,
+      "std": 0.028923346293976367,
+      "n": 10
+    },
+    "ece": {
+      "mean": 0.09112093059887207,
+      "std": 0.048097373915030245,
+      "n": 10
+    },
+    "best_hp_distribution": {
+      "rho=0.75_sm=0.10": 9,
+      "rho=0.50_sm=0.50": 1
+    }
+  }
+}

@@ -1,0 +1,118 @@
+[
+  {
+    "tag": "math175",
+    "bench": "math175",
+    "n_test": 53,
+    "naive_unanimous": {
+      "n_committed": 26,
+      "n_correct": 25,
+      "precision": 0.9615384615384616,
+      "coverage": 0.49056603773584906
+    },
+    "dajv": {
+      "n_committed": 33,
+      "n_correct": 32,
+      "precision": 0.9696969696969697,
+      "coverage": 0.6226415094339622
+    },
+    "verge_proxy_full": {
+      "n_committed": 31,
+      "n_correct": 30,
+      "precision": 0.967741935483871,
+      "coverage": 0.5849056603773585
+    },
+    "verge_proxy_with_mcs": {
+      "n_committed": 31,
+      "n_correct": 30,
+      "precision": 0.967741935483871,
+      "coverage": 0.5849056603773585
+    }
+  },
+  {
+    "tag": "aime",
+    "bench": "aime",
+    "n_test": 9,
+    "naive_unanimous": {
+      "n_committed": 1,
+      "n_correct": 1,
+      "precision": 1.0,
+      "coverage": 0.1111111111111111
+    },
+    "dajv": {
+      "n_committed": 1,
+      "n_correct": 1,
+      "precision": 1.0,
+      "coverage": 0.1111111111111111
+    },
+    "verge_proxy_full": {
+      "n_committed": 1,
+      "n_correct": 1,
+      "precision": 1.0,
+      "coverage": 0.1111111111111111
+    },
+    "verge_proxy_with_mcs": {
+      "n_committed": 1,
+      "n_correct": 1,
+      "precision": 1.0,
+      "coverage": 0.1111111111111111
+    }
+  },
+  {
+    "tag": "cleanmath",
+    "bench": "cleanmath",
+    "n_test": 38,
+    "naive_unanimous": {
+      "n_committed": 2,
+      "n_correct": 2,
+      "precision": 1.0,
+      "coverage": 0.05263157894736842
+    },
+    "dajv": {
+      "n_committed": 2,
+      "n_correct": 2,
+      "precision": 1.0,
+      "coverage": 0.05263157894736842
+    },
+    "verge_proxy_full": {
+      "n_committed": 2,
+      "n_correct": 2,
+      "precision": 1.0,
+      "coverage": 0.05263157894736842
+    },
+    "verge_proxy_with_mcs": {
+      "n_committed": 2,
+      "n_correct": 2,
+      "precision": 1.0,
+      "coverage": 0.05263157894736842
+    }
+  },
+  {
+    "tag": "B_full",
+    "bench": null,
+    "n_test": 100,
+    "naive_unanimous": {
+      "n_committed": 26,
+      "n_correct": 26,
+      "precision": 1.0,
+      "coverage": 0.26
+    },
+    "dajv": {
+      "n_committed": 32,
+      "n_correct": 32,
+      "precision": 1.0,
+      "coverage": 0.32
+    },
+    "verge_proxy_full": {
+      "n_committed": 31,
+      "n_correct": 31,
+      "precision": 1.0,
+      "coverage": 0.31
+    },
+    "verge_proxy_with_mcs": {
+      "n_committed": 31,
+      "n_correct": 31,
+      "precision": 1.0,
+      "coverage": 0.31
+    }
+  }
+]
