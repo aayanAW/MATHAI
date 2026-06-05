@@ -1,0 +1,21 @@
+{
+  "gsm8k": {
+    "n": 12,
+    "f1_error": 0.9090909090909091
+  },
+  "math": {
+    "n": 12,
+    "f1_error": 0.875
+  },
+  "olympiadbench": {
+    "n": 12,
+    "f1_error": 0.875
+  },
+  "omnimath": {
+    "n": 12,
+    "f1_error": 0.9090909090909091
+  },
+  "avg_f1": 0.8920454545454546,
+  "published_avg_f1": 0.735,
+  "passes": true
+}

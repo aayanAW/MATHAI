@@ -1,0 +1,1079 @@
+{
+  "runs": [
+    {
+      "key": "llama_s1",
+      "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+      "T": 0.3,
+      "rows": [
+        {
+          "id": "math500_102",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.533599853515625
+        },
+        {
+          "id": "math500_33",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.215954065322876
+        },
+        {
+          "id": "math500_277",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 2.2077229022979736
+        },
+        {
+          "id": "math500_369",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": false,
+          "elapsed": 3.6347129344940186
+        },
+        {
+          "id": "math500_378",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 2.611616849899292
+        },
+        {
+          "id": "math500_194",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.068122148513794
+        },
+        {
+          "id": "math500_312",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 2.654952049255371
+        },
+        {
+          "id": "math500_161",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.2757699489593506
+        },
+        {
+          "id": "math500_251",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.580862045288086
+        },
+        {
+          "id": "math500_461",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.8956458568572998
+        },
+        {
+          "id": "math500_244",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.7744572162628174
+        },
+        {
+          "id": "math500_232",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.9650611877441406
+        },
+        {
+          "id": "math500_214",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.6173250675201416
+        },
+        {
+          "id": "math500_109",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.2871668338775635
+        },
+        {
+          "id": "math500_160",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 1.2079858779907227
+        },
+        {
+          "id": "math500_345",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 2.3403639793395996
+        },
+        {
+          "id": "math500_167",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.6045160293579102
+        },
+        {
+          "id": "math500_343",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.537423849105835
+        },
+        {
+          "id": "math500_32",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 0.983370304107666
+        },
+        {
+          "id": "math500_115",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.2557668685913086
+        },
+        {
+          "id": "math500_113",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 1.2269728183746338
+        },
+        {
+          "id": "math500_50",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 0.7208518981933594
+        },
+        {
+          "id": "math500_126",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 1.2915308475494385
+        },
+        {
+          "id": "math500_321",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.5290470123291016
+        },
+        {
+          "id": "math500_301",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.433016061782837
+        },
+        {
+          "id": "math500_130",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.6770849227905273
+        },
+        {
+          "id": "math500_276",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 0.9948928356170654
+        },
+        {
+          "id": "math500_458",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 1.8496787548065186
+        },
+        {
+          "id": "math500_349",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.6040220260620117
+        },
+        {
+          "id": "math500_201",
+          "extractor": "llama_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.6993117332458496
+        }
+      ]
+    },
+    {
+      "key": "llama_s2",
+      "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+      "T": 0.3,
+      "rows": [
+        {
+          "id": "math500_102",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.3831548690795898
+        },
+        {
+          "id": "math500_33",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 0.761106014251709
+        },
+        {
+          "id": "math500_277",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 1.618321180343628
+        },
+        {
+          "id": "math500_369",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": false,
+          "elapsed": 2.028858184814453
+        },
+        {
+          "id": "math500_378",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 2.411072015762329
+        },
+        {
+          "id": "math500_194",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.8239521980285645
+        },
+        {
+          "id": "math500_312",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 1.5643861293792725
+        },
+        {
+          "id": "math500_161",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.802098035812378
+        },
+        {
+          "id": "math500_251",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 1.4341399669647217
+        },
+        {
+          "id": "math500_461",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.6803159713745117
+        },
+        {
+          "id": "math500_244",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 2.1536271572113037
+        },
+        {
+          "id": "math500_232",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 4.673749923706055
+        },
+        {
+          "id": "math500_214",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.920358896255493
+        },
+        {
+          "id": "math500_109",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.1302340030670166
+        },
+        {
+          "id": "math500_160",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 2.1767728328704834
+        },
+        {
+          "id": "math500_345",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 1.4271762371063232
+        },
+        {
+          "id": "math500_167",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.0678560733795166
+        },
+        {
+          "id": "math500_343",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.6896190643310547
+        },
+        {
+          "id": "math500_32",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.2076950073242188
+        },
+        {
+          "id": "math500_115",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.6551170349121094
+        },
+        {
+          "id": "math500_113",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 3.910170078277588
+        },
+        {
+          "id": "math500_50",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 0.6461203098297119
+        },
+        {
+          "id": "math500_126",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 1.465156078338623
+        },
+        {
+          "id": "math500_321",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.3621020317077637
+        },
+        {
+          "id": "math500_301",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.6854689121246338
+        },
+        {
+          "id": "math500_130",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.6134541034698486
+        },
+        {
+          "id": "math500_276",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.041792631149292
+        },
+        {
+          "id": "math500_458",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 1.447695016860962
+        },
+        {
+          "id": "math500_349",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.5633070468902588
+        },
+        {
+          "id": "math500_201",
+          "extractor": "llama_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.4046599864959717
+        }
+      ]
+    },
+    {
+      "key": "deepseek_s1",
+      "model": "deepseek-ai/DeepSeek-V3",
+      "T": 0.3,
+      "rows": [
+        {
+          "id": "math500_102",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 3.1871821880340576
+        },
+        {
+          "id": "math500_33",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.6448938846588135
+        },
+        {
+          "id": "math500_277",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 6.1208720207214355
+        },
+        {
+          "id": "math500_369",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": false,
+          "elapsed": 7.061314105987549
+        },
+        {
+          "id": "math500_378",
+          "extractor": "deepseek_s1",
+          "status": "unverifiable",
+          "error": null
+        },
+        {
+          "id": "math500_194",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.4137718677520752
+        },
+        {
+          "id": "math500_312",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 6.554379940032959
+        },
+        {
+          "id": "math500_161",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.7807161808013916
+        },
+        {
+          "id": "math500_251",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.5886719226837158
+        },
+        {
+          "id": "math500_461",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.4829189777374268
+        },
+        {
+          "id": "math500_244",
+          "extractor": "deepseek_s1",
+          "status": "unverifiable",
+          "error": null
+        },
+        {
+          "id": "math500_232",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.8218319416046143
+        },
+        {
+          "id": "math500_214",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 3.189114809036255
+        },
+        {
+          "id": "math500_109",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.529130697250366
+        },
+        {
+          "id": "math500_160",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 3.262192726135254
+        },
+        {
+          "id": "math500_345",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 4.108659029006958
+        },
+        {
+          "id": "math500_167",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.6582558155059814
+        },
+        {
+          "id": "math500_343",
+          "extractor": "deepseek_s1",
+          "status": "unverifiable",
+          "error": null
+        },
+        {
+          "id": "math500_32",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.1225080490112305
+        },
+        {
+          "id": "math500_115",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.2648108005523682
+        },
+        {
+          "id": "math500_113",
+          "extractor": "deepseek_s1",
+          "status": "unverifiable",
+          "error": null
+        },
+        {
+          "id": "math500_50",
+          "extractor": "deepseek_s1",
+          "status": "unverifiable",
+          "error": null
+        },
+        {
+          "id": "math500_126",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 5.067502021789551
+        },
+        {
+          "id": "math500_321",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.7606348991394043
+        },
+        {
+          "id": "math500_301",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 8.245421171188354
+        },
+        {
+          "id": "math500_130",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.8748199939727783
+        },
+        {
+          "id": "math500_276",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.4426379203796387
+        },
+        {
+          "id": "math500_458",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 1.7715373039245605
+        },
+        {
+          "id": "math500_349",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 3.5849578380584717
+        },
+        {
+          "id": "math500_201",
+          "extractor": "deepseek_s1",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 3.373255968093872
+        }
+      ]
+    },
+    {
+      "key": "deepseek_s2",
+      "model": "deepseek-ai/DeepSeek-V3",
+      "T": 0.3,
+      "rows": [
+        {
+          "id": "math500_102",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.0467162132263184
+        },
+        {
+          "id": "math500_33",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.3347020149230957
+        },
+        {
+          "id": "math500_277",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 2.6855380535125732
+        },
+        {
+          "id": "math500_369",
+          "extractor": "deepseek_s2",
+          "status": "unverifiable",
+          "error": null
+        },
+        {
+          "id": "math500_378",
+          "extractor": "deepseek_s2",
+          "status": "unverifiable",
+          "error": null
+        },
+        {
+          "id": "math500_194",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.075218915939331
+        },
+        {
+          "id": "math500_312",
+          "extractor": "deepseek_s2",
+          "status": "unverifiable",
+          "error": null
+        },
+        {
+          "id": "math500_161",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.135505199432373
+        },
+        {
+          "id": "math500_251",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.1466302871704102
+        },
+        {
+          "id": "math500_461",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.015901803970337
+        },
+        {
+          "id": "math500_244",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 6.046194076538086
+        },
+        {
+          "id": "math500_232",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 3.122580051422119
+        },
+        {
+          "id": "math500_214",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 6.857179164886475
+        },
+        {
+          "id": "math500_109",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 3.4132468700408936
+        },
+        {
+          "id": "math500_160",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 2.2681989669799805
+        },
+        {
+          "id": "math500_345",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 10.959868907928467
+        },
+        {
+          "id": "math500_167",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 3.2177720069885254
+        },
+        {
+          "id": "math500_343",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 19.24353814125061
+        },
+        {
+          "id": "math500_32",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.3518970012664795
+        },
+        {
+          "id": "math500_115",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.5500292778015137
+        },
+        {
+          "id": "math500_113",
+          "extractor": "deepseek_s2",
+          "status": "unverifiable",
+          "error": null
+        },
+        {
+          "id": "math500_50",
+          "extractor": "deepseek_s2",
+          "status": "unverifiable",
+          "error": null
+        },
+        {
+          "id": "math500_126",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 11.718196868896484
+        },
+        {
+          "id": "math500_321",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.3167169094085693
+        },
+        {
+          "id": "math500_301",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 6.424244165420532
+        },
+        {
+          "id": "math500_130",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 1.2494111061096191
+        },
+        {
+          "id": "math500_276",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 2.2819268703460693
+        },
+        {
+          "id": "math500_458",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": false,
+          "accepted": false,
+          "solver_correct": true,
+          "elapsed": 2.7318320274353027
+        },
+        {
+          "id": "math500_349",
+          "extractor": "deepseek_s2",
+          "status": "ok",
+          "working": true,
+          "accepted": true,
+          "solver_correct": true,
+          "elapsed": 5.799554109573364
+        },
+        {
+          "id": "math500_201",
+          "extractor": "deepseek_s2",
+          "status": "unverifiable",
+          "error": null
+        }
+      ]
+    }
+  ]
+}

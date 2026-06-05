@@ -1,0 +1,7265 @@
+{
+  "solver": "deepseek-ai/DeepSeek-V3",
+  "rows": [
+    {
+      "id": "math500_42",
+      "bench": "math175",
+      "candidate": "\\frac{2}{5}",
+      "gold": "\\frac{2}{5}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 4.042165994644165
+    },
+    {
+      "id": "math500_41",
+      "bench": "math175",
+      "candidate": "4",
+      "gold": "4",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 3.6563949584960938
+    },
+    {
+      "id": "math500_91",
+      "bench": "math175",
+      "candidate": "32",
+      "gold": "32",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 1.9819979667663574
+    },
+    {
+      "id": "math500_9",
+      "bench": "math175",
+      "candidate": "8",
+      "gold": "8",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.2096848487854004
+    },
+    {
+      "id": "math500_65",
+      "bench": "math175",
+      "candidate": "\\frac{1}{2}",
+      "gold": "\\frac{1}{2}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 1.4474480152130127
+    },
+    {
+      "id": "math500_50",
+      "bench": "math175",
+      "candidate": "90",
+      "gold": "90^\\circ",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 5.522522211074829
+    },
+    {
+      "id": "math500_1",
+      "bench": "math175",
+      "candidate": "7.5",
+      "gold": "7.5",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.7026419639587402
+    },
+    {
+      "id": "math500_70",
+      "bench": "math175",
+      "candidate": "400",
+      "gold": "400",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.612083911895752
+    },
+    {
+      "id": "math500_15",
+      "bench": "math175",
+      "candidate": "\\text{even}",
+      "gold": "\\text{even}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 3.1819679737091064
+    },
+    {
+      "id": "math500_78",
+      "bench": "math175",
+      "candidate": "-21",
+      "gold": "-21",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.8210320472717285
+    },
+    {
+      "id": "math500_73",
+      "bench": "math175",
+      "candidate": "\\frac{1}{16}",
+      "gold": "\\frac{1}{16}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 4.567337989807129
+    },
+    {
+      "id": "math500_10",
+      "bench": "math175",
+      "candidate": "73",
+      "gold": "73",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.654649019241333
+    },
+    {
+      "id": "math500_55",
+      "bench": "math175",
+      "candidate": "18",
+      "gold": "18",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 2.7529962062835693
+    },
+    {
+      "id": "math500_56",
+      "bench": "math175",
+      "candidate": "2",
+      "gold": "2",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 3.1132547855377197
+    },
+    {
+      "id": "math500_72",
+      "bench": "math175",
+      "candidate": "1",
+      "gold": "1",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 1.7891361713409424
+    },
+    {
+      "id": "math500_45",
+      "bench": "math175",
+      "candidate": "6840",
+      "gold": "6840",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 4.558102130889893
+    },
+    {
+      "id": "math500_48",
+      "bench": "math175",
+      "candidate": "25\\pi",
+      "gold": "25\\pi",
+      "solver_correct": true,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 3.236335039138794
+    },
+    {
+      "id": "math500_92",
+      "bench": "math175",
+      "candidate": "10",
+      "gold": "10",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 9.810533046722412
+    },
+    {
+      "id": "math500_76",
+      "bench": "math175",
+      "candidate": "\\frac{25}{16}",
+      "gold": "\\cfrac{25}{16}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 3.947403907775879
+    },
+    {
+      "id": "math500_37",
+      "bench": "math175",
+      "candidate": "600",
+      "gold": "600",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 3.305514097213745
+    },
+    {
+      "id": "math500_30",
+      "bench": "math175",
+      "candidate": "1,-2",
+      "gold": "-2,1",
+      "solver_correct": false,
+      "llama": {
+        "classification": "false_positive",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 1,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 35.107694149017334
+    },
+    {
+      "id": "math500_21",
+      "bench": "math175",
+      "candidate": "(45x + 28)(x + 2)",
+      "gold": "(45x + 28)(x + 2)",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 7.697716951370239
+    },
+    {
+      "id": "math500_32",
+      "bench": "math175",
+      "candidate": "4",
+      "gold": "4",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.023526191711426
+    },
+    {
+      "id": "math500_96",
+      "bench": "math175",
+      "candidate": "3",
+      "gold": "3",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 4.053352117538452
+    },
+    {
+      "id": "math500_80",
+      "bench": "math175",
+      "candidate": "61",
+      "gold": "61",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.7587220668792725
+    },
+    {
+      "id": "math500_49",
+      "bench": "math175",
+      "candidate": "108",
+      "gold": "108",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.6150310039520264
+    },
+    {
+      "id": "math500_83",
+      "bench": "math175",
+      "candidate": "55",
+      "gold": "55",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 8.430045127868652
+    },
+    {
+      "id": "math500_26",
+      "bench": "math175",
+      "candidate": "0",
+      "gold": "0",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 3.1082100868225098
+    },
+    {
+      "id": "math500_87",
+      "bench": "math175",
+      "candidate": "17",
+      "gold": "17",
+      "solver_correct": true,
+      "llama": {
+        "classification": "false_positive",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 2,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 5.576793193817139
+    },
+    {
+      "id": "math500_33",
+      "bench": "math175",
+      "candidate": "-16",
+      "gold": "-16",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 1.7432796955108643
+    },
+    {
+      "id": "math500_8",
+      "bench": "math175",
+      "candidate": "0",
+      "gold": "0",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 3.3713090419769287
+    },
+    {
+      "id": "math500_47",
+      "bench": "math175",
+      "candidate": "-59",
+      "gold": "-59",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 5.496968030929565
+    },
+    {
+      "id": "math500_59",
+      "bench": "math175",
+      "candidate": "1",
+      "gold": "1",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 3.1496660709381104
+    },
+    {
+      "id": "math500_63",
+      "bench": "math175",
+      "candidate": "\\frac{5}{2}",
+      "gold": "\\frac{5}{2}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.545570135116577
+    },
+    {
+      "id": "math500_74",
+      "bench": "math175",
+      "candidate": "28",
+      "gold": "28",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 4.279045104980469
+    },
+    {
+      "id": "math500_44",
+      "bench": "math175",
+      "candidate": "-1",
+      "gold": "-1",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 1.2116467952728271
+    },
+    {
+      "id": "math500_98",
+      "bench": "math175",
+      "candidate": "28",
+      "gold": "28",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 3.7651619911193848
+    },
+    {
+      "id": "math500_52",
+      "bench": "math175",
+      "candidate": "\\frac{7}{8}",
+      "gold": "\\frac{7}{8}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 4.13383412361145
+    },
+    {
+      "id": "math500_85",
+      "bench": "math175",
+      "candidate": "5",
+      "gold": "5",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 1.7016689777374268
+    },
+    {
+      "id": "math500_12",
+      "bench": "math175",
+      "candidate": "3",
+      "gold": "3",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 4.04781699180603
+    },
+    {
+      "id": "math500_157",
+      "bench": "math175",
+      "candidate": "0",
+      "gold": "0",
+      "solver_correct": true,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 4.452575922012329
+    },
+    {
+      "id": "math500_126",
+      "bench": "math175",
+      "candidate": "\\text{odd}",
+      "gold": "\\text{odd}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 4.431071043014526
+    },
+    {
+      "id": "math500_105",
+      "bench": "math175",
+      "candidate": "E",
+      "gold": "\\text{(E)}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 3.585923910140991
+    },
+    {
+      "id": "math500_113",
+      "bench": "math175",
+      "candidate": "4",
+      "gold": "24",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 23.257050275802612
+    },
+    {
+      "id": "math500_161",
+      "bench": "math175",
+      "candidate": "76",
+      "gold": "76",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.42444109916687
+    },
+    {
+      "id": "math500_124",
+      "bench": "math175",
+      "candidate": "2",
+      "gold": "2",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 4.522395133972168
+    },
+    {
+      "id": "math500_122",
+      "bench": "math175",
+      "candidate": "180",
+      "gold": "180",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 5.198015928268433
+    },
+    {
+      "id": "math500_138",
+      "bench": "math175",
+      "candidate": "4",
+      "gold": "4",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 8.471443891525269
+    },
+    {
+      "id": "math500_125",
+      "bench": "math175",
+      "candidate": "\\frac{27}{128}",
+      "gold": "\\frac{27}{128}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.7097039222717285
+    },
+    {
+      "id": "math500_152",
+      "bench": "math175",
+      "candidate": "86",
+      "gold": "86^\\circ",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 4.641918897628784
+    },
+    {
+      "id": "math500_185",
+      "bench": "math175",
+      "candidate": "291",
+      "gold": "291",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 6.827253818511963
+    },
+    {
+      "id": "math500_167",
+      "bench": "math175",
+      "candidate": "2",
+      "gold": "2",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 6.135127067565918
+    },
+    {
+      "id": "math500_179",
+      "bench": "math175",
+      "candidate": "2",
+      "gold": "2",
+      "solver_correct": true,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.8348259925842285
+    },
+    {
+      "id": "math500_144",
+      "bench": "math175",
+      "candidate": "-3,-2,1,2",
+      "gold": "1,2,-2,-3",
+      "solver_correct": false,
+      "llama": {
+        "classification": "false_positive",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 1,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 11.655212879180908
+    },
+    {
+      "id": "math500_142",
+      "bench": "math175",
+      "candidate": "29",
+      "gold": "29",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.470201015472412
+    },
+    {
+      "id": "math500_104",
+      "bench": "math175",
+      "candidate": "(3,-4)",
+      "gold": "(3,-4)",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 1.4039087295532227
+    },
+    {
+      "id": "math500_169",
+      "bench": "math175",
+      "candidate": "63",
+      "gold": "63",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 5.568731784820557
+    },
+    {
+      "id": "math500_177",
+      "bench": "math175",
+      "candidate": "\\frac{13}{144}",
+      "gold": "\\frac{13}{144}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 7.374909162521362
+    },
+    {
+      "id": "math500_130",
+      "bench": "math175",
+      "candidate": "165",
+      "gold": "165",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.315187931060791
+    },
+    {
+      "id": "math500_102",
+      "bench": "math175",
+      "candidate": "5040",
+      "gold": "5040",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 3.637371778488159
+    },
+    {
+      "id": "math500_147",
+      "bench": "math175",
+      "candidate": "81",
+      "gold": "81\\text{ teachers}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 3.152348041534424
+    },
+    {
+      "id": "math500_194",
+      "bench": "math175",
+      "candidate": "28",
+      "gold": "28",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.518968105316162
+    },
+    {
+      "id": "math500_101",
+      "bench": "math175",
+      "candidate": "8",
+      "gold": "8",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 2.9020040035247803
+    },
+    {
+      "id": "math500_153",
+      "bench": "math175",
+      "candidate": "\\frac{1}{2}",
+      "gold": "\\frac12",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 1.5599231719970703
+    },
+    {
+      "id": "math500_184",
+      "bench": "math175",
+      "candidate": "\\frac{1}{11}",
+      "gold": "\\frac{1}{11}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 6.903269052505493
+    },
+    {
+      "id": "math500_196",
+      "bench": "math175",
+      "candidate": "8",
+      "gold": "8",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 8.183198928833008
+    },
+    {
+      "id": "math500_103",
+      "bench": "math175",
+      "candidate": "4t",
+      "gold": "4t",
+      "solver_correct": true,
+      "llama": {
+        "classification": "false_positive",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 4,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 1.8133618831634521
+    },
+    {
+      "id": "math500_186",
+      "bench": "math175",
+      "candidate": "-9",
+      "gold": "-9",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 4.121510982513428
+    },
+    {
+      "id": "math500_115",
+      "bench": "math175",
+      "candidate": "330",
+      "gold": "330",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 3.1951470375061035
+    },
+    {
+      "id": "math500_136",
+      "bench": "math175",
+      "candidate": "49",
+      "gold": "49",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 13.164669275283813
+    },
+    {
+      "id": "math500_137",
+      "bench": "math175",
+      "candidate": "3",
+      "gold": "3",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 3.6682519912719727
+    },
+    {
+      "id": "math500_160",
+      "bench": "math175",
+      "candidate": "\\text{neither}",
+      "gold": "\\text{neither}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 5.8310840129852295
+    },
+    {
+      "id": "math500_145",
+      "bench": "math175",
+      "candidate": "4",
+      "gold": "4",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.7083780765533447
+    },
+    {
+      "id": "math500_123",
+      "bench": "math175",
+      "candidate": "y = x + 3",
+      "gold": "y = x+3",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 10.368389129638672
+    },
+    {
+      "id": "math500_109",
+      "bench": "math175",
+      "candidate": "6",
+      "gold": "6",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.9718849658966064
+    },
+    {
+      "id": "math500_112",
+      "bench": "math175",
+      "candidate": "\\dfrac{1}{3}",
+      "gold": "\\frac{1}{3}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 7.202062129974365
+    },
+    {
+      "id": "math500_139",
+      "bench": "math175",
+      "candidate": "2",
+      "gold": "2",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 11.402469873428345
+    },
+    {
+      "id": "math500_170",
+      "bench": "math175",
+      "candidate": "75",
+      "gold": "75",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.8928370475769043
+    },
+    {
+      "id": "math500_198",
+      "bench": "math175",
+      "candidate": "-3",
+      "gold": "-3",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 4.568006992340088
+    },
+    {
+      "id": "math500_192",
+      "bench": "math175",
+      "candidate": "\\begin{pmatrix} \\dfrac{2}{5} \\\\ -\\dfrac{1}{5} \\\\ 0 \\end{pmatrix}",
+      "gold": "\\begin{pmatrix} 2/5 \\\\ -1/5 \\\\ 0 \\end{pmatrix}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 5.403517961502075
+    },
+    {
+      "id": "math500_249",
+      "bench": "math175",
+      "candidate": "4",
+      "gold": "4",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 11.309117078781128
+    },
+    {
+      "id": "math500_277",
+      "bench": "math175",
+      "candidate": "4",
+      "gold": "4",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 16.20870304107666
+    },
+    {
+      "id": "math500_247",
+      "bench": "math175",
+      "candidate": "1",
+      "gold": "1",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 5.204144239425659
+    },
+    {
+      "id": "math500_219",
+      "bench": "math175",
+      "candidate": "\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}",
+      "gold": "\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 7.333652973175049
+    },
+    {
+      "id": "math500_248",
+      "bench": "math175",
+      "candidate": "\\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}",
+      "gold": "\\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 15.561175107955933
+    },
+    {
+      "id": "math500_239",
+      "bench": "math175",
+      "candidate": "(-\\infty,-7) \\cup (1,2)",
+      "gold": "(-\\infty,-7) \\cup (1,2)",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "false_positive",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 4,
+        "has_script": true
+      },
+      "elapsed": 5.394991159439087
+    },
+    {
+      "id": "math500_289",
+      "bench": "math175",
+      "candidate": "2",
+      "gold": "2",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 6.553182125091553
+    },
+    {
+      "id": "math500_210",
+      "bench": "math175",
+      "candidate": "0",
+      "gold": "0",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 20.166582107543945
+    },
+    {
+      "id": "math500_232",
+      "bench": "math175",
+      "candidate": "30",
+      "gold": "30",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 4.433863878250122
+    },
+    {
+      "id": "math500_237",
+      "bench": "math175",
+      "candidate": "14",
+      "gold": "14",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 9.999784231185913
+    },
+    {
+      "id": "math500_223",
+      "bench": "math175",
+      "candidate": "-2",
+      "gold": "-2",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 3.0445868968963623
+    },
+    {
+      "id": "math500_233",
+      "bench": "math175",
+      "candidate": "25",
+      "gold": "25 \\text{ ft}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 5.098028898239136
+    },
+    {
+      "id": "math500_214",
+      "bench": "math175",
+      "candidate": "-10",
+      "gold": "-10",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.460919141769409
+    },
+    {
+      "id": "math500_238",
+      "bench": "math175",
+      "candidate": "-9",
+      "gold": "-9",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 18.676445245742798
+    },
+    {
+      "id": "math500_218",
+      "bench": "math175",
+      "candidate": "132",
+      "gold": "132",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 1.760024070739746
+    },
+    {
+      "id": "math500_267",
+      "bench": "math175",
+      "candidate": "56",
+      "gold": "56",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.676969051361084
+    },
+    {
+      "id": "math500_287",
+      "bench": "math175",
+      "candidate": "-\\frac{4}{5}",
+      "gold": "-\\frac{4}{5}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 5.982908010482788
+    },
+    {
+      "id": "math500_273",
+      "bench": "math175",
+      "candidate": "\\dfrac{1}{8}",
+      "gold": "\\frac{1}{8}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 4.292536973953247
+    },
+    {
+      "id": "math500_268",
+      "bench": "math175",
+      "candidate": "30.2",
+      "gold": "9",
+      "solver_correct": false,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 8.87258505821228
+    },
+    {
+      "id": "math500_274",
+      "bench": "math175",
+      "candidate": "165",
+      "gold": "165",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 5.572860956192017
+    },
+    {
+      "id": "math500_251",
+      "bench": "math175",
+      "candidate": "-49",
+      "gold": "-49",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 1.6889410018920898
+    },
+    {
+      "id": "math500_213",
+      "bench": "math175",
+      "candidate": "400",
+      "gold": "400",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.791865110397339
+    },
+    {
+      "id": "math500_205",
+      "bench": "math175",
+      "candidate": "8",
+      "gold": "8",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.3307688236236572
+    },
+    {
+      "id": "math500_282",
+      "bench": "math175",
+      "candidate": "-2",
+      "gold": "-2",
+      "solver_correct": true,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 9.011752843856812
+    },
+    {
+      "id": "math500_276",
+      "bench": "math175",
+      "candidate": "80",
+      "gold": "80",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 1.7785460948944092
+    },
+    {
+      "id": "math500_291",
+      "bench": "math175",
+      "candidate": "6",
+      "gold": "6",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 4.424607992172241
+    },
+    {
+      "id": "math500_285",
+      "bench": "math175",
+      "candidate": "21",
+      "gold": "21",
+      "solver_correct": true,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 12.405138969421387
+    },
+    {
+      "id": "math500_258",
+      "bench": "math175",
+      "candidate": "-3600",
+      "gold": "3600",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 6.861059188842773
+    },
+    {
+      "id": "math500_236",
+      "bench": "math175",
+      "candidate": "11",
+      "gold": "11",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 4.325185060501099
+    },
+    {
+      "id": "math500_220",
+      "bench": "math175",
+      "candidate": "1092",
+      "gold": "1092",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 5.080473899841309
+    },
+    {
+      "id": "math500_201",
+      "bench": "math175",
+      "candidate": "75",
+      "gold": "75",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 8.203786849975586
+    },
+    {
+      "id": "math500_245",
+      "bench": "math175",
+      "candidate": "-40",
+      "gold": "-40",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 3.5963079929351807
+    },
+    {
+      "id": "math500_240",
+      "bench": "math175",
+      "candidate": "10",
+      "gold": "10",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 7.072790145874023
+    },
+    {
+      "id": "math500_279",
+      "bench": "math175",
+      "candidate": "2\\sqrt{5}",
+      "gold": "2 \\sqrt{5}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 3.5945091247558594
+    },
+    {
+      "id": "math500_244",
+      "bench": "math175",
+      "candidate": "4",
+      "gold": "4",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 13.037079095840454
+    },
+    {
+      "id": "math500_297",
+      "bench": "math175",
+      "candidate": "6",
+      "gold": "6",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 6.317170858383179
+    },
+    {
+      "id": "math500_217",
+      "bench": "math175",
+      "candidate": "384",
+      "gold": "384",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 10.05102825164795
+    },
+    {
+      "id": "math500_211",
+      "bench": "math175",
+      "candidate": "54",
+      "gold": "54",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 7.76088285446167
+    },
+    {
+      "id": "math500_259",
+      "bench": "math175",
+      "candidate": "-15",
+      "gold": "-15",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 2.2286670207977295
+    },
+    {
+      "id": "math500_283",
+      "bench": "math175",
+      "candidate": "9",
+      "gold": "9",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 4.236627817153931
+    },
+    {
+      "id": "math500_356",
+      "bench": "math175",
+      "candidate": "69",
+      "gold": "84",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 12.622882843017578
+    },
+    {
+      "id": "math500_369",
+      "bench": "math175",
+      "candidate": "1",
+      "gold": "1",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 8.610660791397095
+    },
+    {
+      "id": "math500_327",
+      "bench": "math175",
+      "candidate": "1",
+      "gold": "1",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 5.12832498550415
+    },
+    {
+      "id": "math500_377",
+      "bench": "math175",
+      "candidate": "13",
+      "gold": "13",
+      "solver_correct": true,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 21.1619610786438
+    },
+    {
+      "id": "math500_311",
+      "bench": "math175",
+      "candidate": "-2,6",
+      "gold": "6, -2",
+      "solver_correct": false,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 4.472351789474487
+    },
+    {
+      "id": "math500_302",
+      "bench": "math175",
+      "candidate": "100",
+      "gold": "100",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 10.427312135696411
+    },
+    {
+      "id": "math500_390",
+      "bench": "math175",
+      "candidate": "24",
+      "gold": "24",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 5.05572509765625
+    },
+    {
+      "id": "math500_312",
+      "bench": "math175",
+      "candidate": "44",
+      "gold": "44",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 7.928226947784424
+    },
+    {
+      "id": "math500_325",
+      "bench": "math175",
+      "candidate": "0",
+      "gold": "0",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 4.326952934265137
+    },
+    {
+      "id": "math500_346",
+      "bench": "math175",
+      "candidate": "[5,5\\sqrt{2}]",
+      "gold": "[5,5 \\sqrt{2}]",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 6.853778839111328
+    },
+    {
+      "id": "math500_394",
+      "bench": "math175",
+      "candidate": "\\sqrt{6}",
+      "gold": "\\sqrt{6}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 3.5179500579833984
+    },
+    {
+      "id": "math500_301",
+      "bench": "math175",
+      "candidate": "4",
+      "gold": "4",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 37.22774696350098
+    },
+    {
+      "id": "math500_354",
+      "bench": "math175",
+      "candidate": "45, 135",
+      "gold": "45^\\circ, 135^\\circ",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 7.8014538288116455
+    },
+    {
+      "id": "math500_389",
+      "bench": "math175",
+      "candidate": "6",
+      "gold": "6",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 18.308188915252686
+    },
+    {
+      "id": "math500_314",
+      "bench": "math175",
+      "candidate": "12",
+      "gold": "12",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 6.342695951461792
+    },
+    {
+      "id": "math500_342",
+      "bench": "math175",
+      "candidate": "(10,2)",
+      "gold": "(10,2)",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.8575732707977295
+    },
+    {
+      "id": "math500_344",
+      "bench": "math175",
+      "candidate": "16",
+      "gold": "16",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 8.025311946868896
+    },
+    {
+      "id": "math500_379",
+      "bench": "math175",
+      "candidate": "\\dfrac{13}{3}",
+      "gold": "\\frac{13}{3}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 13.83112907409668
+    },
+    {
+      "id": "math500_324",
+      "bench": "math175",
+      "candidate": "19",
+      "gold": "19",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 5.060621023178101
+    },
+    {
+      "id": "math500_321",
+      "bench": "math175",
+      "candidate": "247000",
+      "gold": "247000",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 1.7975521087646484
+    },
+    {
+      "id": "math500_341",
+      "bench": "math175",
+      "candidate": "3",
+      "gold": "3",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 5.023200988769531
+    },
+    {
+      "id": "math500_337",
+      "bench": "math175",
+      "candidate": "360",
+      "gold": "360",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 4.681593656539917
+    },
+    {
+      "id": "math500_355",
+      "bench": "math175",
+      "candidate": "96\\sqrt{3}",
+      "gold": "96\\sqrt{3}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 13.434828996658325
+    },
+    {
+      "id": "math500_309",
+      "bench": "math175",
+      "candidate": "\\begin{pmatrix} -10 \\\\ -35 \\\\ 30 \\end{pmatrix}",
+      "gold": "\\begin{pmatrix} -10 \\\\ -35 \\\\ 30 \\end{pmatrix}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 9.817064046859741
+    },
+    {
+      "id": "math500_349",
+      "bench": "math175",
+      "candidate": "9",
+      "gold": "9",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 5.265408039093018
+    },
+    {
+      "id": "math500_345",
+      "bench": "math175",
+      "candidate": "\\frac{109}{150}",
+      "gold": "\\frac{109}{150}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 5.629045009613037
+    },
+    {
+      "id": "math500_317",
+      "bench": "math175",
+      "candidate": "8\\sqrt{3}",
+      "gold": "8\\sqrt{3}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 2.9478111267089844
+    },
+    {
+      "id": "math500_343",
+      "bench": "math175",
+      "candidate": "512",
+      "gold": "512",
+      "solver_correct": true,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 9.183287858963013
+    },
+    {
+      "id": "math500_392",
+      "bench": "math175",
+      "candidate": "150",
+      "gold": "150",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 3.8915090560913086
+    },
+    {
+      "id": "math500_368",
+      "bench": "math175",
+      "candidate": "2",
+      "gold": "2",
+      "solver_correct": true,
+      "llama": {
+        "classification": "false_positive",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 1,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 17.58861207962036
+    },
+    {
+      "id": "math500_303",
+      "bench": "math175",
+      "candidate": "20",
+      "gold": "20",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 7.370667934417725
+    },
+    {
+      "id": "math500_360",
+      "bench": "math175",
+      "candidate": "111",
+      "gold": "111",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 8.700412034988403
+    },
+    {
+      "id": "math500_347",
+      "bench": "math175",
+      "candidate": "30240",
+      "gold": "30,\\!240",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 10.38904881477356
+    },
+    {
+      "id": "math500_378",
+      "bench": "math175",
+      "candidate": "42",
+      "gold": "42",
+      "solver_correct": true,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 6.863858938217163
+    },
+    {
+      "id": "math500_363",
+      "bench": "math175",
+      "candidate": "3",
+      "gold": "3",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 9.510982990264893
+    },
+    {
+      "id": "math500_335",
+      "bench": "math175",
+      "candidate": "2",
+      "gold": "\\sqrt{109}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 23.321174144744873
+    },
+    {
+      "id": "math500_357",
+      "bench": "math175",
+      "candidate": "-1",
+      "gold": "-1",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 10.34138298034668
+    },
+    {
+      "id": "math500_373",
+      "bench": "math175",
+      "candidate": "89",
+      "gold": "89",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 7.3147900104522705
+    },
+    {
+      "id": "math500_319",
+      "bench": "math175",
+      "candidate": "97",
+      "gold": "97",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 5.904191970825195
+    },
+    {
+      "id": "math500_382",
+      "bench": "math175",
+      "candidate": "64",
+      "gold": "64",
+      "solver_correct": true,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 20.357640981674194
+    },
+    {
+      "id": "math500_476",
+      "bench": "math175",
+      "candidate": "4\\sqrt{2}",
+      "gold": "4\\sqrt{2}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 11.271238803863525
+    },
+    {
+      "id": "math500_423",
+      "bench": "math175",
+      "candidate": "1",
+      "gold": "12",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 15.051636934280396
+    },
+    {
+      "id": "math500_477",
+      "bench": "math175",
+      "candidate": "\\frac{35}{128}",
+      "gold": "\\frac{35}{128}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 13.827668905258179
+    },
+    {
+      "id": "math500_435",
+      "bench": "math175",
+      "candidate": "4",
+      "gold": "1041",
+      "solver_correct": false,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 28.07223916053772
+    },
+    {
+      "id": "math500_458",
+      "bench": "math175",
+      "candidate": "\\frac{17}{50}",
+      "gold": "\\dfrac{17}{50}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 7.174163818359375
+    },
+    {
+      "id": "math500_407",
+      "bench": "math175",
+      "candidate": "-3",
+      "gold": "-3",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 14.102285861968994
+    },
+    {
+      "id": "math500_497",
+      "bench": "math175",
+      "candidate": "75",
+      "gold": "75\\%",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 5.9862220287323
+    },
+    {
+      "id": "math500_440",
+      "bench": "math175",
+      "candidate": "\\frac{3840}{289}",
+      "gold": "\\frac{3840}{289}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 6.582734823226929
+    },
+    {
+      "id": "math500_433",
+      "bench": "math175",
+      "candidate": "1",
+      "gold": "3\\pi-\\frac{\\sqrt{3}}{2}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 27.182822942733765
+    },
+    {
+      "id": "math500_461",
+      "bench": "math175",
+      "candidate": "10455",
+      "gold": "10455",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 4.657804012298584
+    },
+    {
+      "id": "math500_480",
+      "bench": "math175",
+      "candidate": "\\frac{11}{2}",
+      "gold": "\\frac{11}{2}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "false_positive",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 2,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 10.103595733642578
+    },
+    {
+      "id": "math500_436",
+      "bench": "math175",
+      "candidate": "18.90",
+      "gold": "\\$18.90",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 10.968480825424194
+    },
+    {
+      "id": "math500_457",
+      "bench": "math175",
+      "candidate": "1",
+      "gold": "-\\frac{2010012}{2010013}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 23.36106586456299
+    },
+    {
+      "id": "math500_493",
+      "bench": "math175",
+      "candidate": "1",
+      "gold": "1",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 14.315814971923828
+    },
+    {
+      "id": "math500_463",
+      "bench": "math175",
+      "candidate": "\\frac{1}{2}",
+      "gold": "\\frac{1}{2}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 6.653697729110718
+    },
+    {
+      "id": "aime2025_1",
+      "bench": "aime",
+      "candidate": "70",
+      "gold": "70",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 7.8837571144104
+    },
+    {
+      "id": "aime2025_2",
+      "bench": "aime",
+      "candidate": "13",
+      "gold": "588",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 18.76424503326416
+    },
+    {
+      "id": "aime2025_3",
+      "bench": "aime",
+      "candidate": "16",
+      "gold": "16",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 19.947038888931274
+    },
+    {
+      "id": "aime2025_4",
+      "bench": "aime",
+      "candidate": "117",
+      "gold": "117",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 21.834633111953735
+    },
+    {
+      "id": "aime2025_5",
+      "bench": "aime",
+      "candidate": "2",
+      "gold": "279",
+      "solver_correct": false,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 25.243129014968872
+    },
+    {
+      "id": "aime2025_6",
+      "bench": "aime",
+      "candidate": "504",
+      "gold": "504",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 6.968029975891113
+    },
+    {
+      "id": "aime2025_7",
+      "bench": "aime",
+      "candidate": "1",
+      "gold": "821",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 40.882132053375244
+    },
+    {
+      "id": "aime2025_8",
+      "bench": "aime",
+      "candidate": "77",
+      "gold": "77",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 16.053854942321777
+    },
+    {
+      "id": "aime2025_9",
+      "bench": "aime",
+      "candidate": "2",
+      "gold": "62",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 26.407416820526123
+    },
+    {
+      "id": "aime2025_10",
+      "bench": "aime",
+      "candidate": "68",
+      "gold": "81",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 27.646873235702515
+    },
+    {
+      "id": "aime2025_11",
+      "bench": "aime",
+      "candidate": "34",
+      "gold": "259",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 49.00350999832153
+    },
+    {
+      "id": "aime2025_12",
+      "bench": "aime",
+      "candidate": "25",
+      "gold": "510",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 25.55596423149109
+    },
+    {
+      "id": "aime2025_13",
+      "bench": "aime",
+      "candidate": "2",
+      "gold": "204",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 33.18945789337158
+    },
+    {
+      "id": "aime2025_14",
+      "bench": "aime",
+      "candidate": "60",
+      "gold": "60",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 33.69062805175781
+    },
+    {
+      "id": "aime2025_15",
+      "bench": "aime",
+      "candidate": "3",
+      "gold": "735",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 39.617236852645874
+    },
+    {
+      "id": "aime2025_16",
+      "bench": "aime",
+      "candidate": "468",
+      "gold": "468",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 9.724694967269897
+    },
+    {
+      "id": "aime2025_17",
+      "bench": "aime",
+      "candidate": "49",
+      "gold": "49",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 7.656779050827026
+    },
+    {
+      "id": "aime2025_18",
+      "bench": "aime",
+      "candidate": "1",
+      "gold": "82",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 16.414451122283936
+    },
+    {
+      "id": "aime2025_19",
+      "bench": "aime",
+      "candidate": "106",
+      "gold": "106",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 9.680045127868652
+    },
+    {
+      "id": "aime2025_20",
+      "bench": "aime",
+      "candidate": "1.742",
+      "gold": "336",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 19.72761297225952
+    },
+    {
+      "id": "aime2025_21",
+      "bench": "aime",
+      "candidate": "293",
+      "gold": "293",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 12.769669771194458
+    },
+    {
+      "id": "aime2025_22",
+      "bench": "aime",
+      "candidate": "4863",
+      "gold": "237",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 23.504799127578735
+    },
+    {
+      "id": "aime2025_23",
+      "bench": "aime",
+      "candidate": "0",
+      "gold": "610",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 29.89284610748291
+    },
+    {
+      "id": "aime2025_24",
+      "bench": "aime",
+      "candidate": "150",
+      "gold": "149",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 19.24610924720764
+    },
+    {
+      "id": "aime2025_25",
+      "bench": "aime",
+      "candidate": "3",
+      "gold": "907",
+      "solver_correct": false,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "elapsed": 20.733147859573364
+    },
+    {
+      "id": "aime2025_26",
+      "bench": "aime",
+      "candidate": "4208",
+      "gold": "113",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 39.91555905342102
+    },
+    {
+      "id": "aime2025_27",
+      "bench": "aime",
+      "candidate": "5",
+      "gold": "19",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 22.270421981811523
+    },
+    {
+      "id": "aime2025_28",
+      "bench": "aime",
+      "candidate": "19033",
+      "gold": "248",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 31.96982192993164
+    },
+    {
+      "id": "aime2025_29",
+      "bench": "aime",
+      "candidate": "2",
+      "gold": "104",
+      "solver_correct": false,
+      "llama": {
+        "classification": "false_positive",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 4,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 25.882531881332397
+    },
+    {
+      "id": "aime2025_30",
+      "bench": "aime",
+      "candidate": "-44",
+      "gold": "240",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "elapsed": 27.670691967010498
+    },
+    {
+      "id": "hmmt_feb_2025_1",
+      "bench": "cleanmath",
+      "candidate": "13",
+      "gold": "103",
+      "solver_correct": false,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 22.429396152496338
+    },
+    {
+      "id": "hmmt_feb_2025_2",
+      "bench": "cleanmath",
+      "candidate": "3375",
+      "gold": "3375",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 9.73856520652771
+    },
+    {
+      "id": "hmmt_feb_2025_3",
+      "bench": "cleanmath",
+      "candidate": "2",
+      "gold": "\\frac{1}{576}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 21.210009813308716
+    },
+    {
+      "id": "hmmt_feb_2025_4",
+      "bench": "cleanmath",
+      "candidate": "1",
+      "gold": "-984",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 18.857172966003418
+    },
+    {
+      "id": "hmmt_feb_2025_5",
+      "bench": "cleanmath",
+      "candidate": "2",
+      "gold": "890",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 27.617950201034546
+    },
+    {
+      "id": "hmmt_feb_2025_6",
+      "bench": "cleanmath",
+      "candidate": "0",
+      "gold": "\\frac{1311}{2017}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": false,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 26.472925186157227
+    },
+    {
+      "id": "hmmt_feb_2025_7",
+      "bench": "cleanmath",
+      "candidate": "0",
+      "gold": "\\frac{9 \\sqrt{23}}{23}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 26.644492149353027
+    },
+    {
+      "id": "hmmt_feb_2025_8",
+      "bench": "cleanmath",
+      "candidate": "-1",
+      "gold": "1-\\frac{2}{\\pi}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 23.012253999710083
+    },
+    {
+      "id": "hmmt_feb_2025_9",
+      "bench": "cleanmath",
+      "candidate": "-1",
+      "gold": "1037",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 18.736320972442627
+    },
+    {
+      "id": "hmmt_feb_2025_10",
+      "bench": "cleanmath",
+      "candidate": "-2",
+      "gold": "\\frac{-1+\\sqrt{17}}{2}, \\frac{-1-\\sqrt{17}}{2}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 23.147641897201538
+    },
+    {
+      "id": "hmmt_feb_2025_11",
+      "bench": "cleanmath",
+      "candidate": "5",
+      "gold": "56",
+      "solver_correct": false,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 23.56180715560913
+    },
+    {
+      "id": "hmmt_feb_2025_12",
+      "bench": "cleanmath",
+      "candidate": "6",
+      "gold": "29",
+      "solver_correct": false,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 17.579335927963257
+    },
+    {
+      "id": "hmmt_feb_2025_13",
+      "bench": "cleanmath",
+      "candidate": "6",
+      "gold": "105",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 26.69192099571228
+    },
+    {
+      "id": "hmmt_feb_2025_14",
+      "bench": "cleanmath",
+      "candidate": "3",
+      "gold": "2304",
+      "solver_correct": false,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 21.791656970977783
+    },
+    {
+      "id": "hmmt_feb_2025_15",
+      "bench": "cleanmath",
+      "candidate": "27",
+      "gold": "200",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 29.655537128448486
+    },
+    {
+      "id": "hmmt_feb_2025_16",
+      "bench": "cleanmath",
+      "candidate": "-1",
+      "gold": "6300",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 17.639214992523193
+    },
+    {
+      "id": "hmmt_feb_2025_17",
+      "bench": "cleanmath",
+      "candidate": "26",
+      "gold": "2^{25} \\cdot 26!",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 34.48111009597778
+    },
+    {
+      "id": "hmmt_feb_2025_18",
+      "bench": "cleanmath",
+      "candidate": "\\dfrac{675}{67}",
+      "gold": "\\frac{2025}{101}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 19.631732940673828
+    },
+    {
+      "id": "hmmt_feb_2025_19",
+      "bench": "cleanmath",
+      "candidate": "\\dfrac{1}{6}",
+      "gold": "\\frac{4}{9}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 14.90716814994812
+    },
+    {
+      "id": "hmmt_feb_2025_20",
+      "bench": "cleanmath",
+      "candidate": "30",
+      "gold": "\\frac{448}{3}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 21.48127508163452
+    },
+    {
+      "id": "hmmt_feb_2025_21",
+      "bench": "cleanmath",
+      "candidate": "26",
+      "gold": "26",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 9.79741096496582
+    },
+    {
+      "id": "hmmt_feb_2025_22",
+      "bench": "cleanmath",
+      "candidate": "85",
+      "gold": "63",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 18.489591121673584
+    },
+    {
+      "id": "hmmt_feb_2025_23",
+      "bench": "cleanmath",
+      "candidate": "25",
+      "gold": "8\\sqrt{10}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 25.857417821884155
+    },
+    {
+      "id": "hmmt_feb_2025_24",
+      "bench": "cleanmath",
+      "candidate": "0",
+      "gold": "20",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 20.781169891357422
+    },
+    {
+      "id": "hmmt_feb_2025_25",
+      "bench": "cleanmath",
+      "candidate": "3",
+      "gold": "\\sqrt{23}-2 \\sqrt{3}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 17.85237193107605
+    },
+    {
+      "id": "hmmt_feb_2025_26",
+      "bench": "cleanmath",
+      "candidate": "15",
+      "gold": "9\\sqrt{15}",
+      "solver_correct": false,
+      "llama": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": null,
+        "has_script": false
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 22.207503080368042
+    },
+    {
+      "id": "hmmt_feb_2025_27",
+      "bench": "cleanmath",
+      "candidate": "11",
+      "gold": "\\frac{7}{18}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "false_positive",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 2,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 23.911720037460327
+    },
+    {
+      "id": "hmmt_feb_2025_28",
+      "bench": "cleanmath",
+      "candidate": "0",
+      "gold": "\\sqrt{6}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 17.36861276626587
+    },
+    {
+      "id": "hmmt_feb_2025_29",
+      "bench": "cleanmath",
+      "candidate": "2",
+      "gold": "14+4\\sqrt{37}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "false_positive",
+        "gold_verdict": false,
+        "candidate_verdict": true,
+        "adv_fp_count": 1,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 17.58177614212036
+    },
+    {
+      "id": "hmmt_feb_2025_30",
+      "bench": "cleanmath",
+      "candidate": "2916",
+      "gold": "\\sqrt{\\frac{95}{24}}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 27.744750022888184
+    },
+    {
+      "id": "brumo_2025_1",
+      "bench": "cleanmath",
+      "candidate": "2^{99}",
+      "gold": "2^{99}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 6.166334867477417
+    },
+    {
+      "id": "brumo_2025_2",
+      "bench": "cleanmath",
+      "candidate": "\\dfrac{1}{9}",
+      "gold": "\\frac{1}{9}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 6.396936893463135
+    },
+    {
+      "id": "brumo_2025_3",
+      "bench": "cleanmath",
+      "candidate": "2",
+      "gold": "\\frac{\\sqrt{13}}{2}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 18.484162092208862
+    },
+    {
+      "id": "brumo_2025_4",
+      "bench": "cleanmath",
+      "candidate": "\\frac{1}{9}",
+      "gold": "\\frac{1}{9}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 12.85940933227539
+    },
+    {
+      "id": "brumo_2025_5",
+      "bench": "cleanmath",
+      "candidate": "240",
+      "gold": "240",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 11.59709882736206
+    },
+    {
+      "id": "brumo_2025_6",
+      "bench": "cleanmath",
+      "candidate": "-99",
+      "gold": "72",
+      "solver_correct": false,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 25.784186124801636
+    },
+    {
+      "id": "brumo_2025_7",
+      "bench": "cleanmath",
+      "candidate": "924",
+      "gold": "924",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 7.176589012145996
+    },
+    {
+      "id": "brumo_2025_8",
+      "bench": "cleanmath",
+      "candidate": "3",
+      "gold": "20",
+      "solver_correct": false,
+      "llama": {
+        "classification": "false_positive",
+        "gold_verdict": true,
+        "candidate_verdict": false,
+        "adv_fp_count": 2,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 34.5057430267334
+    },
+    {
+      "id": "brumo_2025_9",
+      "bench": "cleanmath",
+      "candidate": "173",
+      "gold": "173",
+      "solver_correct": true,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 23.159295082092285
+    },
+    {
+      "id": "brumo_2025_10",
+      "bench": "cleanmath",
+      "candidate": "100",
+      "gold": "100",
+      "solver_correct": true,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 32.940579891204834
+    },
+    {
+      "id": "brumo_2025_11",
+      "bench": "cleanmath",
+      "candidate": "2",
+      "gold": "3+2\\sqrt{2}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 30.587274074554443
+    },
+    {
+      "id": "brumo_2025_12",
+      "bench": "cleanmath",
+      "candidate": "2",
+      "gold": "125",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 27.65673804283142
+    },
+    {
+      "id": "brumo_2025_13",
+      "bench": "cleanmath",
+      "candidate": "0.5",
+      "gold": "\\frac{1}{3}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 28.617861032485962
+    },
+    {
+      "id": "brumo_2025_14",
+      "bench": "cleanmath",
+      "candidate": "1",
+      "gold": "7",
+      "solver_correct": false,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 19.775777101516724
+    },
+    {
+      "id": "brumo_2025_15",
+      "bench": "cleanmath",
+      "candidate": "96",
+      "gold": "4529",
+      "solver_correct": false,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 18.384711027145386
+    },
+    {
+      "id": "brumo_2025_16",
+      "bench": "cleanmath",
+      "candidate": "1296",
+      "gold": "1296",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 14.602129220962524
+    },
+    {
+      "id": "brumo_2025_17",
+      "bench": "cleanmath",
+      "candidate": "-1",
+      "gold": "1+\\sqrt{3}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 25.754601001739502
+    },
+    {
+      "id": "brumo_2025_18",
+      "bench": "cleanmath",
+      "candidate": "20\\pi",
+      "gold": "20\\pi",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 13.142436265945435
+    },
+    {
+      "id": "brumo_2025_19",
+      "bench": "cleanmath",
+      "candidate": "12",
+      "gold": "12",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 19.71814489364624
+    },
+    {
+      "id": "brumo_2025_20",
+      "bench": "cleanmath",
+      "candidate": "12",
+      "gold": "12",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 28.741636991500854
+    },
+    {
+      "id": "brumo_2025_21",
+      "bench": "cleanmath",
+      "candidate": "0",
+      "gold": "160",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 27.190667867660522
+    },
+    {
+      "id": "brumo_2025_22",
+      "bench": "cleanmath",
+      "candidate": "72",
+      "gold": "72",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 9.167042970657349
+    },
+    {
+      "id": "brumo_2025_23",
+      "bench": "cleanmath",
+      "candidate": "\\frac{3}{2}-\\frac{\\sqrt{3}}{2}i",
+      "gold": "2,3,\\frac{3+i\\sqrt{3}}{2},\\frac{3-i\\sqrt{3}}{2}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 13.614310264587402
+    },
+    {
+      "id": "brumo_2025_24",
+      "bench": "cleanmath",
+      "candidate": "-1",
+      "gold": "89",
+      "solver_correct": false,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 22.21349811553955
+    },
+    {
+      "id": "brumo_2025_25",
+      "bench": "cleanmath",
+      "candidate": "15",
+      "gold": "\\frac{1+\\sqrt{31}}{2}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 18.515849828720093
+    },
+    {
+      "id": "brumo_2025_26",
+      "bench": "cleanmath",
+      "candidate": "1",
+      "gold": "337",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 17.052716732025146
+    },
+    {
+      "id": "brumo_2025_27",
+      "bench": "cleanmath",
+      "candidate": "11",
+      "gold": "\\frac{737}{39}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 44.13697290420532
+    },
+    {
+      "id": "brumo_2025_28",
+      "bench": "cleanmath",
+      "candidate": "2",
+      "gold": "5\\sqrt{2}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 25.99320101737976
+    },
+    {
+      "id": "brumo_2025_29",
+      "bench": "cleanmath",
+      "candidate": "5",
+      "gold": "-\\frac{2431}{50}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 20.996490001678467
+    },
+    {
+      "id": "brumo_2025_30",
+      "bench": "cleanmath",
+      "candidate": "27",
+      "gold": "\\frac{9\\sqrt{30}}{4}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 26.375275135040283
+    },
+    {
+      "id": "smt_2025_1",
+      "bench": "cleanmath",
+      "candidate": "900",
+      "gold": "900",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 10.68075704574585
+    },
+    {
+      "id": "smt_2025_2",
+      "bench": "cleanmath",
+      "candidate": "-\\dfrac{\\pi e}{2}",
+      "gold": "-\\frac{\\pi e}{2}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 8.602953910827637
+    },
+    {
+      "id": "smt_2025_3",
+      "bench": "cleanmath",
+      "candidate": "\\dfrac{6}{5}",
+      "gold": "\\frac{6}{5}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 11.851891040802002
+    },
+    {
+      "id": "smt_2025_4",
+      "bench": "cleanmath",
+      "candidate": "100",
+      "gold": "100",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 10.372506856918335
+    },
+    {
+      "id": "smt_2025_5",
+      "bench": "cleanmath",
+      "candidate": "\\dfrac{2025}{2}",
+      "gold": "\\frac{2025}{2}",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 15.703158140182495
+    },
+    {
+      "id": "smt_2025_6",
+      "bench": "cleanmath",
+      "candidate": "\\frac{3\\sqrt{3}}{4}",
+      "gold": "\\frac{3 \\sqrt{3}}{4}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 23.059378147125244
+    },
+    {
+      "id": "smt_2025_7",
+      "bench": "cleanmath",
+      "candidate": "\\sqrt{e}",
+      "gold": "e^{\\frac{1}{2}}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 17.37492299079895
+    },
+    {
+      "id": "smt_2025_8",
+      "bench": "cleanmath",
+      "candidate": "4\\pi",
+      "gold": "2 \\sqrt{3}+\\frac{8 \\pi}{3}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 17.14779281616211
+    },
+    {
+      "id": "smt_2025_9",
+      "bench": "cleanmath",
+      "candidate": "-1013\\ln(2026)",
+      "gold": "-1013 \\ln (2026)",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 25.508098125457764
+    },
+    {
+      "id": "smt_2025_10",
+      "bench": "cleanmath",
+      "candidate": "2",
+      "gold": "\\frac{4 \\pi}{3}+\\sqrt{3}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 19.17445707321167
+    },
+    {
+      "id": "smt_2025_11",
+      "bench": "cleanmath",
+      "candidate": "107",
+      "gold": "107",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 19.82795786857605
+    },
+    {
+      "id": "smt_2025_12",
+      "bench": "cleanmath",
+      "candidate": "8",
+      "gold": "63",
+      "solver_correct": false,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 24.797610998153687
+    },
+    {
+      "id": "smt_2025_13",
+      "bench": "cleanmath",
+      "candidate": "2",
+      "gold": "79",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 22.126774072647095
+    },
+    {
+      "id": "smt_2025_14",
+      "bench": "cleanmath",
+      "candidate": "90",
+      "gold": "90",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 18.525322914123535
+    },
+    {
+      "id": "smt_2025_15",
+      "bench": "cleanmath",
+      "candidate": "5",
+      "gold": "5",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 7.508069038391113
+    },
+    {
+      "id": "smt_2025_16",
+      "bench": "cleanmath",
+      "candidate": "2024",
+      "gold": "2024",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 15.355513095855713
+    },
+    {
+      "id": "smt_2025_17",
+      "bench": "cleanmath",
+      "candidate": "2",
+      "gold": "88607",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 27.943025827407837
+    },
+    {
+      "id": "smt_2025_18",
+      "bench": "cleanmath",
+      "candidate": "1",
+      "gold": "\\frac{157}{40}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 21.31442093849182
+    },
+    {
+      "id": "smt_2025_19",
+      "bench": "cleanmath",
+      "candidate": "13",
+      "gold": "608",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 24.430495023727417
+    },
+    {
+      "id": "smt_2025_20",
+      "bench": "cleanmath",
+      "candidate": "0",
+      "gold": "\\frac{5}{12}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 15.18956708908081
+    },
+    {
+      "id": "smt_2025_21",
+      "bench": "cleanmath",
+      "candidate": "3",
+      "gold": "3",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 18.56499409675598
+    },
+    {
+      "id": "smt_2025_22",
+      "bench": "cleanmath",
+      "candidate": "2",
+      "gold": "29",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 29.374288320541382
+    },
+    {
+      "id": "smt_2025_23",
+      "bench": "cleanmath",
+      "candidate": "1",
+      "gold": "55",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 24.876287937164307
+    },
+    {
+      "id": "smt_2025_24",
+      "bench": "cleanmath",
+      "candidate": "2",
+      "gold": "\\frac{2 \\sqrt{6}}{3}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 21.4929518699646
+    },
+    {
+      "id": "smt_2025_25",
+      "bench": "cleanmath",
+      "candidate": "1600",
+      "gold": "\\frac{12}{25}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 19.992111682891846
+    },
+    {
+      "id": "smt_2025_26",
+      "bench": "cleanmath",
+      "candidate": "5",
+      "gold": "\\frac{54 \\sqrt{6}}{25}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 25.60125970840454
+    },
+    {
+      "id": "smt_2025_27",
+      "bench": "cleanmath",
+      "candidate": "2",
+      "gold": "\\frac{65 \\sqrt{6}-65 \\sqrt{2}}{32}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 27.672714948654175
+    },
+    {
+      "id": "smt_2025_28",
+      "bench": "cleanmath",
+      "candidate": "2",
+      "gold": "\\sqrt{133}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 16.761738061904907
+    },
+    {
+      "id": "smt_2025_29",
+      "bench": "cleanmath",
+      "candidate": "2",
+      "gold": "2",
+      "solver_correct": true,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 18.790334939956665
+    },
+    {
+      "id": "smt_2025_30",
+      "bench": "cleanmath",
+      "candidate": "14",
+      "gold": "1350 \\sqrt{3}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 17.25790309906006
+    },
+    {
+      "id": "smt_2025_31",
+      "bench": "cleanmath",
+      "candidate": "5",
+      "gold": "5",
+      "solver_correct": true,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 13.242025136947632
+    },
+    {
+      "id": "smt_2025_32",
+      "bench": "cleanmath",
+      "candidate": "200",
+      "gold": "13,14,18",
+      "solver_correct": false,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 17.312063932418823
+    },
+    {
+      "id": "smt_2025_33",
+      "bench": "cleanmath",
+      "candidate": "2",
+      "gold": "\\frac{27}{5}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 23.832070112228394
+    },
+    {
+      "id": "smt_2025_34",
+      "bench": "cleanmath",
+      "candidate": "4",
+      "gold": "66",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 17.05787491798401
+    },
+    {
+      "id": "smt_2025_35",
+      "bench": "cleanmath",
+      "candidate": "4",
+      "gold": "\\frac{10 \\sqrt{3}+\\sqrt{6}+\\sqrt{2}}{4}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 24.29629373550415
+    },
+    {
+      "id": "smt_2025_36",
+      "bench": "cleanmath",
+      "candidate": "6",
+      "gold": "36",
+      "solver_correct": false,
+      "llama": {
+        "classification": "working",
+        "gold_verdict": true,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 22.43961215019226
+    },
+    {
+      "id": "smt_2025_37",
+      "bench": "cleanmath",
+      "candidate": "2",
+      "gold": "190800",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 31.40419101715088
+    },
+    {
+      "id": "smt_2025_38",
+      "bench": "cleanmath",
+      "candidate": "1",
+      "gold": "7",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 28.99121403694153
+    },
+    {
+      "id": "smt_2025_39",
+      "bench": "cleanmath",
+      "candidate": "-144",
+      "gold": "\\frac{288 \\sqrt{527}}{527}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 33.0374960899353
+    },
+    {
+      "id": "smt_2025_40",
+      "bench": "cleanmath",
+      "candidate": "0",
+      "gold": "511",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 30.679860830307007
+    },
+    {
+      "id": "smt_2025_41",
+      "bench": "cleanmath",
+      "candidate": "11",
+      "gold": "\\frac{\\sin (6 \\pi / 13)}{\\sin (\\pi / 13)}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 27.791068077087402
+    },
+    {
+      "id": "smt_2025_42",
+      "bench": "cleanmath",
+      "candidate": "273",
+      "gold": "213",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 39.24757194519043
+    },
+    {
+      "id": "smt_2025_43",
+      "bench": "cleanmath",
+      "candidate": "35",
+      "gold": "\\frac{1980}{169}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 25.479914903640747
+    },
+    {
+      "id": "smt_2025_44",
+      "bench": "cleanmath",
+      "candidate": "24000",
+      "gold": "24000",
+      "solver_correct": true,
+      "llama": {
+        "classification": "false_positive",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 3,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 9.881115913391113
+    },
+    {
+      "id": "smt_2025_45",
+      "bench": "cleanmath",
+      "candidate": "144",
+      "gold": "144",
+      "solver_correct": true,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": true,
+        "candidate_verdict": true,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 6.715706825256348
+    },
+    {
+      "id": "smt_2025_46",
+      "bench": "cleanmath",
+      "candidate": "11",
+      "gold": "286",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 32.03654909133911
+    },
+    {
+      "id": "smt_2025_47",
+      "bench": "cleanmath",
+      "candidate": "-20",
+      "gold": "-20",
+      "solver_correct": true,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 32.34100413322449
+    },
+    {
+      "id": "smt_2025_48",
+      "bench": "cleanmath",
+      "candidate": "14",
+      "gold": "-14",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 15.773049116134644
+    },
+    {
+      "id": "smt_2025_49",
+      "bench": "cleanmath",
+      "candidate": "1",
+      "gold": "1002",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 38.60402202606201
+    },
+    {
+      "id": "smt_2025_50",
+      "bench": "cleanmath",
+      "candidate": "3",
+      "gold": "832038\\sqrt{\\log_{3} 2}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 24.286513090133667
+    },
+    {
+      "id": "smt_2025_51",
+      "bench": "cleanmath",
+      "candidate": "-1",
+      "gold": "\\frac{29 \\pi}{12}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": false,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 39.80472493171692
+    },
+    {
+      "id": "smt_2025_52",
+      "bench": "cleanmath",
+      "candidate": "5",
+      "gold": "\\frac{23-5 \\sqrt{21}}{10}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 40.301498889923096
+    },
+    {
+      "id": "smt_2025_53",
+      "bench": "cleanmath",
+      "candidate": "8",
+      "gold": "41",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 39.31518578529358
+    },
+    {
+      "id": "apex_2025_1",
+      "bench": "cleanmath",
+      "candidate": "2025",
+      "gold": "4049",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 15.928442001342773
+    },
+    {
+      "id": "apex_2025_2",
+      "bench": "cleanmath",
+      "candidate": "16",
+      "gold": "1/2",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 18.425693035125732
+    },
+    {
+      "id": "apex_2025_3",
+      "bench": "cleanmath",
+      "candidate": "0",
+      "gold": "\\frac{1980}{169}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 23.063355207443237
+    },
+    {
+      "id": "apex_2025_4",
+      "bench": "cleanmath",
+      "candidate": "10",
+      "gold": "6266942768",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 16.787144899368286
+    },
+    {
+      "id": "apex_2025_5",
+      "bench": "cleanmath",
+      "candidate": "4049",
+      "gold": "6",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 17.896463871002197
+    },
+    {
+      "id": "apex_2025_6",
+      "bench": "cleanmath",
+      "candidate": "8",
+      "gold": "138",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 19.776952028274536
+    },
+    {
+      "id": "apex_2025_7",
+      "bench": "cleanmath",
+      "candidate": "0",
+      "gold": "248/517",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": false,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 32.391530990600586
+    },
+    {
+      "id": "apex_2025_8",
+      "bench": "cleanmath",
+      "candidate": "768",
+      "gold": "1164",
+      "solver_correct": false,
+      "llama": {
+        "classification": "logic_broken",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 35.50917196273804
+    },
+    {
+      "id": "apex_2025_9",
+      "bench": "cleanmath",
+      "candidate": "4\\pi",
+      "gold": "2 \\sqrt{3}+\\frac{8 \\pi}{3}",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 12.042167901992798
+    },
+    {
+      "id": "apex_2025_10",
+      "bench": "cleanmath",
+      "candidate": "2",
+      "gold": "213",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 33.0525860786438
+    },
+    {
+      "id": "apex_2025_11",
+      "bench": "cleanmath",
+      "candidate": "3",
+      "gold": "14/5",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": false,
+        "candidate_verdict": false,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 23.917548656463623
+    },
+    {
+      "id": "apex_2025_12",
+      "bench": "cleanmath",
+      "candidate": "4048",
+      "gold": "2112",
+      "solver_correct": false,
+      "llama": {
+        "classification": "compute_abstain",
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": true
+      },
+      "deepseek": {
+        "classification": null,
+        "gold_verdict": null,
+        "candidate_verdict": null,
+        "adv_fp_count": 0,
+        "has_script": false
+      },
+      "elapsed": 28.449530124664307
+    }
+  ]
+}

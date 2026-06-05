@@ -1,0 +1,1972 @@
+{
+  "results": [
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_42",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 39.42845368385315
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_42",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 39.6692316532135
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_42",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:23: error: Type mismatch\n  (16 / 625).rpow \u2191(1 / 4)\nhas type\n  \u211d\nbut is expected to have type\n  \u211a\n/workdir/mathai_test/MathaiTest/Trial.lean:4:69: error: unsolved goals\n\u22a2 sorry () = 0\n",
+      "elapsed": 43.672513484954834
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_41",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 39.72339081764221
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_41",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:8: warning: declaration uses `sorry`\n",
+      "elapsed": 55.63881516456604
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_41",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:0: error: invalid 'import' command, it must be used in the beginning of the file\n/workdir/mathai_test/MathaiTest/Trial.lean:4:7: error: unexpected identifier; expected command\n/workdir/mathai_test/MathaiTest/Trial.lean:5:0: error: invalid 'import' command, it must be used in the beginning of the file\n",
+      "elapsed": 41.55191659927368
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_91",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 64.35870742797852
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_91",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 63.35142111778259
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_91",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 55.38013935089111
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_9",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 38.86978721618652
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_9",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 55.35795068740845
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_9",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:85: error: unsolved goals\n\u22a2 False\n",
+      "elapsed": 66.31064462661743
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_65",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 60.2522394657135
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_65",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:8: warning: declaration uses `sorry`\n",
+      "elapsed": 67.06029438972473
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_65",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:0: error: invalid 'import' command, it must be used in the beginning of the file\n/workdir/mathai_test/MathaiTest/Trial.lean:4:7: error: unexpected identifier; expected command\n/workdir/mathai_test/MathaiTest/Trial.lean:5:0: error: invalid 'import' command, it must be used in the beginning of the file\n",
+      "elapsed": 56.31479024887085
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_50",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 38.36595010757446
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_50",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 45.48768377304077
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_50",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:6:6: error: expected token\n",
+      "elapsed": 39.956581115722656
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_1",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:5:2: error: Tactic `native_decide` failed. Error: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'propDecidable', which is 'noncomputable'\n",
+      "elapsed": 75.75086498260498
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_1",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:75: error: unsolved goals\n\u22a2 False\n",
+      "elapsed": 51.000885248184204
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_1",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:57: error: unsolved goals\n\u22a2 1.5 * (2 * 5) / 2 = 7.5\n",
+      "elapsed": 35.8960325717926
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_70",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 57.13531517982483
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_70",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 66.96799325942993
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_70",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 35.700512647628784
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_15",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 48.73687434196472
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_15",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:8: warning: declaration uses `sorry`\n",
+      "elapsed": 37.978559732437134
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_15",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 37.252765417099
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_78",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 51.58660292625427
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_78",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 64.58846855163574
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_78",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "nd\n/workdir/mathai_test/MathaiTest/Trial.lean:8:0: warning: automatically included section variable(s) unused in theorem `det_mul_eq_neg_twenty_one`:\n  [CommRing n]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CommRing n] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\n",
+      "elapsed": 55.75151515007019
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_73",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 59.97423028945923
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_73",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 53.9684202671051
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_73",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 49.85427737236023
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_10",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 52.805686473846436
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_10",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 55.96692228317261
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_10",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 53.415489196777344
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_55",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 38.834179401397705
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_55",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 53.076242446899414
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_55",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 37.51104187965393
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_56",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 58.837483167648315
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_56",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:8: warning: declaration uses `sorry`\n",
+      "elapsed": 53.23897743225098
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_56",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:14:46: error: unexpected identifier; expected ':='\n",
+      "elapsed": 34.55485701560974
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_72",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 48.57588481903076
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_72",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:7:33: error: unsolved goals\n\u22a2 f (g 1) = 1\n",
+      "elapsed": 57.899822473526
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_72",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 81.22712826728821
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_45",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 53.11049127578735
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_45",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 50.486119985580444
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_45",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:5:5: error(lean.unknownIdentifier): Unknown constant `Nat.permutations`\n/workdir/mathai_test/MathaiTest/Trial.lean:6:2: error: Tactic `native_decide` failed: Could not evaluate decidable instance. Error: cannot evaluate code because 'sorryAx' uses 'sorry' and/or contains errors\n",
+      "elapsed": 51.624308824539185
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_48",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 54.90899038314819
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_48",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 37.967822313308716
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_48",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 62.29172658920288
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_92",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:12:32: error: unsolved goals\n\u22a2 5 * 20 * (1 - 0.30) - 4 * 20 * (1 - 0.25) = 10\n",
+      "elapsed": 50.5610990524292
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_92",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 41.56766653060913
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_92",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 36.36522030830383
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_76",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 72.95418381690979
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_76",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 51.70550036430359
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_76",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 36.16548252105713
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_37",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 38.54213213920593
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_37",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 64.84515619277954
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_37",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 30.067863702774048
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_30",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 52.805617570877075
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_30",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:8: warning: declaration uses `sorry`\n",
+      "elapsed": 64.77677941322327
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_30",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": " + 7)\n\u22a2 (x + 2) * (x - 1) * (x ^ 2 + 4 * x + 7) = 0\n/workdir/mathai_test/MathaiTest/Trial.lean:14:6: error: unsolved goals\ncase h.mp.inl.inl\nx : \u2124\nh : x ^ 4 + 5 * x ^ 3 + 9 * x ^ 2 - x - 14 = 0\nh4 : x + 2 = 0\n\u22a2 x = -2 \u2228 x = 1\n/workdir/mathai_test/MathaiTest/Trial.lean:15:6: error: unsolved goals\ncase h.mp.inl.inr\nx : \u2124\nh : x ^ 4 + 5 * x ^ 3 + 9 * x ^ 2 - x - 14 = 0\nh5 : x - 1 = 0\n\u22a2 x = -2 \u2228 x = 1\n",
+      "elapsed": 75.86620020866394
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_21",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 51.073670625686646
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_21",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:8: error: `factorization` has already been declared\n",
+      "elapsed": 43.70235633850098
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_21",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 54.030022859573364
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_32",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 49.53718900680542
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_32",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:8: warning: declaration uses `sorry`\n",
+      "elapsed": 43.170236587524414
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_32",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:7:22: error: `simp` made no progress\n",
+      "elapsed": 55.48820233345032
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_96",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 63.98074412345886
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_96",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:87: error: unsolved goals\n\u22a2 False\n",
+      "elapsed": 52.66112565994263
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_96",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:98: error: unsolved goals\nX : Polynomial \u2124\n\u22a2 Polynomial.eval 3 X ^ 3 - 3 * Polynomial.eval 3 X ^ 2 - 9 * Polynomial.eval 3 X + 30 = 3\n",
+      "elapsed": 49.23445510864258
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_80",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 53.672478675842285
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_80",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 57.91573667526245
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_80",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 43.45228290557861
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_49",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 54.56257605552673
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_49",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 40.753841400146484
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_49",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 28.655699729919434
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_83",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 56.130295276641846
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_26",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 39.81632685661316
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_26",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 48.38202428817749
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_26",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 39.9177930355072
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_87",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 53.292397260665894
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_87",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 65.63168215751648
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_87",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 41.54744863510132
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_33",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 49.23509740829468
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_33",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 56.35754418373108
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_33",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 62.96026968955994
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_8",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 50.444883823394775
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_8",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 56.80017876625061
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_8",
+      "compile_ok": false,
+      "stderr_tail": "TIMEOUT(120s)",
+      "stdout_tail": "",
+      "elapsed": 123.24045300483704
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_47",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:6:84: error: expected ';' or line break\n",
+      "elapsed": 59.8821759223938
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_47",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:0: error: invalid 'import' command, it must be used in the beginning of the file\n/workdir/mathai_test/MathaiTest/Trial.lean:4:7: error: unexpected identifier; expected command\n/workdir/mathai_test/MathaiTest/Trial.lean:8:12: error: unexpected identifier after decimal point; consider parenthesizing the number\n",
+      "elapsed": 50.546528816223145
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_47",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:0: error: invalid 'import' command, it must be used in the beginning of the file\n/workdir/mathai_test/MathaiTest/Trial.lean:4:7: error: unexpected identifier; expected command\n/workdir/mathai_test/MathaiTest/Trial.lean:5:0: error: invalid 'import' command, it must be used in the beginning of the file\n",
+      "elapsed": 45.117024421691895
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_59",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 46.60543370246887
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_59",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:8: warning: declaration uses `sorry`\n",
+      "elapsed": 46.36911869049072
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_59",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:0: error: invalid 'import' command, it must be used in the beginning of the file\n/workdir/mathai_test/MathaiTest/Trial.lean:4:7: error: unexpected identifier; expected command\n/workdir/mathai_test/MathaiTest/Trial.lean:5:0: error: invalid 'import' command, it must be used in the beginning of the file\n",
+      "elapsed": 94.4132137298584
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_63",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 40.06335663795471
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_63",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 53.45612597465515
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_63",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 41.20531964302063
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_74",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 11.895323753356934
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_74",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 12.061078548431396
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_74",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 12.266417503356934
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_44",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:3:17: error: unexpected token; expected command\n",
+      "elapsed": 12.329248666763306
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_44",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "ean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.\n/workdir/mathai_test/MathaiTest/Trial.lean:7:45: error: unsolved goals\nx\u271d : Sort u_1\ncos : x\u271d\n\u22a2 sorry = -1\n",
+      "elapsed": 12.483665943145752
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_44",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:5:2: error: Type mismatch\n  Real.cos_pi\nhas type\n  Real.cos Real.pi = -1\nbut is expected to have type\n  Real.cos \u03c0 = -1\n",
+      "elapsed": 13.087016820907593
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_98",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "= 28\nbecause its `Decidable` instance\n  instDecidableEqNat {n \u2208 Finset.Ioo 10 1000 | \u2203 k, k * k = n}.card 28\ndid not reduce to `isTrue` or `isFalse`.\n\nAfter unfolding the instances `instDecidableEqNat`, `propDecidable`, and `Nat.decEq`, reduction got stuck at the `Decidable` instance\n  match h : {n \u2208 Finset.Ioo 10 1000 | \u2203 k, k * k = n}.card.beq 28 with\n  | true => isTrue \u22ef\n  | false => isFalse \u22ef\n",
+      "elapsed": 12.746800184249878
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_98",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:5:2: error: Tactic `native_decide` failed. Error: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'propDecidable', which is 'noncomputable'\n",
+      "elapsed": 11.459783554077148
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_52",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 11.891967296600342
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_52",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 12.824686765670776
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_52",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 12.77810001373291
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_85",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:54: error: unsolved goals\n\u22a2 1.5 / 3 * 10 = 5\n",
+      "elapsed": 13.170477628707886
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_85",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 12.700969219207764
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_85",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:50: error: unsolved goals\n\u22a2 1.5 / 3 * 10 = 5\n",
+      "elapsed": 12.304699182510376
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_12",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 12.27427053451538
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_12",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 13.009981155395508
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_12",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 13.062706708908081
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_157",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:8: warning: declaration uses `sorry`\n",
+      "elapsed": 14.308327436447144
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_157",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": " ^ 2 + 9 * x + 3) / (27 * x ^ 3 + 9 * x ^ 2 + 3 * x + 1))\n\nHint: The identifier `Tendsto` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.\n",
+      "elapsed": 12.417535543441772
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_157",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:6:75: error: expected ';' or line break\n",
+      "elapsed": 13.58807373046875
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_126",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:8: warning: declaration uses `sorry`\n",
+      "elapsed": 13.319381475448608
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_126",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:57: error(lean.unknownIdentifier): Unknown constant `Real.cbrt`\n/workdir/mathai_test/MathaiTest/Trial.lean:4:111: error(lean.unknownIdentifier): Unknown constant `Real.cbrt`\n",
+      "elapsed": 12.458754777908325
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_126",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:8:117: error: Type mismatch\n  this\nhas type\n  1 / 3 > 0\nof sort `Prop` but is expected to have type\n  \u211d\nof sort `Type`\n/workdir/mathai_test/MathaiTest/Trial.lean:15:2: error: No goals to be solved\n",
+      "elapsed": 13.423399448394775
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_105",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 11.605865001678467
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_105",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "p` made no progress on the goal\n/workdir/mathai_test/MathaiTest/Trial.lean:10:14: error(lean.unknownIdentifier): Unknown identifier `sin_sq_add_cos_sq`\n/workdir/mathai_test/MathaiTest/Trial.lean:7:43: error: unsolved goals\nx\u271d\u00b9 : Sort u_1\ncos : x\u271d\u00b9\nx\u271d : Sort u_2\nsin : x\u271d\nt : \u211d\nh : sorry \u2260 0\nthis : (1 / sorry) ^ 2 - (sorry / sorry) ^ 2 = (1 - sorry ^ 2) / sorry ^ 2\n\u22a2 (1 - sorry ^ 2) / sorry ^ 2 = 1\n",
+      "elapsed": 11.677526473999023
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_113",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 11.580095052719116
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_113",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 14.770187616348267
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_113",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:5:29: error: expected ';' or line break\n",
+      "elapsed": 11.71059274673462
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_161",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 14.863935470581055
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_161",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 11.38482928276062
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_161",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 12.046932697296143
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_124",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:8: warning: declaration uses `sorry`\n",
+      "elapsed": 13.020050287246704
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_124",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:0: error: invalid 'import' command, it must be used in the beginning of the file\n/workdir/mathai_test/MathaiTest/Trial.lean:4:7: error: unexpected identifier; expected command\n/workdir/mathai_test/MathaiTest/Trial.lean:6:8: warning: declaration uses `sorry`\n",
+      "elapsed": 12.031016826629639
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_124",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "d field `card`: The environment does not contain `Function.card`, so it is not possible to project the field `card` from an expression\n  (X ^ 4 - 2 * X - 7).rootSet \u211d\nof type `\u211d \u2192 Prop`\n/workdir/mathai_test/MathaiTest/Trial.lean:8:12: error(lean.unknownIdentifier): Unknown constant `Polynomial.card_rootSet_eq_derivative`\n/workdir/mathai_test/MathaiTest/Trial.lean:9:4: error: No goals to be solved\n",
+      "elapsed": 15.107057571411133
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_122",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 13.824891567230225
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_122",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 12.919914960861206
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_122",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 13.649027585983276
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_138",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 13.51882553100586
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_138",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:8: warning: declaration uses `sorry`\n",
+      "elapsed": 15.409631490707397
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_138",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:5:2: error: Tactic `decide` proved that the proposition\n  {d \u2208 Finset.range 10 | 591308 + 100 * d % 12 = 0}.sum id = 4\nis false\n",
+      "elapsed": 12.075613260269165
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_125",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 12.739303350448608
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_125",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 13.145314455032349
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_125",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 14.24373459815979
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_152",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "n\n  86 * Real.pi / 180\nin the target expression\n  Real.cos (41 * Real.pi / 180) + Real.sin (41 * Real.pi / 180) =\n    \u221a2 * Real.sin (Real.pi / 2 - 41 * Real.pi / 180 + Real.pi / 180 * 41 + Real.pi / 4 - Real.pi / 4)\n\nA : Real.Angle\n\u22a2 Real.cos (41 * Real.pi / 180) + Real.sin (41 * Real.pi / 180) =\n    \u221a2 * Real.sin (Real.pi / 2 - 41 * Real.pi / 180 + Real.pi / 180 * 41 + Real.pi / 4 - Real.pi / 4)\n",
+      "elapsed": 12.873729705810547
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_152",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:8: warning: declaration uses `sorry`\n",
+      "elapsed": 13.083847045898438
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_152",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:5:30: error: expected ';' or line break\n",
+      "elapsed": 15.533601522445679
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_185",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 13.174617290496826
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_185",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 12.510087013244629
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_185",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:35: error(lean.unknownIdentifier): Unknown constant `Nat.prime.one_digit_and_two_digit_primes_summing_to_100`\n/workdir/mathai_test/MathaiTest/Trial.lean:5:2: error: Tactic `native_decide` failed: Could not evaluate decidable instance. Error: cannot evaluate code because 'sorryAx' uses 'sorry' and/or contains errors\n",
+      "elapsed": 14.198152542114258
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_167",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 16.144178867340088
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_167",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 12.493532657623291
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_167",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 17.073280096054077
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_179",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "his linter can be disabled with `set_option linter.unusedSimpArgs false`\n/workdir/mathai_test/MathaiTest/Trial.lean:5:65: warning: This simp argument is unused:\n  Complex.div_im\n\nHint: Omit it from the simp argument list.\n  simp [Complex.abs_apply, Complex.normSq_apply, Complex.div_re,\u0335 \u0335C\u0335o\u0335m\u0335p\u0335l\u0335e\u0335x\u0335.\u0335d\u0335i\u0335v\u0335_\u0335i\u0335m\u0335]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n",
+      "elapsed": 16.500988721847534
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_179",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "dentifier; expected command\n/workdir/mathai_test/MathaiTest/Trial.lean:7:51: error(lean.unknownIdentifier): Unknown constant `Complex.abs`\n/workdir/mathai_test/MathaiTest/Trial.lean:19:6: error: No goals to be solved\n/workdir/mathai_test/MathaiTest/Trial.lean:21:4: error: Type mismatch\n  mul_eq\nhas type\n  -(2 * I * (2 + I)) = 2 - I * 4\nbut is expected to have type\n  (2 - 4 * I) / (2 + I) = -2 * I\n",
+      "elapsed": 13.397559881210327
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_179",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:0: error: invalid 'import' command, it must be used in the beginning of the file\n/workdir/mathai_test/MathaiTest/Trial.lean:4:7: error: unexpected identifier; expected command\n/workdir/mathai_test/MathaiTest/Trial.lean:5:0: error: invalid 'import' command, it must be used in the beginning of the file\n",
+      "elapsed": 16.27306818962097
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_144",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 14.055305480957031
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_144",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 12.128637790679932
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_144",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:0: error: invalid 'import' command, it must be used in the beginning of the file\n/workdir/mathai_test/MathaiTest/Trial.lean:4:7: error: unexpected identifier; expected command\n/workdir/mathai_test/MathaiTest/Trial.lean:5:0: error: invalid 'import' command, it must be used in the beginning of the file\n",
+      "elapsed": 12.636479616165161
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_142",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 14.776272296905518
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_142",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 16.055366277694702
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_142",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:5:30: error: expected ';' or line break\n",
+      "elapsed": 16.927233457565308
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_104",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:36: error: unexpected token ','; expected ')'\n",
+      "elapsed": 14.011539459228516
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_104",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 15.284007549285889
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_104",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "validField): Invalid field `reflectX`: The environment does not contain `Prod.reflectX`, so it is not possible to project the field `reflectX` from an expression\n  (3, 4)\nof type `?m.3 \u00d7 ?m.5`\n/workdir/mathai_test/MathaiTest/Trial.lean:5:2: error: Tactic `native_decide` failed: Could not evaluate decidable instance. Error: cannot evaluate code because 'sorryAx' uses 'sorry' and/or contains errors\n",
+      "elapsed": 15.480411767959595
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_169",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 15.035991668701172
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_169",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 14.404582262039185
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_169",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:5:2: error: Tactic `native_decide` evaluated that the proposition\n  627 + 345 = 63\nis false\n",
+      "elapsed": 16.352070331573486
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_177",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 16.523584127426147
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_177",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:9:21: error: unknown tactic\n/workdir/mathai_test/MathaiTest/Trial.lean:9:15: error(lean.inductionWithNoAlts): Invalid syntax for case analysis tactic: The `with` keyword must be followed by a tactic or by an alternative (e.g. `| zero =>`), but here it is followed by the identifier `h1`.\n",
+      "elapsed": 13.782126665115356
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_177",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:10:2: error: unsolved goals\ncase refine_2\n\u22a2 False\n",
+      "elapsed": 17.406330347061157
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_130",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 17.064311742782593
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_130",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:46: error: unsolved goals\n\u22a2 Nat.choose 11 8 = 165\n",
+      "elapsed": 15.103703022003174
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_130",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 14.59337568283081
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "math500_102",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 14.293843269348145
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "math500_102",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 16.177533388137817
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "math500_102",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 18.459532260894775
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_1",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:14:34: error: Application type mismatch: The argument\n  hdvd\nhas type\n  b + 7 \u2223 9 * (b + 7) - 56\nbut is expected to have type\n  b + 7 \u2223 9 * (b + 7) + 56\nin the application\n  (dvd_add_right h9).mp hdvd\n/workdir/mathai_test/MathaiTest/Trial.lean:19:4: error: interval_cases failed: could not find upper bound on b\n",
+      "elapsed": 17.017494678497314
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_1",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:3:17: error: unexpected token '['; expected command\n",
+      "elapsed": 15.243552446365356
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_2",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 13.020360946655273
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_2",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:0: error: invalid 'import' command, it must be used in the beginning of the file\n/workdir/mathai_test/MathaiTest/Trial.lean:4:7: error: unexpected identifier; expected command\n/workdir/mathai_test/MathaiTest/Trial.lean:9:8: error: expected ';' or line break\n",
+      "elapsed": 12.881946563720703
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_3",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 17.19457221031189
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "aime2025_3",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:7:91: error: expected ';' or line break\n",
+      "elapsed": 15.443846702575684
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_3",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:6:2: error: Tactic `native_decide` evaluated that the proposition\n  Nat.choose 9 4 * Nat.choose 5 3 * Nat.choose 2 2 % 1000 = 16\nis false\n",
+      "elapsed": 17.74140977859497
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_4",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:10:2: error: maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information\n",
+      "elapsed": 15.55491328239441
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "aime2025_4",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 17.85390567779541
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_4",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:6:4: error: Type mismatch\n  {y \u2208 Finset.Icc (-100) 100 | 12 * x ^ 2 - x * y - 6 * y ^ 2 = 0}.card\nhas type\n  \u2115\nbut is expected to have type\n  Prop\n",
+      "elapsed": 16.784608125686646
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_5",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:10:2: error: maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information\n",
+      "elapsed": 16.107573747634888
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "aime2025_5",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:51: error: expected ';' or line break\n",
+      "elapsed": 11.97300386428833
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_5",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:3:17: error: unexpected identifier; expected command\n",
+      "elapsed": 12.951661348342896
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_6",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "find an occurrence of the pattern\n  \u221a3 ^ 2\nin the target expression\n  288 - \u221a3 * 144 = 144\n\ncase h.right.right.left\nh3 : \u221a3 ^ 2 = 3\n\u22a2 288 - \u221a3 * 144 = 144\n/workdir/mathai_test/MathaiTest/Trial.lean:34:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  \u221a3 ^ 2\nin the target expression\n  792 - \u221a3 * 288 = 504\n\ncase h.right.right.right\nh3 : \u221a3 ^ 2 = 3\n\u22a2 792 - \u221a3 * 288 = 504\n",
+      "elapsed": 12.768901109695435
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "aime2025_6",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 11.084634780883789
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_6",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:3:17: error: unexpected identifier; expected command\n/workdir/mathai_test/MathaiTest/Trial.lean:7:226: warning: 'variables' has been replaced by 'variable' in lean 4\n/workdir/mathai_test/MathaiTest/Trial.lean:7:235: error: unexpected token '.'; expected command\n",
+      "elapsed": 11.41731572151184
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_7",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:5:6: warning: unused variable `total`\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n",
+      "elapsed": 12.075472593307495
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_7",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:3:17: error: unexpected identifier; expected command\n",
+      "elapsed": 14.68669867515564
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_8",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 17.067254066467285
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "aime2025_8",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 16.994714736938477
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_8",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:0: error: invalid 'import' command, it must be used in the beginning of the file\n/workdir/mathai_test/MathaiTest/Trial.lean:4:7: error: unexpected identifier; expected command\n/workdir/mathai_test/MathaiTest/Trial.lean:5:0: error: invalid 'import' command, it must be used in the beginning of the file\n",
+      "elapsed": 17.274433851242065
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_9",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:8:2: error(lean.unknownIdentifier): Unknown constant `Nat.Gcd`\n",
+      "elapsed": 15.41885256767273
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_9",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:0: error: invalid 'import' command, it must be used in the beginning of the file\n/workdir/mathai_test/MathaiTest/Trial.lean:4:7: error: unexpected identifier; expected command\n/workdir/mathai_test/MathaiTest/Trial.lean:5:0: error: invalid 'import' command, it must be used in the beginning of the file\n",
+      "elapsed": 12.32517385482788
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_10",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 17.1557035446167
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "aime2025_10",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 18.396297216415405
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_10",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:79: error: unsolved goals\n\u22a2 False\n",
+      "elapsed": 15.36309552192688
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_11",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 12.228179931640625
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_11",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:6:51: error: unexpected token 'in'; expected term\n",
+      "elapsed": 15.413168668746948
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_12",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 12.531036376953125
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "aime2025_12",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:8: warning: declaration uses `sorry`\n",
+      "elapsed": 14.919522285461426
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_13",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 15.938570022583008
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_14",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 12.166903257369995
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "aime2025_14",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:8: warning: declaration uses `sorry`\n",
+      "elapsed": 16.603745222091675
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_15",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:8:2: error: maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information\n",
+      "elapsed": 12.469611406326294
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_15",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:58: error: unsolved goals\n\u22a2 False\n",
+      "elapsed": 13.449599742889404
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_16",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:24:12: error(lean.unknownIdentifier): Unknown constant `Real.sqrt_eq_iff_sq_eq`\n",
+      "elapsed": 13.010300397872925
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "aime2025_16",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "l.lean:5:27: error: numerals are data in Lean, but the expected type is universe polymorphic and may be a proposition\n  let ax := 0;\n  bx : Sort u_1\n/workdir/mathai_test/MathaiTest/Trial.lean:4:0: error: type of theorem `triangle_BGE_area` is not a proposition\n  {bx : Sort u_1} \u2192\n    let ax := 0;\n    bx\n/workdir/mathai_test/MathaiTest/Trial.lean:5:29: error: unexpected token ';'; expected command\n",
+      "elapsed": 14.894627332687378
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_16",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:0: error: invalid 'import' command, it must be used in the beginning of the file\n/workdir/mathai_test/MathaiTest/Trial.lean:4:7: error: unexpected identifier; expected command\n/workdir/mathai_test/MathaiTest/Trial.lean:5:0: error: invalid 'import' command, it must be used in the beginning of the file\n",
+      "elapsed": 12.379347562789917
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_17",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 13.192556619644165
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "aime2025_17",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:8: warning: declaration uses `sorry`\n",
+      "elapsed": 13.175152063369751
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_17",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:43: error: unexpected token 'in'; expected ','\n",
+      "elapsed": 12.50133228302002
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_18",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 13.169082164764404
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_19",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 11.675709009170532
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "aime2025_19",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 13.041544198989868
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_19",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 16.747413873672485
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_20",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 18.540879726409912
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_21",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 13.584006309509277
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_22",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 12.483660221099854
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "aime2025_22",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 14.15522813796997
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_22",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:0: error: invalid 'import' command, it must be used in the beginning of the file\n/workdir/mathai_test/MathaiTest/Trial.lean:4:7: error: unexpected identifier; expected command\n/workdir/mathai_test/MathaiTest/Trial.lean:5:0: error: invalid 'import' command, it must be used in the beginning of the file\n",
+      "elapsed": 15.256809711456299
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_23",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": " inductive type.\n/workdir/mathai_test/MathaiTest/Trial.lean:17:19: error: Invalid projection: Projections extract constructor fields for one-constructor inductive types. The expression\n  t\nhas type `\u2115` which is not a one-constructor inductive type.\n/workdir/mathai_test/MathaiTest/Trial.lean:20:22: error: Type mismatch\n  ((t.1, t.2.1), t.2.2)\nhas type\n  (\u2115 \u00d7 \u2115) \u00d7 \u2115\nbut is expected to have type\n  \u2115\n",
+      "elapsed": 14.27940821647644
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "aime2025_23",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "Field): Invalid field `bind`: The environment does not contain `List.bind`, so it is not possible to project the field `bind` from an expression\n  List.range (m25 + 1)\nof type `List \u2115`\n/workdir/mathai_test/MathaiTest/Trial.lean:31:75: error: maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information\n",
+      "elapsed": 18.003401279449463
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_23",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:0: error: invalid 'import' command, it must be used in the beginning of the file\n/workdir/mathai_test/MathaiTest/Trial.lean:4:7: error: unexpected identifier; expected command\n/workdir/mathai_test/MathaiTest/Trial.lean:5:0: error: invalid 'import' command, it must be used in the beginning of the file\n",
+      "elapsed": 16.157020807266235
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_24",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 14.331530094146729
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "aime2025_24",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 15.475820779800415
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_24",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:0: error: invalid 'import' command, it must be used in the beginning of the file\n/workdir/mathai_test/MathaiTest/Trial.lean:4:7: error: unexpected identifier; expected command\n/workdir/mathai_test/MathaiTest/Trial.lean:5:0: error: invalid 'import' command, it must be used in the beginning of the file\n",
+      "elapsed": 14.386756420135498
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_25",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:7:2: error: No goals to be solved\n",
+      "elapsed": 12.428303956985474
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "aime2025_25",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 19.63267683982849
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_25",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:7:19: error: unexpected identifier after decimal point; consider parenthesizing the number; expected line break\n",
+      "elapsed": 16.578978061676025
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_26",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 18.16246271133423
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "aime2025_26",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 12.15955400466919
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_27",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 25.533239603042603
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_27",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:0: error: invalid 'import' command, it must be used in the beginning of the file\n/workdir/mathai_test/MathaiTest/Trial.lean:4:7: error: unexpected identifier; expected command\n/workdir/mathai_test/MathaiTest/Trial.lean:5:0: error: invalid 'import' command, it must be used in the beginning of the file\n",
+      "elapsed": 12.809332847595215
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_28",
+      "compile_ok": false,
+      "stderr_tail": "TIMEOUT(120s)",
+      "stdout_tail": "",
+      "elapsed": 120.05191087722778
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_28",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:3:17: error: unexpected identifier; expected command\n",
+      "elapsed": 14.501736640930176
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_29",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 13.317388534545898
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_29",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:4:0: error: invalid 'import' command, it must be used in the beginning of the file\n/workdir/mathai_test/MathaiTest/Trial.lean:4:7: error: unexpected identifier; expected command\n/workdir/mathai_test/MathaiTest/Trial.lean:5:0: error: invalid 'import' command, it must be used in the beginning of the file\n",
+      "elapsed": 15.153679370880127
+    },
+    {
+      "extractor": "claude-sonnet-4-6",
+      "problem_id": "aime2025_30",
+      "compile_ok": true,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "elapsed": 13.497167825698853
+    },
+    {
+      "extractor": "gpt-5-mini",
+      "problem_id": "aime2025_30",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:5:75: error: expected ';' or line break\n",
+      "elapsed": 15.206995964050293
+    },
+    {
+      "extractor": "deepseek-v3",
+      "problem_id": "aime2025_30",
+      "compile_ok": false,
+      "stderr_tail": "",
+      "stdout_tail": "/workdir/mathai_test/MathaiTest/Trial.lean:3:17: error: unexpected identifier; expected command\n/workdir/mathai_test/MathaiTest/Trial.lean:12:250: error: unexpected token ','; expected identifier\n/workdir/mathai_test/MathaiTest/Trial.lean:12:288: error: unterminated string literal\n",
+      "elapsed": 16.826414585113525
+    }
+  ]
+}

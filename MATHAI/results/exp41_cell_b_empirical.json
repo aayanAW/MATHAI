@@ -1,0 +1,2074 @@
+{
+  "solver": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+  "rows": [
+    {
+      "id": "math500_423",
+      "gold": "12",
+      "predicted": "6",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 2111
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 2113
+      },
+      "elapsed": 20.203680992126465
+    },
+    {
+      "id": "math500_41",
+      "gold": "4",
+      "predicted": "4",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1387
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 1454
+      },
+      "elapsed": 24.640241146087646
+    },
+    {
+      "id": "math500_407",
+      "gold": "-3",
+      "predicted": "-3",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1029
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1119
+      },
+      "elapsed": 12.555183172225952
+    },
+    {
+      "id": "math500_477",
+      "gold": "\\frac{35}{128}",
+      "predicted": "\\frac{35}{128}",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 849
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 821
+      },
+      "elapsed": 9.146780967712402
+    },
+    {
+      "id": "math500_102",
+      "gold": "5040",
+      "predicted": "5040",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 373
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 895
+      },
+      "elapsed": 7.716328859329224
+    },
+    {
+      "id": "math500_337",
+      "gold": "360",
+      "predicted": "360",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1204
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1145
+      },
+      "elapsed": 9.01436996459961
+    },
+    {
+      "id": "math500_91",
+      "gold": "32",
+      "predicted": "32",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 535
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1291
+      },
+      "elapsed": 8.077346801757812
+    },
+    {
+      "id": "math500_30",
+      "gold": "-2,1",
+      "predicted": "1, -2",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "FAIL_STEP_5",
+        "all_pass": false,
+        "script_chars": 1218
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1850
+      },
+      "elapsed": 17.627142906188965
+    },
+    {
+      "id": "math500_324",
+      "gold": "19",
+      "predicted": "19",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1242
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 600
+      },
+      "elapsed": 11.081104040145874
+    },
+    {
+      "id": "math500_458",
+      "gold": "\\dfrac{17}{50}",
+      "predicted": "\\frac{17}{50}",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1000
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 965
+      },
+      "elapsed": 12.49092984199524
+    },
+    {
+      "id": "math500_251",
+      "gold": "-49",
+      "predicted": "-49",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 911
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1507
+      },
+      "elapsed": 9.616841793060303
+    },
+    {
+      "id": "math500_223",
+      "gold": "-2",
+      "predicted": "-2",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1066
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1130
+      },
+      "elapsed": 10.640051126480103
+    },
+    {
+      "id": "math500_497",
+      "gold": "75\\%",
+      "predicted": "72.06\\%",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "FAIL_STEP_5",
+        "all_pass": false,
+        "script_chars": 1051
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_5",
+        "all_pass": false,
+        "script_chars": 1485
+      },
+      "elapsed": 11.23877501487732
+    },
+    {
+      "id": "math500_463",
+      "gold": "\\frac{1}{2}",
+      "predicted": "\\frac{3}{14}",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1149
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_3",
+        "all_pass": false,
+        "script_chars": 1934
+      },
+      "elapsed": 12.696923017501831
+    },
+    {
+      "id": "math500_237",
+      "gold": "14",
+      "predicted": "14",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1019
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 1322
+      },
+      "elapsed": 14.370849132537842
+    },
+    {
+      "id": "math500_268",
+      "gold": "9",
+      "predicted": "9",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 601
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_4",
+        "all_pass": false,
+        "script_chars": 709
+      },
+      "elapsed": 9.760722160339355
+    },
+    {
+      "id": "math500_185",
+      "gold": "291",
+      "predicted": "291",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 613
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 697
+      },
+      "elapsed": 8.617182970046997
+    },
+    {
+      "id": "math500_498",
+      "gold": "a^3 + a^2",
+      "predicted": "a^3 + a^2",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1512
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1597
+      },
+      "elapsed": 14.801836013793945
+    },
+    {
+      "id": "math500_96",
+      "gold": "3",
+      "predicted": "3",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 921
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 559
+      },
+      "elapsed": 8.864673852920532
+    },
+    {
+      "id": "math500_342",
+      "gold": "(10,2)",
+      "predicted": "(10, 2)",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 685
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 894
+      },
+      "elapsed": 7.78792405128479
+    },
+    {
+      "id": "math500_56",
+      "gold": "2",
+      "predicted": "2",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1066
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 854
+      },
+      "elapsed": 8.62423300743103
+    },
+    {
+      "id": "math500_247",
+      "gold": "1",
+      "predicted": "1",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 702
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 680
+      },
+      "elapsed": 10.47696590423584
+    },
+    {
+      "id": "math500_238",
+      "gold": "-9",
+      "predicted": "-9",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 982
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 867
+      },
+      "elapsed": 15.74303388595581
+    },
+    {
+      "id": "math500_125",
+      "gold": "\\frac{27}{128}",
+      "predicted": "\\frac{27}{128}",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 372
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 586
+      },
+      "elapsed": 7.151339054107666
+    },
+    {
+      "id": "math500_377",
+      "gold": "13",
+      "predicted": "351",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1374
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1831
+      },
+      "elapsed": 83.0593490600586
+    },
+    {
+      "id": "math500_37",
+      "gold": "600",
+      "predicted": "600",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 437
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 731
+      },
+      "elapsed": 7.685148000717163
+    },
+    {
+      "id": "math500_92",
+      "gold": "10",
+      "predicted": "10",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1162
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1238
+      },
+      "elapsed": 10.759811878204346
+    },
+    {
+      "id": "math500_433",
+      "gold": "3\\pi-\\frac{\\sqrt{3}}{2}",
+      "predicted": "\\pi",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 775
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 748
+      },
+      "elapsed": 9.918927907943726
+    },
+    {
+      "id": "math500_311",
+      "gold": "6, -2",
+      "predicted": "6, -2",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1157
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1898
+      },
+      "elapsed": 11.910429239273071
+    },
+    {
+      "id": "math500_394",
+      "gold": "\\sqrt{6}",
+      "predicted": "\\sqrt{6}",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1586
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_2",
+        "all_pass": false,
+        "script_chars": 1179
+      },
+      "elapsed": 16.199501752853394
+    },
+    {
+      "id": "math500_153",
+      "gold": "\\frac12",
+      "predicted": "\\frac{1}{2}",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 940
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1760
+      },
+      "elapsed": 14.013952016830444
+    },
+    {
+      "id": "math500_15",
+      "gold": "\\text{even}",
+      "predicted": "\\text{even}",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_2",
+        "all_pass": false,
+        "script_chars": 795
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1283
+      },
+      "elapsed": 14.55542802810669
+    },
+    {
+      "id": "math500_480",
+      "gold": "\\frac{11}{2}",
+      "predicted": "\\frac{11}{2}",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 869
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1005
+      },
+      "elapsed": 13.302021026611328
+    },
+    {
+      "id": "math500_70",
+      "gold": "400",
+      "predicted": "400",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 464
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 980
+      },
+      "elapsed": 9.58190107345581
+    },
+    {
+      "id": "math500_101",
+      "gold": "8",
+      "predicted": "8",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 1358
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 1079
+      },
+      "elapsed": 19.085976123809814
+    },
+    {
+      "id": "math500_167",
+      "gold": "2",
+      "predicted": "2",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1047
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1245
+      },
+      "elapsed": 14.405189037322998
+    },
+    {
+      "id": "math500_369",
+      "gold": "1",
+      "predicted": "0",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 2361
+      },
+      "cell_b": {
+        "verdict": "TIMEOUT",
+        "all_pass": false,
+        "script_chars": 1237
+      },
+      "elapsed": 43.14487886428833
+    },
+    {
+      "id": "math500_325",
+      "gold": "0",
+      "predicted": "0",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 639
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1166
+      },
+      "elapsed": 14.826439142227173
+    },
+    {
+      "id": "math500_152",
+      "gold": "86^\\circ",
+      "predicted": "86",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1067
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_2",
+        "all_pass": false,
+        "script_chars": 914
+      },
+      "elapsed": 16.18018102645874
+    },
+    {
+      "id": "math500_282",
+      "gold": "-2",
+      "predicted": "-2",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_4",
+        "all_pass": false,
+        "script_chars": 871
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1471
+      },
+      "elapsed": 23.143285989761353
+    },
+    {
+      "id": "math500_72",
+      "gold": "1",
+      "predicted": "1",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 420
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 351
+      },
+      "elapsed": 6.823624849319458
+    },
+    {
+      "id": "math500_312",
+      "gold": "44",
+      "predicted": "44",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 736
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1473
+      },
+      "elapsed": 18.965216875076294
+    },
+    {
+      "id": "math500_1",
+      "gold": "7.5",
+      "predicted": "7.5",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 895
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1053
+      },
+      "elapsed": 12.32918906211853
+    },
+    {
+      "id": "math500_321",
+      "gold": "247000",
+      "predicted": "247000",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 720
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 649
+      },
+      "elapsed": 16.376955032348633
+    },
+    {
+      "id": "math500_441",
+      "gold": "31",
+      "predicted": "26",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1504
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 1694
+      },
+      "elapsed": 22.688655138015747
+    },
+    {
+      "id": "math500_78",
+      "gold": "-21",
+      "predicted": "-21",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 363
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 963
+      },
+      "elapsed": 8.76739501953125
+    },
+    {
+      "id": "math500_453",
+      "gold": "\\frac{\\sqrt{6}}{6}",
+      "predicted": "\\frac{5}{2}",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1203
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1355
+      },
+      "elapsed": 26.062289237976074
+    },
+    {
+      "id": "math500_274",
+      "gold": "165",
+      "predicted": "165",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 784
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1089
+      },
+      "elapsed": 13.618080615997314
+    },
+    {
+      "id": "math500_267",
+      "gold": "56",
+      "predicted": "56",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 899
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1810
+      },
+      "elapsed": 14.613594770431519
+    },
+    {
+      "id": "math500_440",
+      "gold": "\\frac{3840}{289}",
+      "predicted": "\\frac{3840}{289}",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1101
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1406
+      },
+      "elapsed": 23.842423677444458
+    },
+    {
+      "id": "math500_147",
+      "gold": "81\\text{ teachers}",
+      "predicted": "81",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 590
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1003
+      },
+      "elapsed": 12.943013191223145
+    },
+    {
+      "id": "math500_194",
+      "gold": "28",
+      "predicted": "28",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_5",
+        "all_pass": false,
+        "script_chars": 1146
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1138
+      },
+      "elapsed": 11.292436838150024
+    },
+    {
+      "id": "math500_55",
+      "gold": "18",
+      "predicted": "27",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 600
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 820
+      },
+      "elapsed": 11.561086893081665
+    },
+    {
+      "id": "math500_435",
+      "gold": "1041",
+      "predicted": "1050",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 869
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1174
+      },
+      "elapsed": 19.422915935516357
+    },
+    {
+      "id": "math500_169",
+      "gold": "63",
+      "predicted": "63",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 607
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 522
+      },
+      "elapsed": 8.084957122802734
+    },
+    {
+      "id": "math500_344",
+      "gold": "16",
+      "predicted": "16",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 476
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1305
+      },
+      "elapsed": 12.783934116363525
+    },
+    {
+      "id": "math500_124",
+      "gold": "2",
+      "predicted": "2",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 988
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1252
+      },
+      "elapsed": 14.579170942306519
+    },
+    {
+      "id": "math500_65",
+      "gold": "\\frac{1}{2}",
+      "predicted": "\\frac{1}{2}",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_2",
+        "all_pass": false,
+        "script_chars": 378
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1155
+      },
+      "elapsed": 9.762212038040161
+    },
+    {
+      "id": "math500_277",
+      "gold": "4",
+      "predicted": "4",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 1256
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1853
+      },
+      "elapsed": 14.013084888458252
+    },
+    {
+      "id": "math500_289",
+      "gold": "2",
+      "predicted": "2",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 688
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 687
+      },
+      "elapsed": 7.613817930221558
+    },
+    {
+      "id": "math500_213",
+      "gold": "400",
+      "predicted": "400",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 787
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1109
+      },
+      "elapsed": 8.12256121635437
+    },
+    {
+      "id": "math500_475",
+      "gold": "\\frac{36}{11}",
+      "predicted": "",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1454
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1511
+      },
+      "elapsed": 24.953636169433594
+    },
+    {
+      "id": "math500_218",
+      "gold": "132",
+      "predicted": "132",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 649
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 613
+      },
+      "elapsed": 6.601856708526611
+    },
+    {
+      "id": "math500_138",
+      "gold": "4",
+      "predicted": "12",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 854
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1282
+      },
+      "elapsed": 10.670622825622559
+    },
+    {
+      "id": "math500_50",
+      "gold": "90^\\circ",
+      "predicted": "90",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 965
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 910
+      },
+      "elapsed": 11.93203616142273
+    },
+    {
+      "id": "math500_9",
+      "gold": "8",
+      "predicted": "8",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 440
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 715
+      },
+      "elapsed": 6.356910943984985
+    },
+    {
+      "id": "math500_76",
+      "gold": "\\cfrac{25}{16}",
+      "predicted": "\\cfrac{25}{16}",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 550
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 737
+      },
+      "elapsed": 8.184222936630249
+    },
+    {
+      "id": "math500_126",
+      "gold": "\\text{odd}",
+      "predicted": "\\text{odd}",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 773
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 1140
+      },
+      "elapsed": 10.844714164733887
+    },
+    {
+      "id": "math500_161",
+      "gold": "76",
+      "predicted": "76",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 952
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 882
+      },
+      "elapsed": 10.04286003112793
+    },
+    {
+      "id": "math500_483",
+      "gold": "5,\\!866,\\!608",
+      "predicted": "5869008",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "FAIL_STEP_4",
+        "all_pass": false,
+        "script_chars": 1339
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_4",
+        "all_pass": false,
+        "script_chars": 1750
+      },
+      "elapsed": 10.797175884246826
+    },
+    {
+      "id": "math500_122",
+      "gold": "180",
+      "predicted": "180",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 730
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 748
+      },
+      "elapsed": 7.429632902145386
+    },
+    {
+      "id": "math500_10",
+      "gold": "73",
+      "predicted": "73",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 682
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 629
+      },
+      "elapsed": 6.766844034194946
+    },
+    {
+      "id": "math500_130",
+      "gold": "165",
+      "predicted": "165",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_3",
+        "all_pass": false,
+        "script_chars": 1054
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_3",
+        "all_pass": false,
+        "script_chars": 1135
+      },
+      "elapsed": 11.163087129592896
+    },
+    {
+      "id": "math500_476",
+      "gold": "4\\sqrt{2}",
+      "predicted": "4\\sqrt{2}",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 803
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1021
+      },
+      "elapsed": 13.240240812301636
+    },
+    {
+      "id": "math500_436",
+      "gold": "\\$18.90",
+      "predicted": "18.90",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "FAIL_STEP_3",
+        "all_pass": false,
+        "script_chars": 1083
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_5",
+        "all_pass": false,
+        "script_chars": 1463
+      },
+      "elapsed": 14.588495969772339
+    },
+    {
+      "id": "math500_73",
+      "gold": "\\frac{1}{16}",
+      "predicted": "\\frac{1}{16}",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 943
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 711
+      },
+      "elapsed": 7.925837993621826
+    },
+    {
+      "id": "math500_21",
+      "gold": "(45x + 28)(x + 2)",
+      "predicted": "(45x + 28)(x + 2)",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_2",
+        "all_pass": false,
+        "script_chars": 1694
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 682
+      },
+      "elapsed": 13.047800779342651
+    },
+    {
+      "id": "math500_214",
+      "gold": "-10",
+      "predicted": "-10",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 711
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 1062
+      },
+      "elapsed": 8.956393241882324
+    },
+    {
+      "id": "math500_273",
+      "gold": "\\frac{1}{8}",
+      "predicted": "\\frac{1}{8}",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 547
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 995
+      },
+      "elapsed": 11.074586868286133
+    },
+    {
+      "id": "math500_113",
+      "gold": "24",
+      "predicted": "24",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 829
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 992
+      },
+      "elapsed": 10.0968759059906
+    },
+    {
+      "id": "math500_346",
+      "gold": "[5,5 \\sqrt{2}]",
+      "predicted": "[5, 5\\sqrt{2}]",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1289
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1622
+      },
+      "elapsed": 15.046810150146484
+    },
+    {
+      "id": "math500_232",
+      "gold": "30",
+      "predicted": "30",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 693
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 787
+      },
+      "elapsed": 7.552157163619995
+    },
+    {
+      "id": "math500_233",
+      "gold": "25 \\text{ ft}",
+      "predicted": "25",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 915
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1344
+      },
+      "elapsed": 10.707840204238892
+    },
+    {
+      "id": "math500_493",
+      "gold": "1",
+      "predicted": "2",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 2413
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1345
+      },
+      "elapsed": 20.353428840637207
+    },
+    {
+      "id": "math500_301",
+      "gold": "4",
+      "predicted": "4",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1026
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1092
+      },
+      "elapsed": 11.24247121810913
+    },
+    {
+      "id": "math500_302",
+      "gold": "100",
+      "predicted": "100",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 1265
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_2",
+        "all_pass": false,
+        "script_chars": 1053
+      },
+      "elapsed": 10.667402029037476
+    },
+    {
+      "id": "math500_327",
+      "gold": "1",
+      "predicted": "1",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 573
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 984
+      },
+      "elapsed": 7.458400011062622
+    },
+    {
+      "id": "math500_210",
+      "gold": "0",
+      "predicted": "1",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 1434
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_3",
+        "all_pass": false,
+        "script_chars": 1320
+      },
+      "elapsed": 17.394861221313477
+    },
+    {
+      "id": "math500_105",
+      "gold": "\\text{(E)}",
+      "predicted": "E",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 635
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_2",
+        "all_pass": false,
+        "script_chars": 704
+      },
+      "elapsed": 7.42346715927124
+    },
+    {
+      "id": "math500_179",
+      "gold": "2",
+      "predicted": "2",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 635
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1266
+      },
+      "elapsed": 8.891581773757935
+    },
+    {
+      "id": "math500_355",
+      "gold": "96\\sqrt{3}",
+      "predicted": "96\\sqrt{3}",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 822
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 696
+      },
+      "elapsed": 9.974309921264648
+    },
+    {
+      "id": "math500_42",
+      "gold": "\\frac{2}{5}",
+      "predicted": "\\frac{2}{5}",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1257
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 795
+      },
+      "elapsed": 9.594336986541748
+    },
+    {
+      "id": "math500_461",
+      "gold": "10455",
+      "predicted": "10455",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 883
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 683
+      },
+      "elapsed": 10.687782049179077
+    },
+    {
+      "id": "math500_428",
+      "gold": "129",
+      "predicted": "111",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 1426
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1214
+      },
+      "elapsed": 12.715111017227173
+    },
+    {
+      "id": "math500_460",
+      "gold": "\\frac{5}{4}",
+      "predicted": "\\frac{5}{4}",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1113
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1231
+      },
+      "elapsed": 10.110723972320557
+    },
+    {
+      "id": "math500_356",
+      "gold": "84",
+      "predicted": "47 + \\sqrt{1319}",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 718
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 969
+      },
+      "elapsed": 11.03339695930481
+    },
+    {
+      "id": "math500_390",
+      "gold": "24",
+      "predicted": "24",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1556
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1959
+      },
+      "elapsed": 15.516271114349365
+    },
+    {
+      "id": "math500_32",
+      "gold": "4",
+      "predicted": "4",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1296
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_2",
+        "all_pass": false,
+        "script_chars": 1533
+      },
+      "elapsed": 11.37490725517273
+    },
+    {
+      "id": "math500_309",
+      "gold": "\\begin{pmatrix} -10 \\\\ -35 \\\\ 30 \\end{pmatrix}",
+      "predicted": "\\begin{pmatrix} -14 \\\\ -7 \\\\ -42 \\end{pmatrix}",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1424
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1396
+      },
+      "elapsed": 15.04078197479248
+    },
+    {
+      "id": "math500_314",
+      "gold": "12",
+      "predicted": "12",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_3",
+        "all_pass": false,
+        "script_chars": 1150
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1006
+      },
+      "elapsed": 17.814950227737427
+    },
+    {
+      "id": "math500_249",
+      "gold": "4",
+      "predicted": "4",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 1205
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1335
+      },
+      "elapsed": 11.247215032577515
+    },
+    {
+      "id": "math500_434",
+      "gold": "4\\sqrt{2} + 4",
+      "predicted": "4 (1 + \\sqrt{2})",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "FAIL_STEP_2",
+        "all_pass": false,
+        "script_chars": 579
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 935
+      },
+      "elapsed": 9.149655103683472
+    },
+    {
+      "id": "math500_239",
+      "gold": "(-\\infty,-7) \\cup (1,2)",
+      "predicted": "(-\\infty, -7) \\cup (1, 2)",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1332
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 916
+      },
+      "elapsed": 13.247810125350952
+    },
+    {
+      "id": "math500_157",
+      "gold": "0",
+      "predicted": "0",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 900
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_3",
+        "all_pass": false,
+        "script_chars": 1146
+      },
+      "elapsed": 13.196120738983154
+    },
+    {
+      "id": "math500_48",
+      "gold": "25\\pi",
+      "predicted": "25\\pi",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 548
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 786
+      },
+      "elapsed": 7.677415132522583
+    },
+    {
+      "id": "math500_205",
+      "gold": "8",
+      "predicted": "8",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 743
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 986
+      },
+      "elapsed": 8.468484163284302
+    },
+    {
+      "id": "math500_144",
+      "gold": "1,2,-2,-3",
+      "predicted": "1, -2, -3, 2",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1883
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 2730
+      },
+      "elapsed": 17.642303943634033
+    },
+    {
+      "id": "math500_379",
+      "gold": "\\frac{13}{3}",
+      "predicted": "4",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 643
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1086
+      },
+      "elapsed": 9.807389974594116
+    },
+    {
+      "id": "math500_219",
+      "gold": "\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}",
+      "predicted": "\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1388
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1854
+      },
+      "elapsed": 27.83060574531555
+    },
+    {
+      "id": "math500_177",
+      "gold": "\\frac{13}{144}",
+      "predicted": "\\frac{13}{144}",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_2",
+        "all_pass": false,
+        "script_chars": 1087
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 1501
+      },
+      "elapsed": 14.317394256591797
+    },
+    {
+      "id": "math500_248",
+      "gold": "\\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}",
+      "predicted": "\\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 1920
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1189
+      },
+      "elapsed": 16.099821090698242
+    },
+    {
+      "id": "math500_389",
+      "gold": "6",
+      "predicted": "\\frac{12}{\\sqrt[3]{28}}",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "FAIL_STEP_2",
+        "all_pass": false,
+        "script_chars": 1548
+      },
+      "cell_b": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 1195
+      },
+      "elapsed": 16.21319603919983
+    },
+    {
+      "id": "math500_104",
+      "gold": "(3,-4)",
+      "predicted": "(3, -4)",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 781
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 538
+      },
+      "elapsed": 6.92100191116333
+    },
+    {
+      "id": "math500_287",
+      "gold": "-\\frac{4}{5}",
+      "predicted": "-\\frac{4}{5}",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 1014
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 853
+      },
+      "elapsed": 9.650431156158447
+    },
+    {
+      "id": "math500_142",
+      "gold": "29",
+      "predicted": "29",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 799
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 1329
+      },
+      "elapsed": 8.148889064788818
+    },
+    {
+      "id": "math500_411",
+      "gold": "-6.5",
+      "predicted": "-6.5",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1031
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_3",
+        "all_pass": false,
+        "script_chars": 1065
+      },
+      "elapsed": 10.369517087936401
+    },
+    {
+      "id": "math500_341",
+      "gold": "3",
+      "predicted": "4",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "FAIL_STEP_4",
+        "all_pass": false,
+        "script_chars": 1445
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 1903
+      },
+      "elapsed": 14.616460084915161
+    },
+    {
+      "id": "math500_45",
+      "gold": "6840",
+      "predicted": "6840",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 861
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_1",
+        "all_pass": false,
+        "script_chars": 1383
+      },
+      "elapsed": 8.381545305252075
+    },
+    {
+      "id": "math500_457",
+      "gold": "-\\frac{2010012}{2010013}",
+      "predicted": "-1",
+      "answer_correct": true,
+      "cell_a": {
+        "verdict": "ALL_PASS",
+        "all_pass": true,
+        "script_chars": 634
+      },
+      "cell_b": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 945
+      },
+      "elapsed": 19.495025157928467
+    },
+    {
+      "id": "math500_354",
+      "gold": "45^\\circ, 135^\\circ",
+      "predicted": "60",
+      "answer_correct": false,
+      "cell_a": {
+        "verdict": "FAIL_STEP_0",
+        "all_pass": false,
+        "script_chars": 1128
+      },
+      "cell_b": {
+        "verdict": "ERROR",
+        "all_pass": false,
+        "script_chars": 2550
+      },
+      "elapsed": 19.766510009765625
+    }
+  ],
+  "summary": {
+    "cell_a": {
+      "cell": "A (deterministic)",
+      "n_total": 120,
+      "all_pass": 57,
+      "all_pass_fraction": 0.475,
+      "n_wrong": 9,
+      "far": 0.15789473684210525,
+      "ci_lo": 0.07483116920051247,
+      "ci_hi": 0.2786826300687296
+    },
+    "cell_b": {
+      "cell": "B (randomized)",
+      "n_total": 120,
+      "all_pass": 29,
+      "all_pass_fraction": 0.24166666666666667,
+      "n_wrong": 4,
+      "far": 0.13793103448275862,
+      "ci_lo": 0.03889483129592733,
+      "ci_hi": 0.31664060943913774
+    },
+    "paired": {
+      "both_wrong": 2,
+      "a_only_wrong": 7,
+      "b_only_wrong": 2,
+      "neither_wrong": 109,
+      "fisher_p": 0.027905295103699882
+    }
+  }
+}

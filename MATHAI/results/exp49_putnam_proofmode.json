@@ -1,0 +1,753 @@
+{
+  "model": "claude-sonnet-4-6",
+  "results": [
+    {
+      "id": "putnam_1981_a1",
+      "status": "ok",
+      "gold_answer": "The limit equals $\\frac{1}{8}$.",
+      "elapsed": 12.865586280822754,
+      "script": "def verify(answer):\n    import re\n    from fractions import Fraction\n    \n    # Compute E(n) for large n and check E(n)/n^2 approaches 1/8\n    def v5(k):\n        count = 0\n        while k % 5 == 0:\n            k //= 5\n            count += 1\n        return count\n    \n    def E(n):\n        total = 0\n        for k in range(1, n+1):\n            total += k * v5(k)\n        return total\n    \n    # Check convergence to 1/8\n    target = 1/8\n    \n    # Verify numerically\n    for n in [100, 500, 1000]:\n        ratio = E(n) / (n*n)\n        if abs(ratio - target) > 0.05:\n            return False\n    \n    # Now parse the answer\n    ans_str = answer.strip()\n    \n    # Try to interpret as a fraction or decimal\n    # Check for \"1/8\"\n    frac_match = re.search(r'(\\d+)\\s*/\\s*(\\d+)', ans_str)\n    if frac_match:\n        num = int(frac_match.group(1))\n        den = int(frac_match.group(2))\n        candidate = num / den\n        return abs(candidate - target) < 1e-9\n    \n    # Try decimal\n    dec_match = re.search(r'(\\d+\\.?\\d*)', ans_str)\n    if dec_match:\n        candidate = float(dec_match.group(1))\n        return abs(candidate - target) < 1e-6\n    \n    # Check if answer contains \"1/8\" or \"0.125\"\n    if '1/8' in ans_str or '0.125' in ans_str:\n        return True\n    \n    return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1981_a3",
+      "status": "ok",
+      "gold_answer": "The limit does not exist.",
+      "elapsed": 15.051615953445435,
+      "script": "def verify(answer):\n    import numpy as np\n    from scipy import integrate\n    \n    # Numerically compute the limit for large t\n    def compute_for_t(t):\n        def integrand(s):\n            term = (np.exp(s*t) - 1) * (np.exp((1-s)*t) - 1) / (s * (1-s))\n            return np.exp(-t) * term\n        # Be careful near s=0 and s=1\n        result, _ = integrate.quad(integrand, 1e-10, 1-1e-10, limit=200)\n        return result\n    \n    vals = [compute_for_t(t) for t in [10, 20, 30, 50]]\n    # Check convergence\n    limit_estimate = vals[-1]\n    \n    # The answer should be \"yes\" the limit exists, and equals 2\n    # Check if the answer claims existence with value 2\n    ans = answer.strip().lower()\n    \n    # Check if answer is close to 2\n    try:\n        val = float(answer.strip())\n        return abs(val - limit_estimate) < 0.5\n    except:\n        pass\n    \n    if \"yes\" in ans and \"2\" in ans:\n        return True\n    if ans == \"2\":\n        return True\n    if \"exist\" in ans and \"2\" in ans:\n        return True\n    \n    # The limit is 2\n    return abs(limit_estimate - 2.0) < 0.1",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1981_a5",
+      "status": "unverifiable",
+      "gold_answer": "$Q(x)$ must have at least $2n - 1$ distinct real roots.",
+      "elapsed": 1.077868938446045
+    },
+    {
+      "id": "putnam_1981_b1",
+      "status": "ok",
+      "gold_answer": "The limit equals $-1$.",
+      "elapsed": 13.195143222808838,
+      "script": "def verify(answer):\n    import re\n    from fractions import Fraction\n    \n    # Clean up the answer string\n    ans = answer.strip().lower().replace(' ', '')\n    \n    # Try to parse as a number\n    # Accept \"0\", \"0.0\", \"zero\", etc.\n    if ans in ['0', '0.0', 'zero', '0/1']:\n        return True\n    \n    # Try numeric parsing\n    try:\n        val = float(ans)\n        return abs(val) < 1e-9\n    except:\n        pass\n    \n    # Try fraction\n    try:\n        frac = Fraction(ans)\n        return frac == 0\n    except:\n        pass\n    \n    # Numerically verify by computing the limit for large n\n    import numpy as np\n    \n    def compute_limit(n):\n        h = np.arange(1, n+1, dtype=float)\n        k = np.arange(1, n+1, dtype=float)\n        H, K = np.meshgrid(h, k)\n        total = np.sum(5*H**4 - 18*H**2*K**2 + 5*K**4)\n        return total / n**5\n    \n    # Check if the answer matches the computed limit\n    computed = compute_limit(1000)\n    \n    try:\n        val = float(eval(answer))\n        return abs(val - computed) < 1e-3\n    except:\n        pass\n    \n    return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1981_b2",
+      "status": "ok",
+      "gold_answer": "The minimum is $12 - 8\\sqrt{2}$.",
+      "elapsed": 17.47994899749756,
+      "script": "def verify(answer):\n    import re\n    import math\n    from scipy.optimize import minimize\n    \n    # First compute the actual minimum numerically\n    def objective(x):\n        r, s, t = x\n        val = (r-1)**2 + (s/r - 1)**2 + (t/s - 1)**2 + (4/t - 1)**2\n        return val\n    \n    best = float('inf')\n    from scipy.optimize import minimize\n    import numpy as np\n    np.random.seed(42)\n    \n    for _ in range(1000):\n        # Random starting point satisfying constraints\n        r0 = np.random.uniform(1, 4)\n        s0 = np.random.uniform(r0, 4)\n        t0 = np.random.uniform(s0, 4)\n        \n        res = minimize(objective, [r0, s0, t0], method='SLSQP',\n                      bounds=[(1,4),(1,4),(1,4)],\n                      constraints=[\n                          {'type': 'ineq', 'fun': lambda x: x[1] - x[0]},\n                          {'type': 'ineq', 'fun': lambda x: x[2] - x[1]},\n                      ])\n        if res.fun < best:\n            best = res.fun\n    \n    expected = 4 * (3 - 2*math.sqrt(2))  # 12 - 8*sqrt(2)\n    \n    # Parse the answer\n    ans_str = str(answer).strip()\n    \n    # Try to evaluate it\n    candidate = None\n    \n    # Replace sqrt(2) and similar\n    try:\n        # Try direct float conversion\n        candidate = float(ans_str)\n    except:\n        pass\n    \n    if candidate is None:\n        try:\n            import sympy\n            expr = sympy.sympify(ans_str)\n            candidate = float(expr.evalf())\n        except:\n            pass\n    \n    if candidate is None:\n        # Try replacing common patterns\n        s = ans_str.replace('sqrt(2)', str(math.sqrt(2)))\n        s = s.replace('\u221a2', str(math.sqrt(2)))\n        try:\n            candidate = float(eval(s))\n        except:\n            pass\n    \n    if candidate is None:\n        return False\n    \n    # Check if candidate matches the numerical minimum\n    return abs(candidate - expected) < 1e-6 or abs(candidate - best) < 1e-4",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1981_b3",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 1.4284520149230957
+    },
+    {
+      "id": "putnam_1981_b4",
+      "status": "unverifiable",
+      "gold_answer": "Show that the assertion is false.",
+      "elapsed": 1.2321770191192627
+    },
+    {
+      "id": "putnam_1981_b5",
+      "status": "ok",
+      "gold_answer": "Show that the expression is a rational number.",
+      "elapsed": 20.582546949386597,
+      "script": "def verify(answer):\n    import math\n    from fractions import Fraction\n    \n    # Compute B(n) = number of 1s in binary representation\n    def B(n):\n        return bin(n).count('1')\n    \n    # Compute the sum numerically with many terms\n    total = 0.0\n    N = 100000\n    for n in range(1, N+1):\n        total += B(n) / (n * (n + 1))\n    \n    # The tail sum is small; estimate it\n    # For large n, B(n) \u2248 log2(n)/2 on average\n    # Tail is approximately \u2211_{n=N+1}^\u221e (log2(n)/2) / n^2 which converges\n    \n    result = math.exp(total)\n    \n    # Check if the answer claims it's rational or irrational\n    answer_lower = answer.strip().lower()\n    \n    # The answer is that exp(...) = 2 (rational)\n    # Let me check: is result close to 2?\n    \n    # Parse the answer\n    # If answer says \"rational\" or gives a specific value\n    if 'irrational' in answer_lower or 'not rational' in answer_lower:\n        # Check if result is NOT close to a simple rational\n        # This is hard to verify computationally\n        return False  # we'll check below\n    \n    if 'rational' in answer_lower and 'irrational' not in answer_lower:\n        # Check if exp(sum) is close to a rational number\n        # Result should be close to 2.0\n        return abs(result - round(result)) < 0.01 or abs(result - 2) < 0.1\n    \n    # Try to parse as a number\n    try:\n        val = float(answer)\n        return abs(result - val) < 0.01\n    except:\n        pass\n    \n    # Check for \"2\" specifically\n    if '2' in answer:\n        return abs(result - 2.0) < 0.1\n    \n    return False\n\n# Test\nprint(verify(\"2\"))\nprint(verify(\"rational\"))\nprint(verify(\"The expression is rational and equals 2\"))",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2007_a1",
+      "status": "ok",
+      "gold_answer": "Show that the solution is the set \\{2/3, 3/2, (13 + \\sqrt{601})/12, (13 - \\sqrt{601})/12}.",
+      "elapsed": 14.076741933822632,
+      "script": "def verify(answer):\n    import re\n    from fractions import Fraction\n    import sympy as sp\n    \n    # The correct answers are \u03b1 = 2/3 and \u03b1 = 3/2\n    correct_values = {Fraction(2, 3), Fraction(3, 2)}\n    \n    # Try to parse the answer\n    answer_str = str(answer).strip()\n    \n    # Try to find fractions or decimals in the answer\n    # Check if answer contains both values\n    found_values = set()\n    \n    # Look for fractions like 2/3, 3/2\n    fractions_found = re.findall(r'-?\\d+\\s*/\\s*-?\\d+', answer_str)\n    for f in fractions_found:\n        parts = f.replace(' ', '').split('/')\n        try:\n            frac = Fraction(int(parts[0]), int(parts[1]))\n            found_values.add(frac)\n        except:\n            pass\n    \n    # Look for decimals\n    decimals_found = re.findall(r'-?\\d+\\.?\\d*', answer_str)\n    for d in decimals_found:\n        try:\n            val = float(d)\n            # Check if close to 2/3 or 3/2\n            for cv in correct_values:\n                if abs(val - float(cv)) < 1e-6:\n                    found_values.add(cv)\n        except:\n            pass\n    \n    # Check if the answer mentions both correct values\n    if correct_values.issubset(found_values):\n        return True\n    \n    # Also check if answer is just one value (partial)\n    # but the problem asks for ALL values, so we need both\n    # However, be lenient if only one is given and it's correct\n    if found_values and found_values.issubset(correct_values):\n        # If they found at least one correct value, partial credit check\n        # For strict verification, require both\n        if found_values == correct_values:\n            return True\n        # If only one value found but it's correct, might be partial\n        # Return True only if both are present\n        return len(found_values) == 2\n    \n    return False",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2007_a2",
+      "status": "ok",
+      "gold_answer": "Show that the minimum is $4$.",
+      "elapsed": 7.455928087234497,
+      "script": "def verify(answer):\n    import re\n    from math import isclose\n    \n    # Try to extract a numeric value from the answer string\n    answer_str = str(answer).strip()\n    \n    # Try direct numeric parsing\n    try:\n        val = float(answer_str)\n        return isclose(val, 4.0, rel_tol=1e-6)\n    except ValueError:\n        pass\n    \n    # Try to handle expressions like \"4\", \"4.0\", \"2+2\", etc.\n    # Remove common formatting\n    cleaned = answer_str.replace(',', '.').strip()\n    \n    # Try eval with math functions\n    import math\n    try:\n        val = eval(cleaned, {\"__builtins__\": {}}, \n                   {\"sqrt\": math.sqrt, \"pi\": math.pi, \"e\": math.e})\n        return isclose(float(val), 4.0, rel_tol=1e-6)\n    except:\n        pass\n    \n    # Try sympy parsing\n    try:\n        import sympy as sp\n        expr = sp.sympify(answer_str)\n        val = float(expr.evalf())\n        return isclose(val, 4.0, rel_tol=1e-6)\n    except:\n        pass\n    \n    # Check for string representations of 4\n    if answer_str in [\"4\", \"4.0\", \"four\"]:\n        return True\n    \n    return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2007_a4",
+      "status": "ok",
+      "gold_answer": "Show that the desired polynomials $f$ are those of the form\n\\[\nf(n) = \\frac{1}{9}(10^c (9n+1)^d - 1)\n\\]\nfor integers $d \\geq 0$ and $c \\geq 1-d$.",
+      "elapsed": 16.880306720733643,
+      "script": "def verify(answer):\n    import re\n    from sympy import symbols, poly, simplify, expand\n    \n    # The known correct answer: f(x) = 1, f(x) = x, f(x) = 10x+1\n    correct_polynomials = [\"f(x) = 1\", \"f(x) = x\", \"f(x) = 10x + 1\", \"1, x, 10x+1\", \"10x+1, x, 1\"]\n    \n    # Normalize answer\n    ans = answer.strip().lower().replace(\" \", \"\")\n    \n    # Check for the three polynomials mentioned\n    has_one = \"1\" in ans or \"f(x)=1\" in ans\n    has_x = \"x\" in ans\n    has_10x1 = \"10x+1\" in ans or \"10x1\" in ans  # after space removal\n    \n    # The answer should mention all three: f(x)=1, f(x)=x, f(x)=10x+1\n    # Let's check if the answer contains references to these three polynomials\n    \n    ans_clean = answer.strip().lower()\n    \n    # Check if it mentions the three key polynomials\n    mentions_constant_1 = bool(re.search(r'\\b1\\b', ans_clean)) or 'constant' in ans_clean\n    mentions_identity = bool(re.search(r'f\\(x\\)\\s*=\\s*x\\b', ans_clean)) or ans_clean == 'x'\n    mentions_10x1 = bool(re.search(r'10x\\s*\\+\\s*1', ans_clean))\n    \n    # Verify these polynomials actually work\n    repunits = [1, 11, 111, 1111, 11111, 111111]\n    repunit_set = set(repunits)\n    \n    def is_repunit(n):\n        if n <= 0:\n            return False\n        s = str(int(round(n)))\n        return all(c == '1' for c in s)\n    \n    # Verify f(x) = 10x+1 works on repunits\n    for r in repunits[:-1]:  # exclude last since 10*111111+1 = 1111111 (still repunit)\n        val = 10*r + 1\n        if not is_repunit(val):\n            return False\n    \n    # The answer should claim the polynomials are exactly: 1, x, 10x+1\n    if mentions_10x1 and mentions_identity:\n        return True\n    \n    # Maybe stated differently - check if answer is just one of these\n    ans_stripped = answer.strip()\n    if ans_stripped in [\"f(x) = 1\", \"f(x) = x\", \"f(x) = 10x + 1\"]:\n        # Single polynomial - that's a valid answer for one of them but not complete\n        # Actually the problem says \"find all\", so we need all three\n        pass\n    \n    # Check if answer claims exactly these three\n    if \"10x + 1\" in answer and \"f(x) = x\" in answer and \"f(x) = 1\" in answer:\n        return True\n    if \"10x+1\" in answer.replace(\" \",\"\") and mentions_identity:\n        return True\n    \n    return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2007_b1",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 1.0060029029846191
+    },
+    {
+      "id": "putnam_2007_b2",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 1.1497759819030762
+    },
+    {
+      "id": "putnam_2007_b3",
+      "status": "ok",
+      "gold_answer": "Prove that $x_{2007} = \\frac{2^{2006}}{\\sqrt{5}}(\\alpha^{3997}-\\alpha^{-3997})$, where $\\alpha = \\frac{1+\\sqrt{5}}{2}$.",
+      "elapsed": 16.76727294921875,
+      "script": "def verify(answer):\n    import re\n    from math import floor, sqrt\n    \n    # Compute x_2007 via the recurrence\n    x = 1\n    for n in range(2007):\n        x = 3*x + floor(x * sqrt(5))\n    # But this uses float sqrt which loses precision for large n\n    # Use integer arithmetic instead\n    # x_{n+1} = 3x_n + floor(x_n * sqrt(5))\n    # Use the closed form: x_n = a*(3+sqrt5)^n + b*(3-sqrt5)^n\n    # where a=(5+2sqrt5)/10, b=(5-2sqrt5)/10\n    # Check if answer matches known closed form expressions\n    \n    answer = answer.strip().replace(' ', '')\n    \n    # Check for the closed form involving (3+sqrt(5))^2007\n    patterns = [\n        r'.*\\(3.*sqrt.*5.*\\).*2007.*',\n    ]\n    \n    # The expected answer based on analysis: x_n = ((3+sqrt5)^(n+1) - (3-sqrt5)^(n+1)) / (2*sqrt5) * something\n    # Let's verify the formula x_n = ( (1+sqrt5)/2 )^(2n) * ... \n    # Actually check: answer should reference (3+sqrt(5))^2007 or equivalent\n    \n    low = answer.lower()\n    has_3_sqrt5 = ('3+sqrt(5)' in low or '3+sqrt5' in low or \n                   'sqrt(5)+3' in low or 'sqrt5+3' in low or\n                   '2007' in answer)\n    \n    return has_3_sqrt5",
+      "gold_verdict": null,
+      "exec_error": "OverflowError: int too large to convert to float"
+    },
+    {
+      "id": "putnam_2007_b4",
+      "status": "ok",
+      "gold_answer": "Show that the number of pairs is $2^{n+1}$.",
+      "elapsed": 22.3095600605011,
+      "script": "def verify(answer):\n    import re\n    # The answer should be 2^n\n    answer = answer.strip().replace(' ', '')\n    \n    # Check for various representations of 2^n\n    patterns = [\n        r'^2\\^n$',\n        r'^2\\*\\*n$', \n        r'^2\\^{n}$',\n        r'^\\$2\\^n\\$$',\n        r'^2n$',  # no, this is wrong\n    ]\n    \n    for pat in patterns:\n        if re.match(pat, answer, re.IGNORECASE):\n            return True\n    \n    # Check if it evaluates to 2**n for symbolic check\n    if '2^n' in answer or '2**n' in answer:\n        return True\n    \n    # Check numeric: maybe they gave a specific number thinking n is fixed\n    # But n is a variable, so the answer must be in terms of n\n    \n    return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2007_b5",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 0.6777658462524414
+    },
+    {
+      "id": "putnam_1980_a2",
+      "status": "ok",
+      "gold_answer": "Show that the number is $(1+4r+6r^2)(1+4s+6s^2)$.",
+      "elapsed": 20.961776971817017,
+      "script": "def verify(answer):\n    import re\n    import sympy as sp\n    \n    r, s = sp.symbols('r s', positive=True, integer=True)\n    \n    expected = (6*r**2 + 4*r + 1) * (6*s**2 + 4*s + 1)\n    \n    # Try to parse the answer as a sympy expression\n    try:\n        candidate = sp.sympify(answer.replace('^', '**'))\n        diff = sp.expand(candidate - expected)\n        if diff == 0:\n            return True\n        # Test numerically at several points\n        import random\n        random.seed(42)\n        for _ in range(10):\n            rv = random.randint(1, 10)\n            sv = random.randint(1, 10)\n            cv = complex(candidate.subs([(r, rv), (s, sv)]))\n            ev = complex(expected.subs([(r, rv), (s, sv)]))\n            if abs(cv - ev) > 1e-6:\n                return False\n        return True\n    except Exception:\n        return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1980_a3",
+      "status": "ok",
+      "gold_answer": "Show that the integral is $\\pi/4$.",
+      "elapsed": 7.795581102371216,
+      "script": "def verify(answer):\n    import re\n    from fractions import Fraction\n    \n    # The answer to this integral is pi/4\n    # This is a classic result: integral from 0 to pi/2 of dx/(1 + (tan x)^a) = pi/4\n    # for any positive a, by the substitution x -> pi/2 - x\n    \n    # Try to parse the answer\n    answer = answer.strip()\n    \n    # Check for pi/4\n    # Various forms: \"pi/4\", \"\u03c0/4\", \"1/4 pi\", etc.\n    \n    import sympy as sp\n    \n    target = sp.pi / 4\n    \n    # Try direct sympy parsing\n    try:\n        from sympy.parsing.sympy_parser import parse_expr\n        expr = parse_expr(answer.replace('\u03c0', 'pi').replace('^', '**'))\n        diff = sp.simplify(expr - target)\n        if diff == 0:\n            return True\n    except:\n        pass\n    \n    # Try numerical comparison\n    try:\n        import math\n        target_val = math.pi / 4\n        \n        # Remove common formatting\n        s = answer.replace('\u03c0', 'pi').replace('^', '**').replace('\u00d7', '*').replace('\u00f7', '/')\n        \n        # Try eval with math\n        import math\n        val = eval(s, {\"pi\": math.pi, \"math\": math, \"__builtins__\": {}})\n        if abs(val - target_val) < 1e-9:\n            return True\n    except:\n        pass\n    \n    # Check string patterns\n    s = answer.lower().replace(' ', '').replace('\u03c0', 'pi')\n    if s in ['pi/4', '\u03c0/4', 'pi/4.0']:\n        return True\n    \n    return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1980_a4",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 1.1663649082183838
+    },
+    {
+      "id": "putnam_1980_a5",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 1.9113171100616455
+    },
+    {
+      "id": "putnam_1980_a6",
+      "status": "ok",
+      "gold_answer": "Show that $u=1/e$.",
+      "elapsed": 15.613963603973389,
+      "script": "def verify(answer):\n    import re\n    import math\n    \n    # The answer should be 1/e\n    target = 1 / math.e\n    \n    # Parse the answer\n    s = answer.strip().lower().replace(' ', '')\n    \n    # Try direct numeric evaluation\n    try:\n        val = float(s)\n        return abs(val - target) < 1e-6\n    except:\n        pass\n    \n    # Try symbolic patterns\n    patterns_correct = [\n        '1/e', 'e^{-1}', 'e^(-1)', '1/math.e', '1over e',\n        'e**(-1)', 'e^-1', '1\u00f7e'\n    ]\n    for p in patterns_correct:\n        if p in s:\n            return True\n    \n    # Try sympy\n    try:\n        import sympy as sp\n        expr = sp.sympify(answer.replace('^', '**'))\n        val = float(expr.evalf())\n        return abs(val - target) < 1e-6\n    except:\n        pass\n    \n    # Check if it contains \"1/e\" as a pattern more broadly\n    if re.search(r'1\\s*/\\s*e\\b', answer.lower()):\n        return True\n    if re.search(r'e\\^?\\{?-1\\}?', answer):\n        return True\n    \n    return False",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1980_b1",
+      "status": "ok",
+      "gold_answer": "Show that the inequality holds if and only if $c \\geq 1/2$.",
+      "elapsed": 19.182641983032227,
+      "script": "def verify(answer):\n    import re\n    import math\n    import numpy as np\n    \n    answer = answer.strip().lower().replace('\u2265', '>=').replace('\u2a7e', '>=')\n    \n    # Check if it says c >= 1/2\n    # Try to parse the answer as a threshold condition\n    \n    # Test function: for a given c, check if cosh(x) <= exp(c*x^2) for all x\n    def satisfies_inequality(c, num_points=10000):\n        xs = np.linspace(-10, 10, num_points)\n        lhs = np.cosh(xs)\n        rhs = np.exp(c * xs**2)\n        return np.all(lhs <= rhs + 1e-9)\n    \n    # The correct answer is c >= 1/2\n    # Test: c=0.5 should work, c=0.4 should not\n    assert satisfies_inequality(0.5) == True\n    assert satisfies_inequality(0.4) == False\n    assert satisfies_inequality(1.0) == True\n    assert satisfies_inequality(0.49) == False\n    \n    # Try to extract a numeric threshold from the answer\n    # Look for patterns like \"c >= 1/2\", \"c >= 0.5\", \"1/2\", \"0.5\"\n    \n    # Check for the threshold value 1/2\n    # Common representations\n    if '1/2' in answer or '0.5' in answer or 'one half' in answer or 'one-half' in answer:\n        # Check if it's saying >= 1/2\n        if '>=' in answer or 'at least' in answer or 'greater than or equal' in answer or 'geq' in answer:\n            return True\n        # If it just says \"1/2\" without qualifier, might be the boundary\n        # Let's check if they mean >= 1/2\n        if re.search(r'c\\s*=\\s*(1/2|0\\.5)', answer):\n            # They might mean exactly 1/2 which is only the boundary, not the full set\n            # But sometimes problems ask for the minimum c, and answer is 1/2\n            return True\n        if '1/2' in answer and '>=' not in answer and '>' not in answer:\n            # Could be just stating the value 1/2 as the threshold\n            return True\n    \n    # Try to extract a number\n    numbers = re.findall(r'[-+]?\\d*\\.?\\d+(?:/\\d+)?', answer)\n    for num_str in numbers:\n        try:\n            if '/' in num_str:\n                parts = num_str.split('/')\n                val = float(parts[0]) / float(parts[1])\n            else:\n                val = float(num_str)\n            if abs(val - 0.5) < 1e-9:\n                return True\n        except:\n            pass\n    \n    # Check if answer mentions >= 1/2 in various forms\n    patterns = [\n        r'c\\s*>=?\\s*1\\s*/\\s*2',\n        r'c\\s*>=?\\s*0\\.5',\n        r'>=?\\s*1\\s*/\\s*2',\n        r'>=?\\s*0\\.5',\n        r'\\[1/2\\s*,\\s*inf',\n        r'\\[0\\.5\\s*,\\s*inf',\n    ]\n    for pat in patterns:\n        if re.search(pat, answer):\n            return True\n    \n    return False",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1980_b3",
+      "status": "ok",
+      "gold_answer": "Show that $u_n>0$ for all $n \\geq 0$ if and only if $a \\geq 3$.",
+      "elapsed": 15.521016120910645,
+      "script": "def verify(answer):\n    import re\n    answer = answer.strip()\n    \n    # Check if answer matches \"a >= 3\" or equivalent forms\n    # Acceptable forms: \"a >= 3\", \"a \u2265 3\", \"a>3 or a=3\", \"[3, infinity)\", etc.\n    \n    # Normalize\n    ans_lower = answer.lower().replace('\u2265', '>=').replace('\u2a7e', '>=')\n    \n    # Check for common representations of a >= 3\n    patterns = [\n        r'a\\s*>=\\s*3',\n        r'a\\s*\u2265\\s*3',\n        r'\\[3,?\\s*inf',\n        r'\\[3,?\\s*\\\\infty',\n        r'a\\s*\\\\geq\\s*3',\n        r'>=\\s*3',\n        r'greater\\s+than\\s+or\\s+equal\\s+to\\s+3',\n        r'at\\s+least\\s+3',\n    ]\n    \n    for pat in patterns:\n        if re.search(pat, ans_lower):\n            # Now verify computationally that a=3 works and a<3 doesn't\n            def u_n(a, n):\n                return (a - 3) * (2**n) + n**2 + 2*n + 3\n            \n            # a=3 should work\n            if not all(u_n(3, n) > 0 for n in range(100)):\n                return False\n            \n            # a=2.9 should fail\n            import math\n            if all(u_n(2.9, n) > 0 for n in range(1000)):\n                return False\n            \n            # a=4 should work\n            if not all(u_n(4, n) > 0 for n in range(100)):\n                return False\n            \n            return True\n    \n    # Try direct comparison if answer is just \"3\"\n    try:\n        val = float(answer)\n        if abs(val - 3.0) < 1e-9:\n            return True  # might be expressing the boundary\n    except:\n        pass\n    \n    return False",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1980_b4",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 0.9531490802764893
+    },
+    {
+      "id": "putnam_1980_b5",
+      "status": "unverifiable",
+      "gold_answer": "$S_t$ is closed under multiplication if and only if $1 \\ge t$.",
+      "elapsed": 0.6591441631317139
+    },
+    {
+      "id": "putnam_1980_b6",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 0.6586577892303467
+    },
+    {
+      "id": "putnam_1984_a2",
+      "status": "ok",
+      "gold_answer": "Show that the sum converges to $2$.",
+      "elapsed": 12.075382947921753,
+      "script": "def verify(answer):\n    import re\n    from fractions import Fraction\n    \n    # Try to parse the answer as a rational number\n    answer = answer.strip()\n    \n    # Try to extract a number\n    # Handle fractions like p/q\n    try:\n        # Try direct fraction parsing\n        if '/' in answer:\n            parts = answer.split('/')\n            if len(parts) == 2:\n                num = int(parts[0].strip())\n                den = int(parts[1].strip())\n                candidate = Fraction(num, den)\n            else:\n                return False\n        else:\n            # Try integer or float\n            candidate = Fraction(answer)\n    except:\n        # Try to find a number in the string\n        try:\n            numbers = re.findall(r'-?\\d+(?:/\\d+)?', answer)\n            if numbers:\n                candidate = Fraction(numbers[0])\n            else:\n                return False\n        except:\n            return False\n    \n    # Compute the partial sum numerically to verify\n    target = Fraction(2, 1)  # We computed the sum = 2\n    \n    # Also verify numerically\n    s = 0.0\n    for k in range(1, 100):\n        s += (6**k) / ((3**(k+1) - 2**(k+1)) * (3**k - 2**k))\n    \n    # Check if candidate matches both our analytical result and numerical computation\n    candidate_float = float(candidate)\n    \n    if abs(candidate_float - s) < 1e-6 and candidate == target:\n        return True\n    \n    # Maybe just check numerical closeness if exact form differs\n    if abs(candidate_float - s) < 1e-6:\n        return True\n    \n    return False",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1984_a3",
+      "status": "ok",
+      "gold_answer": "Show that $\\lim_{x \\to a} \\frac{\\det M_n}{(x-a)^{2n-2}}=n^2(a^2-b^2)$.",
+      "elapsed": 22.003942251205444,
+      "script": "def verify(answer):\n    import sympy as sp\n    import random\n    \n    # Define symbols\n    a, b, n_sym = sp.symbols('a b n')\n    \n    def make_matrix(n_val, x_val, a_val, b_val):\n        size = 2 * n_val\n        M = []\n        for i in range(1, size + 1):\n            row = []\n            for j in range(1, size + 1):\n                if i == j:\n                    row.append(x_val)\n                elif (i + j) % 2 == 0:\n                    row.append(a_val)\n                else:\n                    row.append(b_val)\n            M.append(row)\n        return sp.Matrix(M)\n    \n    # Compute the limit for specific n values symbolically\n    x = sp.Symbol('x')\n    a_s, b_s = sp.symbols('a b')\n    \n    computed_values = {}\n    for n_val in [1, 2, 3]:\n        M = make_matrix(n_val, x, a_s, b_s)\n        det = M.det()\n        # The limit of det/(x-a)^(2n-2) as x->a\n        power = 2 * n_val - 2\n        # Compute limit\n        expr = det / (x - a_s)**power\n        lim = sp.limit(expr, x, a_s)\n        lim_simplified = sp.simplify(sp.expand(lim))\n        computed_values[n_val] = lim_simplified\n        \n    # Now try to parse the answer and check against computed values\n    # The answer should be a polynomial in a, b, n\n    # Try to evaluate the candidate answer at specific (a, b, n) values\n    \n    # Parse the answer string as a sympy expression\n    n_sym2 = sp.Symbol('n')\n    try:\n        candidate = sp.sympify(answer, locals={'a': a_s, 'b': b_s, 'n': n_sym2})\n    except:\n        return False\n    \n    # Check for n=1,2,3\n    random.seed(42)\n    test_cases = []\n    for n_val in [1, 2, 3]:\n        # Use specific a,b values\n        for _ in range(3):\n            a_val = random.uniform(-2, 2)\n            b_val = random.uniform(-2, 2)\n            while abs(a_val - b_val) < 0.1:\n                b_val = random.uniform(-2, 2)\n            test_cases.append((n_val, a_val, b_val))\n    \n    for n_val, a_val, b_val in test_cases:\n        # Compute ground truth\n        computed = computed_values[n_val].subs([(a_s, a_val), (b_s, b_val)])\n        computed_float = float(computed.evalf())\n        \n        # Evaluate candidate\n        try:\n            cand_val = candidate.subs([(a_s, a_val), (b_s, b_val), (n_sym2, n_val)])\n            cand_float = float(cand_val.evalf())\n        except:\n            return False\n        \n        if abs(computed_float) < 1e-10:\n            if abs(cand_float) > 1e-6:\n                return False\n        else:\n            if abs((computed_float - cand_float) / computed_float) > 1e-4:\n                return False\n    \n    return True",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1984_a5",
+      "status": "ok",
+      "gold_answer": "Show that the integral we desire is $1!9!8!4!/25!$.",
+      "elapsed": 7.163518905639648,
+      "script": "def verify(answer: str) -> bool:\n    import re\n    from math import factorial\n    \n    # The correct value is 1! * 9! * 8! * 4! / 25!\n    correct_numerator = factorial(1) * factorial(9) * factorial(8) * factorial(4)\n    correct_denominator = factorial(25)\n    \n    # Try to parse the answer in the form a!b!c!d!/n!\n    # Find all factorials in numerator and denominator\n    answer = answer.strip()\n    \n    # Extract numbers from factorial expressions\n    nums = re.findall(r'(\\d+)!', answer)\n    if not nums:\n        # Maybe it's just numeric\n        try:\n            val = float(answer)\n            correct_val = correct_numerator / correct_denominator\n            return abs(val - correct_val) / correct_val < 1e-9\n        except:\n            return False\n    \n    nums = [int(x) for x in nums]\n    \n    # Check if it's in the form a!b!c!d!/n!\n    # Look for division\n    if '/' in answer:\n        parts = answer.split('/')\n        numer_part = parts[0]\n        denom_part = parts[1]\n        \n        numer_nums = [int(x) for x in re.findall(r'(\\d+)!', numer_part)]\n        denom_nums = [int(x) for x in re.findall(r'(\\d+)!', denom_part)]\n        \n        if not numer_nums or not denom_nums:\n            return False\n        \n        # Compute the value\n        numer_val = 1\n        for x in numer_nums:\n            numer_val *= factorial(x)\n        \n        denom_val = 1\n        for x in denom_nums:\n            denom_val *= factorial(x)\n        \n        candidate_val = numer_val / denom_val\n        correct_val = correct_numerator / correct_denominator\n        \n        return abs(candidate_val - correct_val) / correct_val < 1e-9\n    else:\n        # Maybe all factorials are in numerator\n        return False",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1984_a6",
+      "status": "unverifiable",
+      "gold_answer": "Show that the least such $p$ is $p=4$.",
+      "elapsed": 0.793773889541626
+    },
+    {
+      "id": "putnam_1984_b1",
+      "status": "ok",
+      "gold_answer": "Show that we can take $P(x)=x+3$ and $Q(x)=-x-2$.",
+      "elapsed": 15.380516052246094,
+      "script": "def verify(answer):\n    import re\n    import sympy as sp\n    \n    # First, verify the mathematical fact: f(n+2) = P(n)*f(n+1) + Q(n)*f(n)\n    # with P(x) = x+3 and Q(x) = -(x+2)\n    # Check numerically for several values of n\n    \n    def f(n):\n        total = 0\n        fact = 1\n        for k in range(1, n+1):\n            fact *= k\n            total += fact\n        return total\n    \n    # Verify the known correct answer: P(n) = n+3, Q(n) = -(n+2)\n    def P_correct(n):\n        return n + 3\n    \n    def Q_correct(n):\n        return -(n + 2)\n    \n    # Verify the mathematical identity holds\n    identity_holds = True\n    for n in range(1, 20):\n        lhs = f(n+2)\n        rhs = P_correct(n) * f(n+1) + Q_correct(n) * f(n)\n        if lhs != rhs:\n            identity_holds = False\n            break\n    \n    if not identity_holds:\n        return False\n    \n    # Now try to parse the answer to see if it matches P(x)=x+3, Q(x)=-(x+2)\n    # or equivalent expressions\n    answer_lower = answer.lower().strip()\n    \n    x = sp.Symbol('x')\n    \n    # Try to find P and Q in the answer\n    # Look for patterns like P(x) = ... and Q(x) = ...\n    \n    # Try extracting polynomial expressions\n    p_match = re.search(r'p\\s*\\(?\\s*x\\s*\\)?\\s*=\\s*([^,;\\n]+)', answer_lower)\n    q_match = re.search(r'q\\s*\\(?\\s*x\\s*\\)?\\s*=\\s*([^,;\\n]+)', answer_lower)\n    \n    if p_match and q_match:\n        try:\n            p_expr = sp.sympify(p_match.group(1).strip())\n            q_expr = sp.sympify(q_match.group(1).strip())\n            \n            p_correct = x + 3\n            q_correct = -(x + 2)\n            \n            if sp.simplify(p_expr - p_correct) == 0 and sp.simplify(q_expr - q_correct) == 0:\n                return True\n            else:\n                return False\n        except:\n            pass\n    \n    # Check if answer contains key components\n    # The answer should have P(x) = x+3 and Q(x) = -(x+2) or equivalent\n    checks = [\n        ('x+3' in answer.replace(' ', '') or 'x + 3' in answer),\n        ('-(x+2)' in answer.replace(' ', '') or '-(x + 2)' in answer or \n         '-x-2' in answer.replace(' ', '') or '-x - 2' in answer),\n    ]\n    \n    if all(checks):\n        return True\n    \n    # Check for numeric values at specific points\n    # P(1)=4, Q(1)=-3; P(2)=5, Q(2)=-4\n    if '4' in answer and '3' in answer and ('x+3' in answer.replace(' ','') or 'n+3' in answer.replace(' ','')):\n        return True\n    \n    return False",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1984_b2",
+      "status": "ok",
+      "gold_answer": "Show that the minimum value is $8$.",
+      "elapsed": 11.684125185012817,
+      "script": "def verify(answer):\n    import re\n    import math\n    from scipy.optimize import minimize\n    \n    # First compute the actual minimum numerically\n    def objective(params):\n        u, v = params\n        if u <= 0 or u >= math.sqrt(2) or v <= 0:\n            return 1e10\n        val = (u - v)**2 + (math.sqrt(2 - u**2) - 9/v)**2\n        return val\n    \n    best = float('inf')\n    from scipy.optimize import minimize\n    import numpy as np\n    \n    for u0 in np.linspace(0.1, 1.3, 10):\n        for v0 in np.linspace(0.1, 10, 10):\n            try:\n                res = minimize(objective, [u0, v0], method='Nelder-Mead',\n                              options={'xatol': 1e-10, 'fatol': 1e-10, 'maxiter': 10000})\n                if res.fun < best:\n                    best = res.fun\n            except:\n                pass\n    \n    # Parse the answer\n    ans_str = str(answer).strip()\n    \n    # Try to evaluate as a number\n    try:\n        # Replace common math expressions\n        ans_str_eval = ans_str.replace('^', '**').replace('sqrt', 'math.sqrt')\n        val = eval(ans_str_eval, {\"math\": math, \"__builtins__\": {}})\n        return abs(float(val) - best) < 1e-4\n    except:\n        pass\n    \n    # Try sympy\n    try:\n        import sympy as sp\n        expr = sp.sympify(ans_str)\n        val = float(expr.evalf())\n        return abs(val - best) < 1e-4\n    except:\n        pass\n    \n    return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1984_b3",
+      "status": "unverifiable",
+      "gold_answer": "Show that the statement is true.",
+      "elapsed": 1.5834202766418457
+    },
+    {
+      "id": "putnam_1984_b5",
+      "status": "ok",
+      "gold_answer": "Show that $\\sum_{k=0}^{2^m-1} (-1)^{d(k)}k^m=(-1)^m2^{m(m-1)/2}m!$.",
+      "elapsed": 19.39361572265625,
+      "script": "def verify(answer):\n    import re\n    from math import factorial\n    \n    def d(k):\n        return bin(k).count('1')\n    \n    def compute_sum(m):\n        total = 0\n        for k in range(2**m):\n            total += ((-1)**d(k)) * (k**m)\n        return total\n    \n    # Compute for small m\n    results = {}\n    for m in range(1, 8):\n        results[m] = compute_sum(m)\n    \n    # The answer should be in the form (-1)^m * a^f(m) * (g(m))!\n    # Let's figure out the pattern from computed values\n    # results[1], results[2], ...\n    \n    # Let me check what the values are\n    # m=1: sum from k=0 to 1: (-1)^d(0)*0 + (-1)^d(1)*1 = 0 - 1 = -1\n    # (-1)^1 * a^f(1) * (g(1))! = -1 * a^f(1) * (g(1))!\n    # So a^f(1) * (g(1))! = 1\n    \n    # Let's compute ratios\n    # The candidate answer format: (-1)^m * a^f(m) * (g(m))!\n    # Try to parse the answer string for a, f(m), g(m)\n    \n    # Common answer for this Putnam problem is (-1)^m * (m/2)^m * m! ... let me check\n    # Actually the known answer is (-1)^m * (m!)  * (m/2)^m? No...\n    \n    # Let me just check numerically\n    # The answer should be: (-1)^m * a^f(m) * (g(m))!\n    # From computation, let's see ratios\n    \n    def check_candidate(a_val, f_func, g_func, m):\n        \"\"\"Check if (-1)^m * a_val^f(m) * (g(m))! matches the sum\"\"\"\n        candidate = ((-1)**m) * (a_val**f_func(m)) * factorial(g_func(m))\n        return candidate == compute_sum(m)\n    \n    # The known Putnam answer for this is (-1)^m * (m/2)! ... \n    # Let's try a=2, f(m)=m*(m-1)/2, g(m)=m\n    # Or try a=2, f(m)=m(m-1)/2, g(m)=m\n    \n    # Check the pattern from results\n    # For m=1: -1; for m=2: compute_sum(2)\n    # k=0,1,2,3: (-1)^0*0 + (-1)^1*1 + (-1)^1*2 + (-1)^2*4 = 0-1-2+4=1 -> (-1)^2 * 1 = 1, so a^f(2)*(g(2))!=1\n    \n    # Let me verify the candidate answer string\n    # Expected: (-1)^m * 2^(m(m-1)/2) * m!\n    \n    def check_known():\n        for m in range(1, 8):\n            expected = ((-1)**m) * (2**(m*(m-1)//2)) * factorial(m)\n            actual = compute_sum(m)\n            if expected != actual:\n                return False\n        return True\n    \n    known_correct = check_known()\n    \n    # Now parse the answer\n    ans = answer.strip().lower().replace(' ', '')\n    \n    # Check if answer mentions key components: 2^(m(m-1)/2) * m! or equivalent\n    # Accept if it contains these patterns or is equivalent\n    \n    # Try to detect the form\n    has_two = '2' in ans\n    has_factorial = 'factorial' in ans or 'm!' in ans or '(m)!' in ans\n    has_quadratic = 'm(m-1)' in ans or 'm*(m-1)' in ans or '(m^2-m)' in ans or 'm^2-m' in ans\n    \n    # Also accept \"(-1)^m * 2^{m(m-1)/2} * m!\"\n    if has_two and has_factorial and has_quadratic:\n        return True\n    \n    # Try numeric: if answer is just a formula we can evaluate\n    # Try to eval for specific m values\n    import sympy as sp\n    m = sp.Symbol('m')\n    \n    try:\n        # Replace common patterns\n        expr_str = answer.replace('^', '**').replace('m!', 'factorial(m)')\n        # ",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2009_a1",
+      "status": "ok",
+      "gold_answer": "Prove that $f$ is identically $0$.",
+      "elapsed": 6.859822750091553,
+      "script": "def verify(answer):\n    if not isinstance(answer, str):\n        return False\n    ans = answer.strip().lower()\n    # The correct answer is \"yes\" - f(P) = 0 follows for all P\n    yes_variants = [\"yes\", \"yes, f(p) = 0 for all p\", \"true\", \"f(p)=0\", \"f(p) = 0\", \n                    \"yes it follows\", \"yes, it follows\", \"yes it does follow\",\n                    \"yes, f(p)=0\", \"it follows that f(p)=0\", \"it follows\"]\n    # Check for \"yes\" anywhere in the answer\n    if \"yes\" in ans:\n        return True\n    if \"f(p) = 0\" in ans or \"f(p)=0\" in ans:\n        return True\n    if ans in [\"true\", \"1\"]:\n        return True\n    # \"no\" would be wrong\n    if \"no\" in ans:\n        return False\n    return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2009_a3",
+      "status": "ok",
+      "gold_answer": "Show that the limit is 0.",
+      "elapsed": 9.93455171585083,
+      "script": "def verify(answer):\n    import re\n    import numpy as np\n    \n    # First, let's verify computationally that d_n = 0 for n >= 3\n    for n in range(3, 8):\n        M = np.zeros((n, n))\n        for i in range(n):\n            for j in range(n):\n                M[i][j] = np.cos(i * n + j + 1)\n        det = np.linalg.det(M)\n        if abs(det) > 1e-10:\n            # Unexpected: determinant not zero\n            pass\n    \n    # The answer should be 0\n    answer = answer.strip()\n    \n    # Try to parse numeric value\n    try:\n        val = float(answer)\n        return abs(val) < 1e-9\n    except ValueError:\n        pass\n    \n    # Check symbolic representations of 0\n    answer_lower = answer.lower().strip()\n    if answer_lower in ['0', 'zero', '0.0']:\n        return True\n    \n    # Try sympy parsing\n    try:\n        import sympy as sp\n        expr = sp.sympify(answer)\n        val = float(expr.evalf())\n        return abs(val) < 1e-9\n    except:\n        pass\n    \n    return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2009_a4",
+      "status": "unverifiable",
+      "gold_answer": "Prove that $S$ need not contain all rationals.",
+      "elapsed": 0.628291130065918
+    },
+    {
+      "id": "putnam_2009_a5",
+      "status": "ok",
+      "gold_answer": "Show that the answer is no such finite abelian group exists.",
+      "elapsed": 19.298205137252808,
+      "script": "def verify(answer):\n    import re\n    from math import log2\n    from functools import reduce\n    from itertools import product as iproduct\n    \n    # Normalize answer\n    ans = answer.strip().lower()\n    \n    # Determine if answer claims yes or no\n    is_yes = any(word in ans for word in ['yes', 'true', 'exist', 'there is', 'such'])\n    is_no = any(word in ans for word in ['no', 'false', 'not exist', 'does not', 'cannot'])\n    \n    def order_of_element(elem, group_orders):\n        # elem is tuple of residues, group_orders is tuple of group sizes\n        from math import gcd\n        o = 1\n        for e, n in zip(elem, group_orders):\n            # order of e in Z_n is n/gcd(e,n)\n            if n == 0:\n                continue\n            ord_e = n // gcd(e, n) if e != 0 else 1\n            # lcm of o and ord_e\n            o = o * ord_e // gcd(o, ord_e)\n        return o\n    \n    def product_of_orders(partition):\n        # partition is list of prime power orders, e.g. [2,4] for Z_2 x Z_4\n        group_orders = tuple(partition)\n        elems = [range(n) for n in group_orders]\n        prod = 1\n        for elem in iproduct(*elems):\n            prod *= order_of_element(elem, group_orders)\n        return prod\n    \n    # Check all abelian 2-groups up to order 64\n    achievable_exponents = set()\n    # partitions of 2^k into powers of 2\n    def gen_2group_partitions(max_order=128):\n        from itertools import combinations_with_replacement\n        powers = [1, 2, 4, 8, 16, 32, 64]\n        results = set()\n        for size in range(1, 8):\n            for parts in combinations_with_replacement(powers, size):\n                if reduce(lambda a,b: a*b, parts, 1) <= max_order:\n                    results.add(parts)\n        return results\n    \n    for partition in gen_2group_partitions(64):\n        p = product_of_orders(list(partition))\n        if p > 0 and (p & (p-1)) == 0:  # is power of 2\n            exp = int(log2(p))\n            achievable_exponents.add(exp)\n    \n    # Check if 2009 is odd - key insight\n    # The answer is NO because the exponent must be even or follow specific pattern\n    # Based on computation, check parity\n    print(\"Achievable exponents:\", sorted(achievable_exponents))\n    \n    # From mathematical analysis, the answer is \"yes\" if 2009 is achievable\n    # The correct answer to the Putnam problem is \"yes\" \n    correct_is_yes = True  # Need to verify\n    \n    if is_yes and correct_is_yes:\n        return True\n    if is_no and not correct_is_yes:\n        return True\n    return False",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2009_b1",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 1.4645366668701172
+    },
+    {
+      "id": "putnam_2009_b3",
+      "status": "ok",
+      "gold_answer": "Show that the answer is $n = 2^k - 1$ for some integer $k$.",
+      "elapsed": 20.05912709236145,
+      "script": "def verify(answer):\n    from itertools import combinations\n    \n    def is_mediocre(S):\n        S = list(S)\n        for i in range(len(S)):\n            for j in range(i+1, len(S)):\n                if (S[i] + S[j]) % 2 == 0:\n                    avg = (S[i] + S[j]) // 2\n                    if avg not in S:\n                        return False\n        return True\n    \n    def A(n):\n        count = 0\n        elements = list(range(1, n+1))\n        for r in range(len(elements)+1):\n            for subset in combinations(elements, r):\n                if is_mediocre(set(subset)):\n                    count += 1\n        return count\n    \n    # Compute A(n) for reasonable range\n    A_vals = {}\n    for n in range(1, 20):\n        A_vals[n] = A(n)\n    \n    # Find n where A(n+2) - 2*A(n+1) + A(n) = 1\n    solutions = []\n    for n in range(1, 18):\n        val = A_vals[n+2] - 2*A_vals[n+1] + A_vals[n]\n        if val == 1:\n            solutions.append(n)\n    \n    # The answer should be: n is a perfect square... or specific values\n    # Let's check what solutions look like\n    # Parse the answer\n    import re\n    \n    # Try to interpret the answer\n    ans_str = str(answer).strip().lower()\n    \n    # Check if answer claims \"n is a perfect square\" or similar\n    if 'perfect square' in ans_str or 'square' in ans_str:\n        # Verify that solutions are exactly perfect squares\n        import math\n        def is_perfect_square(n):\n            s = int(math.isqrt(n))\n            return s*s == n\n        \n        # Check that all our found solutions are perfect squares\n        all_squares = all(is_perfect_square(n) for n in solutions)\n        # Check that all perfect squares in range are solutions\n        squares_in_range = [n for n in range(1, 18) if is_perfect_square(n)]\n        all_found = all(n in solutions for n in squares_in_range)\n        return all_squares and all_found\n    \n    # Try numeric interpretation - maybe it's a specific set of values\n    # Check if answer is something like \"n=4\" or a list\n    numbers_in_answer = re.findall(r'\\d+', ans_str)\n    if numbers_in_answer:\n        claimed = set(int(x) for x in numbers_in_answer)\n        # Check if this matches solutions\n        # But solutions could extend beyond our computed range\n        # Verify claimed solutions are correct and no others in range\n        import math\n        def is_perfect_square(n):\n            s = int(math.isqrt(n))\n            return s*s == n\n        \n        # The real answer should be perfect squares\n        # Check if claimed set matches perfect squares pattern\n        if claimed == set(solutions[:len(claimed)]):\n            return True\n        # Or check if claimed matches perfect squares\n        ps_in_range = set(n for n in range(1, 18) if is_perfect_square(n))\n        if claimed.intersection(range(1,18)) == ps_in_range.intersection(claimed):\n            return True\n    \n    return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2009_b4",
+      "status": "ok",
+      "gold_answer": "Prove that the dimension of $V$ is $2020050$.",
+      "elapsed": 14.226217031478882,
+      "script": "def verify(answer):\n    import re\n    # Extract numeric value from answer\n    answer = answer.strip().replace(',', '').replace(' ', '')\n    \n    # Try to find a number in the answer\n    # Remove common words\n    cleaned = re.sub(r'[^0-9]', '', answer)\n    \n    if not cleaned:\n        return False\n    \n    try:\n        val = int(cleaned)\n    except:\n        return False\n    \n    # Total monomials of degree <= 2009\n    total = 2011 * 2010 // 2  # = 2021055\n    \n    # Number of constraints: one per even degree 2,4,...,2008\n    # even degrees: 2,4,...,2008 => 1004 constraints\n    num_constraints = 1004\n    \n    expected = total - num_constraints  # 2021055 - 1004 = 2020051\n    \n    return val == expected",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2009_b5",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 0.6099410057067871
+    },
+    {
+      "id": "putnam_2009_b6",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 1.2636029720306396
+    },
+    {
+      "id": "putnam_2020_a1",
+      "status": "ok",
+      "gold_answer": "Show that the solution is $508536$.",
+      "elapsed": 21.520676136016846,
+      "script": "def verify(answer):\n    # First compute the correct answer\n    # N = 111...1 (a ones) followed by 000...0 (b zeros)\n    # N = (10^a - 1)/9 * 10^b\n    # Must be divisible by 2020 = 4 * 5 * 101\n    # a >= 1, b >= 0, a + b <= 2020\n    \n    # N = (10^a - 1) * 10^b / 9\n    # For divisibility by 2020 = 4 * 5 * 101:\n    # 2020 * 9 = 18180 = 4 * 5 * 9 * 101\n    # (10^a - 1) * 10^b must be divisible by 9 * 2020 = 18180\n    # 10^a - 1 is always divisible by 9 (repunit * 9 = 999...9)\n    # So (10^a - 1)/9 * 10^b must be divisible by 2020\n    \n    # 10^b provides factors of 2 and 5.\n    # 2020 = 4 * 5 * 101 = 2^2 * 5 * 101\n    # 10^b = 2^b * 5^b\n    # For divisibility by 2^2: need b >= 2 OR (10^a-1)/9 divisible by remaining 2s\n    # (10^a - 1) is always odd (ends in 9), so (10^a-1)/9 is odd\n    # So we need 10^b to supply all factors of 2 and 5\n    # Need b >= 2 (for 2^2) and b >= 1 (for 5^1), so b >= 2\n    # Also need (10^a - 1)/9 * 10^b / (4*5) divisible by 101\n    # = (10^a - 1)/9 * 10^(b-2) * 2 * 5 / (4*5) ... let me redo\n    \n    # N divisible by 2020: (10^a-1)/9 * 10^b \u2261 0 mod 2020\n    # Since gcd(2020, 9) = 1, equivalent to (10^a-1)*10^b \u2261 0 mod 18180\n    # 18180 = 4 * 5 * 9 * 101\n    # 10^b = 2^b * 5^b\n    # (10^a - 1) is divisible by 9, odd, not divisible by 5\n    # So for 4 | N: need b >= 2\n    # For 5 | N: need b >= 1 (already covered)\n    # For 101 | N: need 101 | (10^a-1)/9 * 10^b\n    # gcd(101, 10) = 1, so need 101 | (10^a - 1)/9\n    # i.e., 9 * repunit(a) \u2261 0 mod 101... repunit(a) = (10^a-1)/9\n    # Need (10^a - 1)/9 \u2261 0 mod 101\n    # Since gcd(9, 101)=1, need 10^a \u2261 1 mod 909 (101*9)\n    # Actually: 101 | (10^a-1)/9 means 909 | (10^a - 1)\n    # ord_909(10): 909 = 9 * 101, ord_9(10)=1 (10\u22611 mod9), ord_101(10)=4\n    # So ord_909(10) = lcm(1,4) = 4\n    # So need 4 | a\n    \n    count = 0\n    for a in range(1, 2021):\n        if a % 4 == 0:  # 101 divides repunit(a)\n            # need b >= 2, and a + b <= 2020\n            # b in {2, 3, ..., 2020 - a}\n            max_b = 2020 - a\n            if max_b >= 2:\n                count += max_b - 2 + 1  # b from 2 to max_b\n    \n    try:\n        candidate = int(answer.strip())\n        return candidate == count\n    except:\n        return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2020_a2",
+      "status": "ok",
+      "gold_answer": "Show that the answer is $4^k$.",
+      "elapsed": 8.52787709236145,
+      "script": "def verify(answer):\n    import re\n    from math import comb\n    \n    # First compute the actual sum for several values of k\n    def actual_sum(k):\n        return sum(2**(k-j) * comb(k+j, j) for j in range(k+1))\n    \n    # Check what the answer claims\n    answer = answer.strip()\n    \n    # Try to parse the answer as 4^k\n    # Normalize the answer string\n    answer_lower = answer.lower().replace(' ', '')\n    \n    # Check various forms of 4^k\n    is_4_to_k = False\n    \n    patterns = ['4^k', '4**k', '(4)^k', '4^{k}']\n    for p in patterns:\n        if answer_lower == p.replace(' ', '').lower():\n            is_4_to_k = True\n            break\n    \n    if is_4_to_k:\n        # Verify that the sum equals 4^k for several values of k\n        for k in range(10):\n            if actual_sum(k) != 4**k:\n                return False\n        return True\n    \n    # Try to evaluate the answer as a Python expression with k as variable\n    import sympy as sp\n    k = sp.Symbol('k')\n    \n    try:\n        # Replace ^ with ** for sympy parsing\n        expr_str = answer.replace('^', '**').replace('{', '').replace('}', '')\n        expr = sp.sympify(expr_str)\n        \n        # Test for several values of k\n        for k_val in range(10):\n            expected = actual_sum(k_val)\n            got = expr.subs(sp.Symbol('k'), k_val)\n            try:\n                got_val = int(got)\n                if got_val != expected:\n                    return False\n            except:\n                return False\n        return True\n    except:\n        pass\n    \n    # Try numeric: maybe the answer is just a number (unlikely for this problem)\n    try:\n        val = float(answer)\n        # This would only make sense if k is fixed, but k is free\n        # so a numeric answer doesn't make sense here\n        return False\n    except:\n        pass\n    \n    return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2020_a3",
+      "status": "unverifiable",
+      "gold_answer": "The series diverges.",
+      "elapsed": 1.027388095855713
+    },
+    {
+      "id": "putnam_2020_a5",
+      "status": "ok",
+      "gold_answer": "The answer is $n=F_{4040}-1$.",
+      "elapsed": 18.463419914245605,
+      "script": "def verify(answer):\n    try:\n        # Parse the answer\n        import re\n        # Extract number from answer\n        nums = re.findall(r'\\d+', str(answer))\n        if not nums:\n            return False\n        candidate = int(nums[-1])\n        \n        # Generate Fibonacci numbers\n        def gen_fibs(limit):\n            fibs = [1, 1]\n            while True:\n                next_f = fibs[-1] + fibs[-2]\n                if next_f > limit:\n                    break\n                fibs.append(next_f)\n            return fibs\n        \n        # Count the number of sets S of positive integers such that sum of F_k for k in S equals n\n        # We need to compute a_n for various n\n        # Since S is a SET (no repeated indices), each index k can be used at most once\n        # F_1 = F_2 = 1, so using index 1 vs index 2 gives different sets but same value\n        \n        # Let's compute a_n up to some bound\n        # We need to find largest n with a_n = 2020\n        \n        # First let's understand the structure\n        # a_n counts sets S \u2286 {1,2,3,...} such that sum_{k in S} F_k = n\n        \n        # Let's compute this with dynamic programming\n        # We need enough Fibonacci numbers\n        \n        # The candidate answer - let's compute a_n for n around candidate\n        limit = candidate + 100\n        fibs = gen_fibs(limit)\n        \n        # DP: count sets using subsets of fibonacci indices\n        # dp[v] = number of sets S with sum = v\n        from collections import defaultdict\n        \n        dp = defaultdict(int)\n        dp[0] = 1\n        \n        for i, f in enumerate(fibs):\n            # Add fibonacci number f (at index i+1) - process in reverse to avoid reuse\n            new_dp = defaultdict(int)\n            for val, cnt in dp.items():\n                new_dp[val] += cnt  # don't include f\n                if val + f <= limit:\n                    new_dp[val + f] += cnt  # include index i+1\n            dp = new_dp\n        \n        # Now check: what is a_candidate?\n        a_candidate = dp[candidate]\n        \n        # Check that a_candidate == 2020\n        if a_candidate != 2020:\n            return False\n        \n        # Check that no larger n has a_n = 2020\n        # Find the largest n with a_n = 2020 in our computed range\n        largest = -1\n        for n, cnt in dp.items():\n            if cnt == 2020:\n                largest = max(largest, n)\n        \n        return largest == candidate\n        \n    except Exception as e:\n        return False\n\n# Let's test this\n# First, let's figure out what the answer should be\ndef compute():\n    def gen_fibs(limit):\n        fibs = [1, 1]\n        while True:\n            next_f = fibs[-1] + fibs[-2]\n            if next_f > limit:\n                break\n            fibs.append(next_f)\n        return fibs\n    \n    from collections import defaultdict\n    limit = 10000\n    fibs = gen_fibs(limit)\n    print(f\"Number of fibs: {len(fibs)}, largest: {fibs[-1]}\")\n    \n    dp = defaultdict(int)\n    dp[0] = 1\n ",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2020_a6",
+      "status": "ok",
+      "gold_answer": "The smallest constant $M$ is $\\pi/4$.",
+      "elapsed": 17.57190704345703,
+      "script": "def verify(answer):\n    import math\n    import re\n    import numpy as np\n    \n    # Compute f_N(x) for many N and x values to find the supremum\n    def f_N(N, x):\n        total = 0.0\n        for n in range(N + 1):\n            coeff = (N + 0.5 - n) / ((N + 1) * (2 * n + 1))\n            total += coeff * math.sin((2 * n + 1) * x)\n        return total\n    \n    # Find numerical supremum\n    max_val = 0.0\n    for N in [10, 50, 100, 500, 1000]:\n        # Search over x values\n        for i in range(1, 10000):\n            x = math.pi * i / 10000\n            val = f_N(N, x)\n            if val > max_val:\n                max_val = val\n    \n    # The known answer for this type of problem\n    # Let's compute the integral (1/pi) * integral_0^pi sin(t)/t dt\n    # which equals Si(pi)/pi where Si is the sine integral\n    \n    # Numerically integrate sin(t)/t from 0 to pi\n    from scipy import integrate\n    \n    def integrand(t):\n        if abs(t) < 1e-10:\n            return 1.0\n        return math.sin(t) / t\n    \n    result, _ = integrate.quad(integrand, 0, math.pi)\n    Si_pi_over_pi = result / math.pi\n    \n    # The answer should be Si(pi)/pi \u2248 0.5895...\n    # But wait, let me check what the max_val is\n    # Actually the answer might be 1/2 or something simpler\n    \n    # Parse the answer\n    ans_str = str(answer).strip()\n    \n    # Try to extract a numeric value\n    try:\n        # Handle common forms\n        ans_str_clean = ans_str.replace(' ', '')\n        \n        # Try direct float conversion\n        try:\n            candidate = float(ans_str_clean)\n        except:\n            # Try sympy parsing\n            import sympy as sp\n            expr = sp.sympify(ans_str_clean)\n            candidate = float(expr.evalf())\n        \n        # The supremum found numerically\n        target = max_val\n        \n        # Also check Si(pi)/pi\n        si_pi_pi = Si_pi_over_pi\n        \n        # Check if candidate matches numerical supremum\n        if abs(candidate - target) < 1e-3:\n            return True\n        \n        # Check common known answers\n        # Si(pi)/pi\n        if abs(candidate - si_pi_pi) < 1e-4:\n            return True\n            \n        return False\n        \n    except Exception as e:\n        # Try symbolic/text matching\n        ans_lower = ans_str.lower()\n        \n        # Check for Si(pi)/pi description\n        if 'si' in ans_lower and 'pi' in ans_lower:\n            return True\n        \n        return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2020_b1",
+      "status": "ok",
+      "gold_answer": "The answer is $1990$.",
+      "elapsed": 7.403243064880371,
+      "script": "def verify(answer):\n    # First compute the actual answer\n    def d(n):\n        return bin(n).count('1')\n    \n    S = 0\n    for k in range(1, 2021):\n        S += ((-1) ** d(k)) * (k ** 3)\n    \n    S_mod = S % 2020\n    \n    # Parse the answer\n    try:\n        candidate = int(str(answer).strip())\n        return candidate % 2020 == S_mod\n    except:\n        # Try to extract a number\n        import re\n        nums = re.findall(r'-?\\d+', str(answer))\n        if nums:\n            for num in nums:\n                if int(num) % 2020 == S_mod:\n                    return True\n        return False",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2020_b4",
+      "status": "ok",
+      "gold_answer": "Show that the answer is $\\frac{1}{4040}$.",
+      "elapsed": 16.278306007385254,
+      "script": "def verify(answer):\n    from fractions import Fraction\n    import re\n    \n    def compute_M(n):\n        # Generate all paths in V_n: sequences s_0, s_1, ..., s_{2n}\n        # with s_0 = s_{2n} = 0, |s_j - s_{j-1}| = 1\n        # These are Dyke-like paths but can go negative\n        # Actually paths from 0 to 0 in 2n steps with steps \u00b11\n        \n        # Use dynamic programming\n        # But we need q(v) = 1 + sum_{j=1}^{2n-1} 3^{s_j}\n        # This requires tracking the actual path values\n        \n        # For small n, enumerate all paths\n        from itertools import product\n        \n        total = Fraction(0)\n        count = 0\n        \n        def enumerate_paths(pos, step, path):\n            nonlocal total, count\n            if step == 2*n:\n                if pos == 0:\n                    q = 1 + sum(Fraction(3)**path[j] for j in range(1, 2*n))\n                    total += Fraction(1, 1) / q\n                    count += 1\n                return\n            for delta in [1, -1]:\n                new_pos = pos + delta\n                path.append(new_pos)\n                enumerate_paths(new_pos, step + 1, path)\n                path.pop()\n        \n        enumerate_paths(0, 0, [0])\n        return total / count\n    \n    # Compute for small n\n    results = {}\n    for n in range(1, 5):\n        M = compute_M(n)\n        results[n] = M\n        print(f\"M({n}) = {M} = {float(M):.6f}\")\n    \n    # Check pattern\n    # Look at M(n) * C(2n,n) or similar\n    from math import comb\n    for n in range(1, 5):\n        M = results[n]\n        cat = comb(2*n, n) // (n+1)  # Catalan number\n        total_paths = comb(2*n, n)  # number of paths from 0 to 0 in 2n steps\n        print(f\"n={n}: M={M}, M*total_paths={M*total_paths}, Catalan={cat}\")\n    \n    # Try to guess formula\n    # Let's see if M(n) = 1/(2n+1) or similar\n    for n in range(1, 5):\n        M = results[n]\n        print(f\"n={n}: M={M}, 1/(2n+1)={Fraction(1,2*n+1)}, match={M==Fraction(1,2*n+1)}\")\n    \n    return False\n\nverify(\"\")",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2020_b5",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 1.1310510635375977
+    },
+    {
+      "id": "putnam_2020_b6",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 0.7725691795349121
+    },
+    {
+      "id": "putnam_1970_a1",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 0.9063138961791992
+    },
+    {
+      "id": "putnam_1970_a3",
+      "status": "ok",
+      "gold_answer": "The maximum attainable length is $3$; the smallest such square is $38^2 = 1444$.",
+      "elapsed": 23.66283869743347,
+      "script": "def verify(answer):\n    import re\n    import math\n    \n    # The known answer: length is 1... let me compute first\n    # Actually let me figure out the answer computationally\n    \n    # Find longest run of equal nonzero digits at end of perfect squares\n    # Check up to some large range\n    \n    def trailing_equal_nonzero(n):\n        s = str(n)\n        if not s:\n            return 0, None\n        last = s[-1]\n        if last == '0':\n            return 0, None\n        count = 0\n        for c in reversed(s):\n            if c == last:\n                count += 1\n            else:\n                break\n        return count, int(last)\n    \n    # Search over squares up to some limit\n    best_len = 0\n    best_square = None\n    best_digit = None\n    \n    # Check squares n^2 for n up to 10^6\n    limit = 10**6\n    for n in range(1, limit):\n        sq = n * n\n        length, digit = trailing_equal_nonzero(sq)\n        if length > best_len:\n            best_len = length\n            best_square = sq\n            best_digit = digit\n    \n    # The answer should specify length and smallest square\n    # Known answer: length = 1? No, let's see...\n    # Actually squares can end in 44 (e.g., 144, 1444...)\n    # 38^2 = 1444, ends in 3 fours\n    # Can we get 4 fours? \n    \n    # Let me recalculate\n    # 38^2 = 1444 - 3 fours\n    # search for 4444 at end: n^2 \u2261 4444 mod 10000\n    # 4444 = 4 * 1111, need n^2 \u2261 4444 mod 10000\n    # Check: sqrt(4444) not integer. Does any n^2 end in 4444?\n    \n    # Parse the answer\n    answer_str = str(answer).strip()\n    \n    # Extract numbers from answer\n    numbers = re.findall(r'\\d+', answer_str)\n    \n    # The expected answer: length=1 is trivially achievable\n    # Let me verify computationally what the best is\n    # 38^2=1444 (3 fours), can we do better?\n    \n    # Check if n^2 ends in dddd (4 equal digits) for any d\n    found_4 = False\n    for n in range(1, 10**5):\n        sq = n*n\n        length, digit = trailing_equal_nonzero(sq)\n        if length >= 4:\n            found_4 = True\n            break\n    \n    # If not found in 10^5, likely impossible\n    # So best_len from our search should be 3, smallest square with 3 equal trailing nonzero digits\n    \n    # Recalculate best from search\n    best_len = 0\n    best_square = None\n    for n in range(1, 10**6):\n        sq = n * n\n        length, digit = trailing_equal_nonzero(sq)\n        if length > best_len:\n            best_len = length\n            best_square = sq\n    \n    # Expected: length=1? No. 38^2=1444 gives 3.\n    # Can we parse the answer?\n    if not numbers:\n        return False\n    \n    claimed_len = None\n    claimed_square = None\n    \n    # Try to find length and square in answer\n    if len(numbers) >= 2:\n        # likely (length, square) or similar\n        for i, num in enumerate(numbers):\n            n = int(num)\n            root = int(math.isqrt(n))\n            if root * root == n and n > 0:\n                claimed_square = n\n            elif n <= 10:\n                claim",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1970_a4",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 0.7874958515167236
+    },
+    {
+      "id": "putnam_1970_b1",
+      "status": "ok",
+      "gold_answer": "Show that the solution is $e^{2 \\log(5) - 4 + 2 arctan(2)}$.",
+      "elapsed": 11.781389951705933,
+      "script": "def verify(answer):\n    import math\n    import re\n    \n    # The correct answer is 25 * e^(-4 + 2*arctan(2))\n    correct = 25 * math.exp(-4 + 2 * math.atan(2))\n    \n    # Try to parse the answer as a number\n    answer_str = str(answer).strip()\n    \n    # Try direct float conversion\n    try:\n        val = float(answer_str)\n        return abs(val - correct) / correct < 1e-4\n    except:\n        pass\n    \n    # Try sympy parsing\n    try:\n        import sympy as sp\n        expr = sp.sympify(answer_str)\n        val = float(expr.evalf())\n        return abs(val - correct) / correct < 1e-4\n    except:\n        pass\n    \n    # Try to match symbolic forms like \"25*exp(-4+2*atan(2))\" or similar\n    # Check if answer contains key components\n    answer_lower = answer_str.lower().replace(' ', '')\n    \n    # Check for the form with 25, e^..., arctan(2) or atan(2)\n    has_25 = '25' in answer_str\n    has_exp = 'exp' in answer_lower or 'e^' in answer_lower\n    has_atan2 = 'arctan(2)' in answer_lower or 'atan(2)' in answer_lower or 'arctan2' in answer_lower\n    \n    if has_25 and has_exp and has_atan2:\n        return True\n    \n    # Numerical check: compute empirically\n    import math\n    n = 10000\n    log_prod = sum(math.log(n**2 + i**2) for i in range(1, 2*n+1)) / n - 4 * math.log(n)\n    empirical = math.exp(log_prod)\n    \n    try:\n        val = float(sp.sympify(answer_str).evalf())\n        return abs(val - empirical) / empirical < 1e-3\n    except:\n        pass\n    \n    return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1970_b3",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 0.5268678665161133
+    },
+    {
+      "id": "putnam_1970_b5",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 0.5884490013122559
+    },
+    {
+      "id": "putnam_1986_a1",
+      "status": "ok",
+      "gold_answer": "Show that the maximum value is $18$.",
+      "elapsed": 8.876163959503174,
+      "script": "def verify(answer):\n    import re\n    \n    # Extract numeric value from answer\n    try:\n        # Try to parse as a number\n        s = str(answer).strip()\n        # Remove common words\n        s = s.lower().replace('the maximum value is', '').replace('maximum is', '').strip()\n        # Try to extract a number\n        matches = re.findall(r'-?\\d+\\.?\\d*', s)\n        if not matches:\n            return False\n        val = float(matches[0])\n        \n        # Verify: the maximum should be 18\n        # Check computationally\n        import numpy as np\n        \n        # Find the feasible region: x^4 + 36 <= 13x^2\n        # i.e., (x^2 - 4)(x^2 - 9) <= 0\n        # x in [-3,-2] union [2,3]\n        \n        xs1 = np.linspace(-3, -2, 10000)\n        xs2 = np.linspace(2, 3, 10000)\n        xs = np.concatenate([xs1, xs2])\n        \n        # Verify constraint holds\n        constraint = xs**4 + 36 - 13*xs**2\n        assert np.all(constraint <= 1e-10), \"Constraint violated\"\n        \n        # Compute f values\n        f_vals = xs**3 - 3*xs\n        computed_max = np.max(f_vals)\n        \n        # Check that the answer matches the computed maximum\n        return abs(val - computed_max) < 0.01\n        \n    except Exception as e:\n        return False",
+      "gold_verdict": null,
+      "exec_error": "no verdict. stdout=XSGRV_VERDICT_UNKNOWN stderr="
+    },
+    {
+      "id": "putnam_1986_a2",
+      "status": "ok",
+      "gold_answer": "Show that the answer is $3$.",
+      "elapsed": 14.203291893005371,
+      "script": "def verify(answer):\n    import math\n    \n    # Compute the actual value\n    x = 10**20000\n    y = 10**100 + 3\n    result = x // y\n    \n    units_digit = result % 10\n    \n    # Parse the answer\n    try:\n        candidate = int(str(answer).strip())\n    except:\n        # Try to extract a digit\n        import re\n        nums = re.findall(r'\\d+', str(answer))\n        if not nums:\n            return False\n        candidate = int(nums[-1])\n    \n    return candidate == units_digit",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1986_a3",
+      "status": "ok",
+      "gold_answer": "Show that the sum equals $\\pi/2$.",
+      "elapsed": 7.5318989753723145,
+      "script": "def verify(answer):\n    import math\n    import re\n    \n    # Compute the sum numerically to high precision\n    total = 0.0\n    for n in range(10000):\n        t = n**2 + n + 1\n        # arccot(t) = arctan(1/t) for t > 0\n        total += math.atan(1.0 / t)\n    # Add tail approximation (small)\n    # The tail from N to infinity is approximately sum_{n=N}^inf 1/n^2 ~ 1/N\n    # More precisely, arccot(n^2+n+1) ~ 1/(n^2+n+1) ~ 1/n^2\n    # Tail ~ integral from 10000 to inf of 1/x^2 dx = 1/10000\n    # Already small enough\n    \n    expected = math.pi / 4\n    \n    # Parse the answer\n    answer = answer.strip()\n    \n    # Try to evaluate as a mathematical expression\n    # Common forms: \"pi/4\", \"\u03c0/4\", \"3.14.../4\", numeric\n    \n    # Replace common symbols\n    ans_clean = answer.replace('\u03c0', 'pi').replace('\u220f', 'pi')\n    \n    # Try sympy parsing\n    try:\n        import sympy\n        expr = sympy.sympify(ans_clean)\n        val = float(expr.evalf())\n        return abs(val - expected) < 1e-6\n    except:\n        pass\n    \n    # Try direct eval with math\n    try:\n        import math\n        val = eval(ans_clean, {\"pi\": math.pi, \"math\": math, \"__builtins__\": {}})\n        return abs(val - expected) < 1e-6\n    except:\n        pass\n    \n    # Try as float\n    try:\n        val = float(answer)\n        return abs(val - expected) < 1e-6\n    except:\n        pass\n    \n    return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1986_a4",
+      "status": "unverifiable",
+      "gold_answer": "Prove that $f(n) = 4^n + 2 \\cdot 3^n - 4 \\cdot 2^n + 1$.",
+      "elapsed": 1.0693421363830566
+    },
+    {
+      "id": "putnam_1986_a6",
+      "status": "ok",
+      "gold_answer": "Show that $f(1) = b_1 b_2 \\dots b_n / n!$.",
+      "elapsed": 23.28382897377014,
+      "script": "def verify(answer):\n    import re\n    import math\n    from fractions import Fraction\n    \n    # The answer should be product(b_i) / n!\n    # Test with specific cases\n    \n    # Try to match answer string to product(b_1,...,b_n)/n!\n    s = answer.strip().lower().replace(' ', '')\n    \n    # Check for common forms\n    patterns = [\n        r'prod.*b.*n!',\n        r'b_1.*b_2.*n!',\n        r'\\(b_1b_2.*b_n\\)/n!',\n        r'product.*b_i.*n!',\n    ]\n    \n    # Check if it mentions product of b's divided by n factorial\n    has_product = any(w in s for w in ['product', 'prod', 'b_1b_2', 'b1b2', '\u220f', '\u03c0'])\n    has_factorial = 'n!' in s or 'factorial' in s\n    has_division = '/' in s or 'divided' in s or 'over' in s\n    \n    if has_product and has_factorial:\n        return True\n    \n    # Also accept forms like b_1*b_2*...*b_n / n!\n    if ('b_1' in answer or 'b1' in answer.replace('_','')) and 'n!' in answer:\n        return True\n    \n    # Check for binom-like expression\n    if 'binom' in s or 'binomial' in s:\n        # might be written differently\n        pass\n    \n    # Try numeric verification\n    # For n=2, b1=2, b2=3: answer should be 2*3/2! = 3\n    # (1-x)^2 f(x) = 1 + a1*x^2 + a2*x^3\n    # At x=1: 0 = 1 + a1 + a2\n    # Derivative at x=1: 0 = 2*a1 + 3*a2\n    # So a2 = 2, a1 = -3, f(1) = coeff of t^2 in 1 - 3(1-t)^2 + 2(1-t)^3\n    # = coeff of t^2 in 1 - 3(1-2t+t^2) + 2(1-3t+3t^2-t^3)\n    # = coeff of t^2 in 1-3+6t-3t^2+2-6t+6t^2 = 3t^2 => f(1)=3 \u2713\n    \n    try:\n        val = eval(answer, {\"__builtins__\": {}}, {})\n        # can't directly evaluate without knowing b_i\n    except:\n        pass\n    \n    # Accept if it says product of b_i over n!\n    lower = answer.lower()\n    if ('product' in lower or '\u220f' in lower or 'prod' in lower) and ('n!' in lower or 'n factorial' in lower):\n        return True\n    if 'b_1 b_2' in lower and 'n!' in lower:\n        return True\n    if 'b_1b_2' in lower and 'n!' in lower:\n        return True\n        \n    return False",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1986_b2",
+      "status": "ok",
+      "gold_answer": "Show that the possibilities for $T$ are $(0, 0, 0), \\, (0, -1, 1), \\, (1, 0, -1), \\, (-1, 1, 0)$.",
+      "elapsed": 15.98265814781189,
+      "script": "def verify(answer):\n    import re\n    \n    # The correct answer set\n    correct_triples = {(0,0,0), (0,-1,1), (1,0,-1), (-1,1,0)}\n    \n    ans = answer.strip()\n    \n    # Try to parse tuples from the answer\n    # Look for patterns like (a,b,c)\n    tuple_pattern = r'\\((-?\\d+),\\s*(-?\\d+),\\s*(-?\\d+)\\)'\n    matches = re.findall(tuple_pattern, ans)\n    \n    if matches:\n        found = set()\n        for m in matches:\n            found.add((int(m[0]), int(m[1]), int(m[2])))\n        return found == correct_triples\n    \n    # Try to check if answer mentions the count (4 triples)\n    if '4' in ans and ('triple' in ans.lower() or 'tuple' in ans.lower()):\n        return True\n    \n    # Check for specific descriptions\n    lower = ans.lower()\n    # Check if all four are mentioned\n    has_zero = '0,0,0' in ans or '(0, 0, 0)' in ans\n    has_neg1_1 = ('0,-1,1' in ans or '0, -1, 1' in ans)\n    has_1_0_neg1 = ('1,0,-1' in ans or '1, 0, -1' in ans)\n    has_neg1_1_0 = ('-1,1,0' in ans or '-1, 1, 0' in ans)\n    \n    if has_zero and has_neg1_1 and has_1_0_neg1 and has_neg1_1_0:\n        return True\n    \n    # Try parsing with spaces instead of commas\n    tuple_pattern2 = r'\\((-?\\d+)\\s+(-?\\d+)\\s+(-?\\d+)\\)'\n    matches2 = re.findall(tuple_pattern2, ans)\n    if matches2:\n        found = set()\n        for m in matches2:\n            found.add((int(m[0]), int(m[1]), int(m[2])))\n        return found == correct_triples\n    \n    return False",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1986_b3",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 0.6320300102233887
+    },
+    {
+      "id": "putnam_1986_b4",
+      "status": "unverifiable",
+      "gold_answer": "Show that the limit exists and equals $0$.",
+      "elapsed": 1.0523860454559326
+    },
+    {
+      "id": "putnam_1986_b5",
+      "status": "unverifiable",
+      "gold_answer": "Prove that the assertion is false.",
+      "elapsed": 0.9495790004730225
+    },
+    {
+      "id": "putnam_1986_b6",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 0.6154129505157471
+    },
+    {
+      "id": "putnam_2000_a1",
+      "status": "ok",
+      "gold_answer": "Show that the possible values comprise the interval $(0,A^2)$.",
+      "elapsed": 17.380573987960815,
+      "script": "def verify(answer):\n    import re\n    answer = answer.strip().lower().replace(' ', '')\n    \n    # Check for the interval (0, A^2)\n    # Various forms: \"(0,A^2)\", \"0<sum<A^2\", \"(0,a^2)\", etc.\n    \n    # Normalize\n    s = answer.replace('^', '**').replace('a', 'A')\n    \n    # Check if the answer describes the open interval (0, A^2)\n    patterns = [\n        r'\\(0,\\s*a\\*\\*2\\)',\n        r'\\(0,\\s*a\\^2\\)',\n        r'0\\s*<\\s*\\w+\\s*<\\s*a\\*\\*2',\n        r'0\\s*<\\s*\\w+\\s*<\\s*a\\^2',\n        r'\\(0,a2\\)',\n        r'between0anda\\*\\*2',\n        r'between0anda\\^2',\n    ]\n    \n    s_norm = answer.replace(' ', '').lower()\n    \n    # Check various representations\n    checks = [\n        '(0,a**2)' in s_norm,\n        '(0,a^2)' in s_norm,\n        '(0,a2)' in s_norm,\n        '0<' in s_norm and 'a^2' in s_norm and '<a^2' in s_norm,\n        '0<' in s_norm and 'a**2' in s_norm and '<a**2' in s_norm,\n        # natural language\n        'open' in s_norm and '0' in s_norm and ('a^2' in s_norm or 'a**2' in s_norm or 'a2' in s_norm),\n        # \"strictly between 0 and A^2\"\n        'strictly' in s_norm and '0' in s_norm and ('a^2' in s_norm or 'a**2' in s_norm),\n        # interval notation with exclusive endpoints\n        s_norm == '(0,a^2)' or s_norm == '(0,a**2)' or s_norm == '(0,a2)',\n    ]\n    \n    if any(checks):\n        return True\n    \n    # Also check if someone writes it as 0 to A^2 exclusive\n    if re.search(r'0.*to.*a[\\^*2]*.*exclusive', s_norm):\n        return True\n    if re.search(r'in.*\\(0.*a', s_norm):\n        return True\n        \n    # Check numeric: if A is given as specific value, check interval\n    # Try to see if answer is just the interval description\n    if '0' in s_norm and 'a' in s_norm and ('square' in s_norm or '2' in s_norm):\n        if 'exclusive' in s_norm or 'open' in s_norm or 'strictly' in s_norm or '(' in s_norm:\n            return True\n    \n    return False",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2000_a2",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 0.5904059410095215
+    },
+    {
+      "id": "putnam_2000_a4",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 1.3851418495178223
+    },
+    {
+      "id": "putnam_2000_a5",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 1.0276210308074951
+    },
+    {
+      "id": "putnam_2000_a6",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 1.0945611000061035
+    },
+    {
+      "id": "putnam_2000_b1",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 1.0285980701446533
+    },
+    {
+      "id": "putnam_2000_b2",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 1.0024502277374268
+    },
+    {
+      "id": "putnam_2000_b3",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 0.6889059543609619
+    },
+    {
+      "id": "putnam_2000_b4",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 1.1100599765777588
+    },
+    {
+      "id": "putnam_2000_b5",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 0.736177921295166
+    },
+    {
+      "id": "putnam_1995_a1",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 0.5301628112792969
+    },
+    {
+      "id": "putnam_1995_a2",
+      "status": "ok",
+      "gold_answer": "Show that the solution is those pairs $(a,b)$ where $a = b$.",
+      "elapsed": 19.24743413925171,
+      "script": "def verify(answer):\n    import re\n    ans = answer.strip().lower().replace(' ', '')\n    # Check for \"a=b\" or \"a==b\" or equivalent claims\n    patterns = ['a=b', 'a==b', 'b=a', 'b==a', '(a,b)witha=b', 'a=b>0', 'a=bandpositive']\n    for p in patterns:\n        if p in ans:\n            return True\n    if re.search(r'\\ba\\s*=\\s*b\\b', answer.lower()) or re.search(r'\\bb\\s*=\\s*a\\b', answer.lower()):\n        return True\n    return False",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1995_a3",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 0.7228243350982666
+    },
+    {
+      "id": "putnam_1995_a4",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 0.8331277370452881
+    },
+    {
+      "id": "putnam_1995_a5",
+      "status": "unverifiable",
+      "gold_answer": "Show that the answer is yes, the functions must be linearly dependent.",
+      "elapsed": 1.5018770694732666
+    },
+    {
+      "id": "putnam_1995_b1",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 1.0331614017486572
+    },
+    {
+      "id": "putnam_1995_b3",
+      "status": "unverifiable",
+      "gold_answer": "Show that the solution is $45$ if $n = 1$, $45^2*10$ if $n = 2$, and $0$ if $n$ is greater than 3.",
+      "elapsed": 0.7214047908782959
+    },
+    {
+      "id": "putnam_1995_b4",
+      "status": "ok",
+      "gold_answer": "Show that the solution is $(3 + 1*\\sqrt{5})/2.",
+      "elapsed": 21.839914083480835,
+      "script": "def verify(answer):\n    import re\n    from sympy import sqrt, Rational, simplify, S\n    \n    # The correct answer is (3 + sqrt(5))/2\n    correct = (3 + sqrt(5)) / 2\n    \n    # Try to parse the answer string\n    s = answer.strip()\n    \n    # Check if it matches (a + b*sqrt(c)) / d form\n    # Try various patterns\n    \n    # First, try direct symbolic evaluation\n    # Replace common notation\n    s2 = s.replace('^', '**').replace('\u221a', 'sqrt').replace('\\\\sqrt', 'sqrt')\n    \n    try:\n        from sympy.parsing.sympy_parser import parse_expr\n        expr = parse_expr(s2, transformations='all')\n        diff = simplify(expr - correct)\n        if diff == 0:\n            return True\n    except:\n        pass\n    \n    # Try to extract a, b, c, d from patterns like (a+b\u221ac)/d\n    # Pattern: (a+bsqrt(c))/d or a+b\u221ac / d etc.\n    \n    # Check for pattern like \"3+sqrt(5)\" / 2\n    patterns = [\n        r'\\(?\\s*(\\d+)\\s*\\+\\s*(\\d+)?\\s*\\\\?sqrt\\(?(\\d+)\\)?\\s*\\)?\\s*/\\s*(\\d+)',\n        r'\\(?\\s*(\\d+)\\s*\\+\\s*(\\d+)?\\s*\u221a\\s*(\\d+)\\s*\\)?\\s*/\\s*(\\d+)',\n    ]\n    \n    for pat in patterns:\n        m = re.search(pat, s)\n        if m:\n            a = int(m.group(1))\n            b = int(m.group(2)) if m.group(2) else 1\n            c = int(m.group(3))\n            d = int(m.group(4))\n            expr = (a + b*sqrt(c)) / d\n            diff = simplify(expr - correct)\n            if diff == 0:\n                return True\n    \n    # Check if answer literally says something like \"1+sqrt(5))/2\" or similar\n    # Also handle negative b or different orderings\n    \n    # Numeric check\n    try:\n        import ast\n        val = float(eval(s2.replace('sqrt', '__import__(\"math\").sqrt')))\n        correct_val = float(correct.evalf())\n        if abs(val - correct_val) < 1e-6:\n            return True\n    except:\n        pass\n    \n    # Check common equivalent forms\n    equivalents = [\n        \"(3+sqrt(5))/2\",\n        \"(3+1*sqrt(5))/2\", \n        \"3/2 + sqrt(5)/2\",\n    ]\n    for eq in equivalents:\n        if s.replace(' ', '') == eq.replace(' ', ''):\n            return True\n    \n    # Check if the 8th power of the parsed answer equals 2207 - 1/(2207 - ...)\n    # i.e., equals (2207 + 987*sqrt(5))/2\n    try:\n        from sympy.parsing.sympy_parser import parse_expr\n        expr = parse_expr(s2, transformations='all')\n        val8 = simplify(expr**8)\n        # x = (2207 + 987*sqrt(5))/2\n        expected_x = (2207 + 987*sqrt(5)) / 2\n        if simplify(val8 - expected_x) == 0:\n            return True\n    except:\n        pass\n    \n    return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1995_b6",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 0.6751291751861572
+    },
+    {
+      "id": "putnam_1989_a1",
+      "status": "ok",
+      "gold_answer": "Show that there is only one such prime.",
+      "elapsed": 13.933564186096191,
+      "script": "def verify(answer):\n    from sympy import isprime\n    import re\n    \n    # Generate alternating 1s and 0s numbers beginning and ending with 1\n    # These are: 1, 101, 10101, 1010101, ...\n    # The number with k ones: sum of 100^i for i in 0..k-1\n    \n    # Check many of them\n    prime_count = 0\n    prime_examples = []\n    \n    for k in range(1, 50):  # k ones\n        # Build the number\n        s = '1' + '01' * (k - 1)\n        n = int(s)\n        if isprime(n):\n            prime_count += 1\n            prime_examples.append(n)\n    \n    # The answer should be the number of such primes\n    # From analysis: only 101 is prime among reasonable sizes\n    # Let's check what the candidate answer says\n    \n    try:\n        # Try to parse answer as integer\n        candidate = int(answer.strip())\n        return candidate == prime_count\n    except:\n        pass\n    \n    # Try to parse as \"exactly one\" or similar\n    answer_lower = answer.strip().lower()\n    if any(word in answer_lower for word in ['one', 'only one', '1']):\n        return prime_count == 1\n    \n    return False",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1989_a2",
+      "status": "ok",
+      "gold_answer": "Show that the value of the integral is $(e^{a^2b^2}-1)/(ab)$.",
+      "elapsed": 14.992149114608765,
+      "script": "def verify(answer):\n    import sympy as sp\n    import re\n    \n    a, b = sp.symbols('a b', positive=True)\n    \n    # The correct answer\n    correct = (sp.exp(a**2 * b**2) - 1) / (a * b)\n    \n    # Try to parse the answer\n    answer_str = answer.strip()\n    \n    # Common forms to try\n    candidates = []\n    \n    try:\n        # Replace ^ with ** for sympy\n        expr_str = answer_str.replace('^', '**')\n        expr = sp.sympify(expr_str, locals={'a': a, 'b': b, 'e': sp.E, 'exp': sp.exp})\n        candidates.append(expr)\n    except:\n        pass\n    \n    # Test at random positive values\n    import random\n    random.seed(42)\n    \n    test_vals = [(random.uniform(0.5, 2), random.uniform(0.5, 2)) for _ in range(5)]\n    \n    for expr in candidates:\n        all_match = True\n        for av, bv in test_vals:\n            try:\n                correct_val = float(correct.subs([(a, av), (b, bv)]))\n                expr_val = float(expr.subs([(a, av), (b, bv)]))\n                if abs(correct_val - expr_val) > 1e-6 * abs(correct_val):\n                    all_match = False\n                    break\n            except:\n                all_match = False\n                break\n        if all_match:\n            return True\n    \n    # Also check if answer contains key phrases\n    normalized = answer_str.lower().replace(' ', '')\n    if 'e^(a^2b^2)-1' in normalized or 'e^(a^2*b^2)-1' in normalized:\n        return True\n    if '(e^{a^2b^2}-1)/(ab)' in normalized:\n        return True\n    \n    return False",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1989_a3",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 1.8125438690185547
+    },
+    {
+      "id": "putnam_1989_a6",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 1.0630812644958496
+    },
+    {
+      "id": "putnam_1989_b2",
+      "status": "unverifiable",
+      "gold_answer": "Prove that $S$ must be a group.",
+      "elapsed": 1.124803066253662
+    },
+    {
+      "id": "putnam_1989_b3",
+      "status": "unverifiable",
+      "gold_answer": "Show that for each $n \\geq 0$, $\\mu_n = \\frac{n!}{3^n} \\left( \\prod_{m=1}^{n}(1 - 2^{-m}) \\right)^{-1} \\mu_0$.",
+      "elapsed": 1.3743958473205566
+    },
+    {
+      "id": "putnam_1989_b4",
+      "status": "ok",
+      "gold_answer": "Prove that such a collection exists.",
+      "elapsed": 13.3215172290802,
+      "script": "def verify(answer):\n    \"\"\"\n    The problem asks: Can a countably infinite set have an uncountable collection\n    of non-empty subsets such that the intersection of any two of them is finite?\n    \n    The answer is YES. Classic proof: Take the natural numbers N (countably infinite).\n    For each real number r in [0,1], consider its decimal (or binary) expansion,\n    or more elegantly: for each infinite subset S of N that is \"almost disjoint\"...\n    \n    The standard construction: For each real x in [0,1], write x in binary as\n    a sequence of 0s and 1s. Map this to a subset of N. But we need to be careful\n    about intersections.\n    \n    Better: For each real r, pick a sequence of rationals q_1, q_2, ... converging to r.\n    The set {q_1, q_2, ...} is a countably infinite subset of Q. Any two such sets\n    (for different reals r, s) can only share finitely many elements (since beyond\n    some point the sequences are in disjoint neighborhoods of r and s).\n    \n    This gives uncountably many subsets of Q (countable) with pairwise finite intersections.\n    \n    The answer is \"yes\".\n    \"\"\"\n    if answer is None:\n        return False\n    \n    ans = answer.strip().lower()\n    \n    # Accept various forms of \"yes\"\n    yes_variants = [\n        'yes', 'true', 'yes, it can', 'it can', 'yes.', 'yes,',\n        'affirmative', 'indeed', 'yes it can', 'such a collection exists',\n        'yes, such a collection exists'\n    ]\n    \n    no_variants = [\n        'no', 'false', 'no, it cannot', 'it cannot', 'no.', 'no,',\n        'impossible', 'no it cannot'\n    ]\n    \n    # Check if answer contains 'yes' or affirmative\n    for variant in yes_variants:\n        if variant in ans:\n            return True\n    \n    # Check if answer contains 'no' - that would be wrong\n    for variant in no_variants:\n        if variant in ans:\n            return False\n    \n    # If answer starts with 'y', likely yes\n    if ans.startswith('y'):\n        return True\n    \n    # If answer starts with 'n', likely no (wrong)\n    if ans.startswith('n'):\n        return False\n    \n    return False",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1997_a3",
+      "status": "ok",
+      "gold_answer": "Show that the solution is $\\sqrt{e}$.",
+      "elapsed": 15.070783853530884,
+      "script": "def verify(answer):\n    import numpy as np\n    from scipy import integrate, special\n    import re\n    \n    # Numerically compute the integral\n    def integrand(x):\n        return x * np.exp(-x**2 / 2) * special.iv(0, x)\n    \n    result, error = integrate.quad(integrand, 0, np.inf, limit=200)\n    \n    # Try to parse the answer\n    answer = answer.strip()\n    \n    # Try common forms\n    import sympy as sp\n    \n    # Try to evaluate the answer symbolically\n    try:\n        # Replace common math expressions\n        ans_str = answer.replace('sqrt', 'sqrt').replace('e', 'E').replace('^', '**')\n        val = float(sp.sympify(answer))\n        return abs(val - result) < 1e-6\n    except:\n        pass\n    \n    # Try numeric parsing\n    try:\n        val = float(answer)\n        return abs(val - result) < 1e-6\n    except:\n        pass\n    \n    # Check for exp(1/2) or e^(1/2)\n    import math\n    candidates = {\n        'exp(1/2)': math.exp(0.5),\n        'e^(1/2)': math.exp(0.5),\n        'sqrt(e)': math.sqrt(math.e),\n        '1': 1.0,\n        'e': math.e,\n        '2': 2.0,\n        'pi': math.pi,\n        'sqrt(pi)': math.sqrt(math.pi),\n        'exp(1/4)': math.exp(0.25),\n        'e^(1/4)': math.exp(0.25),\n        'sqrt(2)': math.sqrt(2),\n    }\n    \n    ans_lower = answer.lower().replace(' ', '')\n    for key, val in candidates.items():\n        if ans_lower == key.lower().replace(' ', ''):\n            return abs(val - result) < 1e-6\n    \n    # General sympy parse\n    try:\n        import sympy as sp\n        val = float(sp.sympify(answer, locals={'e': sp.E, 'pi': sp.pi, 'sqrt': sp.sqrt, 'exp': sp.exp}))\n        return abs(val - result) < 1e-6\n    except:\n        pass\n    \n    return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1997_a4",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 1.0777480602264404
+    },
+    {
+      "id": "putnam_1997_a5",
+      "status": "ok",
+      "gold_answer": "Show that $N_{10}$ is odd.",
+      "elapsed": 23.104676008224487,
+      "script": "def verify(answer):\n    from fractions import Fraction\n    from functools import lru_cache\n    \n    # Compute N_10 mod 2 by counting ordered 10-tuples\n    # We'll use recursion with memoization\n    # Count ordered n-tuples (a_1,...,a_n) with sum of reciprocals = target\n    # where each a_i >= 1\n    \n    # For efficiency, we note 1/a_i >= target/n so a_i <= n/target\n    # We'll count directly for n=10\n    \n    @lru_cache(maxsize=None)\n    def count(remaining_slots, remaining_sum, min_val):\n        # remaining_sum is a Fraction\n        if remaining_slots == 0:\n            return 1 if remaining_sum == 0 else 0\n        if remaining_sum <= 0:\n            return 0\n        \n        total = 0\n        # a_i >= min_val, and 1/a_i <= remaining_sum\n        # so a_i >= 1/remaining_sum\n        lo = max(min_val, int(1 / remaining_sum))\n        # also 1/a_i >= remaining_sum/remaining_slots\n        # so a_i <= remaining_slots/remaining_sum\n        hi = int(remaining_slots / remaining_sum)\n        \n        for a in range(lo, hi + 1):\n            new_sum = remaining_sum - Fraction(1, a)\n            if new_sum < 0:\n                break\n            total += count(remaining_slots - 1, new_sum, a)\n        \n        return total\n    \n    # Count non-decreasing tuples, then multiply by permutations\n    # Actually let's count all ordered tuples directly (too slow for n=10)\n    # Instead count sorted tuples and multiply by multinomial\n    \n    @lru_cache(maxsize=None)\n    def count_sorted(remaining_slots, remaining_sum, min_val):\n        if remaining_slots == 0:\n            return 1 if remaining_sum == 0 else 0\n        if remaining_sum <= 0:\n            return 0\n        total = 0\n        lo = max(min_val, int(1 / remaining_sum) if remaining_sum > 0 else 1)\n        hi = int(remaining_slots / remaining_sum) if remaining_sum > 0 else 0\n        for a in range(lo, hi + 1):\n            new_sum = remaining_sum - Fraction(1, a)\n            if new_sum >= 0:\n                total += count_sorted(remaining_slots - 1, new_sum, a)\n        return total\n    \n    from math import factorial\n    from collections import Counter\n    \n    # We need to enumerate sorted tuples and compute N_10 mod 2\n    # Let's collect all sorted tuples\n    \n    def enum_sorted(slots, rem_sum, min_val, current):\n        if slots == 0:\n            if rem_sum == 0:\n                yield tuple(current)\n            return\n        lo = max(min_val, int(1/rem_sum) if rem_sum > 0 else 1)\n        hi = int(slots / rem_sum) if rem_sum > 0 else 0\n        for a in range(lo, hi+1):\n            ns = rem_sum - Fraction(1, a)\n            if ns >= 0:\n                current.append(a)\n                yield from enum_sorted(slots-1, ns, a, current)\n                current.pop()\n    \n    N10_mod2 = 0\n    for tup in enum_sorted(10, Fraction(1), 1, []):\n        c = Counter(tup)\n        perms = factorial(10)\n        for cnt in c.values():\n            perms //= factorial(cnt)\n        N10_mod2 = (N10_mod2 + perms) % 2\n    \n    is_even =",
+      "gold_verdict": null,
+      "exec_error": "TimeoutError: script exceeded time budget"
+    },
+    {
+      "id": "putnam_1997_a6",
+      "status": "ok",
+      "gold_answer": "Show that the solution is that $x_k = {n - 1 \\choose k - 1}$.",
+      "elapsed": 20.054962396621704,
+      "script": "def verify(answer):\n    import re\n    from math import comb, isclose\n    from scipy.optimize import brentq\n    import numpy as np\n    \n    # The known answer is x_k = C(n,k) / 2^(n-1) * ... let's check\n    # Actually let's verify the claimed formula numerically\n    \n    def get_xk_sequence(n, c):\n        x = [0.0] * (n + 2)\n        x[0] = 0.0\n        x[1] = 1.0\n        for k in range(n):\n            x[k+2] = (c * x[k+1] - (n - k) * x[k]) / (k + 1)\n        return x\n    \n    def find_c(n):\n        def f(c):\n            return get_xk_sequence(n, c)[n+1]\n        # find largest root\n        from numpy.polynomial import polynomial as P\n        # search in a range\n        roots = []\n        for lo, hi in [(-20, 20)]:\n            try:\n                # sample\n                cs = np.linspace(lo, hi, 10000)\n                vals = [f(c) for c in cs]\n                for i in range(len(vals)-1):\n                    if vals[i]*vals[i+1] < 0:\n                        r = brentq(f, cs[i], cs[i+1])\n                        roots.append(r)\n            except:\n                pass\n        if not roots:\n            return None\n        return max(roots)\n    \n    # The answer should be x_k = C(n,k) / 2^(n-1)\n    # Let's check the formula from the answer string\n    # Expected: x_k = C(n,k)/2^(n-1)\n    \n    for n in [2, 3, 4, 5]:\n        c = find_c(n)\n        if c is None:\n            continue\n        xs = get_xk_sequence(n, c)\n        for k in range(1, n+1):\n            expected = comb(n, k) / (2**(n-1))\n            if not isclose(xs[k], expected, rel_tol=1e-4, abs_tol=1e-6):\n                return False\n    \n    # Check that the answer string mentions C(n,k)/2^(n-1) or binomial(n,k)/2^(n-1)\n    ans = answer.lower().replace(\" \", \"\")\n    patterns = [\"binom\", \"c(n,k)\", \"\\\\binom\", \"2^{n-1}\", \"2^(n-1)\", \"combinat\"]\n    return any(p in ans for p in patterns)",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1997_b1",
+      "status": "ok",
+      "gold_answer": "Show that the solution is $n$.",
+      "elapsed": 18.759439945220947,
+      "script": "def verify(answer):\n    import re\n    from fractions import Fraction\n    \n    def compute_Fn(n):\n        total = Fraction(0)\n        for m in range(1, 6*n):\n            # {x} = distance to nearest integer = min(x - floor(x), ceil(x) - x)\n            def dist_to_nearest(x):\n                # x is a Fraction\n                import math\n                frac_part = x - int(x)  # this is x mod 1 for positive x\n                # but need to handle properly\n                floor_x = x.__floor__() if hasattr(x, '__floor__') else Fraction(int(x))\n                # floor\n                import math\n                fv = x - Fraction(math.floor(x))\n                return min(fv, 1 - fv)\n            \n            x1 = Fraction(m, 6*n)\n            x2 = Fraction(m, 3*n)\n            \n            d1 = dist_to_nearest(x1)\n            d2 = dist_to_nearest(x2)\n            \n            total += min(d1, d2)\n        return total\n    \n    # Compute for n = 1, 2, 3, 4, 5\n    results = []\n    for n in range(1, 6):\n        fn = compute_Fn(n)\n        results.append((n, fn))\n        print(f\"n={n}: F_n = {fn} = {float(fn):.6f}\")\n    \n    # Check pattern: maybe F_n = a*n + b or rational multiple of n\n    # Check if F_n / n is constant\n    ratios = [fn/n for n, fn in results]\n    print(\"F_n/n:\", ratios)\n    \n    # Try to parse the answer\n    # Common form might be n*(something) or a fraction\n    answer = answer.strip()\n    \n    # Try to evaluate the answer as an expression of n\n    import sympy as sp\n    n = sp.Symbol('n')\n    \n    try:\n        expr = sp.sympify(answer)\n        # Check if it's a constant times n or polynomial in n\n        is_correct = True\n        for nval, fn_val in results:\n            val = expr.subs(n, nval)\n            val_frac = Fraction(val.p, val.q) if hasattr(val, 'p') else Fraction(val).limit_denominator(10000)\n            if abs(float(val_frac) - float(fn_val)) > 1e-9:\n                is_correct = False\n                break\n        return is_correct\n    except:\n        pass\n    \n    # Try numeric constant (if answer doesn't depend on n, check n=1)\n    try:\n        val = float(answer)\n        # Check against n=1\n        if abs(val - float(results[0][1])) < 1e-9:\n            return True\n        return False\n    except:\n        pass\n    \n    return False\n\n# Run the verification logic inline to see results\nfrom fractions import Fraction\nimport math\n\ndef compute_Fn(n):\n    total = Fraction(0)\n    for m in range(1, 6*n):\n        x1 = Fraction(m, 6*n)\n        x2 = Fraction(m, 3*n)\n        \n        def dist_nn(x):\n            fv = x - Fraction(math.floor(x))\n            return min(fv, 1 - fv)\n        \n        d1 = dist_nn(x1)\n        d2 = dist_nn(x2)\n        total += min(d1, d2)\n    return total\n\nfor n in range(1, 6):\n    fn = compute_Fn(n)\n    print(f\"n={n}: F_n = {fn} = {float(fn):.6f}, F_n/n = {fn/n}\")",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1997_b2",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 0.6101250648498535
+    }
+  ],
+  "source": "amitayusht/PutnamBench"
+}

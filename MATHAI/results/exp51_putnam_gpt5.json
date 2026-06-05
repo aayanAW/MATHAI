@@ -1,0 +1,864 @@
+{
+  "model": "gpt-5-mini",
+  "results": [
+    {
+      "id": "putnam_1981_a1",
+      "status": "ok",
+      "gold_answer": "The limit equals $\\frac{1}{8}$.",
+      "elapsed": 41.90257501602173,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # target exact value\n    target = sp.Rational(1, 8)\n\n    # Try to parse answer symbolically\n    try:\n        ans_sym = sp.sympify(answer)\n    except Exception:\n        # cannot parse answer\n        return False\n\n  ",
+      "elapsed_retry": 19.106759071350098,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # target exact value\n    target = sp.Rational(1, 8)\n\n    # Try to parse answer symbolically\n    try:\n        ans_sym = sp.sympify(answer)\n    except Exception:\n        # cannot parse answer\n        return False\n\n    # If exact symbolic equality, accept\n    if sp.simplify(ans_sym - target) == 0:\n        return True\n\n    # Otherwise perform numeric convergence tests\n    try:\n        ans_val = float(ans_sym.evalf())\n    except Exception:\n        return False\n\n    # Function to compute E(n) exactly using the formula:\n    # E(n) = sum_{j>=1} 5^j * (floor(n/5^j) * (floor(n/5^j)+1) // 2)\n    def E(n):\n        total = 0\n        p = 5\n        while p <= n:\n            m = n // p\n            total += p * (m * (m + 1) // 2)\n            p *= 5\n        return total\n\n    # Choose a collection of n values (deterministic + random)\n    ns = [1000, 2000, 5000, 10000, 20000, 50000]\n    for _ in range(10):\n        ns.append(random.randint(5000, 200000))\n    ns = sorted(set(ns))\n\n    # Compute ratios and check convergence at the largest n\n    ratios = {}\n    for n in ns:\n        En = E(n)\n        ratios[n] = float(En) / (n * n)\n\n    max_n = max(ns)\n    ratio_max = ratios[max_n]\n\n    # Check that ratio at largest n is close to target and to provided answer\n    if abs(ratio_max - float(target)) > 1e-6:\n        return False\n\n    if abs(ans_val - ratio_max) > 1e-6:\n        return False\n\n    return True",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1981_a3",
+      "status": "empty_response",
+      "gold_answer": "The limit does not exist.",
+      "elapsed": 37.5700957775116,
+      "raw_text_head": "",
+      "elapsed_retry": 53.94288516044617
+    },
+    {
+      "id": "putnam_1981_a5",
+      "status": "unverifiable",
+      "gold_answer": "$Q(x)$ must have at least $2n - 1$ distinct real roots.",
+      "elapsed": 39.11722111701965,
+      "raw_text_head": "UNVERIFIABLE",
+      "elapsed_retry": 21.345162868499756
+    },
+    {
+      "id": "putnam_1981_b1",
+      "status": "ok",
+      "gold_answer": "The limit equals $-1$.",
+      "elapsed": 40.85523009300232,
+      "raw_text_head": "def verify(answer):\n    import sympy as sp\n    import random\n    random.seed(42)\n\n    # true limit\n    true = sp.Integer(-1)\n\n    # try to parse the candidate answer into a SymPy object\n    try:\n        if isinstance(answer, str):\n            ans = sp.sympify(answer)\n        else:\n            ans = ",
+      "elapsed_retry": 30.085122108459473,
+      "script": "def verify(answer):\n    import sympy as sp\n    import random\n    random.seed(42)\n\n    # true limit\n    true = sp.Integer(-1)\n\n    # try to parse the candidate answer into a SymPy object\n    try:\n        if isinstance(answer, str):\n            ans = sp.sympify(answer)\n        else:\n            ans = sp.sympify(answer)\n    except Exception:\n        return False\n\n    # Direct symbolic check\n    try:\n        diff = sp.simplify(ans - true)\n        # exact zero\n        if diff == 0:\n            return True\n        # numeric zero (covers floats like -1.0)\n        if diff.is_Number:\n            try:\n                if abs(float(diff)) < 1e-12:\n                    return True\n            except Exception:\n                pass\n    except Exception:\n        pass\n\n    # If not exact, perform numerical convergence tests for random large n\n    try:\n        ansf = float(ans)\n    except Exception:\n        return False\n\n    # closed-form expressions for sums\n    def S_of_n(n):\n        n = sp.Integer(n)\n        S2 = n * (n + 1) * (2 * n + 1) / 6\n        S4 = n * (n + 1) * (2 * n + 1) * (3 * n**2 + 3 * n - 1) / 30\n        Sn = (10 * S4) / n**4 - 18 * (S2**2) / n**5\n        return float(Sn)\n\n    # test for several large random n values that S(n) -> ans\n    for _ in range(6):\n        n = random.randint(500, 20000)\n        Sn = S_of_n(n)\n        if abs(Sn - ansf) > 1e-6:\n            return False\n\n    return True",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1981_b2",
+      "status": "ok",
+      "gold_answer": "The minimum is $12 - 8\\sqrt{2}$.",
+      "elapsed": 37.66026306152344,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Exact minimal value: 4*(sqrt(2)-1)^2\n    exact_expr = 4 * (sp.sqrt(2) - 1) ** 2\n    exact_val = float(sp.N(exact_expr, 50))\n\n    tol = 1e-8\n\n    # Try to interpret the provided answer\n    try:\n        # If answer",
+      "elapsed_retry": 20.10195565223694,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Exact minimal value: 4*(sqrt(2)-1)^2\n    exact_expr = 4 * (sp.sqrt(2) - 1) ** 2\n    exact_val = float(sp.N(exact_expr, 50))\n\n    tol = 1e-8\n\n    # Try to interpret the provided answer\n    try:\n        # If answer is a sympy object or string, sympify it; if it's numeric, this still works.\n        ans_sym = sp.sympify(answer)\n        ans_val = float(sp.N(ans_sym, 50))\n    except Exception:\n        # If cannot parse, reject\n        return False\n\n    # First check numeric closeness to the exact value\n    if abs(ans_val - exact_val) > 1e-7:\n        return False\n\n    # Additional sanity check: verify that the value is achievable with some (r,s,t)\n    # The symmetric minimizer corresponds to factors all equal to 4^(1/4) = sqrt(2)\n    x = float(sp.N(4 ** (sp.Rational(1, 4)), 50))  # sqrt(2)\n    r0 = x\n    s0 = x ** 2\n    t0 = x ** 3\n    f_at_point = (r0 - 1) ** 2 + (s0 / r0 - 1) ** 2 + (t0 / s0 - 1) ** 2 + (4.0 / t0 - 1) ** 2\n    if abs(f_at_point - exact_val) > 1e-7:\n        return False\n\n    # Monte Carlo check to try to find a lower value (shouldn't find any)\n    # Sample random r in [1,4], s in [r,4], t in [s,4]\n    for _ in range(3000):\n        r = 1 + random.random() * (4 - 1)\n        s = r + random.random() * (4 - r)\n        t = s + random.random() * (4 - s)\n        f = (r - 1) ** 2 + (s / r - 1) ** 2 + (t / s - 1) ** 2 + (4.0 / t - 1) ** 2\n        if f + 1e-9 < exact_val:\n            # Found a value smaller than claimed minimum -> reject\n            return False\n\n    return True",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1981_b3",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 4.698290824890137
+    },
+    {
+      "id": "putnam_1981_b4",
+      "status": "unverifiable",
+      "gold_answer": "Show that the assertion is false.",
+      "elapsed": 23.58087396621704
+    },
+    {
+      "id": "putnam_1981_b5",
+      "status": "empty_response",
+      "gold_answer": "Show that the expression is a rational number.",
+      "elapsed": 38.810019969940186,
+      "raw_text_head": "",
+      "elapsed_retry": 54.27286410331726
+    },
+    {
+      "id": "putnam_2007_a1",
+      "status": "ok",
+      "gold_answer": "Show that the solution is the set \\{2/3, 3/2, (13 + \\sqrt{601})/12, (13 - \\sqrt{601})/12}.",
+      "elapsed": 35.12399888038635,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # symbols\n    a, x, y = sp.symbols('a x y')\n\n    # Define the function f(t) = a*t^2 + a*t + 1/24\n    f = lambda t: a*(t**2 + t) + sp.Rational(1,24)\n\n    # Polynomials for system:\n    # y = f(x), x = f(y), and f'(x)",
+      "elapsed_retry": 35.13049292564392,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # symbols\n    a, x, y = sp.symbols('a x y')\n\n    # Define the function f(t) = a*t^2 + a*t + 1/24\n    f = lambda t: a*(t**2 + t) + sp.Rational(1,24)\n\n    # Polynomials for system:\n    # y = f(x), x = f(y), and f'(x) = 1 / f'(y)\n    p1 = y - f(x)\n    p2 = x - f(y)\n    # Multiply the derivative equality to clear denominator:\n    # a*(2*x+1) * a*(2*y+1) = 1  => a**2*(2*x+1)*(2*y+1) - 1 = 0\n    p3 = a**2 * (2*x + 1) * (2*y + 1) - 1\n\n    # Compute Groebner basis with lex order elimining x,y\n    G = sp.groebner([p1, p2, p3], x, y, a, order='lex')\n\n    # Eliminate x,y to obtain polynomials only in a\n    try:\n        elim = G.eliminate(x, y)\n    except Exception:\n        # fallback: use polynomials in G and pick those independent of x,y\n        elim = [g for g in G if not (g.has(x) or g.has(y))]\n\n    # Ensure we have a univariate polynomial in a\n    poly_a = None\n    if isinstance(elim, list):\n        # choose non-constant polynomial(s) in a\n        polys_a = [sp.together(sp.expand(g)) for g in elim if not g.free_symbols - {a}]\n        if polys_a:\n            # multiply them to get a single polynomial (up to extraneous factors)\n            poly_a = sp.expand(sp.mul(*polys_a))\n    else:\n        if not (elim.free_symbols - {a}):\n            poly_a = sp.expand(elim)\n\n    if poly_a is None:\n        # As a fallback, solve the simpler diagonal condition:\n        # fixed point x with f(x)=x and derivative f'(x) = \u00b11\n        # Solve both cases and collect a\n        sols = set()\n        # case f'(x) = 1\n        eq1 = sp.Eq(a*(2*x+1), 1)\n        solx1 = sp.solve(eq1, x)\n        for solx in solx1:\n            poly = sp.simplify(a*solx**2 + (a-1)*solx + sp.Rational(1,24))\n            sols_a = sp.solve(sp.Eq(sp.simplify(poly), 0), a)\n            for s in sols_a:\n                sols.add(sp.nsimplify(s))\n        # case f'(x) = -1\n        eq2 = sp.Eq(a*(2*x+1), -1)\n        solx2 = sp.solve(eq2, x)\n        for solx in solx2:\n            poly = sp.simplify(a*solx**2 + (a-1)*solx + sp.Rational(1,24))\n            sols_a = sp.solve(sp.Eq(sp.simplify(poly), 0), a)\n            for s in sols_a:\n                sols.add(sp.nsimplify(s))\n        computed_alphas = []\n        for s in sols:\n            sval = complex(sp.N(s, 50))\n            if abs(sval.imag) < 1e-8:\n                computed_alphas.append(float(sval.real))\n    else:\n        # find numeric roots of poly_a\n        poly_a = sp.Poly(poly_a, a)\n        # remove constant factors\n        poly_a = sp.Poly(sp.factor(poly_a.as_expr()), a)\n        roots = sp.nroots(poly_a.as_expr(), n=15)\n        computed_alphas = []\n        for r in roots:\n            if abs(sp.im(r)) < 1e-8:\n                computed_alphas.append(float(sp.re(r)))\n\n    # Remove duplicates within tolerance and sort\n    tol = 1e-8\n    uniq = []\n    for v in computed_alphas:\n        if not any(abs(v - u) < 1e-7 for u in uniq):\n            uniq.append(v)\n    uniq.sort()\n    com",
+      "gold_verdict": null
+    },
+    {
+      "id": "putnam_2007_a2",
+      "status": "empty_response",
+      "gold_answer": "Show that the minimum is $4$.",
+      "elapsed": 36.01813578605652,
+      "raw_text_head": "",
+      "elapsed_retry": 50.94178032875061
+    },
+    {
+      "id": "putnam_2007_a4",
+      "status": "unverifiable",
+      "gold_answer": "Show that the desired polynomials $f$ are those of the form\n\\[\nf(n) = \\frac{1}{9}(10^c (9n+1)^d - 1)\n\\]\nfor integers $d \\geq 0$ and $c \\geq 1-d$.",
+      "elapsed": 24.805355072021484,
+      "raw_text_head": "UNVERIFIABLE",
+      "elapsed_retry": 39.29688787460327
+    },
+    {
+      "id": "putnam_2007_b1",
+      "status": "ok",
+      "gold_answer": "",
+      "elapsed": 23.18732213973999,
+      "script": "def verify(answer):\n    import random, re\n    random.seed(42)\n    if not isinstance(answer, str):\n        return False\n    s = answer.strip().lower()\n    # Accept answers that assert \"n=1\" (various phrasings) or just \"1\"\n    if re.search(r'\\bn\\s*=\\s*1\\b', s) or re.fullmatch(r'1', s) or 'only 1' in s or 'only n=1' in s:\n        claim_is_n_eq_1 = True\n    else:\n        claim_is_n_eq_1 = False\n\n    # If the candidate does not claim n=1, it's inconsistent with the problem's correct statement.\n    if not claim_is_n_eq_1:\n        return False\n\n    # Now test the claim on many random polynomials and n-values.\n    # For each randomly generated nonconstant polynomial with positive integer coefficients,\n    # check that for n=1 divisibility holds, and for n>1 up to some bound it does not.\n    def eval_poly(coeffs, x):\n        # coeffs: list a0, a1, ..., ak\n        total = 0\n        xp = 1\n        for a in coeffs:\n            total += a * xp\n            xp *= x\n        return total\n\n    num_polys = 100\n    max_n_test = 30\n    for _ in range(num_polys):\n        deg = random.randint(1, 6)  # nonconstant\n        coeffs = [random.randint(1, 8) for _ in range(deg + 1)]  # positive integer coefficients\n        # quick sanity\n        if all(c > 0 for c in coeffs) and len(coeffs) > 1:\n            # check n=1 must satisfy divisibility\n            f1 = eval_poly(coeffs, 1)\n            ff1 = eval_poly(coeffs, f1 + 1)\n            if ff1 % f1 != 0:\n                return False\n            # check n>1 up to bound => should NOT satisfy divisibility\n            for n in range(2, max_n_test + 1):\n                fn = eval_poly(coeffs, n)\n                # fn should be positive integer (it is)\n                ff = eval_poly(coeffs, fn + 1)\n                if ff % fn == 0:\n                    # Found a counterexample where n>1 works; claim false\n                    return False\n        else:\n            # shouldn't happen; skip\n            continue\n    # No counterexamples found in our randomized testing, accept the claim\n    return True",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2007_b2",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 24.923073053359985
+    },
+    {
+      "id": "putnam_2007_b3",
+      "status": "empty_response",
+      "gold_answer": "Prove that $x_{2007} = \\frac{2^{2006}}{\\sqrt{5}}(\\alpha^{3997}-\\alpha^{-3997})$, where $\\alpha = \\frac{1+\\sqrt{5}}{2}$.",
+      "elapsed": 30.000737190246582,
+      "raw_text_head": "",
+      "elapsed_retry": 50.28130292892456
+    },
+    {
+      "id": "putnam_2007_b4",
+      "status": "ok",
+      "gold_answer": "Show that the number of pairs is $2^{n+1}$.",
+      "elapsed": 29.806074142456055,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    from sympy import symbols, sympify, simplify, Eq, Integer\n\n    n = symbols('n')\n    # Preprocess if answer is a string: replace '^' with '**'\n    if isinstance(answer, str):\n        ans_str = answer.replace('^', '**')\n        try:\n       ",
+      "elapsed_retry": 40.26986908912659,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    from sympy import symbols, sympify, simplify, Eq, Integer\n\n    n = symbols('n')\n    # Preprocess if answer is a string: replace '^' with '**'\n    if isinstance(answer, str):\n        ans_str = answer.replace('^', '**')\n        try:\n            expr = sympify(ans_str)\n        except Exception:\n            # try to parse as integer literal string\n            try:\n                expr = Integer(int(answer))\n            except Exception:\n                return False\n    else:\n        try:\n            expr = sympify(answer)\n        except Exception:\n            # if cannot sympify (e.g., a lambda), try evaluating for sample n below by calling if callable\n            if callable(answer):\n                expr = answer\n            else:\n                return False\n\n    # Test on several random positive integers n\n    for val in [random.randint(1, 8) for _ in range(6)]:\n        expected = 2 ** (val + 1)\n        # Evaluate candidate expression at n=val\n        try:\n            if callable(expr):\n                lhs = expr(val)\n            else:\n                lhs = expr.subs(n, val)\n        except Exception:\n            try:\n                lhs = expr\n            except Exception:\n                return False\n        # Try to compare symbolically/numerically\n        try:\n            diff = simplify(lhs - expected)\n            if diff == 0:\n                continue\n            # numeric fallback\n            if abs(float(lhs) - float(expected)) < 1e-8:\n                continue\n            return False\n        except Exception:\n            try:\n                if float(lhs) == float(expected):\n                    continue\n                return False\n            except Exception:\n                return False\n    return True",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_2007_b5",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 24.523613929748535
+    },
+    {
+      "id": "putnam_1980_a2",
+      "status": "ok",
+      "gold_answer": "Show that the number is $(1+4r+6r^2)(1+4s+6s^2)$.",
+      "elapsed": 31.46646022796631,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # symbolic variables\n    r_sym, s_sym = sp.symbols('r s', integer=True, positive=True)\n    target = (1 + 4*r_sym) * (1 + 4*s_sym)\n\n    expr = None\n\n    # Try to interpret answer as a SymPy expression if possible\n  ",
+      "elapsed_retry": 24.81566309928894,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # symbolic variables\n    r_sym, s_sym = sp.symbols('r s', integer=True, positive=True)\n    target = (1 + 4*r_sym) * (1 + 4*s_sym)\n\n    expr = None\n\n    # Try to interpret answer as a SymPy expression if possible\n    if isinstance(answer, sp.Expr):\n        expr = answer\n    elif isinstance(answer, str):\n        try:\n            expr = sp.sympify(answer)\n        except Exception:\n            try:\n                expr = sp.sympify(answer.replace('^', '**'))\n            except Exception:\n                expr = None\n    else:\n        # try to sympify other types (like numbers, tuples, etc.)\n        try:\n            expr = sp.sympify(answer)\n        except Exception:\n            expr = None\n\n    # If we obtained a symbolic expression, check symbolic equality first\n    if expr is not None:\n        try:\n            diff = sp.simplify(sp.expand(expr - target))\n            if diff != 0:\n                return False\n        except Exception:\n            # Fall back to numeric testing below if symbolic check fails unexpectedly\n            pass\n\n    # Helper to evaluate the candidate for concrete r,s\n    def eval_candidate(rr, ss):\n        if callable(answer):\n            try:\n                val = answer(rr, ss)\n                return int(val)\n            except Exception:\n                return None\n        else:\n            if expr is not None:\n                try:\n                    val = expr.subs({r_sym: rr, s_sym: ss})\n                    # try to get an integer\n                    return int(sp.Integer(val))\n                except Exception:\n                    try:\n                        return int(sp.N(val))\n                    except Exception:\n                        return None\n            else:\n                # Try a last resort: treat answer as string, replace r/s, eval via sympy\n                try:\n                    a_str = str(answer)\n                    a_str = a_str.replace('^', '**')\n                    a_str = a_str.replace('r', str(rr)).replace('s', str(ss))\n                    val = sp.sympify(a_str)\n                    return int(val)\n                except Exception:\n                    return None\n\n    # Test on a variety of (r,s) pairs, including random ones\n    tests = [(1, 1), (1, 2), (2, 1), (3, 4)]\n    for _ in range(20):\n        tests.append((random.randint(1, 10), random.randint(1, 10)))\n    # make unique while preserving order\n    seen = set()\n    uniq_tests = []\n    for t in tests:\n        if t not in seen:\n            seen.add(t)\n            uniq_tests.append(t)\n\n    for rr, ss in uniq_tests:\n        cand = eval_candidate(rr, ss)\n        if cand is None:\n            return False\n        expected = (1 + 4*rr) * (1 + 4*ss)\n        if int(cand) != int(expected):\n            return False\n\n    return True",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1980_a3",
+      "status": "ok",
+      "gold_answer": "Show that the integral is $\\pi/4$.",
+      "elapsed": 28.476745128631592,
+      "script": "def verify(answer):\n    import math, re\n    s = answer.strip()\n    # If given as \"something = value\", take RHS\n    if '=' in s:\n        s = s.split('=', 1)[1].strip()\n    # Normalize common symbols\n    s = s.replace('\u03c0', 'pi').replace('Pi', 'pi').replace('^', '**')\n    s = re.sub(r'\\bsqrt\\b', 'math.sqrt', s)\n    # Replace standalone 'pi' with math.pi for eval\n    s_eval = re.sub(r'\\bpi\\b', 'math.pi', s)\n    # Try safe eval with math\n    try:\n        val = eval(s_eval, {\"__builtins__\": None, \"math\": math})\n    except Exception:\n        # Fallback: try sympy if available\n        try:\n            import sympy as sp\n            val = float(sp.sympify(s))\n        except Exception:\n            return False\n    target = math.pi / 4\n    try:\n        return abs(float(val) - target) < 1e-9\n    except Exception:\n        return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1980_a4",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 3.246004104614258
+    },
+    {
+      "id": "putnam_1980_a5",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 3.3790788650512695
+    },
+    {
+      "id": "putnam_1980_a6",
+      "status": "ok",
+      "gold_answer": "Show that $u=1/e$.",
+      "elapsed": 28.26344895362854,
+      "script": "def verify(answer):\n    import math\n    import sympy as sp\n    s = answer.strip()\n    # If there's an equals sign, take the right-hand side (e.g. \"u = 1/e\")\n    if '=' in s:\n        s = s.split('=', 1)[1].strip()\n    # Basic cleanup: LaTeX remnants, caret to python power\n    s = s.replace('^', '**')\n    for ch in ['$', '\\\\', '{', '}', '\\n']:\n        s = s.replace(ch, '')\n    # Map common textual forms\n    s = s.replace('exp', 'exp')  # leave exp as is for sympy\n    # Try to sympify with 'e' understood as Euler's number\n    try:\n        expr = sp.sympify(s, locals={'e': sp.E})\n        val = float(expr.evalf())\n    except Exception:\n        return False\n    target = math.e**-1\n    return abs(val - target) <= 1e-8",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1980_b1",
+      "status": "ok",
+      "gold_answer": "Show that the inequality holds if and only if $c \\geq 1/2$.",
+      "elapsed": 30.56744623184204,
+      "raw_text_head": "def verify(answer):\n    import re, random\n    random.seed(42)\n    from sympy import sympify, Rational\n\n    # The correct set of real c is: c >= 1/2\n    target = Rational(1, 2)\n\n    # Helper: try to parse a numeric expression to a SymPy Rational/Number\n    def parse_num(token):\n        try:\n         ",
+      "elapsed_retry": 31.035525798797607,
+      "script": "def verify(answer):\n    import re, random\n    random.seed(42)\n    from sympy import sympify, Rational\n\n    # The correct set of real c is: c >= 1/2\n    target = Rational(1, 2)\n\n    # Helper: try to parse a numeric expression to a SymPy Rational/Number\n    def parse_num(token):\n        try:\n            return sympify(token)\n        except Exception:\n            return None\n\n    # If answer is given as a SymPy/Rational/number\n    if isinstance(answer, (int, float)) :\n        # numeric answers (a single number) are not the correct form\n        return False\n    try:\n        # sympy numbers (Rational, Float, etc.)\n        if hasattr(answer, 'is_Number') and answer.is_Number:\n            return False\n    except Exception:\n        pass\n\n    # If answer is a tuple/list that might represent an interval like (1/2, oo) or [1/2, None]\n    if isinstance(answer, (list, tuple)):\n        if len(answer) == 2:\n            a, b = answer\n            # Accept forms like (1/2, None) or [1/2, float('inf')]\n            parsed_a = parse_num(a)\n            # check that upper bound is infinite\n            upper_infinite = (b is None) or (str(b).lower() in ('inf', 'infty', 'oo', 'infinity')) or (hasattr(b, 'is_infinite') and getattr(b, 'is_infinite'))\n            if parsed_a is not None and upper_infinite:\n                # require inclusive left endpoint: user should use >= so tuple/list doesn't tell inclusivity;\n                # accept only if parsed_a == 1/2 and user used a list (which we can't detect). Be conservative: reject ambiguous.\n                return parsed_a == target and False == True  # ambiguous -> force False\n        return False\n\n    # If answer is a string, try to match common notations\n    if isinstance(answer, str):\n        s = answer.strip()\n        # normalize unicode\n        s = s.replace('\u2265', '>=').replace('\u2264', '<=').replace('\u221e', 'inf').replace('\u2208', ' in ')\n        s = s.replace('\\\\ge', '>=').replace('\\\\le', '<=')\n\n        # 1) look for a >= pattern\n        m = re.search(r'>=\\s*([^\\s,;\\)\\]\\}]+)', s)\n        if m:\n            val = parse_num(m.group(1))\n            if val is not None:\n                try:\n                    return sympify(val - target) == 0\n                except Exception:\n                    return False\n\n        # 2) look for interval notation like [a, inf) or [a,inf]\n        m = re.search(r'([\\[\\(])\\s*([^\\s,;\\)\\]\\}]+)\\s*,\\s*(inf|infty|oo|infinity)\\s*([\\)\\]])', s, flags=re.I)\n        if m:\n            left_bracket, a_token, _, right_bracket = m.group(1), m.group(2), m.group(3), m.group(4)\n            a = parse_num(a_token)\n            if a is None:\n                return False\n            # must be inclusive on left: '['\n            if left_bracket != '[':\n                return False\n            return a == target\n\n        # 3) look for set membership forms like \"c in [1/2, inf)\"\n        m = re.search(r'in\\s+([\\[\\(]\\s*[^\\s,;\\)\\]\\}]+\\s*,\\s*(inf|infty|oo|infinity)\\s*[\\)\\]])', s, flags=re.I)\n        if m:\n            interval = m",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1980_b3",
+      "status": "ok",
+      "gold_answer": "Show that $u_n>0$ for all $n \\geq 0$ if and only if $a \\geq 3$.",
+      "elapsed": 31.580533981323242,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import re\n    import sympy as sp\n\n    a = sp.symbols('a', real=True)\n\n    # canonical correct predicate: a >= 3\n    def correct_val(x):\n        return float(x) >= 3.0\n\n    # normalize string if possible\n    if not isinstance(answer, str):",
+      "elapsed_retry": 39.38139200210571,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import re\n    import sympy as sp\n\n    a = sp.symbols('a', real=True)\n\n    # canonical correct predicate: a >= 3\n    def correct_val(x):\n        return float(x) >= 3.0\n\n    # normalize string if possible\n    if not isinstance(answer, str):\n        ans_str = str(answer)\n    else:\n        ans_str = answer\n\n    # Pre-clean common LaTeX or unicode variants\n    s = ans_str.replace('$', '')\n    s = s.replace('\\\\geq', '>=').replace('\\\\ge', '>=').replace('\u2265', '>=').replace(u'\\u2265', '>=')\n    s = s.replace('\\\\leq', '<=').replace('\\\\le', '<=').replace('\u2264', '<=').replace(u'\\u2264', '<=')\n    s = s.replace('\\\\infty', 'oo').replace('\\\\in', ' in ').replace('\u221e', 'oo')\n    s = s.strip()\n\n    # Try to sympify the cleaned answer using sympy, providing a and oo\n    candidate_expr = None\n    try:\n        candidate_expr = sp.sympify(s, locals={'a': a, 'oo': sp.oo, 'infty': sp.oo})\n    except Exception:\n        candidate_expr = None\n\n    def eval_candidate_by_sympy(val):\n        # Return True/False if candidate_expr can be interpreted at numeric val, else None\n        try:\n            if isinstance(candidate_expr, sp.Basic):\n                # If it's a Set, use contains\n                if isinstance(candidate_expr, sp.Set):\n                    res = candidate_expr.contains(sp.nsimplify(val))\n                    if res in (sp.true, True):\n                        return True\n                    if res in (sp.false, False):\n                        return False\n                    # try numeric contains\n                    return bool(candidate_expr.contains(val))\n                # If it's a relational or boolean expression involving 'a'\n                # Substitute numeric value\n                subsed = candidate_expr.subs(a, val)\n                # Evaluate to boolean\n                b = sp.simplify(subsed)\n                # Try to get Python bool\n                if isinstance(b, (sp.BooleanTrue, sp.BooleanFalse)):\n                    return bool(b)\n                # If it's a relational after substitution, try bool()\n                try:\n                    return bool(b)\n                except Exception:\n                    return None\n            else:\n                return None\n        except Exception:\n            return None\n\n    def eval_candidate_by_regex(val):\n        # Try interval like [3, oo) or (3, oo), allow \"Interval(3, oo)\"\n        t = s\n        # Interval(...) case\n        m = re.search(r'Interval\\s*\\(\\s*([+-]?\\d+(\\.\\d+)?)\\s*,\\s*(oo|infty|inf|[+-]?\\d+(\\.\\d+)?)\\s*\\)', t, re.IGNORECASE)\n        if m:\n            lo = float(m.group(1))\n            hi_tok = m.group(3).lower()\n            include_lo = True\n            # check for square bracket in original string\n            if '[' in t and '(' in t and t.find('[') < t.find(','):\n                include_lo = True\n            # if it's Interval we assume closed at left in this parsing unless specified otherwise\n            if hi_tok in ('oo', 'inf",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1980_b4",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 31.891388177871704,
+      "raw_text_head": "UNVERIFIABLE",
+      "elapsed_retry": 7.8557140827178955
+    },
+    {
+      "id": "putnam_1980_b5",
+      "status": "unverifiable",
+      "gold_answer": "$S_t$ is closed under multiplication if and only if $1 \\ge t$.",
+      "elapsed": 30.11775779724121,
+      "raw_text_head": "UNVERIFIABLE",
+      "elapsed_retry": 15.726548194885254
+    },
+    {
+      "id": "putnam_1980_b6",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 3.6775951385498047
+    },
+    {
+      "id": "putnam_1984_a2",
+      "status": "ok",
+      "gold_answer": "Show that the sum converges to $2$.",
+      "elapsed": 33.184487104415894,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Parse the answer as a rational number if possible\n    try:\n        ans = sp.Rational(answer)\n    except Exception:\n        try:\n            x = sp.sympify(answer)\n            if x.is_Rational:\n                ans",
+      "elapsed_retry": 35.796749114990234,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Parse the answer as a rational number if possible\n    try:\n        ans = sp.Rational(answer)\n    except Exception:\n        try:\n            x = sp.sympify(answer)\n            if x.is_Rational:\n                ans = sp.Rational(x)\n            else:\n                ans = sp.nsimplify(x)\n                if not ans.is_Rational:\n                    return False\n                ans = sp.Rational(ans)\n        except Exception:\n            return False\n\n    # Compute partial sum exactly (rational arithmetic)\n    N = 60  # cutoff; tail bound will be used to certify equality\n    S = sp.Rational(0)\n    for k in range(1, N + 1):\n        num = sp.Rational(6) ** k\n        d1 = sp.Rational(3) ** (k + 1) - sp.Rational(2) ** (k + 1)\n        d2 = sp.Rational(3) ** k - sp.Rational(2) ** k\n        term = num / (d1 * d2)\n        S += term\n\n    # Tail bound: for k>=1, 3^k - 2^k >= 3^{k-1}, 3^{k+1}-2^{k+1} >= 3^k,\n    # so term <= 3*(2/3)^k, hence tail <= 9*(2/3)^(N+1)\n    tail = sp.Rational(9) * (sp.Rational(2) / sp.Rational(3)) ** (N + 1)\n\n    return sp.Abs(S - ans) <= tail",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1984_a3",
+      "status": "ok",
+      "gold_answer": "Show that $\\lim_{x \\to a} \\frac{\\det M_n}{(x-a)^{2n-2}}=n^2(a^2-b^2)$.",
+      "elapsed": 28.895664930343628,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # symbols\n    a, b, n = sp.symbols('a b n')\n    x = sp.symbols('x')\n\n    # expected result\n    expected = n**2 * (a**2 - b**2)\n\n    # parse answer\n    try:\n        if isinstance(answer, str):\n            expr = sp.",
+      "elapsed_retry": 22.064528942108154,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # symbols\n    a, b, n = sp.symbols('a b n')\n    x = sp.symbols('x')\n\n    # expected result\n    expected = n**2 * (a**2 - b**2)\n\n    # parse answer\n    try:\n        if isinstance(answer, str):\n            expr = sp.sympify(answer)\n        else:\n            expr = sp.sympify(answer)\n    except Exception:\n        return False\n\n    # Check symbolic equality: simplify difference and test zero\n    try:\n        diff = sp.simplify(sp.expand(expr - expected))\n        # sp.simplify may not reduce to exact 0 object; use .equals(0) as fallback\n        sym_ok = (diff == 0) or (hasattr(diff, 'equals') and diff.equals(0))\n    except Exception:\n        sym_ok = False\n\n    if not sym_ok:\n        return False\n\n    # Numeric substitution tests for several random choices\n    try:\n        for _ in range(10):\n            n_val = random.randint(1, 10)\n            # pick a and b so that a != b\n            a_val = random.uniform(-5, 5)\n            b_val = random.uniform(-5, 5)\n            if abs(a_val - b_val) < 1e-6:\n                b_val += 1.2345  # perturb to avoid equality\n\n            val_expr = complex(sp.N(expr.subs({a: a_val, b: b_val, n: n_val})))\n            val_expected = complex(sp.N(expected.subs({a: a_val, b: b_val, n: n_val})))\n            # compare with relative tolerance\n            if abs(val_expr - val_expected) > 1e-6 * max(1.0, abs(val_expected)):\n                return False\n    except Exception:\n        return False\n\n    return True",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1984_a5",
+      "status": "ok",
+      "gold_answer": "Show that the integral we desire is $1!9!8!4!/25!$.",
+      "elapsed": 25.880001068115234,
+      "raw_text_head": "def verify(answer):\n    import re\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # correct value: 1! * 9! * 8! * 4! / 25!\n    correct = sp.factorial(1) * sp.factorial(9) * sp.factorial(8) * sp.factorial(4) / sp.factorial(25)\n\n    def is_positive_int(x):\n        try:\n            xi",
+      "elapsed_retry": 23.0281081199646,
+      "script": "def verify(answer):\n    import re\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # correct value: 1! * 9! * 8! * 4! / 25!\n    correct = sp.factorial(1) * sp.factorial(9) * sp.factorial(8) * sp.factorial(4) / sp.factorial(25)\n\n    def is_positive_int(x):\n        try:\n            xi = int(x)\n            return xi > 0 and xi == x\n        except Exception:\n            return False\n\n    # Case 1: tuple or list of 5 integers (a,b,c,d,n)\n    if isinstance(answer, (list, tuple)):\n        if len(answer) != 5:\n            return False\n        try:\n            a, b, c, d, n = map(int, answer)\n        except Exception:\n            return False\n        if not all(x > 0 for x in (a, b, c, d, n)):\n            return False\n        cand = sp.factorial(a) * sp.factorial(b) * sp.factorial(c) * sp.factorial(d) / sp.factorial(n)\n        return sp.simplify(cand - correct) == 0\n\n    # Case 2: string like \"1!9!8!4!/25!\" or with separators\n    if isinstance(answer, str):\n        s = answer.strip()\n        # Basic form check: must contain exactly one '/'\n        if s.count('/') != 1:\n            return False\n        num_part, den_part = s.split('/', 1)\n        # find all integers followed by '!' in numerator and denominator\n        num_matches = re.findall(r'(\\d+)\\s*!', num_part)\n        den_matches = re.findall(r'(\\d+)\\s*!', den_part)\n        # Must have 4 numerator factorials and 1 denominator factorial (as required by problem form)\n        if len(num_matches) != 4 or len(den_matches) != 1:\n            return False\n        nums = [int(m) for m in num_matches]\n        dens = [int(m) for m in den_matches]\n        if not all(n > 0 for n in nums + dens):\n            return False\n        # Try to create a sympy expression from the string by replacing \"k!\" -> factorial(k)\n        def repl(m):\n            return \"factorial(%s)\" % m.group(1)\n        s_fact = re.sub(r'(\\d+)\\s*!', repl, s)\n        try:\n            expr = sp.sympify(s_fact, locals={'factorial': sp.factorial})\n        except Exception:\n            return False\n        return sp.simplify(expr - correct) == 0\n\n    # Case 3: sympy expression\n    if isinstance(answer, sp.Expr):\n        expr = answer\n        # Get numerator and denominator\n        num, den = sp.fraction(sp.simplify(expr))\n        # find factorial occurrences in numerator and denominator\n        facs_num = [f for f in num.atoms(sp.Function) if getattr(f, 'func', None) == sp.factorial]\n        facs_den = [f for f in den.atoms(sp.Function) if getattr(f, 'func', None) == sp.factorial]\n        # Require exactly 4 factorials in numerator and 1 in denominator (per problem form)\n        if len(facs_num) != 4 or len(facs_den) != 1:\n            return False\n        # check that their arguments are positive integers\n        try:\n            args_num = [int(f.args[0]) for f in facs_num]\n            args_den = [int(facs_den[0].args[0])]\n        except Exception:\n            return False\n        if not all(a > 0 for a in args_num + args_den):\n     ",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1984_a6",
+      "status": "ok",
+      "gold_answer": "Show that the least such $p$ is $p=4$.",
+      "elapsed": 27.775658130645752,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Last nonzero digit of n! using known recurrence:\n    # D(0)=1, and for n>0: D(n) = D(n//5) * D(n%5) * 2^{n//5} (mod 10)\n    small = [1, 1, 2, 6, 4]\n    def lnzd(n):\n        n = int(n)\n        if n < 5:\n          ",
+      "elapsed_retry": 34.443986892700195,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Last nonzero digit of n! using known recurrence:\n    # D(0)=1, and for n>0: D(n) = D(n//5) * D(n%5) * 2^{n//5} (mod 10)\n    small = [1, 1, 2, 6, 4]\n    def lnzd(n):\n        n = int(n)\n        if n < 5:\n            return small[n] % 10\n        return (lnzd(n // 5) * small[n % 5] * pow(2, n // 5, 10)) % 10\n\n    # Generate a random partition of s into distinct nonnegative integers.\n    # Retry until success (should always be possible).\n    def random_distinct_partition(s):\n        if s == 0:\n            return [0]\n        for _ in range(200):  # attempts\n            remaining = s\n            parts = []\n            # consider numbers from s down to 0\n            for i in range(s, -1, -1):\n                if remaining == 0:\n                    break\n                # if we must take i to reach remaining, force it\n                if i == remaining:\n                    parts.append(i)\n                    remaining -= i\n                elif i < remaining:\n                    # decide probabilistically but ensure feasibility:\n                    # maximum sum of numbers < i is (i-1)+...+0 = i*(i-1)/2\n                    max_possible = (i - 1) * i // 2\n                    if max_possible >= (remaining - i):\n                        if random.random() < 0.5:\n                            parts.append(i)\n                            remaining -= i\n                    # else skip (can't include i)\n                # else i > remaining: skip\n            if remaining == 0:\n                # ensure distinctness and nonnegativity holds by construction\n                return parts\n        # fallback deterministic greedy: take largest possible each time\n        remaining = s\n        parts = []\n        i = s\n        while i >= 0 and remaining > 0:\n            if i <= remaining:\n                parts.append(i)\n                remaining -= i\n            i -= 1\n        if remaining == 0:\n            return parts\n        # As last resort, single part [s]\n        return [s]\n\n    # Verify part (a) empirically for many s and random decompositions:\n    S_test = 40\n    trials_per_s = 15\n    for s in range(1, S_test + 1):\n        # compute reference value using canonical representation {s}\n        n_ref = pow(5, s)\n        ref = lnzd(n_ref)\n        for _ in range(trials_per_s):\n            parts = random_distinct_partition(s)\n            # compute n = sum 5^{ai}\n            n = sum(pow(5, ai) for ai in parts)\n            val = lnzd(n)\n            if val != ref:\n                return False  # Part (a) fails for this sample\n\n    # Now define g(s) = lnzd(5^s) (canonical choice)\n    MAX_S = 300\n    g = [None] * (MAX_S + 1)\n    for s in range(1, MAX_S + 1):\n        g[s] = lnzd(pow(5, s))\n\n    # Find minimal positive period p such that g(s)=g(s+p) for all s>=1 up to tested range\n    minimal_p = None\n    for p in range(1, 101):  # search up to 100\n        ok = True\n        for s in range(1, MAX_S - p",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1984_b1",
+      "status": "ok",
+      "gold_answer": "Show that we can take $P(x)=x+3$ and $Q(x)=-x-2$.",
+      "elapsed": 26.909508228302002,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # expected polynomials: P(n) = n+3, Q(n) = -n-2\n    n = sp.symbols('n')\n    P_expected = n + 3\n    Q_expected = -n - 2\n\n    # answer should be a pair (P, Q)\n    try:\n        if not (isinstance(answer, (list, tuple)",
+      "elapsed_retry": 27.527533054351807,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # expected polynomials: P(n) = n+3, Q(n) = -n-2\n    n = sp.symbols('n')\n    P_expected = n + 3\n    Q_expected = -n - 2\n\n    # answer should be a pair (P, Q)\n    try:\n        if not (isinstance(answer, (list, tuple)) and len(answer) == 2):\n            return False\n        P_ans_raw, Q_ans_raw = answer\n    except Exception:\n        return False\n\n    def to_symexpr(obj):\n        # If it's a sympy expression already, return it.\n        if isinstance(obj, sp.Basic):\n            return obj\n        # If it's a string, try to sympify it\n        if isinstance(obj, str):\n            return sp.sympify(obj, locals={'n': n})\n        # If it's a number, convert to sympy Integer/Rational\n        if isinstance(obj, (int, float, complex)):\n            return sp.sympify(obj)\n        # If it's callable, we cannot sympify directly; signal by returning None\n        if callable(obj):\n            return None\n        # Otherwise try sympify\n        try:\n            return sp.sympify(obj, locals={'n': n})\n        except Exception:\n            return None\n\n    P_expr = to_symexpr(P_ans_raw)\n    Q_expr = to_symexpr(Q_ans_raw)\n\n    # If both converted to symbolic, check polynomial equality directly\n    if P_expr is not None and Q_expr is not None:\n        try:\n            if sp.simplify(P_expr - P_expected) != 0:\n                return False\n            if sp.simplify(Q_expr - Q_expected) != 0:\n                return False\n        except Exception:\n            return False\n    else:\n        # Fall back to numeric checks for many n values\n        def eval_obj_at(obj, k):\n            if callable(obj):\n                return obj(k)\n            else:\n                expr = to_symexpr(obj)\n                if expr is None:\n                    raise ValueError(\"Cannot evaluate object\")\n                return int(sp.Integer(expr.subs(n, k)))\n        try:\n            for k in list(range(1, 21)) + [random.randint(21, 50) for _ in range(5)]:\n                if int(eval_obj_at(P_ans_raw, k)) != int(P_expected.subs(n, k)):\n                    return False\n                if int(eval_obj_at(Q_ans_raw, k)) != int(Q_expected.subs(n, k)):\n                    return False\n        except Exception:\n            return False\n\n    # Additionally verify the recurrence holds for several n (sanity check)\n    def f_of(m):\n        # compute 1! + 2! + ... + m!\n        if m < 1:\n            return 0\n        res = 0\n        fact = 1\n        for k in range(1, m + 1):\n            fact *= k\n            res += fact\n        return res\n\n    # function to evaluate P and Q at integer k\n    def eval_PQ_at(expr_or_callable, k):\n        if callable(expr_or_callable):\n            return int(expr_or_callable(k))\n        expr = to_symexpr(expr_or_callable)\n        if expr is None:\n            raise ValueError(\"Cannot evaluate P/Q\")\n        return int(sp.Integer(expr.subs(n, k)))\n\n    try:\n        test_ns = list(range(1, 25)) + [rand",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1984_b2",
+      "status": "ok",
+      "gold_answer": "Show that the minimum value is $8$.",
+      "elapsed": 44.39538788795471,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n    sp.mpmath.mp.dps = 60  # high precision for solving\n    \n    # Symbols and function\n    u, v = sp.symbols('u v', real=True)\n    f_sym = (u - v)**2 + (sp.sqrt(2 - u**2) - sp.Rational(9,1)/v)**2\n    dfdu = sp.diff(f_s",
+      "elapsed_retry": 18.697244882583618,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n    sp.mpmath.mp.dps = 60  # high precision for solving\n    \n    # Symbols and function\n    u, v = sp.symbols('u v', real=True)\n    f_sym = (u - v)**2 + (sp.sqrt(2 - u**2) - sp.Rational(9,1)/v)**2\n    dfdu = sp.diff(f_sym, u)\n    dfdv = sp.diff(f_sym, v)\n    \n    # Python-evaluable version for quick sampling\n    f_num = sp.lambdify((u, v), f_sym, 'mpmath')\n    \n    # Domain bounds\n    import math\n    u_min, u_max = 1e-6, math.sqrt(2) - 1e-6\n    v_min, v_max = 1e-6, 20.0\n    \n    # Coarse random sampling to find good starting points\n    best = []\n    for _ in range(250):\n        uu = random.random() * (u_max - u_min) + u_min\n        vv = random.random() * (v_max - v_min) + v_min\n        try:\n            val = float(f_num(uu, vv))\n        except Exception:\n            continue\n        best.append((val, uu, vv))\n    if not best:\n        return False\n    best.sort()\n    starts = [ (b[1], b[2]) for b in best[:10] ]  # top 10 starts\n    \n    # Also include some deterministic starts\n    starts.extend([\n        (0.5*(u_max+u_min), 1.0),\n        (0.9*u_max, 1.0),\n        (0.1*u_max + 0.9*u_min, 5.0),\n    ])\n    \n    found_vals = []\n    for (u0, v0) in starts:\n        try:\n            # use nsolve to solve the gradient equations\n            sol = sp.nsolve([dfdu, dfdv], [u, v], [u0, v0], tol=1e-14, maxsteps=200)\n            su = complex(sol[0])\n            sv = complex(sol[1])\n            # Use only if nearly real\n            if abs(su.imag) < 1e-8 and abs(sv.imag) < 1e-8:\n                su_real = float(su.real)\n                sv_real = float(sv.real)\n                # Check domain\n                if su_real > 0 and su_real < math.sqrt(2) and sv_real > 0:\n                    try:\n                        val = float(f_num(su_real, sv_real))\n                        found_vals.append((val, su_real, sv_real))\n                    except Exception:\n                        pass\n        except Exception:\n            continue\n    \n    # If no critical point found, fall back to best sampled value\n    if found_vals:\n        found_vals.sort()\n        min_val = found_vals[0][0]\n    else:\n        # take minimum from sampling\n        best.sort()\n        min_val = best[0][0]\n    \n    # As a safety, do a small local grid around the found minimizer to ensure it's not an artifact\n    try:\n        u_cand = found_vals[0][1] if found_vals else best[0][1]\n        v_cand = found_vals[0][2] if found_vals else best[0][2]\n        # grid search around candidate\n        for du in [ -1e-3, 0, 1e-3, -1e-2, 1e-2 ]:\n            for dv in [ -1e-3, 0, 1e-3, -1e-2, 1e-2 ]:\n                uu = u_cand + du\n                vv = v_cand + dv\n                if uu <= 0 or uu >= math.sqrt(2) or vv <= 0:\n                    continue\n                try:\n                    val = float(f_num(uu, vv))\n                    if val < min_val:\n                        min_val = val\n                except Exception:\n         ",
+      "gold_verdict": null
+    },
+    {
+      "id": "putnam_1984_b3",
+      "status": "ok",
+      "gold_answer": "Show that the statement is true.",
+      "elapsed": 29.539778232574463,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy  # imported as requested; not required for the checks below\n\n    # answer should be a binary operation table on F = {0,...,n-1}\n    # represented as a list/tuple of n lists/tuples each of length n,\n    # where answer[a][b] is",
+      "elapsed_retry": 26.860086917877197,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy  # imported as requested; not required for the checks below\n\n    # answer should be a binary operation table on F = {0,...,n-1}\n    # represented as a list/tuple of n lists/tuples each of length n,\n    # where answer[a][b] is the value of a*b (an integer in 0..n-1).\n    try:\n        n = len(answer)\n    except Exception:\n        return False\n    if n < 2:\n        return False\n\n    # Check structure: each row length n and entries integers in 0..n-1\n    for row in answer:\n        if not (hasattr(row, \"__len__\") and len(row) == n):\n            return False\n        for v in row:\n            if not isinstance(v, int):\n                return False\n            if not (0 <= v < n):\n                return False\n\n    # Right cancellation: for each fixed z, the map x -> x*z is injective (hence bijective)\n    for z in range(n):\n        images = [answer[x][z] for x in range(n)]\n        if len(set(images)) != n:\n            return False\n\n    # No associativity anywhere: for all x,y,z we require\n    # x*(y*z) != (x*y)*z\n    for x in range(n):\n        for y in range(n):\n            for z in range(n):\n                left = answer[x][ answer[y][z] ]\n                right = answer[ answer[x][y] ][ z ]\n                if left == right:\n                    return False\n\n    return True",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1984_b5",
+      "status": "ok",
+      "gold_answer": "Show that $\\sum_{k=0}^{2^m-1} (-1)^{d(k)}k^m=(-1)^m2^{m(m-1)/2}m!$.",
+      "elapsed": 29.088363885879517,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    m = sp.symbols('m', integer=True, nonnegative=True)\n\n    # compute the target sum S(m) = sum_{k=0}^{2^m-1} (-1)^{d(k)} k^m\n    def popcount(n):\n        return n.bit_count()  # Python 3.8+\n\n    def S_of(mval):\n     ",
+      "elapsed_retry": 54.382795095443726,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    m = sp.symbols('m', integer=True, nonnegative=True)\n\n    # compute the target sum S(m) = sum_{k=0}^{2^m-1} (-1)^{d(k)} k^m\n    def popcount(n):\n        return n.bit_count()  # Python 3.8+\n\n    def S_of(mval):\n        if mval < 0:\n            raise ValueError(\"m must be nonnegative\")\n        total = 0\n        N = 1 << mval  # 2**mval\n        for k in range(N):\n            total += ((-1) ** popcount(k)) * (k ** mval)\n        return int(total)\n\n    # Choose test m-values (including small ones). Up to 8 is comfortable (2^8=256).\n    test_ms = list(range(0, 9))\n\n    # Helper to evaluate candidate answer for integer mval\n    def eval_answer_at(answer, mval):\n        # If answer is a tuple (a, f_expr, g_expr) interpret as (-1)^m * a^{f(m)} * (g(m))!\n        if isinstance(answer, (tuple, list)) and len(answer) == 3:\n            a, f_expr, g_expr = answer\n            # check a is integer-like\n            try:\n                a_int = int(a)\n            except Exception:\n                raise ValueError(\"Tuple form: first entry must be integer-valued\")\n            # evaluate f and g\n            f_sub = sp.sympify(f_expr).subs(m, mval)\n            g_sub = sp.sympify(g_expr).subs(m, mval)\n            if not (sp.nsimplify(f_sub).is_integer and sp.nsimplify(g_sub).is_integer):\n                raise ValueError(\"f(m) and g(m) must evaluate to integers for test m\")\n            f_int = int(f_sub)\n            g_int = int(g_sub)\n            if g_int < 0:\n                raise ValueError(\"g(m) must be nonnegative for test m\")\n            # compute value\n            val = (-1) ** mval * pow(a_int, f_int) * sp.factorial(g_int)\n            return int(sp.simplify(val))\n        # If answer is a sympy Expr or string, try to sympify and substitute\n        if isinstance(answer, str):\n            ans_expr = sp.sympify(answer)\n            val = ans_expr.subs(m, mval)\n            if val.has(sp.factorial):\n                val = sp.simplify(val)\n            # convert to integer if possible\n            if val.is_integer:\n                return int(val)\n            else:\n                try:\n                    return int(sp.nsimplify(val))\n                except Exception:\n                    raise ValueError(\"Couldn't evaluate string answer to integer at m=%d\" % mval)\n        if isinstance(answer, sp.Expr):\n            val = answer.subs(m, mval)\n            val = sp.simplify(val)\n            if val.is_integer:\n                return int(val)\n            try:\n                return int(val)\n            except Exception:\n                raise ValueError(\"Couldn't evaluate sympy expression to integer at m=%d\" % mval)\n        # If answer is callable\n        if callable(answer):\n            val = answer(mval)\n            if isinstance(val, sp.Expr):\n                val = sp.simplify(val)\n            try:\n                return int(val)\n            except Exception:\n                raise ValueError(\"Co",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_2009_a1",
+      "status": "unverifiable",
+      "gold_answer": "Prove that $f$ is identically $0$.",
+      "elapsed": 26.900421142578125,
+      "raw_text_head": "UNVERIFIABLE",
+      "elapsed_retry": 6.129454851150513
+    },
+    {
+      "id": "putnam_2009_a3",
+      "status": "ok",
+      "gold_answer": "Show that the limit is 0.",
+      "elapsed": 27.53329610824585,
+      "script": "def verify(answer):\n    import re, math\n    try:\n        import numpy as np\n    except Exception:\n        # If numpy isn't available in the execution environment, fall back to simple textual checks\n        s = answer.strip().lower()\n        if re.search(r'\\bzero\\b', s):\n            return True\n        m = re.search(r'[-+]?\\d+(\\.\\d*)?([eE][-+]?\\d+)?', s)\n        if m:\n            try:\n                return abs(float(m.group(0))) < 1e-12\n            except:\n                return False\n        return False\n\n    s = answer.strip().lower()\n    # Try to find a numeric token first\n    m = re.search(r'[-+]?\\d+(\\.\\d*)?([eE][-+]?\\d+)?', s)\n    candidate_zero = False\n    if m:\n        try:\n            val = float(m.group(0))\n            if abs(val) < 1e-12:\n                candidate_zero = True\n            else:\n                return False\n        except:\n            pass\n    else:\n        # check words like \"zero\"\n        if re.search(r'\\bzero\\b', s):\n            candidate_zero = True\n        else:\n            return False\n\n    if not candidate_zero:\n        return False\n\n    # Numeric verification of the key property: for n >= 3 the matrix has rank <= 2,\n    # so determinant of n x n matrix is 0. We'll test for several n values.\n    import math\n    def build_matrix(n):\n        A = np.zeros((n, n), dtype=float)\n        k = 1\n        for i in range(n):\n            for j in range(n):\n                A[i, j] = math.cos(k)\n                k += 1\n        return A\n\n    for n in (3, 4, 5, 6):\n        A = build_matrix(n)\n        rank = np.linalg.matrix_rank(A, tol=1e-10)\n        if rank > 2:\n            return False\n    return True",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2009_a4",
+      "status": "unverifiable",
+      "gold_answer": "Prove that $S$ need not contain all rationals.",
+      "elapsed": 15.434022188186646
+    },
+    {
+      "id": "putnam_2009_a5",
+      "status": "ok",
+      "gold_answer": "Show that the answer is no such finite abelian group exists.",
+      "elapsed": 21.60671901702881,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Expect answer to be a description of an abelian 2-group as a list/tuple.\n    # Two accepted formats:\n    #  - list of exponents [lambda1, lambda2, ...] meaning G = Z_{2^{lambda1}} x ...\n    #  - list of orders [2",
+      "elapsed_retry": 56.73566699028015,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Expect answer to be a description of an abelian 2-group as a list/tuple.\n    # Two accepted formats:\n    #  - list of exponents [lambda1, lambda2, ...] meaning G = Z_{2^{lambda1}} x ...\n    #  - list of orders [2^lambda1, 2^lambda2, ...] (powers of two) \u2014 will be converted to exponents\n    #\n    # The function returns True iff the described finite abelian group has product of element orders = 2^2009.\n    if isinstance(answer, str):\n        return False\n    if not isinstance(answer, (list, tuple)):\n        return False\n    if len(answer) == 0:\n        return False\n    # Convert entries to integers\n    try:\n        arr = [int(x) for x in answer]\n    except Exception:\n        return False\n    # helper: check power of two\n    def is_pow2(n):\n        return n > 0 and (n & (n - 1)) == 0\n    # determine exponents\n    if all(is_pow2(n) for n in arr):\n        lambdas = [n.bit_length() - 1 for n in arr]\n    else:\n        # treat entries as exponents\n        if any(n < 1 for n in arr):\n            return False\n        lambdas = arr\n    # compute S = sum over all group elements of (exponent m such that ord = 2^m)\n    # Using formula:\n    # S = sum_{m>=1} m * (2^{sum_i min(lambda_i, m)} - 2^{sum_i min(lambda_i, m-1)})\n    t = max(lambdas)\n    S = 0\n    for m in range(1, t + 1):\n        s1 = sum(min(l, m) for l in lambdas)\n        s0 = sum(min(l, m - 1) for l in lambdas)\n        diff = pow(2, s1) - pow(2, s0)\n        S += m * diff\n    return S == 2009",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_2009_b1",
+      "status": "ok",
+      "gold_answer": "",
+      "elapsed": 12.370131969451904,
+      "script": "def verify(answer):\n    \"\"\"\n    Heuristic verifier for the claim:\n    \"Every positive rational number can be written as a quotient of products\n    of factorials of (not necessarily distinct) primes.\"\n\n    The verifier accepts short natural-language claims. It returns True iff the\n    provided answer-string asserts the correct universal statement (or an\n    equivalent short affirmative token). This is necessarily heuristic: full\n    formal verification of a proof is beyond the intended scope here.\n    \"\"\"\n    if not isinstance(answer, str):\n        return False\n    s = answer.strip().lower()\n\n    # Accept some simple affirmative tokens meaning the universal statement is true.\n    if s in {\"true\", \"yes\", \"correct\", \"ok\", \"y\"}:\n        return True\n\n    # Common phrasings asserting the result.\n    if (\"every positive rational\" in s or \"every positive rational number\" in s\n        or \"all positive rationals\" in s or \"all positive rational numbers\" in s\n        or \"every positive rational number can be\" in s):\n        # require mention of primes and factorial(s) (or factorial) or equivalent wording\n        if (\"prime\" in s and (\"factorial\" in s or \"factorials\" in s)\n            or \"quotient of products of factorials\" in s\n            or \"quotient of products of factorails\" in s  # tolerate common misspelling\n           ):\n            return True\n\n    # Slightly different acceptable formulations\n    if (\"every rational\" in s or \"all rationals\" in s) and (\"prime\" in s and \"factorial\" in s):\n        return True\n\n    # Otherwise we cannot verify the claim as the correct universal statement.\n    return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2009_b3",
+      "status": "ok",
+      "gold_answer": "Show that the answer is $n = 2^k - 1$ for some integer $k$.",
+      "elapsed": 27.106409072875977,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Expect answer to be an iterable of positive integers (list, tuple, set).\n    try:\n        candidate_set = set(int(x) for x in answer)\n    except Exception:\n        return False\n\n    from functools import lru_cach",
+      "elapsed_retry": 52.341798067092896,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Expect answer to be an iterable of positive integers (list, tuple, set).\n    try:\n        candidate_set = set(int(x) for x in answer)\n    except Exception:\n        return False\n\n    from functools import lru_cache\n\n    # Generate all mediocre subsets of {1..n} represented as bitmasks (1-based positions mapped to bits 0..n-1)\n    @lru_cache(maxsize=None)\n    def masks_mediocre(n):\n        # returns list of integer masks for mediocre subsets of {1..n}\n        if n == 0:\n            return [0]\n        e = n // 2\n        o = (n + 1) // 2\n        even_masks = masks_mediocre(e)  # masks for positions 1..e (these correspond to even positions 2,4,...)\n        full_masks = []\n        # For each even mask (representing which 2k are in S), enumerate allowed odd choices\n        for m_even in even_masks:\n            # backtrack choices for odd indices 1..o; maintain chosen odd indices list for checking sums\n            count_masks = []\n\n            def backtrack(i, chosen_mask, chosen_indices):\n                # i: next odd index to consider (1-based), chosen_mask for odd positions bits 0..o-1\n                if i > o:\n                    # combine odd and even into full mask over 1..n positions\n                    # odd positions 2k-1 map to bit position (2k-2) = 2*(k-1)\n                    # even positions 2k map to bit position (2k-1)\n                    full = 0\n                    # place odd bits\n                    full |= sum((( (chosen_mask >> (k-1)) & 1) << (2*(k-1)) ) for k in range(1, o+1))\n                    # place even bits from m_even: m_even bits correspond to positions 1..e mapped to 2..2e\n                    full |= sum((( (m_even >> (k-1)) & 1) << (2*k-1) ) for k in range(1, e+1))\n                    count_masks.append(full)\n                    return\n                # Option: do not include odd index i\n                backtrack(i+1, chosen_mask, chosen_indices)\n                # Option: include odd index i, but must check that for every previously chosen j,\n                # s = i + j - 1 (in 1..e) if s<=e then the even position s must be present in m_even.\n                ok = True\n                for j in chosen_indices:\n                    s = i + j - 1\n                    if 1 <= s <= e:\n                        if ((m_even >> (s-1)) & 1) == 0:\n                            ok = False\n                            break\n                if ok:\n                    chosen_indices.append(i)\n                    backtrack(i+1, chosen_mask | (1 << (i-1)), chosen_indices)\n                    chosen_indices.pop()\n\n            backtrack(1, 0, [])\n            full_masks.extend(count_masks)\n        return full_masks\n\n    # Compute A(n) for n up to MAX_N\n    MAX_N = 20\n    A = {}\n    for n in range(0, MAX_N + 1):\n        masks = masks_mediocre(n)\n        A[n] = len(masks)\n\n    # Find all n (positive integers) up to MAX_N-2 satisfying condition\n    solution_set = se",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_2009_b4",
+      "status": "ok",
+      "gold_answer": "Prove that the dimension of $V$ is $2020050$.",
+      "elapsed": 24.19213318824768,
+      "script": "def verify(answer):\n    import re\n    s = str(answer).strip()\n    # Try to find an integer possibly containing commas (like \"2,020,050\")\n    m = re.search(r'-?\\d[\\d,]*', s)\n    if m:\n        num_str = m.group(0).replace(',', '')\n        try:\n            val = int(num_str)\n            return val == 2020050\n        except:\n            pass\n    # As a fallback, try to evaluate a safe arithmetic expression (digits and operators only)\n    safe = re.sub(r'[^0-9+\\-*/()., ]', '', s)\n    safe = safe.replace(',', '')\n    try:\n        val = int(eval(safe))\n        return val == 2020050\n    except:\n        return False",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2009_b5",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 3.0289721488952637
+    },
+    {
+      "id": "putnam_2009_b6",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 3.224116802215576
+    },
+    {
+      "id": "putnam_2020_a1",
+      "status": "ok",
+      "gold_answer": "Show that the solution is $508536$.",
+      "elapsed": 21.922091722488403,
+      "raw_text_head": "def verify(answer):\n    import sympy as sp\n    import random\n    random.seed(42)\n    try:\n        ans_int = int(answer)\n    except Exception:\n        return False\n    cnt = 0\n    # N = R_k * 10^m with k>=1 ones, m>=2 zeros, k+m <= 2020\n    # R_k divisible by 101 iff 10^k \u2261 1 (mod 101)\n    for k in r",
+      "elapsed_retry": 46.77328896522522,
+      "script": "def verify(answer):\n    import sympy as sp\n    import random\n    random.seed(42)\n    try:\n        ans_int = int(answer)\n    except Exception:\n        return False\n    cnt = 0\n    # N = R_k * 10^m with k>=1 ones, m>=2 zeros, k+m <= 2020\n    # R_k divisible by 101 iff 10^k \u2261 1 (mod 101)\n    for k in range(1, 2020):  # k up to 2019 (k=2019 yields zero m's)\n        if pow(10, k, 101) == 1:\n            max_m = 2020 - k\n            if max_m >= 2:\n                cnt += (max_m - 1)  # number of m in [2, max_m]\n    return ans_int == cnt",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_2020_a2",
+      "status": "ok",
+      "gold_answer": "Show that the answer is $4^k$.",
+      "elapsed": 20.475847005844116,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n    import math\n\n    k = sp.symbols('k', integer=True, nonnegative=True)\n\n    # Try to obtain a SymPy expression from the answer when possible.\n    cand_expr = None\n    if isinstance(answer, sp.Basic):\n        cand_expr",
+      "elapsed_retry": 38.87550115585327,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n    import math\n\n    k = sp.symbols('k', integer=True, nonnegative=True)\n\n    # Try to obtain a SymPy expression from the answer when possible.\n    cand_expr = None\n    if isinstance(answer, sp.Basic):\n        cand_expr = answer\n    elif isinstance(answer, str):\n        s = answer.replace('^', '**')\n        try:\n            cand_expr = sp.sympify(s)\n        except Exception:\n            cand_expr = None\n    else:\n        # Try to sympify other types (numbers, etc.)\n        try:\n            cand_expr = sp.sympify(answer)\n        except Exception:\n            cand_expr = None\n\n    def S(n):\n        total = 0\n        for j in range(n + 1):\n            total += (1 << (n - j)) * math.comb(n + j, j)\n        return total\n\n    def eval_candidate_at(n):\n        # Return integer value of candidate at k=n, or raise Exception\n        if cand_expr is not None:\n            val = cand_expr.subs(k, n)\n        else:\n            # answer might be a callable (e.g., a Python function)\n            if callable(answer):\n                val = answer(n)\n            else:\n                raise ValueError(\"Cannot evaluate candidate expression.\")\n        # Try to convert val to integer robustly\n        try:\n            if isinstance(val, (int, bool)):\n                return int(val)\n            if isinstance(val, sp.Integer):\n                return int(val)\n            # Try rational/inexact numeric handling\n            val_simpl = sp.simplify(val)\n            if isinstance(val_simpl, sp.Rational):\n                if val_simpl.q != 1:\n                    raise ValueError(\"Non-integer rational\")\n                return int(val_simpl)\n            if val_simpl.is_integer:\n                return int(val_simpl)\n            # Fallback: numeric approximation and rounding if very close to integer\n            approx = float(sp.N(val_simpl, 50))\n            iv = int(round(approx))\n            if abs(approx - iv) < 1e-8:\n                return iv\n            # Last try direct int conversion (may fail)\n            return int(val_simpl)\n        except Exception as e:\n            raise\n\n    # Test a collection of k values: some fixed, some random\n    tests = [0, 1, 2, 3, 4, 5, 10, 15, 20]\n    tests += random.sample(list(range(0, 50)), 7)\n\n    for n in tests:\n        true_val = S(n)\n        try:\n            cand_val = eval_candidate_at(n)\n        except Exception:\n            return False\n        if cand_val != true_val:\n            return False\n\n    # If we have a symbolic candidate, also try a symbolic equality check cand_expr == 4**k\n    if cand_expr is not None:\n        diff = sp.simplify(cand_expr - 4**k)\n        try:\n            if diff == 0 or diff.equals(0):\n                return True\n            # Sometimes equals fails; try to simplify further\n            if sp.simplify(diff) == 0:\n                return True\n            return False\n        except Exception:\n            # If symbolic check fails, r",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_2020_a3",
+      "status": "ok",
+      "gold_answer": "The series diverges.",
+      "elapsed": 20.69877290725708,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # The correct conclusion: the series diverges (sum_{n>=1} a_n^2 = +infty).\n    # Accept answers that clearly assert divergence.\n    if isinstance(answer, sp.Basic):\n        # If given a SymPy boolean True/False, tr",
+      "elapsed_retry": 33.97192621231079,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # The correct conclusion: the series diverges (sum_{n>=1} a_n^2 = +infty).\n    # Accept answers that clearly assert divergence.\n    if isinstance(answer, sp.Basic):\n        # If given a SymPy boolean True/False, treat True as \"converges\" (not expected).\n        try:\n            s = str(answer)\n        except Exception:\n            s = \"\"\n    elif isinstance(answer, str):\n        s = answer\n    else:\n        # other types: convert to string\n        try:\n            s = str(answer)\n        except Exception:\n            s = \"\"\n\n    s = s.lower().strip()\n\n    # Reject explicit claims of convergence\n    converge_indicators = [\"converge\", \"converges\", \"convergent\", \"convergence\"]\n    for pat in converge_indicators:\n        if pat in s:\n            # if the string also explicitly says it does NOT converge, that's ok (divergence)\n            if any(neg in s for neg in [\"does not\", \"doesn't\", \"not \", \"no \"]):\n                break\n            # otherwise it's an assertion of convergence -> incorrect\n            return False\n\n    # Look for affirmative indicators of divergence\n    divergence_indicators = [\n        \"diverge\", \"diverges\", \"divergent\", \"divergence\", \"does not converge\",\n        \"doesn't converge\", \"does not\", \"doesn't\", \"not converge\", \"not convergent\",\n        \"infinite\", \"infty\", \"infinite sum\", \"diverges to\", \"diverges to infinity\",\n        \"diverges (\", \"diverges:\"\n    ]\n    for pat in divergence_indicators:\n        if pat in s:\n            # handle negations like \"does not diverge\" -> would contain 'does not' and 'diverge'\n            if \"does not diverge\" in s or \"doesn't diverge\" in s or \"not divergent\" in s:\n                return False\n            return True\n\n    # If answer is a bare boolean True/False: interpret True -> claims convergence, False -> claims divergence.\n    if isinstance(answer, bool):\n        return not answer  # False means diverges\n\n    # Otherwise, try to detect numeric or symbolic equalities like \"sum = infty\" or \"sum = infinity\"\n    if any(x in s for x in [\"infty\", \"infinite\", \"infinity\", \"+infty\", \"diverges\", \"does not converge\"]):\n        return True\n\n    # If none of the above matched, be conservative and return False.\n    return False",
+      "gold_verdict": true
+    },
+    {
+      "id": "putnam_2020_a5",
+      "status": "ok",
+      "gold_answer": "The answer is $n=F_{4040}-1$.",
+      "elapsed": 18.333383798599243,
+      "script": "def verify(answer):\n    import re\n    # extract first integer from answer string\n    m = re.search(r'-?\\d+', answer)\n    if not m:\n        return False\n    try:\n        candidate = int(m.group())\n    except:\n        return False\n\n    # Search for the largest n with a_n = 2020 by DP up to a large bound.\n    # We choose a reasonably large bound; this should suffice for the Putnam problem.\n    NMAX = 200000\n\n    # build Fibonacci numbers (as separate items, F1 = 1, F2 = 1, ...)\n    fibs = [1, 1]\n    while True:\n        nxt = fibs[-1] + fibs[-2]\n        if nxt > NMAX:\n            break\n        fibs.append(nxt)\n\n    ways = [0] * (NMAX + 1)\n    ways[0] = 1\n    # count subset-sum representations using each Fibonacci number at most once\n    for w in fibs:\n        for s in range(NMAX, w - 1, -1):\n            ways[s] += ways[s - w]\n\n    targets = [i for i, v in enumerate(ways) if v == 2020]\n    if not targets:\n        # didn't find any n up to NMAX with a_n = 2020; assume candidate is wrong\n        return False\n    true_largest = max(targets)\n    return candidate == true_largest",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2020_a6",
+      "status": "ok",
+      "gold_answer": "The smallest constant $M$ is $\\pi/4$.",
+      "elapsed": 18.95327091217041,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Parse the provided answer into a SymPy object\n    try:\n        a = sp.sympify(answer)\n    except Exception:\n        # If parsing fails, reject\n        return False\n\n    # The conjectured correct constant\n    M_tr",
+      "elapsed_retry": 54.09961223602295,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Parse the provided answer into a SymPy object\n    try:\n        a = sp.sympify(answer)\n    except Exception:\n        # If parsing fails, reject\n        return False\n\n    # The conjectured correct constant\n    M_true = sp.pi / 4\n\n    # Compare numerically with high precision\n    diff = sp.N(a - M_true, 50)\n    try:\n        diff_abs = abs(complex(diff))\n    except Exception:\n        diff_abs = float(sp.Abs(diff))\n\n    return diff_abs < 1e-12",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_2020_b1",
+      "status": "ok",
+      "gold_answer": "The answer is $1990$.",
+      "elapsed": 15.81968092918396,
+      "script": "def verify(answer):\n    import re\n    try:\n        # compute S mod 2020\n        s = 0\n        for k in range(1, 2021):\n            s += ((-1) ** (bin(k).count(\"1\"))) * (k ** 3)\n        S_mod = s % 2020\n\n        # extract first integer from the answer string\n        nums = re.findall(r'-?\\d+', answer)\n        if not nums:\n            return False\n        candidate = int(nums[0])\n        return (candidate % 2020) == S_mod\n    except Exception:\n        return False",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2020_b4",
+      "status": "ok",
+      "gold_answer": "Show that the answer is $\\frac{1}{4040}$.",
+      "elapsed": 20.832926988601685,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n    from itertools import combinations\n\n    N = 2020\n    expected = sp.Rational(1, 2 * N + 1)\n\n    # Try to convert the provided answer to a SymPy rational/expression\n    def to_sympy(x):\n        try:\n            return",
+      "elapsed_retry": 41.084571838378906,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n    from itertools import combinations\n\n    N = 2020\n    expected = sp.Rational(1, 2 * N + 1)\n\n    # Try to convert the provided answer to a SymPy rational/expression\n    def to_sympy(x):\n        try:\n            return sp.sympify(x)\n        except Exception:\n            try:\n                return sp.nsimplify(x)\n            except Exception:\n                try:\n                    return sp.Rational(str(x))\n                except Exception:\n                    return None\n\n    ans_sym = to_sympy(answer)\n    if ans_sym is None:\n        return False\n\n    # Check numeric closeness first (handles floats)\n    try:\n        if abs(float(ans_sym - expected)) > 1e-12:\n            return False\n    except Exception:\n        # Fall back to exact check\n        if sp.simplify(ans_sym - expected) != 0:\n            return False\n\n    # Additional sanity checks for small n (random samples) to guard against false positives.\n    # Verify that M(n) = 1/(2n+1) for several small n by exact enumeration.\n    def compute_M_exact(n):\n        # enumerate all sequences of length 2n with steps \u00b11 and s_0 = 0, s_{2n}=0\n        # equivalently choose positions of +1 steps among 2n positions (must be n of them)\n        total = sp.Rational(0, 1)\n        count = sp.binomial(2 * n, n)\n        positions = range(2 * n)\n        for ones in combinations(positions, n):\n            # build steps: +1 at positions in ones, -1 elsewhere\n            steps = [1 if i in ones else -1 for i in positions]\n            s = 0\n            q = sp.Rational(1, 1)\n            # sum from j=1 to 2n-1 of 3^{s_j}; s_0 = 0; we'll update s then add for j in 1..2n-1\n            for j in range(1, 2 * n):\n                s += steps[j - 1]\n                q += sp.Integer(3) ** s\n            total += 1 / q\n        return sp.nsimplify(total / count)\n\n    # test a few random small n values\n    for _ in range(5):\n        n = random.randint(1, 8)\n        Mn = compute_M_exact(n)\n        if Mn != sp.Rational(1, 2 * n + 1):\n            return False\n\n    return True",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_2020_b5",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 7.566380023956299
+    },
+    {
+      "id": "putnam_2020_b6",
+      "status": "ok",
+      "gold_answer": "",
+      "elapsed": 17.22143292427063,
+      "script": "def verify(answer):\n    import math\n    from decimal import Decimal, getcontext, ROUND_FLOOR\n    s = answer.strip().lower()\n    # Recognize claims that the sum is nonnegative for all n\n    ok_claim = False\n    if any(token in s for token in [\"nonneg\", \"non-negative\", \"non negative\", \">=0\", \">= 0\", \"is nonnegative\", \"always nonnegative\", \"for all n\", \"holds for all n\"]):\n        ok_claim = True\n    if s in (\"true\", \"yes\", \"correct\", \"the sum is nonnegative\", \"sum is nonnegative\", \"the sum >=0\", \"sum >=0\", \">=0 for all n\"):\n        ok_claim = True\n\n    if not ok_claim:\n        # We only verify claims of nonnegativity; other answers are treated as inconsistent/unrecognized.\n        return False\n\n    # Verify numerically for many n that the sum is >= 0.\n    try:\n        getcontext().prec = 60\n        TWO = Decimal(2)\n        sqrt2_minus_1 = TWO.sqrt() - Decimal(1)\n        Nmax = 20000\n        total = 0\n        # We'll track minimal prefix sum to ensure it's never negative\n        for k in range(1, Nmax + 1):\n            x = (Decimal(k) * sqrt2_minus_1).to_integral_value(rounding=ROUND_FLOOR)\n            parity = int(x) & 1\n            term = -1 if parity == 1 else 1\n            total += term\n            if total < 0:\n                return False\n        return True\n    except Exception:\n        return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1970_a1",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 17.992387056350708,
+      "raw_text_head": "UNVERIFIABLE",
+      "elapsed_retry": 10.661701202392578
+    },
+    {
+      "id": "putnam_1970_a3",
+      "status": "empty_response",
+      "gold_answer": "The maximum attainable length is $3$; the smallest such square is $38^2 = 1444$.",
+      "elapsed": 20.159234046936035,
+      "raw_text_head": "",
+      "elapsed_retry": 87.65733289718628
+    },
+    {
+      "id": "putnam_1970_a4",
+      "status": "ok",
+      "gold_answer": "",
+      "elapsed": 11.611096858978271,
+      "script": "def verify(answer):\n    import re\n    if not isinstance(answer, str):\n        return False\n    s = answer.strip().lower()\n    # Find numeric tokens and check if any is exactly zero\n    num_tokens = re.findall(r'[-+]?\\d*\\.?\\d+(?:[eE][-+]?\\d+)?', s)\n    zero_num_found = False\n    for tok in num_tokens:\n        try:\n            if float(tok) == 0.0:\n                zero_num_found = True\n                break\n        except:\n            continue\n    # Also accept the word \"zero\"\n    zero_word_found = bool(re.search(r'\\bzero\\b', s))\n    if not (zero_num_found or zero_word_found):\n        return False\n    # Check for explicit negation phrases indicating nonzero\n    neg_phrases = [\n        'not zero', 'is not zero', \"isn't zero\", \"isnt zero\", '\u2260 0', '!= 0', '<> 0',\n        'nonzero', 'non-zero', 'not equal', 'not equal to 0', 'does not equal 0',\n        'doesn\\'t equal 0', 'not=0', 'zero? no', 'zero? never'\n    ]\n    for ph in neg_phrases:\n        if ph in s:\n            return False\n    # Also catch patterns like \"limit != 0\" without space\n    if re.search(r'(!=|\u2260|<>)\\s*0', s):\n        return False\n    # If we found a zero and no negation, accept as correct (limit = 0)\n    return True",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1970_b1",
+      "status": "ok",
+      "gold_answer": "Show that the solution is $e^{2 \\log(5) - 4 + 2 arctan(2)}$.",
+      "elapsed": 19.231030702590942,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n    # computed exact value of the limit: exp(integral_0^2 log(1+x^2) dx) = exp(2*log(5)-4+2*atan(2)) = 25*exp(2*atan(2)-4)\n    computed = sp.Integer(25) * sp.exp(2*sp.atan(2) - 4)\n    # Try to handle different types of ",
+      "elapsed_retry": 48.47437906265259,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n    # computed exact value of the limit: exp(integral_0^2 log(1+x^2) dx) = exp(2*log(5)-4+2*atan(2)) = 25*exp(2*atan(2)-4)\n    computed = sp.Integer(25) * sp.exp(2*sp.atan(2) - 4)\n    # Try to handle different types of answers\n    # If answer is already a SymPy object\n    try:\n        if isinstance(answer, sp.Expr):\n            ans_sym = answer\n        else:\n            # If answer is a string, try to sympify it\n            if isinstance(answer, str):\n                # Allow common lowercase e to mean E by replacing standalone ' e ' or start 'e' or '(e'\n                # but avoid accidental replacements; try sympify first, fallback to replacement\n                try:\n                    ans_sym = sp.sympify(answer)\n                except Exception:\n                    ans_sym = sp.sympify(answer.replace(' e ', ' E ').replace(' e)', ' E)').replace('(e', '(E').replace(' e*', ' E*'))\n            else:\n                # For numeric types, convert to SymPy\n                ans_sym = sp.sympify(answer)\n    except Exception:\n        return False\n    # Exact symbolic check\n    try:\n        diff = sp.simplify(ans_sym - computed)\n        if diff == 0:\n            return True\n    except Exception:\n        pass\n    # Numeric check with high precision\n    try:\n        num_diff = abs(complex(sp.N(ans_sym - computed, 60)))\n        # complex(...) used to handle possible complex zeros; we only expect real results\n        if num_diff < 1e-9:\n            return True\n    except Exception:\n        pass\n    # Try ratio check (in case of scaling)\n    try:\n        ratio = sp.simplify(ans_sym / computed)\n        num_ratio_diff = abs(complex(sp.N(ratio - 1, 60)))\n        if num_ratio_diff < 1e-9:\n            return True\n    except Exception:\n        pass\n    return False",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1970_b3",
+      "status": "ok",
+      "gold_answer": "",
+      "elapsed": 15.996674060821533,
+      "script": "def verify(answer):\n    import string\n    if not isinstance(answer, str):\n        return False\n    lower = answer.lower()\n    # simple predicates\n    has_project = ('project' in lower) or ('projection' in lower)\n    has_closed = 'closed' in lower\n    # tokens for detecting mention of y-axis / second coordinate\n    words = set(lower.replace('-', ' ').translate(str.maketrans(string.punctuation, ' '*len(string.punctuation))).split())\n    has_y_token = (\n        ('y' in words) or\n        ('yaxis' in lower) or\n        ('y-axis' in lower) or\n        ('y axis' in lower) or\n        (('second' in words) and ('coordinate' in words)) or\n        (('second' in words) and ('axis' in words)) or\n        ('ordinate' in words) or\n        ('vertical' in words)\n    )\n    return has_project and has_closed and has_y_token",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1970_b5",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 2.902984857559204
+    },
+    {
+      "id": "putnam_1986_a1",
+      "status": "ok",
+      "gold_answer": "Show that the maximum value is $18$.",
+      "elapsed": 13.250206232070923,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # define symbol and function\n    x = sp.symbols('x', real=True)\n    f = x**3 - 3*x\n\n    # domain from inequality x^4 + 36 <= 13 x^2:\n    # let y = x^2 => y^2 - 13 y + 36 <= 0 => (y-4)(y-9) <= 0 => y in [4,9]\n    # ",
+      "elapsed_retry": 24.00791597366333,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # define symbol and function\n    x = sp.symbols('x', real=True)\n    f = x**3 - 3*x\n\n    # domain from inequality x^4 + 36 <= 13 x^2:\n    # let y = x^2 => y^2 - 13 y + 36 <= 0 => (y-4)(y-9) <= 0 => y in [4,9]\n    # so x in [-3,-2] U [2,3]\n    candidates = [-3, -2, 2, 3]\n\n    # critical points of f are solutions of f' = 0\n    criticals = sp.solve(sp.diff(f, x), x)\n    # include any critical points that lie in domain\n    for c in criticals:\n        try:\n            cval = float(sp.N(c))\n        except Exception:\n            continue\n        if (2 <= cval <= 3) or (-3 <= cval <= -2):\n            candidates.append(cval)\n\n    # evaluate f at candidate points exactly\n    fvals = [sp.nsimplify(f.subs(x, sp.nsimplify(c))) for c in candidates]\n    # get maximum value (exact)\n    max_val = max(fvals, key=lambda v: float(sp.N(v)))\n\n    # helper to extract numeric value from provided answer\n    def extract_number(a):\n        # if sympy object already\n        try:\n            if isinstance(a, (list, tuple, set)):\n                # try to pick a numeric-looking element\n                for item in a:\n                    try:\n                        return sp.nsimplify(item)\n                    except Exception:\n                        continue\n                return None\n            # try sympify\n            return sp.nsimplify(a)\n        except Exception:\n            # try float conversion for strings etc.\n            try:\n                return sp.nsimplify(float(a))\n            except Exception:\n                return None\n\n    ans_num = extract_number(answer)\n    if ans_num is None:\n        return False\n\n    # compare numerically with high precision\n    try:\n        ans_val = sp.N(ans_num, 50)\n        true_val = sp.N(max_val, 50)\n    except Exception:\n        return False\n\n    tol = 1e-8\n    if abs(float(ans_val - true_val)) > tol:\n        return False\n\n    # extra randomized check: sample points in allowed intervals to ensure no larger value exists\n    def f_float(t):\n        return float(sp.N(f.subs(x, t)))\n    for _ in range(50):\n        t1 = 2 + random.random() * (3 - 2)\n        t2 = -3 + random.random() * ( -2 - (-3) )\n        if f_float(t1) > float(true_val) + 1e-8:\n            return False\n        if f_float(t2) > float(true_val) + 1e-8:\n            return False\n\n    return True",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1986_a2",
+      "status": "ok",
+      "gold_answer": "Show that the answer is $3$.",
+      "elapsed": 8.34011960029602,
+      "script": "def verify(answer):\n    import re\n    s = answer.strip()\n    m = re.search(r'-?\\d+', s)\n    if not m:\n        return False\n    val = int(m.group())\n    if not (0 <= val <= 9):\n        return False\n    # compute the units digit of floor(10^20000 / (10^100 + 3))\n    a = pow(10, 20000)\n    b = pow(10, 100) + 3\n    q = a // b\n    units = q % 10\n    return val == units",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1986_a3",
+      "status": "ok",
+      "gold_answer": "Show that the sum equals $\\pi/2$.",
+      "elapsed": 16.5644690990448,
+      "script": "def verify(answer):\n    import math\n    s = answer.strip()\n    # If form like \"n = value\", take RHS\n    if '=' in s:\n        s = s.split('=', 1)[1].strip()\n    # Replace Unicode pi with ascii\n    s = s.replace('\u03c0', 'pi')\n    # Remove surrounding quotes if present\n    if (s.startswith('\"') and s.endswith('\"')) or (s.startswith(\"'\") and s.endswith(\"'\")):\n        s = s[1:-1].strip()\n    target = math.pi / 2\n    # Try numeric evaluation safely\n    try:\n        val = eval(s, {\"__builtins__\": None}, {\"pi\": math.pi, \"e\": math.e})\n        # If eval returned a tuple or other, reject\n        if isinstance(val, (int, float)):\n            return abs(float(val) - target) <= 1e-9\n    except Exception:\n        pass\n    # Try direct float conversion (for plain decimals)\n    try:\n        val = float(s)\n        return abs(val - target) <= 1e-9\n    except Exception:\n        pass\n    return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1986_a4",
+      "status": "empty_response",
+      "gold_answer": "Prove that $f(n) = 4^n + 2 \\cdot 3^n - 4 \\cdot 2^n + 1$.",
+      "elapsed": 15.210948705673218,
+      "raw_text_head": "",
+      "elapsed_retry": 93.80124807357788
+    },
+    {
+      "id": "putnam_1986_a6",
+      "status": "ok",
+      "gold_answer": "Show that $f(1) = b_1 b_2 \\dots b_n / n!$.",
+      "elapsed": 16.61578893661499,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # helper: falling factorial b^{\\underline{k}}\n    def fall(b, k):\n        if k == 0:\n            return sp.Integer(1)\n        p = sp.Integer(1)\n        for t in range(k):\n            p *= (b - t)\n        return p\n\n",
+      "elapsed_retry": 103.73349499702454,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # helper: falling factorial b^{\\underline{k}}\n    def fall(b, k):\n        if k == 0:\n            return sp.Integer(1)\n        p = sp.Integer(1)\n        for t in range(k):\n            p *= (b - t)\n        return p\n\n    # Evaluate the candidate answer for given n and b_list\n    def eval_candidate(ans, n_val, b_list):\n        # Try callable first with several calling conventions\n        if callable(ans):\n            # try ans(n, b_list), ans(b_list, n), ans(b1,...,bn, n), ans(b_list)\n            try:\n                return sp.nsimplify(ans(n_val, b_list))\n            except Exception:\n                pass\n            try:\n                return sp.nsimplify(ans(b_list, n_val))\n            except Exception:\n                pass\n            try:\n                return sp.nsimplify(ans(b_list))\n            except Exception:\n                pass\n            try:\n                return sp.nsimplify(ans(*b_list, n_val))\n            except Exception:\n                pass\n            # give up on callable\n            return None\n\n        # If it's a sympy expression already\n        if isinstance(ans, sp.Expr):\n            expr = ans\n        else:\n            # assume string: parse with sympy, providing symbols b1..b6 and factorial\n            # support up to n=6 in tests\n            maxN = 6\n            syms = {}\n            for i in range(1, maxN + 1):\n                syms[f\"b{i}\"] = sp.symbols(f\"b{i}\")\n            syms[\"n\"] = sp.symbols(\"n\")\n            syms[\"factorial\"] = sp.factorial\n            syms[\"prod\"] = sp.prod\n            try:\n                expr = sp.sympify(ans, locals=syms)\n            except Exception:\n                return None\n\n        # substitute numeric values\n        subsd = {}\n        for i, bv in enumerate(b_list, start=1):\n            subsd[sp.symbols(f\"b{i}\")] = sp.Integer(bv)\n        subsd[sp.symbols(\"n\")] = sp.Integer(n_val)\n        try:\n            val = expr.subs(subsd)\n            val_s = sp.nsimplify(val)\n            return val_s\n        except Exception:\n            return None\n\n    # Compute true f(1) by solving the linear system exactly using rationals\n    def compute_true_f1(n_val, b_list):\n        # Build matrix M_{j,i} = b_i^{\\underline{j}} for j=0..n-1\n        M = []\n        for j in range(n_val):\n            row = []\n            for i in range(n_val):\n                row.append(sp.Integer(fall(sp.Integer(b_list[i]), j)))\n            M.append(row)\n        Mmat = sp.Matrix(M)\n        # RHS c: c0 = -1, others 0\n        c = [sp.Integer(-1)] + [sp.Integer(0)] * (n_val - 1)\n        cvec = sp.Matrix(c)\n        # Solve for a vector\n        try:\n            avec = Mmat.LUsolve(cvec)  # exact rationals\n        except Exception:\n            # fallback to rational solve\n            avec = Mmat.solve(cvec)\n        # compute R^{(n)}(1) = sum_i a_i b_i^{\\underline{n}}\n        s = sp.Integer(0)\n        for i in range(n_val):\n            s += avec[",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1986_b2",
+      "status": "ok",
+      "gold_answer": "Show that the possibilities for $T$ are $(0, 0, 0), \\, (0, -1, 1), \\, (1, 0, -1), \\, (-1, 1, 0)$.",
+      "elapsed": 21.648658990859985,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Normalize candidate answer into a set of 3-tuples of integers\n    try:\n        cand_list = list(answer)\n    except Exception:\n        return False\n\n    cand_set = set()\n    for item in cand_list:\n        # allow ",
+      "elapsed_retry": 63.92572808265686,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Normalize candidate answer into a set of 3-tuples of integers\n    try:\n        cand_list = list(answer)\n    except Exception:\n        return False\n\n    cand_set = set()\n    for item in cand_list:\n        # allow list/tuple\n        try:\n            t = tuple(item)\n        except Exception:\n            return False\n        if len(t) != 3:\n            return False\n        norm = []\n        for a in t:\n            # Accept ints, Rationals, or things convertible to int if exact\n            if isinstance(a, (int,)):\n                norm.append(int(a))\n            else:\n                # try sympy Rational or convertible to integer exactly\n                try:\n                    s = sp.sympify(a)\n                except Exception:\n                    return False\n                if s.is_integer:\n                    norm.append(int(s))\n                else:\n                    # if it's a numeric rational equal to integer\n                    if s.is_real and sp.nsimplify(s).is_integer:\n                        norm.append(int(sp.nsimplify(s)))\n                    else:\n                        return False\n        cand_set.add(tuple(norm))\n\n    expected = {(0, 0, 0), (0, -1, 1), (-1, 1, 0), (1, 0, -1)}\n\n    # First check equality of sets\n    if cand_set != expected:\n        return False\n\n    # Now symbolically verify each expected triple actually arises from some (x,y,z)\n    x, y, z = sp.symbols('x y z')\n    # original equality expressions\n    f = lambda u, v, w: u*(u-1) + 2*v*w\n    eqs = [sp.Eq(f(x, y, z), f(y, z, x)), sp.Eq(f(y, z, x), f(z, x, y))]\n\n    # helper: check that substituting the difference constraints makes the eqs identities or solvable\n    def triple_has_solution(triple):\n        dx, dy, dz = triple\n        subs_eqs = [sp.Eq(x - y, dx), sp.Eq(y - z, dy), sp.Eq(z - x, dz)]\n        # solve differences to express variables in terms of one free symbol if possible\n        sol = None\n        try:\n            sol = sp.solve(subs_eqs, (x, y, z), dict=True)\n        except Exception:\n            sol = None\n        if sol:\n            # explicit solutions; test one solution or check whether it satisfies original eqs\n            for s in sol:\n                # If solution contains symbolic parameters, test by substitution that eqs reduce to identities\n                s_sub = {x: s.get(x, x), y: s.get(y, y), z: s.get(z, z)}\n                # substitute into eqs and simplify\n                ok = True\n                for eq in eqs:\n                    expr = sp.simplify(eq.lhs.subs(s_sub) - eq.rhs.subs(s_sub))\n                    if expr != 0:\n                        ok = False\n                        break\n                if ok:\n                    return True\n            return False\n        else:\n            # If direct solve failed, try to eliminate: substitute one variable relations\n            # Use y = x - dx, z = y - dy\n            sx = x\n            sy = x - d",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1986_b3",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 4.032881259918213
+    },
+    {
+      "id": "putnam_1986_b4",
+      "status": "unverifiable",
+      "gold_answer": "Show that the limit exists and equals $0$.",
+      "elapsed": 15.795367240905762,
+      "raw_text_head": "UNVERIFIABLE",
+      "elapsed_retry": 37.53211522102356
+    },
+    {
+      "id": "putnam_1986_b5",
+      "status": "unverifiable",
+      "gold_answer": "Prove that the assertion is false.",
+      "elapsed": 16.47539710998535,
+      "raw_text_head": "UNVERIFIABLE",
+      "elapsed_retry": 4.266865968704224
+    },
+    {
+      "id": "putnam_1986_b6",
+      "status": "ok",
+      "gold_answer": "",
+      "elapsed": 15.203713655471802,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Expect answer to be a 4-tuple/list of matrices (A,B,C,D) (or objects convertible to sympy.Matrix).\n    try:\n        A, B, C, D = answer\n    except Exception:\n        return False\n\n    try:\n        A = sp.Matrix(A",
+      "elapsed_retry": 84.71878290176392,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Expect answer to be a 4-tuple/list of matrices (A,B,C,D) (or objects convertible to sympy.Matrix).\n    try:\n        A, B, C, D = answer\n    except Exception:\n        return False\n\n    try:\n        A = sp.Matrix(A)\n        B = sp.Matrix(B)\n        C = sp.Matrix(C)\n        D = sp.Matrix(D)\n    except Exception:\n        return False\n\n    # all must be square and same size\n    if A.shape[0] != A.shape[1]:\n        return False\n    n = A.shape[0]\n    if B.shape != (n, n) or C.shape != (n, n) or D.shape != (n, n):\n        return False\n\n    zero = sp.zeros(n)\n    I = sp.eye(n)\n\n    # Helper for robust matrix zero/equality check\n    def is_zero_matrix(M):\n        return (M - sp.zeros(*M.shape)).equals(sp.zeros(*M.shape))\n\n    def equals_identity(M):\n        return (M - I).equals(sp.zeros(n))\n\n    # Check premises:\n    # AB^T symmetric: AB^T == (AB^T)^T  <=> AB^T - BA^T == 0\n    M1 = A * B.T\n    if not is_zero_matrix(M1 - M1.T):\n        return False\n\n    # CD^T symmetric\n    M2 = C * D.T\n    if not is_zero_matrix(M2 - M2.T):\n        return False\n\n    # AD^T - BC^T = I\n    M3 = A * D.T - B * C.T\n    if not equals_identity(M3):\n        return False\n\n    # Conclusion to verify: A^T D - C^T B = I\n    M4 = A.T * D - C.T * B\n    return equals_identity(M4)",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_2000_a1",
+      "status": "ok",
+      "gold_answer": "Show that the possible values comprise the interval $(0,A^2)$.",
+      "elapsed": 21.32132911682129,
+      "raw_text_head": "def verify(answer):\n    import re, random\n    random.seed(42)\n    import sympy as sp  # per instructions (not used further)\n    s = str(answer).strip().lower()\n    # Remove multiple spaces for some checks\n    s_nospace = re.sub(r'\\s+', '', s)\n    # Common representations of A^2\n    a2_patterns = [r'",
+      "elapsed_retry": 63.74785876274109,
+      "script": "def verify(answer):\n    import re, random\n    random.seed(42)\n    import sympy as sp  # per instructions (not used further)\n    s = str(answer).strip().lower()\n    # Remove multiple spaces for some checks\n    s_nospace = re.sub(r'\\s+', '', s)\n    # Common representations of A^2\n    a2_patterns = [r'a\\^2', r'a\\*\\*2', 'a\u00b2']\n    # 1) Parentheses interval form like \"(0, A^2)\" (allow spaces)\n    if re.search(r'\\(\\s*0\\s*,\\s*a\\^2\\s*\\)', s, re.IGNORECASE) or re.search(r'\\(\\s*0\\s*,\\s*a\\*\\*2\\s*\\)', s, re.IGNORECASE) or re.search(r'\\(\\s*0\\s*,\\s*a\u00b2\\s*\\)', s, re.IGNORECASE):\n        return True\n    # 2) Inequality form like \"0 < ... < A^2\"\n    if re.search(r'0\\s*<[^<]{0,100}?<\\s*a\\^2', s, re.IGNORECASE) or re.search(r'0\\s*<[^<]{0,100}?<\\s*a\\*\\*2', s, re.IGNORECASE) or re.search(r'0\\s*<[^<]{0,100}?<\\s*a\u00b2', s, re.IGNORECASE):\n        return True\n    # 3) Phrases like \"open interval (0, A^2)\" or \"between 0 and A^2, not including endpoints\"\n    if 'open interval' in s and '0' in s and ('a^2' in s or 'a**2' in s or 'a\u00b2' in s):\n        return True\n    if ('between 0 and a^2' in s) or ('between 0 and a**2' in s) or ('between 0 and a\u00b2' in s):\n        if 'not' in s or 'excluding' in s or 'without' in s or 'open' in s:\n            return True\n    # Accept common mathematical inequality sentence \"0 < sum x_j^2 < A^2\" etc.\n    if re.search(r'0\\s*<\\s*sum', s, re.IGNORECASE) and re.search(r'<\\s*a\\^2', s, re.IGNORECASE):\n        return True\n    # Finally accept the compact no-space form \"(0,A**2)\" or \"0<A**2\"\n    if s_nospace.startswith('(0,a**2)') or ('0<' in s_nospace and '<a**2' in s_nospace):\n        return True\n    return False",
+      "gold_verdict": true
+    },
+    {
+      "id": "putnam_2000_a2",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 15.92048692703247,
+      "raw_text_head": "UNVERIFIABLE",
+      "elapsed_retry": 4.290469169616699
+    },
+    {
+      "id": "putnam_2000_a4",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 15.22758412361145,
+      "raw_text_head": "UNVERIFIABLE",
+      "elapsed_retry": 3.745628833770752
+    },
+    {
+      "id": "putnam_2000_a5",
+      "status": "ok",
+      "gold_answer": "",
+      "elapsed": 12.82296895980835,
+      "script": "def verify(answer):\n    s = answer.strip().lower()\n    # Accept common notations for r^{1/3}\n    if 'r' not in s:\n        return False\n    if '1/3' in s:\n        return True\n    if 'cube root' in s or 'cuberoot' in s or '\u221b' in s:\n        return True\n    if 'sqrt[3]' in s or '\\\\sqrt[3]' in s or 'sqrt(3)' in s:\n        # accept forms like sqrt[3]{r} or \\sqrt[3]{r}\n        return True\n    # accept common exponent notations\n    if 'r**(1/3)' in s or 'r**1/3' in s or 'r^(1/3)' in s or 'r^{1/3}' in s:\n        return True\n    # accept with inequality words\n    if ('at least' in s or '\u2265' in s or '>=' in s or 'not less than' in s) and ('r' in s) and ('1/3' in s or 'cube' in s):\n        return True\n    return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_2000_a6",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 2.3935279846191406
+    },
+    {
+      "id": "putnam_2000_b1",
+      "status": "ok",
+      "gold_answer": "",
+      "elapsed": 24.730031728744507,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Helper to call answer and normalize result to integers (r,s,t)\n    def get_rst(ans, A, B, C):\n        if callable(ans):\n            rst = ans(A, B, C)\n        else:\n            # allow a fixed triple provided as ",
+      "elapsed_retry": 35.690515995025635,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Helper to call answer and normalize result to integers (r,s,t)\n    def get_rst(ans, A, B, C):\n        if callable(ans):\n            rst = ans(A, B, C)\n        else:\n            # allow a fixed triple provided as answer\n            rst = ans\n        if not (isinstance(rst, (list, tuple)) and len(rst) == 3):\n            raise ValueError(\"answer must return or be a triple (r,s,t)\")\n        r, s, t = rst\n        try:\n            r = int(r); s = int(s); t = int(t)\n        except Exception:\n            raise ValueError(\"r,s,t must be integers or convertible to int\")\n        return r, s, t\n\n    # Function to build random instance with N triples, each having at least one odd entry\n    def make_instance(N):\n        # All 7 nonzero parity vectors in F2^3\n        parity_vectors = [(1,0,0),(0,1,0),(0,0,1),(1,1,0),(1,0,1),(0,1,1),(1,1,1)]\n        A = []; B = []; C = []\n        for _ in range(N):\n            px, py, pz = random.choice(parity_vectors)\n            # choose small random integers and adjust parity to match px,py,pz\n            ax = random.randint(-10, 10)\n            if ax % 2 != px:\n                ax += 1\n            bx = random.randint(-10, 10)\n            if bx % 2 != py:\n                bx += 1\n            cx = random.randint(-10, 10)\n            if cx % 2 != pz:\n                cx += 1\n            A.append(ax); B.append(bx); C.append(cx)\n        return A, B, C\n\n    # Check a single instance with provided answer; return True if bound holds\n    def check_instance(A, B, C, ans):\n        N = len(A)\n        r, s, t = get_rst(ans, A, B, C)\n        cnt = 0\n        for j in range(N):\n            if ((r * A[j] + s * B[j] + t * C[j]) & 1) == 1:\n                cnt += 1\n        # require cnt * 7 >= 4 * N (equivalent to cnt >= 4N/7)\n        return cnt * 7 >= 4 * N\n\n    # Perform many random tests\n    tests = []\n    for _ in range(300):\n        N = random.randint(1, 60)\n        tests.append(make_instance(N))\n\n    # Add some structured tests: small Ns, and edge cases where all triples equal same parity type\n    parity_vectors = [(1,0,0),(0,1,0),(0,0,1),(1,1,0),(1,0,1),(0,1,1),(1,1,1)]\n    for N in [1, 2, 3, 7, 14, 21]:\n        for pv in parity_vectors:\n            px, py, pz = pv\n            A = []; B = []; C = []\n            for _ in range(N):\n                ax = random.randint(-5,5)\n                if ax % 2 != px: ax += 1\n                bx = random.randint(-5,5)\n                if bx % 2 != py: bx += 1\n                cx = random.randint(-5,5)\n                if cx % 2 != pz: cx += 1\n                A.append(ax); B.append(bx); C.append(cx)\n            tests.append((A,B,C))\n\n    # Now run through tests\n    try:\n        for A, B, C in tests:\n            if not check_instance(A, B, C, answer):\n                return False\n    except Exception:\n        return False\n\n    return True",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_2000_b2",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 10.525373935699463
+    },
+    {
+      "id": "putnam_2000_b3",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 17.415751218795776,
+      "raw_text_head": "UNVERIFIABLE",
+      "elapsed_retry": 3.225214958190918
+    },
+    {
+      "id": "putnam_2000_b4",
+      "status": "ok",
+      "gold_answer": "",
+      "elapsed": 16.444411993026733,
+      "raw_text_head": "def verify(answer):\n    import sympy as sp\n    import random\n    random.seed(42)\n    x = sp.symbols('x')\n    tol = 1e-8\n\n    if not isinstance(answer, str):\n        answer = str(answer)\n    s = answer.strip()\n\n    # Normalize some unicode and spacing\n    s = s.replace('\u2264', '<=').replace('\u2265', '>=').r",
+      "elapsed_retry": 31.038530826568604,
+      "script": "def verify(answer):\n    import sympy as sp\n    import random\n    random.seed(42)\n    x = sp.symbols('x')\n    tol = 1e-8\n\n    if not isinstance(answer, str):\n        answer = str(answer)\n    s = answer.strip()\n\n    # Normalize some unicode and spacing\n    s = s.replace('\u2264', '<=').replace('\u2265', '>=').replace('\u2261', '=')\n    s = s.replace('\u2212', '-')\n    s_low = s.lower()\n\n    # If the answer plainly states zero on the required interval in words, accept.\n    if ('0' in s_low) and (('-1' in s_low and '1' in s_low) or '[-1,1]' in s_low or 'for -1' in s_low or 'for -1<' in s_low or 'for -1<=' in s_low):\n        # Examples matched: \"f(x)=0 for -1<=x<=1\", \"f=0 on [-1,1]\" etc.\n        return True\n\n    # If the answer is simply \"0\" or \"f=0\" or \"f(x)=0\" (implies zero function everywhere), accept.\n    simple_zero_forms = ['0', 'f=0', 'f(x)=0', 'f(x) = 0', 'f = 0']\n    if s_low in simple_zero_forms:\n        return True\n\n    # If answer contains an '=' assume it's of the form \"f(x)= <expression> [for ...]\"\n    if '=' in s:\n        # split at first '='\n        lhs, rhs_full = s.split('=', 1)\n        # remove qualifiers like \"for ...\", \"on ...\", \"where ...\"\n        for kw in [' for ', ' on ', ' where ', ' if ']:\n            if kw in rhs_full.lower():\n                rhs_full = rhs_full.lower().split(kw, 1)[0]\n                break\n        expr_str = rhs_full.strip()\n        # If expr_str empty, fallback to textual checks\n        if expr_str == '':\n            return False\n        # Try to parse expr_str as a sympy expression in variable x\n        try:\n            expr = sp.sympify(expr_str)\n        except Exception:\n            # Try replacing '^' with '**' and try again\n            try:\n                expr = sp.sympify(expr_str.replace('^', '**'))\n            except Exception:\n                # Can't parse expression; fall back to textual recognition\n                # Accept if expression string is \"0\"\n                if expr_str.strip() == '0':\n                    return True\n                return False\n        # Now test that expr(x) == 0 for many random x in [-1,1]\n        f = sp.lambdify(x, expr, 'math')\n        for _ in range(30):\n            v = random.uniform(-1, 1)\n            try:\n                val = f(v)\n            except Exception:\n                # evaluation failed (e.g. domain error) => reject\n                return False\n            # Accept small numerical imprecision\n            if val is None:\n                return False\n            if abs(val) > tol:\n                return False\n        return True\n\n    # As a last resort, check if the answer text clearly asserts zero on the interval in English\n    if ('zero' in s_low or 'identically zero' in s_low) and ('-1' in s_low and '1' in s_low or '[-1,1]' in s_low):\n        return True\n\n    return False",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_2000_b5",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 3.040208101272583
+    },
+    {
+      "id": "putnam_1995_a1",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 6.327710866928101
+    },
+    {
+      "id": "putnam_1995_a2",
+      "status": "ok",
+      "gold_answer": "Show that the solution is those pairs $(a,b)$ where $a = b$.",
+      "elapsed": 18.611681938171387,
+      "raw_text_head": "def verify(answer):\n    import re\n    import random; random.seed(42)\n    import sympy as sp\n    # Basic syntactic check: answer should assert a=b is the necessary and sufficient condition.\n    if not isinstance(answer, str):\n        return False\n    s = answer.lower().replace(\" \", \"\")\n    # Accept v",
+      "elapsed_retry": 74.63585424423218,
+      "script": "def verify(answer):\n    import re\n    import random; random.seed(42)\n    import sympy as sp\n    # Basic syntactic check: answer should assert a=b is the necessary and sufficient condition.\n    if not isinstance(answer, str):\n        return False\n    s = answer.lower().replace(\" \", \"\")\n    # Accept various common phrasings that mean a=b\n    patterns = [r\"a=b\", r\"a\\s*=\\s*b\", r\"equal\", r\"\\biff\\b\", r\"onlywhen\", r\"iffwhen\"]\n    # We require an explicit equality a=b or clear phrase \"a and b are equal\"\n    ok_syntax = False\n    if re.search(r\"\\ba\\s*=\\s*b\\b\", answer, re.IGNORECASE):\n        ok_syntax = True\n    if re.search(r\"\\b(aandb|a=b|aequalsb|aeqb)\\b\", s):\n        ok_syntax = True\n    if re.search(r\"\\b(equal|equals|areequal)\\b\", answer, re.IGNORECASE) and re.search(r\"\\ba\\b\", answer, re.IGNORECASE) and re.search(r\"\\bb\\b\", answer, re.IGNORECASE):\n        ok_syntax = True\n    if not ok_syntax:\n        return False\n\n    # Numerical tests to corroborate correctness:\n    # For a=b the integral should converge; for a!=b it should diverge (in absolute value).\n    # We'll perform a few random checks using numerical integration (mpmath).\n    try:\n        import mpmath as mp\n        mp.mp.dps = 30\n    except Exception:\n        # If mpmath not available, rely on syntactic check only\n        return ok_syntax\n\n    def partial_integral(a, b, R):\n        # integrate from x=b to x=R\n        if R <= b:\n            return mp.mpf('0')\n        def integrand(x):\n            # ensure x is mp.mpf\n            x = mp.mpf(x)\n            # handle very near to b safely\n            t1 = mp.sqrt(mp.sqrt(x + a) - mp.sqrt(x))\n            t2 = mp.sqrt(mp.sqrt(x) - mp.sqrt(x - b))\n            return t1 - t2\n        try:\n            return mp.quad(integrand, [b, R])\n        except Exception:\n            # fallback to simple quadrature partition if quad fails\n            ns = 2000\n            xs = [b + (R - b) * i / ns for i in range(ns + 1)]\n            ssum = mp.mpf('0')\n            for i in range(ns):\n                x0 = xs[i]; x1 = xs[i + 1]\n                ssum += (integrand(x0) + integrand(x1)) * (x1 - x0) / 2\n            return ssum\n\n    # Run several tests\n    rng = random.Random(42)\n    tests = []\n    # include explicit equal-case tests\n    tests.append((1.2345, 1.2345))\n    tests.append((0.5, 0.5))\n    # include non-equal tests\n    tests.append((2.0, 1.0))\n    tests.append((1.0, 3.0))\n    # add some random ones\n    for _ in range(6):\n        a = 0.1 + rng.random() * 5.0\n        b = 0.1 + rng.random() * 5.0\n        tests.append((a, b))\n\n    for (a0, b0) in tests:\n        a = mp.mpf(a0); b = mp.mpf(b0)\n        # choose large cutoffs\n        R1 = mp.mpf('1e3') + b\n        R2 = mp.mpf('1e4') + b\n        R3 = mp.mpf('1e5') + b\n        I1 = partial_integral(a, b, R1)\n        I2 = partial_integral(a, b, R2)\n        I3 = None\n        # compute I3 only if needed\n        # Decision logic:\n        if abs(a - b) < 1e-12:\n            # expect convergence: I(R) should stabilize as R incre",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1995_a3",
+      "status": "ok",
+      "gold_answer": "",
+      "elapsed": 16.386303186416626,
+      "script": "def verify(answer):\n    import re\n    s = answer.lower()\n    # Quick canonical forms that indicate the correct claim.\n    patterns = [\n        r\"d[_\\s]*i\\s*[-\u2212]\\s*f[_\\s]*i.*divis\",   # \"d_i - f_i is divisible...\"\n        r\"f[_\\s]*i\\s*[-\u2212]\\s*d[_\\s]*i.*divis\",   # \"f_i - d_i is divisible...\"\n        r\"d[_\\s]*i.*f[_\\s]*i.*(mod\\s*7|mod7|%7|% 7|\u2261\\s*0\\s*mod\\s*7|divis)\",  # mod7 style\n        r\"7\\s*(divides|divisible|multiple||\\\\|!)\",  # mention of 7 and divisibility\n        r\"for each i[, ]+d[_\\s]*i.*f[_\\s]*i.*7\",    # verbose phrasing\n    ]\n    # Check for explicit concise variants\n    concise_variants = [\n        \"d_i-f_i divisible by 7\",\n        \"d_i - f_i divisible by 7\",\n        \"d_i - f_i is divisible by 7\",\n        \"7 divides d_i-f_i\",\n        \"7 | d_i - f_i\",\n        \"d_i \u2261 f_i (mod 7)\",\n        \"d_i \u2261 f_i mod 7\",\n        \"for each i, d_i - f_i is divisible by 7\",\n        \"for each i d_i-f_i is divisible by 7\",\n    ]\n    for v in concise_variants:\n        if v in s:\n            return True\n    for p in patterns:\n        if re.search(p, s):\n            # guard: ensure both d_i and f_i referenced\n            if re.search(r\"d[_\\s]*i\", s) or re.search(r\"d_i\", s):\n                if re.search(r\"f[_\\s]*i\", s) or re.search(r\"f_i\", s):\n                    return True\n    # Also accept common mathematical notation\n    if re.search(r\"d_i\\s*\u2261\\s*f_i\\s*\\(?mod\\s*7\\)?\", s) or re.search(r\"d_i\\s*=\\s*f_i\\s*\\(?mod\\s*7\\)?\", s):\n        return True\n    return False",
+      "gold_verdict": false,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1995_a4",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 4.306969165802002
+    },
+    {
+      "id": "putnam_1995_a5",
+      "status": "ok",
+      "gold_answer": "Show that the answer is yes, the functions must be linearly dependent.",
+      "elapsed": 16.853354930877686,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    if not isinstance(answer, str):\n        return False\n    s = answer.lower().strip()\n\n    # Reject obvious negative answers\n    negations = [\" not \", \"n't\", \" never \", \" no \", \"non-\", \"false\"]\n    # Accept if the ph",
+      "elapsed_retry": 46.664011001586914,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    if not isinstance(answer, str):\n        return False\n    s = answer.lower().strip()\n\n    # Reject obvious negative answers\n    negations = [\" not \", \"n't\", \" never \", \" no \", \"non-\", \"false\"]\n    # Accept if the phrase \"linearly dependent\" appears and no negation is present\n    if \"linearly dependent\" in s and not any(neg in s for neg in negations):\n        return True\n\n    # Also accept common affirmative short answers\n    affirmatives = [\"yes\", \"true\", \"necessarily\", \"affirmative\"]\n    if any(word in s for word in affirmatives) and (\"dependent\" in s or \"linearly dependent\" in s):\n        if not any(neg in s for neg in negations):\n            return True\n\n    return False",
+      "gold_verdict": true
+    },
+    {
+      "id": "putnam_1995_b1",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 5.8287599086761475
+    },
+    {
+      "id": "putnam_1995_b3",
+      "status": "ok",
+      "gold_answer": "Show that the solution is $45$ if $n = 1$, $45^2*10$ if $n = 2$, and $0$ if $n$ is greater than 3.",
+      "elapsed": 15.732810258865356,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Expected value: sum of determinants = 45 if n == 1, else 0\n    def expected(n):\n        return 45 if n == 1 else 0\n\n    # Prepare test values for n\n    test_ns = [1, 2, 3, 4, 5]\n    # add a few random ns as well\n",
+      "elapsed_retry": 39.950422048568726,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Expected value: sum of determinants = 45 if n == 1, else 0\n    def expected(n):\n        return 45 if n == 1 else 0\n\n    # Prepare test values for n\n    test_ns = [1, 2, 3, 4, 5]\n    # add a few random ns as well\n    for _ in range(3):\n        test_ns.append(random.randint(1, 20))\n    test_ns = list(dict.fromkeys(test_ns))  # unique, preserve order\n\n    # Helper to evaluate candidate answer for a specific n\n    def eval_answer_for_n(ans, n):\n        # If ans is callable, try calling with integer n\n        if callable(ans):\n            try:\n                return ans(n)\n            except Exception:\n                # try calling with sympy Integer\n                try:\n                    return ans(sp.Integer(n))\n                except Exception:\n                    raise\n        # If ans is a sympy expression\n        if isinstance(ans, (sp.Basic, sp.Expr)):\n            # substitute n if symbol present\n            n_sym = sp.symbols('n')\n            try:\n                return ans.subs(n_sym, n)\n            except Exception:\n                # try evaluating directly by replacing any Symbol named 'n'\n                try:\n                    subsd = {s: n for s in ans.free_symbols if s.name == 'n'}\n                    if subsd:\n                        return ans.subs(subsd)\n                except Exception:\n                    pass\n                raise\n        # If ans is string, sympify it with symbol n\n        if isinstance(ans, str):\n            n_sym = sp.symbols('n')\n            try:\n                expr = sp.sympify(ans)\n                return expr.subs(n_sym, n)\n            except Exception:\n                # maybe it's Python expression using n; try eval with n in scope\n                try:\n                    return eval(ans, {\"n\": n, \"sp\": sp})\n                except Exception:\n                    raise\n        # Otherwise, assume it's a constant (int/float) or something indexable\n        return ans\n\n    # Now test candidate answer for all test ns\n    for n in test_ns:\n        try:\n            val = eval_answer_for_n(answer, n)\n        except Exception:\n            return False\n\n        # Normalize val to an integer if possible\n        # If sympy object, try to simplify/evaluate to Integer\n        try:\n            if isinstance(val, sp.Basic):\n                val_simpl = sp.simplify(val)\n                if val_simpl.is_Integer:\n                    val_num = int(val_simpl)\n                else:\n                    # try numeric evaluation\n                    val_eval = sp.N(val_simpl)\n                    # if it's very close to integer, accept\n                    if abs(float(val_eval) - round(float(val_eval))) < 1e-8:\n                        val_num = int(round(float(val_eval)))\n                    else:\n                        return False\n            else:\n                # Python numeric types\n                if isinstance(val, bool):\n               ",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1995_b4",
+      "status": "ok",
+      "gold_answer": "Show that the solution is $(3 + 1*\\sqrt{5})/2.",
+      "elapsed": 18.377156734466553,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    from sympy import sympify, sqrt, Rational, simplify, N\n    # target value (3+sqrt(5))/2\n    target = (3 + sqrt(5)) / 2\n\n    # Accept tuple/list of four integers (a,b,c,d)\n    if isinstance(answer, (list, tuple)) and len(answer) == 4:\n    ",
+      "elapsed_retry": 31.13506817817688,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    from sympy import sympify, sqrt, Rational, simplify, N\n    # target value (3+sqrt(5))/2\n    target = (3 + sqrt(5)) / 2\n\n    # Accept tuple/list of four integers (a,b,c,d)\n    if isinstance(answer, (list, tuple)) and len(answer) == 4:\n        try:\n            a, b, c, d = answer\n            expr = (Rational(a) + Rational(b) * sqrt(int(c))) / Rational(d)\n        except Exception:\n            return False\n    else:\n        # Try to sympify the answer\n        try:\n            if isinstance(answer, str):\n                expr = sympify(answer)\n            else:\n                # If it's already a sympy expr or a number\n                expr = sympify(answer)\n        except Exception:\n            return False\n\n    # If expression is exact symbolic, test exact equality\n    try:\n        diff = simplify(expr - target)\n        if diff == 0:\n            return True\n    except Exception:\n        pass\n\n    # Otherwise test numerically with a tolerance\n    try:\n        if abs(float(N(expr) - N(target))) < 1e-10:\n            return True\n    except Exception:\n        pass\n\n    return False",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1995_b6",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 2.6431870460510254
+    },
+    {
+      "id": "putnam_1989_a1",
+      "status": "ok",
+      "gold_answer": "Show that there is only one such prime.",
+      "elapsed": 20.943401098251343,
+      "raw_text_head": "def verify(answer):\n    import sympy as sp\n    import random\n    random.seed(42)\n    # normalize candidate answer to an integer if possible\n    try:\n        if isinstance(answer, str):\n            ans = int(answer.strip())\n        else:\n            ans = int(answer)\n    except Exception:\n        ret",
+      "elapsed_retry": 51.888378858566284,
+      "script": "def verify(answer):\n    import sympy as sp\n    import random\n    random.seed(42)\n    # normalize candidate answer to an integer if possible\n    try:\n        if isinstance(answer, str):\n            ans = int(answer.strip())\n        else:\n            ans = int(answer)\n    except Exception:\n        return False\n    # The correct count is 1 (only 101). Return True iff candidate equals 1.\n    return ans == 1",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1989_a2",
+      "status": "ok",
+      "gold_answer": "Show that the value of the integral is $(e^{a^2b^2}-1)/(ab)$.",
+      "elapsed": 17.492427825927734,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # symbols\n    a, b = sp.symbols('a b', positive=True)\n\n    # correct expression\n    correct = (sp.exp(a**2 * b**2) - 1) / (a * b)\n\n    candidate_expr = None\n    candidate_callable = None\n\n    # Helper to try to int",
+      "elapsed_retry": 40.247130155563354,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # symbols\n    a, b = sp.symbols('a b', positive=True)\n\n    # correct expression\n    correct = (sp.exp(a**2 * b**2) - 1) / (a * b)\n\n    candidate_expr = None\n    candidate_callable = None\n\n    # Helper to try to interpret answer as a sympy expression\n    def try_sympify(x):\n        try:\n            return sp.sympify(x, locals={'a': a, 'b': b, 'exp': sp.exp, 'e': sp.E, 'E': sp.E})\n        except Exception:\n            return None\n\n    # classify the provided answer\n    if isinstance(answer, str):\n        candidate_expr = try_sympify(answer)\n        if candidate_expr is None:\n            return False\n    elif isinstance(answer, (sp.Expr, sp.Basic)):\n        candidate_expr = answer\n    elif callable(answer):\n        # try symbolic call first\n        try:\n            res = answer(a, b)\n            if isinstance(res, (sp.Expr, sp.Basic)):\n                candidate_expr = res\n            else:\n                candidate_callable = answer\n        except Exception:\n            # fallback: treat as numeric callable\n            candidate_callable = answer\n    else:\n        candidate_expr = try_sympify(answer)\n        if candidate_expr is None:\n            return False\n\n    # If we have a symbolic candidate, try symbolic equality checks\n    if candidate_expr is not None:\n        diff = sp.simplify(candidate_expr - correct)\n        try:\n            if diff.equals(0):\n                return True\n        except Exception:\n            pass\n        # additional symbolic simplifications\n        try:\n            if sp.simplify(sp.factor(diff)) == 0:\n                return True\n        except Exception:\n            pass\n\n    # Numeric tests\n    test_vals = [(1.0, 1.0), (2.0, 0.5), (0.123, 4.56)]\n    for _ in range(7):\n        test_vals.append((random.uniform(0.1, 5.0), random.uniform(0.1, 5.0)))\n\n    for av, bv in test_vals:\n        # correct numeric value\n        try:\n            correct_val = float(sp.N(correct.subs({a: av, b: bv}), 20))\n        except Exception:\n            return False\n\n        # candidate numeric value\n        if candidate_expr is not None:\n            try:\n                cand_val = float(sp.N(candidate_expr.subs({a: av, b: bv}), 20))\n            except Exception:\n                try:\n                    cand_val = float(candidate_expr.subs({a: av, b: bv}).evalf(20))\n                except Exception:\n                    return False\n        else:\n            # callable numeric\n            try:\n                cand_out = candidate_callable(av, bv)\n                # if returns sympy object\n                if isinstance(cand_out, (sp.Expr, sp.Basic)):\n                    cand_val = float(sp.N(cand_out, 20))\n                else:\n                    cand_val = float(cand_out)\n            except Exception:\n                return False\n\n        # compare with tolerances\n        if not (abs(cand_val - correct_val) <= 1e-8 + 1e-8 * abs(correct_val)):\n            retur",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1989_a3",
+      "status": "ok",
+      "gold_answer": "",
+      "elapsed": 17.266677141189575,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Build polynomial 11 z^10 + 10 i z^9 + 10 i z - 11\n    z = sp.symbols('z')\n    I = sp.I\n    poly = 11*z**10 + 10*I*z**9 + 10*I*z - 11\n\n    # Numerical roots\n    try:\n        roots = sp.nroots(poly)\n    except Exce",
+      "elapsed_retry": 23.67577600479126,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Build polynomial 11 z^10 + 10 i z^9 + 10 i z - 11\n    z = sp.symbols('z')\n    I = sp.I\n    poly = 11*z**10 + 10*I*z**9 + 10*I*z - 11\n\n    # Numerical roots\n    try:\n        roots = sp.nroots(poly)\n    except Exception:\n        # Fallback: attempt to get roots from Poly\n        try:\n            roots = sp.Poly(poly, z).nroots()\n        except Exception:\n            return False\n\n    # Check that all roots have modulus 1 (within tolerance)\n    tol = 1e-8\n    all_on_unit_circle = True\n    for r in roots:\n        # convert to Python complex for abs\n        cr = complex(r.evalf())\n        if abs(abs(cr) - 1) > tol:\n            all_on_unit_circle = False\n            break\n\n    # Now check the candidate answer string indicates |z| = 1.\n    # Accept a few common phrasings.\n    ok_answer = False\n    if isinstance(answer, str):\n        s = answer.lower().replace(\" \", \"\")\n        # common forms to accept\n        targets = [\n            \"|z|=1\", \"abs(z)=1\", \"mod(z)=1\", \"modz=1\",\n            \"absolutevalueofz=1\", \"absolutevalue(z)=1\",\n            \"zisonunitcircle\", \"zontheunitcircle\", \"unitcircle\", \"zliesontheunitcircle\",\n            \"zistheunitcircle\", \"zhasmodulus1\", \"modulusofz=1\", \"zhasmodulus1\"\n        ]\n        # also accept \"1\" with |z| pattern without spaces\n        if \"|z|\" in s and \"=1\" in s:\n            ok_answer = True\n        else:\n            for t in targets:\n                if t in s:\n                    ok_answer = True\n                    break\n\n    # If answer is a boolean True, accept only if the statement is true\n    if answer is True:\n        # then require the mathematical fact to hold\n        return all_on_unit_circle\n\n    # Final decision: both the math fact must be true and answer must assert it\n    return all_on_unit_circle and ok_answer",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1989_a6",
+      "status": "ok",
+      "gold_answer": "",
+      "elapsed": 18.142534971237183,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp  # included as requested\n    import numpy as np\n\n    # compute a_n according to the problem: a_0 = 1, and for n>=1:\n    # a_n = 1 iff every block of zeros in binary representation of n has even length.\n    def a_n(n):\n ",
+      "elapsed_retry": 41.57864499092102,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp  # included as requested\n    import numpy as np\n\n    # compute a_n according to the problem: a_0 = 1, and for n>=1:\n    # a_n = 1 iff every block of zeros in binary representation of n has even length.\n    def a_n(n):\n        if n == 0:\n            return 1\n        s = bin(n)[2:]\n        cnt = 0\n        blocks = []\n        for ch in s:\n            if ch == '0':\n                cnt += 1\n            else:\n                if cnt > 0:\n                    blocks.append(cnt)\n                    cnt = 0\n        if cnt > 0:\n            blocks.append(cnt)\n        for b in blocks:\n            if b % 2 == 1:\n                return 0\n        return 1\n\n    # Number of terms to test (truncated series).\n    N = 2000\n\n    # Build coefficient array a[0..N]\n    a_list = [a_n(i) for i in range(N + 1)]\n    a_arr = np.array(a_list, dtype=np.int64)\n\n    # Compute alpha^3 coefficients via convolution over integers, then reduce mod 2.\n    conv_aa = np.convolve(a_arr, a_arr)  # length 2N+1\n    conv_aaa = np.convolve(conv_aa, a_arr)  # length 3N+1\n    conv_aaa = conv_aaa % 2\n\n    # Check identity alpha^3 + x*alpha + 1 == 0 up to degree N\n    # For degree n: conv_aaa[n] + (a_{n-1} if n>=1 else 0) + (1 if n==0 else 0) == 0 (mod 2)\n    for n in range(0, N + 1):\n        term_alpha3 = int(conv_aaa[n])  # 0 or 1\n        term_xalpha = a_list[n - 1] if n >= 1 else 0\n        term_const = 1 if n == 0 else 0\n        lhs = (term_alpha3 + term_xalpha + term_const) % 2\n        if lhs != 0:\n            return False\n\n    # Additional random checks at larger indices (up to degree available in conv_aaa)\n    max_deg = len(conv_aaa) - 1\n    for _ in range(50):\n        n = random.randint(0, max_deg)\n        # compute a_n on the fly if needed for x*alpha term (requires a_{n-1})\n        term_alpha3 = int(conv_aaa[n])\n        term_xalpha = a_n(n - 1) if n >= 1 else 0\n        term_const = 1 if n == 0 else 0\n        if (term_alpha3 + term_xalpha + term_const) % 2 != 0:\n            return False\n\n    return True",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1989_b2",
+      "status": "unverifiable",
+      "gold_answer": "Prove that $S$ must be a group.",
+      "elapsed": 16.87459087371826
+    },
+    {
+      "id": "putnam_1989_b3",
+      "status": "unverifiable",
+      "gold_answer": "Show that for each $n \\geq 0$, $\\mu_n = \\frac{n!}{3^n} \\left( \\prod_{m=1}^{n}(1 - 2^{-m}) \\right)^{-1} \\mu_0$.",
+      "elapsed": 17.586997032165527,
+      "raw_text_head": "UNVERIFIABLE",
+      "elapsed_retry": 18.28605604171753
+    },
+    {
+      "id": "putnam_1989_b4",
+      "status": "ok",
+      "gold_answer": "Prove that such a collection exists.",
+      "elapsed": 13.336225986480713,
+      "script": "def verify(answer):\n    \"\"\"\n    Verify a short-answer claim to the question:\n    \"Can a countably infinite set have an uncountable collection of non-empty subsets\n    such that the intersection of any two of them is finite?\"\n\n    The correct answer is \"Yes\" (such families, called almost-disjoint families, exist\n    of size continuum). This function returns True if the provided short-answer string\n    asserts existence/possibility (e.g. \"Yes\", \"There exists\", \" continuum\", ...),\n    and False if it asserts impossibility (e.g. \"No\", \"Impossible\", \"Cannot\", ...).\n    \"\"\"\n    import re\n    if not isinstance(answer, str):\n        return False\n    s = answer.strip().lower()\n    # Look for explicit negation words\n    neg_words = [r\"\\bno\\b\", r\"\\bnot\\b\", r\"\\bimpossible\\b\", r\"\\bcannot\\b\", r\"\\bcan't\\b\", r\"\\bdoesn't\\b\", r\"\\bnever\\b\"]\n    for pat in neg_words:\n        if re.search(pat, s):\n            return False\n    # Look for affirmative / existence words or phrases\n    pos_words = [r\"\\byes\\b\", r\"\\bexist(s|ence)?\\b\", r\"\\bpossible\\b\", r\"\\bcan\\b\", r\"\\bthere exists\\b\",\n                 r\"\\buncountable\\b\", r\"\\bcontinuum\\b\", r\"2\\^\\{?aleph_0\\}?\", r\"2\\^aleph_0\", r\"\\balmost[- ]?disjoint\\b\",\n                 r\"\\balmost disjoint\\b\"]\n    for pat in pos_words:\n        if re.search(pat, s):\n            return True\n    # If answer is very short and matches common one-word replies\n    if s in (\"yes\", \"y\", \"true\", \"possible\", \"exists\"):\n        return True\n    if s in (\"no\", \"n\", \"false\", \"impossible\"):\n        return False\n    # Unknown/ambiguous short answer \u2014 cannot verify confidently\n    return False",
+      "gold_verdict": true,
+      "exec_error": null
+    },
+    {
+      "id": "putnam_1997_a3",
+      "status": "ok",
+      "gold_answer": "Show that the solution is $\\sqrt{e}$.",
+      "elapsed": 18.063838005065918,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    from sympy import sympify, exp, Rational, N, simplify\n    # expected value = e^{1/2}\n    expected = exp(Rational(1, 2))\n    try:\n        a = sympify(answer)\n    except Exception:\n        try:\n            # try numeric conversion\n         ",
+      "elapsed_retry": 26.314263105392456,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    from sympy import sympify, exp, Rational, N, simplify\n    # expected value = e^{1/2}\n    expected = exp(Rational(1, 2))\n    try:\n        a = sympify(answer)\n    except Exception:\n        try:\n            # try numeric conversion\n            a = float(answer)\n        except Exception:\n            return False\n    # Exact symbolic check\n    try:\n        if simplify(a - expected) == 0:\n            return True\n    except Exception:\n        pass\n    # Numeric check with high precision\n    try:\n        na = N(a, 50)\n        ne = N(expected, 50)\n        # allow small numerical tolerance\n        return abs(complex(na) - complex(ne)) < 1e-10\n    except Exception:\n        return False",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1997_a4",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 19.427554845809937,
+      "raw_text_head": "UNVERIFIABLE",
+      "elapsed_retry": 1.8905799388885498
+    },
+    {
+      "id": "putnam_1997_a5",
+      "status": "ok",
+      "gold_answer": "Show that $N_{10}$ is odd.",
+      "elapsed": 17.524604082107544,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n    from collections import Counter\n    from math import factorial\n\n    # Accept only 'even' or 'odd' (case-insensitive) as valid answers\n    if not isinstance(answer, str):\n        return False\n    ans = answer.strip()",
+      "elapsed_retry": 27.96555995941162,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n    from collections import Counter\n    from math import factorial\n\n    # Accept only 'even' or 'odd' (case-insensitive) as valid answers\n    if not isinstance(answer, str):\n        return False\n    ans = answer.strip().lower()\n    if ans not in (\"even\", \"odd\"):\n        return False\n\n    n = 10\n    one = sp.Rational(1, 1)\n\n    total_ordered = 0\n\n    # Backtracking over nondecreasing sequences of length k with minimum 'min_a'\n    # remaining is a SymPy Rational\n    def backtrack(k, min_a, remaining, cur):\n        nonlocal total_ordered\n        if k == 0:\n            if remaining == 0:\n                # compute permutations count for this multiset 'cur'\n                cnts = Counter(cur)\n                denom = 1\n                for v in cnts.values():\n                    denom *= factorial(v)\n                total_ordered += factorial(n) // denom\n            return\n        if remaining <= 0:\n            return\n        num, den = remaining.as_numer_denom()\n        # minimal possible next a to ensure 1/a <= remaining\n        # a >= ceil(den/num)\n        min_needed = (den + num - 1) // num\n        a_start = max(min_a, min_needed)\n        # upper bound from k*(1/a) >= remaining -> a <= floor(k*den/num)\n        a_end = (k * den) // num\n        if a_start > a_end:\n            return\n        # iterate possible next a\n        for a in range(int(a_start), int(a_end) + 1):\n            backtrack(k - 1, a, remaining - sp.Rational(1, a), cur + (a,))\n\n    backtrack(n, 2, one, ())\n\n    parity = \"even\" if total_ordered % 2 == 0 else \"odd\"\n    return ans == parity",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1997_a6",
+      "status": "ok",
+      "gold_answer": "Show that the solution is that $x_k = {n - 1 \\choose k - 1}$.",
+      "elapsed": 17.389384031295776,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Symbols\n    n_sym, k_sym, c_sym = sp.symbols('n k c')\n\n    # Prepare answer expression: allow answer to be a sympy expression or a string or a callable\n    expr = None\n    if callable(answer):\n        expr_callab",
+      "elapsed_retry": 32.75750494003296,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # Symbols\n    n_sym, k_sym, c_sym = sp.symbols('n k c')\n\n    # Prepare answer expression: allow answer to be a sympy expression or a string or a callable\n    expr = None\n    if callable(answer):\n        expr_callable = answer\n    else:\n        try:\n            expr = sp.sympify(answer, locals={\n                'n': n_sym, 'k': k_sym,\n                'binomial': sp.binomial, 'factorial': sp.factorial, 'gamma': sp.gamma\n            })\n            expr_callable = None\n        except Exception:\n            return False\n\n    # Function to evaluate candidate formula for given n,k as float\n    def eval_candidate(nval, kval):\n        if expr_callable is not None:\n            try:\n                return float(expr_callable(nval, kval))\n            except Exception:\n                raise\n        else:\n            val = expr.subs({n_sym: sp.Integer(nval), k_sym: sp.Integer(kval)})\n            valn = complex(sp.N(val, 50))\n            if abs(valn.imag) > 1e-8:\n                raise ValueError(\"candidate gives nonreal value\")\n            return float(valn.real)\n\n    # Number of test n values (deterministic list + some random ones)\n    test_ns = list(range(1, 9))\n    # add a few random n between 1 and 15\n    for _ in range(3):\n        test_ns.append(random.randint(1, 15))\n    test_ns = sorted(set(test_ns))\n\n    # For each test n, find largest real root c of x_{n+1}(c)=0, compute sequence, compare\n    for nval in test_ns:\n        # Build polynomial p(c) = x_{n+1} as a sympy expression in c_sym\n        x_prev = sp.Integer(0)  # x_0\n        x_curr = sp.Integer(1)  # x_1\n        # iterate k = 0 to nval-? we need up to x_{n+1}, so do nval iterations to produce up to x_{n+1}\n        for k in range(0, nval + 1):\n            # compute x_{k+2} = (c*x_{k+1} - (n-k)*x_k)/(k+1)\n            x_next = sp.simplify((c_sym * x_curr - sp.Integer(nval - k) * x_prev) / sp.Integer(k + 1))\n            x_prev, x_curr = x_curr, x_next\n        p = sp.simplify(x_curr)  # this is x_{n+1} as a polynomial in c_sym\n\n        # Ensure p is polynomial in c_sym\n        if not p.free_symbols <= {c_sym}:\n            return False\n\n        # If p is identically zero (unlikely), cannot determine largest c\n        if sp.simplify(p) == 0:\n            return False\n\n        # Find numeric roots\n        try:\n            roots = sp.nroots(p)\n        except Exception:\n            # fallback: try converting to polynomial and using nroots\n            try:\n                poly = sp.Poly(sp.simplify(sp.together(p)), c_sym)\n                roots = poly.nroots()\n            except Exception:\n                return False\n\n        real_vals = []\n        for r in roots:\n            rc = complex(r)\n            if abs(rc.imag) <= 1e-8:\n                real_vals.append(rc.real)\n        if not real_vals:\n            return False\n        c_val = max(real_vals)\n\n        # Now compute numeric x_k sequence for this c_val\n        x0 = 0.0\n",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1997_b1",
+      "status": "ok",
+      "gold_answer": "Show that the solution is $n$.",
+      "elapsed": 16.350867748260498,
+      "raw_text_head": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # symbol for substitution\n    n = sp.symbols('n')\n\n    # parse the provided answer into a sympy expression if possible\n    expr = None\n    is_callable = callable(answer)\n    try:\n        if is_callable:\n           ",
+      "elapsed_retry": 39.713412046432495,
+      "script": "def verify(answer):\n    import random\n    random.seed(42)\n    import sympy as sp\n\n    # symbol for substitution\n    n = sp.symbols('n')\n\n    # parse the provided answer into a sympy expression if possible\n    expr = None\n    is_callable = callable(answer)\n    try:\n        if is_callable:\n            expr = None\n        else:\n            if isinstance(answer, str):\n                expr = sp.sympify(answer, locals={'n': n})\n            else:\n                # could already be a sympy Expr or a number\n                expr = sp.sympify(answer)\n    except Exception:\n        return False\n\n    # function to compute the true F_n by definition using exact rationals\n    def true_F(n0):\n        n0 = int(n0)\n        tot = sp.Rational(0, 1)\n        for m in range(1, 6 * n0):\n            x = sp.Rational(m, 6 * n0)\n            # since 0 < x < 1 for these m, dist to nearest integer is min(x, 1-x)\n            d1 = sp.Min(x, 1 - x)\n            y = sp.Rational(m, 3 * n0)\n            # y may be >=1, take fractional part\n            frac_y = y - sp.floor(y)\n            d2 = sp.Min(frac_y, 1 - frac_y)\n            tot += sp.Min(d1, d2)\n        return sp.simplify(tot)\n\n    # helper to evaluate candidate expression/value at integer n0\n    def eval_candidate(n0):\n        if is_callable:\n            try:\n                val = answer(int(n0))\n            except Exception:\n                raise\n            # try to coerce to sympy rational/expression\n            if isinstance(val, sp.Expr):\n                return sp.simplify(val)\n            if isinstance(val, int):\n                return sp.Integer(val)\n            if isinstance(val, float):\n                return sp.nsimplify(val, tol=1e-12)\n            try:\n                return sp.sympify(val)\n            except Exception:\n                return sp.nsimplify(val)\n        else:\n            # expr is a sympy expression; substitute\n            val = expr.subs(n, int(n0))\n            return sp.simplify(val)\n\n    # choose test values: small range and some random larger ones\n    test_ns = list(range(1, 51))\n    for _ in range(10):\n        test_ns.append(random.randint(51, 1000))\n\n    # verify for all test n\n    try:\n        for n0 in test_ns:\n            true_val = true_F(n0)\n            cand_val = eval_candidate(n0)\n            # simplify difference and check zero\n            diff = sp.simplify(sp.nsimplify(cand_val - true_val))\n            if diff != 0:\n                return False\n    except Exception:\n        return False\n\n    return True",
+      "gold_verdict": false
+    },
+    {
+      "id": "putnam_1997_b2",
+      "status": "unverifiable",
+      "gold_answer": "",
+      "elapsed": 2.9225709438323975
+    }
+  ],
+  "source": "amitayusht/PutnamBench"
+}
