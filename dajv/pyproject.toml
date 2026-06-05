@@ -1,0 +1,74 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "verifyensemble"
+version = "0.1.15"
+description = "Dependency-Aware Jury Verification for LLM Math Reasoning"
+readme = "README.md"
+authors = [{name = "Anonymous"}]
+license = {text = "BSD-3-Clause"}
+requires-python = ">=3.10"
+dependencies = [
+    "sympy>=1.13",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.optional-dependencies]
+api = [
+    "together>=1.0",
+    "openai>=1.40",
+    "anthropic>=0.40",
+]
+dev = [
+    "pytest>=8.0",
+    "matplotlib>=3.8",
+]
+
+[project.urls]
+"Source" = "https://example.org/anonymous"
+"Paper" = "https://example.org/anonymous"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["verifyensemble*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B"]
+ignore = [
+    "E501",   # line length handled separately
+    "E701",   # multiple statements on one line (we use semis in a few tight blocks)
+    "E702",
+    "E731",   # lambdas in dicts are intentional in api_wrappers / figures
+    "E741",   # one-letter loop var l; algorithmic code uses it
+    "B007",
+    "B008",
+    "B905",   # zip(strict=) added in 3.10; keep both-length zips implicit
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Scripts intentionally insert sys.path before imports
+"scripts/*.py" = ["E402"]
+"tests/*.py" = ["E402"]
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+warn_unused_ignores = false
+disallow_untyped_defs = false
+check_untyped_defs = true

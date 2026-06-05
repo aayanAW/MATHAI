@@ -1,0 +1,55 @@
+name: ci
+
+# Runs on every push and pull request.
+# Anonymous during the ICML 2027 review cycle; the workflow file is checked
+# in so the public release does not need a separate setup step.
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install package
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+          pip install pytest hypothesis ruff mypy
+      - name: Ruff
+        run: ruff check verifyensemble/ scripts/ tests/
+      - name: Mypy
+        run: mypy verifyensemble/
+      - name: Tests
+        run: PYTHONPATH=. pytest tests/ -q
+
+  paper-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install tectonic
+        run: |
+          curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net | sh
+          sudo mv tectonic /usr/local/bin/
+      - name: Compile paper
+        run: |
+          cd paper
+          tectonic main.tex
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-pdf
+          path: paper/main.pdf

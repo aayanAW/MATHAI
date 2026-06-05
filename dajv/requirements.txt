@@ -1,0 +1,14 @@
+# Core (required)
+sympy>=1.13
+
+# Optional: extractor APIs (install only the providers you use)
+# together>=1.0
+# openai>=1.40
+# anthropic>=0.40
+# google-genai>=1.0
+# mistralai>=1.0
+
+# Optional: development & testing
+# pytest>=8.0
+# matplotlib>=3.8     # for paper figures
+# seaborn>=0.13       # heatmap of dependency matrix
