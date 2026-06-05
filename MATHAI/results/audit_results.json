@@ -1,0 +1,518 @@
+{
+  "fpvr": {
+    "fpvr": 0.1375,
+    "n_all_pass": 320,
+    "n_wrong_given_all_pass": 44,
+    "fpvr_by_level": {
+      "1": {
+        "n": 71,
+        "n_wrong": 1,
+        "fpvr": 0.0141
+      },
+      "2": {
+        "n": 65,
+        "n_wrong": 5,
+        "fpvr": 0.0769
+      },
+      "3": {
+        "n": 61,
+        "n_wrong": 8,
+        "fpvr": 0.1311
+      },
+      "4": {
+        "n": 58,
+        "n_wrong": 10,
+        "fpvr": 0.1724
+      },
+      "5": {
+        "n": 65,
+        "n_wrong": 20,
+        "fpvr": 0.3077
+      }
+    },
+    "fpvr_by_subject": {
+      "algebra": {
+        "n": 82,
+        "n_wrong": 5,
+        "fpvr": 0.061
+      },
+      "counting_and_probability": {
+        "n": 35,
+        "n_wrong": 5,
+        "fpvr": 0.1429
+      },
+      "geometry": {
+        "n": 32,
+        "n_wrong": 6,
+        "fpvr": 0.1875
+      },
+      "intermediate_algebra": {
+        "n": 45,
+        "n_wrong": 8,
+        "fpvr": 0.1778
+      },
+      "number_theory": {
+        "n": 28,
+        "n_wrong": 5,
+        "fpvr": 0.1786
+      },
+      "prealgebra": {
+        "n": 65,
+        "n_wrong": 7,
+        "fpvr": 0.1077
+      },
+      "precalculus": {
+        "n": 33,
+        "n_wrong": 8,
+        "fpvr": 0.2424
+      }
+    },
+    "calibration": {
+      "all_pass_accuracy": 0.8625,
+      "fallback_accuracy": 0.7833,
+      "gap_pp": 7.9
+    }
+  },
+  "repair_audit": {
+    "n_repaired": 54,
+    "repair_accuracy": 1.0,
+    "repair_by_level": {
+      "1": 16,
+      "2": 13,
+      "3": 12,
+      "4": 9,
+      "5": 4
+    },
+    "repair_by_subject": {
+      "algebra": 18,
+      "counting_and_probability": 5,
+      "geometry": 4,
+      "intermediate_algebra": 4,
+      "number_theory": 3,
+      "prealgebra": 15,
+      "precalculus": 5
+    },
+    "false_positives_all_pass": {
+      "count": 44,
+      "description": "Wrong answers that passed ALL assertions (FPVR cases)",
+      "by_level": {
+        "1": 1,
+        "2": 5,
+        "3": 8,
+        "4": 10,
+        "5": 20
+      },
+      "by_subject": {
+        "intermediate_algebra": 8,
+        "geometry": 6,
+        "counting_and_probability": 5,
+        "number_theory": 5,
+        "algebra": 5,
+        "precalculus": 8,
+        "prealgebra": 7
+      }
+    },
+    "false_negatives_no_verdict": {
+      "count": 31,
+      "description": "Wrong answers where verification crashed/failed (no useful signal)",
+      "by_level": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 12,
+        "5": 12
+      }
+    },
+    "assertion_failures": {
+      "count": 10,
+      "description": "Cases where assertion failed (triggered repair attempt)"
+    },
+    "trigger_rate": 0.02,
+    "interpretation": "The verifier catches a narrow class of shallow computational errors (trigger rate: 10/500 = 2.0%). Repair is effective on this class (54 repaired, 54/54 correct). The verifier does NOT catch conceptual errors \u2014 these pass as false positives (FPVR = 44/320 = 13.8%)."
+  },
+  "structured_answers": {
+    "total_problems": 500,
+    "n_structured": 31,
+    "n_scalar": 469,
+    "pct_structured": 6.2,
+    "structured_by_subject": {
+      "algebra": 6,
+      "geometry": 3,
+      "intermediate_algebra": 7,
+      "number_theory": 1,
+      "precalculus": 14
+    },
+    "structured_by_level": {
+      "1": 3,
+      "2": 9,
+      "3": 8,
+      "4": 8,
+      "5": 3
+    },
+    "examples": [
+      {
+        "id": "math500_11",
+        "answer": "(4,\\pi)",
+        "level": 1,
+        "type": "precalculus",
+        "matched_pattern": "\\(.*,.*\\)"
+      },
+      {
+        "id": "math500_15",
+        "answer": "\\text{even}",
+        "level": 1,
+        "type": "intermediate_algebra",
+        "matched_pattern": "\\\\text\\{"
+      },
+      {
+        "id": "math500_19",
+        "answer": "(1,1)",
+        "level": 1,
+        "type": "algebra",
+        "matched_pattern": "\\(.*,.*\\)"
+      },
+      {
+        "id": "math500_104",
+        "answer": "(3,-4)",
+        "level": 2,
+        "type": "geometry",
+        "matched_pattern": "\\(.*,.*\\)"
+      },
+      {
+        "id": "math500_105",
+        "answer": "\\text{(E)}",
+        "level": 2,
+        "type": "precalculus",
+        "matched_pattern": "\\\\text\\{"
+      },
+      {
+        "id": "math500_126",
+        "answer": "\\text{odd}",
+        "level": 2,
+        "type": "intermediate_algebra",
+        "matched_pattern": "\\\\text\\{"
+      },
+      {
+        "id": "math500_147",
+        "answer": "81\\text{ teachers}",
+        "level": 2,
+        "type": "algebra",
+        "matched_pattern": "\\\\text\\{"
+      },
+      {
+        "id": "math500_159",
+        "answer": "\\begin{pmatrix} 3 & 2 \\\\ 0 & -7 \\end{pmatrix}",
+        "level": 2,
+        "type": "precalculus",
+        "matched_pattern": "\\\\begin\\{[pm]matrix"
+      },
+      {
+        "id": "math500_160",
+        "answer": "\\text{neither}",
+        "level": 2,
+        "type": "intermediate_algebra",
+        "matched_pattern": "\\\\text\\{"
+      },
+      {
+        "id": "math500_183",
+        "answer": "(-2,5,-1)",
+        "level": 2,
+        "type": "precalculus",
+        "matched_pattern": "\\(.*,.*\\)"
+      }
+    ],
+    "scope_statement": "ExeVer measures SymPy consistency-checkability for scalar algebraic and numerical outputs. 31 of 500 problems (6.2%) have structured answers (sets, intervals, tuples, matrices, text) that fall outside our comparator's scope."
+  },
+  "assertion_categorization": {
+    "total_assertions": 835,
+    "problems_with_assertions": 247,
+    "avg_assertions_per_problem": 3.38,
+    "note": "Full assertion-type categorization requires re-parsing verification scripts from raw responses (not stored in exp5 results JSON). The categorize_assertion() function is implemented and ready for use when scripts are available."
+  },
+  "coverage_vs_accuracy": {
+    "cells": [
+      {
+        "subject": "algebra",
+        "level": 1,
+        "n": 32,
+        "greedy_accuracy": 0.969,
+        "problem_coverage": 0.688,
+        "residual": -0.281
+      },
+      {
+        "subject": "algebra",
+        "level": 2,
+        "n": 20,
+        "greedy_accuracy": 0.95,
+        "problem_coverage": 0.65,
+        "residual": -0.3
+      },
+      {
+        "subject": "algebra",
+        "level": 3,
+        "n": 28,
+        "greedy_accuracy": 0.893,
+        "problem_coverage": 0.536,
+        "residual": -0.357
+      },
+      {
+        "subject": "algebra",
+        "level": 4,
+        "n": 27,
+        "greedy_accuracy": 0.963,
+        "problem_coverage": 0.63,
+        "residual": -0.333
+      },
+      {
+        "subject": "algebra",
+        "level": 5,
+        "n": 24,
+        "greedy_accuracy": 0.833,
+        "problem_coverage": 0.667,
+        "residual": -0.167
+      },
+      {
+        "subject": "counting_and_probability",
+        "level": 1,
+        "n": 8,
+        "greedy_accuracy": 1.0,
+        "problem_coverage": 0.625,
+        "residual": -0.375
+      },
+      {
+        "subject": "counting_and_probability",
+        "level": 2,
+        "n": 12,
+        "greedy_accuracy": 0.833,
+        "problem_coverage": 0.917,
+        "residual": 0.083
+      },
+      {
+        "subject": "counting_and_probability",
+        "level": 3,
+        "n": 6,
+        "greedy_accuracy": 1.0,
+        "problem_coverage": 0.833,
+        "residual": -0.167
+      },
+      {
+        "subject": "counting_and_probability",
+        "level": 4,
+        "n": 7,
+        "greedy_accuracy": 0.714,
+        "problem_coverage": 0.714,
+        "residual": 0.0
+      },
+      {
+        "subject": "counting_and_probability",
+        "level": 5,
+        "n": 11,
+        "greedy_accuracy": 0.727,
+        "problem_coverage": 0.909,
+        "residual": 0.182
+      },
+      {
+        "subject": "geometry",
+        "level": 1,
+        "n": 9,
+        "greedy_accuracy": 0.889,
+        "problem_coverage": 0.778,
+        "residual": -0.111
+      },
+      {
+        "subject": "geometry",
+        "level": 2,
+        "n": 7,
+        "greedy_accuracy": 0.571,
+        "problem_coverage": 0.857,
+        "residual": 0.286
+      },
+      {
+        "subject": "geometry",
+        "level": 3,
+        "n": 9,
+        "greedy_accuracy": 0.889,
+        "problem_coverage": 0.556,
+        "residual": -0.333
+      },
+      {
+        "subject": "geometry",
+        "level": 4,
+        "n": 10,
+        "greedy_accuracy": 0.9,
+        "problem_coverage": 0.6,
+        "residual": -0.3
+      },
+      {
+        "subject": "geometry",
+        "level": 5,
+        "n": 11,
+        "greedy_accuracy": 0.545,
+        "problem_coverage": 0.909,
+        "residual": 0.364
+      },
+      {
+        "subject": "intermediate_algebra",
+        "level": 1,
+        "n": 7,
+        "greedy_accuracy": 0.857,
+        "problem_coverage": 0.857,
+        "residual": 0.0
+      },
+      {
+        "subject": "intermediate_algebra",
+        "level": 2,
+        "n": 13,
+        "greedy_accuracy": 0.923,
+        "problem_coverage": 0.769,
+        "residual": -0.154
+      },
+      {
+        "subject": "intermediate_algebra",
+        "level": 3,
+        "n": 15,
+        "greedy_accuracy": 0.733,
+        "problem_coverage": 0.6,
+        "residual": -0.133
+      },
+      {
+        "subject": "intermediate_algebra",
+        "level": 4,
+        "n": 21,
+        "greedy_accuracy": 0.667,
+        "problem_coverage": 0.381,
+        "residual": -0.286
+      },
+      {
+        "subject": "intermediate_algebra",
+        "level": 5,
+        "n": 28,
+        "greedy_accuracy": 0.536,
+        "problem_coverage": 0.5,
+        "residual": -0.036
+      },
+      {
+        "subject": "number_theory",
+        "level": 1,
+        "n": 5,
+        "greedy_accuracy": 1.0,
+        "problem_coverage": 0.6,
+        "residual": -0.4
+      },
+      {
+        "subject": "number_theory",
+        "level": 2,
+        "n": 13,
+        "greedy_accuracy": 1.0,
+        "problem_coverage": 0.769,
+        "residual": -0.231
+      },
+      {
+        "subject": "number_theory",
+        "level": 3,
+        "n": 8,
+        "greedy_accuracy": 0.625,
+        "problem_coverage": 0.75,
+        "residual": 0.125
+      },
+      {
+        "subject": "number_theory",
+        "level": 4,
+        "n": 8,
+        "greedy_accuracy": 0.75,
+        "problem_coverage": 0.75,
+        "residual": 0.0
+      },
+      {
+        "subject": "number_theory",
+        "level": 5,
+        "n": 8,
+        "greedy_accuracy": 0.625,
+        "problem_coverage": 0.5,
+        "residual": -0.125
+      },
+      {
+        "subject": "prealgebra",
+        "level": 1,
+        "n": 25,
+        "greedy_accuracy": 1.0,
+        "problem_coverage": 0.8,
+        "residual": -0.2
+      },
+      {
+        "subject": "prealgebra",
+        "level": 2,
+        "n": 21,
+        "greedy_accuracy": 1.0,
+        "problem_coverage": 0.619,
+        "residual": -0.381
+      },
+      {
+        "subject": "prealgebra",
+        "level": 3,
+        "n": 24,
+        "greedy_accuracy": 0.917,
+        "problem_coverage": 0.708,
+        "residual": -0.208
+      },
+      {
+        "subject": "prealgebra",
+        "level": 4,
+        "n": 12,
+        "greedy_accuracy": 0.75,
+        "problem_coverage": 0.667,
+        "residual": -0.083
+      },
+      {
+        "subject": "prealgebra",
+        "level": 5,
+        "n": 11,
+        "greedy_accuracy": 0.818,
+        "problem_coverage": 0.636,
+        "residual": -0.182
+      },
+      {
+        "subject": "precalculus",
+        "level": 1,
+        "n": 14,
+        "greedy_accuracy": 1.0,
+        "problem_coverage": 0.643,
+        "residual": -0.357
+      },
+      {
+        "subject": "precalculus",
+        "level": 2,
+        "n": 14,
+        "greedy_accuracy": 0.857,
+        "problem_coverage": 0.357,
+        "residual": -0.5
+      },
+      {
+        "subject": "precalculus",
+        "level": 3,
+        "n": 10,
+        "greedy_accuracy": 0.9,
+        "problem_coverage": 0.6,
+        "residual": -0.3
+      },
+      {
+        "subject": "precalculus",
+        "level": 4,
+        "n": 15,
+        "greedy_accuracy": 0.533,
+        "problem_coverage": 0.6,
+        "residual": 0.067
+      },
+      {
+        "subject": "precalculus",
+        "level": 5,
+        "n": 7,
+        "greedy_accuracy": 0.429,
+        "problem_coverage": 1.0,
+        "residual": 0.571
+      }
+    ],
+    "accuracy_coverage_correlation": -0.138,
+    "interpretation": "Pearson correlation between greedy accuracy and problem coverage across subject\u00d7level cells: r = -0.138. Coverage shows some independence from difficulty."
+  }
+}
