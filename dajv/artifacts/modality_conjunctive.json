@@ -1,0 +1,410 @@
+[
+  {
+    "tag": "math175",
+    "bench": "math175",
+    "n_total": 175,
+    "k_extractors": 6,
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "accept_dajv_summary": {
+      "coverage": {
+        "mean": 0.5679245283018868,
+        "std": 0.06800019079635475,
+        "n": 10
+      },
+      "precision": {
+        "mean": 0.984457478005865,
+        "std": 0.022364286864364858,
+        "n": 10
+      },
+      "ece": {
+        "mean": 0.11162030680384576,
+        "std": 0.0486856237142486,
+        "n": 10
+      }
+    },
+    "conj_dajv_summary": {
+      "coverage": {
+        "mean": 0.23962264150943396,
+        "std": 0.190567075572656,
+        "n": 10
+      },
+      "precision": {
+        "mean": 0.9761595547309833,
+        "std": 0.03079390822990537,
+        "n": 7
+      },
+      "ece": {
+        "mean": 0.14372680025619644,
+        "std": 0.05527418674674819,
+        "n": 10
+      }
+    },
+    "per_seed": [
+      {
+        "seed": 1,
+        "accept_dajv": {
+          "coverage": 0.5283018867924528,
+          "precision": 1.0,
+          "n_commit": 28,
+          "ece": 0.09695301888895066
+        },
+        "conj_dajv": {
+          "coverage": 0.32075471698113206,
+          "precision": 1.0,
+          "n_commit": 17,
+          "ece": 0.10198222347162464
+        }
+      },
+      {
+        "seed": 2,
+        "accept_dajv": {
+          "coverage": 0.4528301886792453,
+          "precision": 1.0,
+          "n_commit": 24,
+          "ece": 0.034857707819188344
+        },
+        "conj_dajv": {
+          "coverage": 0.16981132075471697,
+          "precision": 1.0,
+          "n_commit": 9,
+          "ece": 0.08814447830152004
+        }
+      },
+      {
+        "seed": 3,
+        "accept_dajv": {
+          "coverage": 0.5660377358490566,
+          "precision": 1.0,
+          "n_commit": 30,
+          "ece": 0.08491135531786184
+        },
+        "conj_dajv": {
+          "coverage": 0.0,
+          "precision": null,
+          "n_commit": 0,
+          "ece": 0.06794084844773816
+        }
+      },
+      {
+        "seed": 4,
+        "accept_dajv": {
+          "coverage": 0.6226415094339622,
+          "precision": 0.9696969696969697,
+          "n_commit": 33,
+          "ece": 0.10851209681880462
+        },
+        "conj_dajv": {
+          "coverage": 0.37735849056603776,
+          "precision": 0.95,
+          "n_commit": 20,
+          "ece": 0.14051882738638843
+        }
+      },
+      {
+        "seed": 5,
+        "accept_dajv": {
+          "coverage": 0.6226415094339622,
+          "precision": 0.9696969696969697,
+          "n_commit": 33,
+          "ece": 0.11984918003018202
+        },
+        "conj_dajv": {
+          "coverage": 0.0,
+          "precision": null,
+          "n_commit": 0,
+          "ece": 0.1320250618491693
+        }
+      },
+      {
+        "seed": 6,
+        "accept_dajv": {
+          "coverage": 0.4528301886792453,
+          "precision": 1.0,
+          "n_commit": 24,
+          "ece": 0.06181156941901411
+        },
+        "conj_dajv": {
+          "coverage": 0.33962264150943394,
+          "precision": 1.0,
+          "n_commit": 18,
+          "ece": 0.18120801923806762
+        }
+      },
+      {
+        "seed": 7,
+        "accept_dajv": {
+          "coverage": 0.6226415094339622,
+          "precision": 1.0,
+          "n_commit": 33,
+          "ece": 0.17518179458471714
+        },
+        "conj_dajv": {
+          "coverage": 0.0,
+          "precision": null,
+          "n_commit": 0,
+          "ece": 0.18589027969911667
+        }
+      },
+      {
+        "seed": 8,
+        "accept_dajv": {
+          "coverage": 0.6226415094339622,
+          "precision": 0.9696969696969697,
+          "n_commit": 33,
+          "ece": 0.16192684444904257
+        },
+        "conj_dajv": {
+          "coverage": 0.41509433962264153,
+          "precision": 0.9545454545454546,
+          "n_commit": 22,
+          "ece": 0.17265857970313836
+        }
+      },
+      {
+        "seed": 9,
+        "accept_dajv": {
+          "coverage": 0.5849056603773585,
+          "precision": 0.9354838709677419,
+          "n_commit": 31,
+          "ece": 0.18183831813553258
+        },
+        "conj_dajv": {
+          "coverage": 0.5283018867924528,
+          "precision": 0.9285714285714286,
+          "n_commit": 28,
+          "ece": 0.2527278916128119
+        }
+      },
+      {
+        "seed": 10,
+        "accept_dajv": {
+          "coverage": 0.6037735849056604,
+          "precision": 1.0,
+          "n_commit": 32,
+          "ece": 0.09036118257516358
+        },
+        "conj_dajv": {
+          "coverage": 0.24528301886792453,
+          "precision": 1.0,
+          "n_commit": 13,
+          "ece": 0.11417179285238935
+        }
+      }
+    ]
+  },
+  {
+    "tag": "B_full",
+    "bench": null,
+    "n_total": 330,
+    "k_extractors": 6,
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "accept_dajv_summary": {
+      "coverage": {
+        "mean": 0.328,
+        "std": 0.01988857852023506,
+        "n": 10
+      },
+      "precision": {
+        "mean": 0.9935416666666667,
+        "std": 0.013624214214513911,
+        "n": 10
+      },
+      "ece": {
+        "mean": 0.08188341577742418,
+        "std": 0.043327306338274946,
+        "n": 10
+      }
+    },
+    "conj_dajv_summary": {
+      "coverage": {
+        "mean": 0.18,
+        "std": 0.03559026084010437,
+        "n": 10
+      },
+      "precision": {
+        "mean": 0.9944444444444445,
+        "std": 0.01756820922315767,
+        "n": 10
+      },
+      "ece": {
+        "mean": 0.11327386403832762,
+        "std": 0.03503405307333078,
+        "n": 10
+      }
+    },
+    "per_seed": [
+      {
+        "seed": 1,
+        "accept_dajv": {
+          "coverage": 0.32,
+          "precision": 1.0,
+          "n_commit": 32,
+          "ece": 0.13127474103153208
+        },
+        "conj_dajv": {
+          "coverage": 0.19,
+          "precision": 1.0,
+          "n_commit": 19,
+          "ece": 0.14626679979028626
+        }
+      },
+      {
+        "seed": 2,
+        "accept_dajv": {
+          "coverage": 0.31,
+          "precision": 1.0,
+          "n_commit": 31,
+          "ece": 0.15818290319256395
+        },
+        "conj_dajv": {
+          "coverage": 0.09,
+          "precision": 1.0,
+          "n_commit": 9,
+          "ece": 0.17027769404952192
+        }
+      },
+      {
+        "seed": 3,
+        "accept_dajv": {
+          "coverage": 0.32,
+          "precision": 1.0,
+          "n_commit": 32,
+          "ece": 0.09902895898011232
+        },
+        "conj_dajv": {
+          "coverage": 0.18,
+          "precision": 1.0,
+          "n_commit": 18,
+          "ece": 0.08709345338815778
+        }
+      },
+      {
+        "seed": 4,
+        "accept_dajv": {
+          "coverage": 0.33,
+          "precision": 1.0,
+          "n_commit": 33,
+          "ece": 0.07351210265736481
+        },
+        "conj_dajv": {
+          "coverage": 0.18,
+          "precision": 1.0,
+          "n_commit": 18,
+          "ece": 0.10213122067117873
+        }
+      },
+      {
+        "seed": 5,
+        "accept_dajv": {
+          "coverage": 0.32,
+          "precision": 0.96875,
+          "n_commit": 32,
+          "ece": 0.03893358762463242
+        },
+        "conj_dajv": {
+          "coverage": 0.19,
+          "precision": 1.0,
+          "n_commit": 19,
+          "ece": 0.1119697412297615
+        }
+      },
+      {
+        "seed": 6,
+        "accept_dajv": {
+          "coverage": 0.34,
+          "precision": 1.0,
+          "n_commit": 34,
+          "ece": 0.11354858022735241
+        },
+        "conj_dajv": {
+          "coverage": 0.21,
+          "precision": 1.0,
+          "n_commit": 21,
+          "ece": 0.16665792838461088
+        }
+      },
+      {
+        "seed": 7,
+        "accept_dajv": {
+          "coverage": 0.36,
+          "precision": 1.0,
+          "n_commit": 36,
+          "ece": 0.03266618507243038
+        },
+        "conj_dajv": {
+          "coverage": 0.16,
+          "precision": 1.0,
+          "n_commit": 16,
+          "ece": 0.07307671639116495
+        }
+      },
+      {
+        "seed": 8,
+        "accept_dajv": {
+          "coverage": 0.36,
+          "precision": 1.0,
+          "n_commit": 36,
+          "ece": 0.07896252092934451
+        },
+        "conj_dajv": {
+          "coverage": 0.21,
+          "precision": 1.0,
+          "n_commit": 21,
+          "ece": 0.08644117033854103
+        }
+      },
+      {
+        "seed": 9,
+        "accept_dajv": {
+          "coverage": 0.3,
+          "precision": 0.9666666666666667,
+          "n_commit": 30,
+          "ece": 0.0616658384816058
+        },
+        "conj_dajv": {
+          "coverage": 0.18,
+          "precision": 0.9444444444444444,
+          "n_commit": 18,
+          "ece": 0.0943258241299387
+        }
+      },
+      {
+        "seed": 10,
+        "accept_dajv": {
+          "coverage": 0.32,
+          "precision": 1.0,
+          "n_commit": 32,
+          "ece": 0.03105873957730313
+        },
+        "conj_dajv": {
+          "coverage": 0.21,
+          "precision": 1.0,
+          "n_commit": 21,
+          "ece": 0.09449809201011455
+        }
+      }
+    ]
+  }
+]

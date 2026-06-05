@@ -1,0 +1,3518 @@
+[
+  {
+    "tag": "math175",
+    "bench": "math175",
+    "n_total": 175,
+    "n_wrong": 47,
+    "extractor_ids": [
+      "E05_gpt_oss_120B",
+      "E06_gpt_5_mini",
+      "E07_claude_sonnet_4_6",
+      "E09_qwen3_coder_480B",
+      "E08S_gpt_4o",
+      "E04S_gpt_4_1",
+      "E10S_gpt_5",
+      "E01A_claude_opus_4_7",
+      "E02A_claude_opus_4_6",
+      "E03A_claude_haiku_4_5",
+      "E13_llama_3_3_70B",
+      "E14_qwen_3_235B"
+    ],
+    "marginals_wrong_subset": {
+      "E05_gpt_oss_120B": {
+        "struct_pi": 0.2978723404255319,
+        "exec_pi": 0.14893617021276595
+      },
+      "E06_gpt_5_mini": {
+        "struct_pi": 0.23404255319148937,
+        "exec_pi": 0.14893617021276595
+      },
+      "E07_claude_sonnet_4_6": {
+        "struct_pi": 0.44680851063829785,
+        "exec_pi": 0.2127659574468085
+      },
+      "E09_qwen3_coder_480B": {
+        "struct_pi": 0.1702127659574468,
+        "exec_pi": 0.14893617021276595
+      },
+      "E08S_gpt_4o": {
+        "struct_pi": 0.06382978723404255,
+        "exec_pi": 0.0425531914893617
+      },
+      "E04S_gpt_4_1": {
+        "struct_pi": 0.06382978723404255,
+        "exec_pi": 0.0851063829787234
+      },
+      "E10S_gpt_5": {
+        "struct_pi": 0.1702127659574468,
+        "exec_pi": 0.10638297872340426
+      },
+      "E01A_claude_opus_4_7": {
+        "struct_pi": 0.3404255319148936,
+        "exec_pi": 0.14893617021276595
+      },
+      "E02A_claude_opus_4_6": {
+        "struct_pi": 0.3617021276595745,
+        "exec_pi": 0.1702127659574468
+      },
+      "E03A_claude_haiku_4_5": {
+        "struct_pi": 0.19148936170212766,
+        "exec_pi": 0.1276595744680851
+      },
+      "E13_llama_3_3_70B": {
+        "struct_pi": 0.10638297872340426,
+        "exec_pi": 0.1276595744680851
+      },
+      "E14_qwen_3_235B": {
+        "struct_pi": 0.1276595744680851,
+        "exec_pi": 0.0851063829787234
+      }
+    },
+    "summary": {
+      "within_modality_struct": {
+        "n": 66,
+        "median": 0.5445001282604749,
+        "mean": 0.5508789560453277,
+        "min": 0.1556886227544909,
+        "max": 1.0
+      },
+      "within_modality_exec": {
+        "n": 66,
+        "median": 0.7772511848341235,
+        "mean": 0.7305121108368962,
+        "min": 0.2824427480916026,
+        "max": 1.0
+      },
+      "within_llm_cross_modality": {
+        "n": 12,
+        "median": 0.11208819469593194,
+        "mean": 0.09822852725931591,
+        "min": -0.13129102844638993,
+        "max": 0.36771300448430516
+      },
+      "cross_llm_cross_modality": {
+        "n": 132,
+        "median": 0.049438202247190734,
+        "mean": 0.03923994502450573,
+        "min": -0.16528925619834672,
+        "max": 0.36771300448430516
+      }
+    },
+    "pair_details": [
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E06_gpt_5_mini",
+        "kappa": 0.7289504036908879
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": 0.5998107852412486
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.651851851851852
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.276923076923077
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.276923076923077
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E10S_gpt_5",
+        "kappa": 0.651851851851852
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.8045738045738046
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.8562691131498471
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.7165259348612785
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.4382470119521912
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.5129533678756477
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E06_gpt_5_mini",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": 0.45873320537428014
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E06_gpt_5_mini",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.8033472803347281
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E06_gpt_5_mini",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.3648648648648649
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E06_gpt_5_mini",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.3648648648648649
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E06_gpt_5_mini",
+        "right": "E10S_gpt_5",
+        "kappa": 0.8033472803347281
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E06_gpt_5_mini",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.7437295528898582
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E06_gpt_5_mini",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.7006369426751593
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E06_gpt_5_mini",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.8733153638814017
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E06_gpt_5_mini",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.560747663551402
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E06_gpt_5_mini",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.6476761619190402
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.40506329113924067
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.1556886227544909
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.1556886227544909
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E10S_gpt_5",
+        "kappa": 0.40506329113924067
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.5154639175257731
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.5615671641791046
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.4534883720930232
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.2569169960474307
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.30678466076696165
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.4989339019189765
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.4989339019189765
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E10S_gpt_5",
+        "kappa": 0.6987179487179487
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.5688073394495412
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.5315614617940198
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.7847328244274809
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.7344632768361582
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.8327402135231318
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E08S_gpt_4o",
+        "right": "E04S_gpt_4_1",
+        "kappa": 1.0
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E08S_gpt_4o",
+        "right": "E10S_gpt_5",
+        "kappa": 0.4989339019189765
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E08S_gpt_4o",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.23337515683814303
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E08S_gpt_4o",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.2147971360381862
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E08S_gpt_4o",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.44705882352941173
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E08S_gpt_4o",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.4566473988439309
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E08S_gpt_4o",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.6356589147286822
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E04S_gpt_4_1",
+        "right": "E10S_gpt_5",
+        "kappa": 0.4989339019189765
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E04S_gpt_4_1",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.23337515683814303
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E04S_gpt_4_1",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.2147971360381862
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E04S_gpt_4_1",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.44705882352941173
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E04S_gpt_4_1",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.4566473988439309
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E04S_gpt_4_1",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.6356589147286822
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E10S_gpt_5",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.5688073394495412
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E10S_gpt_5",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.5315614617940198
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E10S_gpt_5",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.7847328244274809
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E10S_gpt_5",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.55743879472693
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E10S_gpt_5",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.6654804270462632
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.9533267130089373
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.629086809470124
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.37484885126964945
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.4418052256532068
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.5895196506550217
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.34722222222222193
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.4104903078677308
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.6690140845070421
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.7638190954773869
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E13_llama_3_3_70B",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.897155361050328
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E06_gpt_5_mini",
+        "kappa": 1.0
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": 0.7860394537177542
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 1.0
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.4050632911392404
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.6941431670281997
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E10S_gpt_5",
+        "kappa": 0.8097165991902837
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.8321428571428574
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.920741989881956
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.9108159392789372
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.9108159392789372
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.6941431670281997
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E06_gpt_5_mini",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": 0.7860394537177542
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E06_gpt_5_mini",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 1.0
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E06_gpt_5_mini",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.4050632911392404
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E06_gpt_5_mini",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.6941431670281997
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E06_gpt_5_mini",
+        "right": "E10S_gpt_5",
+        "kappa": 0.8097165991902837
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E06_gpt_5_mini",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.8321428571428574
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E06_gpt_5_mini",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.920741989881956
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E06_gpt_5_mini",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.9108159392789372
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E06_gpt_5_mini",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.9108159392789372
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E06_gpt_5_mini",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.6941431670281997
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.7860394537177542
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.2824427480916026
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.5121107266435986
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E10S_gpt_5",
+        "kappa": 0.6115702479338843
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.6433990895295901
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.7259475218658892
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.7025316455696202
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.7025316455696202
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.5121107266435986
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.4050632911392404
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.6941431670281997
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E10S_gpt_5",
+        "kappa": 0.8097165991902837
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.8321428571428574
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.920741989881956
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.9108159392789372
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.9108159392789372
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.6941431670281997
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E08S_gpt_4o",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.6466165413533839
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E08S_gpt_4o",
+        "right": "E10S_gpt_5",
+        "kappa": 0.5436893203883495
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E08S_gpt_4o",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.4050632911392404
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E08S_gpt_4o",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.3561643835616441
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E08S_gpt_4o",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.4659090909090903
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E08S_gpt_4o",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.4659090909090903
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E08S_gpt_4o",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.6466165413533839
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E04S_gpt_4_1",
+        "right": "E10S_gpt_5",
+        "kappa": 0.8772845953002609
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E04S_gpt_4_1",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.4902386117136657
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E04S_gpt_4_1",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.6240000000000001
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E04S_gpt_4_1",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.7772511848341235
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E04S_gpt_4_1",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.7772511848341235
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E04S_gpt_4_1",
+        "right": "E14_qwen_3_235B",
+        "kappa": 1.0
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E10S_gpt_5",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.6194331983805669
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E10S_gpt_5",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.7344632768361582
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E10S_gpt_5",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.897155361050328
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E10S_gpt_5",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.897155361050328
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E10S_gpt_5",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.8772845953002609
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.920741989881956
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.7324478178368122
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.7324478178368122
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.4902386117136657
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.8327402135231318
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.8327402135231318
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.6240000000000001
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.8089430894308944
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.7772511848341235
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E13_llama_3_3_70B",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.7772511848341235
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E05_gpt_oss_120B",
+        "kappa": -0.01011378002528442
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E06_gpt_5_mini",
+        "kappa": 0.18497109826589603
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": -0.04243008678881412
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.12816188870151754
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.36771300448430516
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.2295081967213107
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E10S_gpt_5",
+        "kappa": 0.02636534839924651
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.06767794632438781
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.11517165005537092
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.13400335008375172
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E13_llama_3_3_70B",
+        "kappa": -0.13129102844638993
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.10900473933649296
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E06_gpt_5_mini",
+        "kappa": -0.01011378002528442
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": -0.10849056603773564
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": -0.01011378002528442
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.05459770114942505
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E04S_gpt_4_1",
+        "kappa": -0.024523160762943124
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E10S_gpt_5",
+        "kappa": -0.061088977423638495
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": -0.01011378002528442
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": -0.04444444444444414
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.025906735751295408
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E13_llama_3_3_70B",
+        "kappa": -0.0958549222797925
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E14_qwen_3_235B",
+        "kappa": -0.024523160762943124
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E05_gpt_oss_120B",
+        "kappa": 0.18497109826589603
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": 0.08083441981747036
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.18497109826589603
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.08818342151675469
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.16207455429497575
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E10S_gpt_5",
+        "kappa": 0.12149532710280364
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.049132947976878893
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.14783821478382175
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.22488755622188872
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.08395802098950501
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.16207455429497575
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E05_gpt_oss_120B",
+        "kappa": -0.10371819960861067
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E06_gpt_5_mini",
+        "kappa": -0.10371819960861067
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": -0.10371819960861067
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.010030090270812468
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E04S_gpt_4_1",
+        "kappa": -0.07348560079443926
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E10S_gpt_5",
+        "kappa": -0.1146245059288539
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": -0.10371819960861067
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": -0.14410905550146047
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": -0.06293018682399218
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E13_llama_3_3_70B",
+        "kappa": -0.1553588987217305
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E14_qwen_3_235B",
+        "kappa": -0.07348560079443926
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E05_gpt_oss_120B",
+        "kappa": 0.12816188870151754
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E06_gpt_5_mini",
+        "kappa": 0.12816188870151754
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": 0.0408163265306123
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.14155251141552508
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.060000000000000636
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E10S_gpt_5",
+        "kappa": 0.02636534839924651
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.12816188870151754
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.09615384615384605
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.16370106761565814
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E13_llama_3_3_70B",
+        "kappa": -0.0035587188612105003
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.060000000000000636
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E05_gpt_oss_120B",
+        "kappa": 0.12149532710280314
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E06_gpt_5_mini",
+        "kappa": 0.12149532710280314
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": 0.06170598911070731
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.12149532710280314
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.2295081967213107
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E10S_gpt_5",
+        "kappa": 0.1849710982658967
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.12149532710280314
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.09808102345415784
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.14987080103359146
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.14987080103359146
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.2295081967213107
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E05_gpt_oss_120B",
+        "kappa": 0.12149532710280314
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E06_gpt_5_mini",
+        "kappa": 0.12149532710280314
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": 0.06170598911070731
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.12149532710280314
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.36771300448430516
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E10S_gpt_5",
+        "kappa": 0.1849710982658967
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.12149532710280314
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.09808102345415784
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.14987080103359146
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.14987080103359146
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.2295081967213107
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E05_gpt_oss_120B",
+        "kappa": -0.030354131534569995
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E06_gpt_5_mini",
+        "kappa": -0.030354131534569995
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": -0.0962099125364433
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": -0.030354131534569995
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.14155251141552508
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.060000000000000636
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": -0.030354131534569995
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": -0.05448717948717941
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": -0.0035587188612105003
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E13_llama_3_3_70B",
+        "kappa": -0.0035587188612105003
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.060000000000000636
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E05_gpt_oss_120B",
+        "kappa": 0.06767794632438781
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E06_gpt_5_mini",
+        "kappa": 0.06767794632438781
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": -0.04212860310421266
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.06767794632438781
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.038363171355498826
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.07389162561576346
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E10S_gpt_5",
+        "kappa": 0.0338573155985493
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.13761467889908244
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.10688836104513065
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E13_llama_3_3_70B",
+        "kappa": -0.004750593824227867
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.07389162561576346
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E05_gpt_oss_120B",
+        "kappa": 0.049438202247190734
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E06_gpt_5_mini",
+        "kappa": 0.049438202247190734
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": -0.06243272335845009
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.049438202247190734
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.031515151515151496
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.06110458284371351
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E10S_gpt_5",
+        "kappa": 0.02083333333333306
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.049438202247190734
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.08893956670467497
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E13_llama_3_3_70B",
+        "kappa": -0.01824401368301049
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.06110458284371351
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E05_gpt_oss_120B",
+        "kappa": 0.0990415335463255
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E06_gpt_5_mini",
+        "kappa": 0.0990415335463255
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": 0.01122019635343581
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.0990415335463255
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.12058212058211988
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.04081632653061201
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E10S_gpt_5",
+        "kappa": 0.007042253521126523
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.0990415335463255
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.06717557251908396
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E13_llama_3_3_70B",
+        "kappa": -0.02345058626465686
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.04081632653061201
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E05_gpt_oss_120B",
+        "kappa": -0.1417004048582995
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E06_gpt_5_mini",
+        "kappa": -0.1417004048582995
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": -0.16528925619834672
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": -0.1417004048582995
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E08S_gpt_4o",
+        "kappa": -0.06472491909385135
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E04S_gpt_4_1",
+        "kappa": -0.10443864229765044
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E10S_gpt_5",
+        "kappa": -0.11904761904761815
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": -0.1417004048582995
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": -0.15065913370998119
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": -0.13129102844638993
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E14_qwen_3_235B",
+        "kappa": -0.10443864229765044
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E05_gpt_oss_120B",
+        "kappa": 0.01897533206831125
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E06_gpt_5_mini",
+        "kappa": 0.01897533206831125
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": -0.04113924050632908
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.01897533206831125
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.19886363636363577
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.10900473933649296
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E10S_gpt_5",
+        "kappa": 0.07439824945295344
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.01897533206831125
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": -0.0035587188612105003
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.044715447154471295
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.044715447154471295
+      }
+    ]
+  },
+  {
+    "tag": "B_full",
+    "bench": null,
+    "n_total": 330,
+    "n_wrong": 192,
+    "extractor_ids": [
+      "E05_gpt_oss_120B",
+      "E06_gpt_5_mini",
+      "E07_claude_sonnet_4_6",
+      "E09_qwen3_coder_480B",
+      "E08S_gpt_4o",
+      "E04S_gpt_4_1",
+      "E10S_gpt_5",
+      "E01A_claude_opus_4_7",
+      "E02A_claude_opus_4_6",
+      "E03A_claude_haiku_4_5",
+      "E13_llama_3_3_70B",
+      "E14_qwen_3_235B"
+    ],
+    "marginals_wrong_subset": {
+      "E05_gpt_oss_120B": {
+        "struct_pi": 0.3125,
+        "exec_pi": 0.036458333333333336
+      },
+      "E06_gpt_5_mini": {
+        "struct_pi": 0.2604166666666667,
+        "exec_pi": 0.036458333333333336
+      },
+      "E07_claude_sonnet_4_6": {
+        "struct_pi": 0.3958333333333333,
+        "exec_pi": 0.057291666666666664
+      },
+      "E09_qwen3_coder_480B": {
+        "struct_pi": 0.14583333333333334,
+        "exec_pi": 0.036458333333333336
+      },
+      "E08S_gpt_4o": {
+        "struct_pi": 0.020833333333333332,
+        "exec_pi": 0.010416666666666666
+      },
+      "E04S_gpt_4_1": {
+        "struct_pi": 0.052083333333333336,
+        "exec_pi": 0.020833333333333332
+      },
+      "E10S_gpt_5": {
+        "struct_pi": 0.2760416666666667,
+        "exec_pi": 0.026041666666666668
+      },
+      "E01A_claude_opus_4_7": {
+        "struct_pi": 0.34375,
+        "exec_pi": 0.036458333333333336
+      },
+      "E02A_claude_opus_4_6": {
+        "struct_pi": 0.359375,
+        "exec_pi": 0.041666666666666664
+      },
+      "E03A_claude_haiku_4_5": {
+        "struct_pi": 0.20833333333333334,
+        "exec_pi": 0.03125
+      },
+      "E13_llama_3_3_70B": {
+        "struct_pi": 0.14583333333333334,
+        "exec_pi": 0.036458333333333336
+      },
+      "E14_qwen_3_235B": {
+        "struct_pi": 0.14583333333333334,
+        "exec_pi": 0.020833333333333332
+      }
+    },
+    "summary": {
+      "within_modality_struct": {
+        "n": 66,
+        "median": 0.5382127753669256,
+        "mean": 0.49791634806308355,
+        "min": 0.06290672451193044,
+        "max": 0.9428979300499644
+      },
+      "within_modality_exec": {
+        "n": 66,
+        "median": 0.7611940298507467,
+        "mean": 0.7350642807752741,
+        "min": 0.29526916802610087,
+        "max": 1.0
+      },
+      "within_llm_cross_modality": {
+        "n": 12,
+        "median": 0.02930298719772427,
+        "mean": 0.049112607688910986,
+        "min": -0.061946902654866735,
+        "max": 0.32394366197183194
+      },
+      "cross_llm_cross_modality": {
+        "n": 132,
+        "median": 0.008853243730615683,
+        "mean": 0.020888888951693517,
+        "min": -0.08963911525029089,
+        "max": 0.23404255319149028
+      }
+    },
+    "pair_details": [
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E06_gpt_5_mini",
+        "kappa": 0.7460317460317462
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": 0.6384180790960453
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.4609929078014187
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.08943089430894352
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.2156862745098043
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E10S_gpt_5",
+        "kappa": 0.7871674491392802
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.8584070796460177
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.8951965065502183
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.6266666666666667
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.4893617021276597
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E05_gpt_oss_120B",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.4893617021276597
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E06_gpt_5_mini",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": 0.6065573770491802
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E06_gpt_5_mini",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.5584756898817346
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E06_gpt_5_mini",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.11396468699839517
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E06_gpt_5_mini",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.23346007604562755
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E06_gpt_5_mini",
+        "right": "E10S_gpt_5",
+        "kappa": 0.8010500138159713
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E06_gpt_5_mini",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.77947932618683
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E06_gpt_5_mini",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.7712565838976674
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E06_gpt_5_mini",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.7108433734939761
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E06_gpt_5_mini",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.590013140604468
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E06_gpt_5_mini",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.6215505913272011
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.4134419551934827
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.06290672451193044
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.15474919957310568
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E10S_gpt_5",
+        "kappa": 0.6438487314504546
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.6657381615598885
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.6791147994467497
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.549407114624506
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.3890020366598779
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.4134419551934827
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.22162162162162222
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.3729216152018999
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E10S_gpt_5",
+        "kappa": 0.5270184361093452
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.46488294314381257
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.4666666666666669
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.7159763313609467
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.5818815331010454
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.7073170731707318
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E08S_gpt_4o",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.5582822085889578
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E08S_gpt_4o",
+        "right": "E10S_gpt_5",
+        "kappa": 0.10570342205323201
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E08S_gpt_4o",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.07806691449814127
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E08S_gpt_4o",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.07308377896613229
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E08S_gpt_4o",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.1496062992125986
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E08S_gpt_4o",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.15675675675675763
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E08S_gpt_4o",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.22162162162162222
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E04S_gpt_4_1",
+        "right": "E10S_gpt_5",
+        "kappa": 0.25190286335628864
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E04S_gpt_4_1",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.189873417721519
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E04S_gpt_4_1",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.17841601392515266
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E04S_gpt_4_1",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.3454545454545458
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E04S_gpt_4_1",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.3159144893111638
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E04S_gpt_4_1",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.4299287410926367
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E10S_gpt_5",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.8183194549583649
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E10S_gpt_5",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.8093109869646181
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E10S_gpt_5",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.7320799059929494
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E10S_gpt_5",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.5575333757151941
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E10S_gpt_5",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.5880483153210427
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.9428979300499644
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.6433121019108279
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.46488294314381257
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.49163879598662213
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.6386292834890968
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.4666666666666669
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.4666666666666669
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.6449704142011837
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.6804733727810652
+      },
+      {
+        "type": "within_modality_struct",
+        "left": "E13_llama_3_3_70B",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.7491289198606271
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E06_gpt_5_mini",
+        "kappa": 1.0
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": 0.7674136886735307
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 1.0
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.435294117647059
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.7198443579766536
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E10S_gpt_5",
+        "kappa": 0.8281110116383178
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.8517374517374525
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.9306358381502885
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.9203980099502483
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.8517374517374525
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E05_gpt_oss_120B",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.7198443579766536
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E06_gpt_5_mini",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": 0.7674136886735307
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E06_gpt_5_mini",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 1.0
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E06_gpt_5_mini",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.435294117647059
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E06_gpt_5_mini",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.7198443579766536
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E06_gpt_5_mini",
+        "right": "E10S_gpt_5",
+        "kappa": 0.8281110116383178
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E06_gpt_5_mini",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.8517374517374525
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E06_gpt_5_mini",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.9306358381502885
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E06_gpt_5_mini",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.9203980099502483
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E06_gpt_5_mini",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.8517374517374525
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E06_gpt_5_mini",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.7198443579766536
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.7674136886735307
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.29526916802610087
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.5186246418338111
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E10S_gpt_5",
+        "kappa": 0.6110735989196481
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.6511205330102966
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.7235023041474655
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.6934865900383143
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.6511205330102966
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.5186246418338111
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.435294117647059
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.7198443579766536
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E10S_gpt_5",
+        "kappa": 0.8281110116383178
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.8517374517374525
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.9306358381502885
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.9203980099502483
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.8517374517374525
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.7198443579766536
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E08S_gpt_4o",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.6619718309859178
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E08S_gpt_4o",
+        "right": "E10S_gpt_5",
+        "kappa": 0.5649546827794542
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E08S_gpt_4o",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.435294117647059
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E08S_gpt_4o",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.3898305084745751
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E08S_gpt_4o",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.49206349206348976
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E08S_gpt_4o",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.435294117647059
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E08S_gpt_4o",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.6619718309859178
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E04S_gpt_4_1",
+        "right": "E10S_gpt_5",
+        "kappa": 0.8862559241706154
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E04S_gpt_4_1",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.5330739299610899
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E04S_gpt_4_1",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.6571428571428563
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E04S_gpt_4_1",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.794871794871796
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E04S_gpt_4_1",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.7198443579766536
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E04S_gpt_4_1",
+        "right": "E14_qwen_3_235B",
+        "kappa": 1.0
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E10S_gpt_5",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.6562220232766338
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E10S_gpt_5",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.7615894039735098
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E10S_gpt_5",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.9064327485380108
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E10S_gpt_5",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.8281110116383178
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E10S_gpt_5",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.8862559241706154
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.9306358381502885
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.7611940298507467
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.7034749034749035
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.5330739299610899
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.8518518518518522
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.7919075144508672
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.6571428571428563
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.7611940298507467
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.794871794871796
+      },
+      {
+        "type": "within_modality_exec",
+        "left": "E13_llama_3_3_70B",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.7198443579766536
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E05_gpt_oss_120B",
+        "kappa": -0.005988023952095466
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E06_gpt_5_mini",
+        "kappa": 0.04412338930105462
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": 0.016498137307078293
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.0594184576485462
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.32394366197183194
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.11656441717791564
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E10S_gpt_5",
+        "kappa": -0.013765792947387837
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.017415215398716568
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.03157894736842076
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.03448275862069013
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E13_llama_3_3_70B",
+        "kappa": -0.061946902654866735
+      },
+      {
+        "type": "within_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.027027027027027774
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E06_gpt_5_mini",
+        "kappa": -0.005988023952095466
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": -0.044834307992203185
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": -0.005988023952095466
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.012345679012345333
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E04S_gpt_4_1",
+        "kappa": -0.008130081300812542
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E10S_gpt_5",
+        "kappa": -0.01818181818181853
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": -0.005988023952095466
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": -0.01587301587301633
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.004016064257028227
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E13_llama_3_3_70B",
+        "kappa": -0.03792415169660632
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E05_gpt_oss_120B",
+        "right": "E14_qwen_3_235B",
+        "kappa": -0.008130081300812542
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E05_gpt_oss_120B",
+        "kappa": 0.04412338930105462
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": 0.004900113079532263
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.04412338930105462
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.018806214227310214
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.03691813804173417
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E10S_gpt_5",
+        "kappa": 0.02664015904572569
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.0066380320187431644
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.03405572755417973
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.054373522458628976
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.0066380320187431644
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E06_gpt_5_mini",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.03691813804173417
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E05_gpt_oss_120B",
+        "kappa": -0.01990317374932803
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E06_gpt_5_mini",
+        "kappa": -0.01990317374932803
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": -0.01990317374932803
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.005452562704470977
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E04S_gpt_4_1",
+        "kappa": -0.015184381778742023
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E10S_gpt_5",
+        "kappa": -0.02541914548404574
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": -0.01990317374932803
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": -0.030042918454935938
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": -0.009708737864077669
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E13_llama_3_3_70B",
+        "kappa": -0.04572350726196915
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E07_claude_sonnet_4_6",
+        "right": "E14_qwen_3_235B",
+        "kappa": -0.015184381778742023
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E05_gpt_oss_120B",
+        "kappa": 0.0594184576485462
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E06_gpt_5_mini",
+        "kappa": 0.0594184576485462
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": 0.022118742724098115
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.04815864022662881
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.027027027027027774
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E10S_gpt_5",
+        "kappa": 0.017173051519154037
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.0594184576485462
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.04950495049505025
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.06976744186046573
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E13_llama_3_3_70B",
+        "kappa": -0.0012642225031602684
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E09_qwen3_coder_480B",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.027027027027027774
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E05_gpt_oss_120B",
+        "kappa": 0.15953307392996072
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E06_gpt_5_mini",
+        "kappa": 0.15953307392996072
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": 0.10601719197707804
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.15953307392996072
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.23404255319149028
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E10S_gpt_5",
+        "kappa": 0.20379146919431243
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.15953307392996072
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.14285714285714154
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.179487179487182
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.15953307392996072
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E08S_gpt_4o",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.23404255319149028
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E05_gpt_oss_120B",
+        "kappa": 0.07810499359795188
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E06_gpt_5_mini",
+        "kappa": 0.07810499359795188
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": 0.04302203567680994
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.07810499359795188
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.15194346289752625
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E10S_gpt_5",
+        "kappa": 0.10215827338129388
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.07810499359795188
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.0679611650485443
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.08943089430894481
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E13_llama_3_3_70B",
+        "kappa": 0.07810499359795188
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E04S_gpt_4_1",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.11656441717791564
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E05_gpt_oss_120B",
+        "kappa": -0.03321580998329896
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E06_gpt_5_mini",
+        "kappa": -0.03321580998329896
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": -0.0703110951267756
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": -0.03321580998329896
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.016621569385388654
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E04S_gpt_4_1",
+        "kappa": -0.0038022813688212056
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": -0.03321580998329896
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": -0.042709867452135196
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": -0.02356902356902357
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E13_llama_3_3_70B",
+        "kappa": -0.03321580998329896
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E10S_gpt_5",
+        "right": "E14_qwen_3_235B",
+        "kappa": -0.0038022813688212056
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E05_gpt_oss_120B",
+        "kappa": 0.017415215398716568
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E06_gpt_5_mini",
+        "kappa": 0.017415215398716568
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": -0.022502250225022294
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.017415215398716568
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.00938086303939973
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.018587360594795436
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E10S_gpt_5",
+        "kappa": 0.008325624421831636
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.036496350364963605
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.027624309392265192
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E13_llama_3_3_70B",
+        "kappa": -0.011915673693858951
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E01A_claude_opus_4_7",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.018587360594795436
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E05_gpt_oss_120B",
+        "kappa": 0.013650374284456384
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E06_gpt_5_mini",
+        "kappa": 0.013650374284456384
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": -0.026441265713047453
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.013650374284456384
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.008086253369271934
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.0160427807486634
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E10S_gpt_5",
+        "kappa": 0.005770084332001373
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.013650374284456384
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.023872679045092837
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E13_llama_3_3_70B",
+        "kappa": -0.014531043593130474
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E02A_claude_opus_4_6",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.0160427807486634
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E05_gpt_oss_120B",
+        "kappa": 0.024574669187145293
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E06_gpt_5_mini",
+        "kappa": 0.024574669187145293
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": -0.01256732495511613
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": 0.024574669187145293
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.028340080971660193
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.007874015748031718
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E10S_gpt_5",
+        "kappa": -0.001941747572815589
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": 0.024574669187145293
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": 0.014925373134328308
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E13_llama_3_3_70B",
+        "kappa": -0.020793950850661734
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E03A_claude_haiku_4_5",
+        "right": "E14_qwen_3_235B",
+        "kappa": 0.007874015748031718
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E05_gpt_oss_120B",
+        "kappa": -0.061946902654866735
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E06_gpt_5_mini",
+        "kappa": -0.061946902654866735
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": -0.08963911525029089
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": -0.061946902654866735
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E08S_gpt_4o",
+        "kappa": -0.019830028328611735
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E04S_gpt_4_1",
+        "kappa": -0.03783783783783681
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E10S_gpt_5",
+        "kappa": -0.04623513870541643
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": -0.061946902654866735
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": -0.0693069306930687
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": -0.05426356589147239
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E13_llama_3_3_70B",
+        "right": "E14_qwen_3_235B",
+        "kappa": -0.03783783783783681
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E05_gpt_oss_120B",
+        "kappa": -0.0012642225031602684
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E06_gpt_5_mini",
+        "kappa": -0.0012642225031602684
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E07_claude_sonnet_4_6",
+        "kappa": -0.03376018626309669
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E09_qwen3_coder_480B",
+        "kappa": -0.0012642225031602684
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E08S_gpt_4o",
+        "kappa": 0.04815864022662881
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E04S_gpt_4_1",
+        "kappa": 0.027027027027027774
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E10S_gpt_5",
+        "kappa": 0.017173051519154037
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E01A_claude_opus_4_7",
+        "kappa": -0.0012642225031602684
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E02A_claude_opus_4_6",
+        "kappa": -0.009900990099009544
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E03A_claude_haiku_4_5",
+        "kappa": 0.007751937984497
+      },
+      {
+        "type": "cross_llm_cross_modality",
+        "left": "E14_qwen_3_235B",
+        "right": "E13_llama_3_3_70B",
+        "kappa": -0.0012642225031602684
+      }
+    ]
+  }
+]

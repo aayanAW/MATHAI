@@ -1,0 +1,602 @@
+[
+  {
+    "tag": "math175",
+    "bench": "math175",
+    "k_extractors": 6,
+    "extractor_ids": [
+      "E05_gpt_oss_120B",
+      "E06_gpt_5_mini",
+      "E07_claude_sonnet_4_6",
+      "E09_qwen3_coder_480B",
+      "E08S_gpt_4o",
+      "E04S_gpt_4_1"
+    ],
+    "n_total": 175,
+    "n_wrong": 47,
+    "n_cal": 122,
+    "n_test": 53,
+    "h6_within_vs_cross_lab": {
+      "n_within_pairs": 6,
+      "n_cross_pairs": 9,
+      "within_lab_kappa_median": 0.6569343065693422,
+      "cross_lab_kappa_median": 0.6466165413533839,
+      "within_lab_kappa_values": [
+        0.7892376681614347,
+        0.6569343065693422,
+        0.6569343065693422,
+        0.48351648351648374,
+        0.48351648351648374,
+        1.0
+      ],
+      "cross_lab_kappa_values": [
+        0.6466165413533839,
+        1.0,
+        0.5377049180327867,
+        0.7892376681614347,
+        0.6466165413533839,
+        0.37885462555066063,
+        0.37885462555066063,
+        0.6569343065693422,
+        0.6569343065693422
+      ],
+      "pair_assignments": {
+        "within_pairs": [
+          [
+            "E05_gpt_oss_120B",
+            "E06_gpt_5_mini"
+          ],
+          [
+            "E05_gpt_oss_120B",
+            "E08S_gpt_4o"
+          ],
+          [
+            "E05_gpt_oss_120B",
+            "E04S_gpt_4_1"
+          ],
+          [
+            "E06_gpt_5_mini",
+            "E08S_gpt_4o"
+          ],
+          [
+            "E06_gpt_5_mini",
+            "E04S_gpt_4_1"
+          ],
+          [
+            "E08S_gpt_4o",
+            "E04S_gpt_4_1"
+          ]
+        ],
+        "cross_pairs": [
+          [
+            "E05_gpt_oss_120B",
+            "E07_claude_sonnet_4_6"
+          ],
+          [
+            "E05_gpt_oss_120B",
+            "E09_qwen3_coder_480B"
+          ],
+          [
+            "E06_gpt_5_mini",
+            "E07_claude_sonnet_4_6"
+          ],
+          [
+            "E06_gpt_5_mini",
+            "E09_qwen3_coder_480B"
+          ],
+          [
+            "E07_claude_sonnet_4_6",
+            "E09_qwen3_coder_480B"
+          ],
+          [
+            "E07_claude_sonnet_4_6",
+            "E08S_gpt_4o"
+          ],
+          [
+            "E07_claude_sonnet_4_6",
+            "E04S_gpt_4_1"
+          ],
+          [
+            "E09_qwen3_coder_480B",
+            "E08S_gpt_4o"
+          ],
+          [
+            "E09_qwen3_coder_480B",
+            "E04S_gpt_4_1"
+          ]
+        ]
+      }
+    },
+    "operating_points": {
+      "naive_unanimous": {
+        "n_committed": 15,
+        "n_correct": 14,
+        "precision": 0.9333333333333333,
+        "coverage": 0.2830188679245283
+      },
+      "naive_majority": {
+        "n_committed": 28,
+        "n_correct": 27,
+        "precision": 0.9642857142857143,
+        "coverage": 0.5283018867924528
+      },
+      "dajv": {
+        "n_committed": 33,
+        "n_correct": 32,
+        "precision": 0.9696969696969697,
+        "coverage": 0.6226415094339622
+      },
+      "verge_proxy_full": {
+        "n_committed": 28,
+        "n_correct": 27,
+        "precision": 0.9642857142857143,
+        "coverage": 0.5283018867924528
+      },
+      "verge_proxy_with_mcs": {
+        "n_committed": 28,
+        "n_correct": 27,
+        "precision": 0.9642857142857143,
+        "coverage": 0.5283018867924528
+      }
+    },
+    "calibration": {
+      "naive_unanimous": {
+        "ece": 0.27987421383647804,
+        "brier": 0.21750524109014677
+      },
+      "dajv": {
+        "ece": 0.10438234671087102,
+        "brier": 0.1373976372869658
+      }
+    }
+  },
+  {
+    "tag": "aime",
+    "bench": "aime",
+    "k_extractors": 6,
+    "extractor_ids": [
+      "E05_gpt_oss_120B",
+      "E06_gpt_5_mini",
+      "E07_claude_sonnet_4_6",
+      "E09_qwen3_coder_480B",
+      "E08S_gpt_4o",
+      "E04S_gpt_4_1"
+    ],
+    "n_total": 30,
+    "n_wrong": 28,
+    "n_cal": 21,
+    "n_test": 9,
+    "h6_within_vs_cross_lab": {
+      "n_within_pairs": 6,
+      "n_cross_pairs": 9,
+      "within_lab_kappa_median": 0.0,
+      "cross_lab_kappa_median": 0.0,
+      "within_lab_kappa_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "cross_lab_kappa_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pair_assignments": {
+        "within_pairs": [
+          [
+            "E05_gpt_oss_120B",
+            "E06_gpt_5_mini"
+          ],
+          [
+            "E05_gpt_oss_120B",
+            "E08S_gpt_4o"
+          ],
+          [
+            "E05_gpt_oss_120B",
+            "E04S_gpt_4_1"
+          ],
+          [
+            "E06_gpt_5_mini",
+            "E08S_gpt_4o"
+          ],
+          [
+            "E06_gpt_5_mini",
+            "E04S_gpt_4_1"
+          ],
+          [
+            "E08S_gpt_4o",
+            "E04S_gpt_4_1"
+          ]
+        ],
+        "cross_pairs": [
+          [
+            "E05_gpt_oss_120B",
+            "E07_claude_sonnet_4_6"
+          ],
+          [
+            "E05_gpt_oss_120B",
+            "E09_qwen3_coder_480B"
+          ],
+          [
+            "E06_gpt_5_mini",
+            "E07_claude_sonnet_4_6"
+          ],
+          [
+            "E06_gpt_5_mini",
+            "E09_qwen3_coder_480B"
+          ],
+          [
+            "E07_claude_sonnet_4_6",
+            "E09_qwen3_coder_480B"
+          ],
+          [
+            "E07_claude_sonnet_4_6",
+            "E08S_gpt_4o"
+          ],
+          [
+            "E07_claude_sonnet_4_6",
+            "E04S_gpt_4_1"
+          ],
+          [
+            "E09_qwen3_coder_480B",
+            "E08S_gpt_4o"
+          ],
+          [
+            "E09_qwen3_coder_480B",
+            "E04S_gpt_4_1"
+          ]
+        ]
+      }
+    },
+    "operating_points": {
+      "naive_unanimous": {
+        "n_committed": 0,
+        "n_correct": 0,
+        "precision": null,
+        "coverage": 0.0
+      },
+      "naive_majority": {
+        "n_committed": 1,
+        "n_correct": 1,
+        "precision": 1.0,
+        "coverage": 0.1111111111111111
+      },
+      "dajv": {
+        "n_committed": 1,
+        "n_correct": 1,
+        "precision": 1.0,
+        "coverage": 0.1111111111111111
+      },
+      "verge_proxy_full": {
+        "n_committed": 1,
+        "n_correct": 1,
+        "precision": 1.0,
+        "coverage": 0.1111111111111111
+      },
+      "verge_proxy_with_mcs": {
+        "n_committed": 1,
+        "n_correct": 1,
+        "precision": 1.0,
+        "coverage": 0.1111111111111111
+      }
+    },
+    "calibration": {
+      "naive_unanimous": {
+        "ece": 0.11111111111111113,
+        "brier": 0.06172839506172841
+      },
+      "dajv": {
+        "ece": 0.11107466493874461,
+        "brier": 0.11103823002604098
+      }
+    }
+  },
+  {
+    "tag": "cleanmath",
+    "bench": "cleanmath",
+    "k_extractors": 6,
+    "extractor_ids": [
+      "E05_gpt_oss_120B",
+      "E06_gpt_5_mini",
+      "E07_claude_sonnet_4_6",
+      "E09_qwen3_coder_480B",
+      "E08S_gpt_4o",
+      "E04S_gpt_4_1"
+    ],
+    "n_total": 125,
+    "n_wrong": 117,
+    "n_cal": 87,
+    "n_test": 38,
+    "h6_within_vs_cross_lab": {
+      "n_within_pairs": 6,
+      "n_cross_pairs": 9,
+      "within_lab_kappa_median": 0.0,
+      "cross_lab_kappa_median": 0.0,
+      "within_lab_kappa_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "cross_lab_kappa_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pair_assignments": {
+        "within_pairs": [
+          [
+            "E05_gpt_oss_120B",
+            "E06_gpt_5_mini"
+          ],
+          [
+            "E05_gpt_oss_120B",
+            "E08S_gpt_4o"
+          ],
+          [
+            "E05_gpt_oss_120B",
+            "E04S_gpt_4_1"
+          ],
+          [
+            "E06_gpt_5_mini",
+            "E08S_gpt_4o"
+          ],
+          [
+            "E06_gpt_5_mini",
+            "E04S_gpt_4_1"
+          ],
+          [
+            "E08S_gpt_4o",
+            "E04S_gpt_4_1"
+          ]
+        ],
+        "cross_pairs": [
+          [
+            "E05_gpt_oss_120B",
+            "E07_claude_sonnet_4_6"
+          ],
+          [
+            "E05_gpt_oss_120B",
+            "E09_qwen3_coder_480B"
+          ],
+          [
+            "E06_gpt_5_mini",
+            "E07_claude_sonnet_4_6"
+          ],
+          [
+            "E06_gpt_5_mini",
+            "E09_qwen3_coder_480B"
+          ],
+          [
+            "E07_claude_sonnet_4_6",
+            "E09_qwen3_coder_480B"
+          ],
+          [
+            "E07_claude_sonnet_4_6",
+            "E08S_gpt_4o"
+          ],
+          [
+            "E07_claude_sonnet_4_6",
+            "E04S_gpt_4_1"
+          ],
+          [
+            "E09_qwen3_coder_480B",
+            "E08S_gpt_4o"
+          ],
+          [
+            "E09_qwen3_coder_480B",
+            "E04S_gpt_4_1"
+          ]
+        ]
+      }
+    },
+    "operating_points": {
+      "naive_unanimous": {
+        "n_committed": 0,
+        "n_correct": 0,
+        "precision": null,
+        "coverage": 0.0
+      },
+      "naive_majority": {
+        "n_committed": 2,
+        "n_correct": 2,
+        "precision": 1.0,
+        "coverage": 0.05263157894736842
+      },
+      "dajv": {
+        "n_committed": 2,
+        "n_correct": 2,
+        "precision": 1.0,
+        "coverage": 0.05263157894736842
+      },
+      "verge_proxy_full": {
+        "n_committed": 2,
+        "n_correct": 2,
+        "precision": 1.0,
+        "coverage": 0.05263157894736842
+      },
+      "verge_proxy_with_mcs": {
+        "n_committed": 2,
+        "n_correct": 2,
+        "precision": 1.0,
+        "coverage": 0.05263157894736842
+      }
+    },
+    "calibration": {
+      "naive_unanimous": {
+        "ece": 0.039473684210526314,
+        "brier": 0.029970760233918127
+      },
+      "dajv": {
+        "ece": 0.032971391188130854,
+        "brier": 0.025893462629910324
+      }
+    }
+  },
+  {
+    "tag": "full",
+    "bench": null,
+    "k_extractors": 6,
+    "extractor_ids": [
+      "E05_gpt_oss_120B",
+      "E06_gpt_5_mini",
+      "E07_claude_sonnet_4_6",
+      "E09_qwen3_coder_480B",
+      "E08S_gpt_4o",
+      "E04S_gpt_4_1"
+    ],
+    "n_total": 330,
+    "n_wrong": 192,
+    "n_cal": 230,
+    "n_test": 100,
+    "h6_within_vs_cross_lab": {
+      "n_within_pairs": 6,
+      "n_cross_pairs": 9,
+      "within_lab_kappa_median": 0.6643356643356625,
+      "cross_lab_kappa_median": 0.5649546827794542,
+      "within_lab_kappa_values": [
+        0.7974683544303786,
+        0.6643356643356625,
+        0.6643356643356625,
+        0.49606299212598515,
+        0.49606299212598515,
+        1.0
+      ],
+      "cross_lab_kappa_values": [
+        0.5649546827794542,
+        1.0,
+        0.49003984063744976,
+        0.7974683544303786,
+        0.5649546827794542,
+        0.32749562171628493,
+        0.32749562171628493,
+        0.6643356643356625,
+        0.6643356643356625
+      ],
+      "pair_assignments": {
+        "within_pairs": [
+          [
+            "E05_gpt_oss_120B",
+            "E06_gpt_5_mini"
+          ],
+          [
+            "E05_gpt_oss_120B",
+            "E08S_gpt_4o"
+          ],
+          [
+            "E05_gpt_oss_120B",
+            "E04S_gpt_4_1"
+          ],
+          [
+            "E06_gpt_5_mini",
+            "E08S_gpt_4o"
+          ],
+          [
+            "E06_gpt_5_mini",
+            "E04S_gpt_4_1"
+          ],
+          [
+            "E08S_gpt_4o",
+            "E04S_gpt_4_1"
+          ]
+        ],
+        "cross_pairs": [
+          [
+            "E05_gpt_oss_120B",
+            "E07_claude_sonnet_4_6"
+          ],
+          [
+            "E05_gpt_oss_120B",
+            "E09_qwen3_coder_480B"
+          ],
+          [
+            "E06_gpt_5_mini",
+            "E07_claude_sonnet_4_6"
+          ],
+          [
+            "E06_gpt_5_mini",
+            "E09_qwen3_coder_480B"
+          ],
+          [
+            "E07_claude_sonnet_4_6",
+            "E09_qwen3_coder_480B"
+          ],
+          [
+            "E07_claude_sonnet_4_6",
+            "E08S_gpt_4o"
+          ],
+          [
+            "E07_claude_sonnet_4_6",
+            "E04S_gpt_4_1"
+          ],
+          [
+            "E09_qwen3_coder_480B",
+            "E08S_gpt_4o"
+          ],
+          [
+            "E09_qwen3_coder_480B",
+            "E04S_gpt_4_1"
+          ]
+        ]
+      }
+    },
+    "operating_points": {
+      "naive_unanimous": {
+        "n_committed": 9,
+        "n_correct": 9,
+        "precision": 1.0,
+        "coverage": 0.09
+      },
+      "naive_majority": {
+        "n_committed": 29,
+        "n_correct": 29,
+        "precision": 1.0,
+        "coverage": 0.29
+      },
+      "dajv": {
+        "n_committed": 32,
+        "n_correct": 32,
+        "precision": 1.0,
+        "coverage": 0.32
+      },
+      "verge_proxy_full": {
+        "n_committed": 29,
+        "n_correct": 29,
+        "precision": 1.0,
+        "coverage": 0.29
+      },
+      "verge_proxy_with_mcs": {
+        "n_committed": 29,
+        "n_correct": 29,
+        "precision": 1.0,
+        "coverage": 0.29
+      }
+    },
+    "calibration": {
+      "naive_unanimous": {
+        "ece": 0.11666666666666667,
+        "brier": 0.07222222222222223
+      },
+      "dajv": {
+        "ece": 0.031063664146826573,
+        "brier": 0.041210560454701894
+      }
+    }
+  }
+]
