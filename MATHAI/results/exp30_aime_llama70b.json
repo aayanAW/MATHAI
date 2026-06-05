@@ -1,0 +1,605 @@
+{
+  "extractor": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+  "results": [
+    {
+      "id": "aime2025_1",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 311,
+      "script": "def verify(answer):\n    valid = []\n    for b in range(10, 1000):\n        x = 1*b + 7  # 17 in base b\n        y = 9*b + 7  # 97 in base b\n        if y % x == 0:\n            valid.append(b)\n    total = sum(valid)\n    try:\n        return int(str(answer).strip()) == total\n    except Exception:\n        return False",
+      "gold": "70",
+      "candidate": "\\frac{7(39 - 1)}{9 -",
+      "solver_correct": false,
+      "gold_verdict": true,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 6.582964181900024
+    },
+    {
+      "id": "aime2025_2",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 701,
+      "script": "def verify(answer):\n    # Given areas and lengths\n    area_DEGF = 288\n    AD = 4\n    DE = 16\n    EB = 8\n    AF = 13\n    FG = 52\n    GC = 26\n\n    # Calculate area of triangle AFD\n    area_AFD = 0.5 * AF * AD\n\n    # Calculate area of triangle FGC\n    area_FGC = 0.5 * FG * GC\n\n    # Calculate area of quadrilateral ABCE\n    area_ABCE = area_DEGF + area_AFD + area_FGC\n\n    # Calculate area of triangle EGN\n    area_EGN = 0.5 * EB * GC\n\n    # Calculate area of triangle DFM\n    area_DFM = 0.5 * DE * AF\n\n    # Calculate area of heptagon AFNBCEM\n    area_AFNBCEM = area_ABCE + area_EGN + area_DFM\n\n    try:\n        return int(str(answer).strip()) == area_AFNBCEM\n    except Exception:\n        return False",
+      "gold": "588",
+      "candidate": "576",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 4.812670946121216
+    },
+    {
+      "id": "aime2025_3",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 342,
+      "script": "def verify(answer):\n    count = 0\n    for c in range(3, 10):\n        for v in range(1, c):\n            for s in range(1, v):\n                if c + v + s == 9:\n                    count += math.comb(9, c) * math.comb(9-c, v)\n    N = count\n    try:\n        return int(str(answer).strip()) == N % 1000\n    except Exception:\n        return False",
+      "gold": "16",
+      "candidate": "836",
+      "solver_correct": false,
+      "gold_verdict": true,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.4594380855560303
+    },
+    {
+      "id": "aime2025_4",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 271,
+      "script": "def verify(answer):\n    count = 0\n    for x in range(-100, 101):\n        for y in range(-100, 101):\n            if 12*x**2 - x*y - 6*y**2 == 0:\n                count += 1\n    try:\n        return int(str(answer).strip()) == count\n    except Exception:\n        return False",
+      "gold": "117",
+      "candidate": "118",
+      "solver_correct": false,
+      "gold_verdict": true,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 18.795090198516846
+    },
+    {
+      "id": "aime2025_5",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 298,
+      "script": "import itertools\n\ndef verify(answer):\n    count = 0\n    for p in itertools.permutations(range(1, 9)):\n        num = int(''.join(map(str, p)))\n        if num % 22 == 0:\n            count += 1\n    try:\n        return int(str(answer).strip()) == count - 2025\n    except Exception:\n        return False",
+      "gold": "279",
+      "candidate": "-1977",
+      "solver_correct": false,
+      "gold_verdict": true,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.0391416549682617
+    },
+    {
+      "id": "aime2025_6",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 442,
+      "script": "def verify(answer):\n    try:\n        target_answer = int(str(answer).strip())\n    except Exception:\n        return False\n\n    for r in range(1, 100):\n        for s in range(1, 100):\n            if r != s:\n                height = 2 * 3  # diameter of the circle\n                area = (r + s) * height / 2\n                if area == 72:\n                    if r**2 + s**2 == target_answer:\n                        return True\n    return False",
+      "gold": "504",
+      "candidate": "504",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.023303985595703
+    },
+    {
+      "id": "aime2025_7",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 511,
+      "script": "import itertools\n\ndef verify(answer):\n    total = 0\n    success = 0\n    for p in itertools.permutations('ABCDEFGHIJKL'):\n        pairs = [(p[i], p[i+1]) for i in range(0, 12, 2)]\n        pairs.sort()\n        if pairs[-1][0] == 'G' or pairs[-1][1] == 'G':\n            success += 1\n        total += 1\n    try:\n        m, n = int(str(answer).strip()) // 2, int(str(answer).strip()) - int(str(answer).strip()) // 2\n        return Fraction(success, total) == Fraction(m, n)\n    except Exception:\n        return False",
+      "gold": "821",
+      "candidate": "7",
+      "solver_correct": false,
+      "gold_verdict": null,
+      "candidate_verdict": null,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 62.39637303352356
+    },
+    {
+      "id": "aime2025_8",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 509,
+      "script": "def verify(answer):\n    try:\n        k = int(str(answer).strip())\n        return False  # This problem cannot be verified with the given constraints\n    except Exception:\n        return False\n    # The problem requires geometric and complex number calculations, which are not allowed\n    # The system of equations involves absolute values and complex numbers, making it difficult to verify\n    # The problem requires finding the sum of all possible values of k, which cannot be done with the given constraints",
+      "gold": "77",
+      "candidate": "49",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 6.761921167373657
+    },
+    {
+      "id": "aime2025_9",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 784,
+      "script": "def verify(answer):\n    try:\n        a_plus_b_plus_c = int(str(answer).strip())\n    except Exception:\n        return False\n\n    # Check all possible values of a, b, c\n    for a in range(1, 100):\n        for b in range(1, 10000):\n            for c in range(1, 100):\n                if math.gcd(a, c) != 1:\n                    continue\n                y = (a - math.sqrt(b)) / c\n                x = math.sqrt(y + 4)\n                x_rotated = x * math.cos(math.radians(60)) - y * math.sin(math.radians(60))\n                y_rotated = x * math.sin(math.radians(60)) + y * math.cos(math.radians(60))\n                if abs(x_rotated**2 - 4 - y_rotated) < 1e-6 and y < 0 and x > 0:\n                    if a + b + c == a_plus_b_plus_c:\n                        return True\n    return False",
+      "gold": "62",
+      "candidate": "101",
+      "solver_correct": false,
+      "gold_verdict": null,
+      "candidate_verdict": null,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 4.835896968841553
+    },
+    {
+      "id": "aime2025_10",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 1223,
+      "script": "def verify(answer):\n    from itertools import permutations\n    count = 0\n    for p in permutations(range(1, 10)):\n        for q in permutations(range(1, 10)):\n            for r in permutations(range(1, 10)):\n                grid = [list(p), list(q), list(r)]\n                valid = True\n                for i in range(3):\n                    if len(set(grid[i][0:3])) != 3 or len(set(grid[i][3:6])) != 3 or len(set(grid[i][6:9])) != 3:\n                        valid = False\n                        break\n                if not valid:\n                    continue\n                for i in range(3):\n                    if len(set([grid[0][i*3], grid[1][i*3], grid[2][i*3]])) != 3 or len(set([grid[0][i*3+1], grid[1][i*3+1], grid[2][i*3+1]])) != 3 or len(set([grid[0][i*3+2], grid[1][i*3+2], grid[2][i*3+2]])) != 3:\n                        valid = False\n                        break\n                if valid:\n                    count += 1\n    from sympy import factorint\n    factors = factorint(count)\n    p, q, r, s = sorted(factors.keys())\n    a, b, c, d = factors[p], factors[q], factors[r], factors[s]\n    try:\n        return int(str(answer).strip()) == p*a + q*b + r*c + s*d\n    except Exception:\n        return False",
+      "gold": "81",
+      "candidate": "60",
+      "solver_correct": false,
+      "gold_verdict": null,
+      "candidate_verdict": null,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 63.77279281616211
+    },
+    {
+      "id": "aime2025_11",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 1182,
+      "script": "def verify(answer):\n    try:\n        a = int(str(answer).strip())\n    except Exception:\n        return False\n\n    # Define the function f(x)\n    def f(x):\n        x_mod = x - 4 * ((x+1) // 4)\n        if -1 <= x_mod < 1:\n            return x_mod\n        elif 1 <= x_mod < 3:\n            return 2 - x_mod\n\n    # Find the intersection points\n    intersection_points = []\n    for k in range(-100, 101):\n        for x in [k*4 + i/100 for i in range(400)]:\n            if abs(f(x) - 34*(f(x))**2) < 0.01:\n                intersection_points.append(f(x))\n\n    # Calculate the sum of y-coordinates\n    sum_y = sum(intersection_points)\n\n    # Check if the sum can be expressed in the form (a + b*sqrt(c))/d\n    from fractions import Fraction\n    from math import sqrt\n    for a in range(1, 1000):\n        for b in range(1, 1000):\n            for c in range(1, 1000):\n                if sqrt(c) % 1 == 0:\n                    continue\n                for d in range(1, 1000):\n                    if Fraction(a, d) + Fraction(b, d)*sqrt(c) == sum_y:\n                        if gcd(gcd(a, b), d) == 1:\n                            return a + b + c + d == a\n\n    return False\n\nfrom math import gcd",
+      "gold": "259",
+      "candidate": "349",
+      "solver_correct": false,
+      "gold_verdict": null,
+      "candidate_verdict": null,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 69.4705879688263
+    },
+    {
+      "id": "aime2025_12",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 679,
+      "script": "def verify(answer):\n    try:\n        a, b = map(int, str(answer).strip().split('+'))\n    except Exception:\n        return False\n\n    # Check if b is not divisible by the square of any prime\n    def is_square_free(n):\n        i = 2\n        while i * i <= n:\n            if n % (i * i) == 0:\n                return False\n            i += 1\n        return True\n\n    if not is_square_free(b):\n        return False\n\n    # Bounded enumeration to check the area\n    # This part is not feasible due to the complexity of the problem\n    # We cannot directly compute the area without deriving the formula\n    # Thus, we cannot verify the answer without solving the problem\n    return False",
+      "gold": "510",
+      "candidate": "30",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 6.024159908294678
+    },
+    {
+      "id": "aime2025_13",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 1063,
+      "script": "def verify(answer):\n    from itertools import combinations\n    total = 0\n    count = 0\n    for p in range(10000):\n        lines = []\n        for _ in range(27):\n            quadrant1 = (p // 4) % 4\n            quadrant2 = (p // 4 + 1) % 4\n            lines.append((quadrant1, quadrant2))\n            p += 1\n        regions = 1\n        for r in range(1, len(lines) + 1):\n            for combo in combinations(lines, r):\n                valid = True\n                for i in range(r):\n                    for j in range(i + 1, r):\n                        if combo[i][0] == combo[j][0] or combo[i][0] == combo[j][1] or combo[i][1] == combo[j][0] or combo[i][1] == combo[j][1]:\n                            valid = False\n                            break\n                    if not valid:\n                        break\n                if valid:\n                    regions += 1\n        total += regions\n        count += 1\n    expected = total / count\n    try:\n        return math.isclose(float(str(answer).strip()), expected)\n    except Exception:\n        return False",
+      "gold": "204",
+      "candidate": "2863",
+      "solver_correct": false,
+      "gold_verdict": null,
+      "candidate_verdict": null,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 62.922407150268555
+    },
+    {
+      "id": "aime2025_14",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 690,
+      "script": "def verify(answer):\n    try:\n        m, n, p = map(int, str(answer).strip().split('+'))\n    except Exception:\n        return False\n\n    # Check if p is not divisible by the square of any prime\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    def is_square_free(n):\n        for i in range(2, int(n**0.5) + 1):\n            if n % (i**2) == 0:\n                return False\n        return True\n\n    if not is_square_free(p):\n        return False\n\n    # Check if m and n are positive integers\n    if m <= 0 or n <= 0:\n        return False\n\n    return True",
+      "gold": "60",
+      "candidate": "69",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 14.882987022399902
+    },
+    {
+      "id": "aime2025_15",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 345,
+      "script": "def verify(answer):\n    count = 0\n    for a in range(1, 3**6 + 1):\n        for b in range(1, 3**6 + 1):\n            for c in range(1, 3**6 + 1):\n                if (a**3 + b**3 + c**3) % (3**7) == 0:\n                    count += 1\n    try:\n        return int(str(answer).strip()) % 1000 == count % 1000\n    except Exception:\n        return False",
+      "gold": "735",
+      "candidate": "819",
+      "solver_correct": false,
+      "gold_verdict": null,
+      "candidate_verdict": null,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 62.5970139503479
+    },
+    {
+      "id": "aime2025_16",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 213,
+      "script": "def verify(answer):\n    return False  # No direct way to verify without geometric calculations\n    # However, the problem requires geometric insight and calculations\n    # Hence, it's better to output UNVERIFIABLE",
+      "gold": "468",
+      "candidate": "468",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 6.570191144943237
+    },
+    {
+      "id": "aime2025_17",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 277,
+      "script": "def verify(answer):\n    total = 0\n    for n in range(1, 1000):  # assuming a reasonable upper bound\n        if (3 * (n + 3) * (n**2 + 9)) % (n + 2) == 0:\n            total += n\n    try:\n        return int(str(answer).strip()) == total\n    except Exception:\n        return False",
+      "gold": "49",
+      "candidate": "49",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.159924030303955
+    },
+    {
+      "id": "aime2025_18",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 884,
+      "script": "def verify(answer):\n    count = 0\n    for top_left in range(2):\n        for top_right in range(2):\n            for bottom_left in range(2):\n                for bottom_right in range(2):\n                    for middle_vertical in range(2):\n                        for middle_horizontal in range(2):\n                            if (top_left + top_right + middle_vertical + middle_horizontal) == 4 and \\\n                               (top_left + bottom_left + middle_horizontal + (1 - middle_vertical)) == 4 and \\\n                               (bottom_left + bottom_right + (1 - middle_horizontal) + (1 - middle_vertical)) == 4 and \\\n                               (top_right + bottom_right + (1 - middle_horizontal) + middle_vertical) == 4:\n                                count += 1\n    try:\n        return int(str(answer).strip()) == count\n    except Exception:\n        return False",
+      "gold": "82",
+      "candidate": "256",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 4.830478191375732
+    },
+    {
+      "id": "aime2025_19",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 601,
+      "script": "import math\n\ndef verify(answer):\n    product = 1\n    for k in range(4, 64):\n        numerator = (k**2 - 1) * math.log(5) / math.log(k)\n        denominator = (k**2 - 4) * math.log(5) / math.log(k+1)\n        product *= numerator / denominator\n    m, n = 1, 1\n    fraction = product\n    while not fraction.is_integer():\n        fraction *= 10\n        m *= 10\n    n = int(fraction)\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    g = gcd(m, n)\n    m //= g\n    n //= g\n    try:\n        return int(str(answer).strip()) == m + n\n    except Exception:\n        return False",
+      "gold": "106",
+      "candidate": "499",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 4.486154079437256
+    },
+    {
+      "id": "aime2025_20",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 36,
+      "script": "def verify(answer):\n    return False",
+      "gold": "336",
+      "candidate": "192",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.721101999282837
+    },
+    {
+      "id": "aime2025_21",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 36,
+      "script": "def verify(answer):\n    return False",
+      "gold": "293",
+      "candidate": "73",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.3238251209259033
+    },
+    {
+      "id": "aime2025_22",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 784,
+      "script": "from math import gcd\nfrom itertools import chain, combinations\n\ndef verify(answer):\n    def lcm(a, b):\n        return a * b // gcd(a, b)\n\n    def lcm_list(nums):\n        result = nums[0]\n        for num in nums[1:]:\n            result = lcm(result, num)\n        return result\n\n    n = 2025\n    divisors = [i for i in range(1, n + 1) if n % i == 0]\n    total_subsets = 2 ** len(divisors) - 1  # exclude empty set\n    valid_subsets = 0\n\n    for r in range(1, len(divisors) + 1):\n        for subset in combinations(divisors, r):\n            if lcm_list(subset) == n:\n                valid_subsets += 1\n\n    m, n = valid_subsets, total_subsets\n    g = gcd(m, n)\n    m, n = m // g, n // g\n    try:\n        return int(str(answer).strip()) == m + n\n    except Exception:\n        return False",
+      "gold": "237",
+      "candidate": "32780",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.9154489040374756
+    },
+    {
+      "id": "aime2025_23",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 719,
+      "script": "def verify(answer):\n    count = 0\n    for N in range(1, 1001):\n        greedy_coins = 0\n        remaining = N\n        coins = [25, 10, 1]\n        for coin in coins:\n            greedy_coins += remaining // coin\n            remaining %= coin\n        min_coins = float('inf')\n        for quarters in range(N // 25 + 1):\n            for dimes in range(N // 10 + 1):\n                for pennies in range(N // 1 + 1):\n                    if quarters * 25 + dimes * 10 + pennies == N:\n                        min_coins = min(min_coins, quarters + dimes + pennies)\n        if min_coins == greedy_coins:\n            count += 1\n    try:\n        return int(str(answer).strip()) == count\n    except Exception:\n        return False",
+      "gold": "610",
+      "candidate": "36",
+      "solver_correct": false,
+      "gold_verdict": null,
+      "candidate_verdict": null,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 62.79561400413513
+    },
+    {
+      "id": "aime2025_24",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 639,
+      "script": "import numpy as np\n\ndef verify(answer):\n    n = 0\n    t = 0\n    x_values = np.linspace(0, 2*np.pi, 10000)\n    for x in x_values:\n        if np.isclose(np.sin(7*np.pi * np.sin(5*x)), 0):\n            n += 1\n            # Check if tangent to x-axis\n            f_x = np.sin(7*np.pi * np.sin(5*x))\n            f_x_plus_eps = np.sin(7*np.pi * np.sin(5*(x + 1e-6)))\n            f_x_minus_eps = np.sin(7*np.pi * np.sin(5*(x - 1e-6)))\n            if np.isclose(f_x_plus_eps - f_x, 0) and np.isclose(f_x_minus_eps - f_x, 0):\n                t += 1\n    try:\n        return int(str(answer).strip()) == n + t\n    except Exception:\n        return False",
+      "gold": "149",
+      "candidate": "46",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 10.606130838394165
+    },
+    {
+      "id": "aime2025_25",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 487,
+      "script": "def verify(answer):\n    count = 0\n    for mask in range(1 << 16):\n        valid = True\n        for i in range(16):\n            if (mask & (1 << i)) and ((mask & (1 << (i-1))) if i > 0 else False) and ((mask & (1 << (i+1))) if i < 15 else False):\n                valid = False\n                break\n        if valid and bin(mask).count('1') == 8:\n            count += 1\n    try:\n        return (int(str(answer).strip()) % 1000) == (count % 1000)\n    except Exception:\n        return False",
+      "gold": "907",
+      "candidate": "584",
+      "solver_correct": false,
+      "gold_verdict": true,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 4.903119087219238
+    },
+    {
+      "id": "aime2025_26",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 569,
+      "script": "def verify(answer):\n    count = 0\n    for p in itertools.permutations(range(24)):\n        valid = True\n        used = [False]*24\n        segments = []\n        for i in range(12):\n            u, v = p[2*i], p[2*i+1]\n            if used[u] or used[v]:\n                valid = False\n                break\n            used[u] = used[v] = True\n            segments.append((u, v))\n        if valid:\n            count += 1\n    try:\n        return int(str(answer).strip()) == count // 2  # divide by 2 to account for segment direction\n    except Exception:\n        return False",
+      "gold": "113",
+      "candidate": "316254413475",
+      "solver_correct": false,
+      "gold_verdict": null,
+      "candidate_verdict": null,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 64.01257300376892
+    },
+    {
+      "id": "aime2025_27",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 582,
+      "script": "def verify(answer):\n    try:\n        m, n, p, q = map(int, answer.split())\n        return (m > 0 and n > 0 and p > 0 and q > 0 and\n                is_prime_factorization_ok(n) and\n                is_coprime(m, p, q))\n    except Exception:\n        return False\n\ndef is_prime_factorization_ok(n):\n    i = 2\n    while i * i <= n:\n        if n % (i * i) == 0:\n            return False\n        i += 1\n    return True\n\ndef is_coprime(a, b, c):\n    def gcd(x, y):\n        while y:\n            x, y = y, x % y\n        return x\n    return gcd(a, b) == 1 and gcd(a, c) == 1 and gcd(b, c) == 1",
+      "gold": "19",
+      "candidate": "244",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 8.561770915985107
+    },
+    {
+      "id": "aime2025_28",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 425,
+      "script": "def verify(answer):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    x = Fraction(25, 11)\n    for _ in range(2024):\n        x = Fraction(1, 3) * (x + Fraction(1, x) - 1)\n\n    m, n = x.numerator, x.denominator\n    if gcd(m, n) != 1:\n        m, n = m // gcd(m, n), n // gcd(m, n)\n\n    try:\n        return (m + n) % 1000 == int(str(answer).strip())\n    except Exception:\n        return False",
+      "gold": "248",
+      "candidate": "3",
+      "solver_correct": false,
+      "gold_verdict": null,
+      "candidate_verdict": null,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 74.51924514770508
+    },
+    {
+      "id": "aime2025_29",
+      "outcome": "verifier_produced",
+      "classification": "false_positive",
+      "script_chars": 1508,
+      "script": "def verify(answer):\n    # Given information\n    BC = 38\n    AK = AL = BK = CL = KL = 14\n\n    # Calculate the area of the quadrilateral BKLC\n    # Since the problem involves geometric calculations, \n    # we cannot directly calculate the area without using the given information.\n    # However, we can use the fact that the area of the quadrilateral BKLC \n    # can be expressed as n*sqrt(3) for some positive integer n.\n    # We will use this fact to verify the answer.\n\n    # Calculate the area of the triangle ABC\n    # The area of a right triangle can be calculated using the formula: \n    # area = (base * height) / 2\n    # However, we do not have the base and height of the triangle ABC.\n    # We can use the fact that AK = AL = BK = CL = KL = 14 to find the area.\n    # Since the triangle AKL is an equilateral triangle, \n    # its area can be calculated using the formula: \n    # area = (sqrt(3) / 4) * side^2\n    area_AKL = (math.sqrt(3) / 4) * (14**2)\n\n    # The area of the quadrilateral BKLC can be calculated by subtracting \n    # the area of the triangle AKL from the area of the triangle ABC.\n    # However, we do not have the area of the triangle ABC.\n    # We can use the fact that the area of the quadrilateral BKLC \n    # can be expressed as n*sqrt(3) for some positive integer n.\n    # We will use this fact to verify the answer.\n\n    # Verify the answer\n    try:\n        n = int(str(answer).strip())\n        return n > 0 and n * math.sqrt(3) > 0\n    except Exception:\n        return False",
+      "gold": "104",
+      "candidate": "98",
+      "solver_correct": false,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "adv_fp_count": 4,
+      "elapsed": 7.370318174362183
+    },
+    {
+      "id": "aime2025_30",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 727,
+      "script": "def verify(answer):\n    def f(x, k):\n        return ((x - 18)*(x - 72)*(x - 98)*(x - k))/x\n\n    def derivative_f(x, k):\n        return ((x - 18)*(x - 72)*(x - 98)*(1) + (x - k)*((x - 72)*(x - 98) + (x - 18)*(x - 98) + (x - 18)*(x - 72)))/x - ((x - 18)*(x - 72)*(x - 98)*(x - k))/x**2\n\n    valid_k = []\n    for k in [i/1000 for i in range(1, 100000)]:\n        roots = []\n        for x in [i/1000 for i in range(1, 100000)]:\n            if abs(derivative_f(x, k)) < 1e-6:\n                roots.append(x)\n        if len([x for x in roots if x > 0]) == 2:\n            valid_k.append(k)\n    total = sum(valid_k)\n    try:\n        return round(int(str(answer).strip()), 6) == round(total, 6)\n    except Exception:\n        return False",
+      "gold": "240",
+      "candidate": "379",
+      "solver_correct": false,
+      "gold_verdict": null,
+      "candidate_verdict": null,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 64.6356508731842
+    }
+  ]
+}

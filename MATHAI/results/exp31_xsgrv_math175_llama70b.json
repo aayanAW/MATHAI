@@ -1,0 +1,3505 @@
+{
+  "extractor": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+  "results": [
+    {
+      "id": "math500_32",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 159,
+      "script": "def verify(answer):\n    try:\n        x = int(str(answer).strip())\n        return math.log2(x) + math.log2(x**2) == 6\n    except Exception:\n        return False",
+      "gold": "4",
+      "candidate": "4",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 5.075149774551392
+    },
+    {
+      "id": "math500_10",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 201,
+      "script": "def verify(answer):\n    numbers = [71, 72, 73, 74, 75]\n    average = sum(numbers) / len(numbers)\n    try:\n        return float(str(answer).strip()) == average\n    except Exception:\n        return False",
+      "gold": "73",
+      "candidate": "73",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 7.092633008956909
+    },
+    {
+      "id": "math500_33",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 148,
+      "script": "def verify(answer):\n    result = -144 / 9\n    try:\n        return int(str(answer).strip()) == int(result)\n    except Exception:\n        return False",
+      "gold": "-16",
+      "candidate": "-16",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 4.0407328605651855
+    },
+    {
+      "id": "math500_91",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 164,
+      "script": "def verify(answer):\n    calculation = (4 * 12) - (4 + 12)\n    try:\n        return int(str(answer).strip()) == calculation\n    except Exception:\n        return False",
+      "gold": "32",
+      "candidate": "32",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.0854451656341553
+    },
+    {
+      "id": "math500_65",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 150,
+      "script": "def verify(answer):\n    try:\n        return round(float(answer), 6) == round(math.sin(math.radians(30)), 6)\n    except Exception:\n        return False",
+      "gold": "\\frac{1}{2}",
+      "candidate": "\\frac{1}{2}",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.6729581356048584
+    },
+    {
+      "id": "math500_63",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 181,
+      "script": "def verify(answer):\n    from fractions import Fraction\n    expected = Fraction(15, 6)\n    try:\n        return Fraction(answer) == expected\n    except Exception:\n        return False",
+      "gold": "\\frac{5}{2}",
+      "candidate": "\\frac{5}{2}",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 6.388010025024414
+    },
+    {
+      "id": "math500_76",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 296,
+      "script": "from fractions import Fraction\n\ndef verify(answer):\n    try:\n        answer = Fraction(str(answer).strip())\n    except Exception:\n        return False\n    numerator = Fraction(3, 8) + Fraction(7, 8)\n    denominator = Fraction(4, 5)\n    result = numerator / denominator\n    return answer == result",
+      "gold": "\\cfrac{25}{16}",
+      "candidate": "\\frac{25}{16}",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 4.3512678146362305
+    },
+    {
+      "id": "math500_37",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 128,
+      "script": "def verify(answer):\n    try:\n        return int(str(answer).strip()) == 31**2 - 19**2\n    except Exception:\n        return False",
+      "gold": "600",
+      "candidate": "600",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.627304792404175
+    },
+    {
+      "id": "math500_12",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 213,
+      "script": "def verify(answer):\n    for n in range(1000):  # assuming the number of girls is less than 1000\n        if n % 8 == 7:\n            if n % 4 == int(str(answer).strip()):\n                return True\n    return False",
+      "gold": "3",
+      "candidate": "3",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.50821590423584
+    },
+    {
+      "id": "math500_80",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 179,
+      "script": "def verify(answer):\n    try:\n        calculated_answer = 5**3 - (3**2-5)**3\n        return int(str(answer).strip()) == calculated_answer\n    except Exception:\n        return False",
+      "gold": "61",
+      "candidate": "61",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 8.007412910461426
+    },
+    {
+      "id": "math500_130",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 172,
+      "script": "def verify(answer):\n    from math import comb\n    result = comb(11, 8)\n    try:\n        return int(str(answer).strip()) == result\n    except Exception:\n        return False",
+      "gold": "165",
+      "candidate": "165",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.3437540531158447
+    },
+    {
+      "id": "math500_136",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 219,
+      "script": "def verify(answer):\n    try:\n        age = int(str(answer).strip())\n        return age < 75 and age % 2 == 1 and age % 3 == 1 and age % 4 == 1 and age % 6 == 1 and age % 7 == 0\n    except Exception:\n        return False",
+      "gold": "49",
+      "candidate": "49",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 6.908934831619263
+    },
+    {
+      "id": "math500_126",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 393,
+      "script": "def verify(answer):\n    x = symbols('x')\n    f_x = x / (x**2 + 1) + 3 * x**(1/3) - 2*x\n    f_neg_x = f_x.subs(x, -x)\n    if answer == \"even\":\n        return simplify(f_x - f_neg_x) == 0\n    elif answer == \"odd\":\n        return simplify(f_x + f_neg_x) == 0\n    elif answer == \"neither\":\n        return simplify(f_x - f_neg_x) != 0 and simplify(f_x + f_neg_x) != 0\n    else:\n        return False",
+      "gold": "\\text{odd}",
+      "candidate": "odd",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 5.031688928604126
+    },
+    {
+      "id": "math500_101",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 232,
+      "script": "def verify(answer):\n    fraction = 3/7\n    decimal_str = str(fraction)[2:]  # remove '0.' from the start\n    try:\n        return int(str(answer).strip()) == int(decimal_str[8])  # 9th digit\n    except Exception:\n        return False",
+      "gold": "8",
+      "candidate": "8",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 6.478547811508179
+    },
+    {
+      "id": "math500_179",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 242,
+      "script": "def verify(answer):\n    from sympy import I, abs\n    numerator = 2 - 4*I\n    denominator = 2 + I\n    result = abs(numerator / denominator)\n    try:\n        return float(str(answer).strip()) == result\n    except Exception:\n        return False",
+      "gold": "2",
+      "candidate": "2",
+      "solver_correct": true,
+      "gold_verdict": null,
+      "candidate_verdict": null,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.7762539386749268
+    },
+    {
+      "id": "math500_125",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 151,
+      "script": "def verify(answer):\n    result = 0.5 * (3/4)**3\n    try:\n        return float(str(answer).strip()) == result\n    except Exception:\n        return False",
+      "gold": "\\frac{27}{128}",
+      "candidate": "\\frac{27}{128}",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.76381778717041
+    },
+    {
+      "id": "math500_161",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 515,
+      "script": "def verify(answer):\n    def base_to_decimal(num, base):\n        decimal = 0\n        power = 0\n        for digit in reversed(num):\n            decimal += int(digit) * (base ** power)\n            power += 1\n        return decimal\n\n    num1 = \"321\"\n    num2 = \"321\"\n    base1 = 7\n    base2 = 5\n\n    decimal1 = base_to_decimal(num1, base1)\n    decimal2 = base_to_decimal(num2, base2)\n\n    result = decimal1 - decimal2\n    try:\n        return int(str(answer).strip()) == result\n    except Exception:\n        return False",
+      "gold": "76",
+      "candidate": "76",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.9774301052093506
+    },
+    {
+      "id": "math500_115",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 172,
+      "script": "def verify(answer):\n    from math import comb\n    result = comb(11, 4)\n    try:\n        return int(str(answer).strip()) == result\n    except Exception:\n        return False",
+      "gold": "330",
+      "candidate": "330",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.5861880779266357
+    },
+    {
+      "id": "math500_157",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 340,
+      "script": "def verify(answer):\n    x = symbols('x')\n    y = (27*x**2 + 9*x + 3) / (27*x**3 + 9*x**2 + 3*x + 1)\n    limit = limit_y = limit(y, x, oo)\n    try:\n        return int(str(answer).strip()) == limit_y\n    except Exception:\n        try:\n            return float(str(answer).strip()) == limit_y\n        except Exception:\n            return False",
+      "gold": "0",
+      "candidate": "0",
+      "solver_correct": true,
+      "gold_verdict": null,
+      "candidate_verdict": null,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 4.177854061126709
+    },
+    {
+      "id": "math500_170",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 208,
+      "script": "def verify(answer):\n    try:\n        num1 = Fraction(25, 4)\n        num2 = Fraction(1, 12)\n        result = num1 / num2\n        return float(result) == float(answer)\n    except Exception:\n        return False",
+      "gold": "75",
+      "candidate": "75",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 6.001675844192505
+    },
+    {
+      "id": "math500_276",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 228,
+      "script": "def verify(answer):\n    try:\n        new_price = int(str(answer).strip())\n        discount = new_price * 0.25\n        final_price = new_price - discount\n        return final_price == 60\n    except Exception:\n        return False",
+      "gold": "80",
+      "candidate": "80",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.754873752593994
+    },
+    {
+      "id": "math500_214",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 329,
+      "script": "def verify(answer):\n    def calculate_other_endpoint():\n        x1, y1 = 6, 8\n        x2, y2 = 1, 1\n        x3 = 2 * x2 - x1\n        y3 = 2 * y2 - y1\n        return x3, y3\n\n    x, y = calculate_other_endpoint()\n    total = x + y\n    try:\n        return int(str(answer).strip()) == total\n    except Exception:\n        return False",
+      "gold": "-10",
+      "candidate": "-10",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 9.639988899230957
+    },
+    {
+      "id": "math500_201",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 446,
+      "script": "def verify(answer):\n    # Calculate the length of the diagonals\n    import math\n    A = (0, 7)\n    B = (1, 0)\n    C = (12, -2)\n    D = (7, 8)\n    diagonal1 = math.sqrt((C[0] - A[0])**2 + (C[1] - A[1])**2)\n    diagonal2 = math.sqrt((D[0] - B[0])**2 + (D[1] - B[1])**2)\n\n    # Calculate the area of the kite\n    area = 0.5 * diagonal1 * diagonal2\n\n    try:\n        return math.isclose(float(answer), area)\n    except Exception:\n        return False",
+      "gold": "75",
+      "candidate": "75",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 12.319430112838745
+    },
+    {
+      "id": "math500_273",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 210,
+      "script": "import math\n\ndef verify(answer):\n    sin_18 = math.sin(math.radians(18))\n    result = sin_18**3 + sin_18**2\n    try:\n        return math.isclose(float(answer), result)\n    except Exception:\n        return False",
+      "gold": "\\frac{1}{8}",
+      "candidate": "\\frac{3(2-\\sqrt{5})}{32}",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 4.231724977493286
+    },
+    {
+      "id": "math500_236",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 186,
+      "script": "def verify(answer):\n    x = 4\n    expression = (3*x-2)*(4*x+1) - (3*x-2)*4*x + 1\n    try:\n        return int(str(answer).strip()) == expression\n    except Exception:\n        return False",
+      "gold": "11",
+      "candidate": "11",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.862338066101074
+    },
+    {
+      "id": "math500_297",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 273,
+      "script": "def verify(answer):\n    numbers = [1, 2, 3, 4, 8, 14, 17, 29, 56, 91]\n    count = 0\n    for num in numbers:\n        if 34 % num == 0 or num % 7 == 0:\n            count += 1\n    try:\n        return int(str(answer).strip()) == count\n    except Exception:\n        return False",
+      "gold": "6",
+      "candidate": "5",
+      "solver_correct": false,
+      "gold_verdict": true,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 9.71721601486206
+    },
+    {
+      "id": "math500_220",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 210,
+      "script": "def verify(answer):\n    try:\n        claimed_answer = int(str(answer).strip())\n        actual_value = math.floor(10.3**3)\n        return claimed_answer == actual_value\n    except Exception:\n        return False",
+      "gold": "1092",
+      "candidate": "1092",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.1970229148864746
+    },
+    {
+      "id": "math500_245",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 374,
+      "script": "def verify(answer):\n    try:\n        a = int(str(answer).strip())\n        # Substitute the second equation into the first\n        # 2x + 5y = -8\n        # 6x = 16 + a - 15y\n        # 2 * (16 + a - 15y) / 6 + 5y = -8\n        # (16 + a - 15y) / 3 + 5y = -8\n        # 16 + a - 15y + 15y = -24\n        # a = -40\n        return a == -40\n    except Exception:\n        return False",
+      "gold": "-40",
+      "candidate": "-40",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 5.008068084716797
+    },
+    {
+      "id": "math500_239",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 539,
+      "script": "def verify(answer):\n    try:\n        intervals = str(answer).strip().replace(\"(\", \"\").replace(\")\", \"\").split(\" U \")\n        valid = []\n        for interval in intervals:\n            if interval:\n                a, b = map(float, interval.split(\",\"))\n                for x in [a - 1, (a + b) / 2, b + 1]:\n                    if (x + 7)*(x - 2) / (x - 1) < 0:\n                        valid.append(True)\n                    else:\n                        valid.append(False)\n        return all(valid)\n    except Exception:\n        return False",
+      "gold": "(-\\infty,-7) \\cup (1,2)",
+      "candidate": "(-\\infty, -7) \\cup (1, 2)",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 17.106003046035767
+    },
+    {
+      "id": "math500_279",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 345,
+      "script": "def verify(answer):\n    try:\n        answer = float(answer)\n    except Exception:\n        return False\n\n    min_val = float('inf')\n    for a in [i/1000.0 for i in range(1, 10000)]:\n        for b in [i/1000.0 for i in range(1, 10000)]:\n            val = a/b + 5*b/a\n            min_val = min(min_val, val)\n\n    return abs(answer - min_val) < 0.01",
+      "gold": "2 \\sqrt{5}",
+      "candidate": "2\\sqrt{5}",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 34.998892068862915
+    },
+    {
+      "id": "math500_344",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 417,
+      "script": "def verify(answer):\n    def mod_inverse(a, m):\n        for x in range(1, m):\n            if (a * x) % m == 1:\n                return x\n        return None\n\n    inv_3 = mod_inverse(3, 19)\n    inv_13 = mod_inverse(13, 19)\n    if inv_3 is None or inv_13 is None:\n        return False\n    result = (inv_3 + inv_13) % 19\n    try:\n        return int(str(answer).strip()) == result\n    except Exception:\n        return False",
+      "gold": "16",
+      "candidate": "16",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 6.1732869148254395
+    },
+    {
+      "id": "math500_346",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 476,
+      "script": "def verify(answer):\n    try:\n        a, b = map(int, str(answer).strip().split(','))\n    except Exception:\n        return False\n\n    x_values = [x/100 for x in range(-500, 2100)]  # considering x in the range -5 to 20\n    m_values = []\n    for x in x_values:\n        if x + 5 >= 0 and 20 - x >= 0:\n            m_values.append(math.sqrt(x + 5) + math.sqrt(20 - x))\n\n    min_m = min(m_values)\n    max_m = max(m_values)\n    return a == math.floor(min_m) and b == math.ceil(max_m)",
+      "gold": "[5,5 \\sqrt{2}]",
+      "candidate": "[5, 5\\sqrt{2}]",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 12.37975001335144
+    },
+    {
+      "id": "math500_327",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 148,
+      "script": "def verify(answer):\n    result = pow(5, 30, 7)\n    try:\n        return int(str(answer).strip()) == result\n    except Exception:\n        return False",
+      "gold": "1",
+      "candidate": "1",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 4.520827054977417
+    },
+    {
+      "id": "math500_341",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 436,
+      "script": "def verify(answer):\n    try:\n        a_squared = float(answer)\n    except Exception:\n        return False\n\n    # Check if a^2 is positive\n    if a_squared <= 0:\n        return False\n\n    # Check if a^2 can be achieved with some a, b, c\n    for a in [a_squared ** 0.5]:\n        for b in [0.0001 * i for i in range(1, 10000)]:\n            c = a ** 2 / b\n            if a + b + c == a * b * c:\n                return True\n\n    return False",
+      "gold": "3",
+      "candidate": "3",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 12.777507066726685
+    },
+    {
+      "id": "math500_363",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 456,
+      "script": "def verify(answer):\n    def convert_base(n, b):\n        if n == 0:\n            return '0'\n        digits = []\n        while n:\n            digits.append(int(n % b))\n            n //= b\n        return ''.join(map(str, digits[::-1]))\n\n    base7 = convert_base(629, 7)\n    base8 = convert_base(629, 8)\n    common_digits = set(base7) & set(base8)\n    try:\n        return int(str(answer).strip()) == len(common_digits)\n    except Exception:\n        return False",
+      "gold": "3",
+      "candidate": "3",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.6602439880371094
+    },
+    {
+      "id": "math500_394",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 648,
+      "script": "def verify(answer):\n    try:\n        r, s, t = map(float, [str(answer).strip().split(', ')[0], str(answer).strip().split(', ')[1], str(answer).strip().split(', ')[2]])\n    except Exception:\n        return False\n\n    # Check if r, s, t are roots of the polynomial\n    if abs(r**3 - 4*r**2 + 5*r - 19/10) > 1e-6 or abs(s**3 - 4*s**2 + 5*s - 19/10) > 1e-6 or abs(t**3 - 4*t**2 + 5*t - 19/10) > 1e-6:\n        return False\n\n    # Calculate the length of the long diagonal\n    diagonal = (r**2 + s**2 + t**2)**0.5\n\n    # Check if the calculated diagonal matches the given answer\n    return abs(diagonal - float(str(answer).strip().split(', ')[3])) < 1e-6",
+      "gold": "\\sqrt{6}",
+      "candidate": "\\sqrt{6}",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.5031678676605225
+    },
+    {
+      "id": "math500_314",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 182,
+      "script": "def verify(answer):\n    try:\n        K = int(str(answer).strip())\n    except Exception:\n        return False\n\n    # Check for no solutions\n    det = 6 * 8 - 4 * K\n    return det == 0",
+      "gold": "12",
+      "candidate": "12",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 5.272600173950195
+    },
+    {
+      "id": "math500_302",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 270,
+      "script": "import math\n\ndef verify(answer):\n    theta = math.atan(1/7)\n    cos_theta = math.cos(theta)\n    expression = 1 / (1 + cos_theta) + 1 / (1 - cos_theta)\n    try:\n        return math.isclose(float(str(answer).strip()), expression)\n    except Exception:\n        return False",
+      "gold": "100",
+      "candidate": "100",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.657193899154663
+    },
+    {
+      "id": "math500_368",
+      "outcome": "verifier_produced",
+      "classification": "false_positive",
+      "script_chars": 476,
+      "script": "def verify(answer):\n    from sympy import symbols, Matrix, Eq, solve\n    p, q, r, a, b, c = symbols('p q r a b c')\n    M = Matrix([[p, b, c], [a, q, c], [a, b, r]])\n    det_M = M.det()\n    eq = Eq(det_M, 0)\n    solution = solve(eq, (p, q, r))\n    expression = p/(p-a) + q/(q-b) + r/(r-c)\n    expression = expression.subs({p: solution[0][0], q: solution[0][1], r: solution[0][2]})\n    try:\n        return int(str(answer).strip()) == 1\n    except Exception:\n        return False",
+      "gold": "2",
+      "candidate": "3",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 1,
+      "elapsed": 4.744872808456421
+    },
+    {
+      "id": "math500_369",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 994,
+      "script": "def verify(answer):\n    try:\n        answer = int(str(answer).strip())\n    except Exception:\n        return False\n\n    # Check if answer is within valid range\n    if answer < 0 or answer > 2001:\n        return False\n\n    # The given equation has a specific pattern, \n    # and we can observe that x = -1 is a root.\n    # We can factor out (x + 1) from the equation.\n    # After factoring, we get (x + 1)(2x^2000 - 2x^1999 + 3x^1998 - 3x^1997 + ... + 2x - 2x + 3) = 0\n    # The second factor has a similar pattern, and we can factor out (x + 1) again.\n    # We can repeat this process until we get a constant term.\n    # Since we have 2001 terms, we can factor out (x + 1) at most 1000 times.\n    # Therefore, the equation has at most 1000 real roots, and one of them is x = -1.\n    # However, we cannot directly compute the roots of the equation.\n    # We can only verify if the given answer is within the valid range.\n\n    # Check if answer is 1 (since x = -1 is a root)\n    return answer == 1",
+      "gold": "1",
+      "candidate": "0",
+      "solver_correct": false,
+      "gold_verdict": true,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 13.850244045257568
+    },
+    {
+      "id": "math500_423",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 688,
+      "script": "def verify(answer):\n    try:\n        p, q, r = map(int, str(answer).strip().split('+'))\n    except Exception:\n        return False\n\n    min_cos_alpha = - (p + math.sqrt(q)) / r\n    for alpha in [i * math.pi / 180 for i in range(0, 360)]:\n        for beta in [i * math.pi / 180 for i in range(0, 360)]:\n            for gamma in [i * math.pi / 180 for i in range(0, 360)]:\n                if math.isclose(math.cos(alpha) + math.cos(beta) + math.cos(gamma), 1, rel_tol=1e-5) and \\\n                   math.isclose(math.sin(alpha) + math.sin(beta) + math.sin(gamma), 1, rel_tol=1e-5):\n                    if math.cos(alpha) < min_cos_alpha:\n                        return False\n    return True",
+      "gold": "12",
+      "candidate": "14",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 4.476430654525757
+    },
+    {
+      "id": "math500_435",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 337,
+      "script": "def verify(answer):\n    sequence = []\n    i = 1\n    while len(sequence) < 1000:\n        i += 1\n        if not (math.isqrt(i) ** 2 == i or round(i ** (1/3)) ** 3 == i or round(i ** (1/5)) ** 5 == i):\n            sequence.append(i)\n    try:\n        return int(str(answer).strip()) == sequence[-1]\n    except Exception:\n        return False",
+      "gold": "1041",
+      "candidate": "1029 \\):",
+      "solver_correct": false,
+      "gold_verdict": true,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 4.897575855255127
+    },
+    {
+      "id": "math500_477",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 272,
+      "script": "def verify(answer):\n    rows = 8\n    total_ways = 2 ** (rows - 1)\n    middle_ways = math.comb(rows - 1, (rows - 1) // 2)\n    probability = middle_ways / total_ways\n    try:\n        return float(str(answer).strip()) == probability\n    except Exception:\n        return False",
+      "gold": "\\frac{35}{128}",
+      "candidate": "\\frac{35}{128}",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 6.155550956726074
+    },
+    {
+      "id": "math500_436",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 1286,
+      "script": "def verify(answer):\n    # Define the cost of 1 inch and 2 inch cubes\n    cost_1inch = 1.30\n    cost_2inch = 6.80\n    \n    # Calculate the surface area and volume of 1 inch and 2 inch cubes\n    surface_area_1inch = 6 * (1 ** 2)\n    volume_1inch = 1 ** 3\n    surface_area_2inch = 6 * (2 ** 2)\n    volume_2inch = 2 ** 3\n    \n    # Set up equations based on the given information\n    # Let x be the cost of the paint per unit surface area and y be the cost of the concrete per unit volume\n    # Then, we have the following equations:\n    # cost_1inch = x * surface_area_1inch + y * volume_1inch\n    # cost_2inch = x * surface_area_2inch + y * volume_2inch\n    \n    # Solve the system of equations to find x and y\n    x = (cost_2inch * volume_1inch - cost_1inch * volume_2inch) / (surface_area_2inch * volume_1inch - surface_area_1inch * volume_2inch)\n    y = (cost_1inch * surface_area_2inch - cost_2inch * surface_area_1inch) / (surface_area_2inch * volume_1inch - surface_area_1inch * volume_2inch)\n    \n    # Calculate the cost of a 3 inch cube\n    surface_area_3inch = 6 * (3 ** 2)\n    volume_3inch = 3 ** 3\n    cost_3inch = x * surface_area_3inch + y * volume_3inch\n    \n    try:\n        return round(float(answer), 2) == round(cost_3inch, 2)\n    except Exception:\n        return False",
+      "gold": "\\$18.90",
+      "candidate": "18.90",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 6.23697829246521
+    },
+    {
+      "id": "math500_493",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 350,
+      "script": "def verify(answer):\n    def f(i, j):\n        if i == 0 and 0 <= j <= 4:\n            return (j + 1) % 5\n        elif i >= 1 and j == 0:\n            return f(i - 1, 1)\n        elif i >= 1 and 1 <= j <= 4:\n            return f(i - 1, f(i, j - 1))\n\n    try:\n        return f(2015, 2) == int(str(answer).strip())\n    except Exception:\n        return False",
+      "gold": "1",
+      "candidate": "3",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.046359062194824
+    },
+    {
+      "id": "math500_457",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 1316,
+      "script": "def verify(answer):\n    try:\n        a = int(str(answer).strip())\n    except Exception:\n        return False\n\n    # Check for all possible polynomials of degree 5\n    for p5 in range(-100, 101):\n        for p4 in range(-100, 101):\n            for p3 in range(-100, 101):\n                for p2 in range(-100, 101):\n                    for p1 in range(-100, 101):\n                        for p0 in range(-100, 101):\n                            P = [p5, p4, p3, p2, p1, p0]\n                            # Check for all complex roots of z^5 + 2004z = 1\n                            for z in [1, -1, 1j, -1j]:\n                                if z**5 + 2004*z == 1:\n                                    if P[0]*z**10 + P[1]*z**8 + P[2]*z**6 + P[3]*z**4 + P[4]*z**2 + P[5] != 0:\n                                        break\n                            else:\n                                # Calculate P(1) / P(-1)\n                                P1 = P[0] + P[1] + P[2] + P[3] + P[4] + P[5]\n                                Pm1 = P[0] - P[1] + P[2] - P[3] + P[4] - P[5]\n                                if Pm1 == 0:\n                                    return False\n                                ratio = P1 / Pm1\n                                if ratio == a:\n                                    return True\n    return False",
+      "gold": "-\\frac{2010012}{2010013}",
+      "candidate": "-1",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 4.9014880657196045
+    },
+    {
+      "id": "math500_476",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 452,
+      "script": "import math\n\ndef verify(answer):\n    # Given lengths\n    AB = BC = CD = DE = EF = FG = GH = HK = 4\n    \n    # Calculate DF using Pythagorean theorem\n    # Since triangle DEF is a right triangle with DE = 4 and EF = 4\n    # We can calculate DF using the Pythagorean theorem: DF^2 = DE^2 + EF^2\n    DF_calculated = math.sqrt(DE**2 + EF**2)\n    \n    try:\n        return math.isclose(float(answer), DF_calculated)\n    except Exception:\n        return False",
+      "gold": "4\\sqrt{2}",
+      "candidate": "5.6569",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 12.010698080062866
+    },
+    {
+      "id": "math500_458",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 285,
+      "script": "def verify(answer):\n    count = 0\n    for i in range(1, 101):\n        if i % 2 == 0 and i % 3 != 0:\n            count += 1\n    total = 100\n    fraction = Fraction(count, total)\n    try:\n        return fraction == Fraction(str(answer).strip())\n    except Exception:\n        return False",
+      "gold": "\\dfrac{17}{50}",
+      "candidate": "\\frac{17}{50}",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.07633900642395
+    },
+    {
+      "id": "math500_440",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 551,
+      "script": "def verify(answer):\n    # Heron's formula to calculate area of triangle ABC\n    a = 17\n    b = 8\n    c = 15\n    s = (a + b + c) / 2\n    area_ABC = (s*(s-a)*(s-b)*(s-c)) ** 0.5\n    \n    # Calculate height of triangle ABC using area and base\n    height = (2 * area_ABC) / a\n    \n    # Calculate area of triangle ACD using base and height\n    base_ACD = ((a**2 + b**2 - c**2) / (2*a))\n    area_ACD = 0.5 * base_ACD * height\n    \n    try:\n        return round(float(str(answer).strip()), 5) == round(area_ACD, 5)\n    except Exception:\n        return False",
+      "gold": "\\frac{3840}{289}",
+      "candidate": "30",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 10.134024858474731
+    },
+    {
+      "id": "math500_463",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 449,
+      "script": "def verify(answer):\n    total_ways = 0\n    favorable_ways = 0\n    bills = [1, 1, 5, 5, 10, 10, 20, 20]\n    for i in range(len(bills)):\n        for j in range(i + 1, len(bills)):\n            total_ways += 1\n            if bills[i] + bills[j] >= 20:\n                favorable_ways += 1\n    probability = favorable_ways / total_ways\n    try:\n        return abs(float(str(answer).strip()) - probability) < 1e-6\n    except Exception:\n        return False",
+      "gold": "\\frac{1}{2}",
+      "candidate": "\\frac{1}{2}",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.21258807182312
+    },
+    {
+      "id": "math500_42",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 219,
+      "script": "def verify(answer):\n    from fractions import Fraction\n    try:\n        answer = Fraction(answer)\n    except Exception:\n        return False\n    result = (Fraction(16, 625)) ** Fraction(1, 4)\n    return answer == result",
+      "gold": "\\frac{2}{5}",
+      "candidate": "\\frac{2}{5}",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.141181230545044
+    },
+    {
+      "id": "math500_41",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 36,
+      "script": "def verify(answer):\n    return False",
+      "gold": "4",
+      "candidate": "2",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.8161537647247314
+    },
+    {
+      "id": "math500_9",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 241,
+      "script": "def verify(answer):\n    twenty_percent = 0.2\n    fifty_percent = 0.5\n    eighty = 80\n    result = twenty_percent * fifty_percent * eighty\n    try:\n        return float(str(answer).strip()) == result\n    except Exception:\n        return False",
+      "gold": "8",
+      "candidate": "8",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.1622941493988037
+    },
+    {
+      "id": "math500_50",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 36,
+      "script": "def verify(answer):\n    return False",
+      "gold": "90^\\circ",
+      "candidate": "90",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.3249309062957764
+    },
+    {
+      "id": "math500_1",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 244,
+      "script": "def verify(answer):\n    flour_per_pound = 1.5 / 2\n    total_pounds = 5 * 2\n    total_flour = flour_per_pound * total_pounds\n    try:\n        return math.isclose(float(str(answer).strip()), total_flour)\n    except Exception:\n        return False",
+      "gold": "7.5",
+      "candidate": "7.5",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 4.687633991241455
+    },
+    {
+      "id": "math500_70",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 159,
+      "script": "def verify(answer):\n    expression = 19**2 + 2*19 + 1\n    try:\n        return int(str(answer).strip()) == expression\n    except Exception:\n        return False",
+      "gold": "400",
+      "candidate": "400",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.4053359031677246
+    },
+    {
+      "id": "math500_15",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 381,
+      "script": "def verify(answer):\n    # Define example even and odd functions\n    def f(x):\n        return x**2\n    \n    def g(x):\n        return x\n    \n    # Check if f(g(x^3)) is even, odd, or neither\n    x = 1\n    if f(g(x**3)) == f(g((-x)**3)):\n        return answer == \"even\"\n    elif f(g(x**3)) == -f(g((-x)**3)):\n        return answer == \"odd\"\n    else:\n        return answer == \"neither\"",
+      "gold": "\\text{even}",
+      "candidate": "\\text{even}",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.1378209590911865
+    },
+    {
+      "id": "math500_78",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 244,
+      "script": "def verify(answer):\n    from sympy import Matrix\n    A = Matrix([[1, 0], [0, -7]])\n    B = Matrix([[1, 0], [0, 3]])\n    det_BA = (B * A).det()\n    try:\n        return int(str(answer).strip()) == det_BA\n    except Exception:\n        return False",
+      "gold": "-21",
+      "candidate": "-21",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.8581278324127197
+    },
+    {
+      "id": "math500_73",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 250,
+      "script": "def verify(answer):\n    total_outcomes = 2 ** 4\n    favorable_outcomes = 1\n    probability = favorable_outcomes / total_outcomes\n    try:\n        return Fraction(str(answer).strip()) == Fraction(probability)\n    except Exception:\n        return False",
+      "gold": "\\frac{1}{16}",
+      "candidate": "\\frac{1}{16}",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.7408859729766846
+    },
+    {
+      "id": "math500_55",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 36,
+      "script": "def verify(answer):\n    return False",
+      "gold": "18",
+      "candidate": "18",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.2705438137054443
+    },
+    {
+      "id": "math500_56",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 225,
+      "script": "def verify(answer):\n    x = symbols('x')\n    f_x = (6*x**3 + 4*x**2 - 11*x + 5) / (3*x**3 - 15*x + 20)\n    c = limit(f_x, x, oo)\n    try:\n        return int(str(answer).strip()) == c\n    except Exception:\n        return False",
+      "gold": "2",
+      "candidate": "2",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.0988478660583496
+    },
+    {
+      "id": "math500_72",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 221,
+      "script": "def verify(answer):\n    def f(x):\n        return x**3 + 2*x + 1\n    def g(x):\n        return x - 1\n    result = f(g(1))\n    try:\n        return int(str(answer).strip()) == result\n    except Exception:\n        return False",
+      "gold": "1",
+      "candidate": "1",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.9026968479156494
+    },
+    {
+      "id": "math500_45",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 487,
+      "script": "def verify(answer):\n    count = 0\n    members = list(range(1, 21))  # 20 members\n    for president in members:\n        for vice_president in members:\n            if vice_president == president:\n                continue\n            for treasurer in members:\n                if treasurer == president or treasurer == vice_president:\n                    continue\n                count += 1\n    try:\n        return int(str(answer).strip()) == count\n    except Exception:\n        return False",
+      "gold": "6840",
+      "candidate": "6840",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.787712812423706
+    },
+    {
+      "id": "math500_48",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 45,
+      "script": "def verify(answer):\n    return \"UNVERIFIABLE\"",
+      "gold": "25\\pi",
+      "candidate": "25\\pi",
+      "solver_correct": true,
+      "gold_verdict": null,
+      "candidate_verdict": null,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.2625839710235596
+    },
+    {
+      "id": "math500_92",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 228,
+      "script": "def verify(answer):\n    susan_cost = 4 * 20 * 0.75\n    pam_cost = 5 * 20 * 0.7\n    difference = pam_cost - susan_cost\n    try:\n        return int(str(answer).strip()) == int(difference)\n    except Exception:\n        return False",
+      "gold": "10",
+      "candidate": "10",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.3861589431762695
+    },
+    {
+      "id": "math500_30",
+      "outcome": "verifier_produced",
+      "classification": "false_positive",
+      "script_chars": 349,
+      "script": "def verify(answer):\n    try:\n        roots = [int(x) for x in str(answer).strip().split(',')]\n    except Exception:\n        return False\n\n    poly = [1, 5, 9, -1, -14]\n    for root in roots:\n        result = sum([coeff * (root ** (len(poly) - 1 - i)) for i, coeff in enumerate(poly)])\n        if result != 0:\n            return False\n    return True",
+      "gold": "-2,1",
+      "candidate": "1, -2",
+      "solver_correct": false,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "adv_fp_count": 1,
+      "elapsed": 2.59083890914917
+    },
+    {
+      "id": "math500_21",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 310,
+      "script": "def verify(answer):\n    try:\n        a, b = map(int, answer.replace('(', '').replace(')', '').split('*'))\n        x = symbols('x')\n        expression = a * b\n        expanded = expand(expression)\n        target = 45*x**2 + 118*x + 56\n        return expanded == target\n    except Exception:\n        return False",
+      "gold": "(45x + 28)(x + 2)",
+      "candidate": "(45x + 28)(x + 2)",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.3600242137908936
+    },
+    {
+      "id": "math500_96",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 169,
+      "script": "def verify(answer):\n    x = 3\n    result = x**3 - 3*x**2 - 9*x + 30\n    try:\n        return int(str(answer).strip()) == result\n    except Exception:\n        return False",
+      "gold": "3",
+      "candidate": "3",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.697613000869751
+    },
+    {
+      "id": "math500_49",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 197,
+      "script": "def verify(answer):\n    speed = 9  # m/s\n    time = 12  # seconds\n    distance = speed * time\n    try:\n        return int(str(answer).strip()) == distance\n    except Exception:\n        return False",
+      "gold": "108",
+      "candidate": "108",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.334023952484131
+    },
+    {
+      "id": "math500_83",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 36,
+      "script": "def verify(answer):\n    return False",
+      "gold": "55",
+      "candidate": "30",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.6230483055114746
+    },
+    {
+      "id": "math500_26",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 165,
+      "script": "def verify(answer):\n    expression = 3*3 + 3*(3 + 3) - 3**3\n    try:\n        return int(str(answer).strip()) == expression\n    except Exception:\n        return False",
+      "gold": "0",
+      "candidate": "0",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.542253017425537
+    },
+    {
+      "id": "math500_87",
+      "outcome": "verifier_produced",
+      "classification": "false_positive",
+      "script_chars": 519,
+      "script": "def verify(answer):\n    total_students = 28\n    min_brown = math.ceil(total_students * 3 / 4)\n    min_right_handed = math.ceil(total_students * 6 / 7)\n    for brown in range(min_brown, total_students + 1):\n        for right_handed in range(min_right_handed, total_students + 1):\n            both = brown + right_handed - total_students\n            if both >= 0:\n                if both == int(str(answer).strip()):\n                    return True\n    try:\n        return False\n    except Exception:\n        return False",
+      "gold": "17",
+      "candidate": "17",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "adv_fp_count": 2,
+      "elapsed": 3.2705721855163574
+    },
+    {
+      "id": "math500_8",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 174,
+      "script": "def verify(answer):\n    expression = (-5)**3 + (-2)**3 + 2**3 + 5**3\n    try:\n        return int(str(answer).strip()) == expression\n    except Exception:\n        return False",
+      "gold": "0",
+      "candidate": "0",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.294651985168457
+    },
+    {
+      "id": "math500_47",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 250,
+      "script": "import math\n\ndef verify(answer):\n    try:\n        n = int(str(answer).strip())\n    except Exception:\n        return False\n    if not -90 <= n <= 90:\n        return False\n    return math.isclose(math.sin(math.radians(n)), math.sin(math.radians(1021)))",
+      "gold": "-59",
+      "candidate": "-59",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.5671541690826416
+    },
+    {
+      "id": "math500_59",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 158,
+      "script": "def verify(answer):\n    import math\n    try:\n        return math.isclose(float(answer), math.tan(math.radians(45)))\n    except Exception:\n        return False",
+      "gold": "1",
+      "candidate": "1",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.5125932693481445
+    },
+    {
+      "id": "math500_74",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 244,
+      "script": "def verify(answer):\n    for C in range(21, 30):\n        if C % 7 == 0 and C % 3 != 0:\n            correct_answer = C\n            break\n    try:\n        return int(str(answer).strip()) == correct_answer\n    except Exception:\n        return False",
+      "gold": "28",
+      "candidate": "28",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.9236817359924316
+    },
+    {
+      "id": "math500_44",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 169,
+      "script": "def verify(answer):\n    import math\n    try:\n        return round(float(answer), 10) == round(math.cos(math.radians(180)), 10)\n    except Exception:\n        return False",
+      "gold": "-1",
+      "candidate": "-1",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.8907692432403564
+    },
+    {
+      "id": "math500_98",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 275,
+      "script": "def verify(answer):\n    count = 0\n    for i in range(4, 32):  # since 3^2 < 10 and 31^2 < 1000\n        square = i ** 2\n        if 10 <= square <= 1000:\n            count += 1\n    try:\n        return int(str(answer).strip()) == count\n    except Exception:\n        return False",
+      "gold": "28",
+      "candidate": "28",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.049973964691162
+    },
+    {
+      "id": "math500_52",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 137,
+      "script": "def verify(answer):\n    expected = 3/4 + 1/8\n    try:\n        return float(answer) == expected\n    except Exception:\n        return False",
+      "gold": "\\frac{7}{8}",
+      "candidate": "\\frac{7}{8}",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.455873966217041
+    },
+    {
+      "id": "math500_85",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 209,
+      "script": "def verify(answer):\n    rate = 1.5 / 3  # pints per mile\n    next_10_miles = 10 * rate\n    try:\n        return math.isclose(float(str(answer).strip()), next_10_miles)\n    except Exception:\n        return False",
+      "gold": "5",
+      "candidate": "5",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.6314330101013184
+    },
+    {
+      "id": "math500_105",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 676,
+      "script": "def verify(answer):\n    try:\n        answer = str(answer).strip()\n    except Exception:\n        return False\n\n    options = {\n        'A': 'Line',\n        'B': 'Circle',\n        'C': 'Parabola',\n        'D': 'Ellipse',\n        'E': 'Hyperbola'\n    }\n\n    t_values = [i * 0.1 for i in range(-100, 101)]\n    points = []\n    for t in t_values:\n        try:\n            x = math.tan(t)\n            y = 1 / math.cos(t)\n            points.append((x, y))\n        except Exception:\n            continue\n\n    # Check if points satisfy the equation of a hyperbola\n    for x, y in points:\n        if abs(x**2 - y**2 + 1) > 1e-6:\n            return answer != 'E'\n\n    return answer == 'E'",
+      "gold": "\\text{(E)}",
+      "candidate": "E",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.6729238033294678
+    },
+    {
+      "id": "math500_113",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 45,
+      "script": "def verify(answer):\n    return \"UNVERIFIABLE\"",
+      "gold": "24",
+      "candidate": "24",
+      "solver_correct": true,
+      "gold_verdict": null,
+      "candidate_verdict": null,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.3440299034118652
+    },
+    {
+      "id": "math500_124",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 321,
+      "script": "def verify(answer):\n    from sympy import symbols, Eq, solve\n    x = symbols('x')\n    equation = Eq(x**4 - 2*x**2 - 7, 0)\n    roots = solve(equation, x)\n    real_roots = [root for root in roots if root.is_real]\n    try:\n        return int(str(answer).strip()) == len(real_roots)\n    except Exception:\n        return False",
+      "gold": "2",
+      "candidate": "2",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 4.9342427253723145
+    },
+    {
+      "id": "math500_122",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 177,
+      "script": "def verify(answer):\n    expression = 182 + 3 * 7 - 64 / 2 + 27 / 3\n    try:\n        return int(str(answer).strip()) == int(expression)\n    except Exception:\n        return False",
+      "gold": "180",
+      "candidate": "180",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.7679321765899658
+    },
+    {
+      "id": "math500_138",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 270,
+      "script": "def verify(answer):\n    valid = []\n    for d in range(10):\n        num = 591300 + d * 10 + 8\n        if num % 12 == 0:\n            valid.append(d)\n    total = sum(valid)\n    try:\n        return int(str(answer).strip()) == total\n    except Exception:\n        return False",
+      "gold": "4",
+      "candidate": "12",
+      "solver_correct": false,
+      "gold_verdict": true,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.6881160736083984
+    },
+    {
+      "id": "math500_152",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 351,
+      "script": "import math\n\ndef verify(answer):\n    try:\n        A = float(answer)\n        if not 0 < A < 90:\n            return False\n        left_side = math.cos(math.radians(41)) + math.sin(math.radians(41))\n        right_side = math.sqrt(2) * math.sin(math.radians(A))\n        return math.isclose(left_side, right_side)\n    except Exception:\n        return False",
+      "gold": "86^\\circ",
+      "candidate": "86",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.1043310165405273
+    },
+    {
+      "id": "math500_185",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 602,
+      "script": "def verify(answer):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    one_digit_primes = [i for i in range(2, 10) if is_prime(i)]\n    two_digit_primes = [i for i in range(10, 100) if is_prime(i)]\n\n    for p1 in one_digit_primes:\n        for p2 in two_digit_primes:\n            if p1 + p2 == 100:\n                try:\n                    return int(str(answer).strip()) == p1 * p2\n                except Exception:\n                    return False\n    return False",
+      "gold": "291",
+      "candidate": "291",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.404709815979004
+    },
+    {
+      "id": "math500_167",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 138,
+      "script": "def verify(answer):\n    try:\n        x = int(str(answer).strip())\n        return 3 + 1/x == 7/x\n    except Exception:\n        return False",
+      "gold": "2",
+      "candidate": "2",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.5752363204956055
+    },
+    {
+      "id": "math500_144",
+      "outcome": "verifier_produced",
+      "classification": "false_positive",
+      "script_chars": 345,
+      "script": "from sympy import symbols, sympify\n\ndef verify(answer):\n    x = symbols('x')\n    poly = x**4 + 2*x**3 - 7*x**2 - 8*x + 12\n    try:\n        roots = [sympify(a) for a in answer.split(',')]\n        for root in roots:\n            if poly.subs(x, root) != 0:\n                return False\n        return True\n    except Exception:\n        return False",
+      "gold": "1,2,-2,-3",
+      "candidate": "1, 2, -2, -3",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "adv_fp_count": 1,
+      "elapsed": 2.7156379222869873
+    },
+    {
+      "id": "math500_142",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 254,
+      "script": "def verify(answer):\n    for p in range(100):  # cost of a pencil in cents\n        if 3*p + 124 == 182 + 2*p:\n            try:\n                return int(str(answer).strip()) == p\n            except Exception:\n                return False\n    return False",
+      "gold": "29",
+      "candidate": "29",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.196732997894287
+    },
+    {
+      "id": "math500_104",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 195,
+      "script": "def verify(answer):\n    try:\n        x, y = map(int, str(answer).strip().replace(\"(\", \"\").replace(\")\", \"\").split(\",\"))\n        return x == 3 and y == -4\n    except Exception:\n        return False",
+      "gold": "(3,-4)",
+      "candidate": "(3,-4)",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.7166941165924072
+    },
+    {
+      "id": "math500_169",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 511,
+      "script": "def verify(answer):\n    def base_to_decimal(num, base):\n        decimal = 0\n        power = 0\n        for digit in reversed(num):\n            decimal += int(digit) * (base ** power)\n            power += 1\n        return decimal\n\n    num1 = \"62\"\n    num2 = \"34\"\n    base1 = 7\n    base2 = 5\n\n    decimal1 = base_to_decimal(num1, base1)\n    decimal2 = base_to_decimal(num2, base2)\n\n    total = decimal1 + decimal2\n    try:\n        return int(str(answer).strip()) == total\n    except Exception:\n        return False",
+      "gold": "63",
+      "candidate": "63",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.357105016708374
+    },
+    {
+      "id": "math500_177",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 387,
+      "script": "def verify(answer):\n    from sympy import symbols, Eq, solve\n    x = symbols('x')\n    equation = Eq(x**2 + 2*x - 15, 0)\n    roots = solve(equation, x)\n    values = []\n    for r in roots:\n        value = (r**3 - 1) / (r**5 + r**4 - r**3 - r**2)\n        values.append(value)\n    max_value = max(values)\n    try:\n        return answer == max_value\n    except Exception:\n        return False",
+      "gold": "\\frac{13}{144}",
+      "candidate": "\\frac{13}{144}",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.013216018676758
+    },
+    {
+      "id": "math500_102",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 244,
+      "script": "import math\n\ndef verify(answer):\n    total_arrangements = math.factorial(8)\n    distinct_arrangements = total_arrangements // 8\n    try:\n        return int(str(answer).strip()) == distinct_arrangements\n    except Exception:\n        return False",
+      "gold": "5040",
+      "candidate": "5040",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.8586781024932861
+    },
+    {
+      "id": "math500_147",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 231,
+      "script": "def verify(answer):\n    female_students = 396\n    total_students = female_students * 9 // 4\n    teachers = total_students // 11\n    try:\n        return int(str(answer).strip()) == teachers\n    except Exception:\n        return False",
+      "gold": "81\\text{ teachers}",
+      "candidate": "81",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.4549171924591064
+    },
+    {
+      "id": "math500_194",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 171,
+      "script": "def verify(answer):\n    from math import comb\n    result = comb(8, 6)\n    try:\n        return int(str(answer).strip()) == result\n    except Exception:\n        return False",
+      "gold": "28",
+      "candidate": "28",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.0811948776245117
+    },
+    {
+      "id": "math500_153",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 183,
+      "script": "def verify(answer):\n    y = 1\n    x = (4 - 3*y) / 2\n    try:\n        return Fraction(str(answer).strip()) == Fraction(x).limit_denominator()\n    except Exception:\n        return False",
+      "gold": "\\frac12",
+      "candidate": "\\frac{1}{2}",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.3087117671966553
+    },
+    {
+      "id": "math500_184",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 338,
+      "script": "def verify(answer):\n    multiples = [i for i in range(45, 1000, 45) if 10 <= i < 100]\n    total_multiples = len([i for i in range(45, 1000, 45)])\n    probability = len(multiples) / total_multiples\n    try:\n        return Fraction(str(answer).strip()) == Fraction(probability).limit_denominator()\n    except Exception:\n        return False",
+      "gold": "\\frac{1}{11}",
+      "candidate": "\\frac{1}{11}",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.139158010482788
+    },
+    {
+      "id": "math500_196",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 290,
+      "script": "def verify(answer):\n    try:\n        op = int(str(answer).strip())\n        # Using Pythagorean theorem in triangle OAP\n        oa = 10\n        ap = 6\n        if op**2 + ap**2 == oa**2:\n            return True\n        else:\n            return False\n    except Exception:\n        return False",
+      "gold": "8",
+      "candidate": "8",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.9905750751495361
+    },
+    {
+      "id": "math500_103",
+      "outcome": "verifier_produced",
+      "classification": "false_positive",
+      "script_chars": 231,
+      "script": "def verify(answer):\n    expression = \"3*t + 4 - 6*t + 7*t - 4\"\n    simplified = \"4*t\"\n    try:\n        t = symbols('t')\n        return sympify(expression).simplify() == sympify(simplified)\n    except Exception:\n        return False",
+      "gold": "4t",
+      "candidate": "4t",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "adv_fp_count": 4,
+      "elapsed": 2.8093161582946777
+    },
+    {
+      "id": "math500_186",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 261,
+      "script": "def verify(answer):\n    x1, y1 = 1, 1\n    x2, y2 = -7, 5\n    midpoint_x = (x1 + x2) / 2\n    midpoint_y = (y1 + y2) / 2\n    product = midpoint_x * midpoint_y\n    try:\n        return float(str(answer).strip()) == product\n    except Exception:\n        return False",
+      "gold": "-9",
+      "candidate": "-9",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.1724958419799805
+    },
+    {
+      "id": "math500_137",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 251,
+      "script": "def verify(answer):\n    numerator = 1990**3 - 1000**3 - 990**3\n    denominator = 1990 * 1000 * 990\n    result = numerator / denominator\n    try:\n        return math.isclose(float(str(answer).strip()), result)\n    except Exception:\n        return False",
+      "gold": "3",
+      "candidate": "3",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.5905261039733887
+    },
+    {
+      "id": "math500_160",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 307,
+      "script": "def verify(answer):\n    x = symbols('x')\n    f = 7*x**7 - 4*x**4 + 1\n    if answer == \"even\":\n        return f.subs(x, -x) == f\n    elif answer == \"odd\":\n        return f.subs(x, -x) == -f\n    elif answer == \"neither\":\n        return f.subs(x, -x) != f and f.subs(x, -x) != -f\n    else:\n        return False",
+      "gold": "\\text{neither}",
+      "candidate": "\\text{neither}",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.3455233573913574
+    },
+    {
+      "id": "math500_145",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 141,
+      "script": "def verify(answer):\n    a = -1\n    b = 5\n    try:\n        return int(str(answer).strip()) == a + b\n    except Exception:\n        return False",
+      "gold": "4",
+      "candidate": "4",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.6409580707550049
+    },
+    {
+      "id": "math500_123",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 263,
+      "script": "def verify(answer):\n    try:\n        m, b = map(float, answer.split('+'))\n        x = symbols('x')\n        f = (2*x**2 + x - 13) / (2*x - 5)\n        f_asymptote = m*x + b\n        return limit(f - f_asymptote, x, oo) == 0\n    except Exception:\n        return False",
+      "gold": "y = x+3",
+      "candidate": "y = x + 3",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.982983350753784
+    },
+    {
+      "id": "math500_109",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 252,
+      "script": "def verify(answer):\n    from itertools import permutations\n    word = 'PAPA'\n    arrangements = set(''.join(p) for p in permutations(word))\n    try:\n        return int(str(answer).strip()) == len(arrangements)\n    except Exception:\n        return False",
+      "gold": "6",
+      "candidate": "6",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.8242011070251465
+    },
+    {
+      "id": "math500_112",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 36,
+      "script": "def verify(answer):\n    return False",
+      "gold": "\\frac{1}{3}",
+      "candidate": "\\frac{1}{3}",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.3586208820343018
+    },
+    {
+      "id": "math500_139",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 473,
+      "script": "def verify(answer):\n    try:\n        a_over_b = float(str(answer).strip())\n    except Exception:\n        return False\n\n    # ab = a - b\n    # a/b = x\n    # b/a = 1/x\n    # x + 1/x - x = a_over_b\n    # x^2 - x_over_b*x + 1 = 0\n    # x = (a_over_b +/- sqrt(a_over_b^2 - 4)) / 2\n\n    # Check if the equation holds\n    for x in [1, -1]:  # Possible values of a/b\n        if x * (1/x) == x - (1/x) and x + (1/x) - x * (1/x) == a_over_b:\n            return True\n\n    return False",
+      "gold": "2",
+      "candidate": "2",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.3167660236358643
+    },
+    {
+      "id": "math500_198",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 152,
+      "script": "def verify(answer):\n    try:\n        x = int(str(answer).strip())\n        return x < 0 and abs(4*x + 2) == 10\n    except Exception:\n        return False",
+      "gold": "-3",
+      "candidate": "-3",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.6306869983673096
+    },
+    {
+      "id": "math500_192",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 289,
+      "script": "import numpy as np\n\ndef verify(answer):\n    v = np.array([2, 3, -1])\n    w = np.array([2, -1, 0])\n    proj_w_v = (np.dot(v, w) / np.dot(w, w)) * w\n    try:\n        answer_array = np.array(answer)\n        return np.allclose(proj_w_v, answer_array)\n    except Exception:\n        return False",
+      "gold": "\\begin{pmatrix} 2/5 \\\\ -1/5 \\\\ 0 \\end{pmatrix}",
+      "candidate": "\\begin{pmatrix} \\frac{2}{5} \\\\ -\\frac{1}{5} \\\\ 0 \\end{pmatrix}",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.579578161239624
+    },
+    {
+      "id": "math500_249",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 332,
+      "script": "def verify(answer):\n    try:\n        S = int(str(answer).strip())\n    except Exception:\n        return False\n    if S <= 0:\n        return False\n    for a in [1]:  # first term\n        for r in [x/10 for x in range(1, 10)]:  # common ratio\n            if a * r == 1 and a / (1 - r) == S:\n                return True\n    return False",
+      "gold": "4",
+      "candidate": "4",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.7839508056640625
+    },
+    {
+      "id": "math500_277",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 282,
+      "script": "def verify(answer):\n    count = 0\n    for a in range(1, 11):\n        for b in range(a, 11):\n            c = 20 - 2*a\n            if c >= b and c <= a + b:\n                count += 1\n    try:\n        return int(str(answer).strip()) == count\n    except Exception:\n        return False",
+      "gold": "4",
+      "candidate": "4",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.5539231300354004
+    },
+    {
+      "id": "math500_247",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 238,
+      "script": "def verify(answer):\n    count = 0\n    for i in range(1, 101):\n        if i % 3 == 0 and i % 4 == 0 and i % 5 == 0:\n            count += 1\n    try:\n        return int(str(answer).strip()) == count\n    except Exception:\n        return False",
+      "gold": "1",
+      "candidate": "1",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.963258981704712
+    },
+    {
+      "id": "math500_219",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 595,
+      "script": "def verify(answer):\n    try:\n        M = [[int(x) for x in row.split()] for row in str(answer).strip().split('\\n')]\n    except Exception:\n        return False\n\n    if len(M) != 2 or len(M[0]) != 2:\n        return False\n\n    for a in range(2):\n        for b in range(2):\n            for c in range(2):\n                for d in range(2):\n                    result = [[M[0][0]*a + M[0][1]*c, M[0][0]*b + M[0][1]*d],\n                              [M[1][0]*a + M[1][1]*c, M[1][0]*b + M[1][1]*d]]\n                    if result == [[c, d], [a, b]]:\n                        return True\n    return False",
+      "gold": "\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}",
+      "candidate": "\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.7137291431427
+    },
+    {
+      "id": "math500_248",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 673,
+      "script": "import numpy as np\n\ndef verify(answer):\n    # Define the given vectors\n    v1 = np.array([-4, 7])\n    v2 = np.array([1, 8])\n    v3 = np.array([-1, 3])\n\n    # Calculate the rotation matrix\n    theta = np.arccos(np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2)))\n    rotation_matrix = np.array([[np.cos(theta), -np.sin(theta)], [np.sin(theta), np.cos(theta)]])\n\n    # Apply the rotation to v3\n    rotated_v3 = np.dot(rotation_matrix, v3)\n\n    # Check if the answer matches the rotated vector\n    try:\n        answer = np.array([int(x) for x in str(answer).strip().split(',')])\n        return np.allclose(rotated_v3, answer)\n    except Exception:\n        return False",
+      "gold": "\\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}",
+      "candidate": "\\begin{pmatrix} -\\frac{25}{\\sqrt{17}} \\\\ -\\frac{5}{\\sqrt{17}} \\end{pmatrix}",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.161473035812378
+    },
+    {
+      "id": "math500_289",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 292,
+      "script": "def verify(answer):\n    total_wins = 4 + 3 + 2 + 2 + 2\n    total_games = 5 * 6 // 2  # each player plays 5 games, but we count each game twice\n    monica_wins = total_games - total_wins\n    try:\n        return int(str(answer).strip()) == monica_wins\n    except Exception:\n        return False",
+      "gold": "2",
+      "candidate": "2",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.8159618377685547
+    },
+    {
+      "id": "math500_210",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 288,
+      "script": "def verify(answer):\n    try:\n        answer = float(answer)\n    except Exception:\n        return False\n\n    sum = 0\n    for k in range(2, 10000):\n        term = (k - 3) / (k * (k**2 - 1))\n        sum += term\n        if abs(sum - answer) < 0.00001:\n            return True\n    return False",
+      "gold": "0",
+      "candidate": "\\frac{1}{2}",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 5.600959062576294
+    },
+    {
+      "id": "math500_232",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 472,
+      "script": "def verify(answer):\n    # Given values\n    flagpole_height = 20\n    woman_height = 6\n    woman_shadow_length = 9\n\n    # Calculate the ratio of height to shadow length for the woman\n    ratio = woman_height / woman_shadow_length\n\n    # Calculate the expected shadow length for the flagpole\n    expected_shadow_length = flagpole_height / ratio\n\n    try:\n        return math.isclose(int(str(answer).strip()), expected_shadow_length)\n    except Exception:\n        return False",
+      "gold": "30",
+      "candidate": "30",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.506582021713257
+    },
+    {
+      "id": "math500_237",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 603,
+      "script": "from itertools import combinations\n\ndef verify(answer):\n    def get_factors(n):\n        factors = set()\n        for i in range(1, int(n**0.5) + 1):\n            if n % i == 0:\n                factors.add(i)\n                factors.add(n // i)\n        return factors\n\n    factors = get_factors(84)\n    min_sum = float('inf')\n    for r in range(1, len(factors) + 1):\n        for combo in combinations(factors, r):\n            if math.prod(combo) == 84:\n                min_sum = min(min_sum, sum(combo))\n    try:\n        return int(str(answer).strip()) == min_sum\n    except Exception:\n        return False",
+      "gold": "14",
+      "candidate": "23",
+      "solver_correct": false,
+      "gold_verdict": true,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.6225950717926025
+    },
+    {
+      "id": "math500_223",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 151,
+      "script": "def verify(answer):\n    try:\n        x = int(str(answer).strip())\n        return 5*x - 3*x + 4*(1-4*x) == 32\n    except Exception:\n        return False",
+      "gold": "-2",
+      "candidate": "-2",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.4212090969085693
+    },
+    {
+      "id": "math500_233",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 492,
+      "script": "def verify(answer):\n    min_area = 500\n    min_perimeter = float('inf')\n    correct_width = None\n    for length in range(1, 1000):\n        width = length + 5\n        area = length * width\n        if area >= min_area:\n            perimeter = 2 * (length + width)\n            if perimeter < min_perimeter:\n                min_perimeter = perimeter\n                correct_width = width\n    try:\n        return int(str(answer).strip()) == correct_width\n    except Exception:\n        return False",
+      "gold": "25 \\text{ ft}",
+      "candidate": "25",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.2375919818878174
+    },
+    {
+      "id": "math500_238",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 386,
+      "script": "def verify(answer):\n    for A in range(1, 25):\n        for B in range(1, 25):\n            for C in range(1, 25):\n                if A * 2 * B == 24 and -5 * 2 * B + A * C == -19 and -5 * C == -35:\n                    try:\n                        return int(str(answer).strip()) == A * B - 3 * C\n                    except Exception:\n                        return False\n    return False",
+      "gold": "-9",
+      "candidate": "-9",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.3868961334228516
+    },
+    {
+      "id": "math500_218",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 258,
+      "script": "def verify(answer):\n    count = 0\n    for enter in range(1, 13):\n        for leave in range(1, 13):\n            if enter != leave:\n                count += 1\n    try:\n        return int(str(answer).strip()) == count\n    except Exception:\n        return False",
+      "gold": "132",
+      "candidate": "132",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.7019388675689697
+    },
+    {
+      "id": "math500_267",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 303,
+      "script": "def verify(answer):\n    for correct in range(81):\n        incorrect = 80 - correct\n        score = correct * 5 - incorrect * 2\n        if score == 232:\n            try:\n                return int(str(answer).strip()) == correct\n            except Exception:\n                return False\n    return False",
+      "gold": "56",
+      "candidate": "56",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.7348759174346924
+    },
+    {
+      "id": "math500_287",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 354,
+      "script": "def verify(answer):\n    from fractions import Fraction\n    # Original line equation: x/4 - y/5 = 1\n    # Multiply through by 20 to clear fractions: 5x - 4y = 20\n    # Slope of original line is 5/4\n    # Slope of perpendicular line is -4/5\n    try:\n        return Fraction(str(answer).strip()) == Fraction(-4, 5)\n    except Exception:\n        return False",
+      "gold": "-\\frac{4}{5}",
+      "candidate": "-\\frac{4}{5}",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.9493441581726074
+    },
+    {
+      "id": "math500_268",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 176,
+      "script": "def verify(answer):\n    try:\n        x = int(str(answer).strip())\n        angle_sum = (5*x - 8) + 143\n        return angle_sum == 180\n    except Exception:\n        return False",
+      "gold": "9",
+      "candidate": "9",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.7596168518066406
+    },
+    {
+      "id": "math500_274",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 283,
+      "script": "def verify(answer):\n    valid = []\n    for i in range(10, 100):\n        a, b = i // 10, i % 10\n        if a == 4 * b or b == 4 * a:\n            valid.append(i)\n    total = sum(valid)\n    try:\n        return int(str(answer).strip()) == total\n    except Exception:\n        return False",
+      "gold": "165",
+      "candidate": "165",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.458867073059082
+    },
+    {
+      "id": "math500_251",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 154,
+      "script": "def verify(answer):\n    y = 34\n    x = (4 - 3*y) / 2\n    try:\n        return int(str(answer).strip()) == int(x)\n    except Exception:\n        return False",
+      "gold": "-49",
+      "candidate": "-49",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.1697139739990234
+    },
+    {
+      "id": "math500_213",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 266,
+      "script": "def verify(answer):\n    count = 0\n    i = 1\n    while True:\n        sqrt_i = math.sqrt(i)\n        if sqrt_i > 20:\n            break\n        count += 1\n        i += 1\n    try:\n        return int(str(answer).strip()) == count\n    except Exception:\n        return False",
+      "gold": "400",
+      "candidate": "400",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.578650951385498
+    },
+    {
+      "id": "math500_205",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 232,
+      "script": "def verify(answer):\n    try:\n        x = int(str(answer).strip().split('/')[0])\n        z = int(str(answer).strip().split('/')[1])\n        y = (5 * z) / 15\n        return (3 * x) == (8 * y)\n    except Exception:\n        return False",
+      "gold": "8",
+      "candidate": "8",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.5880370140075684
+    },
+    {
+      "id": "math500_282",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 726,
+      "script": "import numpy as np\n\ndef verify(answer):\n    # Define the given vectors\n    v1 = np.array([2, 1])\n    v2 = np.array([3, 0])\n    v3 = np.array([5, 4])\n    v4 = np.array([1, 2])\n\n    # Create a matrix with v1 and v2 as columns\n    A = np.column_stack((v1, v2))\n\n    # Create a matrix with v3 and v4 as columns\n    B = np.column_stack((v3, v4))\n\n    # Calculate the determinant of M using the property that M * A = B\n    # det(M) * det(A) = det(B)\n    det_A = np.linalg.det(A)\n    det_B = np.linalg.det(B)\n\n    # Check if det(A) is zero to avoid division by zero\n    if det_A == 0:\n        return False\n\n    det_M = det_B / det_A\n\n    try:\n        return np.isclose(float(answer), det_M)\n    except Exception:\n        return False",
+      "gold": "-2",
+      "candidate": "-2",
+      "solver_correct": true,
+      "gold_verdict": null,
+      "candidate_verdict": null,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.853492021560669
+    },
+    {
+      "id": "math500_291",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 240,
+      "script": "def verify(answer):\n    count = 0\n    for n in range(10):\n        num = 10*6 + n\n        if n != 0 and num % n == 0:\n            count += 1\n    try:\n        return int(str(answer).strip()) == count\n    except Exception:\n        return False",
+      "gold": "6",
+      "candidate": "6",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.7319517135620117
+    },
+    {
+      "id": "math500_285",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 1071,
+      "script": "def verify(answer):\n    try:\n        area = float(answer)\n    except Exception:\n        return False\n\n    # Check all possible integer sides and angles\n    for a in range(1, 100):\n        for b in range(1, 100):\n            for c in range(1, 100):\n                for B in range(1, 180):\n                    for C in range(1, 180):\n                        A = 180 - B - C\n                        if A <= 0:\n                            continue\n                        # Law of sines\n                        if a / sin(pi*A/180) != b / sin(pi*B/180) != c / sin(pi*C/180):\n                            continue\n                        # Check equation\n                        if (b * sin(pi*C/180)) * (b * cos(pi*C/180) + c * cos(pi*B/180)) == 42:\n                            # Calculate area using Heron's formula\n                            s = (a + b + c) / 2\n                            calculated_area = sqrt(s * (s - a) * (s - b) * (s - c))\n                            if abs(calculated_area - area) < 1e-6:\n                                return True\n    return False",
+      "gold": "21",
+      "candidate": "21",
+      "solver_correct": true,
+      "gold_verdict": null,
+      "candidate_verdict": null,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 63.308127880096436
+    },
+    {
+      "id": "math500_258",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 292,
+      "script": "def verify(answer):\n    original_area = 3491 * 3491\n    new_length = 3491 - 60\n    new_width = 3491 + 60\n    new_area = new_length * new_width\n    area_change = new_area - original_area\n    try:\n        return int(str(answer).strip()) == area_change\n    except Exception:\n        return False",
+      "gold": "3600",
+      "candidate": "-3600",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.158064842224121
+    },
+    {
+      "id": "math500_240",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 161,
+      "script": "def verify(answer):\n    try:\n        K = int(str(answer).strip())\n        area = 0.5 * 8 * K\n        return area == 80\n    except Exception:\n        return False",
+      "gold": "10",
+      "candidate": "10",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.441509246826172
+    },
+    {
+      "id": "math500_244",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 395,
+      "script": "import math\n\ndef verify(answer):\n    try:\n        answer = float(answer)\n    except Exception:\n        return False\n\n    min_val = float('inf')\n    for x in [1.0001 + i * 0.0001 for i in range(int((100 - 1.0001) / 0.0001))]:\n        if x > 1:\n            val = 2 * math.log10(x) - math.log(1/100, x)\n            min_val = min(min_val, val)\n\n    return math.isclose(answer, min_val, rel_tol=1e-5)",
+      "gold": "4",
+      "candidate": "4",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 4.21474289894104
+    },
+    {
+      "id": "math500_217",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 774,
+      "script": "def verify(answer):\n    count = 0\n    for math_books in range(9):\n        for history_books in range(9 - math_books):\n            physics_books = 8 - math_books - history_books\n            if physics_books < 0:\n                continue\n            for p in itertools.product(['M', 'H', 'P'], repeat=8):\n                if p.count('M') == math_books and p.count('H') == history_books and p.count('P') == physics_books:\n                    valid = True\n                    for i in range(7):\n                        if p[i] == p[i+1]:\n                            valid = False\n                            break\n                    if valid:\n                        count += 1\n    try:\n        return int(str(answer).strip()) == count\n    except Exception:\n        return False",
+      "gold": "384",
+      "candidate": "18",
+      "solver_correct": false,
+      "gold_verdict": true,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.490022897720337
+    },
+    {
+      "id": "math500_211",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 368,
+      "script": "def verify(answer):\n    for a in range(1, 30):\n        for b in range(1, 30):\n            for c in range(1, 30):\n                for d in range(1, 30):\n                    if a + b == 26 and (b + c) / 2 == 12 and c + d == 28 and a + c == 22:\n                        if a + b + c + d == int(str(answer).strip()):\n                            return True\n    return False",
+      "gold": "54",
+      "candidate": "54",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.9065167903900146
+    },
+    {
+      "id": "math500_259",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 235,
+      "script": "def verify(answer):\n    def op_and(x):\n        return 7 - x\n\n    def op_amp(x):\n        return x - 7\n\n    result = op_amp(op_and(15))\n    try:\n        return int(str(answer).strip()) == result\n    except Exception:\n        return False",
+      "gold": "-15",
+      "candidate": "-15",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.7944419384002686
+    },
+    {
+      "id": "math500_283",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 151,
+      "script": "def verify(answer):\n    try:\n        y = int(str(answer).strip())\n        return (y + 6) + (y - 12) == y * 2\n    except Exception:\n        return False",
+      "gold": "9",
+      "candidate": "9",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.114942789077759
+    },
+    {
+      "id": "math500_356",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 92,
+      "script": "def verify(answer):\n    try:\n        return False\n    except Exception:\n        return False",
+      "gold": "84",
+      "candidate": "50 + 20\\sqrt{3}",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.4843299388885498
+    },
+    {
+      "id": "math500_377",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 1245,
+      "script": "def verify(answer):\n    from sympy import symbols, Eq, solve\n    x = symbols('x')\n    a, b = symbols('a b', integer=True)\n    eq = Eq(x, (5/(3**(1/3)) + 2**(1/3)) + 1/(3**(1/3) - 2**(1/3)))\n    eq = Eq(x, (5*(3**(1/3) - 2**(1/3)) + (3**(1/3) + 2**(1/3)))/((3**(1/3))**2 - (2**(1/3))**2))\n    eq = Eq(x, (5*(3**(1/3) - 2**(1/3)) + (3**(1/3) + 2**(1/3)))/(3**(2/3) - 2**(2/3)))\n    eq = Eq(x, (5*(3**(1/3) - 2**(1/3)) + (3**(1/3) + 2**(1/3)))/((3**(1/3) - 2**(1/3))*(3**(1/3)**2 + 3**(1/3)*2**(1/3) + 2**(1/3)**2)))\n    eq = Eq(x, (5*(3**(1/3) - 2**(1/3)) + (3**(1/3) + 2**(1/3)))/((3**(1/3) - 2**(1/3))*(3**(1/3)**2 + 3**(1/3)*2**(1/3) + 2**(1/3)**2)))\n    eq = Eq(x, (5 + (3**(1/3) + 2**(1/3))/(3**(1/3) - 2**(1/3)))/((3**(1/3)**2 + 3**(1/3)*2**(1/3) + 2**(1/3)**2)))\n    eq = Eq(x, (5 + (3**(1/3) + 2**(1/3))/(3**(1/3) - 2**(1/3)))/(3**(2/3) + 3**(1/3)*2**(1/3) + 2**(2/3)))\n    x_val = (5*(3**(1/3) - 2**(1/3)) + (3**(1/3) + 2**(1/3)))/(3**(2/3) - 2**(2/3))\n    x_val = (5 + (3**(1/3) + 2**(1/3))/(3**(1/3) - 2**(1/3)))/(3**(2/3) + 3**(1/3)*2**(1/3) + 2**(2/3)))\n    x_val = (3**(1/3) + 2**(1/3))/2\n    try:\n        a_val = 3\n        b_val = 2\n        return int(str(answer).strip()) == a_val + b_val\n    except Exception:\n        return False",
+      "gold": "13",
+      "candidate": "117",
+      "solver_correct": false,
+      "gold_verdict": null,
+      "candidate_verdict": null,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 11.033442974090576
+    },
+    {
+      "id": "math500_311",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 430,
+      "script": "import math\n\ndef verify(answer):\n    try:\n        b_values = [float(x) for x in str(answer).strip().split(',')]\n    except Exception:\n        return False\n\n    valid_b = []\n    for b in b_values:\n        distance = math.sqrt((4-1)**2 + (b-2)**2)\n        if math.isclose(distance, 5):\n            valid_b.append(b)\n\n    return len(valid_b) == len(b_values) and all(math.isclose(math.sqrt((4-1)**2 + (b-2)**2), 5) for b in b_values)",
+      "gold": "6, -2",
+      "candidate": "6, -2",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.195401906967163
+    },
+    {
+      "id": "math500_390",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 407,
+      "script": "def verify(answer):\n    for length in range(1, 100):\n        for width in range(1, 100):\n            surface_area = 2 * (length * 3 + width * 3 + length * width)\n            if surface_area == 52:\n                volume = length * width * 3\n                try:\n                    return int(str(answer).strip()) == volume\n                except Exception:\n                    return False\n    return False",
+      "gold": "24",
+      "candidate": "24",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.160932779312134
+    },
+    {
+      "id": "math500_312",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 329,
+      "script": "def verify(answer):\n    from sympy import symbols, Eq, solve\n    x = symbols('x')\n    equation = Eq(x**3 - 20*x**2 + 18*x - 7, 0)\n    roots = solve(equation, x)\n    r, s, t = roots\n    result = r**2*s**2 + s**2*t**2 + t**2*r**2\n    try:\n        return int(str(answer).strip()) == result\n    except Exception:\n        return False",
+      "gold": "44",
+      "candidate": "44",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.184410810470581
+    },
+    {
+      "id": "math500_325",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 356,
+      "script": "def verify(answer):\n    # Calculate the x-coordinate of the vertex\n    a = -2\n    b = -12\n    m = -b / (2 * a)\n    \n    # Calculate the y-coordinate of the vertex\n    n = a * m**2 + b * m - 15\n    \n    # Check if the sum of m and n matches the answer\n    try:\n        return int(str(answer).strip()) == int(m + n)\n    except Exception:\n        return False",
+      "gold": "0",
+      "candidate": "0",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.5396971702575684
+    },
+    {
+      "id": "math500_301",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 454,
+      "script": "def verify(answer):\n    def is_terminating(n):\n        while n % 2 == 0:\n            n = n // 2\n        while n % 5 == 0:\n            n = n // 5\n        return n == 1\n\n    count = 0\n    x = 1\n    while True:\n        if is_terminating(x**2 + x):\n            count += 1\n            if count == 2:\n                try:\n                    return int(str(answer).strip()) == x\n                except Exception:\n                    return False\n        x += 1",
+      "gold": "4",
+      "candidate": "4",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.265298843383789
+    },
+    {
+      "id": "math500_354",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 727,
+      "script": "import math\n\ndef verify(answer):\n    try:\n        angles = [float(x) for x in str(answer).strip().split(',')]\n    except Exception:\n        return False\n\n    for angle in angles:\n        if angle < 0 or angle > 180:\n            return False\n        c = math.cos(math.radians(angle))\n        for a2 in [i/100 for i in range(1, 100)]:\n            for b2 in [i/100 for i in range(1, 100)]:\n                if a2 + b2 > 1:\n                    continue\n                a = math.sqrt(a2)\n                b = math.sqrt(b2)\n                if math.isclose(a**4 + b**4 + (a**2 + b**2 - 2*a*b*c)**2, \n                                2*(a**2 + b**2 - 2*a*b*c)*(a**2 + b**2), rel_tol=1e-5):\n                    return True\n    return False",
+      "gold": "45^\\circ, 135^\\circ",
+      "candidate": "90",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.2828028202056885
+    },
+    {
+      "id": "math500_389",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 416,
+      "script": "def verify(answer):\n    for x in range(-10, 11):\n        for y in range(-10, 11):\n            for z in range(-10, 11):\n                if x*y*z == 4 and x**3 + y**3 + z**3 == 4 and x*y**2 + x**2*y + x*z**2 + x**2*z + y*z**2 + y**2*z == 12:\n                    if x*y + y*z + z*x == int(str(answer).strip()):\n                        return True\n    try:\n        return False\n    except Exception:\n        return False",
+      "gold": "6",
+      "candidate": "6",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.525169849395752
+    },
+    {
+      "id": "math500_342",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 266,
+      "script": "def verify(answer):\n    try:\n        x, y = map(int, answer.strip(\"()\").split(\",\"))\n    except Exception:\n        return False\n\n    # Translation\n    new_x, new_y = 5, -2 + 3\n    # Dilation\n    new_x, new_y = new_x * 2, new_y * 2\n\n    return (x, y) == (new_x, new_y)",
+      "gold": "(10,2)",
+      "candidate": "(10, 2)",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.057101249694824
+    },
+    {
+      "id": "math500_379",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 264,
+      "script": "def verify(answer):\n    try:\n        r = float(answer)\n        AB = 15\n        AC = 41\n        BC = 52\n        s = (AB + AC + BC) / 2\n        area = (s*(s-AB)*(s-AC)*(s-BC)) ** 0.5\n        return math.isclose(r, area / s)\n    except Exception:\n        return False",
+      "gold": "\\frac{13}{3}",
+      "candidate": "\\frac{35}{9}",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.8419849872589111
+    },
+    {
+      "id": "math500_324",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 365,
+      "script": "def verify(answer):\n    for amy in range(1, 100):\n        ben = 3 * amy\n        carl = 3 * ben\n        debbie = (2/3) * carl\n        if amy * ben * carl * debbie == 162:\n            total = amy + ben + carl + debbie\n            try:\n                return int(str(answer).strip()) == total\n            except Exception:\n                return False\n    return False",
+      "gold": "19",
+      "candidate": "19",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.684659004211426
+    },
+    {
+      "id": "math500_321",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 269,
+      "script": "def verify(answer):\n    try:\n        purchase_price = int(str(answer).strip())\n        loan_amount = purchase_price * 0.8\n        savings_amount = purchase_price - loan_amount\n        return math.isclose(savings_amount, 49400)\n    except Exception:\n        return False",
+      "gold": "247000",
+      "candidate": "247000",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.0600850582122803
+    },
+    {
+      "id": "math500_337",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 265,
+      "script": "def verify(answer):\n    composite_numbers = [4, 6, 8, 9, 10]\n    try:\n        num = int(str(answer).strip())\n        for n in composite_numbers:\n            if num % n != 0:\n                return False\n        return True\n    except Exception:\n        return False",
+      "gold": "360",
+      "candidate": "360",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.116454839706421
+    },
+    {
+      "id": "math500_355",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 550,
+      "script": "import math\n\ndef verify(answer):\n    # Given values\n    QR = 8\n    PR = 12\n    angle_PRQ = 120  # degrees\n    angle_RPS = 90  # degrees\n\n    # Calculate PQ using Law of Cosines\n    PQ = math.sqrt(PR**2 + QR**2 - 2*PR*QR*math.cos(math.radians(angle_PRQ)))\n\n    # Calculate PS using Pythagorean theorem\n    PS = math.sqrt(PR**2 + (QR + PQ)**2)\n\n    # Calculate area of triangle QPS\n    area_QPS = 0.5 * QR * PR * math.sin(math.radians(angle_PRQ))\n\n    try:\n        return math.isclose(float(answer), area_QPS)\n    except Exception:\n        return False",
+      "gold": "96\\sqrt{3}",
+      "candidate": "24\\sqrt{10}",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.3534798622131348
+    },
+    {
+      "id": "math500_309",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 527,
+      "script": "import numpy as np\n\ndef verify(answer):\n    a_cross_b = np.array([6, -7, 3])\n    a_cross_c = np.array([4, 7, 2])\n    b_cross_c = np.array([1, -7, 18])\n    \n    # Directly compute c_cross_(3a-2b) using properties of cross product\n    c_cross_3a = 3 * a_cross_c\n    c_cross_2b = -2 * b_cross_c  # Note: b_cross_c = -c_cross_b\n    \n    c_cross_result = c_cross_3a + c_cross_2b\n    \n    try:\n        answer_array = np.array(answer)\n        return np.allclose(answer_array, c_cross_result)\n    except Exception:\n        return False",
+      "gold": "\\begin{pmatrix} -10 \\\\ -35 \\\\ 30 \\end{pmatrix}",
+      "candidate": "\\begin{pmatrix} -14 \\\\ -7 \\\\ -42 \\end{pmatrix}",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.8828768730163574
+    },
+    {
+      "id": "math500_349",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 329,
+      "script": "def verify(answer):\n    from sympy import symbols, Eq, solve\n    x = symbols('x')\n    equation = Eq(2*x**2 + 13*x + 6, 0)\n    solutions = solve(equation, x)\n    product_of_squares = solutions[0]**2 * solutions[1]**2\n    try:\n        return int(str(answer).strip()) == product_of_squares\n    except Exception:\n        return False",
+      "gold": "9",
+      "candidate": "9",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.768578052520752
+    },
+    {
+      "id": "math500_345",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 224,
+      "script": "def verify(answer):\n    from fractions import Fraction\n    try:\n        answer = Fraction(answer)\n    except Exception:\n        return False\n    decimal = 0.7266666666666666\n    return abs(float(answer) - decimal) < 0.000001",
+      "gold": "\\frac{109}{150}",
+      "candidate": "\\frac{109}{150}",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.7661771774291992
+    },
+    {
+      "id": "math500_317",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 142,
+      "script": "def verify(answer):\n    try:\n        ans = int(str(answer).strip())\n        return ans * ans == 192\n    except Exception:\n        return False",
+      "gold": "8\\sqrt{3}",
+      "candidate": "8\\sqrt{3}",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.588277816772461
+    },
+    {
+      "id": "math500_343",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 532,
+      "script": "import math\n\ndef verify(answer):\n    for a in range(1, 10000):\n        for b in range(1, 10000):\n            try:\n                log8a = math.log(a, 8)\n                log4b2 = math.log(b**2, 4)\n                log8b = math.log(b, 8)\n                log4a2 = math.log(a**2, 4)\n                if math.isclose(log8a + log4b2, 5) and math.isclose(log8b + log4a2, 7):\n                    if a * b == int(str(answer).strip()):\n                        return True\n            except ValueError:\n                continue\n    return False",
+      "gold": "512",
+      "candidate": "512",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 42.39644193649292
+    },
+    {
+      "id": "math500_392",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 598,
+      "script": "def verify(answer):\n    try:\n        c = int(str(answer).strip())\n    except Exception:\n        return False\n\n    # Using Vieta's formulas, the product of all roots is c\n    # Since two of the roots have a product of 30, the third root must be c/30\n    for r in range(1, 1000):  # assuming the third root is an integer\n        roots = [r, 30/r, c/(r * 30/r)]  # the third root is c/30\n        if roots[0] * roots[1] == 30 and \\\n           roots[0] + roots[1] + roots[2] == 10 and \\\n           roots[0]*roots[1] + roots[1]*roots[2] + roots[2]*roots[0] == 55:\n            return True\n    return False",
+      "gold": "150",
+      "candidate": "0",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.3782870769500732
+    },
+    {
+      "id": "math500_303",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 197,
+      "script": "def verify(answer):\n    count = 0\n    for i in range(1, 101):\n        count += str(i).count('6')\n    try:\n        return int(str(answer).strip()) == count\n    except Exception:\n        return False",
+      "gold": "20",
+      "candidate": "20",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.832367181777954
+    },
+    {
+      "id": "math500_360",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 502,
+      "script": "def verify(answer):\n    for a in range(1, 1000):\n        for r in range(2, 100):  # common ratio\n            b = a * r\n            c = b * r\n            if b - a == int(math.sqrt(b - a)) ** 2:\n                if math.log(a, 6) + math.log(b, 6) + math.log(c, 6) == 6:\n                    if a < b < c:\n                        try:\n                            return a + b + c == int(str(answer).strip())\n                        except Exception:\n                            return False\n    return False",
+      "gold": "111",
+      "candidate": "108",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.1266701221466064
+    },
+    {
+      "id": "math500_347",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 204,
+      "script": "def verify(answer):\n    count = 0\n    for p in itertools.permutations(range(10), 5):\n        count += 1\n    try:\n        return int(str(answer).strip()) == count\n    except Exception:\n        return False",
+      "gold": "30,\\!240",
+      "candidate": "30240",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 1.8809452056884766
+    },
+    {
+      "id": "math500_378",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 543,
+      "script": "def verify(answer):\n    from sympy import symbols, Eq, solve\n    a, b, c = symbols('a b c')\n    eq1 = Eq(a * 7 + b * (7 ** 0.5) + c, 22)\n    eq2 = Eq(a * 11 + b * (11 ** 0.5) + c, 30)\n    solution = solve((eq1, eq2), (a, b, c))\n    if solution:\n        a_val, b_val = solution[a], solution[b]\n        c_val = 22 - a_val * 7 - b_val * (7 ** 0.5)\n        p_sqrt_17 = a_val * 17 + b_val * (17 ** 0.5) + c_val\n        try:\n            return abs(float(answer) - p_sqrt_17) < 1e-6\n        except Exception:\n            return False\n    return False",
+      "gold": "42",
+      "candidate": "42",
+      "solver_correct": true,
+      "gold_verdict": null,
+      "candidate_verdict": null,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.694293975830078
+    },
+    {
+      "id": "math500_335",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 444,
+      "script": "import math\n\ndef verify(answer):\n    min_val = float('inf')\n    for x in [i/1000 for i in range(-1000, 1001)]:\n        if -1 <= x <= 1:\n            try:\n                val = math.sqrt(58 - 42*x) + math.sqrt(149 - 140 * math.sqrt(1 - x**2))\n                min_val = min(min_val, val)\n            except ValueError:\n                continue\n    try:\n        return math.isclose(float(answer), min_val)\n    except Exception:\n        return False",
+      "gold": "\\sqrt{109}",
+      "candidate": "7",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.0269241333007812
+    },
+    {
+      "id": "math500_357",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 348,
+      "script": "from sympy import symbols, Eq, solve\n\ndef verify(answer):\n    t = symbols('t')\n    a, b = symbols('a b')\n    eq = Eq((3*t**2 + 5*t + a)*(4*t**2 + b*t - 2), 12*t**4 + 26*t**3 - 8*t**2 - 16*t + 6)\n    solution = solve(eq, (a, b))\n    try:\n        return int(str(answer).strip()) == solution[a] + solution[b]\n    except Exception:\n        return False",
+      "gold": "-1",
+      "candidate": "-1",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.5742170810699463
+    },
+    {
+      "id": "math500_373",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 257,
+      "script": "def verify(answer):\n    min_slope = float('inf')\n    for b in range(1, 10):\n        slope = (365 - b) / 4\n        min_slope = min(min_slope, slope)\n    try:\n        return int(str(answer).strip()) == int(min_slope)\n    except Exception:\n        return False",
+      "gold": "89",
+      "candidate": "89",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.5005528926849365
+    },
+    {
+      "id": "math500_319",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 358,
+      "script": "def verify(answer):\n    def prime_factorization(n, p):\n        count = 0\n        i = p\n        while i <= n:\n            count += n // i\n            i *= p\n        return count\n\n    n = 0\n    while 3 ** (n + 1) <= 200 and 200 // 3 ** (n + 1) > 0:\n        n += 1\n    try:\n        return int(str(answer).strip()) == n\n    except Exception:\n        return False",
+      "gold": "97",
+      "candidate": "97",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.495776891708374
+    },
+    {
+      "id": "math500_382",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 515,
+      "script": "def verify(answer):\n    try:\n        target = int(str(answer).strip())\n    except Exception:\n        return False\n\n    min_val = float('inf')\n    for a in [x/1000 for x in range(1, 1000)]:\n        for b in [x/1000 for x in range(1, 1000)]:\n            for c in [x/1000 for x in range(1, 1000)]:\n                d = 1 - a - b - c\n                if d > 0 and a + b + c + d == 1:\n                    val = 1/a + 1/b + 4/c + 16/d\n                    min_val = min(min_val, val)\n\n    return abs(min_val - target) < 1e-3",
+      "gold": "64",
+      "candidate": "36",
+      "solver_correct": false,
+      "gold_verdict": null,
+      "candidate_verdict": null,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 64.82059597969055
+    },
+    {
+      "id": "math500_407",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 621,
+      "script": "def verify(answer):\n    try:\n        a, b, k = int(str(answer).strip()) - 2 * [0], 0, 0\n        for a_test in range(-100, 101):\n            for b_test in range(-100, 101):\n                for k_test in range(-100, 101):\n                    if (2 + k_test * 1 == 4 and \n                        -1 + k_test * 2 == a_test and \n                        3 + k_test * 1 == b_test and \n                        k_test * 2 * 1 + k_test * 1 * 2 + 2 * 2 == 0):\n                        if a_test + b_test + k_test == int(str(answer).strip()):\n                            return True\n    except Exception:\n        pass\n    return False",
+      "gold": "-3",
+      "candidate": "-3",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 4.358662366867065
+    },
+    {
+      "id": "math500_497",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 624,
+      "script": "def verify(answer):\n    try:\n        answer = float(answer)\n    except Exception:\n        return False\n\n    # Given data\n    total_males = 0\n    males_listen = 0\n    females_listen = 58\n    females_dont_listen = 0\n    total_females = 96\n    total_dont_listen = 64\n    total_surveyed = 200\n\n    # Calculate total males\n    total_males = total_surveyed - total_females\n\n    # Calculate males who listen\n    males_listen = total_surveyed - total_dont_listen - females_listen\n\n    # Calculate percentage of males who listen\n    percentage = (males_listen / total_males) * 100\n\n    return round(percentage, 2) == round(answer, 2)",
+      "gold": "75\\%",
+      "candidate": "32",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.1223039627075195
+    },
+    {
+      "id": "math500_433",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 663,
+      "script": "import math\n\ndef verify(answer):\n    # Directly compute area of two disks\n    area_two_disks = 2 * math.pi * (1 ** 2)\n    \n    # Subtract overlap area\n    overlap_area = 2 * (math.pi / 2 - 1 / 2)\n    area_S = area_two_disks - overlap_area\n    \n    try:\n        # Check if answer matches area_S in terms of pi\n        answer_str = str(answer).strip()\n        if '^' in answer_str or '**' in answer_str:\n            return False\n        answer_parts = answer_str.split('*')\n        if len(answer_parts) != 2 or answer_parts[0] != '2' or answer_parts[1].strip() != 'sqrt(3)*pi':\n            return False\n        return True\n    except Exception:\n        return False",
+      "gold": "3\\pi-\\frac{\\sqrt{3}}{2}",
+      "candidate": "\\frac{4\\pi}{3} + \\frac{\\sqrt{3}}{2}",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.9195609092712402
+    },
+    {
+      "id": "math500_461",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 372,
+      "script": "def verify(answer):\n    principal = 10000\n    rate1 = 0.04\n    rate2 = 0.05\n    periods = 2\n    time1 = 0.5\n    time2 = 0.5\n    amount1 = principal * (1 + rate1/periods)**(periods*time1)\n    amount2 = amount1 * (1 + rate2/periods)**(periods*time2)\n    try:\n        return round(float(str(answer).strip()), 2) == round(amount2, 2)\n    except Exception:\n        return False",
+      "gold": "10455",
+      "candidate": "10455",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 123.1140570640564
+    },
+    {
+      "id": "math500_480",
+      "outcome": "verifier_produced",
+      "classification": "false_positive",
+      "script_chars": 137,
+      "script": "def verify(answer):\n    try:\n        x = float(answer)\n        return (x-3)**2 - (x-8)**2 >= 0\n    except Exception:\n        return False",
+      "gold": "\\frac{11}{2}",
+      "candidate": "\\frac{11}{2}",
+      "solver_correct": true,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "adv_fp_count": 2,
+      "elapsed": 3.3632349967956543
+    }
+  ]
+}

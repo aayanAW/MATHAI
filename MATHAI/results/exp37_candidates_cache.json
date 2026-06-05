@@ -1,0 +1,1298 @@
+{
+  "math500_0": {
+    "candidate": "120",
+    "correct": true
+  },
+  "math500_2": {
+    "candidate": "10",
+    "correct": true
+  },
+  "math500_3": {
+    "candidate": "9",
+    "correct": true
+  },
+  "math500_5": {
+    "candidate": "10",
+    "correct": true
+  },
+  "math500_7": {
+    "candidate": "24",
+    "correct": true
+  },
+  "math500_11": {
+    "candidate": "(4, \\pi)",
+    "correct": true
+  },
+  "math500_4": {
+    "candidate": "\\frac{7}{12}",
+    "correct": true
+  },
+  "math500_6": {
+    "candidate": "\\frac{2}{3}",
+    "correct": true
+  },
+  "math500_13": {
+    "candidate": "200",
+    "correct": true
+  },
+  "math500_14": {
+    "candidate": "8",
+    "correct": true
+  },
+  "math500_16": {
+    "candidate": "0",
+    "correct": true
+  },
+  "math500_17": {
+    "candidate": "19",
+    "correct": true
+  },
+  "math500_18": {
+    "candidate": "(r + 5)^2",
+    "correct": true
+  },
+  "math500_19": {
+    "candidate": "(1, 1)",
+    "correct": true
+  },
+  "math500_20": {
+    "candidate": "9901",
+    "correct": true
+  },
+  "math500_22": {
+    "candidate": "58",
+    "correct": true
+  },
+  "math500_23": {
+    "candidate": "15",
+    "correct": true
+  },
+  "math500_24": {
+    "candidate": "6",
+    "correct": true
+  },
+  "math500_25": {
+    "candidate": "6",
+    "correct": true
+  },
+  "math500_27": {
+    "candidate": "97969",
+    "correct": true
+  },
+  "math500_28": {
+    "candidate": "-1",
+    "correct": true
+  },
+  "math500_29": {
+    "candidate": "\\frac{\\sqrt{3}}{3}",
+    "correct": false
+  },
+  "math500_31": {
+    "candidate": "33",
+    "correct": true
+  },
+  "math500_34": {
+    "candidate": "120",
+    "correct": true
+  },
+  "math500_35": {
+    "candidate": "187.5",
+    "correct": true
+  },
+  "math500_36": {
+    "candidate": "\\frac{\\sqrt{3}}{3}",
+    "correct": true
+  },
+  "math500_38": {
+    "candidate": "7",
+    "correct": true
+  },
+  "math500_39": {
+    "candidate": "\\frac{2}{3}",
+    "correct": false
+  },
+  "math500_40": {
+    "candidate": "180",
+    "correct": true
+  },
+  "math500_43": {
+    "candidate": "3",
+    "correct": true
+  },
+  "math500_46": {
+    "candidate": "2\\sqrt{2}",
+    "correct": false
+  },
+  "math500_51": {
+    "candidate": "\\frac{1}{2}",
+    "correct": true
+  },
+  "math500_53": {
+    "candidate": "\\frac{10}{11}",
+    "correct": true
+  },
+  "math500_54": {
+    "candidate": "16",
+    "correct": true
+  },
+  "math500_57": {
+    "candidate": "9",
+    "correct": false
+  },
+  "math500_58": {
+    "candidate": "20",
+    "correct": true
+  },
+  "math500_60": {
+    "candidate": "2",
+    "correct": true
+  },
+  "math500_61": {
+    "candidate": "5",
+    "correct": true
+  },
+  "math500_62": {
+    "candidate": "1540",
+    "correct": true
+  },
+  "math500_64": {
+    "candidate": "70",
+    "correct": true
+  },
+  "math500_66": {
+    "candidate": "5",
+    "correct": true
+  },
+  "math500_67": {
+    "candidate": "22.8",
+    "correct": true
+  },
+  "math500_68": {
+    "candidate": "\\frac{2}{3}",
+    "correct": true
+  },
+  "math500_69": {
+    "candidate": "C",
+    "correct": true
+  },
+  "math500_71": {
+    "candidate": "\\frac{1}{2}",
+    "correct": true
+  },
+  "math500_75": {
+    "candidate": "\\frac{8}{17}",
+    "correct": true
+  },
+  "math500_77": {
+    "candidate": "0",
+    "correct": true
+  },
+  "math500_79": {
+    "candidate": "2",
+    "correct": true
+  },
+  "math500_81": {
+    "candidate": "80",
+    "correct": false
+  },
+  "math500_82": {
+    "candidate": "0",
+    "correct": true
+  },
+  "math500_84": {
+    "candidate": "180",
+    "correct": true
+  },
+  "math500_86": {
+    "candidate": "\\frac{1}{2}",
+    "correct": true
+  },
+  "math500_88": {
+    "candidate": "24.1",
+    "correct": true
+  },
+  "math500_89": {
+    "candidate": "0",
+    "correct": true
+  },
+  "math500_90": {
+    "candidate": "-7",
+    "correct": true
+  },
+  "math500_93": {
+    "candidate": "6",
+    "correct": true
+  },
+  "math500_94": {
+    "candidate": "-\\frac{\\pi}{3}",
+    "correct": true
+  },
+  "math500_95": {
+    "candidate": "37",
+    "correct": true
+  },
+  "math500_97": {
+    "candidate": "59",
+    "correct": true
+  },
+  "math500_99": {
+    "candidate": "\\frac{2}{5}",
+    "correct": true
+  },
+  "math500_100": {
+    "candidate": "564",
+    "correct": true
+  },
+  "math500_106": {
+    "candidate": "60",
+    "correct": true
+  },
+  "math500_107": {
+    "candidate": "2",
+    "correct": true
+  },
+  "math500_108": {
+    "candidate": "7",
+    "correct": true
+  },
+  "math500_110": {
+    "candidate": "2\\pi",
+    "correct": false
+  },
+  "math500_111": {
+    "candidate": "445",
+    "correct": true
+  },
+  "math500_114": {
+    "candidate": "-3",
+    "correct": true
+  },
+  "math500_116": {
+    "candidate": "20",
+    "correct": true
+  },
+  "math500_117": {
+    "candidate": "1000000",
+    "correct": false
+  },
+  "math500_118": {
+    "candidate": "754",
+    "correct": true
+  },
+  "math500_119": {
+    "candidate": "507",
+    "correct": true
+  },
+  "math500_120": {
+    "candidate": "72",
+    "correct": true
+  },
+  "math500_121": {
+    "candidate": "6",
+    "correct": false
+  },
+  "math500_127": {
+    "candidate": "-2",
+    "correct": true
+  },
+  "math500_128": {
+    "candidate": "6435",
+    "correct": true
+  },
+  "math500_129": {
+    "candidate": "1",
+    "correct": true
+  },
+  "math500_131": {
+    "candidate": "13",
+    "correct": true
+  },
+  "math500_132": {
+    "candidate": "59",
+    "correct": true
+  },
+  "math500_133": {
+    "candidate": "40_9",
+    "correct": true
+  },
+  "math500_134": {
+    "candidate": "\\frac{7}{9}",
+    "correct": false
+  },
+  "math500_135": {
+    "candidate": "3720",
+    "correct": true
+  },
+  "math500_140": {
+    "candidate": "9\\pi",
+    "correct": false
+  },
+  "math500_141": {
+    "candidate": "5",
+    "correct": false
+  },
+  "math500_143": {
+    "candidate": "10",
+    "correct": true
+  },
+  "math500_146": {
+    "candidate": "8",
+    "correct": true
+  },
+  "math500_148": {
+    "candidate": "10",
+    "correct": true
+  },
+  "math500_149": {
+    "candidate": "12",
+    "correct": true
+  },
+  "math500_150": {
+    "candidate": "5040",
+    "correct": false
+  },
+  "math500_151": {
+    "candidate": "15",
+    "correct": true
+  },
+  "math500_154": {
+    "candidate": "4004",
+    "correct": false
+  },
+  "math500_155": {
+    "candidate": "75",
+    "correct": true
+  },
+  "math500_156": {
+    "candidate": "11",
+    "correct": true
+  },
+  "math500_158": {
+    "candidate": "104",
+    "correct": true
+  },
+  "math500_159": {
+    "candidate": "\\begin{pmatrix} 3 & 2 \\\\ 0 & -7 \\end{pmatrix}",
+    "correct": true
+  },
+  "math500_162": {
+    "candidate": "12",
+    "correct": true
+  },
+  "math500_163": {
+    "candidate": "1",
+    "correct": true
+  },
+  "math500_164": {
+    "candidate": "14",
+    "correct": true
+  },
+  "math500_165": {
+    "candidate": "5",
+    "correct": false
+  },
+  "math500_166": {
+    "candidate": "6",
+    "correct": true
+  },
+  "math500_168": {
+    "candidate": "6",
+    "correct": true
+  },
+  "math500_171": {
+    "candidate": "50",
+    "correct": true
+  },
+  "math500_172": {
+    "candidate": "-\\frac{\\pi}{6}",
+    "correct": true
+  },
+  "math500_173": {
+    "candidate": "1",
+    "correct": true
+  },
+  "math500_174": {
+    "candidate": "15",
+    "correct": true
+  },
+  "math500_175": {
+    "candidate": "12",
+    "correct": true
+  },
+  "math500_176": {
+    "candidate": "52",
+    "correct": true
+  },
+  "math500_178": {
+    "candidate": "4",
+    "correct": true
+  },
+  "math500_180": {
+    "candidate": "5",
+    "correct": true
+  },
+  "math500_181": {
+    "candidate": "87",
+    "correct": true
+  },
+  "math500_182": {
+    "candidate": "6",
+    "correct": true
+  },
+  "math500_183": {
+    "candidate": "(-2, 5, -1)",
+    "correct": true
+  },
+  "math500_187": {
+    "candidate": "\\frac{1}{3}",
+    "correct": false
+  },
+  "math500_188": {
+    "candidate": "-8",
+    "correct": true
+  },
+  "math500_189": {
+    "candidate": "2",
+    "correct": true
+  },
+  "math500_190": {
+    "candidate": "39^\\circ",
+    "correct": true
+  },
+  "math500_191": {
+    "candidate": "108",
+    "correct": true
+  },
+  "math500_193": {
+    "candidate": "13",
+    "correct": true
+  },
+  "math500_195": {
+    "candidate": "1",
+    "correct": true
+  },
+  "math500_197": {
+    "candidate": "\\begin{pmatrix} \\frac{12}{13} \\\\ -\\frac{18}{13} \\end{pmatrix}",
+    "correct": false
+  },
+  "math500_199": {
+    "candidate": "1",
+    "correct": true
+  },
+  "math500_200": {
+    "candidate": "2",
+    "correct": false
+  },
+  "math500_202": {
+    "candidate": "11279",
+    "correct": false
+  },
+  "math500_203": {
+    "candidate": "24",
+    "correct": true
+  },
+  "math500_204": {
+    "candidate": "48",
+    "correct": true
+  },
+  "math500_206": {
+    "candidate": "8",
+    "correct": false
+  },
+  "math500_207": {
+    "candidate": "3\\sqrt{3}",
+    "correct": false
+  },
+  "math500_208": {
+    "candidate": "\\frac{4}{3}",
+    "correct": true
+  },
+  "math500_209": {
+    "candidate": "14x - 17",
+    "correct": false
+  },
+  "math500_212": {
+    "candidate": "11",
+    "correct": true
+  },
+  "math500_215": {
+    "candidate": "\\begin{pmatrix} \\frac{16}{49} \\\\ \\frac{48}{49} \\\\ \\frac{24}{49} \\end{pmatrix}",
+    "correct": false
+  },
+  "math500_216": {
+    "candidate": "20",
+    "correct": true
+  },
+  "math500_221": {
+    "candidate": "243",
+    "correct": true
+  },
+  "math500_222": {
+    "candidate": "\\begin{pmatrix} -2 \\\\ -2 \\\\ 1 \\end{pmatrix}",
+    "correct": true
+  },
+  "math500_224": {
+    "candidate": "\\frac{\\sqrt{39}}{8}",
+    "correct": true
+  },
+  "math500_225": {
+    "candidate": "(3\\sqrt{3}, -9, -2)",
+    "correct": false
+  },
+  "math500_226": {
+    "candidate": "8",
+    "correct": true
+  },
+  "math500_227": {
+    "candidate": "\\frac{11x + 5}{x - 2}",
+    "correct": true
+  },
+  "math500_228": {
+    "candidate": "420",
+    "correct": true
+  },
+  "math500_229": {
+    "candidate": "9",
+    "correct": true
+  },
+  "math500_230": {
+    "candidate": "3",
+    "correct": true
+  },
+  "math500_231": {
+    "candidate": "\\begin{pmatrix} 1 \\\\ 7 \\end{pmatrix}",
+    "correct": true
+  },
+  "math500_234": {
+    "candidate": "\\frac{1}{3}",
+    "correct": true
+  },
+  "math500_235": {
+    "candidate": "34",
+    "correct": true
+  },
+  "math500_241": {
+    "candidate": "7",
+    "correct": true
+  },
+  "math500_242": {
+    "candidate": "12",
+    "correct": true
+  },
+  "math500_243": {
+    "candidate": "14",
+    "correct": true
+  },
+  "math500_246": {
+    "candidate": "-2",
+    "correct": true
+  },
+  "math500_250": {
+    "candidate": "-5 + 4i",
+    "correct": false
+  },
+  "math500_252": {
+    "candidate": "24",
+    "correct": false
+  },
+  "math500_253": {
+    "candidate": "210",
+    "correct": true
+  },
+  "math500_254": {
+    "candidate": "336",
+    "correct": true
+  },
+  "math500_255": {
+    "candidate": "2",
+    "correct": false
+  },
+  "math500_256": {
+    "candidate": "0",
+    "correct": true
+  },
+  "math500_257": {
+    "candidate": "8",
+    "correct": true
+  },
+  "math500_260": {
+    "candidate": "4",
+    "correct": true
+  },
+  "math500_261": {
+    "candidate": "\\frac{639}{40}",
+    "correct": true
+  },
+  "math500_262": {
+    "candidate": "8",
+    "correct": true
+  },
+  "math500_263": {
+    "candidate": "\\frac{1}{8}",
+    "correct": true
+  },
+  "math500_264": {
+    "candidate": "13800",
+    "correct": false
+  },
+  "math500_265": {
+    "candidate": "3",
+    "correct": true
+  },
+  "math500_266": {
+    "candidate": "8",
+    "correct": true
+  },
+  "math500_269": {
+    "candidate": "1925",
+    "correct": false
+  },
+  "math500_270": {
+    "candidate": "21",
+    "correct": true
+  },
+  "math500_271": {
+    "candidate": "88",
+    "correct": true
+  },
+  "math500_272": {
+    "candidate": "76",
+    "correct": true
+  },
+  "math500_275": {
+    "candidate": "\\frac{1}{116280}",
+    "correct": false
+  },
+  "math500_278": {
+    "candidate": "100",
+    "correct": true
+  },
+  "math500_280": {
+    "candidate": "3",
+    "correct": true
+  },
+  "math500_281": {
+    "candidate": "\\frac{5}{9}",
+    "correct": true
+  },
+  "math500_284": {
+    "candidate": "17",
+    "correct": true
+  },
+  "math500_286": {
+    "candidate": "1",
+    "correct": true
+  },
+  "math500_288": {
+    "candidate": "1",
+    "correct": true
+  },
+  "math500_290": {
+    "candidate": "\\frac{5}{12}",
+    "correct": true
+  },
+  "math500_292": {
+    "candidate": "5",
+    "correct": true
+  },
+  "math500_293": {
+    "candidate": "5",
+    "correct": true
+  },
+  "math500_294": {
+    "candidate": "\\frac{40}{243}",
+    "correct": true
+  },
+  "math500_295": {
+    "candidate": "27",
+    "correct": false
+  },
+  "math500_296": {
+    "candidate": "8",
+    "correct": true
+  },
+  "math500_298": {
+    "candidate": "-3",
+    "correct": true
+  },
+  "math500_299": {
+    "candidate": "4.95",
+    "correct": true
+  },
+  "math500_300": {
+    "candidate": "\\sqrt{67}",
+    "correct": false
+  },
+  "math500_304": {
+    "candidate": "\\frac{8}{63}",
+    "correct": true
+  },
+  "math500_305": {
+    "candidate": "84",
+    "correct": false
+  },
+  "math500_306": {
+    "candidate": "y = -\\frac{1}{2}x^2 + 4x - 6",
+    "correct": false
+  },
+  "math500_307": {
+    "candidate": "6",
+    "correct": false
+  },
+  "math500_308": {
+    "candidate": "-15",
+    "correct": true
+  },
+  "math500_310": {
+    "candidate": "36\\pi",
+    "correct": false
+  },
+  "math500_313": {
+    "candidate": "8\\pi",
+    "correct": true
+  },
+  "math500_315": {
+    "candidate": "\\sqrt{3}",
+    "correct": false
+  },
+  "math500_316": {
+    "candidate": "-\\frac{16}{63}",
+    "correct": true
+  },
+  "math500_318": {
+    "candidate": "35",
+    "correct": false
+  },
+  "math500_320": {
+    "candidate": "-\\frac{14}{5}",
+    "correct": true
+  },
+  "math500_322": {
+    "candidate": "\\frac{4}{13}",
+    "correct": true
+  },
+  "math500_323": {
+    "candidate": "156",
+    "correct": true
+  },
+  "math500_326": {
+    "candidate": "3",
+    "correct": true
+  },
+  "math500_328": {
+    "candidate": "84",
+    "correct": true
+  },
+  "math500_329": {
+    "candidate": "\\frac{3}{4}",
+    "correct": true
+  },
+  "math500_330": {
+    "candidate": "25\\pi",
+    "correct": true
+  },
+  "math500_331": {
+    "candidate": "\\frac{2}{3}",
+    "correct": true
+  },
+  "math500_332": {
+    "candidate": "4",
+    "correct": false
+  },
+  "math500_333": {
+    "candidate": "16",
+    "correct": true
+  },
+  "math500_334": {
+    "candidate": "2536_8",
+    "correct": false
+  },
+  "math500_336": {
+    "candidate": "10",
+    "correct": false
+  },
+  "math500_338": {
+    "candidate": "(-\\infty, 0] \\cup \\left(\\frac{1}{2}, \\frac{3}{2}\\right]",
+    "correct": false
+  },
+  "math500_339": {
+    "candidate": "0",
+    "correct": false
+  },
+  "math500_340": {
+    "candidate": "\\frac{9\\pi}{2}",
+    "correct": true
+  },
+  "math500_348": {
+    "candidate": "93",
+    "correct": true
+  },
+  "math500_350": {
+    "candidate": "10",
+    "correct": true
+  },
+  "math500_351": {
+    "candidate": "4",
+    "correct": false
+  },
+  "math500_352": {
+    "candidate": "\\frac{14}{3}",
+    "correct": true
+  },
+  "math500_353": {
+    "candidate": "\\frac{3\\sqrt{3}}{4}",
+    "correct": true
+  },
+  "math500_358": {
+    "candidate": "2",
+    "correct": false
+  },
+  "math500_359": {
+    "candidate": "\\frac{12}{35}",
+    "correct": true
+  },
+  "math500_361": {
+    "candidate": "500",
+    "correct": true
+  },
+  "math500_362": {
+    "candidate": "30",
+    "correct": true
+  },
+  "math500_364": {
+    "candidate": "0",
+    "correct": false
+  },
+  "math500_365": {
+    "candidate": "3",
+    "correct": false
+  },
+  "math500_366": {
+    "candidate": "900000000",
+    "correct": false
+  },
+  "math500_367": {
+    "candidate": "(-\\infty, -\\frac{1}{2}) \\cup (-\\frac{1}{2}, \\infty)",
+    "correct": false
+  },
+  "math500_370": {
+    "candidate": "158",
+    "correct": true
+  },
+  "math500_371": {
+    "candidate": "-8",
+    "correct": true
+  },
+  "math500_372": {
+    "candidate": "-7x + 3",
+    "correct": false
+  },
+  "math500_374": {
+    "candidate": "12",
+    "correct": true
+  },
+  "math500_375": {
+    "candidate": "46",
+    "correct": true
+  },
+  "math500_376": {
+    "candidate": "3",
+    "correct": false
+  },
+  "math500_380": {
+    "candidate": "6",
+    "correct": false
+  },
+  "math500_381": {
+    "candidate": "30",
+    "correct": true
+  },
+  "math500_383": {
+    "candidate": "18",
+    "correct": false
+  },
+  "math500_384": {
+    "candidate": "7",
+    "correct": true
+  },
+  "math500_385": {
+    "candidate": "(1, 1)",
+    "correct": true
+  },
+  "math500_386": {
+    "candidate": "\\frac{3}{2}",
+    "correct": false
+  },
+  "math500_387": {
+    "candidate": "15",
+    "correct": true
+  },
+  "math500_388": {
+    "candidate": "8_9",
+    "correct": true
+  },
+  "math500_391": {
+    "candidate": "16",
+    "correct": true
+  },
+  "math500_393": {
+    "candidate": "(128, 2)",
+    "correct": true
+  },
+  "math500_395": {
+    "candidate": "\\frac{81}{125}",
+    "correct": true
+  },
+  "math500_396": {
+    "candidate": "2",
+    "correct": false
+  },
+  "math500_397": {
+    "candidate": "2\\sqrt{157} + 12",
+    "correct": false
+  },
+  "math500_398": {
+    "candidate": "39",
+    "correct": true
+  },
+  "math500_399": {
+    "candidate": "5\\sqrt{2}",
+    "correct": false
+  },
+  "math500_400": {
+    "candidate": "125",
+    "correct": true
+  },
+  "math500_401": {
+    "candidate": "90",
+    "correct": false
+  },
+  "math500_402": {
+    "candidate": "\\frac{128}{75}",
+    "correct": true
+  },
+  "math500_403": {
+    "candidate": "-4",
+    "correct": true
+  },
+  "math500_404": {
+    "candidate": "12\\sqrt{35}",
+    "correct": true
+  },
+  "math500_405": {
+    "candidate": "-120",
+    "correct": true
+  },
+  "math500_406": {
+    "candidate": "4",
+    "correct": false
+  },
+  "math500_408": {
+    "candidate": "",
+    "correct": false
+  },
+  "math500_409": {
+    "candidate": "",
+    "correct": false
+  },
+  "math500_410": {
+    "candidate": "",
+    "correct": false
+  },
+  "math500_411": {
+    "candidate": "",
+    "correct": false
+  },
+  "math500_412": {
+    "candidate": "",
+    "correct": false
+  },
+  "math500_413": {
+    "candidate": "",
+    "correct": false
+  },
+  "math500_414": {
+    "candidate": "",
+    "correct": false
+  },
+  "math500_415": {
+    "candidate": "",
+    "correct": false
+  },
+  "math500_416": {
+    "candidate": "",
+    "correct": false
+  },
+  "math500_417": {
+    "candidate": "\\frac{40}{9}",
+    "correct": true
+  },
+  "math500_418": {
+    "candidate": "10",
+    "correct": false
+  },
+  "math500_419": {
+    "candidate": "10",
+    "correct": true
+  },
+  "math500_420": {
+    "candidate": "a + b",
+    "correct": false
+  },
+  "math500_421": {
+    "candidate": "8",
+    "correct": true
+  },
+  "math500_422": {
+    "candidate": "-n(2n+1)",
+    "correct": false
+  },
+  "math500_424": {
+    "candidate": "1",
+    "correct": false
+  },
+  "math500_425": {
+    "candidate": "4",
+    "correct": false
+  },
+  "math500_426": {
+    "candidate": "28800",
+    "correct": true
+  },
+  "math500_427": {
+    "candidate": "4",
+    "correct": true
+  },
+  "math500_428": {
+    "candidate": "129",
+    "correct": true
+  },
+  "math500_429": {
+    "candidate": "67.5",
+    "correct": true
+  },
+  "math500_430": {
+    "candidate": "3",
+    "correct": false
+  },
+  "math500_431": {
+    "candidate": "110",
+    "correct": false
+  },
+  "math500_432": {
+    "candidate": "1440",
+    "correct": true
+  },
+  "math500_434": {
+    "candidate": "4(\\sqrt{2} + 1)",
+    "correct": false
+  },
+  "math500_437": {
+    "candidate": "2",
+    "correct": false
+  },
+  "math500_438": {
+    "candidate": "16386.16",
+    "correct": false
+  },
+  "math500_439": {
+    "candidate": "9",
+    "correct": true
+  },
+  "math500_441": {
+    "candidate": "57",
+    "correct": false
+  },
+  "math500_442": {
+    "candidate": "\\frac{1}{9}",
+    "correct": false
+  },
+  "math500_443": {
+    "candidate": "\\frac{1}{5}",
+    "correct": true
+  },
+  "math500_444": {
+    "candidate": "2",
+    "correct": false
+  },
+  "math500_445": {
+    "candidate": "37",
+    "correct": false
+  },
+  "math500_446": {
+    "candidate": "15.09",
+    "correct": false
+  },
+  "math500_447": {
+    "candidate": "81",
+    "correct": true
+  },
+  "math500_448": {
+    "candidate": "4",
+    "correct": false
+  },
+  "math500_449": {
+    "candidate": "8",
+    "correct": true
+  },
+  "math500_450": {
+    "candidate": "24",
+    "correct": false
+  },
+  "math500_451": {
+    "candidate": "10",
+    "correct": false
+  },
+  "math500_452": {
+    "candidate": "23",
+    "correct": true
+  },
+  "math500_453": {
+    "candidate": "144",
+    "correct": false
+  },
+  "math500_454": {
+    "candidate": "-\\frac{4}{5}",
+    "correct": false
+  },
+  "math500_455": {
+    "candidate": "4",
+    "correct": false
+  },
+  "math500_456": {
+    "candidate": "9",
+    "correct": true
+  },
+  "math500_459": {
+    "candidate": "12",
+    "correct": true
+  },
+  "math500_460": {
+    "candidate": "\\frac{5}{4}",
+    "correct": true
+  },
+  "math500_462": {
+    "candidate": "\\frac{1}{2}",
+    "correct": false
+  },
+  "math500_464": {
+    "candidate": "24",
+    "correct": false
+  },
+  "math500_465": {
+    "candidate": "\\frac{11}{7}",
+    "correct": true
+  },
+  "math500_466": {
+    "candidate": "-\\frac{8}{3}",
+    "correct": false
+  },
+  "math500_467": {
+    "candidate": "112",
+    "correct": true
+  },
+  "math500_468": {
+    "candidate": "1",
+    "correct": false
+  },
+  "math500_469": {
+    "candidate": "13",
+    "correct": false
+  },
+  "math500_470": {
+    "candidate": "192",
+    "correct": false
+  },
+  "math500_471": {
+    "candidate": "3",
+    "correct": false
+  },
+  "math500_472": {
+    "candidate": "7",
+    "correct": false
+  },
+  "math500_473": {
+    "candidate": "2i",
+    "correct": false
+  },
+  "math500_474": {
+    "candidate": "70",
+    "correct": true
+  },
+  "math500_475": {
+    "candidate": "-12",
+    "correct": false
+  },
+  "math500_478": {
+    "candidate": "8",
+    "correct": false
+  },
+  "math500_479": {
+    "candidate": "5",
+    "correct": true
+  },
+  "math500_481": {
+    "candidate": "13",
+    "correct": false
+  },
+  "math500_482": {
+    "candidate": "118",
+    "correct": true
+  },
+  "math500_483": {
+    "candidate": "5816528",
+    "correct": false
+  },
+  "math500_484": {
+    "candidate": "6",
+    "correct": true
+  },
+  "math500_485": {
+    "candidate": "6152",
+    "correct": true
+  },
+  "math500_486": {
+    "candidate": "2",
+    "correct": true
+  },
+  "math500_487": {
+    "candidate": "y = 0x^2 + 0x + 0",
+    "correct": false
+  },
+  "math500_488": {
+    "candidate": "\\cos^2 \\left(\\frac{4\\pi}{7}\\right)",
+    "correct": false
+  },
+  "math500_489": {
+    "candidate": "402",
+    "correct": false
+  },
+  "math500_490": {
+    "candidate": "8",
+    "correct": false
+  },
+  "math500_491": {
+    "candidate": "4\\sqrt{2} + 4\\sqrt{10} + 16",
+    "correct": false
+  },
+  "math500_492": {
+    "candidate": "2",
+    "correct": false
+  },
+  "math500_494": {
+    "candidate": "2006",
+    "correct": false
+  },
+  "math500_495": {
+    "candidate": "\\frac{3}{7}",
+    "correct": true
+  },
+  "math500_496": {
+    "candidate": "990",
+    "correct": true
+  },
+  "math500_498": {
+    "candidate": "a^3 + a^2",
+    "correct": true
+  }
+}

@@ -1,0 +1,6303 @@
+{
+  "summary": {
+    "aime_llama70b": {
+      "label": "aime_llama70b",
+      "n": 30,
+      "pre_filter": {
+        "working": 6,
+        "false_positive": 1,
+        "top_tier_size": 2,
+        "top_tier_correct": 1,
+        "top_tier_precision": 0.5
+      },
+      "post_filter": {
+        "working": 5,
+        "false_positive": 0,
+        "filtered_out": 2,
+        "top_tier_size": 1,
+        "top_tier_correct": 1,
+        "top_tier_precision": 1.0
+      }
+    },
+    "aime_qwen7b": {
+      "label": "aime_qwen7b",
+      "n": 30,
+      "pre_filter": {
+        "working": 2,
+        "false_positive": 0,
+        "top_tier_size": 1,
+        "top_tier_correct": 1,
+        "top_tier_precision": 1.0
+      },
+      "post_filter": {
+        "working": 2,
+        "false_positive": 0,
+        "filtered_out": 0,
+        "top_tier_size": 1,
+        "top_tier_correct": 1,
+        "top_tier_precision": 1.0
+      }
+    },
+    "math175_llama70b": {
+      "label": "math175_llama70b",
+      "n": 175,
+      "pre_filter": {
+        "working": 90,
+        "false_positive": 6,
+        "top_tier_size": 96,
+        "top_tier_correct": 90,
+        "top_tier_precision": 0.9375
+      },
+      "post_filter": {
+        "working": 87,
+        "false_positive": 1,
+        "filtered_out": 10,
+        "top_tier_size": 91,
+        "top_tier_correct": 86,
+        "top_tier_precision": 0.945054945054945
+      }
+    },
+    "math50_qwen7b": {
+      "label": "math50_qwen7b",
+      "n": 50,
+      "pre_filter": {
+        "working": 5,
+        "false_positive": 0,
+        "top_tier_size": 4,
+        "top_tier_correct": 4,
+        "top_tier_precision": 1.0
+      },
+      "post_filter": {
+        "working": 4,
+        "false_positive": 0,
+        "filtered_out": 1,
+        "top_tier_size": 4,
+        "top_tier_correct": 4,
+        "top_tier_precision": 1.0
+      }
+    },
+    "cleanmath_llama70b": {
+      "label": "cleanmath_llama70b",
+      "n": 125,
+      "pre_filter": {
+        "working": 20,
+        "false_positive": 4,
+        "top_tier_size": 4,
+        "top_tier_correct": 4,
+        "top_tier_precision": 1.0
+      },
+      "post_filter": {
+        "working": 19,
+        "false_positive": 3,
+        "filtered_out": 2,
+        "top_tier_size": 4,
+        "top_tier_correct": 4,
+        "top_tier_precision": 1.0
+      }
+    },
+    "aime_deepseek": {
+      "label": "aime_deepseek",
+      "n": 30,
+      "pre_filter": {
+        "working": 7,
+        "false_positive": 0,
+        "top_tier_size": 1,
+        "top_tier_correct": 1,
+        "top_tier_precision": 1.0
+      },
+      "post_filter": {
+        "working": 6,
+        "false_positive": 0,
+        "filtered_out": 1,
+        "top_tier_size": 1,
+        "top_tier_correct": 1,
+        "top_tier_precision": 1.0
+      }
+    },
+    "math175_deepseek": {
+      "label": "math175_deepseek",
+      "n": 175,
+      "pre_filter": {
+        "working": 89,
+        "false_positive": 1,
+        "top_tier_size": 88,
+        "top_tier_correct": 82,
+        "top_tier_precision": 0.9318181818181818
+      },
+      "post_filter": {
+        "working": 88,
+        "false_positive": 0,
+        "filtered_out": 2,
+        "top_tier_size": 87,
+        "top_tier_correct": 82,
+        "top_tier_precision": 0.9425287356321839
+      }
+    }
+  },
+  "per_condition": {
+    "aime_llama70b": [
+      {
+        "id": "aime2025_1",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "\\frac{7(39 - 1)}{9 -",
+        "gold": "70",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_2",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "576",
+        "gold": "588",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_3",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "836",
+        "gold": "16",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_4",
+        "classification": "working",
+        "filtered_classification": "filtered_broken",
+        "filter_broken": true,
+        "candidate": "118",
+        "gold": "117",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_5",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-1977",
+        "gold": "279",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_6",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "504",
+        "gold": "504",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "aime2025_7",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "7",
+        "gold": "821",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_8",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "49",
+        "gold": "77",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_9",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "101",
+        "gold": "62",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_10",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "60",
+        "gold": "81",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_11",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "349",
+        "gold": "259",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_12",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "30",
+        "gold": "510",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_13",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "2863",
+        "gold": "204",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_14",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "69",
+        "gold": "60",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_15",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "819",
+        "gold": "735",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_16",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "468",
+        "gold": "468",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "aime2025_17",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "49",
+        "gold": "49",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "aime2025_18",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "256",
+        "gold": "82",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_19",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "499",
+        "gold": "106",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_20",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "192",
+        "gold": "336",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_21",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "73",
+        "gold": "293",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_22",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "32780",
+        "gold": "237",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_23",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "36",
+        "gold": "610",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_24",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "46",
+        "gold": "149",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_25",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "584",
+        "gold": "907",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_26",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "316254413475",
+        "gold": "113",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_27",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "244",
+        "gold": "19",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_28",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "3",
+        "gold": "248",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_29",
+        "classification": "false_positive",
+        "filtered_classification": "filtered_broken",
+        "filter_broken": true,
+        "candidate": "98",
+        "gold": "104",
+        "candidate_verdict": true,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_30",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "379",
+        "gold": "240",
+        "candidate_verdict": null,
+        "solver_correct": false
+      }
+    ],
+    "aime_qwen7b": [
+      {
+        "id": "aime2025_1",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "\\frac{7(39 - 1)}{9 -",
+        "gold": "70",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_2",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_3",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_4",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_5",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_6",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_7",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_8",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_9",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_10",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_11",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_12",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_13",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_14",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_15",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_16",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_17",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "49",
+        "gold": "49",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "aime2025_18",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_19",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_20",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_21",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_22",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_23",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_24",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_25",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_26",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_27",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_28",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_29",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_30",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      }
+    ],
+    "math175_llama70b": [
+      {
+        "id": "math500_32",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "4",
+        "gold": "4",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_10",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "73",
+        "gold": "73",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_33",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-16",
+        "gold": "-16",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_91",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "32",
+        "gold": "32",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_65",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{1}{2}",
+        "gold": "\\frac{1}{2}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_63",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{5}{2}",
+        "gold": "\\frac{5}{2}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_76",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{25}{16}",
+        "gold": "\\cfrac{25}{16}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_37",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "600",
+        "gold": "600",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_12",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "3",
+        "gold": "3",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_80",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "61",
+        "gold": "61",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_130",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "165",
+        "gold": "165",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_136",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "49",
+        "gold": "49",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_126",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "odd",
+        "gold": "\\text{odd}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_101",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "8",
+        "gold": "8",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_179",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "2",
+        "gold": "2",
+        "candidate_verdict": null,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_125",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{27}{128}",
+        "gold": "\\frac{27}{128}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_161",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "76",
+        "gold": "76",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_115",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "330",
+        "gold": "330",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_157",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "0",
+        "gold": "0",
+        "candidate_verdict": null,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_170",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "75",
+        "gold": "75",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_276",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "80",
+        "gold": "80",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_214",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-10",
+        "gold": "-10",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_201",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "75",
+        "gold": "75",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_273",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{3(2-\\sqrt{5})}{32}",
+        "gold": "\\frac{1}{8}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_236",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "11",
+        "gold": "11",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_297",
+        "classification": "working",
+        "filtered_classification": "filtered_broken",
+        "filter_broken": true,
+        "candidate": "5",
+        "gold": "6",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_220",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "1092",
+        "gold": "1092",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_245",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-40",
+        "gold": "-40",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_239",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "(-\\infty, -7) \\cup (1, 2)",
+        "gold": "(-\\infty,-7) \\cup (1,2)",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_279",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "2\\sqrt{5}",
+        "gold": "2 \\sqrt{5}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_344",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "16",
+        "gold": "16",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_346",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "[5, 5\\sqrt{2}]",
+        "gold": "[5,5 \\sqrt{2}]",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_327",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "1",
+        "gold": "1",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_341",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "3",
+        "gold": "3",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_363",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "3",
+        "gold": "3",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_394",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\sqrt{6}",
+        "gold": "\\sqrt{6}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_314",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "12",
+        "gold": "12",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_302",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "100",
+        "gold": "100",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_368",
+        "classification": "false_positive",
+        "filtered_classification": "false_positive",
+        "filter_broken": false,
+        "candidate": "3",
+        "gold": "2",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_369",
+        "classification": "working",
+        "filtered_classification": "filtered_broken",
+        "filter_broken": true,
+        "candidate": "0",
+        "gold": "1",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_423",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "14",
+        "gold": "12",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_435",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "1029 \\):",
+        "gold": "1041",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_477",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{35}{128}",
+        "gold": "\\frac{35}{128}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_436",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "18.90",
+        "gold": "\\$18.90",
+        "candidate_verdict": true,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_493",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "3",
+        "gold": "1",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_457",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "-1",
+        "gold": "-\\frac{2010012}{2010013}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_476",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "5.6569",
+        "gold": "4\\sqrt{2}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_458",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{17}{50}",
+        "gold": "\\dfrac{17}{50}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_440",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "30",
+        "gold": "\\frac{3840}{289}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_463",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{1}{2}",
+        "gold": "\\frac{1}{2}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_42",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{2}{5}",
+        "gold": "\\frac{2}{5}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_41",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "2",
+        "gold": "4",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_9",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "8",
+        "gold": "8",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_50",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "90",
+        "gold": "90^\\circ",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_1",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "7.5",
+        "gold": "7.5",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_70",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "400",
+        "gold": "400",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_15",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\text{even}",
+        "gold": "\\text{even}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_78",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-21",
+        "gold": "-21",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_73",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{1}{16}",
+        "gold": "\\frac{1}{16}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_55",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "18",
+        "gold": "18",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_56",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "2",
+        "gold": "2",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_72",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "1",
+        "gold": "1",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_45",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "6840",
+        "gold": "6840",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_48",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "25\\pi",
+        "gold": "25\\pi",
+        "candidate_verdict": null,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_92",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "10",
+        "gold": "10",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_30",
+        "classification": "false_positive",
+        "filtered_classification": "filtered_broken",
+        "filter_broken": true,
+        "candidate": "1, -2",
+        "gold": "-2,1",
+        "candidate_verdict": true,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_21",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "(45x + 28)(x + 2)",
+        "gold": "(45x + 28)(x + 2)",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_96",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "3",
+        "gold": "3",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_49",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "108",
+        "gold": "108",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_83",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "30",
+        "gold": "55",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_26",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "0",
+        "gold": "0",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_87",
+        "classification": "false_positive",
+        "filtered_classification": "filtered_broken",
+        "filter_broken": true,
+        "candidate": "17",
+        "gold": "17",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_8",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "0",
+        "gold": "0",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_47",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-59",
+        "gold": "-59",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_59",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "1",
+        "gold": "1",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_74",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "28",
+        "gold": "28",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_44",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-1",
+        "gold": "-1",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_98",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "28",
+        "gold": "28",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_52",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{7}{8}",
+        "gold": "\\frac{7}{8}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_85",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "5",
+        "gold": "5",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_105",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "E",
+        "gold": "\\text{(E)}",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_113",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "24",
+        "gold": "24",
+        "candidate_verdict": null,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_124",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "2",
+        "gold": "2",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_122",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "180",
+        "gold": "180",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_138",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "12",
+        "gold": "4",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_152",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "86",
+        "gold": "86^\\circ",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_185",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "291",
+        "gold": "291",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_167",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "2",
+        "gold": "2",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_144",
+        "classification": "false_positive",
+        "filtered_classification": "filtered_broken",
+        "filter_broken": true,
+        "candidate": "1, 2, -2, -3",
+        "gold": "1,2,-2,-3",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_142",
+        "classification": "logic_broken",
+        "filtered_classification": "filtered_broken",
+        "filter_broken": true,
+        "candidate": "29",
+        "gold": "29",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_104",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "(3,-4)",
+        "gold": "(3,-4)",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_169",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "63",
+        "gold": "63",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_177",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{13}{144}",
+        "gold": "\\frac{13}{144}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_102",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "5040",
+        "gold": "5040",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_147",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "81",
+        "gold": "81\\text{ teachers}",
+        "candidate_verdict": true,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_194",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "28",
+        "gold": "28",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_153",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{1}{2}",
+        "gold": "\\frac12",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_184",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{1}{11}",
+        "gold": "\\frac{1}{11}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_196",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "8",
+        "gold": "8",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_103",
+        "classification": "false_positive",
+        "filtered_classification": "filtered_broken",
+        "filter_broken": true,
+        "candidate": "4t",
+        "gold": "4t",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_186",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-9",
+        "gold": "-9",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_137",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "3",
+        "gold": "3",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_160",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\text{neither}",
+        "gold": "\\text{neither}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_145",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "4",
+        "gold": "4",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_123",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "y = x + 3",
+        "gold": "y = x+3",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_109",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "6",
+        "gold": "6",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_112",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{1}{3}",
+        "gold": "\\frac{1}{3}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_139",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "2",
+        "gold": "2",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_198",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-3",
+        "gold": "-3",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_192",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\begin{pmatrix} \\frac{2}{5} \\\\ -\\frac{1}{5} \\\\ 0 \\end{pmatrix}",
+        "gold": "\\begin{pmatrix} 2/5 \\\\ -1/5 \\\\ 0 \\end{pmatrix}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_249",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "4",
+        "gold": "4",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_277",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "4",
+        "gold": "4",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_247",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "1",
+        "gold": "1",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_219",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}",
+        "gold": "\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_248",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\begin{pmatrix} -\\frac{25}{\\sqrt{17}} \\\\ -\\frac{5}{\\sqrt{17}} \\end{pmatrix}",
+        "gold": "\\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_289",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "2",
+        "gold": "2",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_210",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{1}{2}",
+        "gold": "0",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_232",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "30",
+        "gold": "30",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_237",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "23",
+        "gold": "14",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_223",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-2",
+        "gold": "-2",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_233",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "25",
+        "gold": "25 \\text{ ft}",
+        "candidate_verdict": true,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_238",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-9",
+        "gold": "-9",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_218",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "132",
+        "gold": "132",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_267",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "56",
+        "gold": "56",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_287",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "-\\frac{4}{5}",
+        "gold": "-\\frac{4}{5}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_268",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "9",
+        "gold": "9",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_274",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "165",
+        "gold": "165",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_251",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-49",
+        "gold": "-49",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_213",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "400",
+        "gold": "400",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_205",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "8",
+        "gold": "8",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_282",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "-2",
+        "gold": "-2",
+        "candidate_verdict": null,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_291",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "6",
+        "gold": "6",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_285",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "21",
+        "gold": "21",
+        "candidate_verdict": null,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_258",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "-3600",
+        "gold": "3600",
+        "candidate_verdict": true,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_240",
+        "classification": "logic_broken",
+        "filtered_classification": "filtered_broken",
+        "filter_broken": true,
+        "candidate": "10",
+        "gold": "10",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_244",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "4",
+        "gold": "4",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_217",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "18",
+        "gold": "384",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_211",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "54",
+        "gold": "54",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_259",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-15",
+        "gold": "-15",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_283",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "9",
+        "gold": "9",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_356",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "50 + 20\\sqrt{3}",
+        "gold": "84",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_377",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "117",
+        "gold": "13",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_311",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "6, -2",
+        "gold": "6, -2",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_390",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "24",
+        "gold": "24",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_312",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "44",
+        "gold": "44",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_325",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "0",
+        "gold": "0",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_301",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "4",
+        "gold": "4",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_354",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "90",
+        "gold": "45^\\circ, 135^\\circ",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_389",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "6",
+        "gold": "6",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_342",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "(10, 2)",
+        "gold": "(10,2)",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_379",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{35}{9}",
+        "gold": "\\frac{13}{3}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_324",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "19",
+        "gold": "19",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_321",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "247000",
+        "gold": "247000",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_337",
+        "classification": "working",
+        "filtered_classification": "filtered_broken",
+        "filter_broken": true,
+        "candidate": "360",
+        "gold": "360",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_355",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "24\\sqrt{10}",
+        "gold": "96\\sqrt{3}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_309",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\begin{pmatrix} -14 \\\\ -7 \\\\ -42 \\end{pmatrix}",
+        "gold": "\\begin{pmatrix} -10 \\\\ -35 \\\\ 30 \\end{pmatrix}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_349",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "9",
+        "gold": "9",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_345",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{109}{150}",
+        "gold": "\\frac{109}{150}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_317",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "8\\sqrt{3}",
+        "gold": "8\\sqrt{3}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_343",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "512",
+        "gold": "512",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_392",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "0",
+        "gold": "150",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_303",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "20",
+        "gold": "20",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_360",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "108",
+        "gold": "111",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_347",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "30240",
+        "gold": "30,\\!240",
+        "candidate_verdict": true,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_378",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "42",
+        "gold": "42",
+        "candidate_verdict": null,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_335",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "7",
+        "gold": "\\sqrt{109}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_357",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-1",
+        "gold": "-1",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_373",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "89",
+        "gold": "89",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_319",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "97",
+        "gold": "97",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_382",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "36",
+        "gold": "64",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_407",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "-3",
+        "gold": "-3",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_497",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "32",
+        "gold": "75\\%",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_433",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{4\\pi}{3} + \\frac{\\sqrt{3}}{2}",
+        "gold": "3\\pi-\\frac{\\sqrt{3}}{2}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_461",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "10455",
+        "gold": "10455",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_480",
+        "classification": "false_positive",
+        "filtered_classification": "filtered_broken",
+        "filter_broken": true,
+        "candidate": "\\frac{11}{2}",
+        "gold": "\\frac{11}{2}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      }
+    ],
+    "math50_qwen7b": [
+      {
+        "id": "math500_32",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_10",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_33",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_91",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "32",
+        "gold": "32",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_65",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_63",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_76",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_37",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "600",
+        "gold": "600",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_12",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_80",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_130",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_136",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_126",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_101",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_179",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_125",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_161",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_115",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_157",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_170",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_276",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_214",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_201",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_273",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_236",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "11",
+        "gold": "11",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_297",
+        "classification": "working",
+        "filtered_classification": "filtered_broken",
+        "filter_broken": true,
+        "candidate": "5",
+        "gold": "6",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_220",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_245",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_239",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_279",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_344",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_346",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_327",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "1",
+        "gold": "1",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_341",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_363",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_394",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_314",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_302",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_368",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_369",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_423",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_435",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_477",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_436",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_493",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_457",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_476",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_458",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_440",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_463",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{1}{2}",
+        "gold": "\\frac{1}{2}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      }
+    ],
+    "cleanmath_llama70b": [
+      {
+        "id": "hmmt_feb_2025_1",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "1",
+        "gold": "103",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_2",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "",
+        "gold": "3375",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_3",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "124416",
+        "gold": "\\frac{1}{576}",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_4",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "-2",
+        "gold": "-984",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_5",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "9600",
+        "gold": "890",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_6",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "0",
+        "gold": "\\frac{1311}{2017}",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_7",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "3",
+        "gold": "\\frac{9 \\sqrt{23}}{23}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_8",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "0",
+        "gold": "1-\\frac{2}{\\pi}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_9",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "1630",
+        "gold": "1037",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_10",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "6, -6",
+        "gold": "\\frac{-1+\\sqrt{17}}{2}, \\frac{-1-\\sqrt{17}}{2}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_11",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "144",
+        "gold": "56",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_12",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "9",
+        "gold": "29",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_13",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "1",
+        "gold": "105",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_14",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "10",
+        "gold": "2304",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_15",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "242",
+        "gold": "200",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_16",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "22500",
+        "gold": "6300",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_17",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "1",
+        "gold": "2^{25} \\cdot 26!",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_18",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "1",
+        "gold": "\\frac{2025}{101}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_19",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{7}{8}",
+        "gold": "\\frac{4}{9}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_20",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "630",
+        "gold": "\\frac{448}{3}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_21",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "15",
+        "gold": "26",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_22",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "60",
+        "gold": "63",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_23",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "",
+        "gold": "8\\sqrt{10}",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_24",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "25",
+        "gold": "20",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_25",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "4",
+        "gold": "\\sqrt{23}-2 \\sqrt{3}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_26",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "hmmt_feb_2025_27",
+        "classification": "false_positive",
+        "filtered_classification": "filtered_broken",
+        "filter_broken": true,
+        "candidate": "\\frac{1}{3}",
+        "gold": "\\frac{7}{18}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_28",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "5",
+        "gold": "\\sqrt{6}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_29",
+        "classification": "false_positive",
+        "filtered_classification": "false_positive",
+        "filter_broken": false,
+        "candidate": "26",
+        "gold": "14+4\\sqrt{37}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "hmmt_feb_2025_30",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "33",
+        "gold": "\\sqrt{\\frac{95}{24}}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_1",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{1}{2^{99}}",
+        "gold": "2^{99}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_2",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "\\frac{1}{9}",
+        "gold": "\\frac{1}{9}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "brumo_2025_3",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\sqrt{13}",
+        "gold": "\\frac{\\sqrt{13}}{2}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_4",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{17}{153}",
+        "gold": "\\frac{1}{9}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "brumo_2025_5",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "16",
+        "gold": "240",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_6",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "58",
+        "gold": "72",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_7",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "924",
+        "gold": "924",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "brumo_2025_8",
+        "classification": "false_positive",
+        "filtered_classification": "false_positive",
+        "filter_broken": false,
+        "candidate": "203",
+        "gold": "20",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_9",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "213",
+        "gold": "173",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_10",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "36",
+        "gold": "100",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_11",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "4",
+        "gold": "3+2\\sqrt{2}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_12",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "120",
+        "gold": "125",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_13",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{1}{2}",
+        "gold": "\\frac{1}{3}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_14",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "2^{15}",
+        "gold": "7",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_15",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "4608",
+        "gold": "4529",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_16",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "1296",
+        "gold": "1296",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "brumo_2025_17",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "2 + \\sqrt{2}",
+        "gold": "1+\\sqrt{3}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_18",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "20 \\pi",
+        "gold": "20\\pi",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "brumo_2025_19",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "3",
+        "gold": "12",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_20",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "12",
+        "gold": "12",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "brumo_2025_21",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "320",
+        "gold": "160",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_22",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "8",
+        "gold": "72",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_23",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "3, 2, \\frac{3 + i\\sqrt{3}}{2}, \\frac{3 - i\\sqrt{3}}{2}",
+        "gold": "2,3,\\frac{3+i\\sqrt{3}}{2},\\frac{3-i\\sqrt{3}}{2}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_24",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "252",
+        "gold": "89",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_25",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{5}{2}",
+        "gold": "\\frac{1+\\sqrt{31}}{2}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_26",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "390",
+        "gold": "337",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_27",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "14.5",
+        "gold": "\\frac{737}{39}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_28",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "18 - 6\\sqrt{13}",
+        "gold": "5\\sqrt{2}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_29",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "",
+        "gold": "-\\frac{2431}{50}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "brumo_2025_30",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "14",
+        "gold": "\\frac{9\\sqrt{30}}{4}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_1",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "3546",
+        "gold": "900",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_2",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "-\\frac{e\\pi}{2}",
+        "gold": "-\\frac{\\pi e}{2}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_3",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{6}{5}",
+        "gold": "\\frac{6}{5}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "smt_2025_4",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "127800100",
+        "gold": "100",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_5",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "2045312.5",
+        "gold": "\\frac{2025}{2}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_6",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "0.25205\\sqrt{3}",
+        "gold": "\\frac{3 \\sqrt{3}}{4}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_7",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\sqrt{e}",
+        "gold": "e^{\\frac{1}{2}}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_8",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "6\\pi",
+        "gold": "2 \\sqrt{3}+\\frac{8 \\pi}{3}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_9",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "\\frac{2025 \\ln 2025}{6}",
+        "gold": "-1013 \\ln (2026)",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_10",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\pi + 3\\cos^{-1}\\left(1 - \\frac{3}{2\\pi}\\right)",
+        "gold": "\\frac{4 \\pi}{3}+\\sqrt{3}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_11",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "",
+        "gold": "107",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_12",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "63",
+        "gold": "63",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "smt_2025_13",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "16",
+        "gold": "79",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_14",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "106",
+        "gold": "90",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_15",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "4",
+        "gold": "5",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_16",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "88",
+        "gold": "2024",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_17",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "7021",
+        "gold": "88607",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_18",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{7}{2}",
+        "gold": "\\frac{157}{40}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_19",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "101",
+        "gold": "608",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_20",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "1",
+        "gold": "\\frac{5}{12}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_21",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "3",
+        "gold": "3",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "smt_2025_22",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "40",
+        "gold": "29",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_23",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "20^\\circ",
+        "gold": "55",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_24",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{5}{2}",
+        "gold": "\\frac{2 \\sqrt{6}}{3}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_25",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{24}{25}",
+        "gold": "\\frac{12}{25}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_26",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{54\\sqrt{6}}{25}",
+        "gold": "\\frac{54 \\sqrt{6}}{25}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_27",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "4",
+        "gold": "\\frac{65 \\sqrt{6}-65 \\sqrt{2}}{32}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_28",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "10",
+        "gold": "\\sqrt{133}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_29",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "10",
+        "gold": "2",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_30",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "2025",
+        "gold": "1350 \\sqrt{3}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_31",
+        "classification": "working",
+        "filtered_classification": "filtered_broken",
+        "filter_broken": true,
+        "candidate": "4",
+        "gold": "5",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_32",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "(10, 18, 20)",
+        "gold": "13,14,18",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_33",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "7",
+        "gold": "\\frac{27}{5}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_34",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "2",
+        "gold": "66",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_35",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{11}{4}",
+        "gold": "\\frac{10 \\sqrt{3}+\\sqrt{6}+\\sqrt{2}}{4}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_36",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "190",
+        "gold": "36",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_37",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "960",
+        "gold": "190800",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_38",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "1",
+        "gold": "7",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_39",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "25",
+        "gold": "\\frac{288 \\sqrt{527}}{527}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_40",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "0",
+        "gold": "511",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_41",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "3",
+        "gold": "\\frac{\\sin (6 \\pi / 13)}{\\sin (\\pi / 13)}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_42",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "17672",
+        "gold": "213",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_43",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "7",
+        "gold": "\\frac{1980}{169}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_44",
+        "classification": "false_positive",
+        "filtered_classification": "false_positive",
+        "filter_broken": false,
+        "candidate": "32000",
+        "gold": "24000",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_45",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "144",
+        "gold": "144",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "smt_2025_46",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "",
+        "gold": "286",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_47",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "-40",
+        "gold": "-20",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_48",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "",
+        "gold": "-14",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_49",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "51",
+        "gold": "1002",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_50",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "514228",
+        "gold": "832038\\sqrt{\\log_{3} 2}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_51",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "",
+        "gold": "\\frac{29 \\pi}{12}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_52",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{1}{25}",
+        "gold": "\\frac{23-5 \\sqrt{21}}{10}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "smt_2025_53",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "3^{20}",
+        "gold": "41",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "apex_2025_1",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "2025",
+        "gold": "4049",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "apex_2025_2",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{2}{3}",
+        "gold": "1/2",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "apex_2025_3",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "7",
+        "gold": "\\frac{1980}{169}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "apex_2025_4",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "",
+        "gold": "6266942768",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "apex_2025_5",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "2023",
+        "gold": "6",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "apex_2025_6",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "130",
+        "gold": "138",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "apex_2025_7",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "2025",
+        "gold": "248/517",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "apex_2025_8",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "12288",
+        "gold": "1164",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "apex_2025_9",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "6\\pi",
+        "gold": "2 \\sqrt{3}+\\frac{8 \\pi}{3}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "apex_2025_10",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "17672",
+        "gold": "213",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "apex_2025_11",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "2",
+        "gold": "14/5",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "apex_2025_12",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "2024",
+        "gold": "2112",
+        "candidate_verdict": null,
+        "solver_correct": false
+      }
+    ],
+    "aime_deepseek": [
+      {
+        "id": "aime2025_1",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "\\frac{7(39 - 1)}{9 -",
+        "gold": "70",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_2",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_3",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "836",
+        "gold": "16",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_4",
+        "classification": "working",
+        "filtered_classification": "filtered_broken",
+        "filter_broken": true,
+        "candidate": "118",
+        "gold": "117",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_5",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-1977",
+        "gold": "279",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_6",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_7",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "7",
+        "gold": "821",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_8",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_9",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_10",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_11",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_12",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_13",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_14",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_15",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "819",
+        "gold": "735",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_16",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_17",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "49",
+        "gold": "49",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "aime2025_18",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_19",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_20",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_21",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_22",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "32780",
+        "gold": "237",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_23",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "36",
+        "gold": "610",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_24",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_25",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "584",
+        "gold": "907",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "aime2025_26",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_27",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_28",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_29",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "aime2025_30",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      }
+    ],
+    "math175_deepseek": [
+      {
+        "id": "math500_42",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{2}{5}",
+        "gold": "\\frac{2}{5}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_41",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "2",
+        "gold": "4",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_91",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "32",
+        "gold": "32",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_9",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "8",
+        "gold": "8",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_65",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{1}{2}",
+        "gold": "\\frac{1}{2}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_50",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_1",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "7.5",
+        "gold": "7.5",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_70",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "400",
+        "gold": "400",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_15",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_78",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-21",
+        "gold": "-21",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_73",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{1}{16}",
+        "gold": "\\frac{1}{16}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_10",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "73",
+        "gold": "73",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_55",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_56",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "2",
+        "gold": "2",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_72",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "1",
+        "gold": "1",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_45",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "6840",
+        "gold": "6840",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_48",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_92",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "10",
+        "gold": "10",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_76",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{25}{16}",
+        "gold": "\\cfrac{25}{16}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_37",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "600",
+        "gold": "600",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_30",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "1, -2",
+        "gold": "-2,1",
+        "candidate_verdict": true,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_21",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "(45x + 28)(x + 2)",
+        "gold": "(45x + 28)(x + 2)",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_32",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "4",
+        "gold": "4",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_96",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "3",
+        "gold": "3",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_80",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "61",
+        "gold": "61",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_49",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "108",
+        "gold": "108",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_83",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_26",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "0",
+        "gold": "0",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_87",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "17",
+        "gold": "17",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_33",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-16",
+        "gold": "-16",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_8",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "0",
+        "gold": "0",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_47",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-59",
+        "gold": "-59",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_59",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "1",
+        "gold": "1",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_63",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{5}{2}",
+        "gold": "\\frac{5}{2}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_74",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "28",
+        "gold": "28",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_44",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-1",
+        "gold": "-1",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_98",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "28",
+        "gold": "28",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_52",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{7}{8}",
+        "gold": "\\frac{7}{8}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_85",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_12",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "3",
+        "gold": "3",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_157",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_126",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "odd",
+        "gold": "\\text{odd}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_105",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_113",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_161",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "76",
+        "gold": "76",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_124",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "2",
+        "gold": "2",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_122",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "180",
+        "gold": "180",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_138",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "12",
+        "gold": "4",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_125",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{27}{128}",
+        "gold": "\\frac{27}{128}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_152",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_185",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "291",
+        "gold": "291",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_167",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "2",
+        "gold": "2",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_179",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "2",
+        "gold": "2",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_144",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "1, 2, -2, -3",
+        "gold": "1,2,-2,-3",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_142",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "29",
+        "gold": "29",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_104",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "(3,-4)",
+        "gold": "(3,-4)",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_169",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "63",
+        "gold": "63",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_177",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{13}{144}",
+        "gold": "\\frac{13}{144}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_130",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "165",
+        "gold": "165",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_102",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "5040",
+        "gold": "5040",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_147",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "81",
+        "gold": "81\\text{ teachers}",
+        "candidate_verdict": true,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_194",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "28",
+        "gold": "28",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_101",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_153",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{1}{2}",
+        "gold": "\\frac12",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_184",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{1}{11}",
+        "gold": "\\frac{1}{11}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_196",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_103",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "4t",
+        "gold": "4t",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_186",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-9",
+        "gold": "-9",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_115",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "330",
+        "gold": "330",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_136",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "49",
+        "gold": "49",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_137",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "3",
+        "gold": "3",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_160",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\text{neither}",
+        "gold": "\\text{neither}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_145",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "4",
+        "gold": "4",
+        "candidate_verdict": null,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_123",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "y = x + 3",
+        "gold": "y = x+3",
+        "candidate_verdict": true,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_109",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "6",
+        "gold": "6",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_112",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_139",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_170",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "75",
+        "gold": "75",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_198",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-3",
+        "gold": "-3",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_192",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\begin{pmatrix} \\frac{2}{5} \\\\ -\\frac{1}{5} \\\\ 0 \\end{pmatrix}",
+        "gold": "\\begin{pmatrix} 2/5 \\\\ -1/5 \\\\ 0 \\end{pmatrix}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_249",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_277",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "4",
+        "gold": "4",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_247",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "1",
+        "gold": "1",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_219",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}",
+        "gold": "\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_248",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\begin{pmatrix} -\\frac{25}{\\sqrt{17}} \\\\ -\\frac{5}{\\sqrt{17}} \\end{pmatrix}",
+        "gold": "\\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_239",
+        "classification": "false_positive",
+        "filtered_classification": "filtered_broken",
+        "filter_broken": true,
+        "candidate": "(-\\infty, -7) \\cup (1, 2)",
+        "gold": "(-\\infty,-7) \\cup (1,2)",
+        "candidate_verdict": true,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_289",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "2",
+        "gold": "2",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_210",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "\\frac{1}{2}",
+        "gold": "0",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_232",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "30",
+        "gold": "30",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_237",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "23",
+        "gold": "14",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_223",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-2",
+        "gold": "-2",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_233",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "25",
+        "gold": "25 \\text{ ft}",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_214",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-10",
+        "gold": "-10",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_238",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "-9",
+        "gold": "-9",
+        "candidate_verdict": null,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_218",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "132",
+        "gold": "132",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_267",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "56",
+        "gold": "56",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_287",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "-\\frac{4}{5}",
+        "gold": "-\\frac{4}{5}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_273",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{3(2-\\sqrt{5})}{32}",
+        "gold": "\\frac{1}{8}",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_268",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_274",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "165",
+        "gold": "165",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_251",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-49",
+        "gold": "-49",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_213",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "400",
+        "gold": "400",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_205",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "8",
+        "gold": "8",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_282",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-2",
+        "gold": "-2",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_276",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "80",
+        "gold": "80",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_291",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "6",
+        "gold": "6",
+        "candidate_verdict": null,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_285",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_258",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "-3600",
+        "gold": "3600",
+        "candidate_verdict": true,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_236",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "11",
+        "gold": "11",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_220",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "1092",
+        "gold": "1092",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_201",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "75",
+        "gold": "75",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_245",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-40",
+        "gold": "-40",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_240",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_279",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_244",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_297",
+        "classification": "working",
+        "filtered_classification": "filtered_broken",
+        "filter_broken": true,
+        "candidate": "5",
+        "gold": "6",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_217",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "18",
+        "gold": "384",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_211",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "54",
+        "gold": "54",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_259",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_283",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "9",
+        "gold": "9",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_356",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_369",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "0",
+        "gold": "1",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_327",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "1",
+        "gold": "1",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_377",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_311",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "6, -2",
+        "gold": "6, -2",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_302",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_390",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "24",
+        "gold": "24",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_312",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "44",
+        "gold": "44",
+        "candidate_verdict": null,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_325",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "0",
+        "gold": "0",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_346",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_394",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_301",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "4",
+        "gold": "4",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_354",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_389",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_314",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "12",
+        "gold": "12",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_342",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "(10, 2)",
+        "gold": "(10,2)",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_344",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "16",
+        "gold": "16",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_379",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_324",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "19",
+        "gold": "19",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_321",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "247000",
+        "gold": "247000",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_341",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_337",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "360",
+        "gold": "360",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_355",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_309",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_349",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "9",
+        "gold": "9",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_345",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{109}{150}",
+        "gold": "\\frac{109}{150}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_317",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "8\\sqrt{3}",
+        "gold": "8\\sqrt{3}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_343",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_392",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_368",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_303",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "20",
+        "gold": "20",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_360",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "108",
+        "gold": "111",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_347",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "30240",
+        "gold": "30,\\!240",
+        "candidate_verdict": true,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_378",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_363",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "3",
+        "gold": "3",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_335",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_357",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "-1",
+        "gold": "-1",
+        "candidate_verdict": null,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_373",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "89",
+        "gold": "89",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_319",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "97",
+        "gold": "97",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_382",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_476",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_423",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_477",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{35}{128}",
+        "gold": "\\frac{35}{128}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_435",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "1029 \\):",
+        "gold": "1041",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_458",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{17}{50}",
+        "gold": "\\dfrac{17}{50}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_407",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "-3",
+        "gold": "-3",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_497",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "32",
+        "gold": "75\\%",
+        "candidate_verdict": false,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_440",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_433",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_461",
+        "classification": "working",
+        "filtered_classification": "working",
+        "filter_broken": false,
+        "candidate": "10455",
+        "gold": "10455",
+        "candidate_verdict": true,
+        "solver_correct": true
+      },
+      {
+        "id": "math500_480",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_436",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_457",
+        "classification": null,
+        "filtered_classification": null,
+        "filter_broken": null,
+        "candidate": null,
+        "gold": null,
+        "candidate_verdict": null,
+        "solver_correct": null
+      },
+      {
+        "id": "math500_493",
+        "classification": "compute_abstain",
+        "filtered_classification": "compute_abstain",
+        "filter_broken": false,
+        "candidate": "3",
+        "gold": "1",
+        "candidate_verdict": null,
+        "solver_correct": false
+      },
+      {
+        "id": "math500_463",
+        "classification": "logic_broken",
+        "filtered_classification": "logic_broken",
+        "filter_broken": false,
+        "candidate": "\\frac{1}{2}",
+        "gold": "\\frac{1}{2}",
+        "candidate_verdict": false,
+        "solver_correct": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,510 @@
+{
+  "extractor": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+  "n": 10,
+  "unverifiable": 0,
+  "script_produced": 10,
+  "working": 4,
+  "broken": 6,
+  "results": [
+    {
+      "id": "aime2025_1",
+      "gold": "70",
+      "qwen": "\\frac{7(39 - 1)}{9 -",
+      "unverifiable": false,
+      "script": "def verify(answer):\n    valid = []\n    for b in range(10, 1000):\n        x = 1*b + 7  # 17 in base b\n        y = 9*b + 7  # 97 in base b\n        if y % x == 0:\n            valid.append(b)\n    total = sum(valid)\n    try:\n        return int(str(answer).strip()) == total\n    except Exception:\n        return False",
+      "tests": [
+        {
+          "label": "GOLD",
+          "value": "70",
+          "expected": "accept",
+          "verdict": true,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "QWEN",
+          "value": "\\frac{7(39 - 1)}{9 -",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV0",
+          "value": "69",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV1",
+          "value": "71",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV2",
+          "value": "42",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        }
+      ],
+      "broken": false
+    },
+    {
+      "id": "aime2025_2",
+      "gold": "588",
+      "qwen": "576",
+      "unverifiable": false,
+      "script": "def verify(answer):\n    # Given areas and lengths\n    area_DEGF = 288\n    AD = 4\n    DE = 16\n    EB = 8\n    AF = 13\n    FG = 52\n    GC = 26\n\n    # Calculate area of triangle AFD\n    area_AFD = 0.5 * AF * AD\n\n    # Calculate area of triangle EBG\n    area_EBG = 0.5 * EB * FG\n\n    # Calculate area of triangle ABC\n    area_ABC = area_DEGF + area_AFD + area_EBG + 0.5 * (AD + DE + EB) * (AF + FG + GC)\n\n    # Calculate area of heptagon AFNBCEM\n    area_heptagon = area_ABC + area_DEGF - area_AFD - area_EBG\n\n    try:\n        return int(str(answer).strip()) == area_heptagon\n    except Exception:\n        return False",
+      "tests": [
+        {
+          "label": "GOLD",
+          "value": "588",
+          "expected": "accept",
+          "verdict": false,
+          "outcome": "FAIL-rejected-gold",
+          "error": null
+        },
+        {
+          "label": "QWEN",
+          "value": "576",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV0",
+          "value": "587",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV1",
+          "value": "589",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV2",
+          "value": "42",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        }
+      ],
+      "broken": true
+    },
+    {
+      "id": "aime2025_3",
+      "gold": "16",
+      "qwen": "836",
+      "unverifiable": false,
+      "script": "def verify(answer):\n    count = 0\n    for c in range(3, 10):\n        for v in range(1, c):\n            for s in range(1, v):\n                if c + v + s == 9:\n                    count += math.comb(9, c) * math.comb(9-c, v)\n    total = count % 1000\n    try:\n        return int(str(answer).strip()) == total\n    except Exception:\n        return False",
+      "tests": [
+        {
+          "label": "GOLD",
+          "value": "16",
+          "expected": "accept",
+          "verdict": true,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "QWEN",
+          "value": "836",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV0",
+          "value": "15",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV1",
+          "value": "17",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV2",
+          "value": "42",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        }
+      ],
+      "broken": false
+    },
+    {
+      "id": "aime2025_4",
+      "gold": "117",
+      "qwen": "118",
+      "unverifiable": false,
+      "script": "def verify(answer):\n    count = 0\n    for x in range(-100, 101):\n        for y in range(-100, 101):\n            if 12*x**2 - x*y - 6*y**2 == 0:\n                count += 1\n    try:\n        return int(str(answer).strip()) == count\n    except Exception:\n        return False",
+      "tests": [
+        {
+          "label": "GOLD",
+          "value": "117",
+          "expected": "accept",
+          "verdict": true,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "QWEN",
+          "value": "118",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV0",
+          "value": "116",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV1",
+          "value": "118",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV2",
+          "value": "42",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        }
+      ],
+      "broken": false
+    },
+    {
+      "id": "aime2025_5",
+      "gold": "279",
+      "qwen": "-1977",
+      "unverifiable": false,
+      "script": "import math\nfrom itertools import permutations\n\ndef verify(answer):\n    count = 0\n    for p in permutations(range(1, 9)):\n        num = int(''.join(map(str, p)))\n        if num % 22 == 0:\n            count += 1\n    try:\n        return int(str(answer).strip()) == count - 2025\n    except Exception:\n        return False",
+      "tests": [
+        {
+          "label": "GOLD",
+          "value": "279",
+          "expected": "accept",
+          "verdict": true,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "QWEN",
+          "value": "-1977",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV0",
+          "value": "278",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV1",
+          "value": "280",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV2",
+          "value": "42",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        }
+      ],
+      "broken": false
+    },
+    {
+      "id": "aime2025_6",
+      "gold": "504",
+      "qwen": "504",
+      "unverifiable": false,
+      "script": "def verify(answer):\n    try:\n        answer = int(str(answer).strip())\n    except Exception:\n        return False\n\n    for r in range(1, 100):\n        for s in range(1, 100):\n            if r != s:\n                h = 2 * 3  # height of the trapezoid\n                area = (r + s) * h / 2\n                if area == 72:\n                    if r**2 + s**2 == answer:\n                        return True\n    return False",
+      "tests": [
+        {
+          "label": "GOLD",
+          "value": "504",
+          "expected": "accept",
+          "verdict": false,
+          "outcome": "FAIL-rejected-gold",
+          "error": null
+        },
+        {
+          "label": "QWEN",
+          "value": "504",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV0",
+          "value": "503",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV1",
+          "value": "505",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV2",
+          "value": "42",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        }
+      ],
+      "broken": true
+    },
+    {
+      "id": "aime2025_7",
+      "gold": "821",
+      "qwen": "7",
+      "unverifiable": false,
+      "script": "import itertools\n\ndef verify(answer):\n    total = 0\n    success = 0\n    for p in itertools.permutations('ABCDEFGHIJKL'):\n        pairs = [(p[i], p[i+1]) for i in range(0, 12, 2)]\n        pairs.sort()\n        if pairs[-1][0] == 'G' or pairs[-1][1] == 'G':\n            success += 1\n        total += 1\n    try:\n        m, n = int(str(answer).strip()) // 2, int(str(answer).strip()) - int(str(answer).strip()) // 2\n        return Fraction(success, total) == Fraction(m, n)\n    except Exception:\n        return False",
+      "tests": [
+        {
+          "label": "GOLD",
+          "value": "821",
+          "expected": "accept",
+          "verdict": null,
+          "outcome": "ERROR",
+          "error": "TimeoutError: script exceeded time budget"
+        },
+        {
+          "label": "QWEN",
+          "value": "7",
+          "expected": "reject",
+          "verdict": null,
+          "outcome": "ERROR",
+          "error": "TimeoutError: script exceeded time budget"
+        },
+        {
+          "label": "ADV0",
+          "value": "820",
+          "expected": "reject",
+          "verdict": null,
+          "outcome": "ERROR",
+          "error": "TimeoutError: script exceeded time budget"
+        },
+        {
+          "label": "ADV1",
+          "value": "822",
+          "expected": "reject",
+          "verdict": null,
+          "outcome": "ERROR",
+          "error": "TimeoutError: script exceeded time budget"
+        },
+        {
+          "label": "ADV2",
+          "value": "42",
+          "expected": "reject",
+          "verdict": null,
+          "outcome": "ERROR",
+          "error": "TimeoutError: script exceeded time budget"
+        }
+      ],
+      "broken": true
+    },
+    {
+      "id": "aime2025_8",
+      "gold": "77",
+      "qwen": "49",
+      "unverifiable": false,
+      "script": "def verify(answer):\n    try:\n        k = int(str(answer).strip())\n        return False  # This problem cannot be verified with the given constraints\n    except Exception:\n        return False\n    # The problem requires geometric and complex number calculations, which are not allowed\n    # The verifier would have to re-derive the formula the problem is asking for\n    return \"UNVERIFIABLE\"",
+      "tests": [
+        {
+          "label": "GOLD",
+          "value": "77",
+          "expected": "accept",
+          "verdict": false,
+          "outcome": "FAIL-rejected-gold",
+          "error": null
+        },
+        {
+          "label": "QWEN",
+          "value": "49",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV0",
+          "value": "76",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV1",
+          "value": "78",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        },
+        {
+          "label": "ADV2",
+          "value": "42",
+          "expected": "reject",
+          "verdict": false,
+          "outcome": "PASS",
+          "error": null
+        }
+      ],
+      "broken": true
+    },
+    {
+      "id": "aime2025_9",
+      "gold": "62",
+      "qwen": "101",
+      "unverifiable": false,
+      "script": "def verify(answer):\n    try:\n        a_plus_b_plus_c = int(str(answer).strip())\n    except Exception:\n        return False\n\n    # Check all possible values of a, b, c\n    for a in range(1, 100):\n        for b in range(1, 10000):\n            for c in range(1, 100):\n                if math.gcd(a, c) != 1:\n                    continue\n                y = (a - math.sqrt(b)) / c\n                x = math.sqrt(y + 4)\n                x_rotated = x * math.cos(math.radians(60)) - y * math.sin(math.radians(60))\n                y_rotated = x * math.sin(math.radians(60)) + y * math.cos(math.radians(60))\n                if abs(x_rotated**2 - 4 - y_rotated) < 1e-6 and y < 0 and x > 0:\n                    if a + b + c == a_plus_b_plus_c:\n                        return True\n    return False",
+      "tests": [
+        {
+          "label": "GOLD",
+          "value": "62",
+          "expected": "accept",
+          "verdict": null,
+          "outcome": "ERROR",
+          "error": "ValueError: math domain error"
+        },
+        {
+          "label": "QWEN",
+          "value": "101",
+          "expected": "reject",
+          "verdict": null,
+          "outcome": "ERROR",
+          "error": "ValueError: math domain error"
+        },
+        {
+          "label": "ADV0",
+          "value": "61",
+          "expected": "reject",
+          "verdict": null,
+          "outcome": "ERROR",
+          "error": "ValueError: math domain error"
+        },
+        {
+          "label": "ADV1",
+          "value": "63",
+          "expected": "reject",
+          "verdict": null,
+          "outcome": "ERROR",
+          "error": "ValueError: math domain error"
+        },
+        {
+          "label": "ADV2",
+          "value": "42",
+          "expected": "reject",
+          "verdict": null,
+          "outcome": "ERROR",
+          "error": "ValueError: math domain error"
+        }
+      ],
+      "broken": true
+    },
+    {
+      "id": "aime2025_10",
+      "gold": "81",
+      "qwen": "60",
+      "unverifiable": false,
+      "script": "def verify(answer):\n    from itertools import permutations\n    count = 0\n    for p in permutations(range(1, 10)):\n        for q in permutations(range(1, 10)):\n            for r in permutations(range(1, 10)):\n                grid = [list(p), list(q), list(r)]\n                valid = True\n                for i in range(3):\n                    if len(set(grid[i])) != 9:\n                        valid = False\n                        break\n                for i in range(3):\n                    block = [grid[j][k] for j in range(3) for k in range(3) if (j // 3) == i]\n                    if len(set(block)) != 9:\n                        valid = False\n                        break\n                if valid:\n                    count += 1\n    factors = primefactors(count)\n    p, q, r, s = sorted(factors.keys())\n    a, b, c, d = factors[p], factors[q], factors[r], factors[s]\n    try:\n        return int(str(answer).strip()) == p * a + q * b + r * c + s * d\n    except Exception:\n        return False\n\ndef primefactors(n):\n    i = 2\n    factors = {}\n    while i * i <= n:\n        if n % i:\n            i += 1\n        else:\n            n //= i\n            factors[i] = factors.get(i, 0) + 1\n    if n > 1:\n        factors[n] = factors.get(n, 0) + 1\n    return factors",
+      "tests": [
+        {
+          "label": "GOLD",
+          "value": "81",
+          "expected": "accept",
+          "verdict": null,
+          "outcome": "ERROR",
+          "error": "TimeoutError: script exceeded time budget"
+        },
+        {
+          "label": "QWEN",
+          "value": "60",
+          "expected": "reject",
+          "verdict": null,
+          "outcome": "ERROR",
+          "error": "TimeoutError: script exceeded time budget"
+        },
+        {
+          "label": "ADV0",
+          "value": "80",
+          "expected": "reject",
+          "verdict": null,
+          "outcome": "ERROR",
+          "error": "TimeoutError: script exceeded time budget"
+        },
+        {
+          "label": "ADV1",
+          "value": "82",
+          "expected": "reject",
+          "verdict": null,
+          "outcome": "ERROR",
+          "error": "TimeoutError: script exceeded time budget"
+        },
+        {
+          "label": "ADV2",
+          "value": "42",
+          "expected": "reject",
+          "verdict": null,
+          "outcome": "ERROR",
+          "error": "TimeoutError: script exceeded time budget"
+        }
+      ],
+      "broken": true
+    }
+  ]
+}

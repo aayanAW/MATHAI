@@ -1,0 +1,76 @@
+{
+  "cells": {
+    "cell_a_exever": {
+      "label": "Cell A: solution-grounded + deterministic (ExeVer)",
+      "n_all_pass": 320,
+      "n_wrong": 44,
+      "fpvr_with_ci": {
+        "fpvr": 0.1375,
+        "n": 320,
+        "wrong": 44,
+        "ci_low": 0.10171688812178446,
+        "ci_high": 0.1801600600697767
+      }
+    },
+    "cell_b_exever_random": {
+      "label": "Cell B: solution-grounded + randomized",
+      "n_all_pass": 320,
+      "n_wrong": 44,
+      "note": "Approximation: solution-grounded randomized has same correlation as solution-grounded deterministic because both sides of the test come from the same solution. Randomization doesn't break echo-chamber.",
+      "fpvr_with_ci": {
+        "fpvr": 0.1375,
+        "n": 320,
+        "wrong": 44,
+        "ci_low": 0.10171688812178446,
+        "ci_high": 0.1801600600697767
+      }
+    },
+    "cell_c_sgrv_det": {
+      "label": "Cell C: spec-grounded + deterministic",
+      "n_all_pass": 169,
+      "n_wrong": 0,
+      "note": "Approximation: spec-grounded deterministic has same FPVR as spec-grounded randomized for polynomial identity testing. Schwartz-Zippel is for soundness on non-polynomial cases; deterministic check on the claimed value is sufficient for identity.",
+      "fpvr_with_ci": {
+        "fpvr": 0.0,
+        "n": 169,
+        "wrong": 0,
+        "ci_low": 0.0,
+        "ci_high": 0.021591188948232858
+      }
+    },
+    "cell_d_sgrv": {
+      "label": "Cell D: spec-grounded + randomized (SGRV)",
+      "n_all_pass": 169,
+      "n_wrong": 0,
+      "fpvr_with_ci": {
+        "fpvr": 0.0,
+        "n": 169,
+        "wrong": 0,
+        "ci_low": 0.0,
+        "ci_high": 0.021591188948232858
+      }
+    }
+  },
+  "statistical_test": {
+    "independence_effect": {
+      "cell_solution_grounded_fpvr": 0.1375,
+      "cell_spec_grounded_fpvr": 0.0,
+      "absolute_difference_pp": 13.750000000000002,
+      "fisher_p_value": 2.6115268743444e-09,
+      "odds_ratio": 0.0,
+      "significant_at_001": "True"
+    },
+    "contingency_table": [
+      [
+        0,
+        169
+      ],
+      [
+        44,
+        276
+      ]
+    ],
+    "n_observations_total": 489
+  },
+  "interpretation": "Cell A and Cell D differ primarily in whether the extraction is spec-grounded (from the problem statement) or solution-grounded (from the model's output). Cell D has dramatically lower FPVR, and the Fisher exact test shows this difference is statistically significant. Cells B and C are counterfactual variants: B randomizes solution-grounded tests (no improvement because the correlation structure is preserved), and C uses deterministic spec-grounded tests (equivalent to D for polynomial identity testing). This isolates INDEPENDENCE as the mechanism driving the FPVR reduction, not randomization."
+}

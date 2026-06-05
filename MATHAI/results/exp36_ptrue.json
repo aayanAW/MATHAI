@@ -1,0 +1,2989 @@
+{
+  "solver": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+  "rows": [
+    {
+      "id": "math500_42",
+      "bench": "math175",
+      "plurality_answer": "\\frac{2}{5}",
+      "gold": "\\frac{2}{5}",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_41",
+      "bench": "math175",
+      "plurality_answer": "2",
+      "gold": "4",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_91",
+      "bench": "math175",
+      "plurality_answer": "32",
+      "gold": "32",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_9",
+      "bench": "math175",
+      "plurality_answer": "8",
+      "gold": "8",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_65",
+      "bench": "math175",
+      "plurality_answer": "\\frac{1}{2}",
+      "gold": "\\frac{1}{2}",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_50",
+      "bench": "math175",
+      "plurality_answer": "90",
+      "gold": "90^\\circ",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_1",
+      "bench": "math175",
+      "plurality_answer": "7.5",
+      "gold": "7.5",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_70",
+      "bench": "math175",
+      "plurality_answer": "400",
+      "gold": "400",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_15",
+      "bench": "math175",
+      "plurality_answer": "\\text{even}",
+      "gold": "\\text{even}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_78",
+      "bench": "math175",
+      "plurality_answer": "-21",
+      "gold": "-21",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_73",
+      "bench": "math175",
+      "plurality_answer": "\\frac{1}{16}",
+      "gold": "\\frac{1}{16}",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_10",
+      "bench": "math175",
+      "plurality_answer": "73",
+      "gold": "73",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_55",
+      "bench": "math175",
+      "plurality_answer": "18",
+      "gold": "18",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_56",
+      "bench": "math175",
+      "plurality_answer": "2",
+      "gold": "2",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_72",
+      "bench": "math175",
+      "plurality_answer": "1",
+      "gold": "1",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_45",
+      "bench": "math175",
+      "plurality_answer": "6840",
+      "gold": "6840",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_48",
+      "bench": "math175",
+      "plurality_answer": "25\\pi",
+      "gold": "25\\pi",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_92",
+      "bench": "math175",
+      "plurality_answer": "10",
+      "gold": "10",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_76",
+      "bench": "math175",
+      "plurality_answer": "\\cfrac{25}{16}",
+      "gold": "\\cfrac{25}{16}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_37",
+      "bench": "math175",
+      "plurality_answer": "600",
+      "gold": "600",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_30",
+      "bench": "math175",
+      "plurality_answer": "1, -2",
+      "gold": "-2,1",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_21",
+      "bench": "math175",
+      "plurality_answer": "(15x + 8)(3x + 7)",
+      "gold": "(45x + 28)(x + 2)",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_32",
+      "bench": "math175",
+      "plurality_answer": "4",
+      "gold": "4",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_96",
+      "bench": "math175",
+      "plurality_answer": "3",
+      "gold": "3",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_80",
+      "bench": "math175",
+      "plurality_answer": "61",
+      "gold": "61",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_49",
+      "bench": "math175",
+      "plurality_answer": "108",
+      "gold": "108",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_83",
+      "bench": "math175",
+      "plurality_answer": "40",
+      "gold": "55",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_26",
+      "bench": "math175",
+      "plurality_answer": "0",
+      "gold": "0",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_87",
+      "bench": "math175",
+      "plurality_answer": "17",
+      "gold": "17",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_33",
+      "bench": "math175",
+      "plurality_answer": "-16",
+      "gold": "-16",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_8",
+      "bench": "math175",
+      "plurality_answer": "0",
+      "gold": "0",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_47",
+      "bench": "math175",
+      "plurality_answer": "-59",
+      "gold": "-59",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_59",
+      "bench": "math175",
+      "plurality_answer": "1",
+      "gold": "1",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_63",
+      "bench": "math175",
+      "plurality_answer": "\\frac{5}{2}",
+      "gold": "\\frac{5}{2}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_74",
+      "bench": "math175",
+      "plurality_answer": "28",
+      "gold": "28",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_44",
+      "bench": "math175",
+      "plurality_answer": "-1",
+      "gold": "-1",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_98",
+      "bench": "math175",
+      "plurality_answer": "28",
+      "gold": "28",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_52",
+      "bench": "math175",
+      "plurality_answer": "\\frac{7}{8}",
+      "gold": "\\frac{7}{8}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_85",
+      "bench": "math175",
+      "plurality_answer": "5",
+      "gold": "5",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_12",
+      "bench": "math175",
+      "plurality_answer": "3",
+      "gold": "3",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_157",
+      "bench": "math175",
+      "plurality_answer": "0",
+      "gold": "0",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_126",
+      "bench": "math175",
+      "plurality_answer": "\\text{odd}",
+      "gold": "\\text{odd}",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_105",
+      "bench": "math175",
+      "plurality_answer": "E",
+      "gold": "\\text{(E)}",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_113",
+      "bench": "math175",
+      "plurality_answer": "24",
+      "gold": "24",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_161",
+      "bench": "math175",
+      "plurality_answer": "76",
+      "gold": "76",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_124",
+      "bench": "math175",
+      "plurality_answer": "2",
+      "gold": "2",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_122",
+      "bench": "math175",
+      "plurality_answer": "180",
+      "gold": "180",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_138",
+      "bench": "math175",
+      "plurality_answer": "4",
+      "gold": "4",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_125",
+      "bench": "math175",
+      "plurality_answer": "\\frac{27}{128}",
+      "gold": "\\frac{27}{128}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_152",
+      "bench": "math175",
+      "plurality_answer": "86",
+      "gold": "86^\\circ",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_185",
+      "bench": "math175",
+      "plurality_answer": "291",
+      "gold": "291",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_167",
+      "bench": "math175",
+      "plurality_answer": "2",
+      "gold": "2",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_179",
+      "bench": "math175",
+      "plurality_answer": "2",
+      "gold": "2",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_144",
+      "bench": "math175",
+      "plurality_answer": "1, 2, -2, -3",
+      "gold": "1,2,-2,-3",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_142",
+      "bench": "math175",
+      "plurality_answer": "29",
+      "gold": "29",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_104",
+      "bench": "math175",
+      "plurality_answer": "(3, -4)",
+      "gold": "(3,-4)",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_169",
+      "bench": "math175",
+      "plurality_answer": "63",
+      "gold": "63",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_177",
+      "bench": "math175",
+      "plurality_answer": "\\frac{13}{144}",
+      "gold": "\\frac{13}{144}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_130",
+      "bench": "math175",
+      "plurality_answer": "165",
+      "gold": "165",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_102",
+      "bench": "math175",
+      "plurality_answer": "5040",
+      "gold": "5040",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_147",
+      "bench": "math175",
+      "plurality_answer": "81",
+      "gold": "81\\text{ teachers}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_194",
+      "bench": "math175",
+      "plurality_answer": "28",
+      "gold": "28",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_101",
+      "bench": "math175",
+      "plurality_answer": "8",
+      "gold": "8",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_153",
+      "bench": "math175",
+      "plurality_answer": "\\frac{1}{2}",
+      "gold": "\\frac12",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_184",
+      "bench": "math175",
+      "plurality_answer": "\\frac{1}{11}",
+      "gold": "\\frac{1}{11}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_196",
+      "bench": "math175",
+      "plurality_answer": "8",
+      "gold": "8",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_103",
+      "bench": "math175",
+      "plurality_answer": "4t",
+      "gold": "4t",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_186",
+      "bench": "math175",
+      "plurality_answer": "-9",
+      "gold": "-9",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_115",
+      "bench": "math175",
+      "plurality_answer": "330",
+      "gold": "330",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_136",
+      "bench": "math175",
+      "plurality_answer": "49",
+      "gold": "49",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_137",
+      "bench": "math175",
+      "plurality_answer": "3",
+      "gold": "3",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_160",
+      "bench": "math175",
+      "plurality_answer": "\\text{neither}",
+      "gold": "\\text{neither}",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_145",
+      "bench": "math175",
+      "plurality_answer": "4",
+      "gold": "4",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_123",
+      "bench": "math175",
+      "plurality_answer": "y = x + 3",
+      "gold": "y = x+3",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_109",
+      "bench": "math175",
+      "plurality_answer": "6",
+      "gold": "6",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_112",
+      "bench": "math175",
+      "plurality_answer": "\\frac{1}{3}",
+      "gold": "\\frac{1}{3}",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_139",
+      "bench": "math175",
+      "plurality_answer": "2",
+      "gold": "2",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_170",
+      "bench": "math175",
+      "plurality_answer": "75",
+      "gold": "75",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_198",
+      "bench": "math175",
+      "plurality_answer": "-3",
+      "gold": "-3",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_192",
+      "bench": "math175",
+      "plurality_answer": "\\begin{pmatrix} \\frac{2}{5} \\\\ -\\frac{1}{5} \\\\ 0 \\end{pmatrix}",
+      "gold": "\\begin{pmatrix} 2/5 \\\\ -1/5 \\\\ 0 \\end{pmatrix}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_249",
+      "bench": "math175",
+      "plurality_answer": "4",
+      "gold": "4",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_277",
+      "bench": "math175",
+      "plurality_answer": "4",
+      "gold": "4",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_247",
+      "bench": "math175",
+      "plurality_answer": "1",
+      "gold": "1",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_219",
+      "bench": "math175",
+      "plurality_answer": "\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}",
+      "gold": "\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_248",
+      "bench": "math175",
+      "plurality_answer": "\\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}",
+      "gold": "\\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_239",
+      "bench": "math175",
+      "plurality_answer": "(-\\infty, -7) \\cup (1, 2)",
+      "gold": "(-\\infty,-7) \\cup (1,2)",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_289",
+      "bench": "math175",
+      "plurality_answer": "2",
+      "gold": "2",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_210",
+      "bench": "math175",
+      "plurality_answer": "0",
+      "gold": "0",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_232",
+      "bench": "math175",
+      "plurality_answer": "30",
+      "gold": "30",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_237",
+      "bench": "math175",
+      "plurality_answer": "14",
+      "gold": "14",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_223",
+      "bench": "math175",
+      "plurality_answer": "-2",
+      "gold": "-2",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_233",
+      "bench": "math175",
+      "plurality_answer": "25",
+      "gold": "25 \\text{ ft}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_214",
+      "bench": "math175",
+      "plurality_answer": "-10",
+      "gold": "-10",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_238",
+      "bench": "math175",
+      "plurality_answer": "-9",
+      "gold": "-9",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_218",
+      "bench": "math175",
+      "plurality_answer": "132",
+      "gold": "132",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_267",
+      "bench": "math175",
+      "plurality_answer": "56",
+      "gold": "56",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_287",
+      "bench": "math175",
+      "plurality_answer": "-\\frac{4}{5}",
+      "gold": "-\\frac{4}{5}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_273",
+      "bench": "math175",
+      "plurality_answer": "\\frac{1}{8}",
+      "gold": "\\frac{1}{8}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_268",
+      "bench": "math175",
+      "plurality_answer": "9",
+      "gold": "9",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_274",
+      "bench": "math175",
+      "plurality_answer": "165",
+      "gold": "165",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_251",
+      "bench": "math175",
+      "plurality_answer": "-49",
+      "gold": "-49",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_213",
+      "bench": "math175",
+      "plurality_answer": "400",
+      "gold": "400",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_205",
+      "bench": "math175",
+      "plurality_answer": "8",
+      "gold": "8",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_282",
+      "bench": "math175",
+      "plurality_answer": "-2",
+      "gold": "-2",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_276",
+      "bench": "math175",
+      "plurality_answer": "80",
+      "gold": "80",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_291",
+      "bench": "math175",
+      "plurality_answer": "6",
+      "gold": "6",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_285",
+      "bench": "math175",
+      "plurality_answer": "21",
+      "gold": "21",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_258",
+      "bench": "math175",
+      "plurality_answer": "3600",
+      "gold": "3600",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_236",
+      "bench": "math175",
+      "plurality_answer": "11",
+      "gold": "11",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_220",
+      "bench": "math175",
+      "plurality_answer": "1092",
+      "gold": "1092",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_201",
+      "bench": "math175",
+      "plurality_answer": "75",
+      "gold": "75",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_245",
+      "bench": "math175",
+      "plurality_answer": "-40",
+      "gold": "-40",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_240",
+      "bench": "math175",
+      "plurality_answer": "10",
+      "gold": "10",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_279",
+      "bench": "math175",
+      "plurality_answer": "2\\sqrt{5}",
+      "gold": "2 \\sqrt{5}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_244",
+      "bench": "math175",
+      "plurality_answer": "4",
+      "gold": "4",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_297",
+      "bench": "math175",
+      "plurality_answer": "6",
+      "gold": "6",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_217",
+      "bench": "math175",
+      "plurality_answer": "18",
+      "gold": "384",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_211",
+      "bench": "math175",
+      "plurality_answer": "54",
+      "gold": "54",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_259",
+      "bench": "math175",
+      "plurality_answer": "-15",
+      "gold": "-15",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_283",
+      "bench": "math175",
+      "plurality_answer": "9",
+      "gold": "9",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_356",
+      "bench": "math175",
+      "plurality_answer": "84",
+      "gold": "84",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_369",
+      "bench": "math175",
+      "plurality_answer": "1",
+      "gold": "1",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_327",
+      "bench": "math175",
+      "plurality_answer": "1",
+      "gold": "1",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_377",
+      "bench": "math175",
+      "plurality_answer": "13",
+      "gold": "13",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_311",
+      "bench": "math175",
+      "plurality_answer": "6, -2",
+      "gold": "6, -2",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_302",
+      "bench": "math175",
+      "plurality_answer": "100",
+      "gold": "100",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_390",
+      "bench": "math175",
+      "plurality_answer": "24",
+      "gold": "24",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_312",
+      "bench": "math175",
+      "plurality_answer": "44",
+      "gold": "44",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_325",
+      "bench": "math175",
+      "plurality_answer": "0",
+      "gold": "0",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_346",
+      "bench": "math175",
+      "plurality_answer": "[5, 5\\sqrt{2}]",
+      "gold": "[5,5 \\sqrt{2}]",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_394",
+      "bench": "math175",
+      "plurality_answer": "\\sqrt{6}",
+      "gold": "\\sqrt{6}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_301",
+      "bench": "math175",
+      "plurality_answer": "4",
+      "gold": "4",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_354",
+      "bench": "math175",
+      "plurality_answer": "60",
+      "gold": "45^\\circ, 135^\\circ",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_389",
+      "bench": "math175",
+      "plurality_answer": "6",
+      "gold": "6",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_314",
+      "bench": "math175",
+      "plurality_answer": "12",
+      "gold": "12",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_342",
+      "bench": "math175",
+      "plurality_answer": "(10, 2)",
+      "gold": "(10,2)",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_344",
+      "bench": "math175",
+      "plurality_answer": "16",
+      "gold": "16",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_379",
+      "bench": "math175",
+      "plurality_answer": "\\frac{13}{3}",
+      "gold": "\\frac{13}{3}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_324",
+      "bench": "math175",
+      "plurality_answer": "19",
+      "gold": "19",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_321",
+      "bench": "math175",
+      "plurality_answer": "247000",
+      "gold": "247000",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_341",
+      "bench": "math175",
+      "plurality_answer": "3",
+      "gold": "3",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_337",
+      "bench": "math175",
+      "plurality_answer": "360",
+      "gold": "360",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_355",
+      "bench": "math175",
+      "plurality_answer": "96\\sqrt{3}",
+      "gold": "96\\sqrt{3}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_309",
+      "bench": "math175",
+      "plurality_answer": "\\begin{pmatrix} -14 \\\\ -7 \\\\ -42 \\end{pmatrix}",
+      "gold": "\\begin{pmatrix} -10 \\\\ -35 \\\\ 30 \\end{pmatrix}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_349",
+      "bench": "math175",
+      "plurality_answer": "9",
+      "gold": "9",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_345",
+      "bench": "math175",
+      "plurality_answer": "\\frac{109}{150}",
+      "gold": "\\frac{109}{150}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_317",
+      "bench": "math175",
+      "plurality_answer": "8\\sqrt{3}",
+      "gold": "8\\sqrt{3}",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_343",
+      "bench": "math175",
+      "plurality_answer": "512",
+      "gold": "512",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_392",
+      "bench": "math175",
+      "plurality_answer": "150",
+      "gold": "150",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_368",
+      "bench": "math175",
+      "plurality_answer": "3",
+      "gold": "2",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_303",
+      "bench": "math175",
+      "plurality_answer": "20",
+      "gold": "20",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_360",
+      "bench": "math175",
+      "plurality_answer": "364",
+      "gold": "111",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_347",
+      "bench": "math175",
+      "plurality_answer": "30240",
+      "gold": "30,\\!240",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_378",
+      "bench": "math175",
+      "plurality_answer": "42",
+      "gold": "42",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_363",
+      "bench": "math175",
+      "plurality_answer": "3",
+      "gold": "3",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_335",
+      "bench": "math175",
+      "plurality_answer": "\\sqrt{58} + 3",
+      "gold": "\\sqrt{109}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_357",
+      "bench": "math175",
+      "plurality_answer": "-1",
+      "gold": "-1",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_373",
+      "bench": "math175",
+      "plurality_answer": "89",
+      "gold": "89",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_319",
+      "bench": "math175",
+      "plurality_answer": "97",
+      "gold": "97",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_382",
+      "bench": "math175",
+      "plurality_answer": "36",
+      "gold": "64",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_476",
+      "bench": "math175",
+      "plurality_answer": "5.6569",
+      "gold": "4\\sqrt{2}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_423",
+      "bench": "math175",
+      "plurality_answer": "6",
+      "gold": "12",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_477",
+      "bench": "math175",
+      "plurality_answer": "\\frac{35}{128}",
+      "gold": "\\frac{35}{128}",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_435",
+      "bench": "math175",
+      "plurality_answer": "1043",
+      "gold": "1041",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_458",
+      "bench": "math175",
+      "plurality_answer": "\\frac{17}{50}",
+      "gold": "\\dfrac{17}{50}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_407",
+      "bench": "math175",
+      "plurality_answer": "-3",
+      "gold": "-3",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_497",
+      "bench": "math175",
+      "plurality_answer": "68",
+      "gold": "75\\%",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_440",
+      "bench": "math175",
+      "plurality_answer": "30",
+      "gold": "\\frac{3840}{289}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_433",
+      "bench": "math175",
+      "plurality_answer": "2 + \\pi",
+      "gold": "3\\pi-\\frac{\\sqrt{3}}{2}",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "math500_461",
+      "bench": "math175",
+      "plurality_answer": "10455",
+      "gold": "10455",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_480",
+      "bench": "math175",
+      "plurality_answer": "5.5",
+      "gold": "\\frac{11}{2}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_436",
+      "bench": "math175",
+      "plurality_answer": "18.90",
+      "gold": "\\$18.90",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_457",
+      "bench": "math175",
+      "plurality_answer": "1",
+      "gold": "-\\frac{2010012}{2010013}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_493",
+      "bench": "math175",
+      "plurality_answer": "3",
+      "gold": "1",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "math500_463",
+      "bench": "math175",
+      "plurality_answer": "\\frac{3}{14}",
+      "gold": "\\frac{1}{2}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_1",
+      "bench": "aime",
+      "plurality_answer": "49",
+      "gold": "70",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_2",
+      "bench": "aime",
+      "plurality_answer": "576",
+      "gold": "588",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "aime2025_3",
+      "bench": "aime",
+      "plurality_answer": "16",
+      "gold": "16",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_4",
+      "bench": "aime",
+      "plurality_answer": "168",
+      "gold": "117",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_5",
+      "bench": "aime",
+      "plurality_answer": "2583",
+      "gold": "279",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "aime2025_6",
+      "bench": "aime",
+      "plurality_answer": "504",
+      "gold": "504",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_7",
+      "bench": "aime",
+      "plurality_answer": "12",
+      "gold": "821",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_8",
+      "bench": "aime",
+      "plurality_answer": "13",
+      "gold": "77",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_9",
+      "bench": "aime",
+      "plurality_answer": "6",
+      "gold": "62",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_10",
+      "bench": "aime",
+      "plurality_answer": "62",
+      "gold": "81",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_11",
+      "bench": "aime",
+      "plurality_answer": "35",
+      "gold": "259",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_12",
+      "bench": "aime",
+      "plurality_answer": "315",
+      "gold": "510",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_13",
+      "bench": "aime",
+      "plurality_answer": "379",
+      "gold": "204",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_14",
+      "bench": "aime",
+      "plurality_answer": "68",
+      "gold": "60",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_15",
+      "bench": "aime",
+      "plurality_answer": "489",
+      "gold": "735",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_16",
+      "bench": "aime",
+      "plurality_answer": "780",
+      "gold": "468",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_17",
+      "bench": "aime",
+      "plurality_answer": "49",
+      "gold": "49",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_18",
+      "bench": "aime",
+      "plurality_answer": "96",
+      "gold": "82",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_19",
+      "bench": "aime",
+      "plurality_answer": "67",
+      "gold": "106",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_20",
+      "bench": "aime",
+      "plurality_answer": "384",
+      "gold": "336",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_21",
+      "bench": "aime",
+      "plurality_answer": "37",
+      "gold": "293",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_22",
+      "bench": "aime",
+      "plurality_answer": "40959",
+      "gold": "237",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_23",
+      "bench": "aime",
+      "plurality_answer": "1000",
+      "gold": "610",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_24",
+      "bench": "aime",
+      "plurality_answer": "40",
+      "gold": "149",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_25",
+      "bench": "aime",
+      "plurality_answer": "9",
+      "gold": "907",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_26",
+      "bench": "aime",
+      "plurality_answer": "2704156",
+      "gold": "113",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_27",
+      "bench": "aime",
+      "plurality_answer": "33",
+      "gold": "19",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_28",
+      "bench": "aime",
+      "plurality_answer": "3",
+      "gold": "248",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_29",
+      "bench": "aime",
+      "plurality_answer": "196",
+      "gold": "104",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "aime2025_30",
+      "bench": "aime",
+      "plurality_answer": "188",
+      "gold": "240",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_1",
+      "bench": "cleanmath",
+      "plurality_answer": "1",
+      "gold": "103",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_2",
+      "bench": "cleanmath",
+      "plurality_answer": "3075",
+      "gold": "3375",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "hmmt_feb_2025_3",
+      "bench": "cleanmath",
+      "plurality_answer": "120932352",
+      "gold": "\\frac{1}{576}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_4",
+      "bench": "cleanmath",
+      "plurality_answer": "0",
+      "gold": "-984",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_5",
+      "bench": "cleanmath",
+      "plurality_answer": "9000",
+      "gold": "890",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_6",
+      "bench": "cleanmath",
+      "plurality_answer": "0",
+      "gold": "\\frac{1311}{2017}",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "hmmt_feb_2025_7",
+      "bench": "cleanmath",
+      "plurality_answer": "2",
+      "gold": "\\frac{9 \\sqrt{23}}{23}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_8",
+      "bench": "cleanmath",
+      "plurality_answer": "0",
+      "gold": "1-\\frac{2}{\\pi}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_9",
+      "bench": "cleanmath",
+      "plurality_answer": "1",
+      "gold": "1037",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "hmmt_feb_2025_10",
+      "bench": "cleanmath",
+      "plurality_answer": "0",
+      "gold": "\\frac{-1+\\sqrt{17}}{2}, \\frac{-1-\\sqrt{17}}{2}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_11",
+      "bench": "cleanmath",
+      "plurality_answer": "14",
+      "gold": "56",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_12",
+      "bench": "cleanmath",
+      "plurality_answer": "1",
+      "gold": "29",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_13",
+      "bench": "cleanmath",
+      "plurality_answer": "1",
+      "gold": "105",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_14",
+      "bench": "cleanmath",
+      "plurality_answer": "6",
+      "gold": "2304",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_15",
+      "bench": "cleanmath",
+      "plurality_answer": "200",
+      "gold": "200",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_16",
+      "bench": "cleanmath",
+      "plurality_answer": "115",
+      "gold": "6300",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_17",
+      "bench": "cleanmath",
+      "plurality_answer": "1",
+      "gold": "2^{25} \\cdot 26!",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_18",
+      "bench": "cleanmath",
+      "plurality_answer": "1",
+      "gold": "\\frac{2025}{101}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_19",
+      "bench": "cleanmath",
+      "plurality_answer": "\\frac{1}{2}",
+      "gold": "\\frac{4}{9}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_20",
+      "bench": "cleanmath",
+      "plurality_answer": "14",
+      "gold": "\\frac{448}{3}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_21",
+      "bench": "cleanmath",
+      "plurality_answer": "15\\sqrt{3}",
+      "gold": "26",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_22",
+      "bench": "cleanmath",
+      "plurality_answer": "65",
+      "gold": "63",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_23",
+      "bench": "cleanmath",
+      "plurality_answer": "20",
+      "gold": "8\\sqrt{10}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_24",
+      "bench": "cleanmath",
+      "plurality_answer": "36",
+      "gold": "20",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "hmmt_feb_2025_25",
+      "bench": "cleanmath",
+      "plurality_answer": "\\sqrt{13}",
+      "gold": "\\sqrt{23}-2 \\sqrt{3}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_26",
+      "bench": "cleanmath",
+      "plurality_answer": "48",
+      "gold": "9\\sqrt{15}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_27",
+      "bench": "cleanmath",
+      "plurality_answer": "\\frac{1}{3}",
+      "gold": "\\frac{7}{18}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_28",
+      "bench": "cleanmath",
+      "plurality_answer": "5",
+      "gold": "\\sqrt{6}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_29",
+      "bench": "cleanmath",
+      "plurality_answer": "10",
+      "gold": "14+4\\sqrt{37}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "hmmt_feb_2025_30",
+      "bench": "cleanmath",
+      "plurality_answer": "31.5",
+      "gold": "\\sqrt{\\frac{95}{24}}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_1",
+      "bench": "cleanmath",
+      "plurality_answer": "(\\sqrt{3})^{99}",
+      "gold": "2^{99}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_2",
+      "bench": "cleanmath",
+      "plurality_answer": "\\frac{1}{9}",
+      "gold": "\\frac{1}{9}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_3",
+      "bench": "cleanmath",
+      "plurality_answer": "2",
+      "gold": "\\frac{\\sqrt{13}}{2}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_4",
+      "bench": "cleanmath",
+      "plurality_answer": "\\frac{17}{153}",
+      "gold": "\\frac{1}{9}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_5",
+      "bench": "cleanmath",
+      "plurality_answer": "16",
+      "gold": "240",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_6",
+      "bench": "cleanmath",
+      "plurality_answer": "90",
+      "gold": "72",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_7",
+      "bench": "cleanmath",
+      "plurality_answer": "924",
+      "gold": "924",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_8",
+      "bench": "cleanmath",
+      "plurality_answer": "2023",
+      "gold": "20",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_9",
+      "bench": "cleanmath",
+      "plurality_answer": "216",
+      "gold": "173",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_10",
+      "bench": "cleanmath",
+      "plurality_answer": "25",
+      "gold": "100",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_11",
+      "bench": "cleanmath",
+      "plurality_answer": "4",
+      "gold": "3+2\\sqrt{2}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_12",
+      "bench": "cleanmath",
+      "plurality_answer": "120",
+      "gold": "125",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_13",
+      "bench": "cleanmath",
+      "plurality_answer": "\\frac{1}{3}",
+      "gold": "\\frac{1}{3}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_14",
+      "bench": "cleanmath",
+      "plurality_answer": "32768",
+      "gold": "7",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "brumo_2025_15",
+      "bench": "cleanmath",
+      "plurality_answer": "4608",
+      "gold": "4529",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_16",
+      "bench": "cleanmath",
+      "plurality_answer": "1296",
+      "gold": "1296",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_17",
+      "bench": "cleanmath",
+      "plurality_answer": "2 + \\sqrt{2}",
+      "gold": "1+\\sqrt{3}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_18",
+      "bench": "cleanmath",
+      "plurality_answer": "20\\pi",
+      "gold": "20\\pi",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_19",
+      "bench": "cleanmath",
+      "plurality_answer": "6",
+      "gold": "12",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "brumo_2025_20",
+      "bench": "cleanmath",
+      "plurality_answer": "12",
+      "gold": "12",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_21",
+      "bench": "cleanmath",
+      "plurality_answer": "320",
+      "gold": "160",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_22",
+      "bench": "cleanmath",
+      "plurality_answer": "8",
+      "gold": "72",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_23",
+      "bench": "cleanmath",
+      "plurality_answer": "3, 2, \\frac{3 + i\\sqrt{3}}{2}, \\frac{3 - i\\sqrt{3}}{2}",
+      "gold": "2,3,\\frac{3+i\\sqrt{3}}{2},\\frac{3-i\\sqrt{3}}{2}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_24",
+      "bench": "cleanmath",
+      "plurality_answer": "1024",
+      "gold": "89",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_25",
+      "bench": "cleanmath",
+      "plurality_answer": "\\sqrt{5}",
+      "gold": "\\frac{1+\\sqrt{31}}{2}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_26",
+      "bench": "cleanmath",
+      "plurality_answer": "663",
+      "gold": "337",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_27",
+      "bench": "cleanmath",
+      "plurality_answer": "39.75",
+      "gold": "\\frac{737}{39}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_28",
+      "bench": "cleanmath",
+      "plurality_answer": "18",
+      "gold": "5\\sqrt{2}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_29",
+      "bench": "cleanmath",
+      "plurality_answer": "0",
+      "gold": "-\\frac{2431}{50}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "brumo_2025_30",
+      "bench": "cleanmath",
+      "plurality_answer": "12",
+      "gold": "\\frac{9\\sqrt{30}}{4}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_1",
+      "bench": "cleanmath",
+      "plurality_answer": "3546",
+      "gold": "900",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_2",
+      "bench": "cleanmath",
+      "plurality_answer": "-\\frac{e\\pi}{2}",
+      "gold": "-\\frac{\\pi e}{2}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_3",
+      "bench": "cleanmath",
+      "plurality_answer": "\\frac{6}{5}",
+      "gold": "\\frac{6}{5}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_4",
+      "bench": "cleanmath",
+      "plurality_answer": "280",
+      "gold": "100",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_5",
+      "bench": "cleanmath",
+      "plurality_answer": "1012.5",
+      "gold": "\\frac{2025}{2}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_6",
+      "bench": "cleanmath",
+      "plurality_answer": "\\frac{\\sqrt{3}}{2}",
+      "gold": "\\frac{3 \\sqrt{3}}{4}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_7",
+      "bench": "cleanmath",
+      "plurality_answer": "\\sqrt{e}",
+      "gold": "e^{\\frac{1}{2}}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_8",
+      "bench": "cleanmath",
+      "plurality_answer": "4\\pi",
+      "gold": "2 \\sqrt{3}+\\frac{8 \\pi}{3}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_9",
+      "bench": "cleanmath",
+      "plurality_answer": "0",
+      "gold": "-1013 \\ln (2026)",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "smt_2025_10",
+      "bench": "cleanmath",
+      "plurality_answer": "2\\pi",
+      "gold": "\\frac{4 \\pi}{3}+\\sqrt{3}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_11",
+      "bench": "cleanmath",
+      "plurality_answer": "107",
+      "gold": "107",
+      "plurality_correct": true,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "smt_2025_12",
+      "bench": "cleanmath",
+      "plurality_answer": "164",
+      "gold": "63",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_13",
+      "bench": "cleanmath",
+      "plurality_answer": "16",
+      "gold": "79",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_14",
+      "bench": "cleanmath",
+      "plurality_answer": "106",
+      "gold": "90",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_15",
+      "bench": "cleanmath",
+      "plurality_answer": "8",
+      "gold": "5",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_16",
+      "bench": "cleanmath",
+      "plurality_answer": "0",
+      "gold": "2024",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_17",
+      "bench": "cleanmath",
+      "plurality_answer": "90001",
+      "gold": "88607",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "smt_2025_18",
+      "bench": "cleanmath",
+      "plurality_answer": "\\frac{7}{2}",
+      "gold": "\\frac{157}{40}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_19",
+      "bench": "cleanmath",
+      "plurality_answer": "-88",
+      "gold": "608",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_20",
+      "bench": "cleanmath",
+      "plurality_answer": "\\frac{1}{2}",
+      "gold": "\\frac{5}{12}",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "smt_2025_21",
+      "bench": "cleanmath",
+      "plurality_answer": "3",
+      "gold": "3",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_22",
+      "bench": "cleanmath",
+      "plurality_answer": "73",
+      "gold": "29",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_23",
+      "bench": "cleanmath",
+      "plurality_answer": "20^\\circ",
+      "gold": "55",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_24",
+      "bench": "cleanmath",
+      "plurality_answer": "\\frac{5}{2}",
+      "gold": "\\frac{2 \\sqrt{6}}{3}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_25",
+      "bench": "cleanmath",
+      "plurality_answer": "\\frac{12}{25}",
+      "gold": "\\frac{12}{25}",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_26",
+      "bench": "cleanmath",
+      "plurality_answer": "\\frac{54\\sqrt{6}}{25}",
+      "gold": "\\frac{54 \\sqrt{6}}{25}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_27",
+      "bench": "cleanmath",
+      "plurality_answer": "4",
+      "gold": "\\frac{65 \\sqrt{6}-65 \\sqrt{2}}{32}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_28",
+      "bench": "cleanmath",
+      "plurality_answer": "10",
+      "gold": "\\sqrt{133}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_29",
+      "bench": "cleanmath",
+      "plurality_answer": "10",
+      "gold": "2",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_30",
+      "bench": "cleanmath",
+      "plurality_answer": "202.5",
+      "gold": "1350 \\sqrt{3}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_31",
+      "bench": "cleanmath",
+      "plurality_answer": "5",
+      "gold": "5",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_32",
+      "bench": "cleanmath",
+      "plurality_answer": "86",
+      "gold": "13,14,18",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_33",
+      "bench": "cleanmath",
+      "plurality_answer": "4",
+      "gold": "\\frac{27}{5}",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "smt_2025_34",
+      "bench": "cleanmath",
+      "plurality_answer": "2",
+      "gold": "66",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_35",
+      "bench": "cleanmath",
+      "plurality_answer": "2",
+      "gold": "\\frac{10 \\sqrt{3}+\\sqrt{6}+\\sqrt{2}}{4}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_36",
+      "bench": "cleanmath",
+      "plurality_answer": "310",
+      "gold": "36",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_37",
+      "bench": "cleanmath",
+      "plurality_answer": "46080",
+      "gold": "190800",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_38",
+      "bench": "cleanmath",
+      "plurality_answer": "1",
+      "gold": "7",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_39",
+      "bench": "cleanmath",
+      "plurality_answer": "25",
+      "gold": "\\frac{288 \\sqrt{527}}{527}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_40",
+      "bench": "cleanmath",
+      "plurality_answer": "1275",
+      "gold": "511",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_41",
+      "bench": "cleanmath",
+      "plurality_answer": "13",
+      "gold": "\\frac{\\sin (6 \\pi / 13)}{\\sin (\\pi / 13)}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_42",
+      "bench": "cleanmath",
+      "plurality_answer": "49152",
+      "gold": "213",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_43",
+      "bench": "cleanmath",
+      "plurality_answer": "24",
+      "gold": "\\frac{1980}{169}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_44",
+      "bench": "cleanmath",
+      "plurality_answer": "32000",
+      "gold": "24000",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_45",
+      "bench": "cleanmath",
+      "plurality_answer": "144",
+      "gold": "144",
+      "plurality_correct": true,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_46",
+      "bench": "cleanmath",
+      "plurality_answer": "343",
+      "gold": "286",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_47",
+      "bench": "cleanmath",
+      "plurality_answer": "-40",
+      "gold": "-20",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_48",
+      "bench": "cleanmath",
+      "plurality_answer": "100",
+      "gold": "-14",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_49",
+      "bench": "cleanmath",
+      "plurality_answer": "1929",
+      "gold": "1002",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_50",
+      "bench": "cleanmath",
+      "plurality_answer": "514228",
+      "gold": "832038\\sqrt{\\log_{3} 2}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_51",
+      "bench": "cleanmath",
+      "plurality_answer": "\\pi",
+      "gold": "\\frac{29 \\pi}{12}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_52",
+      "bench": "cleanmath",
+      "plurality_answer": "\\frac{1}{5}",
+      "gold": "\\frac{23-5 \\sqrt{21}}{10}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "smt_2025_53",
+      "bench": "cleanmath",
+      "plurality_answer": "2",
+      "gold": "41",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "apex_2025_1",
+      "bench": "cleanmath",
+      "plurality_answer": "2025",
+      "gold": "4049",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "apex_2025_2",
+      "bench": "cleanmath",
+      "plurality_answer": "2",
+      "gold": "1/2",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "apex_2025_3",
+      "bench": "cleanmath",
+      "plurality_answer": "1",
+      "gold": "\\frac{1980}{169}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "apex_2025_4",
+      "bench": "cleanmath",
+      "plurality_answer": "82",
+      "gold": "6266942768",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "apex_2025_5",
+      "bench": "cleanmath",
+      "plurality_answer": "",
+      "gold": "6",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "apex_2025_6",
+      "bench": "cleanmath",
+      "plurality_answer": "",
+      "gold": "138",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "apex_2025_7",
+      "bench": "cleanmath",
+      "plurality_answer": "1",
+      "gold": "248/517",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "apex_2025_8",
+      "bench": "cleanmath",
+      "plurality_answer": "384",
+      "gold": "1164",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "apex_2025_9",
+      "bench": "cleanmath",
+      "plurality_answer": "6\\pi",
+      "gold": "2 \\sqrt{3}+\\frac{8 \\pi}{3}",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    },
+    {
+      "id": "apex_2025_10",
+      "bench": "cleanmath",
+      "plurality_answer": "0",
+      "gold": "213",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "apex_2025_11",
+      "bench": "cleanmath",
+      "plurality_answer": "3",
+      "gold": "14/5",
+      "plurality_correct": false,
+      "p_true": 0.95,
+      "raw_reply": "True"
+    },
+    {
+      "id": "apex_2025_12",
+      "bench": "cleanmath",
+      "plurality_answer": "2025",
+      "gold": "2112",
+      "plurality_correct": false,
+      "p_true": 0.05,
+      "raw_reply": "False"
+    }
+  ],
+  "summary": {
+    "math175": {
+      "n": 175,
+      "auroc_wrong_vs_1mptrue": 0.5620689655172414
+    },
+    "aime": {
+      "n": 30,
+      "auroc_wrong_vs_1mptrue": 0.46296296296296297
+    },
+    "cleanmath": {
+      "n": 125,
+      "auroc_wrong_vs_1mptrue": 0.47424242424242424
+    }
+  }
+}

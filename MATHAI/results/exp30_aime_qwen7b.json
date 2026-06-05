@@ -1,0 +1,213 @@
+{
+  "extractor": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+  "results": [
+    {
+      "id": "aime2025_1",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 311,
+      "script": "def verify(answer):\n    valid = []\n    for b in range(10, 1000):\n        x = 1*b + 7  # 17 in base b\n        y = 9*b + 7  # 97 in base b\n        if y % x == 0:\n            valid.append(b)\n    total = sum(valid)\n    try:\n        return int(str(answer).strip()) == total\n    except Exception:\n        return False",
+      "gold": "70",
+      "candidate": "\\frac{7(39 - 1)}{9 -",
+      "solver_correct": false,
+      "gold_verdict": true,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 4.729856014251709
+    },
+    {
+      "id": "aime2025_2",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 0.9536581039428711
+    },
+    {
+      "id": "aime2025_3",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.22751784324646
+    },
+    {
+      "id": "aime2025_4",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.4342939853668213
+    },
+    {
+      "id": "aime2025_5",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.3731350898742676
+    },
+    {
+      "id": "aime2025_6",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.2885301113128662
+    },
+    {
+      "id": "aime2025_7",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.214643955230713
+    },
+    {
+      "id": "aime2025_8",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.324836015701294
+    },
+    {
+      "id": "aime2025_9",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.3324997425079346
+    },
+    {
+      "id": "aime2025_10",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.3478679656982422
+    },
+    {
+      "id": "aime2025_11",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.3335731029510498
+    },
+    {
+      "id": "aime2025_12",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.2997639179229736
+    },
+    {
+      "id": "aime2025_13",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.3620929718017578
+    },
+    {
+      "id": "aime2025_14",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.2938401699066162
+    },
+    {
+      "id": "aime2025_15",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.3240430355072021
+    },
+    {
+      "id": "aime2025_16",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 0.9184939861297607
+    },
+    {
+      "id": "aime2025_17",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 281,
+      "script": "def verify(answer):\n    total = 0\n    for n in range(1, 1000):\n        product = 3 * (n + 3) * (n**2 + 9)\n        if (n + 2) != 0 and product % (n + 2) == 0:\n            total += n\n    try:\n        return int(str(answer).strip()) == total\n    except Exception:\n        return False",
+      "gold": "49",
+      "candidate": "49",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.1287529468536377
+    },
+    {
+      "id": "aime2025_18",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.3121516704559326
+    },
+    {
+      "id": "aime2025_19",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.2870290279388428
+    },
+    {
+      "id": "aime2025_20",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.3705201148986816
+    },
+    {
+      "id": "aime2025_21",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.3343470096588135
+    },
+    {
+      "id": "aime2025_22",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.3313579559326172
+    },
+    {
+      "id": "aime2025_23",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 0.9168508052825928
+    },
+    {
+      "id": "aime2025_24",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.2926280498504639
+    },
+    {
+      "id": "aime2025_25",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.3693459033966064
+    },
+    {
+      "id": "aime2025_26",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.3287649154663086
+    },
+    {
+      "id": "aime2025_27",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.2366478443145752
+    },
+    {
+      "id": "aime2025_28",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.4254660606384277
+    },
+    {
+      "id": "aime2025_29",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.332383155822754
+    },
+    {
+      "id": "aime2025_30",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.3303101062774658
+    }
+  ]
+}

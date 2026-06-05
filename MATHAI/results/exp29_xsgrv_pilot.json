@@ -1,0 +1,80 @@
+{
+  "extractor": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+  "solver": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+  "n": 5,
+  "extracted": 5,
+  "executed": 5,
+  "verdicts": 3,
+  "results": [
+    {
+      "id": "aime2025_1",
+      "gold": "70",
+      "candidate": "\\frac{7(39 - 1)}{9 -",
+      "solver_correct": false,
+      "extraction_unverifiable": false,
+      "extraction_error": null,
+      "extraction_script": "def verify(answer):\n    valid = []\n    for b in range(10, 1000):\n        x = 1*b + 7  # 17 in base b\n        y = 9*b + 7  # 97 in base b\n        if y % x == 0:\n            valid.append(b)\n    total = sum(valid)\n    try:\n        return int(str(answer).strip()) == total\n    except Exception:\n        return False",
+      "verification_executed": true,
+      "verification_verdict": false,
+      "verification_error": null,
+      "elapsed": 8.872932195663452,
+      "cov_fires": true
+    },
+    {
+      "id": "aime2025_2",
+      "gold": "588",
+      "candidate": "576",
+      "solver_correct": false,
+      "extraction_unverifiable": false,
+      "extraction_error": null,
+      "extraction_script": "def verify(answer):\n    # Given values\n    AD = 4\n    DE = 16\n    EB = 8\n    AF = 13\n    FG = 52\n    GC = 26\n    area_DEGF = 288\n\n    # Calculate area of triangle AFD\n    area_AFD = 0.5 * AF * AD\n\n    # Calculate area of triangle FGC\n    area_FGC = 0.5 * FG * GC\n\n    # Calculate area of triangle AFG\n    area_AFG = area_AFD + area_DEGF + 0.5 * DE * FG\n\n    # Calculate area of triangle ABC\n    area_ABC = area_AFG + 0.5 * (AD + DE + EB) * GC\n\n    # Calculate area of heptagon AFNBCEM\n    area_heptagon = area_ABC + area_DEGF - area_AFD - area_FGC\n\n    try:\n        return float(str(answer).strip()) == area_heptagon\n    except Exception:\n        return False",
+      "verification_executed": true,
+      "verification_verdict": false,
+      "verification_error": null,
+      "elapsed": 5.266812801361084,
+      "cov_fires": true
+    },
+    {
+      "id": "aime2025_3",
+      "gold": "16",
+      "candidate": "836",
+      "solver_correct": false,
+      "extraction_unverifiable": false,
+      "extraction_error": null,
+      "extraction_script": "def verify(answer):\n    count = 0\n    for c in range(3, 10):  # at least 3 players chose chocolate\n        for v in range(1, c):  # at least 1 player chose vanilla and less than chocolate\n            s = 9 - c - v  # remaining players chose strawberry\n            if s >= 1:  # at least 1 player chose strawberry\n                count += math.comb(9, c) * math.comb(9-c, v)\n    try:\n        return int(str(answer).strip()) % 1000 == count % 1000\n    except Exception:\n        return False",
+      "verification_executed": true,
+      "verification_verdict": null,
+      "verification_error": "NameError: name 'math' is not defined",
+      "elapsed": 4.819662094116211,
+      "cov_fires": false
+    },
+    {
+      "id": "aime2025_4",
+      "gold": "117",
+      "candidate": "118",
+      "solver_correct": false,
+      "extraction_unverifiable": false,
+      "extraction_error": null,
+      "extraction_script": "def verify(answer):\n    count = 0\n    for x in range(-100, 101):\n        for y in range(-100, 101):\n            if 12*x**2 - x*y - 6*y**2 == 0:\n                count += 1\n    try:\n        return int(str(answer).strip()) == count\n    except Exception:\n        return False",
+      "verification_executed": true,
+      "verification_verdict": false,
+      "verification_error": null,
+      "elapsed": 1.7598111629486084,
+      "cov_fires": true
+    },
+    {
+      "id": "aime2025_5",
+      "gold": "279",
+      "candidate": "-1977",
+      "solver_correct": false,
+      "extraction_unverifiable": false,
+      "extraction_error": null,
+      "extraction_script": "def verify(answer):\n    count = 0\n    for p in permutations([1, 2, 3, 4, 5, 6, 7, 8]):\n        num = int(''.join(map(str, p)))\n        if num % 22 == 0:\n            count += 1\n    try:\n        return int(str(answer).strip()) == count - 2025\n    except Exception:\n        return False",
+      "verification_executed": true,
+      "verification_verdict": null,
+      "verification_error": "NameError: name 'permutations' is not defined",
+      "elapsed": 4.898122072219849,
+      "cov_fires": false
+    }
+  ]
+}

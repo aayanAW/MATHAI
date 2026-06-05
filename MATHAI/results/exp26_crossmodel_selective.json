@@ -1,0 +1,1870 @@
+{
+  "Qwen/Qwen2.5-7B-Instruct-Turbo": [
+    {
+      "id": "math500_42",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_41",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 0.5,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 2
+    },
+    {
+      "id": "math500_91",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_9",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_65",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_50",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 0.75,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 2
+    },
+    {
+      "id": "math500_1",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_70",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 0.75,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 2
+    },
+    {
+      "id": "math500_15",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_78",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_157",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_126",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_105",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_113",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 0.5,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 3
+    },
+    {
+      "id": "math500_161",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_124",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_122",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_138",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_125",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_152",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_249",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_277",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_247",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_219",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_248",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 0.25,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 4
+    },
+    {
+      "id": "math500_239",
+      "level": 3,
+      "sample0_correct": false,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_289",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_210",
+      "level": 3,
+      "sample0_correct": false,
+      "sc_confidence": 0.5,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 3
+    },
+    {
+      "id": "math500_232",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_237",
+      "level": 3,
+      "sample0_correct": false,
+      "sc_confidence": 0.5,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 3
+    },
+    {
+      "id": "math500_356",
+      "level": 4,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 4
+    },
+    {
+      "id": "math500_369",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 0.75,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 2
+    },
+    {
+      "id": "math500_327",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_377",
+      "level": 4,
+      "sample0_correct": false,
+      "sc_confidence": 0.5,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 3
+    },
+    {
+      "id": "math500_311",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 0.75,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 2
+    },
+    {
+      "id": "math500_302",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_390",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 0.75,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 2
+    },
+    {
+      "id": "math500_312",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_325",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 0.5,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 2
+    },
+    {
+      "id": "math500_346",
+      "level": 4,
+      "sample0_correct": false,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_476",
+      "level": 5,
+      "sample0_correct": true,
+      "sc_confidence": 0.25,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 4
+    },
+    {
+      "id": "math500_423",
+      "level": 5,
+      "sample0_correct": false,
+      "sc_confidence": 1.0,
+      "verb_confidence": 0.95,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_477",
+      "level": 5,
+      "sample0_correct": false,
+      "sc_confidence": 0.75,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 2
+    },
+    {
+      "id": "math500_435",
+      "level": 5,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.95,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 4
+    },
+    {
+      "id": "math500_458",
+      "level": 5,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_407",
+      "level": 5,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_497",
+      "level": 5,
+      "sample0_correct": false,
+      "sc_confidence": 0.5,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 3
+    },
+    {
+      "id": "math500_440",
+      "level": 5,
+      "sample0_correct": true,
+      "sc_confidence": 0.25,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 4
+    },
+    {
+      "id": "math500_433",
+      "level": 5,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 4
+    },
+    {
+      "id": "math500_461",
+      "level": 5,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    }
+  ],
+  "meta-llama/Llama-3.3-70B-Instruct-Turbo": [
+    {
+      "id": "math500_42",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_41",
+      "level": 1,
+      "sample0_correct": false,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_91",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_9",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_65",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_50",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_1",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_70",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_15",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_78",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_157",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_126",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_105",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_113",
+      "level": 2,
+      "sample0_correct": false,
+      "sc_confidence": 0.5,
+      "verb_confidence": 0.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 2
+    },
+    {
+      "id": "math500_161",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_124",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_122",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_138",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_125",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_152",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 0.75,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 2
+    },
+    {
+      "id": "math500_249",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_277",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_247",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_219",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_248",
+      "level": 3,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 4
+    },
+    {
+      "id": "math500_239",
+      "level": 3,
+      "sample0_correct": false,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_289",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_210",
+      "level": 3,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 4
+    },
+    {
+      "id": "math500_232",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_237",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_356",
+      "level": 4,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.8,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 4
+    },
+    {
+      "id": "math500_369",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_327",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_377",
+      "level": 4,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 4
+    },
+    {
+      "id": "math500_311",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 0.75,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 2
+    },
+    {
+      "id": "math500_302",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_390",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_312",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_325",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_346",
+      "level": 4,
+      "sample0_correct": false,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_476",
+      "level": 5,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 4
+    },
+    {
+      "id": "math500_423",
+      "level": 5,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 4
+    },
+    {
+      "id": "math500_477",
+      "level": 5,
+      "sample0_correct": true,
+      "sc_confidence": 0.5,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 2
+    },
+    {
+      "id": "math500_435",
+      "level": 5,
+      "sample0_correct": true,
+      "sc_confidence": 0.75,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 2
+    },
+    {
+      "id": "math500_458",
+      "level": 5,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_407",
+      "level": 5,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_497",
+      "level": 5,
+      "sample0_correct": true,
+      "sc_confidence": 0.75,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 2
+    },
+    {
+      "id": "math500_440",
+      "level": 5,
+      "sample0_correct": false,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_433",
+      "level": 5,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 4
+    },
+    {
+      "id": "math500_461",
+      "level": 5,
+      "sample0_correct": false,
+      "sc_confidence": 0.75,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 2
+    }
+  ],
+  "meta-llama/Meta-Llama-3-8B-Instruct-Lite": [
+    {
+      "id": "math500_42",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_41",
+      "level": 1,
+      "sample0_correct": false,
+      "sc_confidence": 0.5,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_91",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true
+    },
+    {
+      "id": "math500_9",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true
+    },
+    {
+      "id": "math500_65",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 0.5,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_50",
+      "level": 1,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_1",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true
+    },
+    {
+      "id": "math500_70",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true
+    },
+    {
+      "id": "math500_15",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_78",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true
+    },
+    {
+      "id": "math500_157",
+      "level": 2,
+      "sample0_correct": false,
+      "sc_confidence": 0.5,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_126",
+      "level": 2,
+      "sample0_correct": false,
+      "sc_confidence": 0.75,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_105",
+      "level": 2,
+      "sample0_correct": false,
+      "sc_confidence": 0.75,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_113",
+      "level": 2,
+      "sample0_correct": false,
+      "sc_confidence": 0.5,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_161",
+      "level": 2,
+      "sample0_correct": false,
+      "sc_confidence": 0.5,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_124",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 0.75,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true
+    },
+    {
+      "id": "math500_122",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 0.75,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true
+    },
+    {
+      "id": "math500_138",
+      "level": 2,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_125",
+      "level": 2,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_152",
+      "level": 2,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_249",
+      "level": 3,
+      "sample0_correct": false,
+      "sc_confidence": 0.5,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_277",
+      "level": 3,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_247",
+      "level": 3,
+      "sample0_correct": false,
+      "sc_confidence": 0.5,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_219",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 0.5,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_248",
+      "level": 3,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_239",
+      "level": 3,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_289",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 0.75,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true
+    },
+    {
+      "id": "math500_210",
+      "level": 3,
+      "sample0_correct": false,
+      "sc_confidence": 0.75,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_232",
+      "level": 3,
+      "sample0_correct": false,
+      "sc_confidence": 0.75,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_237",
+      "level": 3,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_356",
+      "level": 4,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_369",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 0.75,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_327",
+      "level": 4,
+      "sample0_correct": false,
+      "sc_confidence": 0.5,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_377",
+      "level": 4,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_311",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 0.5,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_302",
+      "level": 4,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_390",
+      "level": 4,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_312",
+      "level": 4,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_325",
+      "level": 4,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_346",
+      "level": 4,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_476",
+      "level": 5,
+      "sample0_correct": false,
+      "sc_confidence": 0.5,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_423",
+      "level": 5,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_477",
+      "level": 5,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_435",
+      "level": 5,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_458",
+      "level": 5,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_407",
+      "level": 5,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_497",
+      "level": 5,
+      "sample0_correct": false,
+      "sc_confidence": 0.5,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_440",
+      "level": 5,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_433",
+      "level": 5,
+      "sample0_correct": false,
+      "sc_confidence": 0.5,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    },
+    {
+      "id": "math500_461",
+      "level": 5,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.9,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false
+    }
+  ],
+  "deepseek-ai/DeepSeek-V3": [
+    {
+      "id": "math500_42",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_41",
+      "level": 1,
+      "sample0_correct": false,
+      "sc_confidence": 0.5,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 2
+    },
+    {
+      "id": "math500_91",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_9",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_65",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_50",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 0.75,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 2
+    },
+    {
+      "id": "math500_1",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_70",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_15",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_78",
+      "level": 1,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_157",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_126",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_105",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_113",
+      "level": 2,
+      "sample0_correct": false,
+      "sc_confidence": 0.25,
+      "verb_confidence": 0.95,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 4
+    },
+    {
+      "id": "math500_161",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_124",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_122",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_138",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_125",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_152",
+      "level": 2,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_249",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_277",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_247",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_219",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_248",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_239",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 0.75,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 2
+    },
+    {
+      "id": "math500_289",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_210",
+      "level": 3,
+      "sample0_correct": false,
+      "sc_confidence": 0.5,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 3
+    },
+    {
+      "id": "math500_232",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_237",
+      "level": 3,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_356",
+      "level": 4,
+      "sample0_correct": false,
+      "sc_confidence": 0.5,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 3
+    },
+    {
+      "id": "math500_369",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_327",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_377",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 0.5,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 3
+    },
+    {
+      "id": "math500_311",
+      "level": 4,
+      "sample0_correct": false,
+      "sc_confidence": 0.5,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 3
+    },
+    {
+      "id": "math500_302",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_390",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_312",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 1.0,
+      "sgrv_all_pass": true,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_325",
+      "level": 4,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    },
+    {
+      "id": "math500_346",
+      "level": 4,
+      "sample0_correct": false,
+      "sc_confidence": 0.75,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 2
+    },
+    {
+      "id": "math500_476",
+      "level": 5,
+      "sample0_correct": true,
+      "sc_confidence": 1.0,
+      "verb_confidence": 1.0,
+      "sgrv_confidence": 0.3,
+      "sgrv_all_pass": false,
+      "n_unique_answers": 1
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "n": 498,
+  "llama_raw": {
+    "n": 498,
+    "n_working": 241,
+    "n_tier": 243,
+    "n_tier_correct": 230,
+    "precision": 0.9465020576131687,
+    "precision_ci": [
+      0.9102542189735998,
+      0.9712105537652591
+    ],
+    "adv_fps": 0,
+    "adv_tests": 964
+  },
+  "deepseek_raw": {
+    "n": 498,
+    "n_working": 224,
+    "n_tier": 207,
+    "n_tier_correct": 199,
+    "precision": 0.961352657004831,
+    "precision_ci": [
+      0.9252721524054338,
+      0.9831696033854611
+    ],
+    "adv_fps": 0,
+    "adv_tests": 896
+  },
+  "llama_filt": {
+    "n_tier": 232,
+    "n_tier_correct": 221,
+    "precision": 0.9525862068965517
+  },
+  "deepseek_filt": {
+    "n_tier": 206,
+    "n_tier_correct": 199,
+    "precision": 0.9660194174757282
+  },
+  "consensus_strict": {
+    "n_tier": 171,
+    "n_tier_correct": 171,
+    "precision": 1.0
+  },
+  "consensus_loose": {
+    "n_tier": 181,
+    "n_tier_correct": 180,
+    "precision": 0.994475138121547
+  }
+}

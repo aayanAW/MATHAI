@@ -1,0 +1,325 @@
+{
+  "extractor": "deepseek-ai/DeepSeek-V3",
+  "results": [
+    {
+      "id": "aime2025_1",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 309,
+      "script": "def verify(answer):\n    valid = []\n    for b in range(10, 1000):\n        num1 = 1 * b + 7\n        num2 = 9 * b + 7\n        if num1 != 0 and num2 % num1 == 0:\n            valid.append(b)\n    total = sum(valid)\n    try:\n        return int(str(answer).strip()) == total\n    except Exception:\n        return False",
+      "gold": "70",
+      "candidate": "\\frac{7(39 - 1)}{9 -",
+      "solver_correct": false,
+      "gold_verdict": true,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 3.053246021270752
+    },
+    {
+      "id": "aime2025_2",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 0.4628419876098633
+    },
+    {
+      "id": "aime2025_3",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 814,
+      "script": "def verify(answer):\n    from itertools import combinations_with_replacement\n\n    total_players = 9\n    flavors = ['C', 'V', 'S']\n    count = 0\n\n    # Enumerate all possible counts (c, v, s) such that:\n    # c + v + s = 9, c > v > s >= 1\n    for c in range(1, total_players + 1):\n        for v in range(1, total_players):\n            for s in range(1, total_players):\n                if c + v + s == total_players and c > v > s:\n                    # Calculate multinomial coefficient: 9! / (c! * v! * s!)\n                    num_assignments = math.comb(total_players, c) * math.comb(total_players - c, v)\n                    count += num_assignments\n\n    remainder = count % 1000\n    try:\n        candidate = int(str(answer).strip())\n        return candidate == remainder\n    except Exception:\n        return False",
+      "gold": "16",
+      "candidate": "836",
+      "solver_correct": false,
+      "gold_verdict": true,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 4.382978916168213
+    },
+    {
+      "id": "aime2025_4",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 269,
+      "script": "def verify(answer):\n    count = 0\n    for x in range(-100, 101):\n        for y in range(-100, 101):\n            if 12*x*x - x*y - 6*y*y == 0:\n                count += 1\n    try:\n        return int(str(answer).strip()) == count\n    except Exception:\n        return False",
+      "gold": "117",
+      "candidate": "118",
+      "solver_correct": false,
+      "gold_verdict": true,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 2.5698671340942383
+    },
+    {
+      "id": "aime2025_5",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 358,
+      "script": "def verify(answer):\n    from itertools import permutations\n    count = 0\n    digits = [1, 2,3,4,5,6,7,8]\n    for perm in permutations(digits):\n        num = int(''.join(map(str, perm)))\n        if num % 22 == 0:\n            count += 1\n    diff = count - 2025\n    try:\n        return int(str(answer).strip()) == diff\n    except Exception:\n        return False",
+      "gold": "279",
+      "candidate": "-1977",
+      "solver_correct": false,
+      "gold_verdict": true,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 5.604040145874023
+    },
+    {
+      "id": "aime2025_6",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 0.8019728660583496
+    },
+    {
+      "id": "aime2025_7",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 1526,
+      "script": "def verify(answer):\n    from itertools import permutations, combinations\n    import math\n    from fractions import Fraction\n\n    letters = ['A','B','C','D','E','F','G','H','I','J','K','L']\n    total_valid = 0\n    count_with_G_last = 0\n\n    # Generate all ways to partition 12 distinct letters into 6 unordered pairs\n    # We use a recursive method to avoid double-counting\n    def generate_pairings(elements):\n        if len(elements) == 0:\n            return [[]]\n        pairings = []\n        first = elements[0]\n        for i in range(1, len(elements)):\n            pair = (first, elements[i])\n            for rest in generate_pairings(elements[1:i] + elements[i+1:]):\n                pairings.append([pair] + rest)\n        return pairings\n\n    all_pairings = generate_pairings(letters)\n    total = len(all_pairings)\n\n    for pairing in all_pairings:\n        # For each pair, sort the two letters to form the word in alphabetical order\n        words = [''.join(sorted(pair)) for pair in pairing]\n        # Sort the list of words alphabetically\n        sorted_words = sorted(words)\n        # Check if the last word contains 'G'\n        if 'G' in sorted_words[-1]:\n            count_with_G_last += 1\n\n    # The probability is count_with_G_last / total\n    # Simplify the fraction\n    prob = Fraction(count_with_G_last, total)\n    m, n = prob.numerator, prob.denominator\n    expected = m + n\n\n    try:\n        candidate = int(str(answer).strip())\n        return candidate == expected\n    except Exception:\n        return False",
+      "gold": "821",
+      "candidate": "7",
+      "solver_correct": false,
+      "gold_verdict": true,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 6.390158176422119
+    },
+    {
+      "id": "aime2025_8",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 0.42272090911865234
+    },
+    {
+      "id": "aime2025_9",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 0.32637691497802734
+    },
+    {
+      "id": "aime2025_10",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 0.7245612144470215
+    },
+    {
+      "id": "aime2025_11",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 2.891666889190674
+    },
+    {
+      "id": "aime2025_12",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 0.34894800186157227
+    },
+    {
+      "id": "aime2025_13",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.033233880996704
+    },
+    {
+      "id": "aime2025_14",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 0.6680259704589844
+    },
+    {
+      "id": "aime2025_15",
+      "outcome": "verifier_produced",
+      "classification": "compute_abstain",
+      "script_chars": 494,
+      "script": "def verify(answer):\n    try:\n        candidate = int(str(answer).strip())\n    except Exception:\n        return False\n        \n    n = 3**6\n    mod = 3**7\n    count = 0\n    for a in range(1, n+1):\n        a3 = pow(a, 3, mod)\n        for b in range(1, n+1):\n            b3 = pow(b, 3, mod)\n            for c in range(1, n+1):\n                c3 = pow(c, 3, mod)\n                if (a3 + b3 + c3) % mod == 0:\n                    count += 1\n                    \n    return candidate == count % 1000",
+      "gold": "735",
+      "candidate": "819",
+      "solver_correct": false,
+      "gold_verdict": null,
+      "candidate_verdict": null,
+      "adv_verdicts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 62.54438900947571
+    },
+    {
+      "id": "aime2025_16",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 0.649327278137207
+    },
+    {
+      "id": "aime2025_17",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 735,
+      "script": "def verify(answer):\n    try:\n        candidate = int(str(answer).strip())\n    except Exception:\n        return False\n        \n    total = 0\n    # We need to find all positive integers n such that n+2 divides 3(n+3)(n^2+9)\n    # We can iterate over n from 1 to a sufficiently large bound (since the problem likely expects finite solutions)\n    # The divisor n+2 grows linearly, while the dividend grows as n^3, so for large n, n+2 won't divide the expression.\n    # We set a safe bound (e.g., 100000) to capture all possible solutions.\n    for n in range(1, 100000):\n        dividend = 3 * (n + 3) * (n**2 + 9)\n        divisor = n + 2\n        if dividend % divisor == 0:\n            total += n\n            \n    return candidate == total",
+      "gold": "49",
+      "candidate": "49",
+      "solver_correct": true,
+      "gold_verdict": true,
+      "candidate_verdict": true,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 8.580400943756104
+    },
+    {
+      "id": "aime2025_18",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.4172160625457764
+    },
+    {
+      "id": "aime2025_19",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 35.608598947525024
+    },
+    {
+      "id": "aime2025_20",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 0.4114859104156494
+    },
+    {
+      "id": "aime2025_21",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 0.583528995513916
+    },
+    {
+      "id": "aime2025_22",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 929,
+      "script": "def verify(answer):\n    # Factorize 2025 = 3^4 * 5^2\n    divisors = []\n    for exp3 in range(0, 5):\n        for exp5 in range(0, 3):\n            divisors.append((3**exp3) * (5**exp5))\n    \n    total_subsets = 2**len(divisors) - 1  # exclude empty set\n    \n    count_valid = 0\n    for i in range(1, 2**len(divisors)):\n        subset = []\n        for j in range(len(divisors)):\n            if i & (1 << j):\n                subset.append(divisors[j])\n        \n        # Check if LCM of subset is 2025\n        lcm_val = 1\n        for num in subset:\n            lcm_val = lcm(lcm_val, num)\n        if lcm_val == 2025:\n            count_valid += 1\n    \n    # Compute probability fraction\n    g = gcd(count_valid, total_subsets)\n    m = count_valid // g\n    n = total_subsets // g\n    result = m + n\n    \n    try:\n        candidate = int(str(answer).strip())\n        return candidate == result\n    except Exception:\n        return False",
+      "gold": "237",
+      "candidate": "32780",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 35.163207054138184
+    },
+    {
+      "id": "aime2025_23",
+      "outcome": "verifier_produced",
+      "classification": "working",
+      "script_chars": 968,
+      "script": "def verify(answer):\n    def greedy_coins(n):\n        coins = 0\n        remaining = n\n        for coin in [25, 10, 1]:\n            num = remaining // coin\n            coins += num\n            remaining -= num * coin\n        return coins\n\n    def min_coins(n):\n        # We need to find the minimum coins for n using denominations [1,10,25]\n        # Since n <= 1000, we can use dynamic programming\n        dp = [float('inf')] * (n+1)\n        dp[0] = 0\n        denominations = [1, 10, 25]\n        for i in range(1, n+1):\n            for coin in denominations:\n                if i >= coin:\n                    dp[i] = min(dp[i], dp[i-coin] + 1)\n        return dp[n]\n\n    count_success = 0\n    for N in range(1, 1001):\n        greedy_count = greedy_coins(N)\n        actual_min = min_coins(N)\n        if greedy_count == actual_min:\n            count_success += 1\n\n    try:\n        return int(str(answer).strip()) == count_success\n    except Exception:\n        return False",
+      "gold": "610",
+      "candidate": "36",
+      "solver_correct": false,
+      "gold_verdict": true,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 5.528718948364258
+    },
+    {
+      "id": "aime2025_24",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 4.124031066894531
+    },
+    {
+      "id": "aime2025_25",
+      "outcome": "verifier_produced",
+      "classification": "logic_broken",
+      "script_chars": 607,
+      "script": "def verify(answer):\n    from itertools import combinations\n    \n    def is_valid(arrangement):\n        chairs = sorted(arrangement)\n        for i in range(len(chairs) - 2):\n            if chairs[i+2] - chairs[i] == 2:\n                return False\n        return True\n    \n    total_chairs = 16\n    count = 0\n    for k in range(0, total_chairs + 1):\n        for subset in combinations(range(total_chairs), k):\n            if is_valid(subset):\n                count += 1\n    \n    remainder = count % 1000\n    try:\n        return int(str(answer).strip()) == remainder\n    except Exception:\n        return False",
+      "gold": "907",
+      "candidate": "584",
+      "solver_correct": false,
+      "gold_verdict": false,
+      "candidate_verdict": false,
+      "adv_verdicts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "adv_fp_count": 0,
+      "elapsed": 4.600826978683472
+    },
+    {
+      "id": "aime2025_26",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 3.069056987762451
+    },
+    {
+      "id": "aime2025_27",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 0.4056370258331299
+    },
+    {
+      "id": "aime2025_28",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 1.94578218460083
+    },
+    {
+      "id": "aime2025_29",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 0.42119312286376953
+    },
+    {
+      "id": "aime2025_30",
+      "outcome": "unverifiable",
+      "script": null,
+      "elapsed": 2.444538116455078
+    }
+  ]
+}
