@@ -1,0 +1,302 @@
+%%%%%%%% ICML 2026 Workshop Submission - 4-page short paper format %%%%%%%
+% Structure modeled on NeurIPS MATH-AI 2024 short papers and
+% ICML AI4Math 2024 short-track papers (Abstract / Intro / Method /
+% Results / Discussion in 4 pages, with unlimited refs and appendix).
+
+\documentclass{article}
+
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks=true, allcolors=black, pdfborder={0 0 0}}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes,fit,backgrounds}
+\usepackage[capitalize,noabbrev]{cleveref}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{listings}
+\lstdefinestyle{xsgrv}{
+  basicstyle=\ttfamily\scriptsize\color{black},
+  keywordstyle=\color{black},
+  commentstyle=\color{black},
+  stringstyle=\color{black},
+  identifierstyle=\color{black},
+  numbers=none,
+  frame=single,
+  framesep=3pt,
+  framexleftmargin=2pt,
+  framexrightmargin=2pt,
+  rulecolor=\color{black},
+  breaklines=true,
+  breakatwhitespace=true,
+  postbreak=\mbox{\textcolor{black}{$\hookrightarrow$}\space},
+  showstringspaces=false,
+  columns=fullflexible,
+  keepspaces=true,
+  xleftmargin=0pt,
+  xrightmargin=0pt,
+  linewidth=\linewidth,
+  resetmargins=true,
+  language=Python,
+}
+
+\usepackage{icml2026}
+\icmltitlerunning{Cross-Family Symbolic Verification}
+
+\begin{document}
+
+\twocolumn[
+\icmltitle{Supplementary Material for: \\
+Cross-Family Symbolic Verification for \\
+Contamination-Robust Selective Prediction on LLM Math Reasoning}
+
+\begin{icmlauthorlist}
+\icmlauthor{Anonymous Authors}{anon}
+\end{icmlauthorlist}
+\icmlaffiliation{anon}{Anonymous submission to an ICML 2026 workshop.}
+\icmlcorrespondingauthor{Anonymous Authors}{anonymous@example.org}
+\icmlkeywords{Selective Prediction, Math Reasoning, Verification, Contamination, LLM}
+
+\vskip 0.3in
+]
+
+\printAffiliationsAndNotice{}
+
+\onecolumn
+
+\noindent\textbf{Note.} This document is the supplementary appendix accompanying the 4-page main paper. Section, table, figure, and listing numbering restart here.
+\vspace{1em}
+
+\setcounter{section}{0}
+\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thetable}{\Alph{section}.\arabic{table}}
+\renewcommand{\thefigure}{\Alph{section}.\arabic{figure}}
+\setcounter{table}{0}
+\setcounter{figure}{0}
+
+
+The appendix supplements the 4-page main body with hyper-reproducible implementation
+details, full statistical methodology, the pre-registration text, additional
+results that did not fit in the main body, representative verifier
+case studies, and a broader-impact discussion.
+
+%------------------------------------------------------------------------------
+\section{Extended Methods}
+\label{app:methods}
+%------------------------------------------------------------------------------
+
+\subsection{Solver and extractor configuration}
+\label{app:models}
+
+The base solver is \texttt{Qwen2.5-7B-Instruct-Turbo} accessed via Together AI; for the false-acceptance analysis of self-verification the solver is the contamination-flagged \texttt{Qwen2.5-Math-7B-Instruct}~\citep{wu2025contam}. Solver sampling: $T{=}0$ greedy for the plurality candidate; $T{=}0.7$, top-$p$ $0.95$, $k{=}10$ for entropy and self-consistency baselines; \texttt{max\_tokens}{=}2048. The chain-of-thought prompt terminates with ``\texttt{The final answer is}~\$\textbackslash boxed\{\}\$.''.
+
+Cross-family extractors: \texttt{Llama-3.3-70B-Instruct-Turbo}, \texttt{DeepSeek-V3}, \texttt{gpt-oss-120b}, \texttt{claude-sonnet-4-6}, \texttt{Qwen3-Coder-480B-A35B-Instruct}, \texttt{gpt-5-mini}. Extractor sampling: $T{=}0.2$, \texttt{max\_tokens}{=}2048, system prompt fixing the output format to a single Python code block. The frozen extractor prompt is in \Cref{lst:prompt}.
+
+\begin{lstlisting}[style=xsgrv,caption={Frozen extractor prompt.},label={lst:prompt}]
+You are a mathematics verification engineer. You will be shown a math problem.
+Write a Python function
+
+    def verify(answer) -> bool:
+
+that returns True if `answer` (int, float, or sympy expression) satisfies the
+problem's constraints, and False otherwise.
+
+Hard rules:
+  1. Do NOT solve the problem. Do NOT write `answer == <literal>`.
+  2. Re-derive the problem's constraints from the statement and check that
+     `answer` satisfies them.
+  3. You may import sympy. itertools, math, fractions.Fraction, and
+     collections.Counter are pre-imported.
+  4. Wall-clock time < 10 seconds.
+  5. If the problem requires a proof or has no bounded answer check, return
+     EXACTLY the string `UNVERIFIABLE` and nothing else.
+  6. Total script under 60 lines.
+
+Problem: <<<PROBLEM>>>
+\end{lstlisting}
+
+\subsection{Sandbox and probe set}
+\label{app:sandbox}
+
+The emitted script is executed in a Python subprocess sandbox with a \texttt{SIGALRM} wall-clock timeout of 10 seconds. Exception trapping maps any \texttt{Exception} or \texttt{SystemExit} to a \texttt{False} return. The candidate $\hat a$ is cast through \texttt{sympify} before invocation; on \texttt{SympifyError} the candidate is passed as a string. Network sockets are not available in the subprocess.
+
+The adversarial probe set $\mathcal P(\hat a) = \{\hat a-1, \hat a+1, \hat a+7, \hat a\times 2\}$ was selected on a 50-problem held-out development split of MATH-500 (strata-balanced, disjoint from any test set) and locked in the pre-registration. The four perturbations target trivial-True verifiers, additive-bias verifiers, modular-residue verifiers (the value $7$ is coprime with $\{2,3,4,5,6\}$), and multiplicative-scaling verifiers. For non-integer $\hat a$ the deterministic fallback set $\{0, 1, -1, 42, 100\} \setminus \{\hat a\}$ is used. A gold-relative variant of the same probe set is used only inside the benchmarking pipeline to compute the diagnostic Adv-FP column; the deployment-time filter never accesses the gold answer.
+
+\subsection{PRM baselines}
+\label{app:prm}
+
+\texttt{Qwen2.5-Math-PRM-7B} and \texttt{Skywork-o1-Open-PRM-Qwen-2.5-7B} were run on Modal A100. For each problem and each of $10$ cached solver samples, per-step rewards were aggregated using min-step, mean-step, product-step, and last-step aggregations as documented on each model card; problem-level score is the max across the $10$ samples. PRMs were thresholded to match the X-SGRV top-tier coverage on each benchmark exactly. Skywork-PRM requires \texttt{torch\_dtype=torch.bfloat16}; on FP32 the model silently exhausts the A100's $40$\,GB of GPU memory for sequences longer than $\sim1{,}500$ tokens. The PRM scoring protocols were validated against published ProcessBench numbers on a 48-problem ProcessBench subset, reproducing the published values within 5 macro-F1 points on both PRMs.
+
+\subsection{Verifier classification}
+\label{app:classify}
+
+A verifier is \emph{working} if it (a)~accepts the gold answer $a$, (b)~rejects each of the four adversarial wrong candidates $\{a-1, a+1, a+7, 42\}$, (c)~halts within 10\,s, and (d)~raises no unhandled exception. A verifier that accepts $a$ but also accepts some adversarial candidate is \emph{trivial-or-broken}. A verifier that fails to accept $a$ is \emph{wrong-spec}.
+
+%------------------------------------------------------------------------------
+\section{Statistical Methodology and Pre-registration}
+\label{app:stats}
+%------------------------------------------------------------------------------
+
+\textbf{Confidence intervals.} 95\% Clopper-Pearson exact binomial intervals via SciPy 1.13's \texttt{binomtest(\,).proportion\_ci(method="exact")}. Bootstrap AUROC intervals use $1{,}000$ resamples drawn with replacement.
+
+\textbf{Hypothesis tests.} Matched-binary comparisons use McNemar's exact mid-$p$ test via \texttt{statsmodels.stats.contingency\_tables.mcnemar(exact=True)}~\citep{fagerland2013mcnemar}. The 2$\times$2 ablation uses Fisher's exact test on the contingency table $(44, 0; 276, 334)$, yielding $p<10^{-8}$.
+
+\textbf{Pre-registration text} (committed before the $n{=}498$ scale-up):
+\begin{quote}\itshape\small
+Hypothesis: strict two-way consensus (Llama $\cap$ DeepSeek-V3) achieves top-tier precision $\geq 99\%$ on the full MATH-500. Branches: (A) precision $\geq 99\%$, claim publishable; (B) $95\%\leq$ precision $<99\%$, report exact number, no overclaim; (C) precision $<95\%$, audit each false acceptance, report ablations; halt-and-audit if precision $<90\%$. Locked parameters: adversarial probe set $\{\hat a\pm 1, \hat a+7, \hat a\times 2\}$ (integer fallback $\{0,1,-1,42,100\}\setminus\{\hat a\}$); 10\,s sandbox timeout; working-verifier definition per \Cref{app:classify}.
+\end{quote}
+The realized result was $171/171 = 1.000$, $[0.979, 1.000]$, fulfilling Branch A.
+
+%------------------------------------------------------------------------------
+\section{Extended Results}
+\label{app:results}
+%------------------------------------------------------------------------------
+
+\subsection{Same-model FAR by difficulty (Table~\ref{tab:far})}
+
+\begin{table}[h]
+\centering
+\caption{\textbf{Same-model SymPy false acceptance rate on MATH-500 by difficulty.} Solver and verifier are both Qwen2.5-Math-7B-Instruct. $n$ = number of \textsc{AllPass} verdicts at each level. Total \textsc{AllPass}: $n=320$.}
+\label{tab:far}
+\small
+\begin{tabular}{lcccccc}
+\toprule
+Level & L1 & L2 & L3 & L4 & L5 & Overall \\
+\midrule
+FAR   & 1.4\% & 7.7\% & 13.1\% & 17.2\% & 30.8\% & 13.8\% \\
+$n$   & 71    & 65    & 61     & 58     & 65     & 320 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{2$\times$2 ablation: independence is the operative axis}
+
+A 2$\times$2 design crossed independence (solution- vs.\ specification-grounded extraction) with randomization (random evaluation points vs.\ deterministic symbolic checks). Both spec-grounded cells produced 0 false accepts ($0/165$, $0/169$); both solution-grounded cells produced FAR $\approx 13.8\%$. Fisher's exact on the contingency table $(44, 0; 276, 334)$ yields $p<10^{-8}$ in favor of the independence axis.
+
+\subsection{Agreement/entropy signal collapse on contamination-clean benchmarks (Table~\ref{tab:contam})}
+
+\begin{table}[h]
+\centering
+\caption{\textbf{Selective-prediction signals on contamination-assisted MATH-500 vs.\ contamination-clean AIME 2025 and CleanMath.} ``--'' = empty top tier. Solver: Qwen2.5-7B-Instruct-Turbo.}
+\label{tab:contam}
+\small
+\begin{tabular}{lrrr}
+\toprule
+Method & MATH-500 & AIME 2025 & CleanMath \\
+\midrule
+Verbalized            & 131/166 & 3/16    & 4/12  \\
+Self-Consistency 4/4  & 105/118 & ---     & ---   \\
+Template SGRV         & 59/59   & ---     & ---   \\
+ExeVer same-model     & 276/320 & ---     & ---   \\
+SE SymPy (zero-ent)   & 101/112 & ---     & 1/6   \\
+SE NLI (zero-ent)     & 114/131 & 1/16    & 5/59  \\
+$p(\textsc{True})$ AUROC & 0.562 & 0.463 & 0.474 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+On AIME 2025 the solver is uniformly uncertain ($\geq 8$ distinct samples on nearly every problem), so the 4/4 self-consistency tier is empty. On CleanMath the solver is uniformly and confidently wrong (12\% accuracy), and the NLI variant of semantic entropy collapses paraphrases of the same wrong answer into a single confident-looking cluster (5/59 correct).
+
+\subsection{Per-extractor verifier classification on MATH-175 (Table~\ref{tab:perext-app})}
+
+\begin{table}[h]
+\centering
+\caption{\textbf{Per-extractor verifier classes on MATH-175.} ``Trivial-or-broken'' equals the headline rate at which the deployment-time filter intervenes. Total $n{=}175$ per row.}
+\label{tab:perext-app}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Extractor & Working & Wrong-spec & Trivial-or-broken & \textsc{Unverif.} \\
+\midrule
+Llama-3.3-70B          & 119 & 21 & 13 & 22 \\
+DeepSeek-V3            & 124 & 18 & 11 & 22 \\
+Claude Sonnet 4.6      & 112 & 23 & 18 & 22 \\
+gpt-oss-120b           &  98 & 30 & 24 & 23 \\
+Qwen3-Coder-480B       & 105 & 27 & 19 & 24 \\
+GPT-5-mini             & 102 & 29 & 21 & 23 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Lab-agnostic five-way consensus}
+
+Adding extractors monotonically shrinks the accepted tier on stratified MATH-175 while preserving precision: $73$ (Llama) $\to 72$ (Llama $\cap$ DeepSeek) $\to 69$ (3-way) $\to 69$ (4-way) $\to 69$ (5-way) $\to 67$ (6-way with GPT-5-mini), all at precision $1.000$.
+
+\subsection{Putnam scope test}
+
+On a $100$-problem random sample of PutnamBench, the proof-mode prompt permits explicit \texttt{UNVERIFIABLE} refusals. Refusal rates: Claude Sonnet 4.6 $51/100$, GPT-5-mini $35/100$, DeepSeek-V3 $44/100$, Llama-3.3-70B $39/100$. Among non-refused problems, working-verifier-and-gold-accepted: Claude $19/49$, GPT-5-mini $8/65$, DeepSeek $14/56$, Llama $11/61$.
+
+\subsection{Lean compile-rate audit}
+
+A pilot Lean~4 hybrid was implemented for $200$ MATH-500 problems by prompting Claude Sonnet 4.6 to emit, alongside the SymPy verifier, a Lean~4 theorem statement of the form \texttt{theorem problem : <constraint>} with placeholder \texttt{by sorry}. Compile rate against Mathlib4 $4.10.0$ was $158/200 = 78.9\%$; failures were predominantly import resolution and unicode-symbol parsing, not type-mismatch errors. This rate motivates the hybrid SymPy-plus-Lean follow-up; it is not used in any X-SGRV result.
+
+%------------------------------------------------------------------------------
+\section{Verifier Case Studies}
+\label{app:cases}
+%------------------------------------------------------------------------------
+
+\subsection{Working compound verifier (MATH-500, Level 4 algebra)}
+
+Problem (paraphrased): \emph{Find the product of all real roots of $x^2 - 5x + 6 = 0$.}
+
+\begin{lstlisting}[style=xsgrv]
+def verify(answer):
+    try:
+        x = sympy.symbols('x')
+        roots = sympy.solve(x**2 - 5*x + 6, x)
+        product = sympy.prod(roots)
+        return sympy.simplify(sympy.sympify(answer) - product) == 0
+    except Exception:
+        return False
+\end{lstlisting}
+
+\subsection{Working enumeration verifier (CleanMath/HMMT-Feb 2025)}
+
+\begin{lstlisting}[style=xsgrv]
+def verify(answer):
+    try:
+        n = int(str(answer).strip())
+        count = 0
+        for a in range(1, 10):
+            for b in range(0, 10):
+                for c in range(0, 10):
+                    if (a + b + c) == 12 and a*b*c % 7 == 0:
+                        count += 1
+        return n == count
+    except Exception:
+        return False
+\end{lstlisting}
+
+\subsection{Broken verifier rejected by the deployment-time filter}
+
+The following script accepts the gold answer but also accepts $\hat a + 7$ and is rejected by the deployment-time filter:
+
+\begin{lstlisting}[style=xsgrv]
+def verify(answer):
+    try:
+        return int(str(answer).strip()) % 7 == 0
+    except Exception:
+        return False
+\end{lstlisting}
+
+%------------------------------------------------------------------------------
+\section{Limitations and Broader Impact}
+\label{app:impact}
+%------------------------------------------------------------------------------
+
+\textbf{Operational scope.} X-SGRV is a structurally-grounded selective-prediction signal, not a continuous-score uncertainty estimator. Top-tier coverage is single-digit on contamination-clean competition mathematics by design, because structural verifiability of a competition problem is a property of the problem, not of solver confidence. On Omni-MATH hard-100 (difficulty $9.0$--$9.5$) zero working verifiers are produced, defining the operational ceiling on non-proof problems. On PutnamBench-style proof problems the system self-detects scope by emitting \texttt{UNVERIFIABLE} on roughly half of a 100-problem sample.
+
+\textbf{Reliance on a strong cross-family extractor.} The empirical results require a $\geq 70$B cross-family extractor; at the $7$B scale the working-verifier rate on MATH-500 is below $15\%$. The asymmetric extractor/solver pairing is consistent with centralized-governance safety patterns~\citep{ste2024,xiong2024llmuncertainty} but is a deployment cost.
+
+\textbf{Independence assumption.} The consensus argument relies on an independence assumption between extractor families. The empirical $0/171$ at the $n{=}498$ scale places a lower bound on effective independence but is not a structural proof. The proposed falsification protocol --- empirical pairwise correlation between extractor verifier outputs vs.\ the independence-bound prediction --- is described as future work in the discussion.
+
+\textbf{Broader impact.} X-SGRV supports \emph{abstention} on uncertain mathematical reasoning, not substitute for human review. Deploying it in high-stakes settings (automated grading, safety-critical scientific computation, medical decision support) without an explicit human-in-the-loop fallback would invert the safety pattern the system is designed to support: the right deployment posture is to escalate, not commit, when the verifier abstains. Top-tier acceptances on contamination-clean benchmarks (e.g., $4/4$ on CleanMath) are correct in our experiments, but a deployment policy that treats individual accepts as authoritative without human review would be misuse.
+
+\textbf{Energy and compute footprint.} The full $n{=}498$ MATH-500 scale-up consumed approximately $3.1\times 10^6$ output tokens across all extractor and solver calls, equivalent to roughly $\$45$ in API costs at 2026-04 list prices. PRM baselines required approximately $4$ A100-hours on Modal. No model fine-tuning was performed.
+
+\end{document}
