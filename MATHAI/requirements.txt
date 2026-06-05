@@ -1,0 +1,21 @@
+# Core dependencies
+sympy==1.14.0
+datasets>=4.0
+numpy>=1.22
+tqdm>=4.60
+torch>=2.1.0
+antlr4-python3-runtime==4.11  # Required for sympy.parsing.latex.parse_latex
+
+# Inference (install one or both)
+# vllm>=0.6.0        # For fast GPU inference (requires CUDA)
+transformers>=4.40.0
+
+# Plotting
+matplotlib>=3.7
+seaborn>=0.12
+
+# Cloud compute (optional)
+# modal>=0.60        # For Modal GPU deployment
+
+# Development
+# pytest>=7.0
