@@ -1,0 +1,3066 @@
+{
+  "experiment": "exp7_symcode_baseline",
+  "model": "Qwen/Qwen2.5-Math-7B-Instruct",
+  "n_problems": 500,
+  "accuracy": 0.636,
+  "verdicts": {
+    "PASS": 408,
+    "FIXED_ROUND_1": 46,
+    "FAIL_INITIAL": 44,
+    "FIXED_ROUND_2": 2
+  },
+  "by_level": {
+    "1": {
+      "accuracy": 0.8,
+      "n": 100
+    },
+    "2": {
+      "accuracy": 0.74,
+      "n": 100
+    },
+    "3": {
+      "accuracy": 0.65,
+      "n": 100
+    },
+    "4": {
+      "accuracy": 0.48,
+      "n": 100
+    },
+    "5": {
+      "accuracy": 0.51,
+      "n": 100
+    }
+  },
+  "by_subject": {
+    "algebra": {
+      "accuracy": 0.6870229007633588,
+      "n": 131
+    },
+    "counting_and_probability": {
+      "accuracy": 0.7727272727272727,
+      "n": 44
+    },
+    "geometry": {
+      "accuracy": 0.5217391304347826,
+      "n": 46
+    },
+    "intermediate_algebra": {
+      "accuracy": 0.5,
+      "n": 84
+    },
+    "number_theory": {
+      "accuracy": 0.5714285714285714,
+      "n": 42
+    },
+    "prealgebra": {
+      "accuracy": 0.8602150537634409,
+      "n": 93
+    },
+    "precalculus": {
+      "accuracy": 0.4,
+      "n": 60
+    }
+  },
+  "results": [
+    {
+      "id": "math500_0",
+      "verdict": "PASS",
+      "answer": "120",
+      "correct": true
+    },
+    {
+      "id": "math500_1",
+      "verdict": "PASS",
+      "answer": "7.5",
+      "correct": true
+    },
+    {
+      "id": "math500_2",
+      "verdict": "PASS",
+      "answer": "10",
+      "correct": true
+    },
+    {
+      "id": "math500_3",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "9",
+      "correct": true
+    },
+    {
+      "id": "math500_4",
+      "verdict": "PASS",
+      "answer": "7/12",
+      "correct": true
+    },
+    {
+      "id": "math500_5",
+      "verdict": "PASS",
+      "answer": "10",
+      "correct": true
+    },
+    {
+      "id": "math500_6",
+      "verdict": "PASS",
+      "answer": "2/3",
+      "correct": true
+    },
+    {
+      "id": "math500_7",
+      "verdict": "PASS",
+      "answer": "8",
+      "correct": false
+    },
+    {
+      "id": "math500_8",
+      "verdict": "PASS",
+      "answer": "0",
+      "correct": true
+    },
+    {
+      "id": "math500_9",
+      "verdict": "PASS",
+      "answer": "8.00000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_10",
+      "verdict": "PASS",
+      "answer": "73.0",
+      "correct": true
+    },
+    {
+      "id": "math500_11",
+      "verdict": "PASS",
+      "answer": "(4, pi)",
+      "correct": true
+    },
+    {
+      "id": "math500_12",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_13",
+      "verdict": "PASS",
+      "answer": "200",
+      "correct": true
+    },
+    {
+      "id": "math500_14",
+      "verdict": "PASS",
+      "answer": "8.00000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_15",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "even",
+      "correct": true
+    },
+    {
+      "id": "math500_16",
+      "verdict": "PASS",
+      "answer": "0",
+      "correct": true
+    },
+    {
+      "id": "math500_17",
+      "verdict": "PASS",
+      "answer": "19",
+      "correct": true
+    },
+    {
+      "id": "math500_18",
+      "verdict": "PASS",
+      "answer": "(r + 5)**2",
+      "correct": true
+    },
+    {
+      "id": "math500_19",
+      "verdict": "PASS",
+      "answer": "{a: 1, b: 1}",
+      "correct": false
+    },
+    {
+      "id": "math500_20",
+      "verdict": "PASS",
+      "answer": "9901",
+      "correct": true
+    },
+    {
+      "id": "math500_21",
+      "verdict": "PASS",
+      "answer": "(x + 2)*(45*x + 28)",
+      "correct": true
+    },
+    {
+      "id": "math500_22",
+      "verdict": "PASS",
+      "answer": "58",
+      "correct": true
+    },
+    {
+      "id": "math500_23",
+      "verdict": "PASS",
+      "answer": "15",
+      "correct": true
+    },
+    {
+      "id": "math500_24",
+      "verdict": "PASS",
+      "answer": "[]",
+      "correct": false
+    },
+    {
+      "id": "math500_25",
+      "verdict": "PASS",
+      "answer": "6",
+      "correct": true
+    },
+    {
+      "id": "math500_26",
+      "verdict": "PASS",
+      "answer": "0",
+      "correct": true
+    },
+    {
+      "id": "math500_27",
+      "verdict": "PASS",
+      "answer": "97969",
+      "correct": true
+    },
+    {
+      "id": "math500_28",
+      "verdict": "PASS",
+      "answer": "-1",
+      "correct": true
+    },
+    {
+      "id": "math500_29",
+      "verdict": "PASS",
+      "answer": "1",
+      "correct": true
+    },
+    {
+      "id": "math500_30",
+      "verdict": "PASS",
+      "answer": "[-2, 1]",
+      "correct": false
+    },
+    {
+      "id": "math500_31",
+      "verdict": "PASS",
+      "answer": "33",
+      "correct": true
+    },
+    {
+      "id": "math500_32",
+      "verdict": "PASS",
+      "answer": "[4, -2 - 2*sqrt(3)*I, -2 + 2*sqrt(3)*I]",
+      "correct": false
+    },
+    {
+      "id": "math500_33",
+      "verdict": "PASS",
+      "answer": "-16.0000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_34",
+      "verdict": "PASS",
+      "answer": "120",
+      "correct": true
+    },
+    {
+      "id": "math500_35",
+      "verdict": "PASS",
+      "answer": "375/2",
+      "correct": true
+    },
+    {
+      "id": "math500_36",
+      "verdict": "PASS",
+      "answer": "sqrt(3)/3",
+      "correct": true
+    },
+    {
+      "id": "math500_37",
+      "verdict": "PASS",
+      "answer": "600",
+      "correct": true
+    },
+    {
+      "id": "math500_38",
+      "verdict": "PASS",
+      "answer": "7",
+      "correct": true
+    },
+    {
+      "id": "math500_39",
+      "verdict": "PASS",
+      "answer": "b = 4",
+      "correct": false
+    },
+    {
+      "id": "math500_40",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_41",
+      "verdict": "PASS",
+      "answer": "b = 4",
+      "correct": false
+    },
+    {
+      "id": "math500_42",
+      "verdict": "PASS",
+      "answer": "2/5",
+      "correct": true
+    },
+    {
+      "id": "math500_43",
+      "verdict": "PASS",
+      "answer": "3",
+      "correct": true
+    },
+    {
+      "id": "math500_44",
+      "verdict": "PASS",
+      "answer": "-1",
+      "correct": true
+    },
+    {
+      "id": "math500_45",
+      "verdict": "PASS",
+      "answer": "6840",
+      "correct": true
+    },
+    {
+      "id": "math500_46",
+      "verdict": "PASS",
+      "answer": "2.82842712474619",
+      "correct": true
+    },
+    {
+      "id": "math500_47",
+      "verdict": "PASS",
+      "answer": "-59",
+      "correct": true
+    },
+    {
+      "id": "math500_48",
+      "verdict": "PASS",
+      "answer": "25*pi",
+      "correct": true
+    },
+    {
+      "id": "math500_49",
+      "verdict": "PASS",
+      "answer": "108",
+      "correct": true
+    },
+    {
+      "id": "math500_50",
+      "verdict": "PASS",
+      "answer": "128",
+      "correct": false
+    },
+    {
+      "id": "math500_51",
+      "verdict": "PASS",
+      "answer": "1/2",
+      "correct": true
+    },
+    {
+      "id": "math500_52",
+      "verdict": "PASS",
+      "answer": "7/8",
+      "correct": true
+    },
+    {
+      "id": "math500_53",
+      "verdict": "PASS",
+      "answer": "10/11",
+      "correct": true
+    },
+    {
+      "id": "math500_54",
+      "verdict": "PASS",
+      "answer": "16",
+      "correct": true
+    },
+    {
+      "id": "math500_55",
+      "verdict": "PASS",
+      "answer": "18",
+      "correct": true
+    },
+    {
+      "id": "math500_56",
+      "verdict": "PASS",
+      "answer": "2",
+      "correct": true
+    },
+    {
+      "id": "math500_57",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_58",
+      "verdict": "PASS",
+      "answer": "20.0",
+      "correct": true
+    },
+    {
+      "id": "math500_59",
+      "verdict": "PASS",
+      "answer": "1",
+      "correct": true
+    },
+    {
+      "id": "math500_60",
+      "verdict": "PASS",
+      "answer": "2",
+      "correct": true
+    },
+    {
+      "id": "math500_61",
+      "verdict": "PASS",
+      "answer": "5",
+      "correct": true
+    },
+    {
+      "id": "math500_62",
+      "verdict": "PASS",
+      "answer": "1540",
+      "correct": true
+    },
+    {
+      "id": "math500_63",
+      "verdict": "PASS",
+      "answer": "5/2",
+      "correct": true
+    },
+    {
+      "id": "math500_64",
+      "verdict": "PASS",
+      "answer": "70",
+      "correct": true
+    },
+    {
+      "id": "math500_65",
+      "verdict": "PASS",
+      "answer": "1/2",
+      "correct": true
+    },
+    {
+      "id": "math500_66",
+      "verdict": "PASS",
+      "answer": "5.00000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_67",
+      "verdict": "PASS",
+      "answer": "22.8000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_68",
+      "verdict": "PASS",
+      "answer": "2/3",
+      "correct": true
+    },
+    {
+      "id": "math500_69",
+      "verdict": "PASS",
+      "answer": "C",
+      "correct": true
+    },
+    {
+      "id": "math500_70",
+      "verdict": "PASS",
+      "answer": "400",
+      "correct": true
+    },
+    {
+      "id": "math500_71",
+      "verdict": "PASS",
+      "answer": "1/2",
+      "correct": true
+    },
+    {
+      "id": "math500_72",
+      "verdict": "PASS",
+      "answer": "1",
+      "correct": true
+    },
+    {
+      "id": "math500_73",
+      "verdict": "PASS",
+      "answer": "1/16",
+      "correct": true
+    },
+    {
+      "id": "math500_74",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_75",
+      "verdict": "PASS",
+      "answer": "-8/17",
+      "correct": false
+    },
+    {
+      "id": "math500_76",
+      "verdict": "PASS",
+      "answer": "25/16",
+      "correct": false
+    },
+    {
+      "id": "math500_77",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "0",
+      "correct": true
+    },
+    {
+      "id": "math500_78",
+      "verdict": "PASS",
+      "answer": "-21",
+      "correct": true
+    },
+    {
+      "id": "math500_79",
+      "verdict": "PASS",
+      "answer": "2",
+      "correct": true
+    },
+    {
+      "id": "math500_80",
+      "verdict": "PASS",
+      "answer": "61",
+      "correct": true
+    },
+    {
+      "id": "math500_81",
+      "verdict": "PASS",
+      "answer": "100",
+      "correct": false
+    },
+    {
+      "id": "math500_82",
+      "verdict": "PASS",
+      "answer": "-2*2**n + 2*n**2 - 2",
+      "correct": false
+    },
+    {
+      "id": "math500_83",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_84",
+      "verdict": "PASS",
+      "answer": "360",
+      "correct": false
+    },
+    {
+      "id": "math500_85",
+      "verdict": "PASS",
+      "answer": "5.0",
+      "correct": true
+    },
+    {
+      "id": "math500_86",
+      "verdict": "PASS",
+      "answer": "1/2",
+      "correct": true
+    },
+    {
+      "id": "math500_87",
+      "verdict": "PASS",
+      "answer": "17",
+      "correct": true
+    },
+    {
+      "id": "math500_88",
+      "verdict": "PASS",
+      "answer": "24.1",
+      "correct": true
+    },
+    {
+      "id": "math500_89",
+      "verdict": "PASS",
+      "answer": "0",
+      "correct": true
+    },
+    {
+      "id": "math500_90",
+      "verdict": "PASS",
+      "answer": "-7.00000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_91",
+      "verdict": "PASS",
+      "answer": "32",
+      "correct": true
+    },
+    {
+      "id": "math500_92",
+      "verdict": "PASS",
+      "answer": "10.0",
+      "correct": true
+    },
+    {
+      "id": "math500_93",
+      "verdict": "PASS",
+      "answer": "6",
+      "correct": true
+    },
+    {
+      "id": "math500_94",
+      "verdict": "PASS",
+      "answer": "pi/3",
+      "correct": false
+    },
+    {
+      "id": "math500_95",
+      "verdict": "PASS",
+      "answer": "37",
+      "correct": true
+    },
+    {
+      "id": "math500_96",
+      "verdict": "PASS",
+      "answer": "3",
+      "correct": true
+    },
+    {
+      "id": "math500_97",
+      "verdict": "PASS",
+      "answer": "59",
+      "correct": true
+    },
+    {
+      "id": "math500_98",
+      "verdict": "PASS",
+      "answer": "28",
+      "correct": true
+    },
+    {
+      "id": "math500_99",
+      "verdict": "PASS",
+      "answer": "sqrt(21)/5",
+      "correct": false
+    },
+    {
+      "id": "math500_100",
+      "verdict": "PASS",
+      "answer": "564",
+      "correct": true
+    },
+    {
+      "id": "math500_101",
+      "verdict": "PASS",
+      "answer": "8",
+      "correct": true
+    },
+    {
+      "id": "math500_102",
+      "verdict": "PASS",
+      "answer": "5040",
+      "correct": true
+    },
+    {
+      "id": "math500_103",
+      "verdict": "PASS",
+      "answer": "4*t",
+      "correct": true
+    },
+    {
+      "id": "math500_104",
+      "verdict": "PASS",
+      "answer": "(3, -4)",
+      "correct": true
+    },
+    {
+      "id": "math500_105",
+      "verdict": "PASS",
+      "answer": "E",
+      "correct": true
+    },
+    {
+      "id": "math500_106",
+      "verdict": "PASS",
+      "answer": "60",
+      "correct": true
+    },
+    {
+      "id": "math500_107",
+      "verdict": "PASS",
+      "answer": "2",
+      "correct": true
+    },
+    {
+      "id": "math500_108",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_109",
+      "verdict": "PASS",
+      "answer": "6",
+      "correct": true
+    },
+    {
+      "id": "math500_110",
+      "verdict": "PASS",
+      "answer": "2*pi",
+      "correct": false
+    },
+    {
+      "id": "math500_111",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_112",
+      "verdict": "PASS",
+      "answer": "b = 1/3",
+      "correct": false
+    },
+    {
+      "id": "math500_113",
+      "verdict": "PASS",
+      "answer": "16.0",
+      "correct": false
+    },
+    {
+      "id": "math500_114",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "-3",
+      "correct": true
+    },
+    {
+      "id": "math500_115",
+      "verdict": "PASS",
+      "answer": "330",
+      "correct": true
+    },
+    {
+      "id": "math500_116",
+      "verdict": "PASS",
+      "answer": "20",
+      "correct": true
+    },
+    {
+      "id": "math500_117",
+      "verdict": "PASS",
+      "answer": "1000000",
+      "correct": false
+    },
+    {
+      "id": "math500_118",
+      "verdict": "PASS",
+      "answer": "754",
+      "correct": true
+    },
+    {
+      "id": "math500_119",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "39",
+      "correct": false
+    },
+    {
+      "id": "math500_120",
+      "verdict": "PASS",
+      "answer": "72.0",
+      "correct": true
+    },
+    {
+      "id": "math500_121",
+      "verdict": "PASS",
+      "answer": "18",
+      "correct": false
+    },
+    {
+      "id": "math500_122",
+      "verdict": "PASS",
+      "answer": "180.000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_123",
+      "verdict": "PASS",
+      "answer": "y = x + 3",
+      "correct": true
+    },
+    {
+      "id": "math500_124",
+      "verdict": "PASS",
+      "answer": "2",
+      "correct": true
+    },
+    {
+      "id": "math500_125",
+      "verdict": "PASS",
+      "answer": "27/128",
+      "correct": true
+    },
+    {
+      "id": "math500_126",
+      "verdict": "PASS",
+      "answer": "neither",
+      "correct": false
+    },
+    {
+      "id": "math500_127",
+      "verdict": "PASS",
+      "answer": "2",
+      "correct": false
+    },
+    {
+      "id": "math500_128",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "6435",
+      "correct": true
+    },
+    {
+      "id": "math500_129",
+      "verdict": "PASS",
+      "answer": "[1]",
+      "correct": false
+    },
+    {
+      "id": "math500_130",
+      "verdict": "PASS",
+      "answer": "165",
+      "correct": true
+    },
+    {
+      "id": "math500_131",
+      "verdict": "PASS",
+      "answer": "13",
+      "correct": true
+    },
+    {
+      "id": "math500_132",
+      "verdict": "PASS",
+      "answer": "59",
+      "correct": true
+    },
+    {
+      "id": "math500_133",
+      "verdict": "PASS",
+      "answer": "40",
+      "correct": false
+    },
+    {
+      "id": "math500_134",
+      "verdict": "PASS",
+      "answer": "5/9",
+      "correct": true
+    },
+    {
+      "id": "math500_135",
+      "verdict": "PASS",
+      "answer": "3720.00000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_136",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_137",
+      "verdict": "PASS",
+      "answer": "3.00000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_138",
+      "verdict": "PASS",
+      "answer": "4",
+      "correct": true
+    },
+    {
+      "id": "math500_139",
+      "verdict": "PASS",
+      "answer": "2",
+      "correct": true
+    },
+    {
+      "id": "math500_140",
+      "verdict": "PASS",
+      "answer": "2*pi",
+      "correct": true
+    },
+    {
+      "id": "math500_141",
+      "verdict": "PASS",
+      "answer": "1",
+      "correct": true
+    },
+    {
+      "id": "math500_142",
+      "verdict": "PASS",
+      "answer": "29.0000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_143",
+      "verdict": "PASS",
+      "answer": "10",
+      "correct": true
+    },
+    {
+      "id": "math500_144",
+      "verdict": "PASS",
+      "answer": "[-3, -2, 1, 2]",
+      "correct": false
+    },
+    {
+      "id": "math500_145",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_146",
+      "verdict": "PASS",
+      "answer": "8.0",
+      "correct": true
+    },
+    {
+      "id": "math500_147",
+      "verdict": "PASS",
+      "answer": "81.0000000000000",
+      "correct": false
+    },
+    {
+      "id": "math500_148",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_149",
+      "verdict": "PASS",
+      "answer": "12",
+      "correct": true
+    },
+    {
+      "id": "math500_150",
+      "verdict": "PASS",
+      "answer": "5040",
+      "correct": true
+    },
+    {
+      "id": "math500_151",
+      "verdict": "PASS",
+      "answer": "15.0000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_152",
+      "verdict": "PASS",
+      "answer": "15480.0/pi",
+      "correct": false
+    },
+    {
+      "id": "math500_153",
+      "verdict": "PASS",
+      "answer": "1/2",
+      "correct": true
+    },
+    {
+      "id": "math500_154",
+      "verdict": "PASS",
+      "answer": "4004",
+      "correct": false
+    },
+    {
+      "id": "math500_155",
+      "verdict": "PASS",
+      "answer": "75",
+      "correct": true
+    },
+    {
+      "id": "math500_156",
+      "verdict": "PASS",
+      "answer": "11",
+      "correct": true
+    },
+    {
+      "id": "math500_157",
+      "verdict": "PASS",
+      "answer": "0",
+      "correct": true
+    },
+    {
+      "id": "math500_158",
+      "verdict": "PASS",
+      "answer": "(a*c + b*d)**2 + (a*d - b*c)**2",
+      "correct": false
+    },
+    {
+      "id": "math500_159",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_160",
+      "verdict": "PASS",
+      "answer": "neither",
+      "correct": true
+    },
+    {
+      "id": "math500_161",
+      "verdict": "PASS",
+      "answer": "76",
+      "correct": true
+    },
+    {
+      "id": "math500_162",
+      "verdict": "PASS",
+      "answer": "12",
+      "correct": true
+    },
+    {
+      "id": "math500_163",
+      "verdict": "PASS",
+      "answer": "1",
+      "correct": true
+    },
+    {
+      "id": "math500_164",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_165",
+      "verdict": "PASS",
+      "answer": "(-1)**(38/85)*(1 + exp(-28*I*pi/85))*(1 + exp(-14*I*pi/85))*(1 + exp(46*I*pi/85))*(1 + exp(54*I*pi/85))*(1 + exp(56*I*pi/85))*(1 + exp(58*I*pi/85))*(1 + exp(62*I*pi/85))*(1 + exp(78*I*pi/85))*exp(-24*I*pi/85)",
+      "correct": true
+    },
+    {
+      "id": "math500_166",
+      "verdict": "PASS",
+      "answer": "6",
+      "correct": true
+    },
+    {
+      "id": "math500_167",
+      "verdict": "PASS",
+      "answer": "[2]",
+      "correct": false
+    },
+    {
+      "id": "math500_168",
+      "verdict": "PASS",
+      "answer": "6.00000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_169",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "63",
+      "correct": true
+    },
+    {
+      "id": "math500_170",
+      "verdict": "PASS",
+      "answer": "75",
+      "correct": true
+    },
+    {
+      "id": "math500_171",
+      "verdict": "PASS",
+      "answer": "50",
+      "correct": true
+    },
+    {
+      "id": "math500_172",
+      "verdict": "PASS",
+      "answer": "-0.523598775598299",
+      "correct": true
+    },
+    {
+      "id": "math500_173",
+      "verdict": "PASS",
+      "answer": "1",
+      "correct": true
+    },
+    {
+      "id": "math500_174",
+      "verdict": "PASS",
+      "answer": "15.0",
+      "correct": true
+    },
+    {
+      "id": "math500_175",
+      "verdict": "PASS",
+      "answer": "12.0000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_176",
+      "verdict": "PASS",
+      "answer": "52",
+      "correct": true
+    },
+    {
+      "id": "math500_177",
+      "verdict": "PASS",
+      "answer": "13/144",
+      "correct": true
+    },
+    {
+      "id": "math500_178",
+      "verdict": "PASS",
+      "answer": "4.0",
+      "correct": true
+    },
+    {
+      "id": "math500_179",
+      "verdict": "PASS",
+      "answer": "2",
+      "correct": true
+    },
+    {
+      "id": "math500_180",
+      "verdict": "PASS",
+      "answer": "5.00000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_181",
+      "verdict": "PASS",
+      "answer": "87.0",
+      "correct": true
+    },
+    {
+      "id": "math500_182",
+      "verdict": "PASS",
+      "answer": "6",
+      "correct": true
+    },
+    {
+      "id": "math500_183",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "(-2, 5, -1)",
+      "correct": true
+    },
+    {
+      "id": "math500_184",
+      "verdict": "PASS",
+      "answer": "1/11",
+      "correct": true
+    },
+    {
+      "id": "math500_185",
+      "verdict": "PASS",
+      "answer": "291",
+      "correct": true
+    },
+    {
+      "id": "math500_186",
+      "verdict": "PASS",
+      "answer": "-9.0",
+      "correct": true
+    },
+    {
+      "id": "math500_187",
+      "verdict": "PASS",
+      "answer": "1/4",
+      "correct": true
+    },
+    {
+      "id": "math500_188",
+      "verdict": "PASS",
+      "answer": "-8",
+      "correct": true
+    },
+    {
+      "id": "math500_189",
+      "verdict": "PASS",
+      "answer": "2",
+      "correct": true
+    },
+    {
+      "id": "math500_190",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_191",
+      "verdict": "PASS",
+      "answer": "108",
+      "correct": true
+    },
+    {
+      "id": "math500_192",
+      "verdict": "PASS",
+      "answer": "Matrix([[2/5], [-1/5], [0]])",
+      "correct": false
+    },
+    {
+      "id": "math500_193",
+      "verdict": "PASS",
+      "answer": "13",
+      "correct": true
+    },
+    {
+      "id": "math500_194",
+      "verdict": "PASS",
+      "answer": "28",
+      "correct": true
+    },
+    {
+      "id": "math500_195",
+      "verdict": "PASS",
+      "answer": "1",
+      "correct": true
+    },
+    {
+      "id": "math500_196",
+      "verdict": "PASS",
+      "answer": "8",
+      "correct": true
+    },
+    {
+      "id": "math500_197",
+      "verdict": "PASS",
+      "answer": "Matrix([[12/13], [-18/13]])",
+      "correct": false
+    },
+    {
+      "id": "math500_198",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "-3",
+      "correct": true
+    },
+    {
+      "id": "math500_199",
+      "verdict": "PASS",
+      "answer": "1",
+      "correct": true
+    },
+    {
+      "id": "math500_200",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_201",
+      "verdict": "PASS",
+      "answer": "75",
+      "correct": true
+    },
+    {
+      "id": "math500_202",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "11189",
+      "correct": true
+    },
+    {
+      "id": "math500_203",
+      "verdict": "PASS",
+      "answer": "24",
+      "correct": true
+    },
+    {
+      "id": "math500_204",
+      "verdict": "PASS",
+      "answer": "48",
+      "correct": true
+    },
+    {
+      "id": "math500_205",
+      "verdict": "PASS",
+      "answer": "8",
+      "correct": true
+    },
+    {
+      "id": "math500_206",
+      "verdict": "PASS",
+      "answer": "987436",
+      "correct": false
+    },
+    {
+      "id": "math500_207",
+      "verdict": "PASS",
+      "answer": "5.19615242270663",
+      "correct": false
+    },
+    {
+      "id": "math500_208",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_209",
+      "verdict": "PASS",
+      "answer": "2.0*x - 1.0",
+      "correct": true
+    },
+    {
+      "id": "math500_210",
+      "verdict": "PASS",
+      "answer": "-1/6",
+      "correct": false
+    },
+    {
+      "id": "math500_211",
+      "verdict": "PASS",
+      "answer": "54",
+      "correct": true
+    },
+    {
+      "id": "math500_212",
+      "verdict": "PASS",
+      "answer": "11",
+      "correct": true
+    },
+    {
+      "id": "math500_213",
+      "verdict": "PASS",
+      "answer": "400",
+      "correct": true
+    },
+    {
+      "id": "math500_214",
+      "verdict": "PASS",
+      "answer": "-10",
+      "correct": true
+    },
+    {
+      "id": "math500_215",
+      "verdict": "PASS",
+      "answer": "Matrix([[16/49], [48/49], [24/49]])",
+      "correct": false
+    },
+    {
+      "id": "math500_216",
+      "verdict": "PASS",
+      "answer": "20",
+      "correct": true
+    },
+    {
+      "id": "math500_217",
+      "verdict": "PASS",
+      "answer": "45",
+      "correct": false
+    },
+    {
+      "id": "math500_218",
+      "verdict": "PASS",
+      "answer": "132",
+      "correct": true
+    },
+    {
+      "id": "math500_219",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_220",
+      "verdict": "PASS",
+      "answer": "1092",
+      "correct": true
+    },
+    {
+      "id": "math500_221",
+      "verdict": "PASS",
+      "answer": "-243",
+      "correct": false
+    },
+    {
+      "id": "math500_222",
+      "verdict": "PASS",
+      "answer": "Matrix([[-2], [-2], [1]])",
+      "correct": false
+    },
+    {
+      "id": "math500_223",
+      "verdict": "PASS",
+      "answer": "-2",
+      "correct": true
+    },
+    {
+      "id": "math500_224",
+      "verdict": "PASS",
+      "answer": "sqrt(39)/8",
+      "correct": true
+    },
+    {
+      "id": "math500_225",
+      "verdict": "PASS",
+      "answer": "(3*sqrt(3), -9, -2)",
+      "correct": false
+    },
+    {
+      "id": "math500_226",
+      "verdict": "PASS",
+      "answer": "8.00000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_227",
+      "verdict": "PASS",
+      "answer": "(11*y + 5)/(y - 2)",
+      "correct": false
+    },
+    {
+      "id": "math500_228",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "42",
+      "correct": false
+    },
+    {
+      "id": "math500_229",
+      "verdict": "PASS",
+      "answer": "9",
+      "correct": true
+    },
+    {
+      "id": "math500_230",
+      "verdict": "PASS",
+      "answer": "3",
+      "correct": true
+    },
+    {
+      "id": "math500_231",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_232",
+      "verdict": "PASS",
+      "answer": "30.0000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_233",
+      "verdict": "PASS",
+      "answer": "-20",
+      "correct": false
+    },
+    {
+      "id": "math500_234",
+      "verdict": "PASS",
+      "answer": "(sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))/2 - sqrt(-2*(1/144 + sqrt(49151)*I/144)**(1/3) + 2/(3*sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))) - 8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)))/2)*(sqrt(-2*(1/144 + sqrt(49151)*I/144)**(1/3) - 2/(3*sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))) - 8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)))/2 - sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))/2)*(sqrt(-2*(1/144 + sqrt(49151)*I/144)**(1/3) + 2/(3*sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))) - 8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)))/2 + sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))/2) + (-sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))/2 - sqrt(-2*(1/144 + sqrt(49151)*I/144)**(1/3) - 2/(3*sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))) - 8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)))/2)*(sqrt(-2*(1/144 + sqrt(49151)*I/144)**(1/3) - 2/(3*sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))) - 8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)))/2 - sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))/2)*(sqrt(-2*(1/144 + sqrt(49151)*I/144)**(1/3) + 2/(3*sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))) - 8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)))/2 + sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))/2) + (-sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))/2 - sqrt(-2*(1/144 + sqrt(49151)*I/144)**(1/3) - 2/(3*sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))) - 8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)))/2)*(sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))/2 - sqrt(-2*(1/144 + sqrt(49151)*I/144)**(1/3) + 2/(3*sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))) - 8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)))/2)*(sqrt(-2*(1/144 + sqrt(49151)*I/144)**(1/3) - 2/(3*sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))) - 8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)))/2 - sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))/2) + (-sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))/2 - sqrt(-2*(1/144 + sqrt(49151)*I/144)**(1/3) - 2/(3*sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))) - 8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)))/2)*(sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))/2 - sqrt(-2*(1/144 + sqrt(49151)*I/144)**(1/3) + 2/(3*sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))) - 8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)))/2)*(sqrt(-2*(1/144 + sqrt(49151)*I/144)**(1/3) + 2/(3*sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))) - 8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)))/2 + sqrt(8/(3*(1/144 + sqrt(49151)*I/144)**(1/3)) + 2*(1/144 + sqrt(49151)*I/144)**(1/3))/2)",
+      "correct": true
+    },
+    {
+      "id": "math500_235",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_236",
+      "verdict": "PASS",
+      "answer": "11",
+      "correct": true
+    },
+    {
+      "id": "math500_237",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_238",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "-9",
+      "correct": true
+    },
+    {
+      "id": "math500_239",
+      "verdict": "PASS",
+      "answer": "Union(Interval.open(-oo, -7), Interval.open(1, 2))",
+      "correct": false
+    },
+    {
+      "id": "math500_240",
+      "verdict": "PASS",
+      "answer": "10",
+      "correct": true
+    },
+    {
+      "id": "math500_241",
+      "verdict": "PASS",
+      "answer": "nan",
+      "correct": false
+    },
+    {
+      "id": "math500_242",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "12",
+      "correct": true
+    },
+    {
+      "id": "math500_243",
+      "verdict": "PASS",
+      "answer": "14",
+      "correct": true
+    },
+    {
+      "id": "math500_244",
+      "verdict": "PASS",
+      "answer": "9.21034037197618/log(10)",
+      "correct": true
+    },
+    {
+      "id": "math500_245",
+      "verdict": "PASS",
+      "answer": "-40.0000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_246",
+      "verdict": "PASS",
+      "answer": "-2",
+      "correct": true
+    },
+    {
+      "id": "math500_247",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "1",
+      "correct": true
+    },
+    {
+      "id": "math500_248",
+      "verdict": "PASS",
+      "answer": "Matrix([[1], [3]])",
+      "correct": false
+    },
+    {
+      "id": "math500_249",
+      "verdict": "PASS",
+      "answer": "4",
+      "correct": true
+    },
+    {
+      "id": "math500_250",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_251",
+      "verdict": "PASS",
+      "answer": "-49",
+      "correct": true
+    },
+    {
+      "id": "math500_252",
+      "verdict": "PASS",
+      "answer": "0.0",
+      "correct": false
+    },
+    {
+      "id": "math500_253",
+      "verdict": "PASS",
+      "answer": "210",
+      "correct": true
+    },
+    {
+      "id": "math500_254",
+      "verdict": "PASS",
+      "answer": "336",
+      "correct": true
+    },
+    {
+      "id": "math500_255",
+      "verdict": "PASS",
+      "answer": "84",
+      "correct": true
+    },
+    {
+      "id": "math500_256",
+      "verdict": "PASS",
+      "answer": "0",
+      "correct": true
+    },
+    {
+      "id": "math500_257",
+      "verdict": "PASS",
+      "answer": "8.0",
+      "correct": true
+    },
+    {
+      "id": "math500_258",
+      "verdict": "PASS",
+      "answer": "-3600",
+      "correct": false
+    },
+    {
+      "id": "math500_259",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "True",
+      "correct": false
+    },
+    {
+      "id": "math500_260",
+      "verdict": "PASS",
+      "answer": "4",
+      "correct": true
+    },
+    {
+      "id": "math500_261",
+      "verdict": "PASS",
+      "answer": "639/40",
+      "correct": true
+    },
+    {
+      "id": "math500_262",
+      "verdict": "PASS",
+      "answer": "8",
+      "correct": true
+    },
+    {
+      "id": "math500_263",
+      "verdict": "PASS",
+      "answer": "1/8",
+      "correct": true
+    },
+    {
+      "id": "math500_264",
+      "verdict": "PASS",
+      "answer": "13800",
+      "correct": false
+    },
+    {
+      "id": "math500_265",
+      "verdict": "PASS",
+      "answer": "3",
+      "correct": true
+    },
+    {
+      "id": "math500_266",
+      "verdict": "PASS",
+      "answer": "8",
+      "correct": true
+    },
+    {
+      "id": "math500_267",
+      "verdict": "PASS",
+      "answer": "56",
+      "correct": true
+    },
+    {
+      "id": "math500_268",
+      "verdict": "PASS",
+      "answer": "9",
+      "correct": true
+    },
+    {
+      "id": "math500_269",
+      "verdict": "PASS",
+      "answer": "1241",
+      "correct": true
+    },
+    {
+      "id": "math500_270",
+      "verdict": "PASS",
+      "answer": "21",
+      "correct": true
+    },
+    {
+      "id": "math500_271",
+      "verdict": "FIXED_ROUND_2",
+      "answer": "63*a + 7*b + 4",
+      "correct": false
+    },
+    {
+      "id": "math500_272",
+      "verdict": "PASS",
+      "answer": "76",
+      "correct": true
+    },
+    {
+      "id": "math500_273",
+      "verdict": "PASS",
+      "answer": "1/8",
+      "correct": true
+    },
+    {
+      "id": "math500_274",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "165",
+      "correct": true
+    },
+    {
+      "id": "math500_275",
+      "verdict": "PASS",
+      "answer": "1/24",
+      "correct": true
+    },
+    {
+      "id": "math500_276",
+      "verdict": "PASS",
+      "answer": "80.0000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_277",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "4",
+      "correct": true
+    },
+    {
+      "id": "math500_278",
+      "verdict": "PASS",
+      "answer": "100",
+      "correct": true
+    },
+    {
+      "id": "math500_279",
+      "verdict": "PASS",
+      "answer": "2*sqrt(5)",
+      "correct": true
+    },
+    {
+      "id": "math500_280",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_281",
+      "verdict": "PASS",
+      "answer": "5/9",
+      "correct": true
+    },
+    {
+      "id": "math500_282",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_283",
+      "verdict": "PASS",
+      "answer": "9",
+      "correct": true
+    },
+    {
+      "id": "math500_284",
+      "verdict": "PASS",
+      "answer": "17",
+      "correct": true
+    },
+    {
+      "id": "math500_285",
+      "verdict": "PASS",
+      "answer": "0.25*a*b*c/R",
+      "correct": false
+    },
+    {
+      "id": "math500_286",
+      "verdict": "PASS",
+      "answer": "-1",
+      "correct": false
+    },
+    {
+      "id": "math500_287",
+      "verdict": "PASS",
+      "answer": "-4/5",
+      "correct": true
+    },
+    {
+      "id": "math500_288",
+      "verdict": "PASS",
+      "answer": "0",
+      "correct": false
+    },
+    {
+      "id": "math500_289",
+      "verdict": "PASS",
+      "answer": "2",
+      "correct": true
+    },
+    {
+      "id": "math500_290",
+      "verdict": "PASS",
+      "answer": "5/12",
+      "correct": true
+    },
+    {
+      "id": "math500_291",
+      "verdict": "PASS",
+      "answer": "6",
+      "correct": true
+    },
+    {
+      "id": "math500_292",
+      "verdict": "PASS",
+      "answer": "5.00000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_293",
+      "verdict": "PASS",
+      "answer": "5",
+      "correct": true
+    },
+    {
+      "id": "math500_294",
+      "verdict": "PASS",
+      "answer": "40/243",
+      "correct": true
+    },
+    {
+      "id": "math500_295",
+      "verdict": "PASS",
+      "answer": "80",
+      "correct": false
+    },
+    {
+      "id": "math500_296",
+      "verdict": "PASS",
+      "answer": "4.00000000000000",
+      "correct": false
+    },
+    {
+      "id": "math500_297",
+      "verdict": "PASS",
+      "answer": "3",
+      "correct": false
+    },
+    {
+      "id": "math500_298",
+      "verdict": "PASS",
+      "answer": "[-3, 2*x + 3]",
+      "correct": false
+    },
+    {
+      "id": "math500_299",
+      "verdict": "PASS",
+      "answer": "4.95",
+      "correct": true
+    },
+    {
+      "id": "math500_300",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "[-sqrt(85), sqrt(67)]",
+      "correct": false
+    },
+    {
+      "id": "math500_301",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "3",
+      "correct": false
+    },
+    {
+      "id": "math500_302",
+      "verdict": "PASS",
+      "answer": "100",
+      "correct": true
+    },
+    {
+      "id": "math500_303",
+      "verdict": "PASS",
+      "answer": "20",
+      "correct": true
+    },
+    {
+      "id": "math500_304",
+      "verdict": "PASS",
+      "answer": "76/441",
+      "correct": false
+    },
+    {
+      "id": "math500_305",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_306",
+      "verdict": "PASS",
+      "answer": "y = -x**2/2 + 4*x - 6",
+      "correct": false
+    },
+    {
+      "id": "math500_307",
+      "verdict": "PASS",
+      "answer": "-sqrt(39) + 2*sqrt(22 - 6*sqrt(13)) + sqrt(153 - 42*sqrt(13)) + 3*sqrt(3)",
+      "correct": false
+    },
+    {
+      "id": "math500_308",
+      "verdict": "PASS",
+      "answer": "-15",
+      "correct": true
+    },
+    {
+      "id": "math500_309",
+      "verdict": "PASS",
+      "answer": "Matrix([[-10], [-35], [30]])",
+      "correct": false
+    },
+    {
+      "id": "math500_310",
+      "verdict": "PASS",
+      "answer": "288.0*pi",
+      "correct": false
+    },
+    {
+      "id": "math500_311",
+      "verdict": "PASS",
+      "answer": "[-2, 6]",
+      "correct": false
+    },
+    {
+      "id": "math500_312",
+      "verdict": "PASS",
+      "answer": "44",
+      "correct": true
+    },
+    {
+      "id": "math500_313",
+      "verdict": "PASS",
+      "answer": "8*pi",
+      "correct": true
+    },
+    {
+      "id": "math500_314",
+      "verdict": "PASS",
+      "answer": "12",
+      "correct": true
+    },
+    {
+      "id": "math500_315",
+      "verdict": "PASS",
+      "answer": "0",
+      "correct": false
+    },
+    {
+      "id": "math500_316",
+      "verdict": "PASS",
+      "answer": "-16/63",
+      "correct": true
+    },
+    {
+      "id": "math500_317",
+      "verdict": "PASS",
+      "answer": "8*sqrt(3)",
+      "correct": true
+    },
+    {
+      "id": "math500_318",
+      "verdict": "PASS",
+      "answer": "35",
+      "correct": false
+    },
+    {
+      "id": "math500_319",
+      "verdict": "PASS",
+      "answer": "97",
+      "correct": true
+    },
+    {
+      "id": "math500_320",
+      "verdict": "PASS",
+      "answer": "-14/5",
+      "correct": true
+    },
+    {
+      "id": "math500_321",
+      "verdict": "PASS",
+      "answer": "247000.000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_322",
+      "verdict": "PASS",
+      "answer": "[0.307692307692308]",
+      "correct": false
+    },
+    {
+      "id": "math500_323",
+      "verdict": "PASS",
+      "answer": "156",
+      "correct": true
+    },
+    {
+      "id": "math500_324",
+      "verdict": "PASS",
+      "answer": "-19",
+      "correct": false
+    },
+    {
+      "id": "math500_325",
+      "verdict": "PASS",
+      "answer": "-66",
+      "correct": false
+    },
+    {
+      "id": "math500_326",
+      "verdict": "PASS",
+      "answer": "3",
+      "correct": true
+    },
+    {
+      "id": "math500_327",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_328",
+      "verdict": "PASS",
+      "answer": "10.0000000000000",
+      "correct": false
+    },
+    {
+      "id": "math500_329",
+      "verdict": "PASS",
+      "answer": "3/4",
+      "correct": true
+    },
+    {
+      "id": "math500_330",
+      "verdict": "PASS",
+      "answer": "25.0*pi",
+      "correct": false
+    },
+    {
+      "id": "math500_331",
+      "verdict": "PASS",
+      "answer": "0.375*cos(4.0*theta) + 0.625",
+      "correct": false
+    },
+    {
+      "id": "math500_332",
+      "verdict": "PASS",
+      "answer": "2",
+      "correct": true
+    },
+    {
+      "id": "math500_333",
+      "verdict": "PASS",
+      "answer": "16",
+      "correct": true
+    },
+    {
+      "id": "math500_334",
+      "verdict": "PASS",
+      "answer": "0o2516",
+      "correct": false
+    },
+    {
+      "id": "math500_335",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "10.4403065089106",
+      "correct": true
+    },
+    {
+      "id": "math500_336",
+      "verdict": "PASS",
+      "answer": "6.41025641025641",
+      "correct": true
+    },
+    {
+      "id": "math500_337",
+      "verdict": "PASS",
+      "answer": "360",
+      "correct": true
+    },
+    {
+      "id": "math500_338",
+      "verdict": "PASS",
+      "answer": "Union(Interval(-oo, 0), Interval.Lopen(1/2, 3/2))",
+      "correct": false
+    },
+    {
+      "id": "math500_339",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "sqrt(2)",
+      "correct": true
+    },
+    {
+      "id": "math500_340",
+      "verdict": "PASS",
+      "answer": "4.5*pi",
+      "correct": false
+    },
+    {
+      "id": "math500_341",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_342",
+      "verdict": "PASS",
+      "answer": "(10, 2)",
+      "correct": true
+    },
+    {
+      "id": "math500_343",
+      "verdict": "PASS",
+      "answer": "512",
+      "correct": true
+    },
+    {
+      "id": "math500_344",
+      "verdict": "PASS",
+      "answer": "16",
+      "correct": true
+    },
+    {
+      "id": "math500_345",
+      "verdict": "PASS",
+      "answer": "73/99",
+      "correct": false
+    },
+    {
+      "id": "math500_346",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "Range: Interval(5, 5*sqrt(2))",
+      "correct": false
+    },
+    {
+      "id": "math500_347",
+      "verdict": "PASS",
+      "answer": "30240",
+      "correct": false
+    },
+    {
+      "id": "math500_348",
+      "verdict": "PASS",
+      "answer": "103/3",
+      "correct": false
+    },
+    {
+      "id": "math500_349",
+      "verdict": "PASS",
+      "answer": "9",
+      "correct": true
+    },
+    {
+      "id": "math500_350",
+      "verdict": "PASS",
+      "answer": "10.0000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_351",
+      "verdict": "PASS",
+      "answer": "sqrt(a**2/4 + 1082)",
+      "correct": false
+    },
+    {
+      "id": "math500_352",
+      "verdict": "PASS",
+      "answer": "14/3",
+      "correct": true
+    },
+    {
+      "id": "math500_353",
+      "verdict": "PASS",
+      "answer": "3*sqrt(3)/4",
+      "correct": true
+    },
+    {
+      "id": "math500_354",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_355",
+      "verdict": "PASS",
+      "answer": "-96*sqrt(3)",
+      "correct": false
+    },
+    {
+      "id": "math500_356",
+      "verdict": "PASS",
+      "answer": "4*sqrt(34) + 32",
+      "correct": false
+    },
+    {
+      "id": "math500_357",
+      "verdict": "PASS",
+      "answer": "-1",
+      "correct": true
+    },
+    {
+      "id": "math500_358",
+      "verdict": "PASS",
+      "answer": "[]",
+      "correct": false
+    },
+    {
+      "id": "math500_359",
+      "verdict": "PASS",
+      "answer": "0.3428571428571428",
+      "correct": true
+    },
+    {
+      "id": "math500_360",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_361",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "500",
+      "correct": true
+    },
+    {
+      "id": "math500_362",
+      "verdict": "PASS",
+      "answer": "30",
+      "correct": true
+    },
+    {
+      "id": "math500_363",
+      "verdict": "PASS",
+      "answer": "5",
+      "correct": false
+    },
+    {
+      "id": "math500_364",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "[(-1, -1, -1), (5/3, 5/3, 5/3)]",
+      "correct": false
+    },
+    {
+      "id": "math500_365",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "n > 8: x1*x2 - x1*(x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) + x2*x3 + x3*x4 + x4*x5 + x5*x6 + x6*x7 + x7*x8 - x8*(x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8) <= 0",
+      "correct": false
+    },
+    {
+      "id": "math500_366",
+      "verdict": "PASS",
+      "answer": "900000000",
+      "correct": false
+    },
+    {
+      "id": "math500_367",
+      "verdict": "PASS",
+      "answer": "Interval(-oo, oo)",
+      "correct": false
+    },
+    {
+      "id": "math500_368",
+      "verdict": "PASS",
+      "answer": "-p/(a - p) - q/(b - q) - r/(c - r)",
+      "correct": false
+    },
+    {
+      "id": "math500_369",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_370",
+      "verdict": "PASS",
+      "answer": "(7 - sqrt(30))**2 + (sqrt(30) + 7)**2",
+      "correct": true
+    },
+    {
+      "id": "math500_371",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_372",
+      "verdict": "PASS",
+      "answer": "3 - 13*x",
+      "correct": true
+    },
+    {
+      "id": "math500_373",
+      "verdict": "PASS",
+      "answer": "91",
+      "correct": false
+    },
+    {
+      "id": "math500_374",
+      "verdict": "PASS",
+      "answer": "12",
+      "correct": true
+    },
+    {
+      "id": "math500_375",
+      "verdict": "PASS",
+      "answer": "46.0000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_376",
+      "verdict": "PASS",
+      "answer": "4",
+      "correct": true
+    },
+    {
+      "id": "math500_377",
+      "verdict": "PASS",
+      "answer": "b - (-3**(2/3)*b**(1/3) + 2**(2/3)*b**(1/3) - 2*2**(1/3) + 3*3**(1/3))**3/((2**(1/3) + 3**(1/3))**3*(-3**(1/3) + 2**(1/3))**3)",
+      "correct": false
+    },
+    {
+      "id": "math500_378",
+      "verdict": "PASS",
+      "answer": "42",
+      "correct": true
+    },
+    {
+      "id": "math500_379",
+      "verdict": "PASS",
+      "answer": "4.33333333333333",
+      "correct": true
+    },
+    {
+      "id": "math500_380",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "Final value of k: 3",
+      "correct": false
+    },
+    {
+      "id": "math500_381",
+      "verdict": "PASS",
+      "answer": "120",
+      "correct": false
+    },
+    {
+      "id": "math500_382",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "64",
+      "correct": true
+    },
+    {
+      "id": "math500_383",
+      "verdict": "PASS",
+      "answer": "27",
+      "correct": true
+    },
+    {
+      "id": "math500_384",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_385",
+      "verdict": "PASS",
+      "answer": "Point2D(1, 1)",
+      "correct": false
+    },
+    {
+      "id": "math500_386",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "1.50000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_387",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "15",
+      "correct": true
+    },
+    {
+      "id": "math500_388",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_389",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_390",
+      "verdict": "PASS",
+      "answer": "set()",
+      "correct": false
+    },
+    {
+      "id": "math500_391",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "16",
+      "correct": true
+    },
+    {
+      "id": "math500_392",
+      "verdict": "PASS",
+      "answer": "150",
+      "correct": true
+    },
+    {
+      "id": "math500_393",
+      "verdict": "PASS",
+      "answer": "(128, 2)",
+      "correct": true
+    },
+    {
+      "id": "math500_394",
+      "verdict": "PASS",
+      "answer": "sqrt(6.0 + 1.83386210007678e-20*I)",
+      "correct": true
+    },
+    {
+      "id": "math500_395",
+      "verdict": "PASS",
+      "answer": "81/125",
+      "correct": true
+    },
+    {
+      "id": "math500_396",
+      "verdict": "PASS",
+      "answer": "6",
+      "correct": true
+    },
+    {
+      "id": "math500_397",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "a + 2*sqrt(a**2 + 121)",
+      "correct": false
+    },
+    {
+      "id": "math500_398",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_399",
+      "verdict": "PASS",
+      "answer": "-5*sqrt(2)",
+      "correct": false
+    },
+    {
+      "id": "math500_400",
+      "verdict": "PASS",
+      "answer": "125",
+      "correct": true
+    },
+    {
+      "id": "math500_401",
+      "verdict": "PASS",
+      "answer": "96",
+      "correct": true
+    },
+    {
+      "id": "math500_402",
+      "verdict": "PASS",
+      "answer": "0.8*y/z + 1.46666666666667",
+      "correct": false
+    },
+    {
+      "id": "math500_403",
+      "verdict": "PASS",
+      "answer": "{-4}",
+      "correct": false
+    },
+    {
+      "id": "math500_404",
+      "verdict": "PASS",
+      "answer": "12*sqrt(35)",
+      "correct": true
+    },
+    {
+      "id": "math500_405",
+      "verdict": "PASS",
+      "answer": "24*A - 144*B - 888",
+      "correct": false
+    },
+    {
+      "id": "math500_406",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "4",
+      "correct": false
+    },
+    {
+      "id": "math500_407",
+      "verdict": "PASS",
+      "answer": "3*t",
+      "correct": false
+    },
+    {
+      "id": "math500_408",
+      "verdict": "PASS",
+      "answer": "32",
+      "correct": true
+    },
+    {
+      "id": "math500_409",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "{x: -1, y: 8}",
+      "correct": false
+    },
+    {
+      "id": "math500_410",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_411",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_412",
+      "verdict": "PASS",
+      "answer": "17",
+      "correct": true
+    },
+    {
+      "id": "math500_413",
+      "verdict": "PASS",
+      "answer": "8080",
+      "correct": true
+    },
+    {
+      "id": "math500_414",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_415",
+      "verdict": "PASS",
+      "answer": "3",
+      "correct": true
+    },
+    {
+      "id": "math500_416",
+      "verdict": "PASS",
+      "answer": "-5/2",
+      "correct": true
+    },
+    {
+      "id": "math500_417",
+      "verdict": "PASS",
+      "answer": "40/9",
+      "correct": true
+    },
+    {
+      "id": "math500_418",
+      "verdict": "PASS",
+      "answer": "25/13",
+      "correct": false
+    },
+    {
+      "id": "math500_419",
+      "verdict": "PASS",
+      "answer": "10",
+      "correct": true
+    },
+    {
+      "id": "math500_420",
+      "verdict": "PASS",
+      "answer": "[a + b/2]",
+      "correct": false
+    },
+    {
+      "id": "math500_421",
+      "verdict": "PASS",
+      "answer": "8",
+      "correct": true
+    },
+    {
+      "id": "math500_422",
+      "verdict": "FIXED_ROUND_2",
+      "answer": "-n*(2*n + 1)",
+      "correct": true
+    },
+    {
+      "id": "math500_423",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "0.333333333333333",
+      "correct": false
+    },
+    {
+      "id": "math500_424",
+      "verdict": "PASS",
+      "answer": "161/36",
+      "correct": true
+    },
+    {
+      "id": "math500_425",
+      "verdict": "PASS",
+      "answer": "4",
+      "correct": false
+    },
+    {
+      "id": "math500_426",
+      "verdict": "PASS",
+      "answer": "28800",
+      "correct": true
+    },
+    {
+      "id": "math500_427",
+      "verdict": "PASS",
+      "answer": "4",
+      "correct": true
+    },
+    {
+      "id": "math500_428",
+      "verdict": "PASS",
+      "answer": "0",
+      "correct": false
+    },
+    {
+      "id": "math500_429",
+      "verdict": "PASS",
+      "answer": "67.5000000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_430",
+      "verdict": "PASS",
+      "answer": "3",
+      "correct": false
+    },
+    {
+      "id": "math500_431",
+      "verdict": "PASS",
+      "answer": "58",
+      "correct": false
+    },
+    {
+      "id": "math500_432",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_433",
+      "verdict": "PASS",
+      "answer": "2 + 1.0*pi",
+      "correct": false
+    },
+    {
+      "id": "math500_434",
+      "verdict": "PASS",
+      "answer": "4*pi*(1 + sqrt(2))",
+      "correct": false
+    },
+    {
+      "id": "math500_435",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "1041",
+      "correct": true
+    },
+    {
+      "id": "math500_436",
+      "verdict": "PASS",
+      "answer": "18.9000000000000",
+      "correct": false
+    },
+    {
+      "id": "math500_437",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_438",
+      "verdict": "PASS",
+      "answer": "16386.16",
+      "correct": false
+    },
+    {
+      "id": "math500_439",
+      "verdict": "PASS",
+      "answer": "9",
+      "correct": true
+    },
+    {
+      "id": "math500_440",
+      "verdict": "PASS",
+      "answer": "13.2871972318339",
+      "correct": true
+    },
+    {
+      "id": "math500_441",
+      "verdict": "PASS",
+      "answer": "32",
+      "correct": false
+    },
+    {
+      "id": "math500_442",
+      "verdict": "PASS",
+      "answer": "1/9",
+      "correct": true
+    },
+    {
+      "id": "math500_443",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "0.199999999999818",
+      "correct": true
+    },
+    {
+      "id": "math500_444",
+      "verdict": "PASS",
+      "answer": "(1/4 + sqrt(5)/4 - sqrt(-10 + 2*sqrt(5))/4)**85 + (1/4 + sqrt(5)/4 - sqrt(-10 + 2*sqrt(5))/4)**(-85)",
+      "correct": true
+    },
+    {
+      "id": "math500_445",
+      "verdict": "PASS",
+      "answer": "91.9393939393939",
+      "correct": false
+    },
+    {
+      "id": "math500_446",
+      "verdict": "PASS",
+      "answer": "15.08",
+      "correct": true
+    },
+    {
+      "id": "math500_447",
+      "verdict": "PASS",
+      "answer": "81",
+      "correct": true
+    },
+    {
+      "id": "math500_448",
+      "verdict": "PASS",
+      "answer": "5*k**2/8 + 5/8",
+      "correct": false
+    },
+    {
+      "id": "math500_449",
+      "verdict": "PASS",
+      "answer": "(64 + (2 + 2*sqrt(3))**4)/((-8 + (2 + 2*sqrt(3))**2)*(2 + 2*sqrt(3)))",
+      "correct": true
+    },
+    {
+      "id": "math500_450",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "12",
+      "correct": true
+    },
+    {
+      "id": "math500_451",
+      "verdict": "PASS",
+      "answer": "18",
+      "correct": true
+    },
+    {
+      "id": "math500_452",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "23",
+      "correct": true
+    },
+    {
+      "id": "math500_453",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "sqrt(6)/6",
+      "correct": true
+    },
+    {
+      "id": "math500_454",
+      "verdict": "PASS",
+      "answer": "minimum value: -5/4",
+      "correct": false
+    },
+    {
+      "id": "math500_455",
+      "verdict": "PASS",
+      "answer": "2.50000000000000",
+      "correct": false
+    },
+    {
+      "id": "math500_456",
+      "verdict": "PASS",
+      "answer": "9",
+      "correct": true
+    },
+    {
+      "id": "math500_457",
+      "verdict": "PASS",
+      "answer": "-(1 - CRootOf(x**5 + 2004*x - 1, 0)**2)*(1 - CRootOf(x**5 + 2004*x - 1, 1)**2)*(1 - CRootOf(x**5 + 2004*x - 1, 2)**2)*(1 - CRootOf(x**5 + 2004*x - 1, 3)**2)*(1 - CRootOf(x**5 + 2004*x - 1, 4)**2)/((1 + CRootOf(x**5 + 2004*x - 1, 1)**2)*(1 + CRootOf(x**5 + 2004*x - 1, 2)**2)*(1 + CRootOf(x**5 + 2004*x - 1, 3)**2)*(1 + CRootOf(x**5 + 2004*x - 1, 4)**2)*(CRootOf(x**5 + 2004*x - 1, 0)**2 + 1))",
+      "correct": true
+    },
+    {
+      "id": "math500_458",
+      "verdict": "PASS",
+      "answer": "17/50",
+      "correct": true
+    },
+    {
+      "id": "math500_459",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_460",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "(5/4 - sqrt(17)/4)**2*(sqrt(17)/4 + 5/4) + (5/4 - sqrt(17)/4)*(sqrt(17)/4 + 5/4)",
+      "correct": false
+    },
+    {
+      "id": "math500_461",
+      "verdict": "PASS",
+      "answer": "10455.0000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_462",
+      "verdict": "PASS",
+      "answer": "0.5",
+      "correct": false
+    },
+    {
+      "id": "math500_463",
+      "verdict": "PASS",
+      "answer": "1",
+      "correct": false
+    },
+    {
+      "id": "math500_464",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "((u1 + v1)*(2*u1 - v1) + (u2 + v2)*(2*u2 - v2) + (u3 + v3)*(2*u3 - v3))/(sqrt((u1 + v1)**2 + (u2 + v2)**2 + (u3 + v3)**2)*sqrt((2*u1 - v1)**2 + (2*u2 - v2)**2 + (2*u3 - v3)**2))",
+      "correct": false
+    },
+    {
+      "id": "math500_465",
+      "verdict": "PASS",
+      "answer": "1/55",
+      "correct": false
+    },
+    {
+      "id": "math500_466",
+      "verdict": "PASS",
+      "answer": "0",
+      "correct": false
+    },
+    {
+      "id": "math500_467",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "112",
+      "correct": true
+    },
+    {
+      "id": "math500_468",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "[3]",
+      "correct": false
+    },
+    {
+      "id": "math500_469",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "5",
+      "correct": true
+    },
+    {
+      "id": "math500_470",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "1112",
+      "correct": true
+    },
+    {
+      "id": "math500_471",
+      "verdict": "PASS",
+      "answer": "{nan}",
+      "correct": false
+    },
+    {
+      "id": "math500_472",
+      "verdict": "PASS",
+      "answer": "8",
+      "correct": false
+    },
+    {
+      "id": "math500_473",
+      "verdict": "PASS",
+      "answer": "3/2 + 3*I/2",
+      "correct": false
+    },
+    {
+      "id": "math500_474",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_475",
+      "verdict": "PASS",
+      "answer": "36/11",
+      "correct": true
+    },
+    {
+      "id": "math500_476",
+      "verdict": "PASS",
+      "answer": "5.65690000000000",
+      "correct": true
+    },
+    {
+      "id": "math500_477",
+      "verdict": "PASS",
+      "answer": "0.273437500000000",
+      "correct": true
+    },
+    {
+      "id": "math500_478",
+      "verdict": "PASS",
+      "answer": "7/20",
+      "correct": true
+    },
+    {
+      "id": "math500_479",
+      "verdict": "PASS",
+      "answer": "[0, 5]",
+      "correct": false
+    },
+    {
+      "id": "math500_480",
+      "verdict": "PASS",
+      "answer": "11/2",
+      "correct": true
+    },
+    {
+      "id": "math500_481",
+      "verdict": "PASS",
+      "answer": "22",
+      "correct": true
+    },
+    {
+      "id": "math500_482",
+      "verdict": "PASS",
+      "answer": "105",
+      "correct": false
+    },
+    {
+      "id": "math500_483",
+      "verdict": "PASS",
+      "answer": "5866608",
+      "correct": false
+    },
+    {
+      "id": "math500_484",
+      "verdict": "PASS",
+      "answer": "(6, 2, 1/2)",
+      "correct": false
+    },
+    {
+      "id": "math500_485",
+      "verdict": "PASS",
+      "answer": "6152",
+      "correct": true
+    },
+    {
+      "id": "math500_486",
+      "verdict": "PASS",
+      "answer": "2",
+      "correct": true
+    },
+    {
+      "id": "math500_487",
+      "verdict": "PASS",
+      "answer": "y =  (x1 + x2)**2/4",
+      "correct": false
+    },
+    {
+      "id": "math500_488",
+      "verdict": "PASS",
+      "answer": "(-(sin(pi/7)/3 + sin(2*pi/7)/3)*sin(2*pi/7) + (-cos(pi/7)/3 + cos(2*pi/7)/3 + 1/3)*cos(2*pi/7))**2/(1/3 + exp(-4*I*pi/7)/9 + exp(-2*I*pi/7)/9 + exp(-6*I*pi/7)/9 + exp(6*I*pi/7)/9 + exp(2*I*pi/7)/9 + exp(4*I*pi/7)/9)",
+      "correct": true
+    },
+    {
+      "id": "math500_489",
+      "verdict": "PASS",
+      "answer": "268",
+      "correct": true
+    },
+    {
+      "id": "math500_490",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_491",
+      "verdict": "PASS",
+      "answer": "16 + 12*sqrt(2)",
+      "correct": true
+    },
+    {
+      "id": "math500_492",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_493",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_494",
+      "verdict": "FAIL_INITIAL",
+      "answer": "",
+      "correct": false
+    },
+    {
+      "id": "math500_495",
+      "verdict": "PASS",
+      "answer": "3/7",
+      "correct": true
+    },
+    {
+      "id": "math500_496",
+      "verdict": "PASS",
+      "answer": "990",
+      "correct": true
+    },
+    {
+      "id": "math500_497",
+      "verdict": "FIXED_ROUND_1",
+      "answer": "100",
+      "correct": false
+    },
+    {
+      "id": "math500_498",
+      "verdict": "PASS",
+      "answer": "a**2*(a + 1)",
+      "correct": true
+    },
+    {
+      "id": "math500_499",
+      "verdict": "PASS",
+      "answer": "20/27",
+      "correct": true
+    }
+  ]
+}

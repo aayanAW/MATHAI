@@ -1,0 +1,2932 @@
+{
+  "experiment": "exp17_crossmodel",
+  "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+  "n_problems": 50,
+  "accuracy": 0.82,
+  "coverage": 1.0,
+  "fpvr": 0.0,
+  "n_all_pass": 18,
+  "results": [
+    {
+      "problem_id": "math500_0",
+      "n_steps": 6,
+      "n_testable": 2,
+      "n_fully_independent": 1,
+      "n_partially_independent": 1,
+      "n_untestable": 4,
+      "n_passed": 1,
+      "n_failed": 1,
+      "answer_predicted": "120",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "divisible",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "116 % 3"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=120, gold=120"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_1",
+      "n_steps": 3,
+      "n_testable": 1,
+      "n_fully_independent": 1,
+      "n_partially_independent": 0,
+      "n_untestable": 2,
+      "n_passed": 1,
+      "n_failed": 0,
+      "answer_predicted": "7.5",
+      "answer_correct": true,
+      "all_tested_pass": true,
+      "fpvr": false,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=7.5, gold=7.5"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_2",
+      "n_steps": 5,
+      "n_testable": 1,
+      "n_fully_independent": 1,
+      "n_partially_independent": 0,
+      "n_untestable": 4,
+      "n_passed": 1,
+      "n_failed": 0,
+      "answer_predicted": "10",
+      "answer_correct": true,
+      "all_tested_pass": true,
+      "fpvr": false,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=10, gold=10"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_3",
+      "n_steps": 2,
+      "n_testable": 1,
+      "n_fully_independent": 1,
+      "n_partially_independent": 0,
+      "n_untestable": 1,
+      "n_passed": 1,
+      "n_failed": 0,
+      "answer_predicted": "9",
+      "answer_correct": true,
+      "all_tested_pass": true,
+      "fpvr": false,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=9, gold=9"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_4",
+      "n_steps": 5,
+      "n_testable": 1,
+      "n_fully_independent": 1,
+      "n_partially_independent": 0,
+      "n_untestable": 4,
+      "n_passed": 0,
+      "n_failed": 1,
+      "answer_predicted": "\\frac{7}{12}",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "answer",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "claimed=\\frac{7}{12}, gold=\\frac{7}{12}"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_5",
+      "n_steps": 4,
+      "n_testable": 4,
+      "n_fully_independent": 1,
+      "n_partially_independent": 3,
+      "n_untestable": 0,
+      "n_passed": 1,
+      "n_failed": 3,
+      "answer_predicted": "10",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=70 + m + n - 20, rhs=80"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=m + n, rhs=30"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=m + n, rhs=30"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=10, gold=10"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_6",
+      "n_steps": 6,
+      "n_testable": 1,
+      "n_fully_independent": 1,
+      "n_partially_independent": 0,
+      "n_untestable": 5,
+      "n_passed": 0,
+      "n_failed": 1,
+      "answer_predicted": "\\frac{2}{3}",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "numerical",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "Expression not parseable after cleaning: -2 - 2 - 2 + 14 = -6 + 14"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "numerical",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "Expression not parseable after cleaning: -3 - 3 - 3 + 21 = -9 + 21"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "answer",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "claimed=\\frac{2}{3}, gold=\\frac{2}{3}"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_7",
+      "n_steps": 4,
+      "n_testable": 2,
+      "n_fully_independent": 1,
+      "n_partially_independent": 1,
+      "n_untestable": 2,
+      "n_passed": 1,
+      "n_failed": 1,
+      "answer_predicted": "24",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=(a**m)**n, rhs=a**(m * n)"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=24, gold=24"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_8",
+      "n_steps": 6,
+      "n_testable": 1,
+      "n_fully_independent": 1,
+      "n_partially_independent": 0,
+      "n_untestable": 5,
+      "n_passed": 1,
+      "n_failed": 0,
+      "answer_predicted": "0",
+      "answer_correct": true,
+      "all_tested_pass": true,
+      "fpvr": false,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=0, gold=0"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_9",
+      "n_steps": 2,
+      "n_testable": 1,
+      "n_fully_independent": 1,
+      "n_partially_independent": 0,
+      "n_untestable": 1,
+      "n_passed": 1,
+      "n_failed": 0,
+      "answer_predicted": "8",
+      "answer_correct": true,
+      "all_tested_pass": true,
+      "fpvr": false,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=8, gold=8"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_100",
+      "n_steps": 3,
+      "n_testable": 1,
+      "n_fully_independent": 1,
+      "n_partially_independent": 0,
+      "n_untestable": 2,
+      "n_passed": 1,
+      "n_failed": 0,
+      "answer_predicted": "564",
+      "answer_correct": true,
+      "all_tested_pass": true,
+      "fpvr": false,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=564, gold=564"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_101",
+      "n_steps": 5,
+      "n_testable": 1,
+      "n_fully_independent": 1,
+      "n_partially_independent": 0,
+      "n_untestable": 4,
+      "n_passed": 1,
+      "n_failed": 0,
+      "answer_predicted": "8",
+      "answer_correct": true,
+      "all_tested_pass": true,
+      "fpvr": false,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "RHS is not parseable: '0.14285714285...'"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "RHS is not parseable: '0.14285714285...'"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=8, gold=8"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_102",
+      "n_steps": 4,
+      "n_testable": 2,
+      "n_fully_independent": 1,
+      "n_partially_independent": 1,
+      "n_untestable": 2,
+      "n_passed": 2,
+      "n_failed": 0,
+      "answer_predicted": "5040",
+      "answer_correct": true,
+      "all_tested_pass": true,
+      "fpvr": false,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "enumerate",
+          "label": "PASS",
+          "independence": "partially",
+          "validation_notes": "count=8 (sanity check only)"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=5040, gold=5040"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_103",
+      "n_steps": 5,
+      "n_testable": 2,
+      "n_fully_independent": 1,
+      "n_partially_independent": 1,
+      "n_untestable": 3,
+      "n_passed": 0,
+      "n_failed": 2,
+      "answer_predicted": "4t",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=3*t - 6*t + 7*t, rhs=4*t"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "numerical",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "Expression not parseable after cleaning: 4$ and $-4$ gives us $4 - 4"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "answer",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "claimed=4t, gold=4t"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_104",
+      "n_steps": 3,
+      "n_testable": 1,
+      "n_fully_independent": 1,
+      "n_partially_independent": 0,
+      "n_untestable": 2,
+      "n_passed": 1,
+      "n_failed": 0,
+      "answer_predicted": "(3, -4)",
+      "answer_correct": true,
+      "all_tested_pass": true,
+      "fpvr": false,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=(3, -4), gold=(3,-4)"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_105",
+      "n_steps": 4,
+      "n_testable": 3,
+      "n_fully_independent": 2,
+      "n_partially_independent": 1,
+      "n_untestable": 1,
+      "n_passed": 0,
+      "n_failed": 3,
+      "answer_predicted": "(E)",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=t, rhs=(( t)/( t))"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "lhs=(x,y), rhs=( t,  t)"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "LHS is not parseable: '1 + **2 t'"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "answer",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "claimed=(E), gold=\\text{(E)}"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_106",
+      "n_steps": 6,
+      "n_testable": 1,
+      "n_fully_independent": 1,
+      "n_partially_independent": 0,
+      "n_untestable": 5,
+      "n_passed": 0,
+      "n_failed": 1,
+      "answer_predicted": "60",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "Cannot convert LaTeX: lhs=\\cos \\theta, rhs=\\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\| \\|\\mathbf{b}\\|}"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "RHS is not parseable: '(pmatrix) 5 \\\\\\\\ -3 \\\\\\\\ -4 (pmatrix)'"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "LHS is not parseable: '\\\\|(a)\\\\|'"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "LHS is not parseable: '\\\\|(b)\\\\|'"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "Cannot convert LaTeX: lhs=\\cos \\theta, rhs=\\frac{25}{\\sqrt{50} \\cdot \\sqrt{50}} = \\frac{25}{50} = \\frac{1}{2}"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "answer",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "claimed=60, gold=60^\\circ"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_107",
+      "n_steps": 9,
+      "n_testable": 2,
+      "n_fully_independent": 1,
+      "n_partially_independent": 1,
+      "n_untestable": 7,
+      "n_passed": 1,
+      "n_failed": 1,
+      "answer_predicted": "2",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "RHS is not parseable: '2  x'"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "RHS is not parseable: '2  x'"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "RHS is not parseable: '2 **2 x'"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "LHS is not parseable: '**2 x'"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "RHS is not parseable: '2 - 2 **2 x'"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "factoring",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "original is not parseable: '2 **2 x +  x - 1'"
+        },
+        {
+          "step_index": 6,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "LHS is not parseable: '2  x - 1'"
+        },
+        {
+          "step_index": 7,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=x, rhs=((1)/(2))"
+        },
+        {
+          "step_index": 8,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=2, gold=2"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_108",
+      "n_steps": 8,
+      "n_testable": 8,
+      "n_fully_independent": 1,
+      "n_partially_independent": 7,
+      "n_untestable": 0,
+      "n_passed": 1,
+      "n_failed": 7,
+      "answer_predicted": "7",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=d-6*c, rhs=4"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=2*d-12*c, rhs=8"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=(2*d-9*c) - (2*d-12*c), rhs=20 - 8"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=3*c, rhs=12"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=d-6*c, rhs=4"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=d-24, rhs=4"
+        },
+        {
+          "step_index": 6,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=((d)/(c)), rhs=((28)/(4))"
+        },
+        {
+          "step_index": 7,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=7, gold=7"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_109",
+      "n_steps": 6,
+      "n_testable": 1,
+      "n_fully_independent": 1,
+      "n_partially_independent": 0,
+      "n_untestable": 5,
+      "n_passed": 1,
+      "n_failed": 0,
+      "answer_predicted": "6",
+      "answer_correct": true,
+      "all_tested_pass": true,
+      "fpvr": false,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=6, gold=6"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_200",
+      "n_steps": 6,
+      "n_testable": 2,
+      "n_fully_independent": 1,
+      "n_partially_independent": 1,
+      "n_untestable": 4,
+      "n_passed": 1,
+      "n_failed": 1,
+      "answer_predicted": "4",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=(p), rhs=(b)"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "RHS is not parseable: '\\\\|(a)\\\\|**2'"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "LHS is not parseable: '\\\\|(a) * (b)\\\\|'"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=4, gold=4"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_201",
+      "n_steps": 4,
+      "n_testable": 1,
+      "n_fully_independent": 1,
+      "n_partially_independent": 0,
+      "n_untestable": 3,
+      "n_passed": 1,
+      "n_failed": 0,
+      "answer_predicted": "75",
+      "answer_correct": true,
+      "all_tested_pass": true,
+      "fpvr": false,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "RHS is not parseable: 'sqrt(12**2 + (-9)**2) = sqrt(144 + 81) = sqrt(225) = 15'"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "RHS is not parseable: 'sqrt(6**2 + 8**2) = sqrt(36 + 64) = sqrt(100) = 10'"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=75, gold=75"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_202",
+      "n_steps": 8,
+      "n_testable": 1,
+      "n_fully_independent": 1,
+      "n_partially_independent": 0,
+      "n_untestable": 7,
+      "n_passed": 1,
+      "n_failed": 0,
+      "answer_predicted": "11189",
+      "answer_correct": true,
+      "all_tested_pass": true,
+      "fpvr": false,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 6,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 7,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=11189, gold=11189"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_203",
+      "n_steps": 3,
+      "n_testable": 1,
+      "n_fully_independent": 1,
+      "n_partially_independent": 0,
+      "n_untestable": 2,
+      "n_passed": 1,
+      "n_failed": 0,
+      "answer_predicted": "24",
+      "answer_correct": true,
+      "all_tested_pass": true,
+      "fpvr": false,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "RHS is not parseable: '84 + 5 = 89'"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "RHS is not parseable: '60 + 5 = 65'"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=24, gold=24"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_204",
+      "n_steps": 4,
+      "n_testable": 4,
+      "n_fully_independent": 1,
+      "n_partially_independent": 3,
+      "n_untestable": 0,
+      "n_passed": 1,
+      "n_failed": 3,
+      "answer_predicted": "48",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=x + ((1)/(x)), rhs=7"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=x + ((1)/(x)), rhs=7"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=x**(2) + 2 + ((1)/(x**(2))), rhs=49"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=48, gold=48"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_205",
+      "n_steps": 4,
+      "n_testable": 3,
+      "n_fully_independent": 1,
+      "n_partially_independent": 2,
+      "n_untestable": 1,
+      "n_passed": 1,
+      "n_failed": 2,
+      "answer_predicted": "8",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=3*x, rhs=8*y"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=5*y, rhs=15*z"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=8, gold=8"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_206",
+      "n_steps": 7,
+      "n_testable": 1,
+      "n_fully_independent": 1,
+      "n_partially_independent": 0,
+      "n_untestable": 6,
+      "n_passed": 0,
+      "n_failed": 1,
+      "answer_predicted": "9876432 is incorrect, 986436 is incorrect, 987654 is incorrect,  the correct largest number using each digit once and ending in a multiple of 4 is 986436 is incorrect, the correct answer is  9864 is a multiple of 4 and the largest arrangement of the remaining digits after using 96 is 98764, so 98764 is the base, but we must use 3 and not repeat digits, thus the largest possible number is actually 9876432 is incorrect, the correct answer is 9864 is not the largest possible, the largest possible is 9876 and then 43, so the correct answer is 987643",
+      "answer_correct": false,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 6,
+          "claim_type": "answer",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "claimed=9876432 is incorrect, 986436 is incorrect, 987654 is incorrect,  the correct largest number using each digit once and ending in a multiple of 4 is 986436 is incorrect, the correct answer is  9864 is a multiple of 4 and the largest arrangement of the remaining digits after using 96 is 98764, so 98764 is the base, but we must use 3 and not repeat digits, thus the largest possible number is actually 9876432 is incorrect, the correct answer is 9864 is not the largest possible, the largest possible is 9876 and then 43, so the correct answer is 987643, gold=987,\\!436"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_207",
+      "n_steps": 4,
+      "n_testable": 4,
+      "n_fully_independent": 1,
+      "n_partially_independent": 3,
+      "n_untestable": 0,
+      "n_passed": 0,
+      "n_failed": 4,
+      "answer_predicted": "3\\sqrt{3}",
+      "answer_correct": false,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=x**2 + 4*y**2, rhs=9."
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=a**2, rhs=9"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=c**2, rhs=a**2 - b**2."
+        },
+        {
+          "step_index": 3,
+          "claim_type": "answer",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "claimed=3\\sqrt{3}, gold=3\\sqrt3"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_208",
+      "n_steps": 8,
+      "n_testable": 7,
+      "n_fully_independent": 3,
+      "n_partially_independent": 4,
+      "n_untestable": 1,
+      "n_passed": 0,
+      "n_failed": 7,
+      "answer_predicted": "\\frac{4}{3}",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "lhs=f(x) + f(x + 2*y), rhs=6*x + 6*y - 8"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=f(a) + f(a + 2*((b - a)/(2))), rhs=6*a + 6*((b - a)/(2)) - 8"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=f(a) + f(b), rhs=6*a + 3*b - 3*a - 8"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=f(a) + f(a), rhs=3*a + 3*a - 8"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=f(a), rhs=3*a - 4"
+        },
+        {
+          "step_index": 6,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "lhs=f(x), rhs=0"
+        },
+        {
+          "step_index": 7,
+          "claim_type": "answer",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "claimed=\\frac{4}{3}, gold=\\frac{4}{3}"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_209",
+      "n_steps": 8,
+      "n_testable": 1,
+      "n_fully_independent": 1,
+      "n_partially_independent": 0,
+      "n_untestable": 7,
+      "n_passed": 0,
+      "n_failed": 1,
+      "answer_predicted": "14x - 17",
+      "answer_correct": false,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 6,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 7,
+          "claim_type": "answer",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "claimed=14x - 17, gold=2x-1"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_300",
+      "n_steps": 7,
+      "n_testable": 7,
+      "n_fully_independent": 1,
+      "n_partially_independent": 6,
+      "n_untestable": 0,
+      "n_passed": 0,
+      "n_failed": 7,
+      "answer_predicted": "\\sqrt{67}",
+      "answer_correct": false,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=x**2 +  x, rhs=75"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=x**2 +  x, rhs=75"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=x, rhs=8"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=x, rhs=8"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=x, rhs=9"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=x**2 +  x, rhs=75"
+        },
+        {
+          "step_index": 6,
+          "claim_type": "answer",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "claimed=\\sqrt{67}, gold=\\sqrt{67}, -\\sqrt{85}"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_301",
+      "n_steps": 8,
+      "n_testable": 5,
+      "n_fully_independent": 2,
+      "n_partially_independent": 3,
+      "n_untestable": 3,
+      "n_passed": 0,
+      "n_failed": 5,
+      "answer_predicted": "3",
+      "answer_correct": false,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "factoring",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "Missing original or factored form"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "factoring",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "orig=x**2 + x, fact=x(x + 1)"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "factoring",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "orig=x(x + 1), fact=x+1"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=((1)/(1**2+1)), rhs=((1)/(2))"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "factoring",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "orig=x, fact=4"
+        },
+        {
+          "step_index": 6,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 7,
+          "claim_type": "answer",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "claimed=3, gold=4"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_302",
+      "n_steps": 6,
+      "n_testable": 1,
+      "n_fully_independent": 1,
+      "n_partially_independent": 0,
+      "n_untestable": 5,
+      "n_passed": 1,
+      "n_failed": 0,
+      "answer_predicted": "100",
+      "answer_correct": true,
+      "all_tested_pass": true,
+      "fpvr": false,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "Cannot convert LaTeX: lhs=\\tan \\theta, rhs=\\frac{\\sin \\theta}{\\cos \\theta}"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "Cannot convert LaTeX: lhs=\\sin \\theta, rhs=\\frac{\\cos \\theta}{7}"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "LHS is not parseable: '**2  + **2'"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "LHS is not parseable: '((**2 )/(49)) + **2'"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "Cannot convert LaTeX: lhs=\\cos \\theta, rhs=\\pm \\sqrt{\\frac{49}{50}}"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=100, gold=100"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_303",
+      "n_steps": 5,
+      "n_testable": 1,
+      "n_fully_independent": 1,
+      "n_partially_independent": 0,
+      "n_untestable": 4,
+      "n_passed": 1,
+      "n_failed": 0,
+      "answer_predicted": "20",
+      "answer_correct": true,
+      "all_tested_pass": true,
+      "fpvr": false,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=20, gold=20"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_304",
+      "n_steps": 4,
+      "n_testable": 2,
+      "n_fully_independent": 1,
+      "n_partially_independent": 1,
+      "n_untestable": 2,
+      "n_passed": 1,
+      "n_failed": 1,
+      "answer_predicted": "\\frac{56}{441}",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "enumerate",
+          "label": "PASS",
+          "independence": "partially",
+          "validation_notes": "count=7 (sanity check only)"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "answer",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "claimed=\\frac{56}{441}, gold=\\frac{8}{63}"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_305",
+      "n_steps": 7,
+      "n_testable": 2,
+      "n_fully_independent": 1,
+      "n_partially_independent": 1,
+      "n_untestable": 5,
+      "n_passed": 2,
+      "n_failed": 0,
+      "answer_predicted": "120",
+      "answer_correct": true,
+      "all_tested_pass": true,
+      "fpvr": false,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "enumerate",
+          "label": "PASS",
+          "independence": "partially",
+          "validation_notes": "count=6 (sanity check only)"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 6,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=120, gold=120"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_306",
+      "n_steps": 5,
+      "n_testable": 2,
+      "n_fully_independent": 1,
+      "n_partially_independent": 1,
+      "n_untestable": 3,
+      "n_passed": 0,
+      "n_failed": 2,
+      "answer_predicted": "-\\frac{1}{2}x^2 + 4x - 6",
+      "answer_correct": false,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=4*a, rhs=-2"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "answer",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "claimed=-\\frac{1}{2}x^2 + 4x - 6, gold=y = -\\frac{1}{2} x^2 + 4x - 6"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_307",
+      "n_steps": 15,
+      "n_testable": 8,
+      "n_fully_independent": 2,
+      "n_partially_independent": 6,
+      "n_untestable": 7,
+      "n_passed": 0,
+      "n_failed": 8,
+      "answer_predicted": "7",
+      "answer_correct": false,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=AD, rhs=1"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "Cannot convert LaTeX: lhs=\\angle PDC, rhs=\\alpha"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "LHS is not parseable: '((BP)/( ))'"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "RHS is not parseable: '(( 2)/( )) = 2'"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=DP, rhs=((BD)/(2 ))"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "lhs=ADC, rhs=3"
+        },
+        {
+          "step_index": 6,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=3, rhs=4**3  - 3"
+        },
+        {
+          "step_index": 7,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=4**3  - 3, rhs=-((1)/(2))"
+        },
+        {
+          "step_index": 8,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "Cannot convert LaTeX: lhs=\\cos \\alpha, rhs=\\frac{1}{2}"
+        },
+        {
+          "step_index": 9,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "LHS is not parseable: '((BP)/( ))'"
+        },
+        {
+          "step_index": 10,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=BP + PD + BD, rhs=w + ((xsqrt(y))/(z))"
+        },
+        {
+          "step_index": 11,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "RHS is not parseable: 'sqrt(4 - 2*sqrt(5)) = sqrt((sqrt(5) - 1)**2) = sqrt(5) - 1'"
+        },
+        {
+          "step_index": 12,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=BP, rhs=((sqrt(10 - 2*sqrt(5)))/(1))"
+        },
+        {
+          "step_index": 13,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "RHS is not parseable: 'sqrt(5 - 2*sqrt(5) + 5) = sqrt((sqrt(5) - 1)**2) = sqrt(5) - 1'"
+        },
+        {
+          "step_index": 14,
+          "claim_type": "answer",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "claimed=7, gold=12"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_308",
+      "n_steps": 6,
+      "n_testable": 3,
+      "n_fully_independent": 1,
+      "n_partially_independent": 2,
+      "n_untestable": 3,
+      "n_passed": 3,
+      "n_failed": 0,
+      "answer_predicted": "-15",
+      "answer_correct": true,
+      "all_tested_pass": true,
+      "fpvr": false,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "equiv",
+          "label": "PASS",
+          "independence": "partially",
+          "validation_notes": "lhs=6*x**3 * 4, rhs=24*x**3"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "equiv",
+          "label": "PASS",
+          "independence": "partially",
+          "validation_notes": "lhs=-5 * 6*x**3, rhs=-30*x**3"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=-15, gold=-15"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_309",
+      "n_steps": 7,
+      "n_testable": 5,
+      "n_fully_independent": 1,
+      "n_partially_independent": 4,
+      "n_untestable": 2,
+      "n_passed": 0,
+      "n_failed": 5,
+      "answer_predicted": "\\begin{pmatrix} -10 \\\\ -35 \\\\ 30 \\end{pmatrix}",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=(u) * (v), rhs=-(v) * (u)"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=(u) * (k(v)), rhs=k((u) * (v))"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=(c) * (a), rhs=-(a) * (c)"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=(c) * (b), rhs=-(b) * (c)"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "LHS is not parseable: '-3(pmatrix) 4 \\\\\\\\ 7 \\\\\\\\ 2 (pmatrix)'"
+        },
+        {
+          "step_index": 6,
+          "claim_type": "answer",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "claimed=\\begin{pmatrix} -10 \\\\ -35 \\\\ 30 \\end{pmatrix}, gold=\\begin{pmatrix} -10 \\\\ -35 \\\\ 30 \\end{pmatrix}"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_400",
+      "n_steps": 13,
+      "n_testable": 4,
+      "n_fully_independent": 1,
+      "n_partially_independent": 3,
+      "n_untestable": 9,
+      "n_passed": 1,
+      "n_failed": 3,
+      "answer_predicted": "125",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=((a)/(1 - r)), rhs=2000"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "RHS is not parseable: '16 * 2000 = 32000'"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=((a)/(1 - r)), rhs=2000"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "RHS is not parseable: '2000**2(1 - r)**2'"
+        },
+        {
+          "step_index": 6,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "LHS is not parseable: '((2000**2(1 - r)**2)/(1 - r**2))'"
+        },
+        {
+          "step_index": 7,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "LHS is not parseable: '2000**2(1 - r)'"
+        },
+        {
+          "step_index": 8,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 9,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 10,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 11,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=m + n, rhs=62 + 63"
+        },
+        {
+          "step_index": 12,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=125, gold=125"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_401",
+      "n_steps": 14,
+      "n_testable": 7,
+      "n_fully_independent": 3,
+      "n_partially_independent": 4,
+      "n_untestable": 7,
+      "n_passed": 1,
+      "n_failed": 6,
+      "answer_predicted": "36 + 36 + 36 - 6 - 6 - 6 + 6 = 102",
+      "answer_correct": false,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "factoring",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "orig=a**2*b+b**2*c+c**2*a-ab**2-bc**2-ca**2, fact=0"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "factoring",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "orig=a**2*b - ab**2 + b**2*c - bc**2 + c**2*a - ca**2, fact=0"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=ab(a - b) + bc(b - c) + ca(c - a), rhs=0"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=ab(a - b) + bc(b - c) - ac(a - c), rhs=0"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 6,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=bc(b - c) - ac(a - c), rhs=0"
+        },
+        {
+          "step_index": 7,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 8,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 9,
+          "claim_type": "enumerate",
+          "label": "PASS",
+          "independence": "partially",
+          "validation_notes": "count=6 (sanity check only)"
+        },
+        {
+          "step_index": 10,
+          "claim_type": "factoring",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "original is not parseable: '(a - b)(b - c)(c - a)'"
+        },
+        {
+          "step_index": 11,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "LHS is not parseable: '(a - b)(b - c)(c - a)'"
+        },
+        {
+          "step_index": 12,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "LHS is not parseable: '(a - b)(b - c)(c - a)'"
+        },
+        {
+          "step_index": 13,
+          "claim_type": "answer",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "claimed=36 + 36 + 36 - 6 - 6 - 6 + 6 = 102, gold=96"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_402",
+      "n_steps": 8,
+      "n_testable": 6,
+      "n_fully_independent": 1,
+      "n_partially_independent": 5,
+      "n_untestable": 2,
+      "n_passed": 0,
+      "n_failed": 6,
+      "answer_predicted": "\\frac{128}{75}",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=((x)/(y)), rhs=((4)/(5))"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=((y)/(z)), rhs=((3)/(10))"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=((x)/(y)), rhs=((4)/(5))"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=((z)/(w)), rhs=((6)/(7))"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 6,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=((36*z + 45*z + 175*z)/(150)), rhs=((256*z)/(150))"
+        },
+        {
+          "step_index": 7,
+          "claim_type": "answer",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "claimed=\\frac{128}{75}, gold=\\frac{128}{75}"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_403",
+      "n_steps": 8,
+      "n_testable": 3,
+      "n_fully_independent": 1,
+      "n_partially_independent": 2,
+      "n_untestable": 5,
+      "n_passed": 1,
+      "n_failed": 2,
+      "answer_predicted": "-4",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "RHS is not parseable: '((1)/(|x**2+3*x-4|+|x**2+9*x+20|))'"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "LHS is not parseable: '|x**2+3*x-4| + |x**2+9*x+20|'"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "factoring",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "original is not parseable: '|x**2+3*x-4|'"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "factoring",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "original is not parseable: '|x**2+9*x+20|'"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "numerical",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "x = -4"
+        },
+        {
+          "step_index": 6,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=x**2+3*x-4, rhs=0"
+        },
+        {
+          "step_index": 7,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=-4, gold=-4"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_404",
+      "n_steps": 5,
+      "n_testable": 2,
+      "n_fully_independent": 1,
+      "n_partially_independent": 1,
+      "n_untestable": 3,
+      "n_passed": 0,
+      "n_failed": 2,
+      "answer_predicted": "12\\sqrt{35}",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "numerical",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "Expression not parseable after cleaning: 7! = 7*6*5*4*3*2*1"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "factoring",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "Missing original or factored form"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "factoring",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "orig=5040, fact=2*2520"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "answer",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "claimed=12\\sqrt{35}, gold=12\\sqrt{35}"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_405",
+      "n_steps": 9,
+      "n_testable": 8,
+      "n_fully_independent": 1,
+      "n_partially_independent": 7,
+      "n_untestable": 1,
+      "n_passed": 1,
+      "n_failed": 7,
+      "answer_predicted": "-120",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=(x - h)**2 + (y - k)**2, rhs=r**2"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=(x - 2)**2 + (y - 3)**2, rhs=r**2"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "numerical",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "Expression not parseable after cleaning: (-1, 6)$. We can substitute $x"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=r**2, rhs=18"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=x**2 - 4*x + 4 + y**2 - 6*y + 9, rhs=18"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=x**2 + y**2 - 4*x - 6*y - 5, rhs=0"
+        },
+        {
+          "step_index": 6,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=x**2 + y**2 + Ax + By + C, rhs=0"
+        },
+        {
+          "step_index": 7,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=A * B * C, rhs=-4 * -6 * -5"
+        },
+        {
+          "step_index": 8,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=-120, gold=-120"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_406",
+      "n_steps": 7,
+      "n_testable": 3,
+      "n_fully_independent": 2,
+      "n_partially_independent": 1,
+      "n_untestable": 4,
+      "n_passed": 0,
+      "n_failed": 3,
+      "answer_predicted": "4",
+      "answer_correct": false,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "lhs=z_1, rhs=e**(i_1)"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "LHS is not parseable: 'z_1 z_2'"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "RHS is not parseable: 'e**(i(_1 - _2)) =  1'"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=_1 + _2, rhs=((pi)/(2)) + kpi"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "LHS is not parseable: '|z_1|'"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 6,
+          "claim_type": "answer",
+          "label": "FAIL",
+          "independence": "fully",
+          "validation_notes": "claimed=4, gold=8"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_407",
+      "n_steps": 7,
+      "n_testable": 6,
+      "n_fully_independent": 1,
+      "n_partially_independent": 5,
+      "n_untestable": 1,
+      "n_passed": 1,
+      "n_failed": 5,
+      "answer_predicted": "-3",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=2*k + 4, rhs=0"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=2*k + 4, rhs=0"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=2 - 2*t, rhs=4"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=2 - 2*t, rhs=4"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=-1 + 2*t, rhs=a"
+        },
+        {
+          "step_index": 6,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=-3, gold=-3"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_408",
+      "n_steps": 4,
+      "n_testable": 1,
+      "n_fully_independent": 1,
+      "n_partially_independent": 0,
+      "n_untestable": 3,
+      "n_passed": 1,
+      "n_failed": 0,
+      "answer_predicted": "32",
+      "answer_correct": true,
+      "all_tested_pass": true,
+      "fpvr": false,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=32, gold=32"
+        }
+      ]
+    },
+    {
+      "problem_id": "math500_409",
+      "n_steps": 6,
+      "n_testable": 4,
+      "n_fully_independent": 1,
+      "n_partially_independent": 3,
+      "n_untestable": 2,
+      "n_passed": 1,
+      "n_failed": 3,
+      "answer_predicted": "(-1, 8)",
+      "answer_correct": true,
+      "all_tested_pass": false,
+      "fpvr": null,
+      "step_results": [
+        {
+          "step_index": 0,
+          "claim_type": "equiv",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "LHS is not parseable: '|x+ y-7|+ |4*x - y+ 12|'"
+        },
+        {
+          "step_index": 1,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=x + y - 7, rhs=0"
+        },
+        {
+          "step_index": 2,
+          "claim_type": "untestable",
+          "label": "UNTESTABLE",
+          "independence": "failed",
+          "validation_notes": "UNTESTABLE claim type"
+        },
+        {
+          "step_index": 3,
+          "claim_type": "equiv",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "lhs=4*x - y + 12, rhs=0"
+        },
+        {
+          "step_index": 4,
+          "claim_type": "numerical",
+          "label": "FAIL",
+          "independence": "partially",
+          "validation_notes": "x = -1"
+        },
+        {
+          "step_index": 5,
+          "claim_type": "answer",
+          "label": "PASS",
+          "independence": "fully",
+          "validation_notes": "claimed=(-1, 8), gold=(-1,8)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "experiment": "exp9_ablations",
+  "model": "Qwen/Qwen2.5-Math-7B-Instruct",
+  "n_problems": 300,
+  "results": {
+    "A1_verify_only": 0.8333333333333334,
+    "A3_rederivation": 0.8333333333333334,
+    "A4_interleaved": 0.7933333333333333,
+    "A5_multisample": 0.8333333333333334,
+    "ExeVer_full": 0.84,
+    "CoT_greedy": 0.8366666666666667,
+    "Majority_4": 0.83
+  }
+}

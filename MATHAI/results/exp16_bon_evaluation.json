@@ -1,0 +1,17 @@
+{
+  "experiment": "exp16_bon_evaluation",
+  "n_problems": 500,
+  "greedy_accuracy": 0.804,
+  "pbt_filter": {
+    "n_accepted": 169,
+    "accepted_accuracy": 1.0,
+    "n_rejected": 331,
+    "rejected_accuracy": 0.7039274924471299
+  },
+  "fi_filter": {
+    "n_accepted": 280,
+    "accepted_accuracy": 1.0,
+    "n_rejected": 220,
+    "rejected_accuracy": 0.5545454545454546
+  }
+}

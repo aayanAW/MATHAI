@@ -1,0 +1,6119 @@
+{
+  "experiment": "exp4_repair_baselines",
+  "model": "Qwen/Qwen2.5-Math-7B-Instruct",
+  "n_problems": 300,
+  "baseline_time_s": 111.87413048744202,
+  "exever_time_s": 118.53919053077698,
+  "accuracy": {
+    "exp1_cot_pass1": 0.8366666666666667,
+    "baseline_pass1_sampled": 0.7966666666666666,
+    "baseline_best_of_4": 0.8766666666666667,
+    "baseline_majority_4": 0.83,
+    "exever": 0.84
+  },
+  "repair": {
+    "attempted": 17,
+    "successful": 15,
+    "success_rate": 0.8823529411764706
+  },
+  "exever_verdicts": {
+    "ALL_PASS": 201,
+    "REPAIRED": 17,
+    "SYNTAX_ERROR": 30,
+    "RUNTIME_ERROR": 31,
+    "FAIL_STEP_-1": 20,
+    "NO_SCRIPT": 1
+  },
+  "by_level": {
+    "1": {
+      "pass1": 0.9666666666666667,
+      "best4": 0.9666666666666667,
+      "maj4": 0.9666666666666667,
+      "exever": 0.95,
+      "n": 60
+    },
+    "2": {
+      "pass1": 0.8666666666666667,
+      "best4": 0.9333333333333333,
+      "maj4": 0.9,
+      "exever": 0.8666666666666667,
+      "n": 60
+    },
+    "3": {
+      "pass1": 0.8,
+      "best4": 0.8833333333333333,
+      "maj4": 0.85,
+      "exever": 0.8666666666666667,
+      "n": 60
+    },
+    "4": {
+      "pass1": 0.7333333333333333,
+      "best4": 0.8333333333333334,
+      "maj4": 0.7666666666666667,
+      "exever": 0.8,
+      "n": 60
+    },
+    "5": {
+      "pass1": 0.6166666666666667,
+      "best4": 0.7666666666666667,
+      "maj4": 0.6666666666666666,
+      "exever": 0.7166666666666667,
+      "n": 60
+    }
+  },
+  "by_subject": {
+    "algebra": {
+      "pass1": 0.8860759493670886,
+      "best4": 0.9113924050632911,
+      "maj4": 0.8987341772151899,
+      "exever": 0.8734177215189873,
+      "n": 79
+    },
+    "counting_and_probability": {
+      "pass1": 0.7741935483870968,
+      "best4": 0.9032258064516129,
+      "maj4": 0.8387096774193549,
+      "exever": 0.8387096774193549,
+      "n": 31
+    },
+    "geometry": {
+      "pass1": 0.6470588235294118,
+      "best4": 0.7352941176470589,
+      "maj4": 0.6470588235294118,
+      "exever": 0.6764705882352942,
+      "n": 34
+    },
+    "intermediate_algebra": {
+      "pass1": 0.7435897435897436,
+      "best4": 0.8461538461538461,
+      "maj4": 0.7435897435897436,
+      "exever": 0.7692307692307693,
+      "n": 39
+    },
+    "number_theory": {
+      "pass1": 0.7692307692307693,
+      "best4": 0.8461538461538461,
+      "maj4": 0.8076923076923077,
+      "exever": 0.8846153846153846,
+      "n": 26
+    },
+    "prealgebra": {
+      "pass1": 0.9272727272727272,
+      "best4": 0.9454545454545454,
+      "maj4": 0.9454545454545454,
+      "exever": 0.9454545454545454,
+      "n": 55
+    },
+    "precalculus": {
+      "pass1": 0.6388888888888888,
+      "best4": 0.8611111111111112,
+      "maj4": 0.7777777777777778,
+      "exever": 0.8055555555555556,
+      "n": 36
+    }
+  },
+  "baseline_results": [
+    {
+      "id": "math_3927",
+      "level": 1,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_466",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_105",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4451",
+      "level": 1,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1273",
+      "level": 1,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1126",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1002",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_583",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4406",
+      "level": 1,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_431",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4122",
+      "level": 1,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3340",
+      "level": 1,
+      "type": "number_theory",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_372",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3651",
+      "level": 1,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2244",
+      "level": 1,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_132",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_126",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_393",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_983",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1067",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2957",
+      "level": 1,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3693",
+      "level": 1,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_112",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3415",
+      "level": 1,
+      "type": "number_theory",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_869",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4274",
+      "level": 1,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4017",
+      "level": 1,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4252",
+      "level": 1,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2186",
+      "level": 1,
+      "type": "intermediate_algebra",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_994",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2568",
+      "level": 1,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3634",
+      "level": 1,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1282",
+      "level": 1,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4747",
+      "level": 1,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_19",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4572",
+      "level": 1,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4740",
+      "level": 1,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_678",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4220",
+      "level": 1,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1741",
+      "level": 1,
+      "type": "geometry",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_647",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_966",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4585",
+      "level": 1,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1656",
+      "level": 1,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1915",
+      "level": 1,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_418",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1817",
+      "level": 1,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4962",
+      "level": 1,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1752",
+      "level": 1,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3708",
+      "level": 1,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1187",
+      "level": 1,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4744",
+      "level": 1,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_207",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4357",
+      "level": 1,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2705",
+      "level": 1,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3261",
+      "level": 1,
+      "type": "number_theory",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_498",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1909",
+      "level": 1,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_332",
+      "level": 1,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3381",
+      "level": 1,
+      "type": "number_theory",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1648",
+      "level": 2,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4764",
+      "level": 2,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3797",
+      "level": 2,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3738",
+      "level": 2,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4900",
+      "level": 2,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2027",
+      "level": 2,
+      "type": "geometry",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": false
+    },
+    {
+      "id": "math_3522",
+      "level": 2,
+      "type": "number_theory",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1141",
+      "level": 2,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4201",
+      "level": 2,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_402",
+      "level": 2,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_269",
+      "level": 2,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3987",
+      "level": 2,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1347",
+      "level": 2,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4524",
+      "level": 2,
+      "type": "precalculus",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1622",
+      "level": 2,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_493",
+      "level": 2,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4874",
+      "level": 2,
+      "type": "precalculus",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1358",
+      "level": 2,
+      "type": "counting_and_probability",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_4914",
+      "level": 2,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_638",
+      "level": 2,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2161",
+      "level": 2,
+      "type": "intermediate_algebra",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_1566",
+      "level": 2,
+      "type": "counting_and_probability",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": false
+    },
+    {
+      "id": "math_2782",
+      "level": 2,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3852",
+      "level": 2,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4786",
+      "level": 2,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2050",
+      "level": 2,
+      "type": "geometry",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_988",
+      "level": 2,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2087",
+      "level": 2,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1985",
+      "level": 2,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1263",
+      "level": 2,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4020",
+      "level": 2,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1505",
+      "level": 2,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4186",
+      "level": 2,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4087",
+      "level": 2,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3919",
+      "level": 2,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_425",
+      "level": 2,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3685",
+      "level": 2,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1025",
+      "level": 2,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3310",
+      "level": 2,
+      "type": "number_theory",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4331",
+      "level": 2,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1416",
+      "level": 2,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_989",
+      "level": 2,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2826",
+      "level": 2,
+      "type": "intermediate_algebra",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_2160",
+      "level": 2,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1513",
+      "level": 2,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3875",
+      "level": 2,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4121",
+      "level": 2,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3428",
+      "level": 2,
+      "type": "number_theory",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1301",
+      "level": 2,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4101",
+      "level": 2,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1812",
+      "level": 2,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4832",
+      "level": 2,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4496",
+      "level": 2,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4541",
+      "level": 2,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_325",
+      "level": 2,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1348",
+      "level": 2,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4745",
+      "level": 2,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_194",
+      "level": 2,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4676",
+      "level": 2,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1782",
+      "level": 2,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3759",
+      "level": 3,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2539",
+      "level": 3,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_574",
+      "level": 3,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1999",
+      "level": 3,
+      "type": "geometry",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_2987",
+      "level": 3,
+      "type": "intermediate_algebra",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": false
+    },
+    {
+      "id": "math_2014",
+      "level": 3,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4549",
+      "level": 3,
+      "type": "precalculus",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_3719",
+      "level": 3,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4195",
+      "level": 3,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1340",
+      "level": 3,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2511",
+      "level": 3,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1314",
+      "level": 3,
+      "type": "counting_and_probability",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2334",
+      "level": 3,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4882",
+      "level": 3,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2475",
+      "level": 3,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3950",
+      "level": 3,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3746",
+      "level": 3,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3429",
+      "level": 3,
+      "type": "number_theory",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2081",
+      "level": 3,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1303",
+      "level": 3,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4639",
+      "level": 3,
+      "type": "precalculus",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4476",
+      "level": 3,
+      "type": "precalculus",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_842",
+      "level": 3,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_422",
+      "level": 3,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_997",
+      "level": 3,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1432",
+      "level": 3,
+      "type": "counting_and_probability",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_1501",
+      "level": 3,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3899",
+      "level": 3,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_559",
+      "level": 3,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3623",
+      "level": 3,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3593",
+      "level": 3,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4278",
+      "level": 3,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4812",
+      "level": 3,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2369",
+      "level": 3,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_97",
+      "level": 3,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1046",
+      "level": 3,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4870",
+      "level": 3,
+      "type": "precalculus",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2528",
+      "level": 3,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3228",
+      "level": 3,
+      "type": "number_theory",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1020",
+      "level": 3,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2804",
+      "level": 3,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4019",
+      "level": 3,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1488",
+      "level": 3,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4166",
+      "level": 3,
+      "type": "prealgebra",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_31",
+      "level": 3,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2480",
+      "level": 3,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4558",
+      "level": 3,
+      "type": "precalculus",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_1718",
+      "level": 3,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4618",
+      "level": 3,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_953",
+      "level": 3,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2844",
+      "level": 3,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1912",
+      "level": 3,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3515",
+      "level": 3,
+      "type": "number_theory",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_1509",
+      "level": 3,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4884",
+      "level": 3,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4822",
+      "level": 3,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_14",
+      "level": 3,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3076",
+      "level": 3,
+      "type": "number_theory",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": false
+    },
+    {
+      "id": "math_4440",
+      "level": 3,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_167",
+      "level": 3,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_982",
+      "level": 4,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2952",
+      "level": 4,
+      "type": "intermediate_algebra",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2537",
+      "level": 4,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2038",
+      "level": 4,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_470",
+      "level": 4,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2043",
+      "level": 4,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4727",
+      "level": 4,
+      "type": "precalculus",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_658",
+      "level": 4,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_724",
+      "level": 4,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3976",
+      "level": 4,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_573",
+      "level": 4,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4416",
+      "level": 4,
+      "type": "prealgebra",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_1098",
+      "level": 4,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1111",
+      "level": 4,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3890",
+      "level": 4,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4547",
+      "level": 4,
+      "type": "precalculus",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": false
+    },
+    {
+      "id": "math_1434",
+      "level": 4,
+      "type": "counting_and_probability",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": false
+    },
+    {
+      "id": "math_2240",
+      "level": 4,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4377",
+      "level": 4,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3390",
+      "level": 4,
+      "type": "number_theory",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1819",
+      "level": 4,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4469",
+      "level": 4,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1701",
+      "level": 4,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2567",
+      "level": 4,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3197",
+      "level": 4,
+      "type": "number_theory",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3035",
+      "level": 4,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3548",
+      "level": 4,
+      "type": "number_theory",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4288",
+      "level": 4,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3643",
+      "level": 4,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1042",
+      "level": 4,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2111",
+      "level": 4,
+      "type": "geometry",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_1907",
+      "level": 4,
+      "type": "geometry",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_533",
+      "level": 4,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2747",
+      "level": 4,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_166",
+      "level": 4,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4958",
+      "level": 4,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4604",
+      "level": 4,
+      "type": "precalculus",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_1935",
+      "level": 4,
+      "type": "geometry",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": false
+    },
+    {
+      "id": "math_4964",
+      "level": 4,
+      "type": "precalculus",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": false
+    },
+    {
+      "id": "math_1885",
+      "level": 4,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_50",
+      "level": 4,
+      "type": "algebra",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_594",
+      "level": 4,
+      "type": "algebra",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_486",
+      "level": 4,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1931",
+      "level": 4,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_552",
+      "level": 4,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_268",
+      "level": 4,
+      "type": "algebra",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_2678",
+      "level": 4,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4248",
+      "level": 4,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2033",
+      "level": 4,
+      "type": "geometry",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_2346",
+      "level": 4,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3969",
+      "level": 4,
+      "type": "prealgebra",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_1843",
+      "level": 4,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1138",
+      "level": 4,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4776",
+      "level": 4,
+      "type": "precalculus",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_4835",
+      "level": 4,
+      "type": "precalculus",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3871",
+      "level": 4,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2070",
+      "level": 4,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3271",
+      "level": 4,
+      "type": "number_theory",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1643",
+      "level": 4,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_816",
+      "level": 4,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_783",
+      "level": 5,
+      "type": "algebra",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_3146",
+      "level": 5,
+      "type": "number_theory",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_2621",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3118",
+      "level": 5,
+      "type": "number_theory",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3032",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_3462",
+      "level": 5,
+      "type": "number_theory",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_468",
+      "level": 5,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4999",
+      "level": 5,
+      "type": "precalculus",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": false
+    },
+    {
+      "id": "math_792",
+      "level": 5,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_531",
+      "level": 5,
+      "type": "algebra",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": false
+    },
+    {
+      "id": "math_2988",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2533",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": false
+    },
+    {
+      "id": "math_863",
+      "level": 5,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1975",
+      "level": 5,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1532",
+      "level": 5,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1515",
+      "level": 5,
+      "type": "counting_and_probability",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3999",
+      "level": 5,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3303",
+      "level": 5,
+      "type": "number_theory",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1108",
+      "level": 5,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3110",
+      "level": 5,
+      "type": "number_theory",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1457",
+      "level": 5,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2177",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_3413",
+      "level": 5,
+      "type": "number_theory",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1984",
+      "level": 5,
+      "type": "geometry",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_626",
+      "level": 5,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3252",
+      "level": 5,
+      "type": "number_theory",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_4145",
+      "level": 5,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_791",
+      "level": 5,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_445",
+      "level": 5,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4040",
+      "level": 5,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_130",
+      "level": 5,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_756",
+      "level": 5,
+      "type": "algebra",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1857",
+      "level": 5,
+      "type": "geometry",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_1298",
+      "level": 5,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3015",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": false
+    },
+    {
+      "id": "math_3574",
+      "level": 5,
+      "type": "number_theory",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3538",
+      "level": 5,
+      "type": "number_theory",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1677",
+      "level": 5,
+      "type": "geometry",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_2978",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_512",
+      "level": 5,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1292",
+      "level": 5,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2774",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_20",
+      "level": 5,
+      "type": "algebra",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_2887",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2083",
+      "level": 5,
+      "type": "geometry",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": false
+    },
+    {
+      "id": "math_3332",
+      "level": 5,
+      "type": "number_theory",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_2218",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3116",
+      "level": 5,
+      "type": "number_theory",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4179",
+      "level": 5,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_3583",
+      "level": 5,
+      "type": "prealgebra",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1206",
+      "level": 5,
+      "type": "counting_and_probability",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_1514",
+      "level": 5,
+      "type": "counting_and_probability",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_2285",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "pass_at_1": false,
+      "best_of_4": true,
+      "majority_4": false
+    },
+    {
+      "id": "math_1708",
+      "level": 5,
+      "type": "geometry",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_504",
+      "level": 5,
+      "type": "algebra",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_4433",
+      "level": 5,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_4048",
+      "level": 5,
+      "type": "prealgebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_2368",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    },
+    {
+      "id": "math_500",
+      "level": 5,
+      "type": "algebra",
+      "pass_at_1": true,
+      "best_of_4": true,
+      "majority_4": true
+    },
+    {
+      "id": "math_437",
+      "level": 5,
+      "type": "algebra",
+      "pass_at_1": false,
+      "best_of_4": false,
+      "majority_4": false
+    }
+  ],
+  "exever_results": [
+    {
+      "id": "math_3927",
+      "level": 1,
+      "type": "prealgebra",
+      "predicted": "120",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 5,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_466",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "7.5",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_105",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "10",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4451",
+      "level": 1,
+      "type": "prealgebra",
+      "predicted": "9",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1273",
+      "level": 1,
+      "type": "counting_and_probability",
+      "predicted": "\\frac{7}{12}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1126",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "10",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1002",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "\\frac{2}{3}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 3,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_583",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "24",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 3,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4406",
+      "level": 1,
+      "type": "prealgebra",
+      "predicted": "0",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_431",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "8",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4122",
+      "level": 1,
+      "type": "prealgebra",
+      "predicted": "73",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 2,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3340",
+      "level": 1,
+      "type": "number_theory",
+      "predicted": "3",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_372",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "200",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 3,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3651",
+      "level": 1,
+      "type": "prealgebra",
+      "predicted": "8",
+      "correct": true,
+      "verdict": "REPAIRED",
+      "assertions": 4,
+      "repair_used": true,
+      "repair_correct": true,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2244",
+      "level": 1,
+      "type": "intermediate_algebra",
+      "predicted": "\\text{even}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_132",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "0",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_126",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "19",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_393",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "(r + 5)^2",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 2,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_983",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "(1, 1)",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1067",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "9901",
+      "correct": true,
+      "verdict": "REPAIRED",
+      "assertions": 3,
+      "repair_used": true,
+      "repair_correct": true,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2957",
+      "level": 1,
+      "type": "intermediate_algebra",
+      "predicted": "(x + 2)(45x + 28)",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 5,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3693",
+      "level": 1,
+      "type": "prealgebra",
+      "predicted": "58",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 5,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_112",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "15",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3415",
+      "level": 1,
+      "type": "number_theory",
+      "predicted": "6",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_869",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "6",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4274",
+      "level": 1,
+      "type": "prealgebra",
+      "predicted": "0",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4017",
+      "level": 1,
+      "type": "prealgebra",
+      "predicted": "97969",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 2,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4252",
+      "level": 1,
+      "type": "prealgebra",
+      "predicted": "-1",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2186",
+      "level": 1,
+      "type": "intermediate_algebra",
+      "predicted": "1, -2",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_994",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "33",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2568",
+      "level": 1,
+      "type": "intermediate_algebra",
+      "predicted": "4",
+      "correct": true,
+      "verdict": "FAIL_STEP_-1",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3634",
+      "level": 1,
+      "type": "prealgebra",
+      "predicted": "-16",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 2,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1282",
+      "level": 1,
+      "type": "counting_and_probability",
+      "predicted": "120",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 3,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4747",
+      "level": 1,
+      "type": "precalculus",
+      "predicted": "3",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_19",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "187.5",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4572",
+      "level": 1,
+      "type": "precalculus",
+      "predicted": "\\frac{\\sqrt{3}}{3}",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4740",
+      "level": 1,
+      "type": "precalculus",
+      "predicted": "-20",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_678",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "600",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 5,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4220",
+      "level": 1,
+      "type": "prealgebra",
+      "predicted": "7",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1741",
+      "level": 1,
+      "type": "geometry",
+      "predicted": "90",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_647",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "\\frac{2}{5}",
+      "correct": true,
+      "verdict": "FAIL_STEP_-1",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_966",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "3",
+      "correct": true,
+      "verdict": "FAIL_STEP_-1",
+      "assertions": 3,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4585",
+      "level": 1,
+      "type": "precalculus",
+      "predicted": "-1",
+      "correct": true,
+      "verdict": "REPAIRED",
+      "assertions": 4,
+      "repair_used": true,
+      "repair_correct": true,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1656",
+      "level": 1,
+      "type": "counting_and_probability",
+      "predicted": "6840",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1915",
+      "level": 1,
+      "type": "geometry",
+      "predicted": "25\\pi",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_418",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "108",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 5,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1817",
+      "level": 1,
+      "type": "geometry",
+      "predicted": "90",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4962",
+      "level": 1,
+      "type": "precalculus",
+      "predicted": "(4, \\pi)",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 2,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1752",
+      "level": 1,
+      "type": "geometry",
+      "predicted": "\\frac{1}{2}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3708",
+      "level": 1,
+      "type": "prealgebra",
+      "predicted": "\\frac{7}{8}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 3,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1187",
+      "level": 1,
+      "type": "counting_and_probability",
+      "predicted": "\\frac{10}{11}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4744",
+      "level": 1,
+      "type": "precalculus",
+      "predicted": "(15, -29)",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 2,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_207",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "8",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4357",
+      "level": 1,
+      "type": "prealgebra",
+      "predicted": "18",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2705",
+      "level": 1,
+      "type": "intermediate_algebra",
+      "predicted": "2",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3261",
+      "level": 1,
+      "type": "number_theory",
+      "predicted": "5",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 3,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_498",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "20",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1909",
+      "level": 1,
+      "type": "geometry",
+      "predicted": "1",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 3,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_332",
+      "level": 1,
+      "type": "algebra",
+      "predicted": "2",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3381",
+      "level": 1,
+      "type": "number_theory",
+      "predicted": "5",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1648",
+      "level": 2,
+      "type": "counting_and_probability",
+      "predicted": "52",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4764",
+      "level": 2,
+      "type": "precalculus",
+      "predicted": "18",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3797",
+      "level": 2,
+      "type": "prealgebra",
+      "predicted": "36",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3738",
+      "level": 2,
+      "type": "prealgebra",
+      "predicted": "5",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4900",
+      "level": 2,
+      "type": "precalculus",
+      "predicted": "-2 + 7i",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2027",
+      "level": 2,
+      "type": "geometry",
+      "predicted": "8\\pi",
+      "correct": false,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3522",
+      "level": 2,
+      "type": "number_theory",
+      "predicted": "69",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1141",
+      "level": 2,
+      "type": "algebra",
+      "predicted": "41",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4201",
+      "level": 2,
+      "type": "prealgebra",
+      "predicted": "72",
+      "correct": true,
+      "verdict": "FAIL_STEP_-1",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_402",
+      "level": 2,
+      "type": "algebra",
+      "predicted": "4",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 2,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_269",
+      "level": 2,
+      "type": "algebra",
+      "predicted": "13",
+      "correct": true,
+      "verdict": "REPAIRED",
+      "assertions": 5,
+      "repair_used": true,
+      "repair_correct": true,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3987",
+      "level": 2,
+      "type": "prealgebra",
+      "predicted": "-5",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1347",
+      "level": 2,
+      "type": "counting_and_probability",
+      "predicted": "0",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4524",
+      "level": 2,
+      "type": "precalculus",
+      "predicted": "\\frac{6}{5}",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1622",
+      "level": 2,
+      "type": "counting_and_probability",
+      "predicted": "16",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 6,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_493",
+      "level": 2,
+      "type": "algebra",
+      "predicted": "\\frac{1}{y} + y",
+      "correct": true,
+      "verdict": "REPAIRED",
+      "assertions": 4,
+      "repair_used": true,
+      "repair_correct": true,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4874",
+      "level": 2,
+      "type": "precalculus",
+      "predicted": "4\\sqrt{3} + 2i",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1358",
+      "level": 2,
+      "type": "counting_and_probability",
+      "predicted": "2598960",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4914",
+      "level": 2,
+      "type": "precalculus",
+      "predicted": "(3, \\frac{\\pi}{2})",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 2,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_638",
+      "level": 2,
+      "type": "algebra",
+      "predicted": "156",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 3,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2161",
+      "level": 2,
+      "type": "intermediate_algebra",
+      "predicted": "\\left(\\frac{3}{4}, 5\\right)",
+      "correct": false,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1566",
+      "level": 2,
+      "type": "counting_and_probability",
+      "predicted": "4",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2782",
+      "level": 2,
+      "type": "intermediate_algebra",
+      "predicted": "2",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3852",
+      "level": 2,
+      "type": "prealgebra",
+      "predicted": "8",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4786",
+      "level": 2,
+      "type": "precalculus",
+      "predicted": "\\sqrt{2} - 1",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2050",
+      "level": 2,
+      "type": "geometry",
+      "predicted": "45",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_988",
+      "level": 2,
+      "type": "algebra",
+      "predicted": "4005",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2087",
+      "level": 2,
+      "type": "geometry",
+      "predicted": "7",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1985",
+      "level": 2,
+      "type": "geometry",
+      "predicted": "-\\frac{1}{2}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1263",
+      "level": 2,
+      "type": "counting_and_probability",
+      "predicted": "1024",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4020",
+      "level": 2,
+      "type": "prealgebra",
+      "predicted": "16",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 5,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1505",
+      "level": 2,
+      "type": "counting_and_probability",
+      "predicted": "50",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4186",
+      "level": 2,
+      "type": "prealgebra",
+      "predicted": "-99",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4087",
+      "level": 2,
+      "type": "prealgebra",
+      "predicted": "\\frac{24}{7}",
+      "correct": true,
+      "verdict": "FAIL_STEP_-1",
+      "assertions": 2,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3919",
+      "level": 2,
+      "type": "prealgebra",
+      "predicted": "16.75",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_425",
+      "level": 2,
+      "type": "algebra",
+      "predicted": "12",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3685",
+      "level": 2,
+      "type": "prealgebra",
+      "predicted": "13",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1025",
+      "level": 2,
+      "type": "algebra",
+      "predicted": "6x^2 + 30x + 36",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3310",
+      "level": 2,
+      "type": "number_theory",
+      "predicted": "\\text{Sunday}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4331",
+      "level": 2,
+      "type": "prealgebra",
+      "predicted": "260",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1416",
+      "level": 2,
+      "type": "counting_and_probability",
+      "predicted": "1000000",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 3,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_989",
+      "level": 2,
+      "type": "algebra",
+      "predicted": "\\frac{5\\sqrt{3}}{3}",
+      "correct": true,
+      "verdict": "FAIL_STEP_-1",
+      "assertions": 3,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2826",
+      "level": 2,
+      "type": "intermediate_algebra",
+      "predicted": "1, -8",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2160",
+      "level": 2,
+      "type": "intermediate_algebra",
+      "predicted": "5",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1513",
+      "level": 2,
+      "type": "counting_and_probability",
+      "predicted": "225",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 5,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3875",
+      "level": 2,
+      "type": "prealgebra",
+      "predicted": "139",
+      "correct": true,
+      "verdict": "REPAIRED",
+      "assertions": 3,
+      "repair_used": true,
+      "repair_correct": true,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4121",
+      "level": 2,
+      "type": "prealgebra",
+      "predicted": "564",
+      "correct": true,
+      "verdict": "REPAIRED",
+      "assertions": 3,
+      "repair_used": true,
+      "repair_correct": true,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3428",
+      "level": 2,
+      "type": "number_theory",
+      "predicted": "8",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 7,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1301",
+      "level": 2,
+      "type": "counting_and_probability",
+      "predicted": "5040",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4101",
+      "level": 2,
+      "type": "prealgebra",
+      "predicted": "4t",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 3,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1812",
+      "level": 2,
+      "type": "geometry",
+      "predicted": "(3,-4)",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 2,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4832",
+      "level": 2,
+      "type": "precalculus",
+      "predicted": "E",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4496",
+      "level": 2,
+      "type": "precalculus",
+      "predicted": "60",
+      "correct": true,
+      "verdict": "FAIL_STEP_-1",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4541",
+      "level": 2,
+      "type": "precalculus",
+      "predicted": "2",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_325",
+      "level": 2,
+      "type": "algebra",
+      "predicted": "7",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1348",
+      "level": 2,
+      "type": "counting_and_probability",
+      "predicted": "6",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4745",
+      "level": 2,
+      "type": "precalculus",
+      "predicted": "2\\pi",
+      "correct": false,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 2,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_194",
+      "level": 2,
+      "type": "algebra",
+      "predicted": "445",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4676",
+      "level": 2,
+      "type": "precalculus",
+      "predicted": "\\frac{1}{3}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1782",
+      "level": 2,
+      "type": "geometry",
+      "predicted": "24",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3759",
+      "level": 3,
+      "type": "prealgebra",
+      "predicted": "5",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2539",
+      "level": 3,
+      "type": "intermediate_algebra",
+      "predicted": "34",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_574",
+      "level": 3,
+      "type": "algebra",
+      "predicted": "21a^5 - 7a^4 - 16a^2 + 32a",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1999",
+      "level": 3,
+      "type": "geometry",
+      "predicted": "51.52",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2987",
+      "level": 3,
+      "type": "intermediate_algebra",
+      "predicted": "104",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2014",
+      "level": 3,
+      "type": "geometry",
+      "predicted": "18",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4549",
+      "level": 3,
+      "type": "precalculus",
+      "predicted": "11",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3719",
+      "level": 3,
+      "type": "prealgebra",
+      "predicted": "-15",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4195",
+      "level": 3,
+      "type": "prealgebra",
+      "predicted": "24",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 6,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1340",
+      "level": 3,
+      "type": "counting_and_probability",
+      "predicted": "18",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2511",
+      "level": 3,
+      "type": "intermediate_algebra",
+      "predicted": "243",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1314",
+      "level": 3,
+      "type": "counting_and_probability",
+      "predicted": "\\frac{17}{18}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2334",
+      "level": 3,
+      "type": "intermediate_algebra",
+      "predicted": "4",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4882",
+      "level": 3,
+      "type": "precalculus",
+      "predicted": "-1.8",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2475",
+      "level": 3,
+      "type": "intermediate_algebra",
+      "predicted": "8",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3950",
+      "level": 3,
+      "type": "prealgebra",
+      "predicted": "2",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3746",
+      "level": 3,
+      "type": "prealgebra",
+      "predicted": "420",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3429",
+      "level": 3,
+      "type": "number_theory",
+      "predicted": "2",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 5,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": false
+    },
+    {
+      "id": "math_2081",
+      "level": 3,
+      "type": "geometry",
+      "predicted": "\\frac{1}{4}",
+      "correct": true,
+      "verdict": "FAIL_STEP_-1",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1303",
+      "level": 3,
+      "type": "counting_and_probability",
+      "predicted": "4",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4639",
+      "level": 3,
+      "type": "precalculus",
+      "predicted": "70",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4476",
+      "level": 3,
+      "type": "precalculus",
+      "predicted": "\\begin{pmatrix} \\frac{48}{65} \\\\ \\frac{6}{65} \\end{pmatrix}",
+      "correct": false,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_842",
+      "level": 3,
+      "type": "algebra",
+      "predicted": "\\frac{31}{6}",
+      "correct": true,
+      "verdict": "FAIL_STEP_-1",
+      "assertions": 5,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_422",
+      "level": 3,
+      "type": "algebra",
+      "predicted": "2500",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_997",
+      "level": 3,
+      "type": "algebra",
+      "predicted": "-\\dfrac{4}{25}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 2,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1432",
+      "level": 3,
+      "type": "counting_and_probability",
+      "predicted": "25972650",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1501",
+      "level": 3,
+      "type": "counting_and_probability",
+      "predicted": "\\frac{1}{6}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3899",
+      "level": 3,
+      "type": "prealgebra",
+      "predicted": "80",
+      "correct": true,
+      "verdict": "FAIL_STEP_-1",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_559",
+      "level": 3,
+      "type": "algebra",
+      "predicted": "\\frac{30}{11}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3623",
+      "level": 3,
+      "type": "prealgebra",
+      "predicted": "\\frac{3}{13}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3593",
+      "level": 3,
+      "type": "prealgebra",
+      "predicted": "1320",
+      "correct": true,
+      "verdict": "FAIL_STEP_-1",
+      "assertions": 3,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4278",
+      "level": 3,
+      "type": "prealgebra",
+      "predicted": "9",
+      "correct": true,
+      "verdict": "REPAIRED",
+      "assertions": 3,
+      "repair_used": true,
+      "repair_correct": true,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4812",
+      "level": 3,
+      "type": "precalculus",
+      "predicted": "120",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2369",
+      "level": 3,
+      "type": "intermediate_algebra",
+      "predicted": "-\\frac{1}{4}",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_97",
+      "level": 3,
+      "type": "algebra",
+      "predicted": "286",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 5,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1046",
+      "level": 3,
+      "type": "algebra",
+      "predicted": "36",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4870",
+      "level": 3,
+      "type": "precalculus",
+      "predicted": "\\sqrt{6} + \\sqrt{2}",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2528",
+      "level": 3,
+      "type": "intermediate_algebra",
+      "predicted": "(-3, 2)",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3228",
+      "level": 3,
+      "type": "number_theory",
+      "predicted": "248",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 5,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1020",
+      "level": 3,
+      "type": "algebra",
+      "predicted": "-4",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 6,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2804",
+      "level": 3,
+      "type": "intermediate_algebra",
+      "predicted": "\\frac{7}{9}",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4019",
+      "level": 3,
+      "type": "prealgebra",
+      "predicted": "\\frac{1}{6}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1488",
+      "level": 3,
+      "type": "counting_and_probability",
+      "predicted": "280",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4166",
+      "level": 3,
+      "type": "prealgebra",
+      "predicted": "140",
+      "correct": false,
+      "verdict": "REPAIRED",
+      "assertions": 5,
+      "repair_used": true,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_31",
+      "level": 3,
+      "type": "algebra",
+      "predicted": "5",
+      "correct": true,
+      "verdict": "REPAIRED",
+      "assertions": 1,
+      "repair_used": true,
+      "repair_correct": true,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2480",
+      "level": 3,
+      "type": "intermediate_algebra",
+      "predicted": "1",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4558",
+      "level": 3,
+      "type": "precalculus",
+      "predicted": "0 \\text{ and } 4",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1718",
+      "level": 3,
+      "type": "geometry",
+      "predicted": "\\frac{\\sqrt{3}}{2}",
+      "correct": false,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4618",
+      "level": 3,
+      "type": "precalculus",
+      "predicted": "(8, 14)",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_953",
+      "level": 3,
+      "type": "algebra",
+      "predicted": "1",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2844",
+      "level": 3,
+      "type": "intermediate_algebra",
+      "predicted": "8",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1912",
+      "level": 3,
+      "type": "geometry",
+      "predicted": "24 + 6\\sqrt{2}",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3515",
+      "level": 3,
+      "type": "number_theory",
+      "predicted": "664",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1509",
+      "level": 3,
+      "type": "counting_and_probability",
+      "predicted": "15",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4884",
+      "level": 3,
+      "type": "precalculus",
+      "predicted": "(3 \\sqrt{3}, -9, -2)",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 3,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4822",
+      "level": 3,
+      "type": "precalculus",
+      "predicted": "4",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_14",
+      "level": 3,
+      "type": "algebra",
+      "predicted": "75",
+      "correct": true,
+      "verdict": "FAIL_STEP_-1",
+      "assertions": 3,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3076",
+      "level": 3,
+      "type": "number_theory",
+      "predicted": "11189",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4440",
+      "level": 3,
+      "type": "prealgebra",
+      "predicted": "24",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_167",
+      "level": 3,
+      "type": "algebra",
+      "predicted": "48",
+      "correct": true,
+      "verdict": "FAIL_STEP_-1",
+      "assertions": 6,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_982",
+      "level": 4,
+      "type": "algebra",
+      "predicted": "-16",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2952",
+      "level": 4,
+      "type": "intermediate_algebra",
+      "predicted": "229",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2537",
+      "level": 4,
+      "type": "intermediate_algebra",
+      "predicted": "3",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2038",
+      "level": 4,
+      "type": "geometry",
+      "predicted": "-\\frac{\\sqrt{3}}{3}",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_470",
+      "level": 4,
+      "type": "algebra",
+      "predicted": "-5",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2043",
+      "level": 4,
+      "type": "geometry",
+      "predicted": "\\frac{4\\pi}{3}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4727",
+      "level": 4,
+      "type": "precalculus",
+      "predicted": "\\sqrt{2} + 1",
+      "correct": true,
+      "verdict": "FAIL_STEP_-1",
+      "assertions": 5,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_658",
+      "level": 4,
+      "type": "algebra",
+      "predicted": "5",
+      "correct": true,
+      "verdict": "FAIL_STEP_-1",
+      "assertions": 2,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_724",
+      "level": 4,
+      "type": "algebra",
+      "predicted": "107",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3976",
+      "level": 4,
+      "type": "prealgebra",
+      "predicted": "35",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_573",
+      "level": 4,
+      "type": "algebra",
+      "predicted": "3",
+      "correct": true,
+      "verdict": "FAIL_STEP_-1",
+      "assertions": 2,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4416",
+      "level": 4,
+      "type": "prealgebra",
+      "predicted": "4",
+      "correct": false,
+      "verdict": "FAIL_STEP_-1",
+      "assertions": 2,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1098",
+      "level": 4,
+      "type": "algebra",
+      "predicted": "22",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1111",
+      "level": 4,
+      "type": "algebra",
+      "predicted": "12",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3890",
+      "level": 4,
+      "type": "prealgebra",
+      "predicted": "14",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4547",
+      "level": 4,
+      "type": "precalculus",
+      "predicted": "\\pi",
+      "correct": true,
+      "verdict": "REPAIRED",
+      "assertions": 4,
+      "repair_used": true,
+      "repair_correct": true,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1434",
+      "level": 4,
+      "type": "counting_and_probability",
+      "predicted": "450",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2240",
+      "level": 4,
+      "type": "intermediate_algebra",
+      "predicted": "\\frac{2}{9}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4377",
+      "level": 4,
+      "type": "prealgebra",
+      "predicted": "1020",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3390",
+      "level": 4,
+      "type": "number_theory",
+      "predicted": "4",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1819",
+      "level": 4,
+      "type": "geometry",
+      "predicted": "7",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4469",
+      "level": 4,
+      "type": "precalculus",
+      "predicted": "\\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1701",
+      "level": 4,
+      "type": "geometry",
+      "predicted": "-\\frac{\\sqrt{2}}{2}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2567",
+      "level": 4,
+      "type": "intermediate_algebra",
+      "predicted": "3 - 2f(x)",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 3,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3197",
+      "level": 4,
+      "type": "number_theory",
+      "predicted": "6",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3035",
+      "level": 4,
+      "type": "intermediate_algebra",
+      "predicted": "\\frac{16}{5}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3548",
+      "level": 4,
+      "type": "number_theory",
+      "predicted": "3",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4288",
+      "level": 4,
+      "type": "prealgebra",
+      "predicted": "\\frac{4}{13}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3643",
+      "level": 4,
+      "type": "prealgebra",
+      "predicted": "127",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1042",
+      "level": 4,
+      "type": "algebra",
+      "predicted": "3",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2111",
+      "level": 4,
+      "type": "geometry",
+      "predicted": "6",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1907",
+      "level": 4,
+      "type": "geometry",
+      "predicted": "\\frac{3\\sqrt{3}}{4}",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_533",
+      "level": 4,
+      "type": "algebra",
+      "predicted": "7",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2747",
+      "level": 4,
+      "type": "intermediate_algebra",
+      "predicted": "\\frac{1}{100000}",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_166",
+      "level": 4,
+      "type": "algebra",
+      "predicted": "256",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4958",
+      "level": 4,
+      "type": "precalculus",
+      "predicted": "90",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4604",
+      "level": 4,
+      "type": "precalculus",
+      "predicted": "\\frac{\\pi}{12}",
+      "correct": false,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1935",
+      "level": 4,
+      "type": "geometry",
+      "predicted": "54",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4964",
+      "level": 4,
+      "type": "precalculus",
+      "predicted": "\\mathbf{D}^{3 \\cdot 13 + 1} = (\\mathbf{D}^3)^{13} \\mathbf{D} = \\mathbf{I}",
+      "correct": false,
+      "verdict": "REPAIRED",
+      "assertions": 5,
+      "repair_used": true,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1885",
+      "level": 4,
+      "type": "geometry",
+      "predicted": "0",
+      "correct": true,
+      "verdict": "REPAIRED",
+      "assertions": 5,
+      "repair_used": true,
+      "repair_correct": true,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_50",
+      "level": 4,
+      "type": "algebra",
+      "predicted": "8",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_594",
+      "level": 4,
+      "type": "algebra",
+      "predicted": "1",
+      "correct": false,
+      "verdict": "NO_SCRIPT",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_486",
+      "level": 4,
+      "type": "algebra",
+      "predicted": "-36",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1931",
+      "level": 4,
+      "type": "geometry",
+      "predicted": "45",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_552",
+      "level": 4,
+      "type": "algebra",
+      "predicted": "\\frac{8}{3}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_268",
+      "level": 4,
+      "type": "algebra",
+      "predicted": "\\frac{68}{3}",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2678",
+      "level": 4,
+      "type": "intermediate_algebra",
+      "predicted": "25\\pi",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4248",
+      "level": 4,
+      "type": "prealgebra",
+      "predicted": "-30",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2033",
+      "level": 4,
+      "type": "geometry",
+      "predicted": "106.8",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2346",
+      "level": 4,
+      "type": "intermediate_algebra",
+      "predicted": "3",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3969",
+      "level": 4,
+      "type": "prealgebra",
+      "predicted": "180",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1843",
+      "level": 4,
+      "type": "geometry",
+      "predicted": "\\sqrt{5}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1138",
+      "level": 4,
+      "type": "algebra",
+      "predicted": "10",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4776",
+      "level": 4,
+      "type": "precalculus",
+      "predicted": "\\left[ \\frac{\\pi^2}{8}, \\frac{5\\pi^2}{4} \\right]",
+      "correct": false,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4835",
+      "level": 4,
+      "type": "precalculus",
+      "predicted": "\\left( \\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2} \\right)",
+      "correct": true,
+      "verdict": "FAIL_STEP_-1",
+      "assertions": 3,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3871",
+      "level": 4,
+      "type": "prealgebra",
+      "predicted": "10",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2070",
+      "level": 4,
+      "type": "geometry",
+      "predicted": "45",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3271",
+      "level": 4,
+      "type": "number_theory",
+      "predicted": "7",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1643",
+      "level": 4,
+      "type": "counting_and_probability",
+      "predicted": "\\frac{30}{143}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_816",
+      "level": 4,
+      "type": "algebra",
+      "predicted": "\\dfrac{3}{7}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 2,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_783",
+      "level": 5,
+      "type": "algebra",
+      "predicted": "(0, 1]",
+      "correct": false,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3146",
+      "level": 5,
+      "type": "number_theory",
+      "predicted": "42",
+      "correct": false,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2621",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "predicted": "5",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3118",
+      "level": 5,
+      "type": "number_theory",
+      "predicted": "0.0011",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3032",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "predicted": "-375 + 500i",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3462",
+      "level": 5,
+      "type": "number_theory",
+      "predicted": "3",
+      "correct": true,
+      "verdict": "FAIL_STEP_-1",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_468",
+      "level": 5,
+      "type": "algebra",
+      "predicted": "-9",
+      "correct": true,
+      "verdict": "REPAIRED",
+      "assertions": 4,
+      "repair_used": true,
+      "repair_correct": true,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4999",
+      "level": 5,
+      "type": "precalculus",
+      "predicted": "\\begin{pmatrix} 1 \\\\ -2 \\\\ -1 \\end{pmatrix}",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_792",
+      "level": 5,
+      "type": "algebra",
+      "predicted": "0",
+      "correct": false,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_531",
+      "level": 5,
+      "type": "algebra",
+      "predicted": "\\sqrt{3} |x_1 - 4| = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\cdot \\frac{2|x_1 - 4|}{2} = \\sqrt{3} \\",
+      "correct": false,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2988",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "predicted": "-\\frac{1}{9}",
+      "correct": false,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2533",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "predicted": "4",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_863",
+      "level": 5,
+      "type": "algebra",
+      "predicted": "33840",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1975",
+      "level": 5,
+      "type": "geometry",
+      "predicted": "\\frac{21}{8}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1532",
+      "level": 5,
+      "type": "counting_and_probability",
+      "predicted": "\\frac{20}{27}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1515",
+      "level": 5,
+      "type": "counting_and_probability",
+      "predicted": "\\frac{35}{128}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3999",
+      "level": 5,
+      "type": "prealgebra",
+      "predicted": "\\frac{17}{50}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3303",
+      "level": 5,
+      "type": "number_theory",
+      "predicted": "9",
+      "correct": true,
+      "verdict": "REPAIRED",
+      "assertions": 6,
+      "repair_used": true,
+      "repair_correct": true,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1108",
+      "level": 5,
+      "type": "algebra",
+      "predicted": "2\\sqrt{2}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3110",
+      "level": 5,
+      "type": "number_theory",
+      "predicted": "1",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1457",
+      "level": 5,
+      "type": "counting_and_probability",
+      "predicted": "512",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 8,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2177",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "predicted": "\\frac{90}{7}",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3413",
+      "level": 5,
+      "type": "number_theory",
+      "predicted": "41",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1984",
+      "level": 5,
+      "type": "geometry",
+      "predicted": "\\frac{60}{13}",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_626",
+      "level": 5,
+      "type": "algebra",
+      "predicted": "\\frac{128}{75}",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3252",
+      "level": 5,
+      "type": "number_theory",
+      "predicted": "0",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4145",
+      "level": 5,
+      "type": "prealgebra",
+      "predicted": "49\\pi",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_791",
+      "level": 5,
+      "type": "algebra",
+      "predicted": "-102",
+      "correct": true,
+      "verdict": "FAIL_STEP_-1",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_445",
+      "level": 5,
+      "type": "algebra",
+      "predicted": "4",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4040",
+      "level": 5,
+      "type": "prealgebra",
+      "predicted": "Devon",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_130",
+      "level": 5,
+      "type": "algebra",
+      "predicted": "-22",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_756",
+      "level": 5,
+      "type": "algebra",
+      "predicted": "40",
+      "correct": true,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1857",
+      "level": 5,
+      "type": "geometry",
+      "predicted": "8",
+      "correct": false,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1298",
+      "level": 5,
+      "type": "counting_and_probability",
+      "predicted": "0.076",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3015",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "predicted": "-n(2n+1)",
+      "correct": false,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 1,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3574",
+      "level": 5,
+      "type": "number_theory",
+      "predicted": "6",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3538",
+      "level": 5,
+      "type": "number_theory",
+      "predicted": "3224",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1677",
+      "level": 5,
+      "type": "geometry",
+      "predicted": "6",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 5,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2978",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "predicted": "4036",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_512",
+      "level": 5,
+      "type": "algebra",
+      "predicted": "-1",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1292",
+      "level": 5,
+      "type": "counting_and_probability",
+      "predicted": "10",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2774",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "predicted": "1",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_20",
+      "level": 5,
+      "type": "algebra",
+      "predicted": "9",
+      "correct": false,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2887",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "predicted": "12",
+      "correct": true,
+      "verdict": "REPAIRED",
+      "assertions": 2,
+      "repair_used": true,
+      "repair_correct": true,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2083",
+      "level": 5,
+      "type": "geometry",
+      "predicted": "\\frac{11}{7}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3332",
+      "level": 5,
+      "type": "number_theory",
+      "predicted": "105",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2218",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "predicted": "-4",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3116",
+      "level": 5,
+      "type": "number_theory",
+      "predicted": "60",
+      "correct": true,
+      "verdict": "REPAIRED",
+      "assertions": 5,
+      "repair_used": true,
+      "repair_correct": true,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4179",
+      "level": 5,
+      "type": "prealgebra",
+      "predicted": "90",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 2,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_3583",
+      "level": 5,
+      "type": "prealgebra",
+      "predicted": "4",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1206",
+      "level": 5,
+      "type": "counting_and_probability",
+      "predicted": "720",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1514",
+      "level": 5,
+      "type": "counting_and_probability",
+      "predicted": "\\frac{1}{8}",
+      "correct": false,
+      "verdict": "RUNTIME_ERROR",
+      "assertions": 3,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2285",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "predicted": "36",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_1708",
+      "level": 5,
+      "type": "geometry",
+      "predicted": "2\\sqrt{2}",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_504",
+      "level": 5,
+      "type": "algebra",
+      "predicted": "(-\\infty, 0] \\cup [4, \\infty)",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4433",
+      "level": 5,
+      "type": "prealgebra",
+      "predicted": "96",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 3,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_4048",
+      "level": 5,
+      "type": "prealgebra",
+      "predicted": "7.78",
+      "correct": true,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_2368",
+      "level": 5,
+      "type": "intermediate_algebra",
+      "predicted": "[6, \\infty)",
+      "correct": false,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_500",
+      "level": 5,
+      "type": "algebra",
+      "predicted": "4",
+      "correct": true,
+      "verdict": "SYNTAX_ERROR",
+      "assertions": 0,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    },
+    {
+      "id": "math_437",
+      "level": 5,
+      "type": "algebra",
+      "predicted": "800.8",
+      "correct": false,
+      "verdict": "ALL_PASS",
+      "assertions": 4,
+      "repair_used": false,
+      "repair_correct": false,
+      "echo_chamber": null
+    }
+  ]
+}

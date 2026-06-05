@@ -1,0 +1,40 @@
+{
+  "experiment": "exp6_deepseek_solver",
+  "solver": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+  "verifier": "Qwen/Qwen2.5-Math-7B-Instruct",
+  "n_problems": 500,
+  "accuracy": {
+    "greedy": 0.674,
+    "majority_4": 0.746,
+    "best_of_4": 0.816,
+    "exever": 0.674
+  },
+  "echo_chamber_rate": 0,
+  "by_level": {
+    "1": {
+      "greedy": 0.84,
+      "exever": 0.84,
+      "n": 100
+    },
+    "2": {
+      "greedy": 0.81,
+      "exever": 0.81,
+      "n": 100
+    },
+    "3": {
+      "greedy": 0.67,
+      "exever": 0.67,
+      "n": 100
+    },
+    "4": {
+      "greedy": 0.59,
+      "exever": 0.59,
+      "n": 100
+    },
+    "5": {
+      "greedy": 0.46,
+      "exever": 0.46,
+      "n": 100
+    }
+  }
+}

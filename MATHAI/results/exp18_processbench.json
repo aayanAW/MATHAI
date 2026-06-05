@@ -1,0 +1,21 @@
+{
+  "experiment": "exp18_processbench",
+  "n_total": 1000,
+  "n_testable": 599,
+  "n_abstained": 401,
+  "coverage": 0.599,
+  "error_detection": {
+    "tp": 295,
+    "fp": 188,
+    "fn": 79,
+    "tn": 37,
+    "precision": 0.6108,
+    "recall": 0.7888,
+    "f1": 0.6884
+  },
+  "full_benchmark": {
+    "total_errors": 594,
+    "detected": 295,
+    "detection_rate": 0.4966
+  }
+}

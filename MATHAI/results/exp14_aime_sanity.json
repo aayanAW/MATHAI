@@ -1,0 +1,55 @@
+{
+  "results": [
+    {
+      "id": "aime_2024_I_1",
+      "level": 3,
+      "type": "algebra",
+      "predicted": "204",
+      "correct": true,
+      "script_valid": true,
+      "has_assertions": false,
+      "verdict": "ALL_PASS"
+    },
+    {
+      "id": "aime_2024_I_2",
+      "level": 4,
+      "type": "intermediate_algebra",
+      "predicted": "25",
+      "correct": true,
+      "script_valid": true,
+      "has_assertions": true,
+      "verdict": "FAIL_STEP"
+    },
+    {
+      "id": "aime_2024_I_3",
+      "level": 4,
+      "type": "counting_and_probability",
+      "predicted": "404",
+      "correct": false,
+      "script_valid": true,
+      "has_assertions": false,
+      "verdict": "ALL_PASS"
+    },
+    {
+      "id": "aime_2024_I_4",
+      "level": 5,
+      "type": "counting_and_probability",
+      "predicted": "116",
+      "correct": true,
+      "script_valid": true,
+      "has_assertions": true,
+      "verdict": "FAIL_STEP"
+    },
+    {
+      "id": "aime_2024_I_5",
+      "level": 4,
+      "type": "geometry",
+      "predicted": "12799",
+      "correct": false,
+      "script_valid": true,
+      "has_assertions": false,
+      "verdict": "ALL_PASS"
+    }
+  ],
+  "n": 5
+}
