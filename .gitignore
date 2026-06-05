@@ -1,0 +1,32 @@
+# Secrets / credentials
+.env
+.env.*
+*.key
+*.pem
+credentials*
+
+# Python caches / build
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+build/
+dist/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.hypothesis/
+.ipynb_checkpoints/
+
+# OS / editor cruft
+.DS_Store
+*.Rhistory
+.idea/
+.vscode/
+
+# Local scratch notes
+HANDOFF_*.md
+*_RESUME*.md
+
+# Large regenerable render artifacts
+*.ppm
