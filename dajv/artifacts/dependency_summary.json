@@ -1,0 +1,260 @@
+[
+  {
+    "tag": "A_math500_full",
+    "bench": null,
+    "n_problems": 323,
+    "n_wrong": 108,
+    "extractor_ids": [
+      "E01_llama_3_3_70B",
+      "E03_deepseek_v3"
+    ],
+    "summary": {
+      "n_pairs": 2,
+      "kappa": {
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0,
+        "mean": 0.0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "joint_fp_over_indep_ratio": {
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0,
+        "mean": 1.0,
+        "q25": 1.0,
+        "q75": 1.0
+      },
+      "excess_over_indep": {
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0,
+        "mean": 0.0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "cig": {
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0,
+        "mean": 0.0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "marginals_pi": {
+        "min": 0.0,
+        "max": 0.009259259259259259,
+        "mean": 0.004629629629629629
+      }
+    }
+  },
+  {
+    "tag": "B_full",
+    "bench": null,
+    "n_problems": 330,
+    "n_wrong": 192,
+    "extractor_ids": [
+      "E05_gpt_oss_120B",
+      "E06_gpt_5_mini",
+      "E07_claude_sonnet_4_6",
+      "E09_qwen3_coder_480B"
+    ],
+    "summary": {
+      "n_pairs": 12,
+      "kappa": {
+        "min": 0.49003984063744976,
+        "max": 1.0,
+        "median": 0.7974683544303786,
+        "mean": 0.7024809858428526,
+        "q25": 0.5649546827794542,
+        "q75": 0.7974683544303786
+      },
+      "joint_fp_over_indep_ratio": {
+        "min": 25.599999999999998,
+        "max": 96.0,
+        "median": 64.0,
+        "mean": 54.4,
+        "q25": 38.4,
+        "q75": 64.0
+      },
+      "excess_over_indep": {
+        "min": 0.010009765625,
+        "max": 0.010308159722222222,
+        "median": 0.01025390625,
+        "mean": 0.010186089409722222,
+        "q25": 0.010145399305555554,
+        "q75": 0.01025390625
+      },
+      "cig": {
+        "min": 0.03051875177530608,
+        "max": 0.05790751748813433,
+        "median": 0.04796198360852788,
+        "mean": 0.04418543007778323,
+        "q25": 0.04038117199310162,
+        "q75": 0.04796198360852788
+      },
+      "marginals_pi": {
+        "min": 0.010416666666666666,
+        "max": 0.026041666666666668,
+        "mean": 0.015625
+      }
+    }
+  },
+  {
+    "tag": "B_math175",
+    "bench": "math175",
+    "n_problems": 175,
+    "n_wrong": 47,
+    "extractor_ids": [
+      "E05_gpt_oss_120B",
+      "E06_gpt_5_mini",
+      "E07_claude_sonnet_4_6",
+      "E09_qwen3_coder_480B"
+    ],
+    "summary": {
+      "n_pairs": 12,
+      "kappa": {
+        "min": 0.5377049180327867,
+        "max": 1.0,
+        "median": 0.7892376681614347,
+        "mean": 0.7349022228437373,
+        "q25": 0.6466165413533839,
+        "q75": 0.7892376681614347
+      },
+      "joint_fp_over_indep_ratio": {
+        "min": 7.833333333333334,
+        "max": 23.5,
+        "median": 15.666666666666668,
+        "mean": 14.361111111111112,
+        "q25": 11.75,
+        "q75": 15.666666666666668
+      },
+      "excess_over_indep": {
+        "min": 0.03712086917157085,
+        "max": 0.040742417383431415,
+        "median": 0.039837030330466275,
+        "mean": 0.039233438961822846,
+        "q25": 0.03893164327750113,
+        "q75": 0.039837030330466275
+      },
+      "cig": {
+        "min": 0.07733376154900928,
+        "max": 0.17597512509762708,
+        "median": 0.13534656116391558,
+        "mean": 0.1263282933918346,
+        "q25": 0.11698387568827001,
+        "q75": 0.13534656116391558
+      },
+      "marginals_pi": {
+        "min": 0.0425531914893617,
+        "max": 0.0851063829787234,
+        "mean": 0.05851063829787234
+      }
+    }
+  },
+  {
+    "tag": "B_aime",
+    "bench": "aime",
+    "n_problems": 30,
+    "n_wrong": 28,
+    "extractor_ids": [
+      "E05_gpt_oss_120B",
+      "E06_gpt_5_mini",
+      "E07_claude_sonnet_4_6",
+      "E09_qwen3_coder_480B"
+    ],
+    "summary": {
+      "n_pairs": 12,
+      "kappa": {
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0,
+        "mean": 0.0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "joint_fp_over_indep_ratio": {
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0,
+        "mean": 1.0,
+        "q25": 1.0,
+        "q75": 1.0
+      },
+      "excess_over_indep": {
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0,
+        "mean": 0.0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "cig": {
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0,
+        "mean": 0.0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "marginals_pi": {
+        "min": 0.0,
+        "max": 0.03571428571428571,
+        "mean": 0.008928571428571428
+      }
+    }
+  },
+  {
+    "tag": "B_cleanmath",
+    "bench": "cleanmath",
+    "n_problems": 125,
+    "n_wrong": 117,
+    "extractor_ids": [
+      "E05_gpt_oss_120B",
+      "E06_gpt_5_mini",
+      "E07_claude_sonnet_4_6",
+      "E09_qwen3_coder_480B"
+    ],
+    "summary": {
+      "n_pairs": 12,
+      "kappa": {
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0,
+        "mean": 0.0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "joint_fp_over_indep_ratio": {
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0,
+        "mean": 1.0,
+        "q25": 1.0,
+        "q75": 1.0
+      },
+      "excess_over_indep": {
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0,
+        "mean": 0.0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "cig": {
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0,
+        "mean": 0.0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "marginals_pi": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    }
+  }
+]
