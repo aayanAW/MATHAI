@@ -23,6 +23,7 @@ dist/
 *.Rhistory
 .idea/
 .vscode/
+.claude/
 
 # Local scratch notes
 HANDOFF_*.md
